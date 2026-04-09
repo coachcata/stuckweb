@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Diagnostic: Where Are You Stuck? | John Obidipe</title>
+<meta name="description" content="8 questions. No generic advice. At the end you'll get a result that describes your situation clearly and tells you what actually needs to change.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root {
+  --bg-primary:#0C0C0E;--bg-secondary:#141418;--bg-card:#1E1E26;
+  --text-primary:#F2F0EC;--text-secondary:#A8A5A0;--text-muted:#6B6862;
+  --accent:#C8956C;--accent-light:#D4A97D;--accent-dark:#A8774E;
+  --accent-glow:rgba(200,149,108,0.12);--accent-glow-strong:rgba(200,149,108,0.2);
+  --border:rgba(200,149,108,0.1);--border-strong:rgba(200,149,108,0.25);
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',-apple-system,sans-serif;
+  --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.7;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh}
+::selection{background:var(--accent);color:var(--bg-primary)}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.25rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(12,12,14,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-display);font-size:1.3rem;font-weight:500;color:var(--text-primary);text-decoration:none;letter-spacing:.02em}
+.nav-logo span{color:var(--accent)}
+.progress-wrap{display:none;flex-direction:column;gap:6px;align-items:flex-end}
+.progress-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted)}
+.progress-bar{width:160px;height:2px;background:var(--border);border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);width:0%;transition:width .6s var(--ease)}
+
+.btn-primary{display:inline-block;padding:1rem 2.4rem;background:var(--accent);color:var(--bg-primary);font-family:var(--font-body);font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:none;border-radius:2px;cursor:pointer;transition:all .4s var(--ease);position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s var(--ease)}
+.btn-primary:hover{background:var(--accent-light);transform:translateY(-1px)}
+.btn-primary:hover::before{left:100%}
+.btn-primary:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.btn-secondary{display:inline-block;padding:1rem 2.4rem;background:transparent;color:var(--accent);font-family:var(--font-body);font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border-strong);border-radius:2px;cursor:pointer;transition:all .4s var(--ease)}
+.btn-secondary:hover{border-color:var(--accent);background:var(--accent-glow)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.7;transform:scale(1.1)}}
+
+.quiz-wrapper{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 2rem 80px;position:relative}
+.quiz-wrapper::before{content:'';position:fixed;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%);pointer-events:none;animation:heroPulse 8s ease-in-out infinite}
+
+.screen{display:none;width:100%;max-width:760px;position:relative;z-index:1}
+.screen.active{display:block;animation:fadeUp .6s var(--ease) forwards}
+
+.hero-overline{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:2rem}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.8rem,6vw,4.5rem);font-weight:300;line-height:1.1;margin-bottom:1.5rem}
+.hero-title em{font-style:italic;color:var(--accent);font-weight:400}
+.hero-body{font-size:1.05rem;color:var(--text-secondary);max-width:580px;line-height:1.85;margin-bottom:2.5rem}
+.hero-meta{display:flex;gap:3rem;padding:2rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:2.5rem;flex-wrap:wrap}
+.meta-num{font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--text-primary);line-height:1;margin-bottom:.3rem}
+.meta-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted)}
+
+.q-label{font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1.5rem}
+.q-title{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:400;line-height:1.25;margin-bottom:2.5rem;color:var(--text-primary)}
+.options-list{display:flex;flex-direction:column;gap:.9rem;margin-bottom:2rem}
+.option-btn{width:100%;text-align:left;padding:1.4rem 1.8rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;color:var(--text-secondary);font-family:var(--font-body);font-size:.95rem;line-height:1.6;cursor:pointer;transition:all .3s var(--ease);position:relative;overflow:hidden;display:flex;align-items:flex-start;gap:1rem}
+.option-btn::after{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent-glow);transition:width .4s var(--ease);z-index:0}
+.option-btn:hover{border-color:var(--border-strong);color:var(--text-primary);transform:translateX(4px)}
+.option-btn:hover::after{width:100%}
+.option-btn.selected{border-color:var(--accent);color:var(--text-primary)}
+.option-btn.selected::after{width:100%;background:var(--accent-glow-strong)}
+.opt-marker{flex-shrink:0;width:18px;height:18px;border:1px solid var(--border-strong);border-radius:50%;margin-top:3px;position:relative;z-index:1;transition:all .3s;display:flex;align-items:center;justify-content:center}
+.option-btn.selected .opt-marker{background:var(--accent);border-color:var(--accent)}
+.option-btn.selected .opt-marker::after{content:'';width:6px;height:6px;background:var(--bg-primary);border-radius:50%}
+.opt-text{position:relative;z-index:1}
+.q-nav{display:flex;justify-content:space-between;align-items:center;margin-top:1rem}
+.q-counter{font-size:.78rem;color:var(--text-muted);letter-spacing:.08em}
+
+.email-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;line-height:1.2;margin-bottom:1rem}
+.email-title em{font-style:italic;color:var(--accent)}
+.email-body{font-size:1rem;color:var(--text-secondary);line-height:1.8;margin-bottom:2.5rem;max-width:520px}
+.email-form{display:flex;flex-direction:column;gap:1rem;max-width:480px}
+.form-row{display:flex;gap:1rem}
+.field-wrap{flex:1;display:flex;flex-direction:column;gap:.5rem}
+.field-label{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted)}
+.field-input{padding:.9rem 1.2rem;background:var(--bg-card);border:1px solid var(--border);border-radius:2px;color:var(--text-primary);font-family:var(--font-body);font-size:.95rem;transition:border-color .3s;outline:none;width:100%}
+.field-input:focus{border-color:var(--accent)}
+.field-input::placeholder{color:var(--text-muted)}
+.field-input.error{border-color:rgba(200,80,80,.6)}
+.privacy-note{font-size:.75rem;color:var(--text-muted);line-height:1.6}
+
+.result-tag{display:inline-block;font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);font-weight:600;border:1px solid var(--border-strong);padding:.4rem 1rem;border-radius:2px;margin-bottom:1.5rem}
+.result-title{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:300;line-height:1.15;margin-bottom:2rem}
+.result-title em{font-style:italic;color:var(--accent)}
+.result-divider{width:60px;height:1px;background:var(--accent);margin-bottom:2rem}
+.result-body{font-size:1.02rem;color:var(--text-secondary);line-height:1.9;margin-bottom:1.5rem;max-width:680px}
+.result-body p{margin-bottom:1.2rem}
+.result-body p:last-child{margin-bottom:0}
+.result-body em{font-style:italic;color:var(--accent-light)}
+.result-cta-block{margin-top:3rem;padding:2.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:4px;border-left:3px solid var(--accent)}
+.result-reflection{margin-bottom:2rem;padding:1.5rem 1.8rem;background:var(--bg-secondary);border-left:3px solid var(--accent);border-radius:2px;font-size:.95rem;color:var(--text-secondary);line-height:2}
+.result-reflection em{font-style:italic;color:var(--text-primary);font-weight:500}
+.result-cta-block p{font-size:1rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.4rem}
+.result-cta-block p:last-of-type{margin-bottom:1.8rem}
+.result-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+
+@media(max-width:600px){
+  .nav{padding:1rem}
+  .progress-wrap{display:none!important}
+  .quiz-wrapper{padding:90px 1.2rem 60px}
+  .hero-meta{gap:1.5rem}
+  .form-row{flex-direction:column}
+  .result-cta-block{padding:1.5rem}
+  .result-actions{flex-direction:column;align-items:flex-start}
+}
+</style>
+
+    <!-- Open Graph / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/stuck-quiz">
+    <meta property="og:title" content="Leadership Diagnostic: Where Are You Stuck? | John Obidipe">
+    <meta property="og:description" content="Take the leadership diagnostic quiz to identify where you are stuck and what kind of coaching support would help most.">
+    <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
+    <meta property="og:site_name" content="John Obidipe | Executive Coach">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leadership Diagnostic: Where Are You Stuck? | John Obidipe">
+    <meta name="twitter:description" content="Take the leadership diagnostic quiz to identify where you are stuck and what kind of coaching support would help most.">
+    <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/stuck-quiz">
+
+    <!-- Google Analytics GA4 - Replace G-2Z17HSYFCV with your real Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2Z17HSYFCV');
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Catalyst <span>Growth</span> Coaching</a>
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-label">Your progress</div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+</nav>
+
+<div class="quiz-wrapper">
+  <div class="screen active" id="screen-intro">
+    <div class="hero-overline">Leadership Diagnostic</div>
+    <h1 class="hero-title">Where are you<br><em>stuck right now?</em></h1>
+    <p class="hero-body">8 questions. No generic advice. No motivational padding. At the end you'll get a result that describes your situation clearly — and tells you what actually needs to change.</p>
+    <div class="hero-meta">
+      <div><div class="meta-num">8</div><div class="meta-label">Questions</div></div>
+      <div><div class="meta-num">3 min</div><div class="meta-label">To complete</div></div>
+      <div><div class="meta-num">5</div><div class="meta-label">Stuck patterns</div></div>
+    </div>
+    <button class="btn-primary" onclick="startQuiz()">Start the diagnostic &rarr;</button>
+  </div>
+
+  <div class="screen" id="screen-q1">
+    <div class="q-label">Question 1 of 8</div>
+    <h2 class="q-title">When you think about work right now, what comes closest to how things feel?</h2>
+    <div class="options-list" id="opts-q1">
+      <button class="option-btn" onclick="selectQ1(0,'foggy')"><span class="opt-marker"></span><span class="opt-text">I know what I need to do but I can&rsquo;t seem to stop second-guessing myself long enough to do it</span></button>
+      <button class="option-btn" onclick="selectQ1(1,'empty')"><span class="opt-marker"></span><span class="opt-text">I&rsquo;m delivering but I&rsquo;m running on empty &mdash; and I&rsquo;ve been here longer than I&rsquo;d like to admit</span></button>
+      <button class="option-btn" onclick="selectQ1(2,'founder')"><span class="opt-marker"></span><span class="opt-text">I can see where I want to take things but I can never get out of the day-to-day long enough to get there</span></button>
+      <button class="option-btn" onclick="selectQ1(3,'invisible')"><span class="opt-marker"></span><span class="opt-text">I&rsquo;m doing good work but I don&rsquo;t feel like I&rsquo;m being heard or seen at the level I should be</span></button>
+      <button class="option-btn" onclick="selectQ1(4,'comfortable')"><span class="opt-marker"></span><span class="opt-text">I know I should probably be looking for a new role or making a career move, but staying where I am feels easier than starting over somewhere new</span></button>
+    </div>
+    <div class="q-nav">
+      <span class="q-counter">1 / 8</span>
+      <button class="btn-primary" id="next-q1" onclick="goToPath()" disabled>Next &rarr;</button>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-q2"></div>
+  <div class="screen" id="screen-q3"></div>
+  <div class="screen" id="screen-q4"></div>
+  <div class="screen" id="screen-q5"></div>
+  <div class="screen" id="screen-q6"></div>
+  <div class="screen" id="screen-q7"></div>
+  <div class="screen" id="screen-q8"></div>
+
+  <div class="screen" id="screen-email">
+    <div class="hero-overline">Almost there</div>
+    <h2 class="email-title">Your result is <em>ready</em></h2>
+    <p class="email-body">Enter your details below and we&rsquo;ll show you your stuck pattern &mdash; and send you a copy so you can read it properly when you have space to think.</p>
+    <div class="email-form">
+      <div class="form-row">
+        <div class="field-wrap"><label class="field-label">First name</label><input type="text" class="field-input" id="firstName" placeholder="Your first name"></div>
+        <div class="field-wrap"><label class="field-label">Last name</label><input type="text" class="field-input" id="lastName" placeholder="Your last name"></div>
+      </div>
+      <div class="field-wrap"><label class="field-label">Work email</label><input type="email" class="field-input" id="emailInput" placeholder="your@email.com"></div>
+      <button class="btn-primary" onclick="showResult()">Show my result &rarr;</button>
+      <p class="privacy-note">No spam. No pitch. Just your result. Unsubscribe any time.</p>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-result"></div>
+</div>
+
+<script>
+const P = {
+  foggy:{
+    title:"The Overthinking Leader",
+    qs:[
+      {t:"When you have an important decision to make, what usually happens?",o:["I gather more information than I probably need before I feel ready to commit","I make the call but spend time afterwards wondering if it was the right one","I delay long enough that the decision either makes itself or someone else makes it","I decide quickly but quietly carry the doubt on my own"]},
+      {t:"How often do you share what&rsquo;s really going on with a trusted colleague or peer?",o:["Rarely &mdash; I tend to work things out in my own head","Sometimes &mdash; but I usually downplay how much it&rsquo;s affecting me","Never &mdash; showing uncertainty feels too risky at my level","I don&rsquo;t have anyone at work I&rsquo;d trust with that"]},
+      {t:"When you&rsquo;re in a meeting and you disagree with the direction, what do you usually do?",o:["I raise it but often after the moment has passed","I think it through carefully and by the time I&rsquo;m ready the conversation has moved on","I note it mentally and address it one to one afterwards","I say nothing and hope it resolves itself"]},
+      {t:"How long have you been feeling this way?",o:["A few months","The better part of a year","Longer than I&rsquo;d like to admit","I&rsquo;m not sure &mdash; it&rsquo;s hard to pinpoint when it started"]},
+      {t:"What have you already tried?",o:["Told myself to just make decisions and move on","Read books, listened to podcasts, looked for frameworks","Pushed through and hoped it would settle down on its own","Nothing yet &mdash; I keep meaning to address it"]},
+      {t:"What does a good week at work look like for you right now?",o:["One where I get through without any major decisions to make","One where I feel like I was actually useful rather than just busy","One where I finish without carrying too much into the weekend","Honestly I can&rsquo;t remember the last time I had one"]},
+      {t:"What would change if you got this sorted?",o:["I&rsquo;d move faster and stop second-guessing everything","I&rsquo;d feel like the leader I know I&rsquo;m capable of being","I&rsquo;d enjoy the job again instead of just enduring it","All of the above &mdash; it&rsquo;s affecting more than just work"]}
+    ],
+    body:`<p>You&rsquo;re not struggling because you lack ability. You probably have more capability than most of the people around you realise &mdash; including your own team.</p><p>What&rsquo;s actually happening is quieter than that.</p><p>Every decision carries a little more weight than it should. Not because the decisions are harder, but because somewhere underneath the analysis and the planning and the careful thinking, there&rsquo;s a question you haven&rsquo;t said out loud: <em>what if I get this wrong and everyone finally sees it?</em></p><p>So you think it through again. You wait for more information. You reconsider. You keep your own counsel because asking for help feels like confirming something you don&rsquo;t want confirmed.</p><p>From the outside you look measured, thorough, considered. Inside it feels more like being stuck.</p><p>The thing most leaders in this pattern do is push it aside. Tell themselves they&rsquo;ll figure it out. And they usually do &mdash; just at a cost they stop noticing because they&rsquo;ve been paying it for so long.</p><p>Here&rsquo;s what&rsquo;s worth knowing: this isn&rsquo;t a confidence problem. It&rsquo;s not imposter syndrome in the way people usually mean it. It&rsquo;s a thinking pattern that made you good &mdash; the carefulness, the self-awareness, the standards &mdash; that&rsquo;s now working against you. It doesn&rsquo;t need fixing. It needs redirecting.</p><p>That&rsquo;s a different kind of work. And it moves faster than you&rsquo;d expect.</p>`,
+    cta:`<p>If you&rsquo;re reading this and it landed closer to home than you thought it would, that&rsquo;s worth paying attention to. Most leaders in this pattern wait until the cost gets higher before they do anything about it &mdash; a missed opportunity, a decision that drags on too long, a version of themselves they don&rsquo;t quite recognise anymore.</p><p>You don&rsquo;t have to wait for that.</p>`
+  },
+  empty:{
+    title:"The Empty High Performer",
+    qs:[
+      {t:"How long have you been feeling like this?",o:["A few months &mdash; it&rsquo;s been building gradually","Over a year &mdash; I&rsquo;ve been managing it but it&rsquo;s getting harder","Longer than that &mdash; I can&rsquo;t really remember feeling any different","I&rsquo;m not sure &mdash; it crept up on me and I didn&rsquo;t notice until it was already bad"]},
+      {t:"When you imagine having a week off, what&rsquo;s your honest reaction?",o:["Relief &mdash; I desperately need it","Anxiety &mdash; I&rsquo;d spend it worrying about what I&rsquo;m going back to","Indifference &mdash; I don&rsquo;t think it would actually change anything","I can&rsquo;t really imagine it &mdash; taking proper time off doesn&rsquo;t feel like an option"]},
+      {t:"Who at work knows how you&rsquo;re really feeling?",o:["Nobody &mdash; I keep it completely separate from how I show up","One or two people have a sense but not the full picture","My manager knows something is off but we haven&rsquo;t really addressed it","I&rsquo;m not sure I&rsquo;ve fully admitted it to myself yet"]},
+      {t:"What does your energy look like by the end of the working week?",o:["Completely flat &mdash; I spend the weekend recovering just to do it again","Variable &mdash; some weeks are worse than others but it&rsquo;s trending down","I&rsquo;ve stopped noticing &mdash; I just push through regardless","I&rsquo;m running on caffeine and willpower and not much else"]},
+      {t:"What have you tried so far?",o:["Holidays and time off &mdash; it helps briefly but I come back to the same thing","Reducing my workload where I can &mdash; but it doesn&rsquo;t seem to touch it","Telling myself it&rsquo;s temporary and things will ease up","Nothing &mdash; I keep waiting until I have enough energy to deal with it"]},
+      {t:"What does your performance look like from the outside right now?",o:["Strong &mdash; nobody would know anything was wrong","Slightly dipped but nothing anyone has flagged","I&rsquo;m getting by but I know I&rsquo;m not at my best","I&rsquo;m starting to worry it&rsquo;s becoming visible"]},
+      {t:"What would change if you got this sorted?",o:["I&rsquo;d actually enjoy the job again instead of just surviving it","I&rsquo;d have something left at the end of the day for the people and things that matter outside work","I&rsquo;d be able to think about the future instead of just getting through the week","All of the above &mdash; this is affecting everything"]}
+    ],
+    body:`<p>From the outside you&rsquo;re fine. Delivering, showing up, keeping the plates spinning. Nobody would look at your output and see someone who&rsquo;s struggling. That&rsquo;s partly why this has gone on as long as it has.</p><p>But you know. You&rsquo;ve known for a while.</p><p>The enjoyment went first. Then the energy. Then the thing that used to make you good at this &mdash; the care, the engagement, the sense that what you&rsquo;re doing actually matters &mdash; that&rsquo;s been running on fumes for longer than you&rsquo;d probably admit out loud. You&rsquo;re not burnt out in the way people imagine burnout. You haven&rsquo;t collapsed. You&rsquo;re still performing. But it&rsquo;s costing everything you have just to stay level, and there&rsquo;s nothing left after.</p><p>The plan has always been the same. When you have the energy, you&rsquo;ll do something about it. Take stock, make a change, figure out what comes next. It&rsquo;s a reasonable plan. The problem is the energy never comes. Because the thing draining you is the same thing filling your days, and there&rsquo;s no pause long enough to recover in.</p><p>So the weeks pass. You get through them. And the gap between who you are right now and who you know you&rsquo;re capable of being gets a little wider, a little harder to close.</p><p>What makes this pattern particularly dangerous is that you&rsquo;re still functional enough that nobody intervenes. There&rsquo;s no moment of crisis that forces a change. Just a slow, steady depletion that you manage well enough to keep hidden &mdash; from your team, your organisation, sometimes even yourself. The warning signs are there but they&rsquo;re not loud enough to act on. Until one day they are.</p><p>You don&rsquo;t have to wait for that day.</p><p>This isn&rsquo;t about taking time off or finding better work-life balance &mdash; you&rsquo;ve probably tried versions of that. It&rsquo;s about understanding what&rsquo;s actually driving the depletion and making a real change before your body or your mind makes the decision for you.</p>`,
+    cta:`<p>I work with leaders stuck exactly here. Not to patch them up and send them back in, but to help them figure out what needs to genuinely shift &mdash; in their role, their thinking, their situation &mdash; so they can perform without it costing them everything.</p>`
+  },
+  founder:{
+    title:"The Founder Trap",
+    qs:[
+      {t:"How much of your week is spent doing work only you can do versus work others could handle?",o:["Honestly most of it &mdash; I&rsquo;m involved in almost everything","More than I&rsquo;d like &mdash; I keep getting pulled into things I shouldn&rsquo;t be","It varies &mdash; but when things get busy I&rsquo;m always the one who picks up the slack","I&rsquo;ve lost track &mdash; my days just fill up and I deal with what&rsquo;s in front of me"]},
+      {t:"When you try to step back and work on the business rather than in it, what happens?",o:["Something always comes up that pulls me back in","I feel guilty &mdash; like I should be doing something more immediate","I don&rsquo;t really try anymore &mdash; it never seems to work","I carve out the time occasionally but it never feels like enough"]},
+      {t:"How would your business cope if you were completely unavailable for two weeks?",o:["It would struggle &mdash; too much depends on me being present","It would probably survive but not without some damage","I genuinely don&rsquo;t know and that worries me","It wouldn&rsquo;t cope &mdash; and we both know it"]},
+      {t:"What&rsquo;s your honest assessment of the team around you?",o:["They&rsquo;re good people but I don&rsquo;t fully trust them to handle things without me","The right people aren&rsquo;t in the right seats and I haven&rsquo;t fixed it yet","I don&rsquo;t have the layer of leadership I need between me and everything else","Some are strong but the overall structure isn&rsquo;t working"]},
+      {t:"How long have you been aware this needs to change?",o:["A few months &mdash; it&rsquo;s been building","Over a year &mdash; I keep meaning to address it but never quite get there","Since almost the beginning if I&rsquo;m honest","Long enough that I&rsquo;ve stopped thinking about it as something I&rsquo;ll fix"]},
+      {t:"What have you already tried?",o:["Hiring &mdash; but the right people are hard to find and harder to trust","Delegating &mdash; but I end up pulling things back because the standard isn&rsquo;t there","Restructuring how we work &mdash; with limited success","Not much yet &mdash; I can see the problem but haven&rsquo;t found the space to tackle it"]},
+      {t:"What would change if you got this sorted?",o:["I&rsquo;d finally be able to work on the business instead of just in it","I&rsquo;d have the headspace to think strategically again","I&rsquo;d feel like I was building something rather than just maintaining it","All of the above &mdash; this is the thing blocking everything else"]}
+    ],
+    body:`<p>You built something real. That&rsquo;s not nothing &mdash; most people who say they want to build a business never actually do it. You did.</p><p>But somewhere along the way the business stopped being the thing you run and started being the thing that runs you.</p><p>Your days are full. Genuinely full &mdash; not padded with meetings that could be emails, but full of things that actually need handling. The problem is they need <em>you</em> to handle them. And you know that&rsquo;s not right. You&rsquo;ve known it for a while.</p><p>The frustration isn&rsquo;t really about being busy. It&rsquo;s that you can see the version of the business you&rsquo;re trying to build &mdash; the strategy, the direction, the next level &mdash; and you can never quite get to it. Every time you carve out space to think, something pulls you back in. And if you&rsquo;re being honest, you&rsquo;re not even sure the business holds together without you in the middle of it.</p><p>So you stay in the middle. And the gap between where you are and where you&rsquo;re trying to get to quietly widens.</p><p>What looks like a time problem is usually a trust problem. Sometimes that&rsquo;s the structure &mdash; there&rsquo;s no layer between you and everything else that actually holds. Sometimes it&rsquo;s the people themselves &mdash; the right ones aren&rsquo;t in the right seats, or aren&rsquo;t there at all. Either way, you end up filling the gap yourself because the alternative feels worse.</p><p>The trap is that you can&rsquo;t build that structure while you&rsquo;re inside the chaos. But you can&rsquo;t step outside the chaos without the structure. Most founders sit in that loop for years.</p><p>Getting out of it isn&rsquo;t about working harder on the business or finally hiring the right person. It&rsquo;s about getting enough distance to see what actually needs to change &mdash; and then making those changes in the right order. That requires space you can&rsquo;t create alone.</p>`,
+    cta:`<p>If this is where you are right now, you already know the cost. Time, energy, the version of the business you originally had in mind. Probably some personal cost too that you don&rsquo;t talk about much.</p>`
+  },
+  invisible:{
+    title:"The Quiet Leader",
+    qs:[
+      {t:"When you&rsquo;re in a senior meeting and you have a view, what usually happens?",o:["I think it through carefully but by the time I&rsquo;m ready the conversation has moved on","I raise it but often after the moment has passed &mdash; in a follow up or one to one","I stay quiet and hope someone else makes the same point","I share it but it doesn&rsquo;t land the way it does when others say similar things"]},
+      {t:"How would you describe the way decisions get made in your senior team?",o:["Fast and loud &mdash; the most confident or convincing voice usually wins","Political &mdash; the right relationships matter more than the right ideas","Reasonably fair but I don&rsquo;t always feel like I have equal influence","I&rsquo;m not sure my input is weighted the same as others even when I&rsquo;m right"]},
+      {t:"How long have you been in your current role or at your current level?",o:["A few years &mdash; I&rsquo;ve earned my place but I&rsquo;m not sure I&rsquo;m fully utilising it","Long enough that I should feel more comfortable in the room than I do","Long enough that people respect my technical judgment but not always my leadership voice","Longer than most &mdash; but seniority hasn&rsquo;t made the room feel easier"]},
+      {t:"When you leave an important meeting, what&rsquo;s the most common feeling?",o:["That I had more to contribute than I actually did","Mild frustration that the conversation went a direction I could see wasn&rsquo;t right","Relief that it&rsquo;s over more than satisfaction at what was achieved","A quiet wish that I&rsquo;d said the thing I was thinking"]},
+      {t:"How do you tend to process and form your views?",o:["I need time to think things through properly before I&rsquo;m confident in my position","I&rsquo;m better in writing or one to one than in fast group discussions","I form strong views but struggle to articulate them quickly under pressure","I&rsquo;m thorough and considered but the room doesn&rsquo;t always wait for that"]},
+      {t:"What have you tried so far?",o:["Pushing myself to speak up earlier &mdash; with mixed results","Preparing more thoroughly before meetings so I&rsquo;m ready","Accepting it&rsquo;s just how I am and working around it","Nothing yet &mdash; I&rsquo;m not sure what would actually help"]},
+      {t:"What would change if you got this sorted?",o:["I&rsquo;d finally feel like my contribution matched my capability","I&rsquo;d have real influence in the room rather than just a seat at the table","I&rsquo;d stop leaving meetings with things unsaid","All of the above &mdash; I know I have more to give than I&rsquo;m currently able to show"]}
+    ],
+    body:`<p>You got here because you&rsquo;re good. Really good. Your technical judgment, your track record, the fact that you&rsquo;ve stayed and delivered when others didn&rsquo;t &mdash; that&rsquo;s not luck. That&rsquo;s earned.</p><p>But being good at the work and being visible in the room are two different skills. And somewhere along the way you&rsquo;ve noticed that the room doesn&rsquo;t always wait for the best idea. It rewards the loudest or most convincing one.</p><p>You think before you speak. You process, consider, weigh things up. In a different environment that would be seen as exactly what it is &mdash; careful, considered leadership. In most senior teams it just means someone else fills the silence first. And their idea &mdash; half-formed, confidently delivered &mdash; gets the airtime yours never did.</p><p>So you leave meetings with thoughts you didn&rsquo;t say. You watch decisions get made that you could see the flaw in but didn&rsquo;t push back on in time. You tell yourself you&rsquo;ll pick your moments better. You wish the people around you were a little less loud, a little more willing to think before they opened their mouths.</p><p>The frustration is real. But waiting for the room to change isn&rsquo;t a strategy.</p><p>Here&rsquo;s what&rsquo;s actually true: the way you think is an asset. The problem isn&rsquo;t that you&rsquo;re too slow &mdash; it&rsquo;s that you haven&rsquo;t found the way to make your thinking land in rooms that move fast. That&rsquo;s a learnable thing. Not about becoming someone you&rsquo;re not, or performing confidence you don&rsquo;t feel. It&rsquo;s about understanding how influence actually works at the top and using what you already have differently.</p><p>The leaders who figure this out don&rsquo;t get louder. They get sharper. They learn when to speak, how to frame it, and how to make the room come to them rather than chasing it.</p>`,
+    cta:`<p>If you&rsquo;re reading this and it sounds familiar &mdash; the quiet frustration, the unspoken ideas, the sense that your contribution isn&rsquo;t landing the way it should &mdash; that&rsquo;s worth addressing. Not because something is wrong with you. Because something is being wasted.</p>`
+  },
+  comfortable:{
+    title:"The Comfortable Cage",
+    qs:[
+      {t:"When did you last seriously consider making a career move?",o:["Recently &mdash; but I talked myself out of it fairly quickly","A while ago &mdash; I looked at a few things but nothing felt worth the disruption","I think about it occasionally but never do anything about it","I can&rsquo;t really remember &mdash; it&rsquo;s been a long time since I actively considered it"]},
+      {t:"What keeps you where you are?",o:["The familiarity &mdash; I know how everything works here and that has real value","The risk of starting over somewhere new and having to prove myself again","The people &mdash; I trust them even if the role isn&rsquo;t fulfilling me","Inertia more than anything &mdash; it&rsquo;s easier to stay than to decide to go"]},
+      {t:"How do you feel on a Sunday evening thinking about the week ahead?",o:["Flat &mdash; not dread exactly, just an absence of anything to look forward to","Fine &mdash; it&rsquo;s not bad enough to feel strongly about","Mildly resigned &mdash; I&rsquo;ll get through it like I always do","I&rsquo;ve stopped noticing &mdash; it&rsquo;s just how Sunday evenings feel now"]},
+      {t:"When you imagine yourself in this same role in two years&rsquo; time, what comes up?",o:["A quiet unease &mdash; I don&rsquo;t want that but I&rsquo;m not sure what I&rsquo;d do differently","Acceptance &mdash; maybe this is just what work feels like at this level","Frustration &mdash; I know I&rsquo;m capable of more but I can&rsquo;t seem to make the move","Nothing much &mdash; I try not to think that far ahead"]},
+      {t:"How often do you feel genuinely stretched or challenged by your work?",o:["Rarely &mdash; I know this place too well for it to challenge me anymore","Occasionally &mdash; there are moments but they&rsquo;re becoming less frequent","Almost never &mdash; I could do most of this in my sleep","I used to feel stretched here but that was a long time ago"]},
+      {t:"What have you tried so far?",o:["Looked at job boards occasionally but nothing felt compelling enough to pursue","Had informal conversations about other opportunities but not followed through","Told myself things will change here if I&rsquo;m patient enough","Nothing &mdash; I keep meaning to but the timing never feels right"]},
+      {t:"What would change if you got this sorted?",o:["I&rsquo;d feel like my career was moving again instead of standing still","I&rsquo;d have something to look forward to rather than just get through","I&rsquo;d feel like I was using what I&rsquo;m actually capable of","All of the above &mdash; I&rsquo;ve been coasting longer than I&rsquo;d like to admit"]}
+    ],
+    body:`<p>You&rsquo;re not miserable. That&rsquo;s actually part of the problem.</p><p>You know the place, know the people, know how things work. You&rsquo;ve earned your position here through consistency and reliability &mdash; the kind of leader who keeps things moving when everyone else is chasing the next shiny thing. That&rsquo;s a real strength. Organisations quietly depend on people like you more than they ever admit.</p><p>But somewhere underneath the routine there&rsquo;s a feeling you keep putting to one side. Not urgent enough to act on. Not comfortable enough to ignore completely. Just there.</p><p>It&rsquo;s bad. But not so bad.</p><p>So you stay. You tell yourself things might change &mdash; a restructure, a new brief, a shift in direction that makes it feel worth it again. You tell yourself you&rsquo;ll look at other options at some point, when things settle, when the timing is better. And the months pass in the way months do when you&rsquo;re busy and the diary is full and there&rsquo;s always something more pressing than your own future.</p><p>The honest thing about this pattern is that it&rsquo;s not laziness and it&rsquo;s not fear exactly. It&rsquo;s that you&rsquo;re genuinely not drawn to disruption. You don&rsquo;t get excited by reinvention the way some people do. The idea of starting from scratch &mdash; rebuilding credibility, learning a new culture, re-establishing yourself all over again &mdash; feels exhausting rather than energising. So the familiar, even when it&rsquo;s limiting, keeps winning.</p><p>What&rsquo;s worth naming is the cost of that. Not in dramatic terms &mdash; you&rsquo;re not falling apart. But there&rsquo;s a version of your career that isn&rsquo;t happening. Contribution you&rsquo;re capable of that isn&rsquo;t being made. And every year that passes in the same place makes the gap between where you are and where you could be a little wider and a little harder to cross.</p><p>The move doesn&rsquo;t have to be dramatic. It rarely is. But it does have to be intentional &mdash; and that requires getting honest about what&rsquo;s actually keeping you here, rather than what you tell yourself is keeping you here.</p>`,
+    cta:`<p>I work with leaders stuck exactly here. Not to push them into decisions they&rsquo;re not ready for, but to help them see their situation clearly and figure out what they actually want &mdash; and whether staying or moving is the right answer. Sometimes it&rsquo;s not the job that needs to change. But you need to know that, rather than wonder.</p>`
+  }
+};
+
+let path=null;
+const answers={}; // stores answer text by question number
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function updateProgress(step){
+  const w=document.getElementById('progressWrap');
+  const f=document.getElementById('progressFill');
+  if(step<=0){w.style.display='none';return;}
+  w.style.display='flex';
+  f.style.width=Math.min(100,Math.round((step/8)*100))+'%';
+}
+
+function startQuiz(){updateProgress(1);showScreen('screen-q1');}
+
+function selectQ1(idx,pathKey){
+  document.querySelectorAll('#opts-q1 .option-btn').forEach((b,i)=>b.classList.toggle('selected',i===idx));
+  path=pathKey;
+  answers[1]=document.querySelectorAll('#opts-q1 .option-btn')[idx].querySelector('.opt-text').textContent;
+  const btn=document.getElementById('next-q1');
+  btn.disabled=false;
+}
+
+function goToPath(){
+  if(!path)return;
+  const d=P[path];
+  d.qs.forEach((q,i)=>{
+    const n=i+2;
+    const opts=q.o.map((o,idx)=>`<button class="option-btn" onclick="selectPathQ(${n},${idx})"><span class="opt-marker"></span><span class="opt-text">${o}</span></button>`).join('');
+    document.getElementById('screen-q'+n).innerHTML=`
+      <div class="q-label">Question ${n} of 8</div>
+      <h2 class="q-title">${q.t}</h2>
+      <div class="options-list" id="opts-q${n}">${opts}</div>
+      <div class="q-nav">
+        <button class="btn-secondary" onclick="goBack(${n})">&#8592; Back</button>
+        <span class="q-counter">${n} / 8</span>
+      </div>`;
+  });
+  updateProgress(2);
+  showScreen('screen-q2');
+}
+
+function selectPathQ(qNum,idx){
+  document.querySelectorAll('#opts-q'+qNum+' .option-btn').forEach((b,i)=>b.classList.toggle('selected',i===idx));
+  answers[qNum]=document.querySelectorAll('#opts-q'+qNum+' .option-btn')[idx].querySelector('.opt-text').textContent;
+  setTimeout(()=>{
+    if(qNum<8){updateProgress(qNum+1);showScreen('screen-q'+(qNum+1));}
+    else{updateProgress(9);showScreen('screen-email');}
+  },300);
+}
+
+function goBack(qNum){
+  updateProgress(qNum-1);
+  showScreen('screen-q'+(qNum-1));
+}
+
+function showResult(){
+  const email=document.getElementById('emailInput');
+  if(!email.value||!email.value.includes('@')){email.classList.add('error');email.focus();return;}
+  const d=P[path];
+  // Build personalised reflection from stored answers (Q1, Q3, Q7)
+  const a1=answers[1]||'';
+  const a3=answers[3]||'';
+  const a7=answers[7]||'';
+  let reflection='';
+  if(a1||a3||a7){
+    const lines=[];
+    if(a1) lines.push('You said: <em>\u201c'+a1+'\u201d</em>');
+    if(a3) lines.push('You said: <em>\u201c'+a3+'\u201d</em>');
+    if(a7) lines.push('You said getting unstuck would mean: <em>\u201c'+a7+'\u201d</em>');
+    reflection='<div class="result-reflection">'+lines.join('<br>')+'</div><p>That combination has a pattern. Here\u2019s what\u2019s actually going on.</p>';
+  }
+  document.getElementById('screen-result').innerHTML=`
+    <div class="result-tag">Your stuck pattern</div>
+    <h2 class="result-title"><em>${d.title}</em></h2>
+    <div class="result-divider"></div>
+    <div class="result-body">${reflection}${d.body}</div>
+    <div class="result-cta-block">
+      ${d.cta}
+      <p>I work with leaders stuck exactly here. Not to give them a framework to follow or a system to implement &mdash; but to get them genuinely unstuck and moving again. Quickly, without the usual corporate coaching nonsense.</p>
+      <p>If you want to find out whether that&rsquo;s relevant to you, the easiest next step is a short conversation. No pitch, no pressure. Just an honest look at where you&rsquo;re stuck and whether I can help.</p>
+      <div class="result-actions">
+        <a href="contact.html" class="btn-primary">Book a free 20-minute call &rarr;</a>
+        <a href="index.html" class="btn-secondary">Back to home</a>
+      </div>
+    </div>`;
+  updateProgress(10);
+  showScreen('screen-result');
+}
+</script>
+</body>
+</html>
