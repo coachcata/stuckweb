@@ -1,0 +1,17 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking - the site should never be embedded in a foreign iframe
+    X-Frame-Options = "SAMEORIGIN"
+    # Prevent MIME-type sniffing attacks
+    X-Content-Type-Options = "nosniff"
+    # Controls how much referrer info is sent (keeps GA tracking working while limiting leakage)
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Only send HTTPS from this point forward (1 year, include subdomains)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    # Permissions policy - disable features the site doesn't use
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    # Content Security Policy
+    # - 'unsafe-inline' is needed for the site's extensive inline <style> and <script> blocks
+    # - Tighten this further by moving styles/scripts to external files in future
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://img.youtube.com https://www.catalystgrowthcoach.co.uk; frame-src https://portal.catalystgrowthcoach.co.uk https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-ancestors 'self'"

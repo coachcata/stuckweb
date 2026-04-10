@@ -201,6 +201,16 @@ body{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-
   <div class="screen" id="screen-result"></div>
 </div>
 
+<!-- Hidden form for Netlify to detect and register quiz lead capture at build time -->
+<form name="quiz-lead" data-netlify="true" netlify-honeypot="bot-field" style="display:none;">
+  <input name="form-name" value="quiz-lead">
+  <input name="bot-field">
+  <input name="firstName">
+  <input name="lastName">
+  <input name="email">
+  <input name="stuck-pattern">
+</form>
+
 <script>
 const P = {
   foggy:{
@@ -338,6 +348,8 @@ function goBack(qNum){
 function showResult(){
   const email=document.getElementById('emailInput');
   if(!email.value||!email.value.includes('@')){email.classList.add('error');email.focus();return;}
+  // Submit lead data to Netlify Forms (fire-and-forget; never blocks result display)
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({'form-name':'quiz-lead','firstName':document.getElementById('firstName').value,'lastName':document.getElementById('lastName').value,'email':email.value,'stuck-pattern':path||''}).toString()}).catch(()=>{});
   const d=P[path];
   // Build personalised reflection from stored answers (Q1, Q3, Q7)
   const a1=answers[1]||'';

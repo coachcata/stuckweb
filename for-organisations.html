@@ -1506,7 +1506,9 @@ img { max-width: 100%; display: block; }
     <h2 class="section-title reveal">Watch a 4-Minute <em>Walkthrough.</em></h2>
     <p class="section-subtitle reveal" style="margin-left: auto; margin-right: auto;">Leave your details below and the demo opens immediately. No call required. No follow-up unless you ask for one.</p>
 
-    <form class="fo-form reveal" id="fo-form">
+    <form class="fo-form reveal" id="fo-form" name="demo-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="demo-request">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
       <div>
         <label for="fo-name">Full Name</label>
         <input type="text" id="fo-name" name="name" required placeholder="Your full name">
@@ -1613,10 +1615,8 @@ const foForm=document.getElementById('fo-form');
 if(foForm){
   foForm.addEventListener('submit',function(e){
     e.preventDefault();
-    // TODO: send form data to email service
-    foForm.style.display='none';
-    document.getElementById('demo-video').classList.add('active');
-    document.getElementById('demo-video').scrollIntoView({behavior:'smooth',block:'start'});
+    const showDemo=function(){foForm.style.display='none';document.getElementById('demo-video').classList.add('active');document.getElementById('demo-video').scrollIntoView({behavior:'smooth',block:'start'});};
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(foForm)).toString()}).then(showDemo).catch(showDemo);
   });
 }
 </script>
