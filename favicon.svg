@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#0C0C0E"/>
+  <g transform="translate(16,16)">
+    <!-- Main starburst rays -->
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#C8956C" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#C8956C" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="-8.5" y1="-8.5" x2="8.5" y2="8.5" stroke="#C8956C" stroke-width="1.4" stroke-linecap="round"/>
+    <line x1="8.5" y1="-8.5" x2="-8.5" y2="8.5" stroke="#C8956C" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- Secondary shorter rays -->
+    <line x1="-4.6" y1="-11.1" x2="4.6" y2="11.1" stroke="#C8956C" stroke-width="1" stroke-linecap="round"/>
+    <line x1="4.6" y1="-11.1" x2="-4.6" y2="11.1" stroke="#C8956C" stroke-width="1" stroke-linecap="round"/>
+    <line x1="-11.1" y1="-4.6" x2="11.1" y2="4.6" stroke="#C8956C" stroke-width="1" stroke-linecap="round"/>
+    <line x1="-11.1" y1="4.6" x2="11.1" y2="-4.6" stroke="#C8956C" stroke-width="1" stroke-linecap="round"/>
+    <!-- Center glow -->
+    <circle cx="0" cy="0" r="2.5" fill="#C8956C"/>
+    <circle cx="0" cy="0" r="4" fill="none" stroke="#C8956C" stroke-width="0.5" opacity="0.4"/>
+  </g>
+</svg>
