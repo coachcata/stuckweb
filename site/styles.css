@@ -1244,6 +1244,7 @@ img { max-width: 100%; display: block; }
   border: 2px solid #C8956C;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 2.5rem;
   margin-bottom: 3rem;
   position: relative;
 }
