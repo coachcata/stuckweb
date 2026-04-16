@@ -1240,135 +1240,208 @@ img { max-width: 100%; display: block; }
 
 /* ── Topic of the Month ── */
 .ts-spotlight {
-  background: var(--bg-card, #1E1E26);
-  border: 1px solid rgba(200, 149, 108, 0.25);
-  border-radius: 8px;
-  padding: 3rem;
-  margin-top: 2.5rem;
+  background: linear-gradient(135deg, #1E1E26 0%, #1A1A20 100%);
+  border: 2px solid #C8956C;
+  border-radius: 10px;
+  overflow: hidden;
   margin-bottom: 3rem;
+  position: relative;
+}
+.ts-spotlight::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  border-radius: 11px;
+  background: rgba(200, 149, 108, 0.08);
+  z-index: 0;
+  pointer-events: none;
+}
+.ts-spotlight-header {
+  padding: 2.5rem 2.5rem 0;
+  position: relative;
+  z-index: 1;
 }
 .ts-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: #C8956C;
   color: #0C0C0E;
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.3rem 0.8rem;
+  letter-spacing: 0.14em;
+  padding: 6px 14px;
   border-radius: 3px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+.ts-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0C0C0E;
+  animation: ts-pulse 2s infinite;
+}
+@keyframes ts-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 .ts-spotlight-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-size: clamp(24px, 3.5vw, 34px);
   font-weight: 500;
   color: #F2F0EC;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
   line-height: 1.2;
 }
 .ts-spotlight-sub {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.05rem;
+  font-size: 15px;
   color: #A8A5A0;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
-.ts-body {
+.ts-spotlight-body {
+  padding: 0 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.ts-spotlight-body p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
+  font-size: 14px;
   color: #A8A5A0;
   line-height: 1.75;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .ts-phases {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 2.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(200, 149, 108, 0.15);
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
 }
-.ts-phase-card {
-  background: rgba(200, 149, 108, 0.06);
-  border: 1px solid rgba(200, 149, 108, 0.1);
-  border-radius: 6px;
-  padding: 1.5rem;
+.ts-phase {
+  padding: 1.8rem 2rem;
+  border-right: 1px solid rgba(200, 149, 108, 0.15);
 }
-.ts-phase-label {
+.ts-phase:last-child {
+  border-right: none;
+}
+.ts-phase-eyebrow {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: #C8956C;
   margin-bottom: 0.4rem;
 }
 .ts-phase-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.2rem;
+  font-size: 18px;
   font-weight: 500;
   color: #F2F0EC;
-  margin-bottom: 0.6rem;
-  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
 }
 .ts-phase-body {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
-  color: #A8A5A0;
-  line-height: 1.7;
+  font-size: 13px;
+  color: #6B6862;
+  line-height: 1.65;
 }
 .ts-side-quest {
-  background: rgba(200, 149, 108, 0.08);
+  margin: 0 2.5rem 2.5rem;
+  position: relative;
+  z-index: 1;
+  background: rgba(200, 149, 108, 0.06);
   border-left: 3px solid #C8956C;
   border-radius: 0 6px 6px 0;
-  padding: 1.5rem 1.8rem;
-  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
 }
-.ts-side-quest-title {
+.ts-sq-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: rgba(200, 149, 108, 0.12);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ts-sq-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.ts-sq-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #F2F0EC;
+  margin-bottom: 0.25rem;
+}
+.ts-sq-body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #6B6862;
+  line-height: 1.65;
+}
+.ts-other-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
   font-weight: 500;
   color: #F2F0EC;
   margin-bottom: 0.4rem;
 }
-.ts-side-quest-body {
+.ts-other-intro {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  color: #A8A5A0;
+  font-size: 14px;
+  color: #6B6862;
   line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 .ts-topics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin-top: 1.5rem;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 .ts-topic-card {
-  background: var(--bg-card, #1E1E26);
-  border: 1px solid rgba(200, 149, 108, 0.1);
+  background: #1A1A20;
+  border: 1px solid rgba(200, 149, 108, 0.08);
   border-radius: 6px;
-  padding: 1.6rem;
+  padding: 1.4rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.ts-topic-card:hover {
+  border-color: rgba(200, 149, 108, 0.25);
+  transform: translateY(-2px);
 }
 .ts-topic-card-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 16px;
   font-weight: 500;
   color: #F2F0EC;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
+  margin-bottom: 0.4rem;
+  line-height: 1.25;
 }
 .ts-topic-card-body {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
-  color: #A8A5A0;
-  line-height: 1.65;
+  font-size: 13px;
+  color: #6B6862;
+  line-height: 1.6;
 }
 .ts-closing {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  color: #A8A5A0;
   text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #A8A5A0;
   line-height: 1.7;
 }
 .ts-closing a {
@@ -1381,8 +1454,16 @@ img { max-width: 100%; display: block; }
   border-bottom-color: #C8956C;
 }
 @media (max-width: 768px) {
-  .ts-spotlight { padding: 1.8rem 1.4rem; }
+  .ts-spotlight-header { padding: 1.5rem 1.5rem 0; }
+  .ts-spotlight-body { padding: 0 1.5rem; }
   .ts-phases { grid-template-columns: 1fr; }
+  .ts-phase {
+    border-right: none;
+    border-bottom: 1px solid rgba(200, 149, 108, 0.1);
+    padding: 1.2rem 1.5rem;
+  }
+  .ts-phase:last-child { border-bottom: none; }
+  .ts-side-quest { margin: 0 1.5rem 1.5rem; }
   .ts-topics-grid { grid-template-columns: 1fr; }
 }
 
