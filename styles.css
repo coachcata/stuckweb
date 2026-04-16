@@ -1238,3 +1238,178 @@ img { max-width: 100%; display: block; }
   aspect-ratio: 21/9;
 }
 
+/* ===================== WORKSHOP TOPIC SECTION ===================== */
+.workshop-spotlight {
+  padding: 3rem;
+  background: linear-gradient(135deg, var(--bg-card), rgba(200, 149, 108, 0.05));
+  border: 1px solid var(--accent-dark);
+  border-radius: 4px;
+}
+
+.workshop-spotlight-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-glow);
+  padding: 0.35rem 0.8rem;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--border-strong);
+}
+
+.workshop-spotlight-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.workshop-spotlight-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.workshop-spotlight-body p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.workshop-spotlight-body p:last-child {
+  margin-bottom: 2rem;
+}
+
+.workshop-phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.workshop-phase-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.workshop-phase-heading {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.workshop-phase-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.workshop-leader-aside {
+  padding: 1.5rem 1.5rem 1.5rem 1.8rem;
+  background: rgba(200, 149, 108, 0.04);
+  border-left: 3px solid var(--accent-dark);
+  border-radius: 0 4px 4px 0;
+}
+
+.workshop-leader-aside-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.workshop-leader-aside p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.workshop-topics-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.grid-topic-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.workshop-topic-card {
+  padding: 1.8rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all 0.4s var(--ease);
+}
+
+.workshop-topic-card:hover {
+  border-color: var(--border-strong);
+}
+
+.workshop-topic-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.workshop-topic-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.workshop-closing {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.workshop-closing a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-strong);
+  transition: border-color 0.3s;
+}
+
+.workshop-closing a:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+  .workshop-phases { grid-template-columns: 1fr; }
+  .grid-topic-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .workshop-spotlight { padding: 2rem 1.5rem; }
+  .grid-topic-cards { grid-template-columns: 1fr; }
+}
+
