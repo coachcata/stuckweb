@@ -427,6 +427,134 @@ section{padding:5rem 0}
   </div>
 </section>
 
-<!-- Q4 PLACEHOLDER -->
+<!-- COMPARISON -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="s-eyebrow reveal">How this compares</div>
+    <h2 class="s-title reveal">Not All AI Programmes Are the Same</h2>
+    <p class="s-body reveal" style="margin-bottom:2rem">Most AI team initiatives fall into one of three buckets. Here's how TeamStrong is different.</p>
+    <table class="comp-table reveal">
+      <thead>
+        <tr>
+          <th></th>
+          <th>One-day AI workshop</th>
+          <th>Online AI course</th>
+          <th>Management consultancy</th>
+          <th>TeamStrong</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Duration</td>
+          <td>1 day</td>
+          <td>Self-paced (weeks)</td>
+          <td>Varies (project-based)</td>
+          <td class="comp-highlight">12 weeks (structured)</td>
+        </tr>
+        <tr>
+          <td>Personalised to each person</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> CliftonStrengths + FIT16</td>
+        </tr>
+        <tr>
+          <td>Addresses fear and resistance</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> 1:1 coaching</td>
+        </tr>
+        <tr>
+          <td>Team strategy (not just tools)</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td>Process-level</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> People + process</td>
+        </tr>
+        <tr>
+          <td>Ongoing accountability</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td>Report-based</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> 8 weeks coaching</td>
+        </tr>
+        <tr>
+          <td>Team building included</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> Experience Day at The O2</td>
+        </tr>
+        <tr>
+          <td>Leader coaching</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td>Advisory only</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> Dedicated side quest</td>
+        </tr>
+        <tr>
+          <td>Changes stick after it ends</td>
+          <td>Rarely</td>
+          <td>Rarely</td>
+          <td>Depends on execution</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> Embedded over 12 weeks</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section>
+  <div class="wrap">
+    <div class="s-eyebrow reveal">Who this is for</div>
+    <h2 class="s-title reveal">This Works If You're The Person<br>Thinking "We Need to Do Something"</h2>
+    <div class="who-list">
+      <div class="who-item reveal">
+        <h4>Team Leaders</h4>
+        <p>You can see your team falling behind. You want them to embrace AI but you're not sure how to lead the shift yourself.</p>
+      </div>
+      <div class="who-item reveal">
+        <h4>L&amp;D Directors</h4>
+        <p>You've been asked to upskill the organisation on AI. You know a one-off training day won't cut it. You need something that actually changes behaviour.</p>
+      </div>
+      <div class="who-item reveal">
+        <h4>CEOs and MDs</h4>
+        <p>You can see the competitive advantage AI creates. You need your leadership team to stop talking about it and start using it — together, with a plan.</p>
+      </div>
+      <div class="who-item reveal">
+        <h4>CHROs and People Directors</h4>
+        <p>Your people are anxious about AI. You need an approach that builds confidence rather than fear — and that doesn't feel like another corporate initiative.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="alt-bg" id="book">
+  <div class="wrap final-cta">
+    <div class="s-eyebrow reveal">Next step</div>
+    <h2 class="reveal">15 Minutes to Find Out<br>If This Fits Your Team</h2>
+    <p class="reveal">No pitch. No pressure. Just an honest conversation about where your team is with AI, what's getting in the way, and whether TeamStrong is the right move.</p>
+    <a href="https://catalystgrowthcoach.co.uk/contact" class="hero-cta reveal">Book Your Discovery Call</a>
+    <p class="final-sub reveal">15 minutes · No preparation needed · Honest conversation</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="wrap">
+    &copy; 2026 John Obidipe · Catalyst Growth Coaching · coach@catalystgrowthcoach.co.uk
+  </div>
+</div>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, {threshold: 0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
 </body>
 </html>
