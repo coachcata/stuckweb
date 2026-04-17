@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Team Adoption — TeamStrong | Catalyst Growth Coaching</title>
+<meta name="description" content="Help your team move from fearing AI to leading with it. A 12-week programme that builds real confidence, not just awareness.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',-apple-system,sans-serif;
+  background:#0C0C0E;
+  color:#F2F0EC;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* ── Tokens ── */
+:root{
+  --bg:#0C0C0E;
+  --bg2:#141418;
+  --bg3:#1A1A20;
+  --card:#1E1E26;
+  --bone:#F2F0EC;
+  --stone:#A8A5A0;
+  --ash:#6B6862;
+  --cognac:#C8956C;
+  --cognac-light:#D4A97D;
+  --cognac-dark:#A8774E;
+  --glow:rgba(200,149,108,0.12);
+  --border:rgba(200,149,108,0.1);
+  --border-s:rgba(200,149,108,0.25);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',-apple-system,sans-serif;
+}
+
+/* ── Global ── */
+.wrap{max-width:1000px;margin:0 auto;padding:0 2rem}
+section{padding:5rem 0}
+.alt-bg{background:var(--bg2)}
+
+/* ── Top bar ── */
+.top-bar{
+  padding:1.2rem 0;
+  border-bottom:1px solid var(--border);
+}
+.top-bar-inner{
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{
+  font-family:var(--serif);font-size:1.1rem;font-weight:500;
+  color:var(--bone);letter-spacing:0.02em;
+}
+.logo span{color:var(--cognac)}
+.top-cta{
+  font-family:var(--sans);font-size:0.72rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.15em;
+  color:var(--cognac);text-decoration:none;
+  padding:0.5rem 1.2rem;
+  border:1px solid var(--border-s);border-radius:4px;
+  transition:all 0.3s;
+}
+.top-cta:hover{background:var(--cognac);color:var(--bg)}
+
+/* ── Hero ── */
+.hero{padding:6rem 0 5rem;text-align:left}
+.hero-eyebrow{
+  font-size:0.68rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:0.25em;color:var(--cognac);margin-bottom:1.5rem;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.hero-dot{
+  width:6px;height:6px;border-radius:50%;background:var(--cognac);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{
+  font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.5rem);
+  font-weight:400;line-height:1.1;color:var(--bone);
+  margin-bottom:1.2rem;max-width:700px;
+}
+.hero h1 em{font-style:italic;color:var(--cognac)}
+.hero-body{
+  font-size:1.05rem;color:var(--stone);line-height:1.8;
+  max-width:580px;margin-bottom:2rem;
+}
+.hero-cta{
+  display:inline-block;
+  font-family:var(--sans);font-size:0.78rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.12em;
+  background:var(--cognac);color:var(--bg);
+  padding:0.9rem 2rem;border-radius:4px;
+  text-decoration:none;transition:all 0.3s;
+}
+.hero-cta:hover{background:var(--cognac-light)}
+.hero-sub{
+  font-size:0.78rem;color:var(--ash);margin-top:0.8rem;
+}
+
+/* ── Section headings ── */
+.s-eyebrow{
+  font-size:0.68rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:0.25em;color:var(--cognac);margin-bottom:1rem;
+}
+.s-title{
+  font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:400;line-height:1.15;color:var(--bone);
+  margin-bottom:1rem;
+}
+.s-body{
+  font-size:0.95rem;color:var(--stone);line-height:1.75;
+  max-width:620px;
+}
+
+/* ── Stats row ── */
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;margin-top:3rem;
+}
+.stat{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:8px;padding:1.8rem;text-align:center;
+}
+.stat-num{
+  font-family:var(--serif);font-size:2.5rem;font-weight:400;
+  color:var(--cognac);line-height:1;margin-bottom:0.4rem;
+}
+.stat-label{font-size:0.82rem;color:var(--ash);line-height:1.5}
+
+/* ── The reality ── */
+.reality-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2rem;margin-top:2.5rem;
+}
+.reality-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:8px;padding:1.8rem;
+}
+.reality-card h4{
+  font-family:var(--serif);font-size:1.15rem;font-weight:500;
+  color:var(--bone);margin-bottom:0.5rem;
+}
+.reality-card p{font-size:0.88rem;color:var(--ash);line-height:1.65}
+
+/* ── Programme ── */
+.programme-phases{margin-top:2.5rem}
+.prog-phase{
+  display:grid;grid-template-columns:140px 1fr;
+  gap:2rem;padding:2rem 0;
+  border-bottom:1px solid var(--border);
+}
+.prog-phase:last-child{border-bottom:none}
+.prog-phase-label{
+  font-size:0.68rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:0.12em;color:var(--cognac);padding-top:0.2rem;
+}
+.prog-phase-title{
+  font-family:var(--serif);font-size:1.3rem;font-weight:500;
+  color:var(--bone);margin-bottom:0.5rem;line-height:1.25;
+}
+.prog-phase-body{font-size:0.9rem;color:var(--stone);line-height:1.7}
+
+.leader-quest{
+  background:var(--glow);border-left:3px solid var(--cognac);
+  border-radius:0 6px 6px 0;padding:1.5rem 1.8rem;
+  margin-top:2.5rem;
+}
+.leader-quest h4{
+  font-family:var(--serif);font-size:1.1rem;font-weight:500;
+  color:var(--bone);margin-bottom:0.4rem;
+}
+.leader-quest p{font-size:0.88rem;color:var(--stone);line-height:1.7}
+
+/* ── Objections ── */
+.objections{margin-top:2.5rem}
+.objection{
+  padding:1.8rem 0;
+  border-bottom:1px solid var(--border);
+}
+.objection:last-child{border-bottom:none}
+.objection-q{
+  font-family:var(--serif);font-size:1.15rem;font-weight:500;
+  color:var(--bone);margin-bottom:0.5rem;
+  display:flex;align-items:baseline;gap:0.6rem;
+}
+.objection-q::before{
+  content:'"';font-family:var(--serif);font-size:1.8rem;
+  color:var(--cognac);line-height:1;flex-shrink:0;
+}
+.objection-a{
+  font-size:0.9rem;color:var(--stone);line-height:1.75;
+  padding-left:1.6rem;
+}
+
+/* ── Comparison ── */
+.comp-table{
+  width:100%;border-collapse:collapse;margin-top:2rem;
+  font-size:0.85rem;
+}
+.comp-table th{
+  font-family:var(--sans);font-size:0.68rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.1em;
+  color:var(--ash);text-align:left;
+  padding:1rem 1.2rem;
+  border-bottom:1px solid var(--border-s);
+}
+.comp-table th:last-child{color:var(--cognac)}
+.comp-table td{
+  padding:0.9rem 1.2rem;color:var(--stone);
+  border-bottom:1px solid var(--border);
+  vertical-align:top;
+}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table td:first-child{
+  font-weight:500;color:var(--bone);white-space:nowrap;
+}
+.comp-table td:last-child{
+  color:var(--bone);
+}
+.comp-highlight{
+  background:rgba(200,149,108,0.04);
+}
+.check{color:var(--cognac)}
+.cross{color:var(--ash)}
+
+/* ── Who ── */
+.who-list{
+  margin-top:2rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem;
+}
+.who-item{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:8px;padding:1.4rem 1.6rem;
+}
+.who-item h4{
+  font-family:var(--serif);font-size:1.05rem;font-weight:500;
+  color:var(--bone);margin-bottom:0.3rem;
+}
+.who-item p{font-size:0.85rem;color:var(--ash);line-height:1.6}
+
+/* ── Final CTA ── */
+.final-cta{
+  text-align:center;padding:5rem 0;
+}
+.final-cta h2{
+  font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);
+  font-weight:400;color:var(--bone);line-height:1.15;
+  margin-bottom:1rem;
+}
+.final-cta p{
+  font-size:0.95rem;color:var(--stone);line-height:1.7;
+  max-width:500px;margin:0 auto 2rem;
+}
+.final-cta .hero-cta{font-size:0.82rem;padding:1rem 2.5rem}
+.final-sub{
+  font-size:0.78rem;color:var(--ash);margin-top:0.8rem;
+}
+
+/* ── Footer ── */
+.footer{
+  border-top:1px solid var(--border);
+  padding:2rem 0;text-align:center;
+  font-size:0.75rem;color:var(--ash);
+}
+
+/* ── Reveal ── */
+.reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ── Responsive ── */
+@media(max-width:768px){
+  .wrap{padding:0 1.2rem}
+  section{padding:3.5rem 0}
+  .hero{padding:4rem 0 3rem}
+  .stats{grid-template-columns:1fr}
+  .reality-grid{grid-template-columns:1fr}
+  .prog-phase{grid-template-columns:1fr;gap:0.5rem}
+  .who-list{grid-template-columns:1fr}
+  .comp-table{font-size:0.78rem}
+  .comp-table th,.comp-table td{padding:0.7rem 0.8rem}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="wrap top-bar-inner">
+    <div class="logo">Catalyst <span>Growth</span> Coaching</div>
+    <a href="#book" class="top-cta">Book a Discovery Call</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow reveal"><span class="hero-dot"></span> TeamStrong · AI Team Adoption</div>
+    <h1 class="reveal">Your Team Knows AI Is Coming.<br>They Just Don't Know What to <em>Do</em> About It.</h1>
+    <p class="hero-body reveal">A 12-week programme that takes your team from uncertainty to confidence — not by turning them into tech experts, but by helping each person understand how AI enhances the value they already bring.</p>
+    <a href="#book" class="hero-cta reveal">Book a Discovery Call</a>
+    <p class="hero-sub reveal">15 minutes · No preparation needed · Honest conversation</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="s-eyebrow reveal">The urgency</div>
+    <h2 class="s-title reveal">This Isn't a Future Problem.<br>It's a Right Now Problem.</h2>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat-num">78%</div>
+        <div class="stat-label">of business leaders say the skills gap is a major risk to their organisation</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">64%</div>
+        <div class="stat-label">of employees say they don't have time to learn what they need for the future</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">22%</div>
+        <div class="stat-label">of organisations have a clear AI plan their people actually understand</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DON'T WAIT -->
+<section>
+  <div class="wrap" style="max-width:680px;text-align:center;">
+    <p class="reveal" style="font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,1.7rem);color:var(--bone);line-height:1.45;margin-bottom:1.2rem;">Don't wait for your organisation to have a plan. By the time a company-wide AI policy lands, your competitors' teams will already be using it.</p>
+    <p class="reveal" style="font-size:0.95rem;color:var(--stone);line-height:1.75;">A general policy won't make the difference anyway. How each team translates AI into what they actually do — that's where the advantage comes from. The teams that move first are the ones that stand out.</p>
+  </div>
+</section>
+
+<!-- THE REALITY -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="s-eyebrow reveal">What you're probably seeing</div>
+    <h2 class="s-title reveal">The Four Patterns That Keep<br>Teams Stuck on AI</h2>
+    <p class="s-body reveal">Most teams aren't anti-AI. They're stuck in one of these patterns — and none of them get solved by sending a link to ChatGPT.</p>
+    <div class="reality-grid">
+      <div class="reality-card reveal">
+        <h4>The Pretenders</h4>
+        <p>They say they're using AI. In reality, a couple of people have tried it and the rest are waiting to see what happens. Nobody is using it in a way that changes how the team works.</p>
+      </div>
+      <div class="reality-card reveal">
+        <h4>The Paralysed</h4>
+        <p>They know it matters but they're afraid — of looking stupid, of making mistakes, of being replaced. So they do nothing and hope someone else figures it out first.</p>
+      </div>
+      <div class="reality-card reveal">
+        <h4>The Dabblers</h4>
+        <p>Individuals are experimenting in isolation. There's no shared approach, no team strategy, no connection between what people are trying and what the business actually needs.</p>
+      </div>
+      <div class="reality-card reveal">
+        <h4>The Resistant</h4>
+        <p>A handful of people have decided AI isn't for them. They're vocal about it. And their resistance is slowing the whole team down — whether they realise it or not.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROGRAMME -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="s-eyebrow reveal">The programme</div>
+    <h2 class="s-title reveal">How TeamStrong Solves This</h2>
+    <p class="s-body reveal">This isn't a training day. It's a 12-week coaching programme that rewires how your team thinks about, talks about, and uses AI together.</p>
+    <div class="programme-phases">
+      <div class="prog-phase reveal">
+        <div class="prog-phase-label">Weeks 1–3</div>
+        <div>
+          <h4 class="prog-phase-title">Individual Sessions</h4>
+          <p class="prog-phase-body">Each team member works with John 1:1 to understand their personal blueprint — who they are through CliftonStrengths and FIT16, how they fit into the team, what they contribute, and specifically how AI can enhance the value they bring to their role and the wider organisation.</p>
+        </div>
+      </div>
+      <div class="prog-phase reveal">
+        <div class="prog-phase-label">Week 4</div>
+        <div>
+          <h4 class="prog-phase-title">Experience Day at The O2</h4>
+          <p class="prog-phase-body">The team comes together at The O2 for a full day off-site. The focus: how do we use AI to enhance what we do as a team? The session runs through the morning and picks back up after lunch — mapping processes, spotting waste, and identifying where to redirect energy into higher-value work. Then late afternoon at Activate — competitive, fun, and nothing to do with work.</p>
+        </div>
+      </div>
+      <div class="prog-phase reveal">
+        <div class="prog-phase-label">Weeks 5–12</div>
+        <div>
+          <h4 class="prog-phase-title">Sustained Connection</h4>
+          <p class="prog-phase-body">Four bi-weekly group coaching sessions that respond to what's actually happening in the team — not a pre-set curriculum. What surfaces in the room dictates where we go. Between group sessions, each team member has a 1:1 check-in with John — short, focused, and personal. A space to process what's shifting and stay accountable. By Week 12, the team holds the space themselves.</p>
+        </div>
+      </div>
+    </div>
+    <div class="leader-quest reveal">
+      <h4>Leader Side Quest — Runs Throughout</h4>
+      <p>Separate 1:1 sessions for the team leader — focused on how to lead a team through AI adoption. Moving them from fear to confidence. Getting the best out of people who are nervous, resistant, or unsure where to start.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section>
+  <div class="wrap">
+    <div class="s-eyebrow reveal">Honest answers</div>
+    <h2 class="s-title reveal">What Leaders Usually Ask</h2>
+    <div class="objections">
+      <div class="objection reveal">
+        <div class="objection-q">We've already done AI training. Why would this be different?</div>
+        <p class="objection-a">Most AI training teaches tools. This programme starts with people — who they are, how they work, and what's actually blocking them. The AI part only lands when the human part is addressed first. That's why one-off workshops don't stick and this does.</p>
+      </div>
+      <div class="objection reveal">
+        <div class="objection-q">My team isn't technical. Won't this be over their heads?</div>
+        <p class="objection-a">This isn't a technical programme. Nobody is learning to code. Each person discovers how AI fits into the work they're already doing — based on their actual strengths and role, not a generic syllabus. If they can use email, they can do this.</p>
+      </div>
+      <div class="objection reveal">
+        <div class="objection-q">We can't take the whole team out for 12 weeks.</div>
+        <p class="objection-a">You're not. Individual sessions are 60 minutes. Group sessions are 90 minutes every two weeks. The Experience Day is one day. The rest happens alongside normal work — and the programme is designed to make the team's actual work better, not to add more to their plate.</p>
+      </div>
+      <div class="objection reveal">
+        <div class="objection-q">Can't we just give everyone a ChatGPT licence?</div>
+        <p class="objection-a">You can. Most organisations have. The result is usually a handful of enthusiasts, a majority who tried it once and forgot, and no change to how the team actually works together. A tool without a team strategy is just another subscription.</p>
+      </div>
+      <div class="objection reveal">
+        <div class="objection-q">What if some of my team are genuinely resistant to AI?</div>
+        <p class="objection-a">That's exactly who this is for. Resistance usually comes from fear — fear of looking stupid, fear of being replaced, fear of change. The individual sessions in Weeks 1–3 create a safe space to work through that before anyone has to perform in front of the group.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="s-eyebrow reveal">How this compares</div>
+    <h2 class="s-title reveal">Not All AI Programmes Are the Same</h2>
+    <p class="s-body reveal" style="margin-bottom:2rem">Most AI team initiatives fall into one of three buckets. Here's how TeamStrong is different.</p>
+    <table class="comp-table reveal">
+      <thead>
+        <tr>
+          <th></th>
+          <th>One-day AI workshop</th>
+          <th>Online AI course</th>
+          <th>Management consultancy</th>
+          <th>TeamStrong</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Duration</td>
+          <td>1 day</td>
+          <td>Self-paced (weeks)</td>
+          <td>Varies (project-based)</td>
+          <td class="comp-highlight">12 weeks (structured)</td>
+        </tr>
+        <tr>
+          <td>Personalised to each person</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> CliftonStrengths + FIT16</td>
+        </tr>
+        <tr>
+          <td>Addresses fear and resistance</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> 1:1 coaching</td>
+        </tr>
+        <tr>
+          <td>Team strategy (not just tools)</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td>Process-level</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> People + process</td>
+        </tr>
+        <tr>
+          <td>Ongoing accountability</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td>Report-based</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> 8 weeks coaching</td>
+        </tr>
+        <tr>
+          <td>Team building included</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> Experience Day at The O2</td>
+        </tr>
+        <tr>
+          <td>Leader coaching</td>
+          <td class="cross">—</td>
+          <td class="cross">—</td>
+          <td>Advisory only</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> Dedicated side quest</td>
+        </tr>
+        <tr>
+          <td>Changes stick after it ends</td>
+          <td>Rarely</td>
+          <td>Rarely</td>
+          <td>Depends on execution</td>
+          <td class="comp-highlight"><span class="check">&#10003;</span> Embedded over 12 weeks</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section>
+  <div class="wrap">
+    <div class="s-eyebrow reveal">Who this is for</div>
+    <h2 class="s-title reveal">This Works If You're The Person<br>Thinking "We Need to Do Something"</h2>
+    <div class="who-list">
+      <div class="who-item reveal">
+        <h4>Team Leaders</h4>
+        <p>You can see your team falling behind. You want them to embrace AI but you're not sure how to lead the shift yourself.</p>
+      </div>
+      <div class="who-item reveal">
+        <h4>L&amp;D Directors</h4>
+        <p>You've been asked to upskill the organisation on AI. You know a one-off training day won't cut it. You need something that actually changes behaviour.</p>
+      </div>
+      <div class="who-item reveal">
+        <h4>CEOs and MDs</h4>
+        <p>You can see the competitive advantage AI creates. You need your leadership team to stop talking about it and start using it — together, with a plan.</p>
+      </div>
+      <div class="who-item reveal">
+        <h4>CHROs and People Directors</h4>
+        <p>Your people are anxious about AI. You need an approach that builds confidence rather than fear — and that doesn't feel like another corporate initiative.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="alt-bg" id="book">
+  <div class="wrap final-cta">
+    <div class="s-eyebrow reveal">Next step</div>
+    <h2 class="reveal">15 Minutes to Find Out<br>If This Fits Your Team</h2>
+    <p class="reveal">No pitch. No pressure. Just an honest conversation about where your team is with AI, what's getting in the way, and whether TeamStrong is the right move.</p>
+    <a href="https://catalystgrowthcoach.co.uk/contact" class="hero-cta reveal">Book Your Discovery Call</a>
+    <p class="final-sub reveal">15 minutes · No preparation needed · Honest conversation</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="wrap">
+    &copy; 2026 John Obidipe · Catalyst Growth Coaching · coach@catalystgrowthcoach.co.uk
+  </div>
+</div>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, {threshold: 0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
