@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Organisations — Build Bench Strength | Catalyst Growth Coaching</title>
+<meta name="description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level. Used by organisations who develop their leaders before they promote them.">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ===================== FOR ORGANISATIONS — FORM ===================== */
+.fo-form { max-width: 520px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 1.2rem; }
+.fo-form label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.fo-form input, .fo-form select {
+  width: 100%; padding: 0.9rem 1.1rem; margin-top: 0.4rem;
+  background: var(--bg-card); border: 1px solid var(--border);
+  color: var(--text-primary); font-family: var(--font-body); font-size: 0.95rem;
+  border-radius: 2px; transition: border-color 0.3s var(--ease);
+}
+.fo-form input:focus, .fo-form select:focus { outline: none; border-color: var(--accent); }
+.fo-form select option { background: var(--bg-card); color: var(--text-primary); }
+.fo-form button { margin-top: 0.8rem; }
+#demo-video { display: none; max-width: 880px; margin: 3rem auto 0; }
+#demo-video.active { display: block; }
+#demo-video video, #demo-video iframe { width: 100%; aspect-ratio: 16/9; border: 1px solid var(--border); border-radius: 4px; }
+.fo-post-video { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+
+/* ===================== FOR ORGANISATIONS — FAQ ===================== */
+.fo-faq { max-width: 760px; margin: 3rem auto 0; }
+.fo-faq details { border-top: 1px solid var(--border); padding: 1.6rem 0; }
+.fo-faq details:last-child { border-bottom: 1px solid var(--border); }
+.fo-faq summary {
+  font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
+  color: var(--text-primary); cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.fo-faq summary::-webkit-details-marker { display: none; }
+.fo-faq summary::after { content: '+'; color: var(--accent); font-size: 1.5rem; transition: transform 0.3s; }
+.fo-faq details[open] summary::after { content: '\2212'; }
+.fo-faq details p { margin-top: 1rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; }
+</style>
+
+
+    <!-- Open Graph / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/for-organisations">
+    <meta property="og:title" content="For Organisations — Build Bench Strength | Catalyst Growth Coaching">
+    <meta property="og:description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level.">
+    <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
+    <meta property="og:site_name" content="John Obidipe | Executive Coach">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="For Organisations — Build Bench Strength | Catalyst Growth Coaching">
+    <meta name="twitter:description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level.">
+    <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/for-organisations">
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2Z17HSYFCV');
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Service","name":"Leadership Practice Portal for Organisations","provider":{"@type":"Person","name":"John Obidipe"},"description":"A leadership practice ground for Directors and VPs. Real scenarios tiered by seniority. Used by organisations who develop their leaders before they promote them.","areaServed":"United Kingdom"}
+    </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo"><img src="images/index-img-01.png" alt="Catalyst Growth Coaching" style="height:36px;width:auto;"></a>
+  <ul class="nav-links">
+    <li class="nav-dropdown"><a href="#">Services</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="leadstrong.html">LeadStrong</a></li>
+        <li><a href="buildstrong.html">BuildStrong</a></li>
+        <li><a href="cognitive-reset.html">Cognitive Reset</a></li>
+        <li><a href="teamstrong.html">TeamStrong</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="testimonials.html">Results</a></li>
+    <li><a href="for-organisations.html" class="active">For Organisations</a></li>
+    <li><a href="contact.html" class="nav-cta">Get Unstuck</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="leadstrong.html" class="mobile-sub">LeadStrong</a>
+  <a href="buildstrong.html" class="mobile-sub">BuildStrong</a>
+  <a href="cognitive-reset.html" class="mobile-sub">Cognitive Reset</a>
+  <a href="teamstrong.html" class="mobile-sub">TeamStrong</a>
+  <a href="about.html">About</a>
+  <a href="testimonials.html">Results</a>
+  <a href="for-organisations.html">For Organisations</a>
+  <a href="contact.html">Get Unstuck</a>
+</div>
+
+<!-- SECTION 1 — HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="hero-overline">For Organisations</div>
+    <h1 class="hero-title">Develop the Leaders<br>You Can't Afford <em>to Lose.</em></h1>
+    <p class="hero-body">Your high-potential Directors are ready for more. Your VPs need to level up faster than the org chart can train them. The Leadership Practice Portal is where they practise the next role — privately, deliberately, at their level — before the stakes get real.</p>
+    <div class="hero-actions">
+      <a href="#demo" class="btn-primary">See a Demo</a>
+      <a href="#how-it-works" class="btn-secondary">How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — THE PROBLEM -->
+<div class="section-full">
+  <div class="container">
+    <div class="section-label reveal">The Problem</div>
+    <h2 class="section-title reveal">You Already Know <em>Who's Stuck.</em></h2>
+    <div class="grid-2-asym mt-3">
+      <div class="prose reveal">
+        <p>Every leadership team has them. The Director who's been ready for VP for eighteen months but still operates like a doer. The VP who manages brilliantly but freezes when the conversation turns strategic. The high-potential who's quietly being recruited by the competitor that invests more in development than you do.</p>
+        <p>You've spotted them. You've probably had the conversation. And you're stuck in the same loop most leadership teams are stuck in: <strong>promote them before they're ready and risk losing them to failure, or hold them back and risk losing them to a competitor who won't.</strong></p>
+        <p>The cost of doing nothing isn't theoretical. It shows up in regrettable attrition, in misfires after promotion, in institutional knowledge walking out the door, and in the slow erosion of bench strength that takes years to rebuild.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+        <div class="signal reveal">
+          <div class="signal-title">The retention cost</div>
+          <div class="signal-desc">Your best Directors don't leave because of pay. They leave because the competitor invested in them when you didn't.</div>
+        </div>
+        <div class="signal reveal">
+          <div class="signal-title">The capability cost</div>
+          <div class="signal-desc">You promote someone unprepared, they struggle, and you lose them anyway. Now you've lost twice.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3 — WHY IT WORKS (THREE PILLARS) -->
+<section class="section text-center">
+  <div class="container">
+    <div class="section-label reveal">Why It Works</div>
+    <h2 class="section-title reveal">Three Things Build Real <em>Leadership Capability.</em></h2>
+    <p class="section-subtitle reveal">Theory builds awareness. Practice builds capability. The Portal is built on three principles drawn from how mastery actually develops — in athletes, musicians, surgeons, and the senior leaders who outlast the rest.</p>
+    <div class="grid-3 mt-4 stagger">
+      <div class="card reveal">
+        <div class="card-label">01 — Practice</div>
+        <h3>Skills Are Built in the Reps Nobody Sees</h3>
+        <p>A musician's audience hears the performance. They don't see the ten thousand hours of deliberate practice behind it. Leadership works the same way. Your team sees the decision; they don't see the practice that made the decision possible. The Portal is where that practice happens — 165 scenarios designed around the moments that actually decide whether a leader is ready for the next level.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-label">02 — Initiative</div>
+        <h3>The Best Leaders Don't Wait for Permission</h3>
+        <p>The most expensive word in leadership is "eventually". The conversation that gets postponed. The strategic call that waits for more data. The team issue that festers. The Portal trains leaders to make decisions under uncertainty — in scenarios where there's no right answer, only trade-offs, and the cost of waiting is built into the design.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-label">03 — Exposure</div>
+        <h3>You Become What You're Exposed To</h3>
+        <p>Environment shapes capability. Leaders who only ever see their current level stay there. Leaders exposed to senior thinking — week after week, scenario after scenario — start to think that way. Directors practise VP scenarios. VPs practise C-Suite scenarios. Strategic thinking and executive presence stop being aspirations and start being habits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — INSIDE THE PORTAL -->
+<div class="section-full">
+  <div class="container">
+    <div class="section-label reveal">Inside the Portal</div>
+    <h2 class="section-title reveal">A Training Ground, <em>Not a Course.</em></h2>
+    <div class="grid-3 mt-3 stagger">
+      <div class="card reveal">
+        <div class="card-label">90 Scenarios</div>
+        <h3>Response Training</h3>
+        <p>Real situations from the next level up. The board paper that's wrong. The skip-level conversation that goes sideways. The peer who's blocking your initiative. Practise the response. See where it lands. Refine.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-label">45 Challenges</div>
+        <h3>Strategic Thinker</h3>
+        <p>Open-ended challenges that force leaders out of operational mode. There's no answer key — only the quality of the thinking. Designed to build the muscle most Directors haven't had to use yet.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-label">30 Scenarios</div>
+        <h3>Pressure Map</h3>
+        <p>High-stakes moments compressed into deliberate practice. The decision under time pressure. The conversation under emotional load. The judgement call when the data is incomplete. Practise the pressure before it's real.</p>
+      </div>
+    </div>
+    <p class="reveal" style="text-align: center; margin-top: 2.5rem; font-size: 0.92rem; color: var(--text-secondary); font-style: italic; max-width: 640px; margin-left: auto; margin-right: auto;"><em style="color: var(--text-secondary);">Every scenario is tiered by seniority. Directors practise Director-to-VP situations. VPs practise VP-to-C-Suite. C-Suite practise scope expansion. New scenarios added weekly.</em></p>
+  </div>
+</div>
+
+<!-- SECTION 5 — HOW IT WORKS -->
+<section class="section text-center" id="how-it-works">
+  <div class="container">
+    <div class="section-label reveal">How It Works</div>
+    <h2 class="section-title reveal">Two Ways to Run It in Your Organisation.</h2>
+    <div class="grid-2 mt-3 stagger">
+      <div class="card reveal">
+        <div class="card-label">Self-Serve</div>
+        <h3>Portal Access</h3>
+        <p>Leaders log in, work through scenarios at their own pace, and build capability week by week. You get reporting on engagement and progress. Best for organisations who want to scale leadership development across 5–25 leaders without adding a programme to manage.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-label">Blended</div>
+        <h3>Portal + Coaching</h3>
+        <p>Self-serve practice combined with coaching from John for selected leaders — the ones you're investing in most. Practice happens between sessions; coaching turns the reps into real shifts. Best for organisations developing a small group of high-potentials they can't afford to misfire on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — WHO THIS IS FOR -->
+<div class="section-full">
+  <div class="container">
+    <div class="grid-2-asym">
+      <div class="prose">
+        <div class="section-label reveal">Fit Check</div>
+        <h2 class="section-title reveal">Who This Is <em>Built For.</em></h2>
+        <p class="reveal">The Portal is built for organisations who already believe leadership development is an investment, not a cost — and who want a way to make it concrete, scalable, and seniority-specific.</p>
+      </div>
+      <div>
+        <div style="margin-bottom: 2.5rem;">
+          <div class="section-label reveal" style="margin-bottom: 1rem;">You're in the right place if…</div>
+          <div style="display: flex; flex-direction: column; gap: 0.8rem;" class="stagger">
+            <div class="signal reveal">
+              <div class="signal-desc">You have 5–25 high-potential Directors or VPs you're investing in</div>
+            </div>
+            <div class="signal reveal">
+              <div class="signal-desc">You've lost a strong leader to a competitor in the last 12 months</div>
+            </div>
+            <div class="signal reveal">
+              <div class="signal-desc">You promote internally and want fewer misfires</div>
+            </div>
+            <div class="signal reveal">
+              <div class="signal-desc">Your current development offer is generic — you need something seniority-specific</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label reveal" style="margin-bottom: 1rem;">This isn't for you if…</div>
+          <div style="display: flex; flex-direction: column; gap: 0.8rem;" class="stagger">
+            <div class="signal reveal" style="border-left-color: var(--text-muted);">
+              <div class="signal-desc">You're looking for a compliance training platform</div>
+            </div>
+            <div class="signal reveal" style="border-left-color: var(--text-muted);">
+              <div class="signal-desc">You want a fully customised, white-labelled enterprise LMS</div>
+            </div>
+            <div class="signal reveal" style="border-left-color: var(--text-muted);">
+              <div class="signal-desc">You're not ready to invest in leadership development at all</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7 — DEMO -->
+<section class="section" id="demo">
+  <div class="container text-center">
+    <div class="section-label reveal">See It</div>
+    <h2 class="section-title reveal">Watch a 4-Minute <em>Walkthrough.</em></h2>
+    <p class="section-subtitle reveal" style="margin-left: auto; margin-right: auto;">Leave your details below and the demo opens immediately. No call required. No follow-up unless you ask for one.</p>
+
+    <form class="fo-form reveal" id="fo-form" name="organisations-demo" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="organisations-demo">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <div>
+        <label for="fo-name">Full Name</label>
+        <input type="text" id="fo-name" name="name" required placeholder="Your full name">
+      </div>
+      <div>
+        <label for="fo-email">Work Email</label>
+        <input type="email" id="fo-email" name="email" required placeholder="you@company.com">
+      </div>
+      <div>
+        <label for="fo-org">Organisation</label>
+        <input type="text" id="fo-org" name="organisation" required placeholder="Your organisation">
+      </div>
+      <div>
+        <label for="fo-size">Approximate Number of Leaders</label>
+        <select id="fo-size" name="team_size" required>
+          <option value="" disabled selected>Select team size</option>
+          <option value="1-4">1–4</option>
+          <option value="5-10">5–10</option>
+          <option value="11-25">11–25</option>
+          <option value="26+">26+</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-primary">Show Me the Demo</button>
+    </form>
+
+    <div id="demo-video">
+      <!-- VIDEO_SRC: replace with actual URL -->
+      <video controls>
+        <source src="" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+      <div class="fo-post-video">
+        <a href="contact.html" class="btn-primary">Book a Conversation</a>
+        <a href="mailto:coach@catalystgrowthcoach.co.uk" class="btn-secondary">Email John Directly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 — FAQ -->
+<div class="section-full">
+  <div class="container">
+    <div class="section-label reveal">Common Questions</div>
+    <h2 class="section-title reveal">Things Leaders Ask <em>Before They Commit.</em></h2>
+    <div class="fo-faq">
+      <details>
+        <summary>How long does each scenario take?</summary>
+        <p>Most scenarios are designed to be completed in 10–20 minutes. Long enough for deliberate thinking, short enough to fit between meetings. Leaders typically work through 2–3 scenarios per week.</p>
+      </details>
+      <details>
+        <summary>What happens after a leader completes all 165 scenarios?</summary>
+        <p>New scenarios are added every week, so there's no "finishing" the Portal. Active leaders are always working on situations they haven't seen before. The library compounds.</p>
+      </details>
+      <details>
+        <summary>Can we customise the Portal for our organisation?</summary>
+        <p>The standard Portal is intentionally not customised — it's built around senior leadership transitions that are universal across industries. For organisations who want bespoke scenarios drawn from their own context, that's available as a separate engagement. Best discussed on a call.</p>
+      </details>
+      <details>
+        <summary>How do we measure impact?</summary>
+        <p>Engagement and progress data is available for organisational accounts. The deeper measure is harder but more honest: are the leaders using the Portal making better calls, having harder conversations, and operating at the level above? That's what we track in the coached version.</p>
+      </details>
+      <details>
+        <summary>Can this replace our existing leadership development programme?</summary>
+        <p>Probably not — and it's not designed to. The Portal works best as a practice layer alongside whatever development you're already running. It's the gym, not the curriculum. If your current programme is mostly theory and you're missing the practice piece, the Portal fills that gap directly.</p>
+      </details>
+      <details>
+        <summary>What's the difference between self-serve and the coached option?</summary>
+        <p>Self-serve is the Portal alone — leaders practise on their own. The coached option pairs Portal access with 1:1 coaching from John, which turns the practice into real shifts. Coached is for the leaders you're investing in most heavily; self-serve is for scaling development across a broader group. Most organisations use both.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 9 — FINAL CTA -->
+<div class="divider"></div>
+<section class="final-cta">
+  <div class="section-label reveal">Ready?</div>
+  <h2 class="section-title reveal">Develop Them Before<br>Someone Else <em style="font-style: italic; color: var(--accent);">Does.</em></h2>
+  <p class="final-question reveal">The leaders worth keeping are the ones being courted. Investing in their development is the clearest signal that you intend to keep them.</p>
+  <a href="#demo" class="btn-primary btn-large reveal">See a Demo</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="images/index-img-09.png" alt="Catalyst Growth Coaching" style="height:28px;width:auto;opacity:0.85;"></div>
+    <ul class="footer-links">
+      <li><a href="leadstrong.html">LeadStrong</a></li>
+      <li><a href="buildstrong.html">BuildStrong</a></li>
+      <li><a href="cognitive-reset.html">Cognitive Reset</a></li>
+      <li><a href="teamstrong.html">TeamStrong</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 John Obidipe · Catalyst Growth Coaching · coach@catalystgrowthcoach.co.uk</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+// Form → Netlify submit, then reveal demo
+const foForm=document.getElementById('fo-form');
+if(foForm){
+  foForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    const formData=new FormData(foForm);
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(formData).toString()})
+    .then(function(){
+      foForm.style.display='none';
+      document.getElementById('demo-video').classList.add('active');
+      document.getElementById('demo-video').scrollIntoView({behavior:'smooth',block:'start'});
+    })
+    .catch(function(){
+      foForm.style.display='none';
+      document.getElementById('demo-video').classList.add('active');
+      document.getElementById('demo-video').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+}
+</script>
+</body>
+</html>
