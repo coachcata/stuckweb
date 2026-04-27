@@ -1,232 +1,752 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Executive Coaching Results | Client Testimonials | John Obidipe</title>
-<meta name="description" content="Testimonials from VPs, C-suite executives, and founders who got unstuck through neuroscience-backed executive coaching.">
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Results — Catalyst Growth Coaching</title>
 
-    <!-- Open Graph / LinkedIn / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/testimonials">
-    <meta property="og:title" content="Executive Coaching Results | Client Testimonials | John Obidipe">
-    <meta property="og:description" content="Real results from senior leaders, founders and executives who have worked with John Obidipe. See what leaders say about their coaching experience.">
-    <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
-    <meta property="og:site_name" content="John Obidipe | Executive Coach">
+<!-- ════ SEO METADATA — preserved from existing testimonials.html ════ -->
+<meta name="description" content="Testimonials from VPs, C-suite executives, and founders who got unstuck through neuroscience-backed executive coaching." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/testimonials" />
+<meta property="og:title" content="Executive Coaching Results | Client Testimonials | John Obidipe" />
+<meta property="og:description" content="Real results from senior leaders, founders and executives who have worked with John Obidipe." />
+<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Executive Coaching Results | Client Testimonials | John Obidipe" />
+<meta name="twitter:description" content="Real results from senior leaders, founders and executives who have worked with John Obidipe." />
+<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/testimonials" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Catalyst Growth Coaching","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"20"}}
+</script>
+<!-- ════ END SEO METADATA ════ -->
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Executive Coaching Results | Client Testimonials | John Obidipe">
-    <meta name="twitter:description" content="Real results from senior leaders, founders and executives who have worked with John Obidipe. See what leaders say about their coaching experience.">
-    <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/testimonials">
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #141418;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
 
-    <!-- Google Analytics GA4 - Replace G-2Z17HSYFCV with your real Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2Z17HSYFCV');
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"ProfessionalService","name":"Catalyst Growth Coaching","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"20"}}
-    </script>
+  /* ─── Nav ─── */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav.top ul a:hover, nav.top ul a.active { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+
+  /* ─── Scene base ─── */
+  section.scene {
+    min-height: auto; padding: 12vh 6vw;
+    position: relative; display: flex;
+  }
+
+  /* ══ SCENE 01 — Editorial Masthead ══ */
+  .scene-open {
+    padding-top: 16vh; padding-bottom: 8vh;
+    flex-direction: column; justify-content: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .scene-open .masthead-top {
+    display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 5vh;
+  }
+  .scene-open .masthead-top .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
+  .scene-open .masthead-top strong { color: var(--cognac); font-weight: 600; }
+  .scene-open .hero-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5vw; align-items: end;
+  }
+  .scene-open h1 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(3rem, 8vw, 6.4rem);
+    line-height: 0.96; letter-spacing: -0.015em;
+  }
+  .scene-open h1 .l { display: block; }
+  .scene-open h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-open .right {
+    display: flex; flex-direction: column; gap: 1.8rem;
+    max-width: 32ch; padding-bottom: 0.8rem; justify-self: end;
+  }
+  .scene-open .byline {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-open .byline .line { width: 30px; height: 1px; background: var(--cognac); }
+  .scene-open .lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.3rem; line-height: 1.5; color: var(--bone);
+  }
+
+  /* ══ Pull-quote scene (Pattern B — used as breathing rhythm) ══ */
+  .scene-pull {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 16vh 8vw; position: relative;
+    min-height: 90vh;
+  }
+  .scene-pull.compact { padding: 14vh 8vw; min-height: 70vh; }
+  .scene-pull.shaded { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .scene-pull .folio {
+    position: absolute; top: 6vh; left: 6vw;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .folio span { color: var(--cognac); }
+  .scene-pull .mark {
+    font-family: var(--font-d); font-style: italic; font-size: 4rem;
+    color: var(--cognac); line-height: 1; margin-bottom: 2rem; opacity: 0.6;
+  }
+  .scene-pull blockquote {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+    line-height: 1.2; max-width: 28ch; color: var(--bone);
+  }
+  .scene-pull blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-pull .attr {
+    margin-top: 4rem;
+    display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+  .scene-pull .attr strong { color: var(--bone); font-weight: 500; }
+
+  /* ══ Case Study Scene ══ */
+  .scene-case {
+    flex-direction: column;
+    padding: 14vh 6vw;
+  }
+  .scene-case.alt { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .case-head {
+    margin-bottom: 5vh;
+    display: grid; grid-template-columns: 1fr 2fr;
+    gap: 4vw; align-items: baseline;
+  }
+  .case-head .left {
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .case-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .case-head .num {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1.8rem; color: var(--cognac); line-height: 1;
+  }
+  .case-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1; max-width: 22ch;
+  }
+  .case-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .case-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .case-cell {
+    padding: 3rem 2.5rem 3rem;
+    border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .case-cell:last-child { border-right: none; }
+  .case-cell .step {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1.1rem; color: var(--cognac);
+  }
+  .case-cell .lab {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); font-weight: 600;
+    padding-bottom: 1.4rem; border-bottom: 1px solid var(--line);
+  }
+  .case-cell .lab.is-cognac { color: var(--cognac); }
+  .case-cell h3 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: 1.4rem; line-height: 1.25; color: var(--bone);
+    margin-top: 0.4rem;
+  }
+  .case-cell h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .case-cell .body {
+    color: var(--stone); font-size: 0.95rem; line-height: 1.7;
+    margin-top: 0.6rem;
+  }
+  .case-cell .body em { font-family: var(--font-d); font-style: italic; color: var(--cognac); }
+  .case-foot {
+    margin-top: 2.5vh;
+    display: flex; gap: 1.2rem; align-items: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .case-foot .line { width: 40px; height: 1px; background: var(--cognac); }
+  .case-foot strong { color: var(--bone); font-weight: 500; }
+
+  /* ══ Quote Grid ══ */
+  .scene-grid {
+    flex-direction: column;
+    padding: 12vh 6vw;
+  }
+  .scene-grid.shaded { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .grid-head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4vw; align-items: baseline; margin-bottom: 6vh;
+  }
+  .grid-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .grid-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    line-height: 1.15; max-width: 22ch;
+  }
+  .grid-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .grid-head .note {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; color: var(--stone); max-width: 36ch;
+    line-height: 1.55; justify-self: end; text-align: right; padding-bottom: 0.4rem;
+  }
+  .quotes-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong);
+  }
+  .quote-card {
+    padding: 2.6rem 2rem 2.6rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1.2rem;
+    transition: background 0.4s ease;
+  }
+  .quote-card:nth-child(3n) { border-right: none; }
+  .quote-card:nth-last-child(-n+3) { border-bottom: none; }
+  .quote-card:hover { background: rgba(200,149,108,0.03); }
+  .quote-card .mark {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 2.4rem; color: var(--cognac);
+    line-height: 1; opacity: 0.5;
+  }
+  .quote-card blockquote {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: 1.2rem; line-height: 1.4; color: var(--bone);
+  }
+  .quote-card blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .quote-card .attr {
+    margin-top: auto; padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+  }
+  .quote-card .attr .name {
+    font-family: var(--font-d); font-style: italic; font-weight: 400;
+    font-size: 1.1rem; color: var(--bone);
+  }
+  .quote-card .attr .meta {
+    display: block; margin-top: 0.3rem;
+    font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .quote-card .attr .meta .prog { color: var(--cognac); }
+
+  /* ══ Closing ══ */
+  .scene-close {
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 14vh 6vw 12vh; position: relative; min-height: 80vh;
+  }
+  .scene-close .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 4rem;
+  }
+  .scene-close .label span { color: var(--cognac); }
+  .scene-close h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.15; max-width: 26ch; margin-bottom: 3rem;
+  }
+  .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-close .standfirst {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; color: var(--stone); max-width: 44ch;
+    line-height: 1.55; margin-bottom: 3.5rem;
+  }
+  .scene-close .button-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .scene-close .button {
+    display: inline-block; padding: 1.2rem 2.8rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+  }
+  .scene-close .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .scene-close .button.ghost {
+    background: transparent; color: var(--cognac);
+    border: 1px solid var(--line-strong);
+  }
+  .scene-close .button.ghost:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  .scene-close .endline {
+    position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
+    display: flex; justify-content: space-between;
+    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); border-top: 1px solid var(--line); padding-top: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash); display: flex; justify-content: space-between;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+    section.scene { padding: 10vh 6vw; }
+
+    .scene-open { padding-top: 18vh; }
+    .scene-open .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-open .right { max-width: 100%; justify-self: start; }
+    .scene-open h1 { font-size: clamp(2.4rem, 11vw, 4rem); }
+
+    .case-head { grid-template-columns: 1fr; gap: 2rem; }
+    .case-grid { grid-template-columns: 1fr; }
+    .case-cell {
+      border-right: none; border-bottom: 1px solid var(--line);
+      padding: 2.4rem 0.5rem;
+    }
+    .case-cell:last-child { border-bottom: none; }
+
+    .grid-head { grid-template-columns: 1fr; gap: 2rem; }
+    .grid-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
+    .quotes-grid { grid-template-columns: 1fr; }
+    .quote-card {
+      border-right: none !important;
+      border-bottom: 1px solid var(--line) !important;
+      padding: 2.4rem 0.5rem;
+    }
+    .quote-card:last-child { border-bottom: none !important; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; }
+  }
+</style>
 </head>
+
 <body>
 
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo"><img src="images/testimonials-img-01.png" alt="Catalyst Growth Coaching" style="height:36px;width:auto;"></a>
-  <ul class="nav-links">
-    <li class="nav-dropdown"><a href="#">Services</a>
-      <ul class="nav-dropdown-menu">
-        <li><a href="leadstrong.html">LeadStrong</a></li>
-        <li><a href="buildstrong.html">BuildStrong</a></li>
-        <li><a href="cognitive-reset.html">Cognitive Reset</a></li>
-        <li><a href="teamstrong.html">TeamStrong</a></li>
-      </ul>
-    </li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="testimonials.html" class="active">Results</a></li>
-    <li><a href="for-organisations.html">For Organisations</a></li>
-    <li><a href="contact.html" class="nav-cta">Get Unstuck</a></li>
+<!-- NAV -->
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/index.html#doors">Programmes</a></li>
+    <li><a href="/testimonials.html" class="active">Results</a></li>
+    <li><a href="/stuck-quiz">Diagnostic</a></li>
+    <li><a href="/contact" class="cta">Book a call</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a><a href="leadstrong.html" class="mobile-sub">LeadStrong</a><a href="buildstrong.html" class="mobile-sub">BuildStrong</a><a href="cognitive-reset.html" class="mobile-sub">Cognitive Reset</a><a href="teamstrong.html" class="mobile-sub">TeamStrong</a><a href="about.html">About</a><a href="testimonials.html">Results</a><a href="for-organisations.html">For Organisations</a><a href="contact.html">Get Unstuck</a>
-</div>
 
-<!-- HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="hero-overline">Client Results</div>
-    <h1 class="hero-title">What Leaders <em>Say</em></h1>
-    <p class="hero-body">Real results from VPs, C-suite executives, and founders who got unstuck through neuroscience-backed brain retraining.</p>
+<!-- ════ SCENE 01 — Editorial Masthead ════ -->
+<section class="scene scene-open">
+  <div class="masthead-top">
+    <span>Results</span>
+    <span class="dot"></span>
+    <span><strong>What leaders say</strong></span>
+    <span class="dot"></span>
+    <span>Across all four programmes</span>
+  </div>
+
+  <div class="hero-grid">
+    <h1>
+      <span class="l">The proof</span>
+      <span class="l">is what they <em>say</em></span>
+      <span class="l">after.</span>
+    </h1>
+    <div class="right">
+      <div class="byline">
+        <span class="line"></span>
+        <span>Senior leaders, founders &amp; executives</span>
+      </div>
+      <p class="lede">No edits. No composites. The actual words clients have shared after their work — across Lead Strong, TeamStrong, BuildStrong, and Cognitive Reset.</p>
+    </div>
   </div>
 </section>
 
-<!-- FEATURED -->
-<div class="section-full">
-  <div class="container">
-    <div class="grid-2 stagger" style="gap: 2rem;">
-      <div class="testimonial reveal" style="padding: 3rem; background: linear-gradient(135deg, var(--bg-primary), rgba(200, 149, 108, 0.04)); border-color: var(--accent-dark);">
-        <div class="testimonial-quote">"</div>
-        <p style="font-size: 1.1rem; line-height: 1.85;">I thought I just needed to push harder. John showed me I'd been operating with cognitive depletion for months without realising it. I was back to making clean decisions within six weeks.</p>
-        <div class="testimonial-author"><strong>VP Engineering</strong><span style="display:block;font-size:0.82rem;color:var(--text-muted);margin-top:0.3rem;">Tech scale-up, Series B &middot; LeadStrong programme</span></div>
-      </div>
-      <div class="testimonial reveal" style="padding: 3rem; background: linear-gradient(135deg, var(--bg-primary), rgba(200, 149, 108, 0.04)); border-color: var(--accent-dark);">
-        <div class="testimonial-quote">"</div>
-        <p style="font-size: 1.1rem; line-height: 1.85;">This wasn't feel-good coaching. It was rigorous, evidence-based work that actually restored my decision-making capacity. I left thinking more clearly than I had in a year.</p>
-        <div class="testimonial-author"><strong>Founder &amp; CEO</strong><span style="display:block;font-size:0.82rem;color:var(--text-muted);margin-top:0.3rem;">Series B SaaS company &middot; Cognitive Reset</span></div>
-      </div>
-    </div>
+<!-- ════ SCENE 02 — Premise pull-quote ════ -->
+<section class="scene scene-pull">
+  <div class="folio">01 · <span>The Premise</span></div>
+  <blockquote>
+    Coaching is judged by what changes <em>after</em>.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>How this work is measured</span>
   </div>
-</div>
-
-
-<!-- CASE STUDIES -->
-<div class="section">
-  <div class="section-label reveal">In Their Words</div>
-  <h2 class="section-title reveal">Before &amp; After</h2>
-  <p class="section-subtitle reveal">Three leaders, three different stuck states, three different outcomes.</p>
-
-  <div style="display: flex; flex-direction: column; gap: 2rem; margin-top: 3rem;">
-
-    <!-- Case 1 -->
-    <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
-      <div style="padding: 2rem; background: var(--bg-secondary); border-right: 1px solid var(--border);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; margin-bottom: 0.8rem;">The Situation</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">VP Engineering at a Series B tech scale-up. Delivering results but going blank in board presentations. Described it as "my brain just stops." Had been operating with unrecognised cognitive depletion for months.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--bg-card); border-right: 1px solid var(--border);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.8rem;">The Work</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">LeadStrong 12-week programme. CliftonStrengths and amygdala-PFC diagnostic. Identified overactive threat response in high-stakes evaluation contexts. Brain retraining protocols for verbal fluency under pressure. Stress tolerance progressively increased across the programme.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--bg-primary);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.8rem;">The Outcome</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Back to making clean decisions within six weeks. Board presentations no longer a source of dread. Leading them rather than surviving them. "I was back to making clean decisions within six weeks."</p>
-        <div style="margin-top: 1rem; font-size: 0.78rem; color: var(--text-muted); font-style: italic;">VP Engineering · Tech scale-up · LeadStrong</div>
-      </div>
-    </div>
-
-    <!-- Case 2 -->
-    <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
-      <div style="padding: 2rem; background: var(--bg-secondary); border-right: 1px solid var(--border);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; margin-bottom: 0.8rem;">The Situation</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Founder and CEO of a Series B SaaS company. Functional but not sharp. Decision-making felt laboured, strategic clarity gone. Had been carrying the business through a difficult growth period and hadn't stopped to reset.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--bg-card); border-right: 1px solid var(--border);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.8rem;">The Work</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">2-Day Cognitive Reset at Sopwell House. Somatic movement sessions to downregulate the amygdala. Private coaching to restore strategic perspective. Structured spa restoration to allow neuroplasticity to embed the shift. Followed by 7-day and 30-day integration sessions.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--bg-primary);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.8rem;">The Outcome</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Left the retreat thinking more clearly than he had in a year. Described the experience as "rigorous, evidence-based work" not a wellness break. Strategic clarity returned within the programme. Decision quality measurably improved in the following quarter.</p>
-        <div style="margin-top: 1rem; font-size: 0.78rem; color: var(--text-muted); font-style: italic;">Founder &amp; CEO · Series B SaaS · Cognitive Reset</div>
-      </div>
-    </div>
-
-    <!-- Case 3 -->
-    <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
-      <div style="padding: 2rem; background: var(--bg-secondary); border-right: 1px solid var(--border);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; margin-bottom: 0.8rem;">The Situation</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Serial entrepreneur, two previous businesses. Strong instincts but operating without a clear framework for decision-making, delegation, or scaling. Recognised the same mistakes recurring across ventures without understanding the pattern beneath them.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--bg-card); border-right: 1px solid var(--border);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.8rem;">The Work</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">BuildStrong ongoing coaching. CliftonStrengths and FITT16 revealed the recurring pattern: leading from relator and strategic strengths while chronically under-using the structures that would have prevented the recurring stuck states. Built a personal operating framework aligned to actual wiring.</p>
-      </div>
-      <div style="padding: 2rem; background: var(--bg-primary);">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 0.8rem;">The Outcome</div>
-        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">Named and understood the pattern that had cost him across two previous businesses. Built structures that prevented the same recurring stuck states. "The frameworks he uses would have saved me from expensive mistakes in two previous businesses."</p>
-        <div style="margin-top: 1rem; font-size: 0.78rem; color: var(--text-muted); font-style: italic;">Stuart Ploughman · Serial Entrepreneur · BuildStrong</div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Mobile responsive override -->
-  <style>
-    @media (max-width: 768px) {
-      .case-study-grid { grid-template-columns: 1fr !important; }
-    }
-  </style>
-</div>
-
-<!-- ALL TESTIMONIALS -->
-<div class="section">
-  <div class="grid-3 stagger">
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>Coaching with John has given me renewed focus and confidence at a point in my career when I really needed it. The CliftonStrengths work was the most clarifying thing I've done professionally.</p>
-      <div class="testimonial-author"><strong>Martin Malins</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Senior Leader &middot; LeadStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>I would recommend John to anyone who works with a team and wants to understand why and how their team works best. Our communication improved within weeks of the CliftonStrengths work.</p>
-      <div class="testimonial-author"><strong>Christian Caswell</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Top Chiropractic &middot; TeamStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>I'd been feeling like the good things I accomplished were luck and everything else I was winging. John helped me see I had real strengths — and how to use them deliberately.</p>
-      <div class="testimonial-author"><strong>Dean</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Bankable &middot; LeadStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>Working with John has been transformative. I came in overwhelmed and stuck; I left with a clear structure for how I lead and make decisions under pressure.</p>
-      <div class="testimonial-author"><strong>Ralph Shorthose</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Redhouse Bank &middot; LeadStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive mistakes in two previous businesses.</p>
-      <div class="testimonial-author"><strong>Stuart Ploughman</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Serial Entrepreneur &middot; BuildStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>I finally have a coach who understands senior leadership reality — not theory. The neuroscience framing made it land differently than any coaching I'd had before.</p>
-      <div class="testimonial-author"><strong>C-Suite Executive</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Financial Services &middot; LeadStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>Working with John has given me a structured space to think clearly and stay focused — something I hadn't been able to access on my own despite trying for years.</p>
-      <div class="testimonial-author"><strong>Jeremy King</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Business Leader &middot; LeadStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>I thought I just needed a break. This wasn't a break — it was a recalibration. I left thinking more clearly than I had in months and with a concrete plan I could actually execute.</p>
-      <div class="testimonial-author"><strong>VP Strategy</strong><span style="display:block;font-size:0.78rem;color:var(--text-muted);margin-top:0.2rem;">Tech scale-up &middot; Cognitive Reset</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>This is not a spa day. It's structured, rigorous work disguised as rest. My decision-making sharpness came back immediately.</p>
-      <div class="testimonial-author"><strong>Founder, Series B</strong></div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="divider"></div>
-<section class="final-cta">
-  <div class="section-label reveal">Ready to Get Unstuck?</div>
-  <h2 class="section-title reveal">Join the Leaders Who've<br><em style="font-style: italic; color: var(--accent);">Already Moved</em></h2>
-  <p class="final-question reveal">The question isn't whether you're stuck. It's how much longer you're willing to stay there.</p>
-  <a href="contact.html" class="btn-primary btn-large reveal">Book a Call</a>
 </section>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo"><img src="images/testimonials-img-02.png" alt="Catalyst Growth Coaching" style="height:28px;width:auto;opacity:0.85;"></div>
-    <ul class="footer-links">
-      <li><a href="leadstrong.html">LeadStrong</a></li><li><a href="buildstrong.html">BuildStrong</a></li><li><a href="cognitive-reset.html">Cognitive Reset</a></li><li><a href="teamstrong.html">TeamStrong</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="footer-copy">© 2026 John Obidipe · Catalyst Growth Coaching · coach@catalystgrowthcoach.co.uk</div>
+<!-- ════ SCENE 03 — Case Study One ════ -->
+<section class="scene scene-case">
+  <div class="case-head">
+    <div class="left">
+      <span class="label">02 · Case Study</span>
+      <span class="num">No. i</span>
+    </div>
+    <h2>The VP whose mind kept going <em>blank</em> in the boardroom.</h2>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-cell">
+      <span class="step">i.</span>
+      <span class="lab">The Situation</span>
+      <h3>Going <em>blank</em> under pressure</h3>
+      <p class="body">VP Engineering at a Series B tech scale-up. Delivering results, but the mind kept going blank in board presentations. Described it as <em>"my brain just stops."</em> Had been carrying unrecognised cognitive depletion for months.</p>
+    </div>
+    <div class="case-cell">
+      <span class="step">ii.</span>
+      <span class="lab is-cognac">The Work</span>
+      <h3>Lead Strong, twelve <em>weeks</em></h3>
+      <p class="body">CliftonStrengths and amygdala-PFC diagnostic identified an overactive threat response in high-stakes evaluation. Brain retraining protocols built verbal fluency under pressure. Stress tolerance progressively widened across the programme.</p>
+    </div>
+    <div class="case-cell">
+      <span class="step">iii.</span>
+      <span class="lab is-cognac">The Outcome</span>
+      <h3>Leading the room, not <em>surviving</em> it</h3>
+      <p class="body">Back to making clean decisions within six weeks. Board presentations stopped being a source of dread. <em>"I was back to making clean decisions within six weeks."</em></p>
+    </div>
+  </div>
+
+  <div class="case-foot">
+    <span class="line"></span>
+    <span><strong>VP Engineering</strong> · Tech scale-up · Lead Strong</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 04 — Quote Grid One (3 quotes) ════ -->
+<section class="scene scene-grid shaded">
+  <div class="grid-head">
+    <div>
+      <div class="label">03 · In Their Words</div>
+      <h2>From the leaders who started with Lead <em>Strong</em>.</h2>
+    </div>
+    <p class="note">Quotes are unedited — exactly as the clients shared them after their twelve weeks.</p>
+  </div>
+
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>Coaching with John has given me renewed focus and confidence at a point in my career when I <em>really</em> needed it. The CliftonStrengths work was the most clarifying thing I've done professionally.</blockquote>
+      <div class="attr">
+        <span class="name">Martin Malins</span>
+        <span class="meta">Senior Leader · <span class="prog">Lead Strong</span></span>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>I'd been feeling like the good things I'd accomplished were luck and everything else I was winging. John helped me see I had real <em>strengths</em> — and how to use them deliberately.</blockquote>
+      <div class="attr">
+        <span class="name">Dean</span>
+        <span class="meta">Bankable · <span class="prog">Lead Strong</span></span>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>Working with John has been transformative. I came in overwhelmed and stuck; I left with a clear structure for how I lead and make decisions <em>under pressure</em>.</blockquote>
+      <div class="attr">
+        <span class="name">Ralph Shorthose</span>
+        <span class="meta">Redhouse Bank · <span class="prog">Lead Strong</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 05 — Breathing Pull-quote ════ -->
+<section class="scene scene-pull compact">
+  <div class="folio">04 · <span>In Their Words</span></div>
+  <div class="mark">"</div>
+  <blockquote>
+    Working with John has been <em>life-changing</em> for me.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span><strong>Jeremy King</strong> · Lead Strong</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 06 — Case Study Two ════ -->
+<section class="scene scene-case alt">
+  <div class="case-head">
+    <div class="left">
+      <span class="label">05 · Case Study</span>
+      <span class="num">No. ii</span>
+    </div>
+    <h2>The CEO who needed clarity, not a <em>weekend off</em>.</h2>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-cell">
+      <span class="step">i.</span>
+      <span class="lab">The Situation</span>
+      <h3>Functional, but no longer <em>sharp</em></h3>
+      <p class="body">Founder and CEO of a Series B SaaS company. Decision-making felt laboured. Strategic clarity gone. Had been carrying the business through a difficult growth period without stopping to reset.</p>
+    </div>
+    <div class="case-cell">
+      <span class="step">ii.</span>
+      <span class="lab is-cognac">The Work</span>
+      <h3>2-Day Cognitive Reset at <em>Sopwell</em></h3>
+      <p class="body">Somatic movement to downregulate the amygdala. Private coaching to restore strategic perspective. Structured spa restoration to allow neuroplasticity to embed the shift. 7-day and 30-day integration sessions.</p>
+    </div>
+    <div class="case-cell">
+      <span class="step">iii.</span>
+      <span class="lab is-cognac">The Outcome</span>
+      <h3>Thinking <em>clearly</em> again</h3>
+      <p class="body">Left the retreat thinking more clearly than he had in a year. <em>"This wasn't a break — it was a recalibration."</em> Strategic clarity returned within the programme. Decision quality measurably improved across the following quarter.</p>
+    </div>
+  </div>
+
+  <div class="case-foot">
+    <span class="line"></span>
+    <span><strong>Founder &amp; CEO</strong> · Series B SaaS · Cognitive Reset</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 07 — Quote Grid Two (3 quotes) ════ -->
+<section class="scene scene-grid">
+  <div class="grid-head">
+    <div>
+      <div class="label">06 · In Their Words</div>
+      <h2>From the team rooms and the boardrooms.</h2>
+    </div>
+    <p class="note">TeamStrong, Cognitive Reset, and the wider work.</p>
+  </div>
+
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>I'd recommend John to anyone who works with a team and wants to understand why and how their team works <em>best</em>. Our communication improved within weeks of the CliftonStrengths work.</blockquote>
+      <div class="attr">
+        <span class="name">Christian Caswell</span>
+        <span class="meta">Top Chiropractic · <span class="prog">TeamStrong</span></span>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>I thought I just needed a break. This wasn't a break — it was a <em>recalibration</em>. I left thinking more clearly than I had in months, and with a plan I could actually execute.</blockquote>
+      <div class="attr">
+        <span class="name">VP Strategy</span>
+        <span class="meta">Tech scale-up · <span class="prog">Cognitive Reset</span></span>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>This is not a spa day. It's structured, rigorous work disguised as <em>rest</em>.</blockquote>
+      <div class="attr">
+        <span class="name">Founder</span>
+        <span class="meta">Series B · <span class="prog">Cognitive Reset</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 08 — Breathing Pull-quote ════ -->
+<section class="scene scene-pull compact shaded">
+  <div class="folio">07 · <span>In Their Words</span></div>
+  <div class="mark">"</div>
+  <blockquote>
+    A safe space to talk, reflect, and stay focused on what <em>actually</em> matters.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>TeamStrong client</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 09 — Case Study Three ════ -->
+<section class="scene scene-case">
+  <div class="case-head">
+    <div class="left">
+      <span class="label">08 · Case Study</span>
+      <span class="num">No. iii</span>
+    </div>
+    <h2>The serial founder who kept making the same <em>expensive mistakes</em>.</h2>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-cell">
+      <span class="step">i.</span>
+      <span class="lab">The Situation</span>
+      <h3>Strong instincts, recurring <em>pattern</em></h3>
+      <p class="body">Serial entrepreneur with two previous businesses behind him. Strong instincts but operating without a clear framework for decision-making, delegation, or scaling. Recognised the same mistakes recurring across ventures without understanding the pattern beneath them.</p>
+    </div>
+    <div class="case-cell">
+      <span class="step">ii.</span>
+      <span class="lab is-cognac">The Work</span>
+      <h3>BuildStrong, <em>ongoing</em></h3>
+      <p class="body">CliftonStrengths and FITT16 revealed the recurring pattern: leading from relator and strategic strengths while chronically under-using the structures that would have prevented the recurring stuck states. Built a personal operating framework aligned to actual wiring.</p>
+    </div>
+    <div class="case-cell">
+      <span class="step">iii.</span>
+      <span class="lab is-cognac">The Outcome</span>
+      <h3>The pattern <em>named</em>, then prevented</h3>
+      <p class="body">Named and understood the pattern that had cost him across two previous businesses. Built structures that prevent the same recurring stuck states. <em>"The frameworks he uses would have saved me from expensive mistakes in two previous businesses."</em></p>
+    </div>
+  </div>
+
+  <div class="case-foot">
+    <span class="line"></span>
+    <span><strong>Stuart Ploughman</strong> · Serial Entrepreneur · BuildStrong</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 10 — Quote Grid Three (3 quotes) ════ -->
+<section class="scene scene-grid shaded">
+  <div class="grid-head">
+    <div>
+      <div class="label">09 · In Their Words</div>
+      <h2>From the rest of the room.</h2>
+    </div>
+    <p class="note">A few more, said by leaders across different stages and industries.</p>
+  </div>
+
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive mistakes in two previous <em>businesses</em>.</blockquote>
+      <div class="attr">
+        <span class="name">Stuart Ploughman</span>
+        <span class="meta">Serial Entrepreneur · <span class="prog">BuildStrong</span></span>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>Finally, a coach who understands senior leadership <em>reality</em> — not theory. The neuroscience framing made it land differently than any coaching I'd had before.</blockquote>
+      <div class="attr">
+        <span class="name">C-Suite Executive</span>
+        <span class="meta">Financial Services · <span class="prog">Lead Strong</span></span>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>I'd been pushing harder. John showed me I'd been running on empty for <em>months</em>. Within six weeks I was making clean decisions again.</blockquote>
+      <div class="attr">
+        <span class="name">VP Engineering</span>
+        <span class="meta">Tech scale-up Series B · <span class="prog">Lead Strong</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 11 — Closing ════ -->
+<section class="scene scene-close">
+  <div class="label">10 · <span>The Invitation</span></div>
+  <h2>
+    The leaders here didn't<br />
+    stay <em>stuck</em>.
+  </h2>
+  <p class="standfirst">A discovery call is a fifteen-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're in.</p>
+
+  <div class="button-row">
+    <a href="/contact" class="button">Book a discovery call</a>
+    <a href="/stuck-quiz" class="button ghost">Or take the diagnostic</a>
+  </div>
+
+  <div class="endline">
+    <span>Catalyst Growth Coaching · Results</span>
+    <span>End of issue</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+    <div class="tag">I get leaders unstuck.</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">Lead Strong</a>
+    <a href="/teamstrong">TeamStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/cognitive-reset">Cognitive Reset</a>
+  </div>
+  <div class="col">
+    <h4>The Work</h4>
+    <a href="/about">About John</a>
+    <a href="/stuck-quiz">The Diagnostic</a>
+    <a href="/testimonials">Testimonials</a>
+    <a href="/for-organisations">For organisations</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© 2026 Catalyst Growth Coaching</span>
+    <span>London · Est. 2024</span>
   </div>
 </footer>
-<script src="main.js"></script>
+
 </body>
 </html>

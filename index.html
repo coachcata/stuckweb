@@ -1,540 +1,776 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Executive Coach UK | I Get Leaders Unstuck | John Obidipe</title>
-<meta name="description" content="Executive coaching for senior leaders stuck in reactive mode, going blank under pressure, or patterns they can't break. Neuroscience-backed brain retraining protocols.">
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Catalyst Growth Coaching — Executive Coaching for Senior Leaders</title>
 
-    <!-- Open Graph / LinkedIn / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk">
-    <meta property="og:title" content="Executive Coach UK | I Get Leaders Unstuck | John Obidipe">
-    <meta property="og:description" content="Executive coaching for senior leaders stuck in reactive mode, going blank under pressure, or patterns they cannot break. Neuroscience-backed brain retraining protocols.">
-    <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
-    <meta property="og:site_name" content="John Obidipe | Executive Coach">
+<!-- ════ SEO METADATA ════ -->
+<meta name="description" content="Neuroscience-backed coaching for senior leaders who've stopped moving forward. Lead Strong, TeamStrong, BuildStrong, and Cognitive Reset. London, est. 2024." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/" />
+<meta property="og:title" content="Catalyst Growth Coaching — I get leaders unstuck" />
+<meta property="og:description" content="Neuroscience-backed coaching for senior leaders who've stopped moving forward." />
+<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Catalyst Growth Coaching — I get leaders unstuck" />
+<meta name="twitter:description" content="Neuroscience-backed coaching for senior leaders who've stopped moving forward." />
+<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/" />
+<!-- ════ END SEO METADATA ════ -->
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Executive Coach UK | I Get Leaders Unstuck | John Obidipe">
-    <meta name="twitter:description" content="Executive coaching for senior leaders stuck in reactive mode, going blank under pressure, or patterns they cannot break. Neuroscience-backed brain retraining protocols.">
-    <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #141418;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk">
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--bone);
+    font-family: var(--font-b);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
 
-    <!-- Google Analytics GA4 - Replace G-2Z17HSYFCV with your real Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2Z17HSYFCV');
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"John Obidipe","jobTitle":"Executive Performance Coach","description":"Gallup-Certified CliftonStrengths Coach. Executive coaching for senior leaders using neuroscience-backed brain retraining protocols.","url":"https://www.catalystgrowthcoach.co.uk"}
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"ProfessionalService","name":"Catalyst Growth Coaching","alternateName":"John Obidipe Executive Coaching","url":"https://www.catalystgrowthcoach.co.uk","description":"Executive coaching for senior leaders stuck in reactive mode. Neuroscience-backed brain retraining protocols. Gallup-Certified CliftonStrengths Coach.","areaServed":"United Kingdom","priceRange":"£££","serviceType":"Executive Coaching"}
-    </script>
+  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  /* ─── Nav ─── */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul {
+    display: flex; gap: 2rem; list-style: none; align-items: center;
+  }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav.top ul a:hover { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover {
+    background: rgba(200,149,108,0.08); border-color: var(--cognac);
+  }
+
+  /* ─── Scene base ─── */
+  section.scene {
+    min-height: 100vh; padding: 10vh 6vw;
+    position: relative; display: flex;
+  }
+
+  /* ══ SCENE 01 — Masthead ══ */
+  .scene-open { padding-top: 16vh; flex-direction: column; justify-content: center; }
+  .scene-open .masthead-top {
+    display: flex; gap: 2rem; align-items: center;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 5vh;
+  }
+  .scene-open .masthead-top .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
+  .scene-open .masthead-top strong { color: var(--cognac); font-weight: 600; }
+  .scene-open .hero-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 6vw; align-items: end;
+  }
+  .scene-open h1 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    line-height: 0.92; letter-spacing: -0.015em;
+  }
+  .scene-open h1 .line { display: block; }
+  .scene-open .hero-right {
+    display: flex; flex-direction: column; gap: 2rem;
+    max-width: 30ch; padding-bottom: 1rem; justify-self: end;
+  }
+  .scene-open .byline {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-open .byline .line { width: 30px; height: 1px; background: var(--cognac); }
+  .scene-open .lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.45rem; line-height: 1.45; color: var(--bone);
+  }
+  .scene-open .foot {
+    margin-top: 8vh;
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 1.5rem; border-top: 1px solid var(--line);
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-open .foot .scroll { display: flex; gap: 0.8rem; align-items: center; }
+  .scene-open .foot .scroll .arrow { width: 28px; height: 1px; background: var(--cognac); }
+
+  /* ══ SCENE 02 — Premise ══ */
+  .scene-premise {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 14vh 8vw; position: relative;
+  }
+  .scene-premise .folio {
+    position: absolute; top: 6vh; left: 6vw;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-premise .folio span { color: var(--cognac); }
+  .scene-premise blockquote {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2.2rem, 6vw, 4.6rem);
+    line-height: 1.12; max-width: 22ch;
+  }
+  .scene-premise .attr {
+    margin-top: 4rem;
+    display: flex; gap: 1rem; align-items: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-premise .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+
+  /* ══ SCENE 03 — Four Stucks ══ */
+  .scene-stucks {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column; justify-content: center;
+  }
+  .scene-stucks .head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4vw; align-items: baseline; margin-bottom: 8vh;
+  }
+  .scene-stucks .head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .scene-stucks .head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    line-height: 1.12; max-width: 15ch;
+  }
+  .scene-stucks .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-stucks .head .note {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; color: var(--stone); max-width: 30ch;
+    line-height: 1.5; justify-self: end; text-align: right; padding-bottom: 0.4rem;
+  }
+  .stucks-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .stuck {
+    padding: 3rem 2rem 3.5rem; border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1rem; min-height: 280px;
+    transition: background 0.5s ease;
+  }
+  .stuck:last-child { border-right: none; }
+  .stuck:hover { background: rgba(200,149,108,0.04); }
+  .stuck .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
+  }
+  .stuck h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 2rem;
+    line-height: 1.05; color: var(--bone); margin-top: 1rem;
+  }
+  .stuck h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .stuck .caption {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.05rem; color: var(--stone); line-height: 1.4;
+    margin-top: auto; padding-top: 2.5rem; max-width: 20ch;
+  }
+
+  /* ══ Testimonial scenes ══ */
+  .scene-pull {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 14vh 8vw; position: relative;
+  }
+  .scene-pull .folio {
+    position: absolute; top: 6vh; left: 6vw;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .folio span { color: var(--cognac); }
+  .scene-pull .mark {
+    font-family: var(--font-d); font-style: italic; font-size: 4rem;
+    color: var(--cognac); line-height: 1; margin-bottom: 2rem; opacity: 0.6;
+  }
+  .scene-pull blockquote {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+    line-height: 1.2; max-width: 24ch; color: var(--bone);
+  }
+  .scene-pull blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-pull .attr {
+    margin-top: 4rem;
+    display: flex; gap: 1rem; align-items: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+
+  /* ══ SCENE — Method ══ */
+  .scene-method { padding: 0; min-height: 100vh; }
+  .scene-method .split {
+    display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh;
+  }
+  .method-image {
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(168,119,78,0.28), transparent 60%),
+      radial-gradient(ellipse at 70% 75%, rgba(200,149,108,0.15), transparent 55%),
+      linear-gradient(145deg, #1a1410 0%, #0d0b09 100%);
+    position: relative; overflow: hidden;
+  }
+  .method-image::after {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(115deg, transparent 0 10px, rgba(0,0,0,0.22) 10px 11px);
+    mix-blend-mode: multiply; opacity: 0.5;
+  }
+  .method-image .plate-label {
+    position: absolute; bottom: 3vh; left: 3vw;
+    font-size: 0.66rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(242,240,236,0.5); z-index: 2;
+  }
+  .method-image .plate-label span { color: var(--cognac); }
+  .method-text {
+    padding: 12vh 5vw;
+    display: flex; flex-direction: column; justify-content: center; gap: 2.5rem;
+  }
+  .method-text .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .method-text h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1; max-width: 16ch;
+  }
+  .method-text h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .method-text .standfirst {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; line-height: 1.5; color: var(--stone); max-width: 28ch;
+  }
+  .method-text .three { display: flex; flex-direction: column; margin-top: 1rem; max-width: 36ch; }
+  .method-text .three .beat {
+    display: grid; grid-template-columns: 2rem 1fr; gap: 1.2rem;
+    padding: 1.1rem 0; border-bottom: 1px solid var(--line); align-items: baseline;
+  }
+  .method-text .three .beat:last-child { border-bottom: none; }
+  .method-text .three .beat .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1.1rem; color: var(--cognac);
+  }
+  .method-text .three .beat .t { color: var(--bone); font-size: 1rem; line-height: 1.45; }
+  .method-text .three .beat .t span {
+    display: block; color: var(--ash); font-size: 0.88rem; margin-top: 0.25rem;
+  }
+
+  /* ══ SCENE — Three Doors ══ */
+  .scene-doors {
+    background: var(--bg-2); border-top: 1px solid var(--line);
+    flex-direction: column; padding: 12vh 6vw;
+  }
+  .scene-doors .head { margin-bottom: 6vh; max-width: 820px; }
+  .scene-doors .head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .scene-doors .head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    line-height: 1.12; max-width: 18ch;
+  }
+  .scene-doors .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-doors .head .sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.3rem; color: var(--stone); max-width: 40ch;
+    margin-top: 1.5rem; line-height: 1.5;
+  }
+
+  .doors {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;
+  }
+  .door {
+    padding: 3.5rem 2.5rem; background: var(--bg);
+    border: 1px solid var(--line); border-radius: 4px;
+    display: flex; flex-direction: column; gap: 1.5rem; min-height: 440px;
+    position: relative; cursor: pointer; text-decoration: none; color: inherit;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .door:hover {
+    border-color: var(--line-strong); background: #111114; transform: translateY(-4px);
+  }
+  .door .door-num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
+  }
+  .door .door-for {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .door h3 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+    line-height: 1.1; color: var(--bone);
+  }
+  .door h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .door .desc {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.1rem; color: var(--stone); line-height: 1.5; max-width: 26ch;
+  }
+  .door .includes {
+    margin-top: 1rem; padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .door .includes .lab {
+    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 0.3rem;
+  }
+  .door .includes .prog { font-size: 0.88rem; color: var(--bone); letter-spacing: 0.02em; }
+  .door .enter {
+    margin-top: auto; padding-top: 1.5rem;
+    display: inline-flex; gap: 0.8rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .door .enter .arrow {
+    display: inline-block; width: 2.2rem; height: 1px;
+    background: var(--cognac); transition: width 0.4s ease;
+  }
+  .door:hover .enter .arrow { width: 3.4rem; }
+
+  /* ── Quiz secondary path ── */
+  .quiz-path {
+    margin-top: 4rem; padding-top: 2.5rem;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: center; align-items: center; gap: 1rem;
+    flex-wrap: wrap; text-align: center;
+  }
+  .quiz-path .text {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    color: var(--stone); font-size: 1.15rem;
+  }
+  .quiz-path .text em { color: var(--bone); font-style: italic; }
+  .quiz-path a {
+    display: inline-flex; gap: 0.7rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .quiz-path a .arrow {
+    display: inline-block; width: 2rem; height: 1px;
+    background: var(--cognac); transition: width 0.4s ease;
+  }
+  .quiz-path a:hover .arrow { width: 3rem; }
+
+  /* ══ Closing ══ */
+  .scene-close {
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 14vh 6vw; position: relative;
+  }
+  .scene-close .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 4rem;
+  }
+  .scene-close .label span { color: var(--cognac); }
+  .scene-close h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.15; max-width: 22ch; margin-bottom: 4rem;
+  }
+  .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-close .button-row {
+    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
+  }
+  .scene-close .button {
+    display: inline-block; padding: 1.2rem 2.8rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+  }
+  .scene-close .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .scene-close .button.ghost {
+    background: transparent; color: var(--cognac);
+    border: 1px solid var(--line-strong);
+  }
+  .scene-close .button.ghost:hover {
+    background: rgba(200,149,108,0.08); border-color: var(--cognac);
+  }
+  .scene-close .endline {
+    position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
+    display: flex; justify-content: space-between;
+    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+    border-top: 1px solid var(--line); padding-top: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+    display: flex; justify-content: space-between;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+    section.scene { padding: 12vh 6vw; }
+
+    .scene-open { padding-top: 18vh; }
+    .scene-open .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-open .hero-right { max-width: 100%; justify-self: start; }
+    .scene-open h1 { font-size: clamp(2.8rem, 14vw, 5rem); }
+
+    .scene-stucks .head { grid-template-columns: 1fr; gap: 2rem; }
+    .scene-stucks .head .note { justify-self: start; text-align: left; padding-bottom: 0; }
+    .stucks-grid { grid-template-columns: 1fr; }
+    .stuck {
+      border-right: none; border-bottom: 1px solid var(--line);
+      padding: 2.5rem 0.5rem; min-height: auto;
+    }
+    .stuck:last-child { border-bottom: none; }
+    .stuck .caption { padding-top: 1.5rem; }
+
+    .scene-method .split { grid-template-columns: 1fr; }
+    .method-image { min-height: 40vh; }
+    .method-text { padding: 6rem 2rem; }
+
+    .doors { grid-template-columns: 1fr; }
+    .door { padding: 2.8rem 2rem; min-height: auto; }
+
+    .quiz-path { flex-direction: column; gap: 1.5rem; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; }
+  }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo"><img src="images/index-img-01.png" alt="Catalyst Growth Coaching" style="height:36px;width:auto;"></a>
-  <ul class="nav-links">
-    <li class="nav-dropdown">
-      <a href="#services">Services</a>
-      <ul class="nav-dropdown-menu">
-        <li><a href="leadstrong.html">LeadStrong</a></li>
-        <li><a href="buildstrong.html">BuildStrong</a></li>
-        <li><a href="cognitive-reset.html">Cognitive Reset</a></li>
-        <li><a href="teamstrong.html">TeamStrong</a></li>
-      </ul>
-    </li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="testimonials.html">Results</a></li>
-    <li><a href="for-organisations.html">For Organisations</a></li>
-    <li><a href="contact.html" class="nav-cta">Get Unstuck</a></li>
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="#stucks">The Method</a></li>
+    <li><a href="#doors">Programmes</a></li>
+    <li><a href="/stuck-quiz">Diagnostic</a></li>
+    <li><a href="/contact" class="cta">Book a call</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="leadstrong.html" class="mobile-sub">LeadStrong</a>
-  <a href="buildstrong.html" class="mobile-sub">BuildStrong</a>
-  <a href="cognitive-reset.html" class="mobile-sub">Cognitive Reset</a>
-  <a href="teamstrong.html" class="mobile-sub">TeamStrong</a>
-  <a href="about.html">About</a>
-  <a href="testimonials.html">Results</a>
-  <a href="for-organisations.html">For Organisations</a>
-  <a href="contact.html">Get Unstuck</a>
-</div>
+<!-- ════ SCENE 01 — Masthead ════ -->
+<section class="scene scene-open">
+  <div class="masthead-top">
+    <span>Issue N° 01</span>
+    <span class="dot"></span>
+    <span><strong>Executive Coaching</strong></span>
+    <span class="dot"></span>
+    <span>London · Est. 2024</span>
+  </div>
 
-<!-- HERO -->
-<section class="page-hero home-hero">
-  <div class="page-hero-inner">
-    <div class="hero-overline">Executive Performance Coaching</div>
-    <h1 class="hero-title">I Get Leaders<br><em>Unstuck</em></h1>
-    <p class="hero-body">You're a senior leader who's stuck. Not failing. Not underperforming. Just stuck. In reactive mode when you should be strategic. Going blank under pressure when you need to stay sharp. Trapped in patterns you know aren't serving you.</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn-primary">Where Are You Stuck?</a>
-      <a href="#method" class="btn-secondary">Learn How It Works</a>
-    </div>
-    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; gap: 2rem; flex-wrap: wrap;">
-      <div style="font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em;"><span style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); display: block; font-weight: 400; margin-bottom: 0.2rem;">90%</span>of Fortune 500s use CliftonStrengths</div>
-      <div style="font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em;"><span style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); display: block; font-weight: 400; margin-bottom: 0.2rem;">3 months</span>average time to measurable shift</div>
-      <div style="font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em;"><span style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); display: block; font-weight: 400; margin-bottom: 0.2rem;">100%</span>evidence-based protocols</div>
-    </div>
+  <div class="hero-grid">
+    <h1>
+      <span class="line">I get leaders</span>
+      <span class="line"><em class="accent">unstuck</em>.</span>
+    </h1>
 
+    <div class="hero-right">
+      <div class="byline">
+        <span class="line"></span>
+        <span>John Obidipe, Performance Coach</span>
+      </div>
+      <p class="lede">Neuroscience-backed coaching for senior leaders who've stopped moving forward.</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Open the issue</span>
+    <span class="scroll">
+      <span>Scroll</span>
+      <span class="arrow"></span>
+    </span>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<div class="section-full">
-  <div class="container">
-    <div class="section-label reveal">The Problem</div>
-    <h2 class="section-title reveal">Most Senior Leaders Are Stuck<br>in Ways They Won't Admit</h2>
-    <div class="grid-2-asym mt-3">
-      <div class="prose reveal">
-        <p>You're not failing. But you're not moving forward either. And here's what most people don't understand: <strong>being stuck isn't a motivation problem. It's a brain pattern problem.</strong></p>
-        <p>When you're stuck in reactive leadership, your amygdala — your brain's threat detector — is overwhelming your prefrontal cortex, the centre responsible for strategic thinking and decision-making.</p>
-        <p>When you go blank under pressure, stress hormones are shutting down your working memory and verbal fluency. When you're stuck in perfectionism, chronic amygdala activation around mistakes creates ongoing threat sensitivity.</p>
-        <p><strong>Different stuck states come from different broken brain patterns.</strong> You don't need motivation. You need someone who can identify which pattern is keeping you stuck and retrain it.</p>
-      </div>
-      <div class="stagger" style="display: flex; flex-direction: column; gap: 1.2rem;">
-        <div class="signal reveal">
-          <div class="signal-title">Stuck in a job too long</div>
-          <div class="signal-desc">Your brain defaults to familiar patterns because uncertainty triggers your threat response.</div>
+<!-- ════ SCENE 02 — Premise ════ -->
+<section class="scene scene-premise">
+  <div class="folio">01 · <span>The Premise</span></div>
+  <blockquote>
+    You're not failing. But you're not moving <em class="accent">forward</em> either.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>Where most leaders arrive</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 03 — Four Stucks ════ -->
+<section class="scene scene-stucks" id="stucks">
+  <div class="head">
+    <div>
+      <div class="label">02 · The Framework</div>
+      <h2>Four ways the brain gets <em class="accent">stuck</em>.</h2>
+    </div>
+    <p class="note">Different patterns. Different interventions. One of them is probably yours.</p>
+  </div>
+
+  <div class="stucks-grid">
+    <div class="stuck">
+      <span class="num">i.</span>
+      <h3><em>Relating</em></h3>
+      <p class="caption">When presence under pressure disappears.</p>
+    </div>
+    <div class="stuck">
+      <span class="num">ii.</span>
+      <h3><em>Thinking</em></h3>
+      <p class="caption">When the mind goes blank in the room that matters.</p>
+    </div>
+    <div class="stuck">
+      <span class="num">iii.</span>
+      <h3><em>Outputting</em></h3>
+      <p class="caption">When the work is there, but nothing ships.</p>
+    </div>
+    <div class="stuck">
+      <span class="num">iv.</span>
+      <h3><em>Moving</em></h3>
+      <p class="caption">When the next decision never quite arrives.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 04 — First Testimonial ════ -->
+<section class="scene scene-pull">
+  <div class="folio">03 · <span>In Their Words</span></div>
+  <div class="mark">"</div>
+  <blockquote>
+    Renewed focus and confidence at a point in my career when I <em>really</em> needed it.
+    A genuine 1 + 1 = 3 moment.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>Lead Strong client</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 05 — Method ════ -->
+<section class="scene scene-method">
+  <div class="split">
+    <div class="method-image">
+      <div class="plate-label">Plate i · <span>The method</span></div>
+    </div>
+
+    <div class="method-text">
+      <div class="label">04 · The Method</div>
+      <h2>Not motivation. <em>Retraining</em>.</h2>
+      <p class="standfirst">Most coaching redirects the brain. The work here rewires it — so Monday doesn't undo Friday.</p>
+
+      <div class="three">
+        <div class="beat">
+          <span class="n">i.</span>
+          <span class="t">Identify the pattern<span>Which stuck state is yours.</span></span>
         </div>
-        <div class="signal reveal">
-          <div class="signal-title">Team dynamics won't shift</div>
-          <div class="signal-desc">You're operating from a stressed prefrontal cortex that can't access the strategic thinking you need.</div>
+        <div class="beat">
+          <span class="n">ii.</span>
+          <span class="t">Retrain the response<span>Neuroscience-backed protocols.</span></span>
         </div>
-        <div class="signal reveal">
-          <div class="signal-title">Performance mode on autopilot</div>
-          <div class="signal-desc">Your brain is in energy-conservation mode, degrading decision quality before you even notice.</div>
-        </div>
-        <div class="signal reveal">
-          <div class="signal-title">Burnout at the brain level</div>
-          <div class="signal-desc">Chronic stress has changed your brain structure — enlarged amygdala, impaired frontal regions.</div>
+        <div class="beat">
+          <span class="n">iii.</span>
+          <span class="t">Change what happens under pressure<span>The moment that matters.</span></span>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-
-
-
-<!-- LOGO BAR -->
-<div style="border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2.2rem 0; background: var(--bg-secondary);">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 1.4rem;">
-      <span style="font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Clients have led and built at</span>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.5rem 3rem;">
-
-      <div style="opacity: 0.5; filter: grayscale(1) invert(1); transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='0.5'">
-        <img src="images/index-img-02.png" alt="Lexus" height="36" style="display:block;">
-      </div>
-
-      <div style="opacity: 0.5; filter: grayscale(1) invert(1); transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='0.5'">
-        <img src="images/index-img-03.png" alt="Toyota" height="44" style="display:block;">
-      </div>
-
-      <div style="opacity: 0.5; filter: grayscale(1) invert(1); transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='0.5'">
-        <img src="images/index-img-04.png" alt="Convatec" height="44" style="display:block;">
-      </div>
-
-      <div style="opacity: 0.5; filter: grayscale(1) invert(1); transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='0.5'">
-        <img src="images/index-img-05.png" alt="Arrow Planning" height="36" style="display:block;">
-      </div>
-
-      <div style="opacity: 0.5; filter: grayscale(1) invert(1); transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='0.5'">
-        <img src="images/index-img-06.png" alt="Next Energy Capital" height="18" style="display:block;">
-      </div>
-
-      <div style="opacity: 0.5; filter: grayscale(1) invert(1); transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='0.5'">
-        <img src="images/index-img-07.png" alt="New Socks" height="36" style="display:block;">
-      </div>
-
-    </div>
+<!-- ════ SCENE 06 — Second Testimonial ════ -->
+<section class="scene scene-pull">
+  <div class="folio">05 · <span>In Their Words</span></div>
+  <div class="mark">"</div>
+  <blockquote>
+    Before John, I often felt lost at work.<br />
+    Now I know exactly what I bring — and I step forward every day with <em>real</em> confidence.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>Lead Strong client</span>
   </div>
-</div>
+</section>
 
-
-<!-- ICP SELECTOR + VIDEO -->
-<div class="section-full">
-  <div class="container">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
-      <div>
-        <div class="section-label reveal">Who This Is For</div>
-        <h2 class="section-title reveal">Which one are you?</h2>
-        <div class="stagger" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
-          <a href="leadstrong.html" class="signal reveal" style="text-decoration: none; display: block;">
-            <div class="signal-title">Senior Leader / VP / C-Suite →</div>
-            <div class="signal-desc">Stuck in reactive mode, going blank under pressure, or can't break the pattern. LeadStrong is your programme.</div>
-          </a>
-          <a href="buildstrong.html" class="signal reveal" style="text-decoration: none; display: block;">
-            <div class="signal-title">Founder / Business Owner →</div>
-            <div class="signal-desc">Being owned by your business, can't step back, stuck in the weeds. BuildStrong gives you ongoing support as you scale.</div>
-          </a>
-          <a href="cognitive-reset.html" class="signal reveal" style="text-decoration: none; display: block;">
-            <div class="signal-title">Need to get unstuck fast →</div>
-            <div class="signal-desc">Cognitive fog, decision paralysis, or a high-stakes period approaching. Cognitive Reset is your 1–3 day brain reset intensive.</div>
-          </a>
-          <a href="teamstrong.html" class="signal reveal" style="text-decoration: none; display: block;">
-            <div class="signal-title">Leading a team that's underperforming →</div>
-            <div class="signal-desc">Friction, misalignment, silos. TeamStrong uses CliftonStrengths diagnostics to unlock collective performance.</div>
-          </a>
-        </div>
-      </div>
-      <div class="reveal" style="position: relative;">
-        <div style="font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 1rem;">See the Method</div>
-        <div style="position:relative;width:100%;aspect-ratio:9/16;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:#000;cursor:pointer;max-height:480px;" id="methodVideo" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/QZPBDdQJ7Go?autoplay=1&rel=0' style='position:absolute;top:0;left:0;width:100%;height:100%;border:none;' allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture' allowfullscreen></iframe>'">
-          <img src="https://img.youtube.com/vi/QZPBDdQJ7Go/maxresdefault.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Watch: I get leaders unstuck">
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
-            <div style="width:64px;height:64px;background:rgba(200,149,108,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(200,149,108,0.3);">
-              <div style="width:0;height:0;border-style:solid;border-width:10px 0 10px 18px;border-color:transparent transparent transparent #fff;margin-left:4px;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- ════ SCENE 07 — Three Doors + Quiz ════ -->
+<section class="scene scene-doors" id="doors">
+  <div class="head">
+    <div class="label">06 · Programmes</div>
+    <h2>Three ways in, depending on <em class="accent">who's stuck</em>.</h2>
+    <p class="sub">The work is different for an individual leader, a team, and a leader running on empty. Start with who you are.</p>
   </div>
-</div>
 
-<!-- ATMOSPHERIC IMAGE -->
-<div class="media-section reveal">
-  <div class="media-placeholder media-atmospheric">
-    <img src="images/index-img-08.jpg" alt="City skyline at dawn" style="width:100%;height:100%;object-fit:cover;object-position:center;">
-  </div>
-</div>
+  <div class="doors">
+    <!-- DOOR 1 — FOR THE LEADER -->
+    <a class="door" href="/leadstrong">
+      <span class="door-num">i.</span>
+      <span class="door-for">For the leader</span>
+      <h3>When one leader's <em>stuck</em>.</h3>
+      <p class="desc">1:1 coaching for senior leaders and founders ready to move again.</p>
+      <div class="includes">
+        <span class="lab">What fits</span>
+        <span class="prog">Lead Strong</span>
+        <span class="prog">BuildStrong</span>
+      </div>
+      <span class="enter">
+        <span class="arrow"></span>
+        Find your fit
+      </span>
+    </a>
 
-<!-- COST -->
-<div class="section">
-  <div class="section-label reveal">The Cost</div>
-  <h2 class="section-title reveal">What's It Costing You to Stay<br>at Your Current Stress Level?</h2>
-  <p class="section-subtitle reveal">Your brain has learned to handle a certain level of stress. When pressure exceeds that level, you go blank, make poor decisions, or react emotionally.</p>
-  <div class="grid-4 mt-3 stagger">
-    <div class="cost-card reveal">
-      <div class="cost-icon">◇</div>
-      <h4>Credibility</h4>
-      <p>Stakeholders see you falter under pressure when it matters most.</p>
-    </div>
-    <div class="cost-card reveal">
-      <div class="cost-icon">◈</div>
-      <h4>Opportunities</h4>
-      <p>High-stakes moments you can't capitalise on because your brain goes offline.</p>
-    </div>
-    <div class="cost-card reveal">
-      <div class="cost-icon">○</div>
-      <h4>Mental Energy</h4>
-      <p>Hours spent recovering from each stress spike instead of leading forward.</p>
-    </div>
-    <div class="cost-card reveal">
-      <div class="cost-icon">◎</div>
-      <h4>Team Confidence</h4>
-      <p>Your team mirrors your stress response. Your state becomes their ceiling.</p>
-    </div>
-  </div>
-</div>
+    <!-- DOOR 2 — FOR THE TEAM -->
+    <a class="door" href="/teamstrong">
+      <span class="door-num">ii.</span>
+      <span class="door-for">For the team</span>
+      <h3>When the team's <em>stuck</em>.</h3>
+      <p class="desc">Team coaching for leadership groups that have lost alignment, momentum, or both.</p>
+      <div class="includes">
+        <span class="lab">What fits</span>
+        <span class="prog">TeamStrong</span>
+      </div>
+      <span class="enter">
+        <span class="arrow"></span>
+        Open TeamStrong
+      </span>
+    </a>
 
-<!-- FOUR WAYS STUCK -->
-<div class="section-full">
-  <div class="container">
-    <div class="section-label reveal">Diagnostic Framework</div>
-    <h2 class="section-title reveal">Four Ways Leaders Get Stuck</h2>
-    <div class="grid-2 mt-3 stagger">
-      <div class="pattern-card reveal">
-        <div class="card-label">Pattern 01</div>
-        <h3>Stuck in Thinking</h3>
-        <p>Analysis paralysis. Overthinking. Can't make decisions. Your mind loops without landing.</p>
-        <div class="brain-pattern">Brain pattern: Overactive PFC without executive control to close the loop.</div>
+    <!-- DOOR 3 — FOR THE DEPLETED -->
+    <a class="door" href="/cognitive-reset">
+      <span class="door-num">iii.</span>
+      <span class="door-for">For the depleted</span>
+      <h3>When the tank is <em>empty</em>.</h3>
+      <p class="desc">A one, two, or three-day restorative retreat for leaders running on empty.</p>
+      <div class="includes">
+        <span class="lab">What fits</span>
+        <span class="prog">Cognitive Reset</span>
       </div>
-      <div class="pattern-card reveal">
-        <div class="card-label">Pattern 02</div>
-        <h3>Stuck in Outputting</h3>
-        <p>Can't execute. Hesitation. Knowing what to do but unable to act on it.</p>
-        <div class="brain-pattern">Brain pattern: Threat response blocking execution pathways.</div>
-      </div>
-      <div class="pattern-card reveal">
-        <div class="card-label">Pattern 03</div>
-        <h3>Stuck in Relating</h3>
-        <p>Team dynamics. Conflict avoidance. Can't have the hard conversations.</p>
-        <div class="brain-pattern">Brain pattern: Amygdala activation around social evaluation and criticism.</div>
-      </div>
-      <div class="pattern-card reveal">
-        <div class="card-label">Pattern 04</div>
-        <h3>Stuck in Moving</h3>
-        <p>Momentum loss. Stagnation. Can't build or maintain forward motion.</p>
-        <div class="brain-pattern">Brain pattern: Low agency, depleted motivation systems.</div>
-      </div>
-    </div>
+      <span class="enter">
+        <span class="arrow"></span>
+        Open Cognitive Reset
+      </span>
+    </a>
   </div>
-</div>
 
-<!-- METHOD -->
-<div class="section" id="method">
-  <div class="section-label reveal">The Method</div>
-  <h2 class="section-title reveal">PAUSE → RESET → GO</h2>
-  <p class="section-subtitle reveal">I get leaders unstuck by retraining the brain patterns keeping them stuck — and I train your brain to handle higher levels of stress so you stay sharp when pressure peaks.</p>
-  <div class="grid-3 mt-3 stagger">
-    <div class="phase-card reveal">
-      <div class="phase-number">01</div>
-      <div class="phase-label">Phase One</div>
-      <h3>Pause</h3>
-      <p>Diagnose which brain pattern is keeping you stuck. Using CliftonStrengths, FITT16, and amygdala-PFC assessment, we map how you're wired, where you're misaligned, and what patterns keep repeating. This isn't abstract. It's diagnostic precision.</p>
-    </div>
-    <div class="phase-card reveal">
-      <div class="phase-number">02</div>
-      <div class="phase-label">Phase Two</div>
-      <h3>Reset</h3>
-      <p>Retrain the specific brain pattern. Using targeted protocols that strengthen your prefrontal cortex and regulate your amygdala, matched to your specific stuck pattern. Simultaneously, we build your stress tolerance so you handle higher pressure without going offline.</p>
-    </div>
-    <div class="phase-card reveal">
-      <div class="phase-number">03</div>
-      <div class="phase-label">Phase Three</div>
-      <h3>Go</h3>
-      <p>Your brain has new neural pathways. Your amygdala no longer hijacks your PFC under normal pressure. You default to strategic thinking instead of threat response. I don't create dependency. I get you unstuck and you go.</p>
-    </div>
+  <!-- QUIZ — quiet secondary path -->
+  <div class="quiz-path">
+    <p class="text">Not sure which one fits? <em>Take the diagnostic.</em></p>
+    <a href="/stuck-quiz">
+      <span class="arrow"></span>
+      Eight questions, two minutes
+    </a>
   </div>
-</div>
+</section>
 
-<!-- LEADERSHIP PRACTICE PORTAL -->
-<div class="section-full">
-  <div class="container">
-    <div class="section-label reveal">The Portal</div>
-    <h2 class="section-title reveal">Practice the Leap<br>Before You Have to Take It.</h2>
-    <div class="grid-2-asym mt-3">
-      <div class="prose reveal">
-        <p>Most leaders learn to operate at the next level <em>after</em> they've been promoted into it. By then, the cost of getting it wrong is real — to them, their team, and the business.</p>
-        <p>The Leadership Practice Portal is where Directors, VPs and C-Suite leaders <strong>practise the level above</strong> in private. Real scenarios. No theory. No public scoreboard. Just deliberate reps in the situations that decide whether the next promotion lands or stalls.</p>
-        <p>Used individually by leaders building their own bench. Used by organisations to develop the leaders they don't want to lose.</p>
-        <div class="hero-actions" style="margin-top: 2.2rem;">
-          <a href="https://app.catalystgrowthcoach.co.uk" class="btn-primary">Enter the Portal</a>
-          <a href="for-organisations.html" class="btn-secondary">For Organisations</a>
-        </div>
-      </div>
-      <div class="stagger" style="display: flex; flex-direction: column; gap: 1.2rem;">
-        <div class="signal reveal">
-          <div class="signal-title">165 real scenarios</div>
-          <div class="signal-desc">Response Training, Strategic Thinking, and Pressure Map exercises — tiered by seniority.</div>
-        </div>
-        <div class="signal reveal">
-          <div class="signal-title">Private by design</div>
-          <div class="signal-desc">No leaderboards. No completion badges. Practice that nobody else sees until you choose to show it.</div>
-        </div>
-        <div class="signal reveal">
-          <div class="signal-title">New scenarios weekly</div>
-          <div class="signal-desc">The training ground keeps evolving with the pressures leaders are actually facing right now.</div>
-        </div>
-        <div class="signal reveal">
-          <div class="signal-title">Tiered by level</div>
-          <div class="signal-desc">Director scenarios, VP scenarios, C-Suite scenarios. You practise the leap you're actually making.</div>
-        </div>
-      </div>
-    </div>
+<!-- ════ SCENE 08 — Third Testimonial ════ -->
+<section class="scene scene-pull">
+  <div class="folio">07 · <span>In Their Words</span></div>
+  <div class="mark">"</div>
+  <blockquote>
+    A safe space to talk, reflect, and stay focused on what <em>actually</em> matters.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>TeamStrong client</span>
   </div>
-</div>
+</section>
 
-<!-- SERVICES -->
-<div class="section-full" id="services">
-  <div class="container">
-    <div class="section-label reveal">Services</div>
-    <h2 class="section-title reveal">How We Work Together</h2>
-    <div class="grid-2 mt-3 stagger">
-      <div class="service-card featured reveal">
-        <div class="service-tag">3-Month Programme</div>
-        <h3>LeadStrong</h3>
-        <div class="service-subtitle">Get unstuck in 3 months</div>
-        <div class="service-for">
-          <span>→ Reactive leadership when you should be strategic</span>
-          <span>→ Going blank under pressure in high-stakes moments</span>
-          <span>→ Team dynamics that won't shift</span>
-          <span>→ Performance mode you can't sustain</span>
-        </div>
-        <div class="service-footer">
-          <div class="service-price">£3,200 <small>12-week programme</small></div>
-          <a href="leadstrong.html" class="service-link">Learn More</a>
-        </div>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-tag">1–3 Day Intensive</div>
-        <h3>Cognitive Reset</h3>
-        <div class="service-subtitle">Get unstuck and ready — fast</div>
-        <div class="service-for">
-          <span>→ Cognitive depletion and decision fog</span>
-          <span>→ Burnout at the brain level</span>
-          <span>→ Preparing for high-stakes periods</span>
-          <span>→ Structured brain reset at Sopwell House</span>
-        </div>
-        <div class="service-footer">
-          <div class="service-price">From £1,300 <small>1-day to 3-day options</small></div>
-          <a href="cognitive-reset.html" class="service-link">Learn More</a>
-        </div>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-tag">Ongoing Coaching</div>
-        <h3>BuildStrong</h3>
-        <div class="service-subtitle">For founders who get stuck repeatedly</div>
-        <div class="service-for">
-          <span>→ Being owned by your business</span>
-          <span>→ Wearing too many hats</span>
-          <span>→ Strategic thinking that's gone narrow</span>
-          <span>→ Stress levels that limit your capacity</span>
-        </div>
-        <div class="service-footer">
-          <div class="service-price">From £600 <small>per month</small></div>
-          <a href="buildstrong.html" class="service-link">Learn More</a>
-        </div>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-tag">12-Week Team Programme</div>
-        <h3>TeamStrong</h3>
-        <div class="service-subtitle">Get your leadership team unstuck</div>
-        <div class="service-for">
-          <span>→ Misalignment and friction between leaders</span>
-          <span>→ Silos and poor collaboration</span>
-          <span>→ Underperformance despite talent</span>
-          <span>→ CliftonStrengths team diagnostics</span>
-        </div>
-        <div class="service-footer">
-          <div class="service-price">Contact <small>for team pricing</small></div>
-          <a href="teamstrong.html" class="service-link">Learn More</a>
-        </div>
-      </div>
-    </div>
+<!-- ════ SCENE 09 — Closing ════ -->
+<section class="scene scene-close">
+  <div class="label">08 · <span>The Invitation</span></div>
+  <h2>
+    If you've read this far,<br />
+    you already <em>know</em>.
+  </h2>
+  <div class="button-row">
+    <a href="#doors" class="button">Choose your path</a>
+    <a href="/stuck-quiz" class="button ghost">Or take the diagnostic</a>
   </div>
-</div>
 
-<!-- QUIZ CTA -->
-<div class="divider"></div>
-<div class="section" style="text-align: center;">
-  <div class="section-label reveal">Diagnostic</div>
-  <h2 class="section-title reveal">Not Sure Which One You Are?</h2>
-  <p class="section-subtitle reveal" style="margin: 0 auto 2.5rem;">8 questions. No generic advice. You'll know exactly which pattern is keeping you stuck — and what to do about it.</p>
-  <a href="stuck-quiz.html" class="btn-primary btn-large reveal">Take the Stuck Quiz →</a>
-  <p class="reveal" style="margin-top: 1.2rem; font-size: 0.78rem; color: var(--text-muted);">Takes about 2 minutes</p>
-</div>
-<div class="divider"></div>
-
-<!-- TESTIMONIALS -->
-<div class="section">
-  <div class="section-label reveal">Client Results</div>
-  <h2 class="section-title reveal">What Leaders Say</h2>
-  <div class="grid-3 mt-3 stagger">
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>I thought I just needed to push harder. John showed me I'd been operating with cognitive depletion for months without realising it. I was back to making clean decisions within six weeks.</p>
-      <div class="testimonial-author"><strong>VP Engineering</strong><span style="display:block;font-size:0.78rem;margin-top:0.2rem;">Tech scale-up, Series B · LeadStrong</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>This wasn't feel-good coaching. It was rigorous, evidence-based work that actually restored my decision-making capacity. I left the retreat thinking more clearly than I had in a year.</p>
-      <div class="testimonial-author"><strong>Founder &amp; CEO</strong><span style="display:block;font-size:0.78rem;margin-top:0.2rem;">Series B SaaS · Cognitive Reset</span></div>
-    </div>
-    <div class="testimonial reveal">
-      <div class="testimonial-quote">"</div>
-      <p>Coaching with John has given me renewed focus and confidence at a point in my career when I really needed it.</p>
-      <div class="testimonial-author"><strong>Martin Malins</strong><span style="display:block;font-size:0.78rem;margin-top:0.2rem;">Senior Leader · LeadStrong</span></div>
-    </div>
+  <div class="endline">
+    <span>Catalyst Growth Coaching</span>
+    <span>End of issue</span>
   </div>
-  <div style="text-align: center; margin-top: 3rem;" class="reveal">
-    <a href="testimonials.html" class="btn-secondary">See All Results</a>
-  </div>
-</div>
-
-<!-- DIFFERENCE -->
-<div class="section-full">
-  <div class="container text-center">
-    <div class="section-label reveal">Why I'm Different</div>
-    <h2 class="section-title reveal">Frameworks, Not Fluff</h2>
-    <div class="grid-3 mt-3 stagger">
-      <div class="reveal" style="padding: 2rem;">
-        <h4 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--accent);">Frameworks, Not Fluff</h4>
-        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">Psychometrics, brain retraining protocols, and strategic models. Not motivational slogans or vague wellness practices.</p>
-      </div>
-      <div class="reveal" style="padding: 2rem;">
-        <h4 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--accent);">Psychology, Not Platitudes</h4>
-        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">Performance coaching grounded in neuroscience. Not therapy. Not motivation. Structured work that creates measurable change.</p>
-      </div>
-      <div class="reveal" style="padding: 2rem;">
-        <h4 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--accent);">Outside the System</h4>
-        <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">I built my practice outside traditional coaching because burnt-out leaders don't trust the systems that exhausted them.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ASSESSMENT -->
-<div class="section">
-  <div class="section-label reveal">Your Starting Point</div>
-  <h2 class="section-title reveal">Every Engagement Begins With<br>Understanding Yourself</h2>
-  <div class="grid-3 mt-3 stagger">
-    <div class="tool-card reveal">
-      <div class="tool-icon">◆</div>
-      <h4>CliftonStrengths</h4>
-      <p>Trusted by over 25 million individuals and 90% of Fortune 500 companies. Reveals how you're wired to lead and why certain challenges keep recurring.</p>
-    </div>
-    <div class="tool-card reveal">
-      <div class="tool-icon">◇</div>
-      <h4>FITT16</h4>
-      <p>Reveals your personality whole and purpose. What gives you energy. Where misalignment creates friction. How you're designed to contribute.</p>
-    </div>
-    <div class="tool-card reveal">
-      <div class="tool-icon">○</div>
-      <h4>Amygdala-PFC Assessment</h4>
-      <p>Identifies when and why your brain gets stuck. What your current stress tolerance threshold is. Where we need to build capacity.</p>
-    </div>
-  </div>
-</div>
-
-<!-- FINAL CTA -->
-<div class="divider"></div>
-<section class="final-cta">
-  <div class="section-label reveal">Ready?</div>
-  <h2 class="section-title reveal">The Question Isn't Whether<br>You're Stuck. It's <em style="font-style: italic; color: var(--accent);">Where.</em></h2>
-  <div class="stuck-questions reveal">
-    <span class="stuck-tag">Job</span>
-    <span class="stuck-tag">Team</span>
-    <span class="stuck-tag">Leadership</span>
-    <span class="stuck-tag">Business</span>
-    <span class="stuck-tag">Mind</span>
-    <span class="stuck-tag">Energy</span>
-    <span class="stuck-tag">Communication</span>
-    <span class="stuck-tag">Thinking</span>
-    <span class="stuck-tag">Outputting</span>
-    <span class="stuck-tag">Relating</span>
-    <span class="stuck-tag">Moving</span>
-  </div>
-  <p class="final-question reveal">If I could get you unstuck and train your brain to handle higher pressure, would that be worth paying for?</p>
-  <a href="contact.html" class="btn-primary btn-large reveal">Tell Me Where You're Stuck</a>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo"><img src="images/index-img-09.png" alt="Catalyst Growth Coaching" style="height:28px;width:auto;opacity:0.85;"></div>
-    <ul class="footer-links">
-      <li><a href="leadstrong.html">LeadStrong</a></li>
-      <li><a href="buildstrong.html">BuildStrong</a></li>
-      <li><a href="cognitive-reset.html">Cognitive Reset</a></li>
-      <li><a href="teamstrong.html">TeamStrong</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="footer-copy">© 2026 John Obidipe · Catalyst Growth Coaching · coach@catalystgrowthcoach.co.uk</div>
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+    <div class="tag">I get leaders unstuck.</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">Lead Strong</a>
+    <a href="/teamstrong">TeamStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/cognitive-reset">Cognitive Reset</a>
+  </div>
+  <div class="col">
+    <h4>The Work</h4>
+    <a href="/about">About John</a>
+    <a href="/stuck-quiz">The Diagnostic</a>
+    <a href="/testimonials">Testimonials</a>
+    <a href="/for-organisations">For organisations</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© 2026 Catalyst Growth Coaching</span>
+    <span>London · Est. 2024</span>
   </div>
 </footer>
 
-<script src="main.js"></script>
 </body>
 </html>

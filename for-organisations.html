@@ -1,393 +1,963 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Organisations — Build Bench Strength | Catalyst Growth Coaching</title>
-<meta name="description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level. Used by organisations who develop their leaders before they promote them.">
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Organisations — Catalyst Growth Coaching</title>
+
+<!-- ════ SEO METADATA — preserved from existing for-organisations.html ════ -->
+<meta name="description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level. Used by organisations who develop their leaders before they promote them." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/for-organisations" />
+<meta property="og:title" content="For Organisations — Build Bench Strength | Catalyst Growth Coaching" />
+<meta property="og:description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level." />
+<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="For Organisations — Build Bench Strength | Catalyst Growth Coaching" />
+<meta name="twitter:description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level." />
+<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/for-organisations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Leadership Practice Portal for Organisations","provider":{"@type":"Person","name":"John Obidipe"},"description":"A leadership practice ground for Directors and VPs. Real scenarios tiered by seniority. Used by organisations who develop their leaders before they promote them.","areaServed":"United Kingdom"}
+</script>
+<!-- ════ END SEO METADATA ════ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
 <style>
-/* ===================== FOR ORGANISATIONS — FORM ===================== */
-.fo-form { max-width: 520px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 1.2rem; }
-.fo-form label { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-.fo-form input, .fo-form select {
-  width: 100%; padding: 0.9rem 1.1rem; margin-top: 0.4rem;
-  background: var(--bg-card); border: 1px solid var(--border);
-  color: var(--text-primary); font-family: var(--font-body); font-size: 0.95rem;
-  border-radius: 2px; transition: border-color 0.3s var(--ease);
-}
-.fo-form input:focus, .fo-form select:focus { outline: none; border-color: var(--accent); }
-.fo-form select option { background: var(--bg-card); color: var(--text-primary); }
-.fo-form button { margin-top: 0.8rem; }
-#demo-video { display: none; max-width: 880px; margin: 3rem auto 0; }
-#demo-video.active { display: block; }
-#demo-video video, #demo-video iframe { width: 100%; aspect-ratio: 16/9; border: 1px solid var(--border); border-radius: 4px; }
-.fo-post-video { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #141418;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
 
-/* ===================== FOR ORGANISATIONS — FAQ ===================== */
-.fo-faq { max-width: 760px; margin: 3rem auto 0; }
-.fo-faq details { border-top: 1px solid var(--border); padding: 1.6rem 0; }
-.fo-faq details:last-child { border-bottom: 1px solid var(--border); }
-.fo-faq summary {
-  font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
-  color: var(--text-primary); cursor: pointer; list-style: none;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.fo-faq summary::-webkit-details-marker { display: none; }
-.fo-faq summary::after { content: '+'; color: var(--accent); font-size: 1.5rem; transition: transform 0.3s; }
-.fo-faq details[open] summary::after { content: '\2212'; }
-.fo-faq details p { margin-top: 1rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; }
+  /* ─── Nav ─── */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav.top ul a:hover, nav.top ul a.active { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+
+  /* ─── Scene base — denser than coaching pages ─── */
+  section.scene {
+    min-height: auto; padding: 12vh 6vw;
+    position: relative; display: flex;
+  }
+
+  /* ══ SCENE 01 — Editorial Masthead ══ */
+  .scene-open {
+    padding-top: 16vh; padding-bottom: 8vh;
+    flex-direction: column; justify-content: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .scene-open .masthead-top {
+    display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 5vh;
+  }
+  .scene-open .masthead-top .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
+  .scene-open .masthead-top strong { color: var(--cognac); font-weight: 600; }
+  .scene-open .hero-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5vw; align-items: end;
+  }
+  .scene-open h1 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(3rem, 8vw, 6.4rem);
+    line-height: 0.96; letter-spacing: -0.015em;
+  }
+  .scene-open h1 .l { display: block; }
+  .scene-open h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-open .right {
+    display: flex; flex-direction: column; gap: 1.8rem;
+    max-width: 32ch; padding-bottom: 0.8rem; justify-self: end;
+  }
+  .scene-open .byline {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-open .byline .line { width: 30px; height: 1px; background: var(--cognac); }
+  .scene-open .lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.3rem; line-height: 1.5; color: var(--bone);
+  }
+  .scene-open .meta-row {
+    margin-top: 6vh;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line); padding-top: 1.5rem;
+    gap: 2rem;
+  }
+  .scene-open .meta-row .item {
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .scene-open .meta-row .lab {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-open .meta-row .val {
+    font-family: var(--font-d); font-size: 1.1rem; color: var(--bone); font-weight: 400;
+  }
+  .scene-open .meta-row .val em { font-style: italic; color: var(--cognac); }
+
+  /* ══ SCENE — The Problem (editorial prose + signals diptych) ══ */
+  .scene-problem {
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    padding: 14vh 6vw;
+  }
+  .problem-head {
+    margin-bottom: 6vh; max-width: 800px;
+  }
+  .problem-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .problem-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1; max-width: 22ch;
+  }
+  .problem-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .problem-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5rem; align-items: start;
+  }
+  .problem-prose {
+    border-top: 1px solid var(--line-strong); padding-top: 2rem;
+  }
+  .problem-prose p {
+    font-size: 1rem; line-height: 1.85; color: var(--stone);
+    margin-bottom: 1.4rem;
+  }
+  .problem-prose p:last-child { margin-bottom: 0; }
+  .problem-prose p strong {
+    color: var(--bone); font-weight: 500;
+  }
+  .problem-prose p em {
+    font-family: var(--font-d); font-style: italic; color: var(--cognac);
+  }
+  .problem-signals {
+    display: flex; flex-direction: column;
+    border-top: 1px solid var(--line-strong);
+  }
+  .problem-signals .signal {
+    padding: 1.8rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .problem-signals .signal:last-child { border-bottom: none; }
+  .problem-signals .signal .lab {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 0.8rem;
+  }
+  .problem-signals .signal .desc {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; color: var(--bone); line-height: 1.55;
+  }
+
+  /* ══ SCENE — Three Pillars ══ */
+  .scene-pillars {
+    flex-direction: column; padding: 14vh 6vw;
+  }
+  .pillars-head {
+    text-align: center; margin-bottom: 7vh;
+    max-width: 800px; margin-left: auto; margin-right: auto;
+  }
+  .pillars-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .pillars-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    line-height: 1.1; max-width: 22ch; margin: 0 auto;
+  }
+  .pillars-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .pillars-head .sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone);
+    margin: 1.5rem auto 0; line-height: 1.55; max-width: 56ch;
+  }
+  .pillars-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .pillar {
+    padding: 3rem 2.2rem 3.5rem;
+    border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .pillar:last-child { border-right: none; }
+  .pillar .num {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1.2rem; color: var(--cognac);
+  }
+  .pillar .lab {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-top: 0.4rem;
+  }
+  .pillar h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 1.65rem;
+    line-height: 1.2; color: var(--bone); margin-top: 1rem;
+  }
+  .pillar h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .pillar p {
+    color: var(--stone); font-size: 0.95rem; line-height: 1.7;
+    margin-top: 1.2rem;
+  }
+
+  /* ══ SCENE — Inside the Portal ══ */
+  .scene-inside {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column; padding: 14vh 6vw;
+  }
+  .inside-head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4vw; align-items: baseline; margin-bottom: 6vh;
+  }
+  .inside-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .inside-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1; max-width: 18ch;
+  }
+  .inside-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .inside-head .note {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); max-width: 40ch;
+    line-height: 1.55; justify-self: end; text-align: right; padding-bottom: 0.4rem;
+  }
+  .inside-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .inside-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 2.8rem 2.2rem 3rem;
+    display: flex; flex-direction: column;
+    transition: border-color 0.4s ease, transform 0.4s ease;
+  }
+  .inside-card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-4px);
+  }
+  .inside-card .count {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 3.2rem; line-height: 1; color: var(--bone);
+    margin-bottom: 0.4rem;
+  }
+  .inside-card .count em {
+    font-style: italic; color: var(--cognac); font-weight: 400;
+  }
+  .inside-card .count-label {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 1.6rem;
+    padding-bottom: 1.6rem; border-bottom: 1px solid var(--line);
+  }
+  .inside-card h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 1.5rem;
+    color: var(--bone); line-height: 1.2; margin-bottom: 0.8rem;
+  }
+  .inside-card h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .inside-card .desc {
+    font-size: 0.92rem; color: var(--stone); line-height: 1.7;
+  }
+  .inside-foot {
+    margin-top: 4vh; text-align: center;
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; color: var(--bone); max-width: 56ch;
+    margin-left: auto; margin-right: auto; line-height: 1.6;
+  }
+  .inside-foot em { color: var(--cognac); font-style: italic; }
+
+  /* ══ SCENE — Two Delivery Models (Diptych) ══ */
+  .scene-models {
+    flex-direction: column; padding: 14vh 6vw;
+  }
+  .models-head {
+    margin-bottom: 6vh; max-width: 800px;
+  }
+  .models-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .models-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; max-width: 22ch;
+  }
+  .models-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .models-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  }
+  .model {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    padding: 3rem 2.5rem 3rem;
+    display: flex; flex-direction: column;
+    transition: border-color 0.4s ease;
+    position: relative;
+  }
+  .model:hover { border-color: var(--line-strong); }
+  .model.featured { border-color: var(--line-strong); background: var(--bg); }
+  .model.featured::before {
+    content: 'Most chosen';
+    position: absolute;
+    top: -1px; right: 1.5rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.58rem;
+    font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase;
+    padding: 0.5rem 1rem 0.45rem;
+    border-radius: 0 0 2px 2px;
+  }
+  .model .num {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1.2rem; color: var(--cognac);
+  }
+  .model .tag {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-top: 0.6rem;
+  }
+  .model h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 2.1rem;
+    color: var(--bone); line-height: 1.1;
+    margin-top: 1rem; margin-bottom: 1.4rem;
+    padding-bottom: 1.6rem; border-bottom: 1px solid var(--line);
+  }
+  .model h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .model .desc {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; color: var(--stone); line-height: 1.6;
+    margin-bottom: 1.8rem;
+  }
+  .model .best-lab {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+    padding-top: 1.4rem; border-top: 1px solid var(--line);
+    margin-bottom: 0.6rem;
+  }
+  .model .best {
+    font-size: 0.95rem; color: var(--bone); line-height: 1.6;
+    margin-bottom: 1.8rem;
+  }
+
+  /* ══ SCENE — Fit Check (Right place if / Not for you if) ══ */
+  .scene-fit {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column; padding: 14vh 6vw;
+  }
+  .fit-head {
+    margin-bottom: 6vh; max-width: 800px;
+  }
+  .fit-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .fit-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; max-width: 22ch;
+  }
+  .fit-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .fit-head .sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); margin-top: 1.2rem;
+    line-height: 1.55; max-width: 56ch;
+  }
+  .fit-diptych {
+    display: grid; grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--line-strong);
+  }
+  .fit-col {
+    padding: 3rem 2.5rem;
+    border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .fit-col:last-child { border-right: none; }
+  .fit-col .col-head {
+    font-family: var(--font-d); font-style: italic; font-weight: 400;
+    font-size: 1.6rem; color: var(--bone); margin-bottom: 0.4rem;
+  }
+  .fit-col .col-head em { color: var(--cognac); font-weight: 400; }
+  .fit-col .col-sub {
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 1rem;
+  }
+  .fit-list { display: flex; flex-direction: column; }
+  .fit-list .item {
+    padding: 1.4rem 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 2.2rem 1fr; gap: 1rem; align-items: baseline;
+  }
+  .fit-list .item:last-child { border-bottom: none; }
+  .fit-list .item .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1.1rem;
+    color: var(--cognac);
+  }
+  .fit-list.dont .item .n { color: var(--ash); }
+  .fit-list .item .t {
+    font-size: 0.95rem; color: var(--bone); line-height: 1.55;
+  }
+  .fit-list.dont .item .t {
+    color: var(--stone);
+    text-decoration: line-through;
+    text-decoration-color: var(--ash);
+    text-decoration-thickness: 1px;
+  }
+
+  /* ══ SCENE — FAQ (editorial accordions) ══ */
+  .scene-faq {
+    flex-direction: column; padding: 14vh 6vw;
+  }
+  .faq-head {
+    margin-bottom: 5vh; max-width: 800px;
+  }
+  .faq-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .faq-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; max-width: 22ch;
+  }
+  .faq-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .faq-list {
+    max-width: 900px;
+    border-top: 1px solid var(--line-strong);
+  }
+  .faq-list details {
+    border-bottom: 1px solid var(--line);
+    padding: 1.8rem 0;
+  }
+  .faq-list summary {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: 1.4rem; color: var(--bone);
+    cursor: pointer; list-style: none;
+    display: grid; grid-template-columns: 1fr 2rem;
+    gap: 1rem; align-items: baseline;
+    transition: color 0.3s;
+  }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary:hover { color: var(--cognac); }
+  .faq-list summary em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .faq-list summary::after {
+    content: '+';
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1.6rem; color: var(--cognac);
+    line-height: 1; text-align: right;
+    transition: transform 0.3s;
+  }
+  .faq-list details[open] summary::after {
+    content: '−';
+  }
+  .faq-list details p {
+    margin-top: 1.4rem; max-width: 56ch;
+    font-size: 0.96rem; color: var(--stone); line-height: 1.8;
+  }
+
+  /* ══ SCENE — Closing ══ */
+  .scene-close {
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 14vh 6vw 12vh; position: relative; min-height: 80vh;
+  }
+  .scene-close .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 4rem;
+  }
+  .scene-close .label span { color: var(--cognac); }
+  .scene-close h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.15; max-width: 24ch; margin-bottom: 3rem;
+  }
+  .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-close .standfirst {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; color: var(--stone); max-width: 44ch;
+    line-height: 1.55; margin-bottom: 3.5rem;
+  }
+  .scene-close .three-step {
+    margin-bottom: 3rem; max-width: 50ch;
+    border-top: 1px solid var(--line);
+  }
+  .scene-close .three-step .row {
+    padding: 1rem 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 3rem 1fr; gap: 1rem;
+    align-items: baseline;
+  }
+  .scene-close .three-step .row .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1rem;
+    color: var(--cognac);
+  }
+  .scene-close .three-step .row .t {
+    color: var(--bone); font-size: 0.95rem; line-height: 1.5;
+  }
+  .scene-close .button-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .scene-close .button {
+    display: inline-block; padding: 1.2rem 2.8rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+  }
+  .scene-close .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .scene-close .button.ghost {
+    background: transparent; color: var(--cognac);
+    border: 1px solid var(--line-strong);
+  }
+  .scene-close .button.ghost:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  .scene-close .endline {
+    position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
+    display: flex; justify-content: space-between;
+    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); border-top: 1px solid var(--line); padding-top: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash); display: flex; justify-content: space-between;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+    section.scene { padding: 10vh 6vw; }
+
+    .scene-open { padding-top: 18vh; }
+    .scene-open .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-open .right { max-width: 100%; justify-self: start; }
+    .scene-open h1 { font-size: clamp(2.4rem, 11vw, 4rem); }
+    .scene-open .meta-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+    .problem-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .pillar { border-right: none; border-bottom: 1px solid var(--line); }
+    .pillar:last-child { border-bottom: none; }
+
+    .inside-head { grid-template-columns: 1fr; gap: 2rem; }
+    .inside-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
+    .inside-grid { grid-template-columns: 1fr; }
+
+    .models-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+    .fit-diptych { grid-template-columns: 1fr; }
+    .fit-col { border-right: none; border-bottom: 1px solid var(--line); }
+    .fit-col:last-child { border-bottom: none; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; }
+  }
 </style>
-
-
-    <!-- Open Graph / LinkedIn / WhatsApp -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/for-organisations">
-    <meta property="og:title" content="For Organisations — Build Bench Strength | Catalyst Growth Coaching">
-    <meta property="og:description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level.">
-    <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
-    <meta property="og:site_name" content="John Obidipe | Executive Coach">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="For Organisations — Build Bench Strength | Catalyst Growth Coaching">
-    <meta name="twitter:description" content="A leadership practice ground for the Directors and VPs you can't afford to lose. Real scenarios. Private practice. Tiered by level.">
-    <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/for-organisations">
-
-    <!-- Google Analytics GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2Z17HSYFCV');
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Service","name":"Leadership Practice Portal for Organisations","provider":{"@type":"Person","name":"John Obidipe"},"description":"A leadership practice ground for Directors and VPs. Real scenarios tiered by seniority. Used by organisations who develop their leaders before they promote them.","areaServed":"United Kingdom"}
-    </script>
 </head>
+
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo"><img src="images/index-img-01.png" alt="Catalyst Growth Coaching" style="height:36px;width:auto;"></a>
-  <ul class="nav-links">
-    <li class="nav-dropdown"><a href="#">Services</a>
-      <ul class="nav-dropdown-menu">
-        <li><a href="leadstrong.html">LeadStrong</a></li>
-        <li><a href="buildstrong.html">BuildStrong</a></li>
-        <li><a href="cognitive-reset.html">Cognitive Reset</a></li>
-        <li><a href="teamstrong.html">TeamStrong</a></li>
-      </ul>
-    </li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="testimonials.html">Results</a></li>
-    <li><a href="for-organisations.html" class="active">For Organisations</a></li>
-    <li><a href="contact.html" class="nav-cta">Get Unstuck</a></li>
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/index.html#doors">Programmes</a></li>
+    <li><a href="/for-organisations.html" class="active">For Organisations</a></li>
+    <li><a href="/stuck-quiz">Diagnostic</a></li>
+    <li><a href="/contact" class="cta">Book a call</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="leadstrong.html" class="mobile-sub">LeadStrong</a>
-  <a href="buildstrong.html" class="mobile-sub">BuildStrong</a>
-  <a href="cognitive-reset.html" class="mobile-sub">Cognitive Reset</a>
-  <a href="teamstrong.html" class="mobile-sub">TeamStrong</a>
-  <a href="about.html">About</a>
-  <a href="testimonials.html">Results</a>
-  <a href="for-organisations.html">For Organisations</a>
-  <a href="contact.html">Get Unstuck</a>
-</div>
 
-<!-- SECTION 1 — HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <div class="hero-overline">For Organisations</div>
-    <h1 class="hero-title">Develop the Leaders<br>You Can't Afford <em>to Lose.</em></h1>
-    <p class="hero-body">Your high-potential Directors are ready for more. Your VPs need to level up faster than the org chart can train them. The Leadership Practice Portal is where they practise the next role — privately, deliberately, at their level — before the stakes get real.</p>
-    <div class="hero-actions">
-      <a href="#demo" class="btn-primary">See a Demo</a>
-      <a href="#how-it-works" class="btn-secondary">How It Works</a>
+<!-- ════ SCENE 01 — Editorial Masthead ════ -->
+<section class="scene scene-open">
+  <div class="masthead-top">
+    <span>For Organisations</span>
+    <span class="dot"></span>
+    <span><strong>The Leadership Practice Portal</strong></span>
+    <span class="dot"></span>
+    <span>Used by serious development teams</span>
+  </div>
+
+  <div class="hero-grid">
+    <h1>
+      <span class="l">The leaders worth keeping</span>
+      <span class="l">deserve a <em>practice ground</em>.</span>
+    </h1>
+    <div class="right">
+      <div class="byline">
+        <span class="line"></span>
+        <span>For HR &amp; L&amp;D leaders developing senior talent</span>
+      </div>
+      <p class="lede">A practice ground for the Directors and VPs you've already identified — where they rehearse the next role privately, deliberately, at their level, before the stakes get real.</p>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <div class="item">
+      <span class="lab">Audience</span>
+      <span class="val"><em>Directors</em> &amp; VPs</span>
+    </div>
+    <div class="item">
+      <span class="lab">Library</span>
+      <span class="val"><em>165</em> scenarios</span>
+    </div>
+    <div class="item">
+      <span class="lab">Cadence</span>
+      <span class="val"><em>Weekly</em> additions</span>
+    </div>
+    <div class="item">
+      <span class="lab">Cohort</span>
+      <span class="val"><em>5 – 25</em> leaders</span>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2 — THE PROBLEM -->
-<div class="section-full">
-  <div class="container">
-    <div class="section-label reveal">The Problem</div>
-    <h2 class="section-title reveal">You Already Know <em>Who's Stuck.</em></h2>
-    <div class="grid-2-asym mt-3">
-      <div class="prose reveal">
-        <p>Every leadership team has them. The Director who's been ready for VP for eighteen months but still operates like a doer. The VP who manages brilliantly but freezes when the conversation turns strategic. The high-potential who's quietly being recruited by the competitor that invests more in development than you do.</p>
-        <p>You've spotted them. You've probably had the conversation. And you're stuck in the same loop most leadership teams are stuck in: <strong>promote them before they're ready and risk losing them to failure, or hold them back and risk losing them to a competitor who won't.</strong></p>
-        <p>The cost of doing nothing isn't theoretical. It shows up in regrettable attrition, in misfires after promotion, in institutional knowledge walking out the door, and in the slow erosion of bench strength that takes years to rebuild.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 1.2rem;">
-        <div class="signal reveal">
-          <div class="signal-title">The retention cost</div>
-          <div class="signal-desc">Your best Directors don't leave because of pay. They leave because the competitor invested in them when you didn't.</div>
-        </div>
-        <div class="signal reveal">
-          <div class="signal-title">The capability cost</div>
-          <div class="signal-desc">You promote someone unprepared, they struggle, and you lose them anyway. Now you've lost twice.</div>
-        </div>
-      </div>
-    </div>
+<!-- ════ SCENE 02 — The Problem ════ -->
+<section class="scene scene-problem">
+  <div class="problem-head">
+    <div class="label">01 · The Problem</div>
+    <h2>You already know <em>who's stuck</em>.</h2>
   </div>
-</div>
 
-<!-- SECTION 3 — WHY IT WORKS (THREE PILLARS) -->
-<section class="section text-center">
-  <div class="container">
-    <div class="section-label reveal">Why It Works</div>
-    <h2 class="section-title reveal">Three Things Build Real <em>Leadership Capability.</em></h2>
-    <p class="section-subtitle reveal">Theory builds awareness. Practice builds capability. The Portal is built on three principles drawn from how mastery actually develops — in athletes, musicians, surgeons, and the senior leaders who outlast the rest.</p>
-    <div class="grid-3 mt-4 stagger">
-      <div class="card reveal">
-        <div class="card-label">01 — Practice</div>
-        <h3>Skills Are Built in the Reps Nobody Sees</h3>
-        <p>A musician's audience hears the performance. They don't see the ten thousand hours of deliberate practice behind it. Leadership works the same way. Your team sees the decision; they don't see the practice that made the decision possible. The Portal is where that practice happens — 165 scenarios designed around the moments that actually decide whether a leader is ready for the next level.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-label">02 — Initiative</div>
-        <h3>The Best Leaders Don't Wait for Permission</h3>
-        <p>The most expensive word in leadership is "eventually". The conversation that gets postponed. The strategic call that waits for more data. The team issue that festers. The Portal trains leaders to make decisions under uncertainty — in scenarios where there's no right answer, only trade-offs, and the cost of waiting is built into the design.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-label">03 — Exposure</div>
-        <h3>You Become What You're Exposed To</h3>
-        <p>Environment shapes capability. Leaders who only ever see their current level stay there. Leaders exposed to senior thinking — week after week, scenario after scenario — start to think that way. Directors practise VP scenarios. VPs practise C-Suite scenarios. Strategic thinking and executive presence stop being aspirations and start being habits.</p>
-      </div>
+  <div class="problem-grid">
+    <div class="problem-prose">
+      <p>Every leadership team has them. The Director who's been ready for VP for eighteen months but still operates like a doer. The VP who manages brilliantly but freezes when the conversation turns strategic. The high-potential who's quietly being recruited by the competitor that invests more in development than you do.</p>
+      <p>You've spotted them. You've probably had the conversation. And you're stuck in the same loop most leadership teams are stuck in: <strong>promote them before they're ready and risk losing them to failure, or hold them back and risk losing them to a competitor who won't.</strong></p>
+      <p>The cost of doing nothing isn't theoretical. It shows up in regrettable attrition, in misfires after promotion, in institutional knowledge walking out the door, and in the slow erosion of bench strength that takes <em>years</em> to rebuild.</p>
     </div>
-  </div>
-</section>
 
-<!-- SECTION 4 — INSIDE THE PORTAL -->
-<div class="section-full">
-  <div class="container">
-    <div class="section-label reveal">Inside the Portal</div>
-    <h2 class="section-title reveal">A Training Ground, <em>Not a Course.</em></h2>
-    <div class="grid-3 mt-3 stagger">
-      <div class="card reveal">
-        <div class="card-label">90 Scenarios</div>
-        <h3>Response Training</h3>
-        <p>Real situations from the next level up. The board paper that's wrong. The skip-level conversation that goes sideways. The peer who's blocking your initiative. Practise the response. See where it lands. Refine.</p>
+    <div class="problem-signals">
+      <div class="signal">
+        <div class="lab">i. The retention cost</div>
+        <div class="desc">Your best Directors don't leave for pay. They leave because the competitor invested in them when you didn't.</div>
       </div>
-      <div class="card reveal">
-        <div class="card-label">45 Challenges</div>
-        <h3>Strategic Thinker</h3>
-        <p>Open-ended challenges that force leaders out of operational mode. There's no answer key — only the quality of the thinking. Designed to build the muscle most Directors haven't had to use yet.</p>
+      <div class="signal">
+        <div class="lab">ii. The capability cost</div>
+        <div class="desc">You promote someone unprepared, they struggle, and you lose them anyway. Now you've lost twice.</div>
       </div>
-      <div class="card reveal">
-        <div class="card-label">30 Scenarios</div>
-        <h3>Pressure Map</h3>
-        <p>High-stakes moments compressed into deliberate practice. The decision under time pressure. The conversation under emotional load. The judgement call when the data is incomplete. Practise the pressure before it's real.</p>
-      </div>
-    </div>
-    <p class="reveal" style="text-align: center; margin-top: 2.5rem; font-size: 0.92rem; color: var(--text-secondary); font-style: italic; max-width: 640px; margin-left: auto; margin-right: auto;"><em style="color: var(--text-secondary);">Every scenario is tiered by seniority. Directors practise Director-to-VP situations. VPs practise VP-to-C-Suite. C-Suite practise scope expansion. New scenarios added weekly.</em></p>
-  </div>
-</div>
-
-<!-- SECTION 5 — HOW IT WORKS -->
-<section class="section text-center" id="how-it-works">
-  <div class="container">
-    <div class="section-label reveal">How It Works</div>
-    <h2 class="section-title reveal">Two Ways to Run It in Your Organisation.</h2>
-    <div class="grid-2 mt-3 stagger">
-      <div class="card reveal">
-        <div class="card-label">Self-Serve</div>
-        <h3>Portal Access</h3>
-        <p>Leaders log in, work through scenarios at their own pace, and build capability week by week. You get reporting on engagement and progress. Best for organisations who want to scale leadership development across 5–25 leaders without adding a programme to manage.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-label">Blended</div>
-        <h3>Portal + Coaching</h3>
-        <p>Self-serve practice combined with coaching from John for selected leaders — the ones you're investing in most. Practice happens between sessions; coaching turns the reps into real shifts. Best for organisations developing a small group of high-potentials they can't afford to misfire on.</p>
+      <div class="signal">
+        <div class="lab">iii. The bench cost</div>
+        <div class="desc">When a senior role opens, you're either ready or you're hiring externally. Bench strength takes years to build and one quarter to lose.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 6 — WHO THIS IS FOR -->
-<div class="section-full">
-  <div class="container">
-    <div class="grid-2-asym">
-      <div class="prose">
-        <div class="section-label reveal">Fit Check</div>
-        <h2 class="section-title reveal">Who This Is <em>Built For.</em></h2>
-        <p class="reveal">The Portal is built for organisations who already believe leadership development is an investment, not a cost — and who want a way to make it concrete, scalable, and seniority-specific.</p>
-      </div>
-      <div>
-        <div style="margin-bottom: 2.5rem;">
-          <div class="section-label reveal" style="margin-bottom: 1rem;">You're in the right place if…</div>
-          <div style="display: flex; flex-direction: column; gap: 0.8rem;" class="stagger">
-            <div class="signal reveal">
-              <div class="signal-desc">You have 5–25 high-potential Directors or VPs you're investing in</div>
-            </div>
-            <div class="signal reveal">
-              <div class="signal-desc">You've lost a strong leader to a competitor in the last 12 months</div>
-            </div>
-            <div class="signal reveal">
-              <div class="signal-desc">You promote internally and want fewer misfires</div>
-            </div>
-            <div class="signal reveal">
-              <div class="signal-desc">Your current development offer is generic — you need something seniority-specific</div>
-            </div>
-          </div>
+<!-- ════ SCENE 03 — Three Pillars ════ -->
+<section class="scene scene-pillars">
+  <div class="pillars-head">
+    <div class="label">02 · Why It Works</div>
+    <h2>Three things build real <em>leadership capability</em>.</h2>
+    <p class="sub">Theory builds awareness. Practice builds capability. The Portal is built on three principles drawn from how mastery actually develops — in athletes, musicians, surgeons, and the senior leaders who outlast the rest.</p>
+  </div>
+
+  <div class="pillars-grid">
+    <div class="pillar">
+      <span class="num">i.</span>
+      <span class="lab">Practice</span>
+      <h3>Skills are built in the reps nobody <em>sees</em>.</h3>
+      <p>A musician's audience hears the performance. They don't see the ten thousand hours of deliberate practice behind it. Leadership works the same way. Your team sees the decision; they don't see the practice that made the decision possible. The Portal is where that practice happens — 165 scenarios designed around the moments that actually decide whether a leader is ready for the next level.</p>
+    </div>
+
+    <div class="pillar">
+      <span class="num">ii.</span>
+      <span class="lab">Initiative</span>
+      <h3>The best leaders don't wait for <em>permission</em>.</h3>
+      <p>The most expensive word in leadership is "eventually". The conversation that gets postponed. The strategic call that waits for more data. The team issue that festers. The Portal trains leaders to make decisions under uncertainty — in scenarios where there's no right answer, only trade-offs, and the cost of waiting is built into the design.</p>
+    </div>
+
+    <div class="pillar">
+      <span class="num">iii.</span>
+      <span class="lab">Exposure</span>
+      <h3>You become what you're <em>exposed to</em>.</h3>
+      <p>Environment shapes capability. Leaders who only ever see their current level stay there. Leaders exposed to senior thinking — week after week, scenario after scenario — start to think that way. Directors practise VP scenarios. VPs practise C-Suite scenarios. Strategic thinking and executive presence stop being aspirations and start being habits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 04 — Inside the Portal ════ -->
+<section class="scene scene-inside">
+  <div class="inside-head">
+    <div>
+      <div class="label">03 · Inside the Portal</div>
+      <h2>A training ground, <em>not a course</em>.</h2>
+    </div>
+    <p class="note">No syllabus. No completion certificate. 165 deliberate-practice scenarios across three categories, all tiered by seniority. New scenarios added weekly.</p>
+  </div>
+
+  <div class="inside-grid">
+    <div class="inside-card">
+      <div class="count"><em>90</em></div>
+      <div class="count-label">Scenarios</div>
+      <h3>Response <em>Training</em></h3>
+      <p class="desc">Real situations from the next level up. The board paper that's wrong. The skip-level conversation that goes sideways. The peer who's blocking your initiative. Practise the response. See where it lands. Refine.</p>
+    </div>
+
+    <div class="inside-card">
+      <div class="count"><em>45</em></div>
+      <div class="count-label">Challenges</div>
+      <h3>Strategic <em>Thinker</em></h3>
+      <p class="desc">Open-ended challenges that force leaders out of operational mode. There's no answer key — only the quality of the thinking. Designed to build the muscle most Directors haven't had to use yet.</p>
+    </div>
+
+    <div class="inside-card">
+      <div class="count"><em>30</em></div>
+      <div class="count-label">Scenarios</div>
+      <h3>Pressure <em>Map</em></h3>
+      <p class="desc">High-stakes moments compressed into deliberate practice. The decision under time pressure. The conversation under emotional load. The judgement call when the data is incomplete. Practise the pressure before it's real.</p>
+    </div>
+  </div>
+
+  <p class="inside-foot">Every scenario is tiered by seniority — Directors practise Director-to-VP situations, VPs practise VP-to-C-Suite, C-Suite practise scope expansion. <em>The library compounds.</em></p>
+</section>
+
+<!-- ════ SCENE 05 — Two Delivery Models ════ -->
+<section class="scene scene-models">
+  <div class="models-head">
+    <div class="label">04 · How It Works</div>
+    <h2>Two ways to run it in your <em>organisation</em>.</h2>
+  </div>
+
+  <div class="models-grid">
+    <div class="model">
+      <span class="num">i.</span>
+      <span class="tag">Self-Serve</span>
+      <h3>Portal <em>access</em></h3>
+      <p class="desc">Leaders log in, work through scenarios at their own pace, and build capability week by week. You get reporting on engagement and progress.</p>
+      <div class="best-lab">Best for</div>
+      <p class="best">Organisations who want to scale leadership development across 5–25 leaders without adding a programme to manage.</p>
+    </div>
+
+    <div class="model featured">
+      <span class="num">ii.</span>
+      <span class="tag">Blended</span>
+      <h3>Portal + <em>coaching</em></h3>
+      <p class="desc">Self-serve practice combined with 1:1 coaching from John for selected leaders — the ones you're investing in most. Practice happens between sessions; coaching turns the reps into real shifts.</p>
+      <div class="best-lab">Best for</div>
+      <p class="best">Organisations developing a small group of high-potentials they can't afford to misfire on.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 06 — Fit Check (Diptych) ════ -->
+<section class="scene scene-fit">
+  <div class="fit-head">
+    <div class="label">05 · Fit Check</div>
+    <h2>Who this is <em>built for</em>.</h2>
+    <p class="sub">The Portal is built for organisations who already believe leadership development is an investment, not a cost — and who want a way to make it concrete, scalable, and seniority-specific.</p>
+  </div>
+
+  <div class="fit-diptych">
+    <div class="fit-col">
+      <div class="col-head">You're in the right <em>place</em> if</div>
+      <div class="col-sub">Where the Portal earns its keep</div>
+      <div class="fit-list">
+        <div class="item">
+          <span class="n">i.</span>
+          <div class="t">You have 5–25 high-potential Directors or VPs you're investing in.</div>
         </div>
-        <div>
-          <div class="section-label reveal" style="margin-bottom: 1rem;">This isn't for you if…</div>
-          <div style="display: flex; flex-direction: column; gap: 0.8rem;" class="stagger">
-            <div class="signal reveal" style="border-left-color: var(--text-muted);">
-              <div class="signal-desc">You're looking for a compliance training platform</div>
-            </div>
-            <div class="signal reveal" style="border-left-color: var(--text-muted);">
-              <div class="signal-desc">You want a fully customised, white-labelled enterprise LMS</div>
-            </div>
-            <div class="signal reveal" style="border-left-color: var(--text-muted);">
-              <div class="signal-desc">You're not ready to invest in leadership development at all</div>
-            </div>
-          </div>
+        <div class="item">
+          <span class="n">ii.</span>
+          <div class="t">You've lost a strong leader to a competitor in the last 12 months.</div>
+        </div>
+        <div class="item">
+          <span class="n">iii.</span>
+          <div class="t">You promote internally and want fewer misfires.</div>
+        </div>
+        <div class="item">
+          <span class="n">iv.</span>
+          <div class="t">Your current development offer is generic — you need something seniority-specific.</div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- SECTION 7 — DEMO -->
-<section class="section" id="demo">
-  <div class="container text-center">
-    <div class="section-label reveal">See It</div>
-    <h2 class="section-title reveal">Watch a 4-Minute <em>Walkthrough.</em></h2>
-    <p class="section-subtitle reveal" style="margin-left: auto; margin-right: auto;">Leave your details below and the demo opens immediately. No call required. No follow-up unless you ask for one.</p>
-
-    <form class="fo-form reveal" id="fo-form" name="organisations-demo" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="organisations-demo">
-      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <div>
-        <label for="fo-name">Full Name</label>
-        <input type="text" id="fo-name" name="name" required placeholder="Your full name">
-      </div>
-      <div>
-        <label for="fo-email">Work Email</label>
-        <input type="email" id="fo-email" name="email" required placeholder="you@company.com">
-      </div>
-      <div>
-        <label for="fo-org">Organisation</label>
-        <input type="text" id="fo-org" name="organisation" required placeholder="Your organisation">
-      </div>
-      <div>
-        <label for="fo-size">Approximate Number of Leaders</label>
-        <select id="fo-size" name="team_size" required>
-          <option value="" disabled selected>Select team size</option>
-          <option value="1-4">1–4</option>
-          <option value="5-10">5–10</option>
-          <option value="11-25">11–25</option>
-          <option value="26+">26+</option>
-        </select>
-      </div>
-      <button type="submit" class="btn-primary">Show Me the Demo</button>
-    </form>
-
-    <div id="demo-video">
-      <!-- VIDEO_SRC: replace with actual URL -->
-      <video controls>
-        <source src="" type="video/mp4">
-        Your browser does not support the video element.
-      </video>
-      <div class="fo-post-video">
-        <a href="contact.html" class="btn-primary">Book a Conversation</a>
-        <a href="mailto:coach@catalystgrowthcoach.co.uk" class="btn-secondary">Email John Directly</a>
+    <div class="fit-col">
+      <div class="col-head">This <em>isn't</em> for you if</div>
+      <div class="col-sub">Where you should look elsewhere</div>
+      <div class="fit-list dont">
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">You're looking for a compliance training platform.</div>
+        </div>
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">You want a fully customised, white-labelled enterprise LMS.</div>
+        </div>
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">You're not yet ready to invest in leadership development at all.</div>
+        </div>
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">You believe theory and slides are enough.</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 8 — FAQ -->
-<div class="section-full">
-  <div class="container">
-    <div class="section-label reveal">Common Questions</div>
-    <h2 class="section-title reveal">Things Leaders Ask <em>Before They Commit.</em></h2>
-    <div class="fo-faq">
-      <details>
-        <summary>How long does each scenario take?</summary>
-        <p>Most scenarios are designed to be completed in 10–20 minutes. Long enough for deliberate thinking, short enough to fit between meetings. Leaders typically work through 2–3 scenarios per week.</p>
-      </details>
-      <details>
-        <summary>What happens after a leader completes all 165 scenarios?</summary>
-        <p>New scenarios are added every week, so there's no "finishing" the Portal. Active leaders are always working on situations they haven't seen before. The library compounds.</p>
-      </details>
-      <details>
-        <summary>Can we customise the Portal for our organisation?</summary>
-        <p>The standard Portal is intentionally not customised — it's built around senior leadership transitions that are universal across industries. For organisations who want bespoke scenarios drawn from their own context, that's available as a separate engagement. Best discussed on a call.</p>
-      </details>
-      <details>
-        <summary>How do we measure impact?</summary>
-        <p>Engagement and progress data is available for organisational accounts. The deeper measure is harder but more honest: are the leaders using the Portal making better calls, having harder conversations, and operating at the level above? That's what we track in the coached version.</p>
-      </details>
-      <details>
-        <summary>Can this replace our existing leadership development programme?</summary>
-        <p>Probably not — and it's not designed to. The Portal works best as a practice layer alongside whatever development you're already running. It's the gym, not the curriculum. If your current programme is mostly theory and you're missing the practice piece, the Portal fills that gap directly.</p>
-      </details>
-      <details>
-        <summary>What's the difference between self-serve and the coached option?</summary>
-        <p>Self-serve is the Portal alone — leaders practise on their own. The coached option pairs Portal access with 1:1 coaching from John, which turns the practice into real shifts. Coached is for the leaders you're investing in most heavily; self-serve is for scaling development across a broader group. Most organisations use both.</p>
-      </details>
+<!-- ════ SCENE 07 — FAQ ════ -->
+<section class="scene scene-faq">
+  <div class="faq-head">
+    <div class="label">06 · Common Questions</div>
+    <h2>Things leaders ask before they <em>commit</em>.</h2>
+  </div>
+
+  <div class="faq-list">
+    <details>
+      <summary><span>How long does each <em>scenario</em> take?</span></summary>
+      <p>Most scenarios are designed to be completed in 10–20 minutes. Long enough for deliberate thinking, short enough to fit between meetings. Leaders typically work through 2–3 scenarios per week.</p>
+    </details>
+
+    <details>
+      <summary><span>What happens after a leader completes all <em>165</em> scenarios?</span></summary>
+      <p>New scenarios are added every week, so there's no "finishing" the Portal. Active leaders are always working on situations they haven't seen before. The library compounds.</p>
+    </details>
+
+    <details>
+      <summary><span>Can we <em>customise</em> the Portal for our organisation?</span></summary>
+      <p>The standard Portal is intentionally not customised — it's built around senior leadership transitions that are universal across industries. For organisations who want bespoke scenarios drawn from their own context, that's available as a separate engagement. Best discussed on a call.</p>
+    </details>
+
+    <details>
+      <summary><span>How do we measure <em>impact</em>?</span></summary>
+      <p>Engagement and progress data is available for organisational accounts. The deeper measure is harder but more honest: are the leaders using the Portal making better calls, having harder conversations, and operating at the level above? That's what we track in the coached version.</p>
+    </details>
+
+    <details>
+      <summary><span>Can this <em>replace</em> our existing leadership development programme?</span></summary>
+      <p>Probably not — and it's not designed to. The Portal works best as a practice layer alongside whatever development you're already running. It's the gym, not the curriculum. If your current programme is mostly theory and you're missing the practice piece, the Portal fills that gap directly.</p>
+    </details>
+
+    <details>
+      <summary><span>What's the difference between self-serve and the <em>coached</em> option?</span></summary>
+      <p>Self-serve is the Portal alone — leaders practise on their own. The coached option pairs Portal access with 1:1 coaching from John, which turns the practice into real shifts. Coached is for the leaders you're investing in most heavily; self-serve is for scaling development across a broader group. Most organisations use both.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ════ SCENE 08 — Closing ════ -->
+<section class="scene scene-close">
+  <div class="label">07 · <span>The Invitation</span></div>
+  <h2>
+    Develop them before<br />
+    someone else <em>does</em>.
+  </h2>
+  <p class="standfirst">The leaders worth keeping are the ones being courted. Investing in their development is the clearest signal that you intend to keep them. A discovery call is a fifteen-minute conversation about who you're investing in and what would actually move the needle.</p>
+
+  <div class="three-step">
+    <div class="row">
+      <span class="n">i.</span>
+      <span class="t">You tell me who you're investing in and what's at stake.</span>
+    </div>
+    <div class="row">
+      <span class="n">ii.</span>
+      <span class="t">I show you how the Portal would fit, and which model.</span>
+    </div>
+    <div class="row">
+      <span class="n">iii.</span>
+      <span class="t">We agree the shape of the engagement — or we don't.</span>
     </div>
   </div>
-</div>
 
-<!-- SECTION 9 — FINAL CTA -->
-<div class="divider"></div>
-<section class="final-cta">
-  <div class="section-label reveal">Ready?</div>
-  <h2 class="section-title reveal">Develop Them Before<br>Someone Else <em style="font-style: italic; color: var(--accent);">Does.</em></h2>
-  <p class="final-question reveal">The leaders worth keeping are the ones being courted. Investing in their development is the clearest signal that you intend to keep them.</p>
-  <a href="#demo" class="btn-primary btn-large reveal">See a Demo</a>
+  <div class="button-row">
+    <a href="/contact" class="button">Book a discovery call</a>
+    <a href="mailto:coach@catalystgrowthcoach.co.uk" class="button ghost">Or email John directly</a>
+  </div>
+
+  <div class="endline">
+    <span>Catalyst Growth Coaching · For Organisations</span>
+    <span>End of brief</span>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo"><img src="images/index-img-09.png" alt="Catalyst Growth Coaching" style="height:28px;width:auto;opacity:0.85;"></div>
-    <ul class="footer-links">
-      <li><a href="leadstrong.html">LeadStrong</a></li>
-      <li><a href="buildstrong.html">BuildStrong</a></li>
-      <li><a href="cognitive-reset.html">Cognitive Reset</a></li>
-      <li><a href="teamstrong.html">TeamStrong</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="footer-copy">© 2026 John Obidipe · Catalyst Growth Coaching · coach@catalystgrowthcoach.co.uk</div>
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+    <div class="tag">I get leaders unstuck.</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">Lead Strong</a>
+    <a href="/teamstrong">TeamStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/cognitive-reset">Cognitive Reset</a>
+  </div>
+  <div class="col">
+    <h4>The Work</h4>
+    <a href="/about">About John</a>
+    <a href="/stuck-quiz">The Diagnostic</a>
+    <a href="/testimonials">Testimonials</a>
+    <a href="/for-organisations">For organisations</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© 2026 Catalyst Growth Coaching</span>
+    <span>London · Est. 2024</span>
   </div>
 </footer>
 
-<script src="main.js"></script>
-<script>
-// Form → Netlify submit, then reveal demo
-const foForm=document.getElementById('fo-form');
-if(foForm){
-  foForm.addEventListener('submit',function(e){
-    e.preventDefault();
-    const formData=new FormData(foForm);
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(formData).toString()})
-    .then(function(){
-      foForm.style.display='none';
-      document.getElementById('demo-video').classList.add('active');
-      document.getElementById('demo-video').scrollIntoView({behavior:'smooth',block:'start'});
-    })
-    .catch(function(){
-      foForm.style.display='none';
-      document.getElementById('demo-video').classList.add('active');
-      document.getElementById('demo-video').scrollIntoView({behavior:'smooth',block:'start'});
-    });
-  });
-}
-</script>
 </body>
 </html>
