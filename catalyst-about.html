@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About John Obidipe — Catalyst Growth Coaching</title>
+
+<!-- ════ SEO METADATA ════ -->
+<meta name="description" content="John Obidipe is a Gallup-Certified executive coach who helps senior leaders identify where they're stuck and build the stress tolerance to handle what's coming next." />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/about" />
+<meta property="og:title" content="About John Obidipe | Catalyst Growth Coaching" />
+<meta property="og:description" content="A practice rooted in evidence, not fluff. Neuroscience-backed coaching for senior leaders." />
+<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="About John Obidipe | Catalyst Growth Coaching" />
+<meta name="twitter:description" content="A practice rooted in evidence, not fluff. Neuroscience-backed coaching for senior leaders." />
+<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/about" />
+<!-- ════ END SEO METADATA ════ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #141418;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  /* ─── Nav ─── */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav.top ul a:hover, nav.top ul a.active { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+
+  /* ─── Scene base ─── */
+  section.scene {
+    min-height: auto; padding: 12vh 6vw;
+    position: relative; display: flex;
+  }
+  section.scene.tall { min-height: 90vh; }
+
+  /* ══ SCENE 01 — Editorial Masthead (About-specific) ══ */
+  .scene-about-open {
+    padding-top: 16vh; padding-bottom: 8vh;
+    flex-direction: column; justify-content: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .about-open-top {
+    display: flex; gap: 2rem; align-items: center;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 5vh;
+  }
+  .about-open-top .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
+  .about-open-top strong { color: var(--cognac); font-weight: 600; }
+  .about-open-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5vw; align-items: end;
+  }
+  .about-open-grid h1 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(3rem, 7.5vw, 6rem);
+    line-height: 0.96; letter-spacing: -0.015em;
+  }
+  .about-open-grid h1 .l { display: block; }
+  .about-open-grid h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .about-open-grid .right {
+    display: flex; flex-direction: column; gap: 1.8rem;
+    max-width: 32ch; padding-bottom: 0.8rem; justify-self: end;
+  }
+  .about-open-grid .byline {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .about-open-grid .byline .line { width: 30px; height: 1px; background: var(--cognac); }
+  .about-open-grid .lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.3rem; line-height: 1.5; color: var(--bone);
+  }
+
+  /* ══ SCENE 02 — Story (portrait + paragraph) ══ */
+  .scene-story {
+    background: var(--bg);
+    padding: 12vh 6vw;
+  }
+  .story-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 6vw; align-items: center; max-width: 1400px; margin: 0 auto;
+  }
+  .story-portrait {
+    position: relative; aspect-ratio: 4/5; overflow: hidden;
+    background: var(--bg-2); border: 1px solid var(--line);
+  }
+  .story-portrait .placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background:
+      radial-gradient(ellipse at 40% 30%, rgba(168,119,78,0.18), transparent 65%),
+      linear-gradient(160deg, #1d1815 0%, #0e0c0a 100%);
+    color: var(--ash); font-family: var(--font-d); font-style: italic;
+    font-size: 0.95rem; letter-spacing: 0.05em;
+  }
+  .story-portrait .label {
+    position: absolute; bottom: 1.5rem; left: 1.5rem;
+    font-size: 0.66rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(242,240,236,0.55); z-index: 2;
+  }
+  .story-portrait .label span { color: var(--cognac); }
+  .story-text { display: flex; flex-direction: column; gap: 2rem; }
+  .story-text .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .story-text h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; max-width: 18ch;
+  }
+  .story-text h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .story-text .opening {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.4rem; line-height: 1.5; color: var(--bone); max-width: 32ch;
+    padding-left: 1.2rem; border-left: 1px solid var(--cognac);
+  }
+  .story-text .body {
+    color: var(--stone); font-size: 1rem; line-height: 1.75;
+    max-width: 42ch;
+  }
+
+  /* ══ SCENE 03 — The Statement (full screen) ══ */
+  .scene-statement {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 14vh 8vw; position: relative;
+  }
+  .scene-statement .folio {
+    position: absolute; top: 6vh; left: 6vw;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-statement .folio span { color: var(--cognac); }
+  .scene-statement blockquote {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1.15; max-width: 24ch;
+  }
+  .scene-statement blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-statement .attr {
+    margin-top: 4rem;
+    display: flex; gap: 1rem; align-items: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-statement .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+
+  /* ══ SCENE 04 — What I Use / Don't Use (Diptych) ══ */
+  .scene-tools {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column;
+  }
+  .tools-head {
+    margin-bottom: 6vh; max-width: 800px;
+  }
+  .tools-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .tools-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; max-width: 18ch;
+  }
+  .tools-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  .tools-diptych {
+    display: grid; grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--line-strong);
+  }
+  .tool-col { padding: 3rem 2.5rem; border-right: 1px solid var(--line); }
+  .tool-col:last-child { border-right: none; }
+  .tool-col .col-head {
+    font-family: var(--font-d); font-style: italic; font-weight: 400;
+    font-size: 1.6rem; color: var(--bone); margin-bottom: 0.4rem;
+  }
+  .tool-col .col-head em { color: var(--cognac); font-weight: 400; }
+  .tool-col .col-sub {
+    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 2.5rem;
+  }
+  .tool-list { display: flex; flex-direction: column; }
+  .tool-list .item {
+    padding: 1.4rem 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start;
+  }
+  .tool-list .item:last-child { border-bottom: none; }
+  .tool-list .item .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1.1rem;
+    color: var(--cognac); padding-top: 0.15rem;
+  }
+  .tool-list .item .t .name {
+    font-size: 0.95rem; color: var(--bone); font-weight: 500; margin-bottom: 0.3rem;
+  }
+  .tool-list .item .t .desc {
+    font-size: 0.85rem; color: var(--ash); line-height: 1.55;
+  }
+  .tool-list.dont .item .n { color: var(--ash); }
+  .tool-list.dont .item .t .name { color: var(--stone); text-decoration: line-through; text-decoration-color: var(--ash); text-decoration-thickness: 1px; }
+  .tool-col .footnote {
+    margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line);
+    font-family: var(--font-d); font-style: italic; font-size: 1.05rem;
+    color: var(--bone); line-height: 1.5;
+  }
+  .tool-col .footnote em { color: var(--cognac); font-style: italic; }
+
+  /* ══ SCENE 06 — Three Diagnostic Lenses ══ */
+  .scene-lenses {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column;
+  }
+  .lenses-head {
+    margin-bottom: 6vh; display: grid;
+    grid-template-columns: 1fr 1fr; gap: 4vw; align-items: baseline;
+  }
+  .lenses-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .lenses-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; max-width: 16ch;
+  }
+  .lenses-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .lenses-head .note {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); max-width: 30ch;
+    line-height: 1.5; justify-self: end; text-align: right;
+  }
+  .lenses-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .lens {
+    padding: 3rem 2rem 3.5rem; border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .lens:last-child { border-right: none; }
+  .lens .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
+  }
+  .lens h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 1.7rem;
+    color: var(--bone); margin-top: 1rem; line-height: 1.15;
+  }
+  .lens h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .lens p {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1rem; color: var(--stone); line-height: 1.5;
+    margin-top: 1.5rem;
+  }
+
+  /* ══ SCENE 07 — Credentials Index ══ */
+  .scene-credentials {
+    flex-direction: column; padding: 12vh 6vw;
+  }
+  .creds-head {
+    text-align: center; margin-bottom: 6vh;
+  }
+  .creds-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .creds-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15;
+    max-width: 24ch; margin: 0 auto;
+  }
+  .creds-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .creds-list {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    max-width: 900px; margin: 0 auto;
+    border-top: 1px solid var(--line-strong);
+  }
+  .cred {
+    padding: 1.6rem 1.5rem; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.2rem;
+    align-items: baseline;
+  }
+  .cred:nth-child(odd) { border-right: 1px solid var(--line); }
+  .cred .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1rem; color: var(--cognac);
+  }
+  .cred .name {
+    font-family: var(--font-d); font-weight: 400; font-size: 1.25rem;
+    color: var(--bone); line-height: 1.3;
+  }
+  .cred .name em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .cred .meta {
+    display: block; font-family: var(--font-b); font-size: 0.72rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ash); margin-top: 0.3rem;
+  }
+
+  /* ══ SCENE 08 — In Action (single image) ══ */
+  .scene-action {
+    padding: 0; min-height: 60vh;
+  }
+  .scene-action .frame {
+    width: 100%; aspect-ratio: 21/9; position: relative; overflow: hidden;
+    background:
+      radial-gradient(ellipse at 35% 50%, rgba(168,119,78,0.22), transparent 65%),
+      linear-gradient(135deg, #1c1612 0%, #0d0b09 100%);
+  }
+  .scene-action .frame::after {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(115deg, transparent 0 12px, rgba(0,0,0,0.18) 12px 13px);
+    mix-blend-mode: multiply; opacity: 0.4;
+  }
+  .scene-action .caption {
+    position: absolute; bottom: 2rem; left: 2rem; z-index: 2;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(242,240,236,0.6);
+  }
+  .scene-action .caption span { color: var(--cognac); }
+
+  /* ══ SCENE 09 — Closing ══ */
+  .scene-close {
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 14vh 6vw; position: relative;
+  }
+  .scene-close .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 4rem;
+  }
+  .scene-close .label span { color: var(--cognac); }
+  .scene-close h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.15;
+    max-width: 22ch; margin-bottom: 4rem;
+  }
+  .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-close .button-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .scene-close .button {
+    display: inline-block; padding: 1.2rem 2.8rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+  }
+  .scene-close .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .scene-close .button.ghost {
+    background: transparent; color: var(--cognac);
+    border: 1px solid var(--line-strong);
+  }
+  .scene-close .button.ghost:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  .scene-close .endline {
+    position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
+    display: flex; justify-content: space-between;
+    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); border-top: 1px solid var(--line); padding-top: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash); display: flex; justify-content: space-between;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+    section.scene { padding: 10vh 6vw; }
+
+    .about-open-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-open-grid h1 { font-size: clamp(2.4rem, 12vw, 4rem); }
+    .about-open-grid .right { max-width: 100%; justify-self: start; }
+
+    .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .story-portrait { aspect-ratio: 4/4; max-height: 60vh; }
+
+    .tools-diptych { grid-template-columns: 1fr; }
+    .tool-col { border-right: none; border-bottom: 1px solid var(--line); }
+    .tool-col:last-child { border-bottom: none; }
+
+    .lenses-head { grid-template-columns: 1fr; gap: 2rem; }
+    .lenses-head .note { justify-self: start; text-align: left; }
+    .lenses-grid { grid-template-columns: 1fr; }
+    .lens { border-right: none; border-bottom: 1px solid var(--line); }
+    .lens:last-child { border-bottom: none; }
+
+    .creds-list { grid-template-columns: 1fr; }
+    .cred { border-right: none; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/index.html#stucks">The Method</a></li>
+    <li><a href="/index.html#doors">Programmes</a></li>
+    <li><a href="/about.html" class="active">About</a></li>
+    <li><a href="/stuck-quiz">Diagnostic</a></li>
+    <li><a href="/contact" class="cta">Book a call</a></li>
+  </ul>
+</nav>
+
+<!-- ════ SCENE 01 — Masthead ════ -->
+<section class="scene scene-about-open">
+  <div class="about-open-top">
+    <span>About</span>
+    <span class="dot"></span>
+    <span><strong>John Obidipe</strong></span>
+    <span class="dot"></span>
+    <span>Performance Coach · London</span>
+  </div>
+
+  <div class="about-open-grid">
+    <h1>
+      <span class="l">No matter the role,</span>
+      <span class="l">I always end up</span>
+      <span class="l"><em>coaching</em>.</span>
+    </h1>
+    <div class="right">
+      <div class="byline">
+        <span class="line"></span>
+        <span>Profile · 2026</span>
+      </div>
+      <p class="lede">Throughout my career I've held space for leaders — helping them see what they couldn't see alone, and move from where they are to where they need to be.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 02 — Story (portrait + text) ════ -->
+<section class="scene scene-story">
+  <div class="story-grid">
+    <div class="story-portrait">
+      <div class="placeholder">[Portrait of John]</div>
+      <div class="label">Plate i · <span>The coach</span></div>
+    </div>
+    <div class="story-text">
+      <div class="label">01 · The Discovery</div>
+      <h2>I help leaders identify where they're <em>stuck</em>.</h2>
+      <p class="opening">Brilliant, capable leaders operating at pace — holding pressure, carrying weight, rarely giving themselves space to think.</p>
+      <p class="body">They didn't need another training day or productivity hack. They needed structured brain reset and stress tolerance training. That's when I discovered what I do differently — I help leaders identify where they're stuck, build a plan to get unstuck, move forward sustainably, and develop the stress tolerance to handle what's coming next.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 03 — The Statement ════ -->
+<section class="scene scene-statement">
+  <div class="folio">02 · <span>The Premise</span></div>
+  <blockquote>
+    High performers don't fail suddenly. They get stuck <em>quietly</em>.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>What I see, again and again</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 04 — What I Use / Don't Use ════ -->
+<section class="scene scene-tools">
+  <div class="tools-head">
+    <div class="label">03 · The Practice</div>
+    <h2>A practice rooted in <em>evidence</em>, not fluff.</h2>
+  </div>
+
+  <div class="tools-diptych">
+    <div class="tool-col">
+      <div class="col-head">What I <em>use</em></div>
+      <div class="col-sub">Tools I bring to every engagement</div>
+
+      <div class="tool-list">
+        <div class="item">
+          <span class="n">i.</span>
+          <div class="t">
+            <div class="name">Psychometrics</div>
+            <div class="desc">CliftonStrengths and FITT16 — diagnostic precision that reveals how you're wired to lead.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="n">ii.</span>
+          <div class="t">
+            <div class="name">Brain retraining protocols</div>
+            <div class="desc">Neuroscience-backed practices to retrain the amygdala-PFC patterns keeping you stuck.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="n">iii.</span>
+          <div class="t">
+            <div class="name">Stress tolerance training</div>
+            <div class="desc">Progressive capacity building so your brain stays online when stakes rise.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="n">iv.</span>
+          <div class="t">
+            <div class="name">Strategic frameworks</div>
+            <div class="desc">Playing to Win and Essentialism — rigorous approaches to sustainable performance.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-col">
+      <div class="col-head">What I <em>don't</em></div>
+      <div class="col-sub">Where I deliberately don't go</div>
+
+      <div class="tool-list dont">
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">
+            <div class="name">Motivational slogans</div>
+            <div class="desc">Or vague wellness practices dressed up as performance work.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">
+            <div class="name">Therapy or mental-health treatment</div>
+            <div class="desc">Different work, different professional. I refer when needed.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">
+            <div class="name">Generic corporate coaching playbooks</div>
+            <div class="desc">The same workshop deck rebranded for every client.</div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="n">—</span>
+          <div class="t">
+            <div class="name">Dependency models</div>
+            <div class="desc">Coaching designed to keep you coming back indefinitely.</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="footnote">This is performance coaching grounded in <em>neuroscience</em>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 05 — Three Diagnostic Lenses ════ -->
+<section class="scene scene-lenses">
+  <div class="lenses-head">
+    <div>
+      <div class="label">04 · The Lenses</div>
+      <h2>Three diagnostic <em>lenses</em>.</h2>
+    </div>
+    <p class="note">Every engagement starts with all three. They reveal where you're stuck, why, and what to do about it.</p>
+  </div>
+
+  <div class="lenses-grid">
+    <div class="lens">
+      <span class="num">i.</span>
+      <h3><em>Psychometric-led</em></h3>
+      <p>CliftonStrengths and FITT16 reveal how you're wired and where misalignment creates friction.</p>
+    </div>
+    <div class="lens">
+      <span class="num">ii.</span>
+      <h3><em>Brain-retraining</em></h3>
+      <p>Neuroscience-backed practices, including blindfolded movement protocols that strengthen cognitive flexibility.</p>
+    </div>
+    <div class="lens">
+      <span class="num">iii.</span>
+      <h3><em>Strategically rigorous</em></h3>
+      <p>Frameworks like Playing to Win and Essentialism — structured work that moves you, not abstract theory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 06 — Credentials Index ════ -->
+<section class="scene scene-credentials">
+  <div class="creds-head">
+    <div class="label">05 · The Credentials</div>
+    <h2>Trained where it <em>matters</em>.</h2>
+  </div>
+
+  <div class="creds-list">
+    <div class="cred">
+      <span class="n">i.</span>
+      <div>
+        <div class="name">Gallup-Certified <em>CliftonStrengths</em> Coach</div>
+        <span class="meta">Psychometric assessment</span>
+      </div>
+    </div>
+    <div class="cred">
+      <span class="n">ii.</span>
+      <div>
+        <div class="name"><em>FITT16</em> Expert</div>
+        <span class="meta">Personality typology</span>
+      </div>
+    </div>
+    <div class="cred">
+      <span class="n">iii.</span>
+      <div>
+        <div class="name"><em>Playing to Win</em></div>
+        <span class="meta">Strategic framework</span>
+      </div>
+    </div>
+    <div class="cred">
+      <span class="n">iv.</span>
+      <div>
+        <div class="name"><em>Essentialism</em></div>
+        <span class="meta">Strategic framework</span>
+      </div>
+    </div>
+    <div class="cred">
+      <span class="n">v.</span>
+      <div>
+        <div class="name"><em>Nervous-system</em> science</div>
+        <span class="meta">Practitioner training</span>
+      </div>
+    </div>
+    <div class="cred">
+      <span class="n">vi.</span>
+      <div>
+        <div class="name">Brain <em>retraining</em> protocols</div>
+        <span class="meta">Specialised practice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 07 — In Action (image) ════ -->
+<section class="scene-action">
+  <div class="frame">
+    <div class="caption">Plate ii · <span>Speaking at CliftonStrengths Summit</span></div>
+  </div>
+</section>
+
+<!-- ════ SCENE 08 — Closing ════ -->
+<section class="scene scene-close">
+  <div class="label">06 · <span>The Invitation</span></div>
+  <h2>
+    If you've read this far,<br />
+    let's find out where you're <em>stuck</em>.
+  </h2>
+  <div class="button-row">
+    <a href="/contact" class="button">Book a call</a>
+    <a href="/stuck-quiz" class="button ghost">Or take the diagnostic</a>
+  </div>
+
+  <div class="endline">
+    <span>Catalyst Growth Coaching</span>
+    <span>End of profile</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+    <div class="tag">I get leaders unstuck.</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">Lead Strong</a>
+    <a href="/teamstrong">TeamStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/cognitive-reset">Cognitive Reset</a>
+  </div>
+  <div class="col">
+    <h4>The Work</h4>
+    <a href="/about">About John</a>
+    <a href="/stuck-quiz">The Diagnostic</a>
+    <a href="/testimonials">Testimonials</a>
+    <a href="/for-organisations">For organisations</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© 2026 Catalyst Growth Coaching</span>
+    <span>London · Est. 2024</span>
+  </div>
+</footer>
+
+</body>
+</html>
