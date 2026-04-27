@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lead Strong — Catalyst Growth Coaching</title>
+
+<!-- ════ SEO METADATA — preserved from existing leadstrong.html ════ -->
+<meta name="description" content="12-week executive coaching programme for senior leaders stuck in reactive mode, going blank under pressure, or patterns they can't break. £3,600." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/leadstrong" />
+<meta property="og:title" content="LeadStrong: Executive Coaching Programme UK | John Obidipe" />
+<meta property="og:description" content="3-month executive coaching programme for senior leaders stuck in reactive mode. Neuroscience-backed. Gallup-Certified Coach." />
+<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="LeadStrong: Executive Coaching Programme UK | John Obidipe" />
+<meta name="twitter:description" content="3-month executive coaching programme for senior leaders stuck in reactive mode. Neuroscience-backed. Gallup-Certified Coach." />
+<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/leadstrong" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"LeadStrong Executive Coaching Programme","provider":{"@type":"Person","name":"John Obidipe"},"description":"12-week executive coaching programme for senior leaders stuck in reactive mode, going blank under pressure, or patterns they cannot break.","offers":{"@type":"Offer","price":"3600","priceCurrency":"GBP"},"areaServed":"United Kingdom"}
+</script>
+<!-- ════ END SEO METADATA ════ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #141418;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  /* ─── Nav ─── */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav.top ul a:hover, nav.top ul a.active { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+
+  /* ─── Scene base ─── */
+  section.scene {
+    min-height: auto; padding: 12vh 6vw;
+    position: relative; display: flex;
+  }
+
+  /* ══ SCENE 01 — Editorial Masthead ══ */
+  .scene-open {
+    padding-top: 16vh; padding-bottom: 8vh;
+    flex-direction: column; justify-content: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .scene-open .masthead-top {
+    display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 5vh;
+  }
+  .scene-open .masthead-top .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
+  .scene-open .masthead-top strong { color: var(--cognac); font-weight: 600; }
+  .scene-open .hero-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5vw; align-items: end;
+  }
+  .scene-open h1 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(3rem, 8vw, 6.4rem);
+    line-height: 0.96; letter-spacing: -0.015em;
+  }
+  .scene-open h1 .l { display: block; }
+  .scene-open h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-open .right {
+    display: flex; flex-direction: column; gap: 1.8rem;
+    max-width: 32ch; padding-bottom: 0.8rem; justify-self: end;
+  }
+  .scene-open .byline {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-open .byline .line { width: 30px; height: 1px; background: var(--cognac); }
+  .scene-open .lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.3rem; line-height: 1.5; color: var(--bone);
+  }
+  .scene-open .meta-row {
+    margin-top: 6vh;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line); padding-top: 1.5rem;
+    gap: 2rem;
+  }
+  .scene-open .meta-row .item {
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .scene-open .meta-row .lab {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-open .meta-row .val {
+    font-family: var(--font-d); font-size: 1.1rem; color: var(--bone); font-weight: 400;
+  }
+  .scene-open .meta-row .val em { font-style: italic; color: var(--cognac); }
+
+  /* ══ SCENE 02 — Premise pull-quote ══ */
+  .scene-premise {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 14vh 8vw; position: relative;
+  }
+  .scene-premise .folio {
+    position: absolute; top: 6vh; left: 6vw;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-premise .folio span { color: var(--cognac); }
+  .scene-premise blockquote {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2.2rem, 5.5vw, 4.4rem);
+    line-height: 1.12; max-width: 22ch;
+  }
+  .scene-premise blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-premise .attr {
+    margin-top: 4rem;
+    display: flex; gap: 1rem; align-items: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-premise .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+
+  /* ══ SCENE 03 — Who this is for (six signals, 2x3) ══ */
+  .scene-signals {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column;
+  }
+  .signals-head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4vw; align-items: baseline; margin-bottom: 8vh;
+  }
+  .signals-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .signals-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1; max-width: 16ch;
+  }
+  .signals-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .signals-head .note {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); max-width: 32ch;
+    line-height: 1.5; justify-self: end; text-align: right; padding-bottom: 0.4rem;
+  }
+  .signals-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong);
+  }
+  .signal {
+    padding: 2.6rem 2rem 3rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.8rem; min-height: 240px;
+    transition: background 0.5s ease;
+  }
+  .signal:nth-child(3n) { border-right: none; }
+  .signal:nth-child(n+4) { border-bottom: none; }
+  .signal:hover { background: rgba(200,149,108,0.04); }
+  .signal .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.1rem; color: var(--cognac);
+  }
+  .signal h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 1.55rem;
+    line-height: 1.15; color: var(--bone); margin-top: 0.6rem;
+  }
+  .signal h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .signal p {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1rem; color: var(--stone); line-height: 1.5;
+    margin-top: auto; padding-top: 1.5rem;
+  }
+
+  /* ══ SCENE 04 — The Method (PAUSE / RESET / GO) ══ */
+  .scene-method { padding: 0; min-height: 100vh; }
+  .scene-method .split {
+    display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh;
+  }
+  .method-image {
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(168,119,78,0.28), transparent 60%),
+      radial-gradient(ellipse at 70% 75%, rgba(200,149,108,0.15), transparent 55%),
+      linear-gradient(145deg, #1a1410 0%, #0d0b09 100%);
+    position: relative; overflow: hidden;
+  }
+  .method-image::after {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(115deg, transparent 0 10px, rgba(0,0,0,0.22) 10px 11px);
+    mix-blend-mode: multiply; opacity: 0.5;
+  }
+  .method-image .plate-label {
+    position: absolute; bottom: 3vh; left: 3vw;
+    font-size: 0.66rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(242,240,236,0.5); z-index: 2;
+  }
+  .method-image .plate-label span { color: var(--cognac); }
+  .method-text {
+    padding: 12vh 5vw;
+    display: flex; flex-direction: column; justify-content: center; gap: 2.5rem;
+  }
+  .method-text .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .method-text h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1; max-width: 16ch;
+  }
+  .method-text h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .method-text .standfirst {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; line-height: 1.5; color: var(--stone); max-width: 32ch;
+  }
+  .method-text .three { display: flex; flex-direction: column; margin-top: 1rem; max-width: 42ch; }
+  .method-text .three .beat {
+    display: grid; grid-template-columns: 5rem 1fr; gap: 1.4rem;
+    padding: 1.6rem 0; border-bottom: 1px solid var(--line); align-items: baseline;
+  }
+  .method-text .three .beat:last-child { border-bottom: none; }
+  .method-text .three .beat .phase {
+    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
+    font-weight: 400;
+  }
+  .method-text .three .beat .phase .wk {
+    display: block; font-family: var(--font-b); font-style: normal;
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); margin-top: 0.3rem;
+  }
+  .method-text .three .beat .body { color: var(--bone); font-size: 1rem; line-height: 1.55; }
+  .method-text .three .beat .body .head {
+    display: block; font-family: var(--font-d); font-size: 1.25rem;
+    color: var(--bone); font-weight: 400; margin-bottom: 0.4rem;
+  }
+  .method-text .three .beat .body .head em { font-style: italic; color: var(--cognac); }
+  .method-text .three .beat .body .desc {
+    display: block; color: var(--stone); font-size: 0.92rem; line-height: 1.6;
+  }
+
+  /* ══ SCENE 05 / 09 — Pull-quote (testimonial) ══ */
+  .scene-pull {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 14vh 8vw; position: relative;
+    min-height: 80vh;
+  }
+  .scene-pull .folio {
+    position: absolute; top: 6vh; left: 6vw;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .folio span { color: var(--cognac); }
+  .scene-pull .mark {
+    font-family: var(--font-d); font-style: italic; font-size: 4rem;
+    color: var(--cognac); line-height: 1; margin-bottom: 2rem; opacity: 0.6;
+  }
+  .scene-pull blockquote {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+    line-height: 1.2; max-width: 26ch; color: var(--bone);
+  }
+  .scene-pull blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-pull .attr {
+    margin-top: 4rem;
+    display: flex; gap: 1rem; align-items: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+
+  /* ══ SCENE 06 — Six brain patterns (3x2 catalogue grid) ══ */
+  .scene-patterns {
+    flex-direction: column;
+    padding: 14vh 6vw;
+  }
+  .patterns-head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4vw; align-items: baseline; margin-bottom: 8vh;
+  }
+  .patterns-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .patterns-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1; max-width: 18ch;
+  }
+  .patterns-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .patterns-head .note {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); max-width: 36ch;
+    line-height: 1.5; justify-self: end; text-align: right; padding-bottom: 0.4rem;
+  }
+  .patterns-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong);
+  }
+  .pattern {
+    padding: 3rem 2.2rem 3rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.8rem;
+    transition: background 0.5s ease;
+  }
+  .pattern:nth-child(3n) { border-right: none; }
+  .pattern:nth-last-child(-n+3) { border-bottom: none; }
+  .pattern:hover { background: rgba(200,149,108,0.03); }
+  .pattern .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.1rem; color: var(--cognac);
+    margin-bottom: 0.3rem;
+  }
+  .pattern .lab {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 0.6rem;
+  }
+  .pattern h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 1.45rem;
+    line-height: 1.2; color: var(--bone); margin-bottom: 0.8rem;
+  }
+  .pattern h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .pattern .desc {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1rem; color: var(--stone); line-height: 1.5;
+    margin-bottom: 1.4rem;
+  }
+  .pattern .retrain-lab {
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+    margin-top: auto; padding-top: 1.2rem;
+    border-top: 1px solid var(--line); margin-bottom: 0.5rem;
+  }
+  .pattern .retrain {
+    font-size: 0.88rem; color: var(--bone); line-height: 1.6;
+  }
+  .pattern .timeline {
+    margin-top: 1rem;
+    font-family: var(--font-d); font-style: italic;
+    font-size: 0.92rem; color: var(--ash); line-height: 1.4;
+  }
+
+  /* ══ SCENE 07 — What's Included + Investment (Diptych) ══ */
+  .scene-included {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    padding: 14vh 6vw;
+  }
+  .included-head {
+    margin-bottom: 6vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4vw; align-items: baseline;
+  }
+  .included-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .included-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1; max-width: 18ch;
+  }
+  .included-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .included-head .note {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); max-width: 36ch;
+    line-height: 1.5; justify-self: end; text-align: right; padding-bottom: 0.4rem;
+  }
+  .included-diptych {
+    display: grid; grid-template-columns: 1.4fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+  .included-list {
+    border-top: 1px solid var(--line-strong);
+  }
+  .inc-item {
+    padding: 1.3rem 0;
+    border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem;
+    align-items: baseline;
+  }
+  .inc-item .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1rem;
+    color: var(--cognac);
+  }
+  .inc-item .t {
+    font-size: 0.96rem; color: var(--bone); line-height: 1.55;
+  }
+  .inc-item .t .meta {
+    display: block; font-family: var(--font-d); font-style: italic;
+    font-size: 0.88rem; color: var(--ash); margin-top: 0.2rem;
+  }
+
+  /* Price card — editorial restraint, not marketing */
+  .price-card {
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    padding: 3rem 2.5rem;
+    position: sticky; top: 5rem;
+  }
+  .price-card .lab {
+    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .price-card .price {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 3.6rem; line-height: 1; color: var(--bone);
+    margin-bottom: 0.6rem;
+  }
+  .price-card .price .currency {
+    font-size: 1.8rem; vertical-align: top; color: var(--cognac);
+    margin-right: 0.1rem; font-style: italic;
+  }
+  .price-card .terms {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.05rem; color: var(--stone); margin-bottom: 2rem;
+    padding-bottom: 1.5rem; border-bottom: 1px solid var(--line);
+  }
+  .price-card .button {
+    display: block; width: 100%;
+    padding: 1.1rem 1.5rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.74rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; text-align: center;
+    transition: all 0.4s ease;
+  }
+  .price-card .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .price-card .footnote {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 0.95rem; color: var(--stone); line-height: 1.5;
+    margin-top: 1.5rem; text-align: center;
+  }
+  .price-card .terms-list {
+    margin-top: 2rem; padding-top: 1.8rem;
+    border-top: 1px solid var(--line);
+  }
+  .price-card .terms-list .row {
+    display: grid; grid-template-columns: 6rem 1fr; gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.82rem; line-height: 1.5;
+  }
+  .price-card .terms-list .row:last-child { border-bottom: none; }
+  .price-card .terms-list .row .k {
+    font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ash); padding-top: 0.15rem;
+  }
+  .price-card .terms-list .row .v {
+    color: var(--bone);
+  }
+  .price-card .terms-list .row .v em {
+    font-family: var(--font-d); font-style: italic; color: var(--cognac);
+  }
+
+  /* ══ SCENE 08 — Three measurement questions ══ */
+  .scene-measure {
+    flex-direction: column;
+    padding: 14vh 6vw;
+  }
+  .measure-head {
+    text-align: center; margin-bottom: 6vh;
+    max-width: 800px; margin-left: auto; margin-right: auto;
+  }
+  .measure-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .measure-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15; max-width: 22ch; margin: 0 auto;
+  }
+  .measure-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .measure-head .sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); max-width: 40ch;
+    margin: 1.5rem auto 0; line-height: 1.5;
+  }
+  .measure-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .measure {
+    padding: 3rem 2.2rem 3.5rem;
+    border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .measure:last-child { border-right: none; }
+  .measure .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
+  }
+  .measure h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 1.7rem;
+    line-height: 1.2; color: var(--bone); margin-top: 1rem;
+  }
+  .measure h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .measure .desc {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1rem; color: var(--stone); line-height: 1.55;
+    margin-top: 1.2rem;
+  }
+
+  /* ══ SCENE 10 — Closing ══ */
+  .scene-close {
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 14vh 6vw 12vh; position: relative; min-height: 80vh;
+  }
+  .scene-close .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 4rem;
+  }
+  .scene-close .label span { color: var(--cognac); }
+  .scene-close h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.15; max-width: 22ch; margin-bottom: 3rem;
+  }
+  .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-close .standfirst {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; color: var(--stone); max-width: 38ch;
+    line-height: 1.55; margin-bottom: 3.5rem;
+  }
+  .scene-close .three-step {
+    margin-bottom: 3rem; max-width: 44ch;
+    border-top: 1px solid var(--line);
+  }
+  .scene-close .three-step .row {
+    padding: 1rem 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 3rem 1fr; gap: 1rem;
+    align-items: baseline;
+  }
+  .scene-close .three-step .row .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1rem;
+    color: var(--cognac);
+  }
+  .scene-close .three-step .row .t {
+    color: var(--bone); font-size: 0.95rem; line-height: 1.5;
+  }
+  .scene-close .button-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .scene-close .button {
+    display: inline-block; padding: 1.2rem 2.8rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+  }
+  .scene-close .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .scene-close .button.ghost {
+    background: transparent; color: var(--cognac);
+    border: 1px solid var(--line-strong);
+  }
+  .scene-close .button.ghost:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  .scene-close .endline {
+    position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
+    display: flex; justify-content: space-between;
+    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); border-top: 1px solid var(--line); padding-top: 1.5rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash); display: flex; justify-content: space-between;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+    section.scene { padding: 10vh 6vw; }
+
+    .scene-open { padding-top: 18vh; }
+    .scene-open .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-open .right { max-width: 100%; justify-self: start; }
+    .scene-open h1 { font-size: clamp(2.6rem, 12vw, 4.4rem); }
+    .scene-open .meta-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+    .signals-head { grid-template-columns: 1fr; gap: 2rem; }
+    .signals-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
+    .signals-grid { grid-template-columns: 1fr; }
+    .signal {
+      border-right: none !important; border-bottom: 1px solid var(--line) !important;
+      padding: 2.4rem 0.5rem; min-height: auto;
+    }
+    .signal:last-child { border-bottom: none !important; }
+    .signal p { padding-top: 1rem; }
+
+    .scene-method .split { grid-template-columns: 1fr; }
+    .method-image { min-height: 40vh; }
+    .method-text { padding: 6rem 2rem; }
+    .method-text .three .beat { grid-template-columns: 1fr; gap: 0.8rem; }
+    .method-text .three .beat .phase .wk { display: inline; margin-left: 0.6rem; }
+
+    .patterns-head { grid-template-columns: 1fr; gap: 2rem; }
+    .patterns-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
+    .patterns-grid { grid-template-columns: 1fr; }
+    .pattern {
+      border-right: none !important; border-bottom: 1px solid var(--line) !important;
+    }
+    .pattern:last-child { border-bottom: none !important; }
+
+    .included-head { grid-template-columns: 1fr; gap: 2rem; }
+    .included-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
+    .included-diptych { grid-template-columns: 1fr; gap: 2.5rem; }
+    .price-card { position: static; padding: 2.5rem 2rem; }
+
+    .measure-grid { grid-template-columns: 1fr; }
+    .measure { border-right: none; border-bottom: 1px solid var(--line); }
+    .measure:last-child { border-bottom: none; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/index.html#doors">Programmes</a></li>
+    <li><a href="/leadstrong.html" class="active">Lead Strong</a></li>
+    <li><a href="/stuck-quiz">Diagnostic</a></li>
+    <li><a href="/contact" class="cta">Book a call</a></li>
+  </ul>
+</nav>
+
+<!-- ════ SCENE 01 — Editorial Masthead ════ -->
+<section class="scene scene-open">
+  <div class="masthead-top">
+    <span>Programme N° 01</span>
+    <span class="dot"></span>
+    <span><strong>Lead Strong</strong></span>
+    <span class="dot"></span>
+    <span>1:1 Executive Coaching · 12 Weeks</span>
+  </div>
+
+  <div class="hero-grid">
+    <h1>
+      <span class="l">Get unstuck</span>
+      <span class="l">in twelve <em>weeks</em>.</span>
+    </h1>
+    <div class="right">
+      <div class="byline">
+        <span class="line"></span>
+        <span>For senior leaders &amp; founders</span>
+      </div>
+      <p class="lede">A 12-week programme for senior leaders stuck in reactive mode, going blank under pressure, or running patterns they can't break.</p>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <div class="item">
+      <span class="lab">Format</span>
+      <span class="val"><em>1:1</em> · weekly</span>
+    </div>
+    <div class="item">
+      <span class="lab">Duration</span>
+      <span class="val"><em>12</em> weeks</span>
+    </div>
+    <div class="item">
+      <span class="lab">Investment</span>
+      <span class="val">£<em>3,600</em></span>
+    </div>
+    <div class="item">
+      <span class="lab">Cohort</span>
+      <span class="val"><em>Eight</em> per quarter</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 02 — The Premise ════ -->
+<section class="scene scene-premise">
+  <div class="folio">01 · <span>The Premise</span></div>
+  <blockquote>
+    High performers don't fail suddenly.<br />
+    They get stuck <em>quietly</em>.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>What I see, again and again</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 03 — Who This Is For (six signals) ════ -->
+<section class="scene scene-signals">
+  <div class="signals-head">
+    <div>
+      <div class="label">02 · Who It's For</div>
+      <h2>Six signs your brain has developed a <em>stuck</em> pattern.</h2>
+    </div>
+    <p class="note">One of these probably sounds like the room you've been sitting in for months.</p>
+  </div>
+
+  <div class="signals-grid">
+    <div class="signal">
+      <span class="num">i.</span>
+      <h3>Reactive <em>leadership</em></h3>
+      <p>Firefighting instead of leading. The amygdala's overwhelming the prefrontal cortex, locking you in threat response.</p>
+    </div>
+    <div class="signal">
+      <span class="num">ii.</span>
+      <h3>Going <em>blank</em></h3>
+      <p>The mind goes blank in high-stakes moments. Stress hormones are shutting down working memory and verbal fluency.</p>
+    </div>
+    <div class="signal">
+      <span class="num">iii.</span>
+      <h3>Running <em>perfectionism</em></h3>
+      <p>"I should be able to handle this." Chronic amygdala activation around mistakes is creating ongoing threat sensitivity.</p>
+    </div>
+    <div class="signal">
+      <span class="num">iv.</span>
+      <h3>Poor decisions under <em>pressure</em></h3>
+      <p>When stakes rise, you default to impulsive or overly cautious choices. The amygdala is hijacking control from the PFC.</p>
+    </div>
+    <div class="signal">
+      <span class="num">v.</span>
+      <h3>Stuck in <em>performance</em> mode</h3>
+      <p>Still delivering — but it's taking more than it used to. The brain's in energy-conservation mode, degrading decisions before you notice.</p>
+    </div>
+    <div class="signal">
+      <span class="num">vi.</span>
+      <h3>Capped at your stress <em>tolerance</em></h3>
+      <p>Board meetings. Fundraising. Mergers. You need the brain to stay online at pressure levels that currently overwhelm it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 04 — The Method (PAUSE / RESET / GO) ════ -->
+<section class="scene scene-method">
+  <div class="split">
+    <div class="method-image">
+      <div class="plate-label">Plate i · <span>The architecture</span></div>
+    </div>
+
+    <div class="method-text">
+      <div class="label">03 · The Method</div>
+      <h2>Pause. Reset. <em>Go</em>.</h2>
+      <p class="standfirst">A three-phase architecture across twelve weeks. One method. Three movements. One outcome — new default patterns under pressure.</p>
+
+      <div class="three">
+        <div class="beat">
+          <span class="phase">Pause<span class="wk">Weeks 1 – 4</span></span>
+          <span class="body">
+            <span class="head"><em>Diagnose.</em></span>
+            <span class="desc">CliftonStrengths and FITT16 reveal how you're wired. We map the amygdala-PFC patterns keeping you stuck and measure your current stress tolerance.</span>
+          </span>
+        </div>
+        <div class="beat">
+          <span class="phase">Reset<span class="wk">Weeks 5 – 9</span></span>
+          <span class="body">
+            <span class="head"><em>Retrain.</em></span>
+            <span class="desc">Weekly coaching applying your retraining protocol. Daily brain-retraining exercises. Blindfolded movement work. Real-time intervention for high-pressure moments.</span>
+          </span>
+        </div>
+        <div class="beat">
+          <span class="phase">Go<span class="wk">Weeks 10 – 12</span></span>
+          <span class="body">
+            <span class="head"><em>Rewire.</em></span>
+            <span class="desc">Integration of new neural pathways. Prevention protocols so old patterns don't return. Readiness assessment for higher pressure. Final roadmap.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 05 — First Testimonial ════ -->
+<section class="scene scene-pull">
+  <div class="folio">04 · <span>In Their Words</span></div>
+  <div class="mark">"</div>
+  <blockquote>
+    Renewed focus and confidence at a point in my career when I <em>really</em> needed it. A genuine 1 + 1 = 3 moment.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>Martin Malins · Lead Strong client</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 06 — Six Brain Patterns ════ -->
+<section class="scene scene-patterns">
+  <div class="patterns-head">
+    <div>
+      <div class="label">05 · The Patterns</div>
+      <h2>Six brain patterns we <em>retrain</em>.</h2>
+    </div>
+    <p class="note">Each engagement begins by identifying which one is yours. The protocol is built around it.</p>
+  </div>
+
+  <div class="patterns-grid">
+    <div class="pattern">
+      <span class="num">i.</span>
+      <span class="lab">Reactive Leadership</span>
+      <h3>Amygdala in chronic <em>threat</em> mode</h3>
+      <p class="desc">PFC can't access strategic thinking. You're firefighting, stuck in execution, can't think big-picture.</p>
+      <div class="retrain-lab">How we retrain</div>
+      <p class="retrain">Amygdala downregulation. PFC strengthening through strategic decompression. Leadership architecture redesign.</p>
+      <p class="timeline">Most leaders notice the shift by week four.</p>
+    </div>
+
+    <div class="pattern">
+      <span class="num">ii.</span>
+      <span class="lab">Going Blank</span>
+      <h3>Stress hormones shutting down <em>working memory</em></h3>
+      <p class="desc">Mind goes blank in high-stakes moments. You lose access to what you know when it matters most.</p>
+      <div class="retrain-lab">How we retrain</div>
+      <p class="retrain">Stress-response reconditioning. Working memory restoration. Real-time intervention. Progressive stress exposure.</p>
+      <p class="timeline">Noticeable by week three. Significant shift by week eight.</p>
+    </div>
+
+    <div class="pattern">
+      <span class="num">iii.</span>
+      <span class="lab">Perfectionism</span>
+      <h3>Hyperactive <em>fear-of-failure</em> circuits</h3>
+      <p class="desc">"I should be able to handle this." Second-guessing. Shame about struggling. Chronic threat sensitivity.</p>
+      <div class="retrain-lab">How we retrain</div>
+      <p class="retrain">Threat-response recalibration around evaluation. Separating identity from performance. New feedback loops.</p>
+      <p class="timeline">Identity shift by week six. Behavioural change by week ten.</p>
+    </div>
+
+    <div class="pattern">
+      <span class="num">iv.</span>
+      <span class="lab">Performance Mode</span>
+      <h3>Chronically depleted <em>prefrontal</em> resources</h3>
+      <p class="desc">Running on autopilot. Decisions feel heavy. Functional but not sharp. Energy-conservation mode.</p>
+      <div class="retrain-lab">How we retrain</div>
+      <p class="retrain">Cognitive capacity restoration through rest protocols. Realignment to operate from strengths. Sustainable rhythms.</p>
+      <p class="timeline">Energy shift by week two. Decision quality by week six.</p>
+    </div>
+
+    <div class="pattern">
+      <span class="num">v.</span>
+      <span class="lab">Burnout</span>
+      <h3>Structural brain changes from <em>sustained</em> stress</h3>
+      <p class="desc">Running on empty. Can't slow down. Not just tired — chronic stress has changed your brain's structure.</p>
+      <div class="retrain-lab">How we retrain</div>
+      <p class="retrain">Amygdala regulation and PFC restoration. Structured rest as the mechanism for neuroplasticity. Tolerance rebuilt from depletion.</p>
+      <p class="timeline">Physical shift by week two. Cognitive restoration by week eight.</p>
+    </div>
+
+    <div class="pattern">
+      <span class="num">vi.</span>
+      <span class="lab">Decisions Under Pressure</span>
+      <h3>Threat system overriding <em>strategic</em> evaluation</h3>
+      <p class="desc">Impulsive or overly cautious choices when stakes are high. Amygdala hijacking control.</p>
+      <div class="retrain-lab">How we retrain</div>
+      <p class="retrain">Decision-making circuit rewiring under controlled pressure. Pattern interruption. PFC resilience in high-stakes simulations.</p>
+      <p class="timeline">Quality lift by week five. Consistent new pattern by week ten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 07 — What's Included + Investment ════ -->
+<section class="scene scene-included">
+  <div class="included-head">
+    <div>
+      <div class="label">06 · What's Included</div>
+      <h2>Twelve weeks of <em>structured</em> retraining.</h2>
+    </div>
+    <p class="note">Everything below is held inside a single price. No upsells.</p>
+  </div>
+
+  <div class="included-diptych">
+    <div class="included-list">
+      <div class="inc-item">
+        <span class="n">i.</span>
+        <span class="t">
+          Twelve weekly 1:1 coaching sessions
+          <span class="meta">60 minutes each, across 12 weeks</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">ii.</span>
+        <span class="t">
+          CliftonStrengths psychometric assessment
+          <span class="meta">Gallup-certified — how you're wired to lead</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">iii.</span>
+        <span class="t">
+          FITT16 personality assessment
+          <span class="meta">Purpose, drivers, alignment</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">iv.</span>
+        <span class="t">
+          Amygdala-PFC pattern diagnosis
+          <span class="meta">Conducted in week one</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">v.</span>
+        <span class="t">
+          Daily brain-retraining exercises
+          <span class="meta">Matched to your pattern · 10–15 min/day</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">vi.</span>
+        <span class="t">
+          Unlimited between-session support
+          <span class="meta">WhatsApp and email</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">vii.</span>
+        <span class="t">
+          Executive Performance Reset Playbook
+          <span class="meta">Your personal dashboard, protocols, training guide</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">viii.</span>
+        <span class="t">
+          Pre-meeting prep calls
+          <span class="meta">15-minute calls before critical moments</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">ix.</span>
+        <span class="t">
+          Strategic clarity frameworks
+          <span class="meta">Playing to Win · Essentialism</span>
+        </span>
+      </div>
+      <div class="inc-item">
+        <span class="n">x.</span>
+        <span class="t">
+          Progress assessments at week 4 and week 8
+          <span class="meta">And a 30-day post-programme check-in</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="price-card">
+      <div class="lab">Investment</div>
+      <div class="price"><span class="currency">£</span>3,600</div>
+      <p class="terms">Twelve weeks. Weekly sessions. One price.</p>
+      <a href="/contact" class="button">Book a discovery call</a>
+      <p class="footnote">Limited to <em>eight clients</em> per quarter.</p>
+
+      <div class="terms-list">
+        <div class="row">
+          <span class="k">Exit</span>
+          <span class="v">An <em>exit point</em> at week four. No questions.</span>
+        </div>
+        <div class="row">
+          <span class="k">Returning</span>
+          <span class="v">A <em>35% reduction</em> if the same pattern resurfaces within twelve months.</span>
+        </div>
+        <div class="row">
+          <span class="k">Pace</span>
+          <span class="v">A <em>fast-track</em> option condenses the work into eight weeks. Same price.</span>
+        </div>
+        <div class="row">
+          <span class="k">Enrolment</span>
+          <span class="v">Includes a <em>Board Presentation</em> intensive — 90 minutes on staying sharp under scrutiny.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 08 — Three Measurement Questions ════ -->
+<section class="scene scene-measure">
+  <div class="measure-head">
+    <div class="label">07 · How We Measure</div>
+    <h2>Three questions we measure <em>against</em>.</h2>
+    <p class="sub">Progress isn't a feeling. It's the answer to these — at week one, week twelve, and after.</p>
+  </div>
+
+  <div class="measure-grid">
+    <div class="measure">
+      <span class="num">i.</span>
+      <h3>Can I resist the <em>threat</em> response?</h3>
+      <p class="desc">Measured against high-pressure simulations, emotional reactivity to criticism, and your ability to stay strategic when challenged.</p>
+    </div>
+    <div class="measure">
+      <span class="num">ii.</span>
+      <h3>Can I stay <em>curious</em> in uncertainty?</h3>
+      <p class="desc">Measured against your response to ambiguous situations, question-asking under stress, and comfort with not-knowing.</p>
+    </div>
+    <div class="measure">
+      <span class="num">iii.</span>
+      <h3>Can I ask questions when my mind is <em>screaming</em>?</h3>
+      <p class="desc">Measured against your ability to engage the prefrontal cortex when the amygdala is activated — staying present in conflict.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 09 — Second Testimonial ════ -->
+<section class="scene scene-pull">
+  <div class="folio">08 · <span>In Their Words</span></div>
+  <div class="mark">"</div>
+  <blockquote>
+    Working with John has been <em>life-changing</em> for me.
+  </blockquote>
+  <div class="attr">
+    <span class="line"></span>
+    <span>Ralph Shorthose · Redhouse Bank</span>
+  </div>
+</section>
+
+<!-- ════ SCENE 10 — Closing ════ -->
+<section class="scene scene-close">
+  <div class="label">09 · <span>The Invitation</span></div>
+  <h2>
+    Tell me where you're <em>stuck</em>.<br />
+    If Lead Strong is the fit, we'll know inside fifteen minutes.
+  </h2>
+  <p class="standfirst">A discovery call is a fifteen-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're in.</p>
+
+  <div class="three-step">
+    <div class="row">
+      <span class="n">i.</span>
+      <span class="t">You tell me where you're stuck.</span>
+    </div>
+    <div class="row">
+      <span class="n">ii.</span>
+      <span class="t">I map the brain pattern keeping you there.</span>
+    </div>
+    <div class="row">
+      <span class="n">iii.</span>
+      <span class="t">We decide together if it's a fit.</span>
+    </div>
+  </div>
+
+  <div class="button-row">
+    <a href="/contact" class="button">Book a discovery call</a>
+    <a href="/stuck-quiz" class="button ghost">Or take the diagnostic</a>
+  </div>
+
+  <div class="endline">
+    <span>Catalyst Growth Coaching · Lead Strong</span>
+    <span>End of programme</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+    <div class="tag">I get leaders unstuck.</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">Lead Strong</a>
+    <a href="/teamstrong">TeamStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/cognitive-reset">Cognitive Reset</a>
+  </div>
+  <div class="col">
+    <h4>The Work</h4>
+    <a href="/about">About John</a>
+    <a href="/stuck-quiz">The Diagnostic</a>
+    <a href="/testimonials">Testimonials</a>
+    <a href="/for-organisations">For organisations</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© 2026 Catalyst Growth Coaching</span>
+    <span>London · Est. 2024</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Catalyst Growth Coaching</title>
+
+<!-- ════ SEO METADATA — preserved from existing contact.html ════ -->
+<meta name="description" content="Book a 15-minute discovery call with John Obidipe. Tell him where you're stuck, and find out if the work fits the moment you're in." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/contact" />
+<meta property="og:title" content="Book a Discovery Call | Catalyst Growth Coaching" />
+<meta property="og:description" content="A 15-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're in." />
+<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Book a Discovery Call | Catalyst Growth Coaching" />
+<meta name="twitter:description" content="A 15-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're in." />
+<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/contact" />
+<!-- ════ END SEO METADATA ════ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #141418;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  /* ─── Nav ─── */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82); backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav.top ul a:hover, nav.top ul a.active { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+
+  /* ═══ Single scene — full viewport, centred ═══ */
+  main.contact-scene {
+    flex: 1;
+    min-height: 100vh;
+    padding: 18vh 6vw 10vh;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+
+  .contact-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 6vw; align-items: end;
+    max-width: 1400px; margin: 0 auto; width: 100%;
+  }
+
+  /* Left column — masthead and headline */
+  .contact-left {
+    display: flex; flex-direction: column; gap: 4vh;
+  }
+  .contact-masthead {
+    display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .contact-masthead .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
+  .contact-masthead strong { color: var(--cognac); font-weight: 600; }
+
+  .contact-left h1 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(3rem, 8vw, 6.4rem);
+    line-height: 0.96; letter-spacing: -0.015em;
+  }
+  .contact-left h1 .l { display: block; }
+  .contact-left h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  /* Right column — promise + CTAs */
+  .contact-right {
+    display: flex; flex-direction: column; gap: 3rem;
+    max-width: 38ch; padding-bottom: 0.8rem; justify-self: end;
+  }
+  .contact-byline {
+    display: flex; gap: 0.8rem; align-items: center;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .contact-byline .line { width: 30px; height: 1px; background: var(--cognac); }
+
+  .contact-promise {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.35rem; line-height: 1.5; color: var(--bone);
+  }
+  .contact-promise em { color: var(--cognac); font-style: italic; }
+
+  /* Three-row promise list */
+  .promise-list {
+    border-top: 1px solid var(--line);
+  }
+  .promise-list .row {
+    padding: 1rem 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 3rem 1fr; gap: 1rem;
+    align-items: baseline;
+  }
+  .promise-list .row .n {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1rem; color: var(--cognac);
+  }
+  .promise-list .row .t {
+    color: var(--bone); font-size: 0.95rem; line-height: 1.5;
+  }
+  .promise-list .row .t em {
+    font-family: var(--font-d); font-style: italic; color: var(--cognac);
+  }
+
+  /* Primary CTA */
+  .contact-cta {
+    display: flex; flex-direction: column; gap: 1.2rem;
+    margin-top: 1rem;
+  }
+  .button-primary {
+    display: inline-block;
+    padding: 1.3rem 2.8rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; text-align: center;
+    transition: all 0.4s ease;
+  }
+  .button-primary:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .button-primary .arrow {
+    display: inline-block;
+    margin-left: 0.7rem;
+    transition: transform 0.3s ease;
+  }
+  .button-primary:hover .arrow { transform: translateX(4px); }
+
+  .cta-meta {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 0.95rem; color: var(--ash); line-height: 1.5;
+  }
+  .cta-meta em { color: var(--cognac); font-style: italic; }
+
+  /* Email line — quiet alternative */
+  .email-line {
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--ash); line-height: 1.6;
+  }
+  .email-line .lab {
+    display: block;
+    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 0.6rem;
+  }
+  .email-line .addr {
+    font-family: var(--font-d); font-style: italic; font-weight: 400;
+    font-size: 1.05rem; color: var(--bone); letter-spacing: 0.01em;
+  }
+  .email-line .help {
+    display: block; margin-top: 0.4rem;
+    font-family: var(--font-d); font-style: italic;
+    font-size: 0.92rem; color: var(--ash);
+  }
+
+  /* Endline footer */
+  .contact-endline {
+    margin-top: auto;
+    padding-top: 4rem;
+    max-width: 1400px; margin-left: auto; margin-right: auto;
+    width: 100%;
+  }
+  .contact-endline .row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 1.5rem; border-top: 1px solid var(--line);
+    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .contact-endline .row .scroll {
+    display: flex; gap: 0.8rem; align-items: center;
+  }
+  .contact-endline .row .scroll .line { width: 28px; height: 1px; background: var(--cognac); }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash); display: flex; justify-content: space-between;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+
+    main.contact-scene { padding: 14vh 6vw 8vh; }
+
+    .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .contact-right { max-width: 100%; justify-self: start; }
+    .contact-left h1 { font-size: clamp(2.6rem, 12vw, 4.4rem); }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/index.html#doors">Programmes</a></li>
+    <li><a href="/testimonials.html">Results</a></li>
+    <li><a href="/stuck-quiz">Diagnostic</a></li>
+    <li><a href="/contact.html" class="cta active">Book a call</a></li>
+  </ul>
+</nav>
+
+<!-- ════ SINGLE SCENE — Contact ════ -->
+<main class="contact-scene">
+
+  <div class="contact-grid">
+
+    <!-- Left: Masthead + Headline -->
+    <div class="contact-left">
+      <div class="contact-masthead">
+        <span>Contact</span>
+        <span class="dot"></span>
+        <span><strong>The discovery call</strong></span>
+        <span class="dot"></span>
+        <span>15 minutes · no pitch</span>
+      </div>
+
+      <h1>
+        <span class="l">Tell me where</span>
+        <span class="l">you're <em>stuck</em>.</span>
+      </h1>
+    </div>
+
+    <!-- Right: Promise + CTA -->
+    <div class="contact-right">
+      <div class="contact-byline">
+        <span class="line"></span>
+        <span>The discovery call</span>
+      </div>
+
+      <p class="contact-promise">
+        A fifteen-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're <em>in</em>.
+      </p>
+
+      <div class="promise-list">
+        <div class="row">
+          <span class="n">i.</span>
+          <span class="t">You tell me where you're <em>stuck</em>.</span>
+        </div>
+        <div class="row">
+          <span class="n">ii.</span>
+          <span class="t">I map the <em>pattern</em> keeping you there.</span>
+        </div>
+        <div class="row">
+          <span class="n">iii.</span>
+          <span class="t">We decide together <em>if</em> it's a fit.</span>
+        </div>
+      </div>
+
+      <div class="contact-cta">
+        <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule"
+           class="button-primary"
+           target="_blank"
+           rel="noopener">
+          Book a discovery call
+          <span class="arrow">→</span>
+        </a>
+        <p class="cta-meta">Opens in a <em>new window</em>. Choose the time that fits.</p>
+      </div>
+
+      <div class="email-line">
+        <span class="lab">Or by email</span>
+        <span class="addr">coach [at] catalystgrowthcoach.co.uk</span>
+        <span class="help">Replace [at] with @ to send.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Endline -->
+  <div class="contact-endline">
+    <div class="row">
+      <span>Catalyst Growth Coaching</span>
+      <span class="scroll">
+        <span>End of issue</span>
+        <span class="line"></span>
+      </span>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+    <div class="tag">I get leaders unstuck.</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">Lead Strong</a>
+    <a href="/teamstrong">TeamStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/cognitive-reset">Cognitive Reset</a>
+  </div>
+  <div class="col">
+    <h4>The Work</h4>
+    <a href="/about">About John</a>
+    <a href="/stuck-quiz">The Diagnostic</a>
+    <a href="/testimonials">Testimonials</a>
+    <a href="/for-organisations">For organisations</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© 2026 Catalyst Growth Coaching</span>
+    <span>London · Est. 2024</span>
+  </div>
+</footer>
+
+</body>
+</html>
