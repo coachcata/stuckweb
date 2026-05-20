@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Catalyst Growth Coaching — Executive Coaching for Senior Leaders</title>
+<title>Catalyst Growth Coaching — Strategic Thinking Partnership</title>
 
 <!-- ════ SEO METADATA ════ -->
-<meta name="description" content="Neuroscience-backed coaching for senior leaders who've stopped moving forward. Lead Strong, TeamStrong, BuildStrong, and Cognitive Reset. London, est. 2024." />
+<meta name="description" content="Strategic thinking, live. At the whiteboard. To a conclusion. The Whiteboard Sessions for senior leaders, founders and teams." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/" />
-<meta property="og:title" content="Catalyst Growth Coaching — I get leaders unstuck" />
-<meta property="og:description" content="Neuroscience-backed coaching for senior leaders who've stopped moving forward." />
+<meta property="og:title" content="Catalyst Growth Coaching — Strategic Thinking Partnership" />
+<meta property="og:description" content="Strategic thinking, live. At the whiteboard. To a conclusion. The Whiteboard Sessions for senior leaders, founders and teams." />
 <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
-<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta property="og:site_name" content="John Obidipe | Catalyst Growth Coaching" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Catalyst Growth Coaching — I get leaders unstuck" />
-<meta name="twitter:description" content="Neuroscience-backed coaching for senior leaders who've stopped moving forward." />
+<meta name="twitter:title" content="Catalyst Growth Coaching — Strategic Thinking Partnership" />
+<meta name="twitter:description" content="Strategic thinking, live. At the whiteboard. To a conclusion. The Whiteboard Sessions for senior leaders, founders and teams." />
 <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/" />
 <!-- ════ END SEO METADATA ════ -->
@@ -157,7 +157,7 @@
   }
   .scene-premise .attr .line { width: 40px; height: 1px; background: var(--cognac); }
 
-  /* ══ SCENE 03 — Four Stucks ══ */
+  /* ══ SCENE — Stucks/Altitudes ══ */
   .scene-stucks {
     background: var(--bg-2);
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
@@ -205,6 +205,40 @@
     font-family: var(--font-d); font-style: italic; font-weight: 300;
     font-size: 1.05rem; color: var(--stone); line-height: 1.4;
     margin-top: auto; padding-top: 2.5rem; max-width: 20ch;
+  }
+
+  /* Three-cell variant of stucks-grid (used for The Three Altitudes) */
+  .altitudes-grid { grid-template-columns: repeat(3, 1fr) !important; }
+
+  /* ══ SCENE — Argument (prose) — Part 1 §3.3.2 ══ */
+  .scene-argument {
+    flex-direction: column; justify-content: center;
+    padding: 12vh 6vw; position: relative;
+  }
+  .scene-argument .folio {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 4rem;
+  }
+  .scene-argument .folio span { color: var(--cognac); }
+  .scene-argument h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4.2vw, 3.2rem);
+    line-height: 1.1; max-width: 18ch; margin-bottom: 4rem;
+  }
+  .scene-argument h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-argument .argument-body {
+    max-width: 56ch; font-family: var(--font-d); font-style: italic;
+    font-weight: 300; font-size: 1.4rem; line-height: 1.65; color: var(--stone);
+  }
+  .scene-argument .argument-body p {
+    margin-bottom: 1.2rem;
+  }
+  .scene-argument .argument-body .punchline {
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);
+    color: var(--bone); font-size: 1.55rem;
+  }
+  .scene-argument .argument-body .punchline em {
+    font-style: italic; color: var(--cognac); font-weight: 400;
   }
 
   /* ══ Testimonial scenes ══ */
@@ -259,6 +293,13 @@
     color: rgba(242,240,236,0.5); z-index: 2;
   }
   .method-image .plate-label span { color: var(--cognac); }
+  .method-image .plate-note {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    color: rgba(242,240,236,0.5); font-size: 1.05rem; text-align: center;
+    padding: 2rem; z-index: 2;
+  }
   .method-text {
     padding: 12vh 5vw;
     display: flex; flex-direction: column; justify-content: center; gap: 2.5rem;
@@ -365,30 +406,6 @@
   }
   .door:hover .enter .arrow { width: 3.4rem; }
 
-  /* ── Quiz secondary path ── */
-  .quiz-path {
-    margin-top: 4rem; padding-top: 2.5rem;
-    border-top: 1px solid var(--line);
-    display: flex; justify-content: center; align-items: center; gap: 1rem;
-    flex-wrap: wrap; text-align: center;
-  }
-  .quiz-path .text {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    color: var(--stone); font-size: 1.15rem;
-  }
-  .quiz-path .text em { color: var(--bone); font-style: italic; }
-  .quiz-path a {
-    display: inline-flex; gap: 0.7rem; align-items: center;
-    font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600;
-    text-decoration: none; transition: all 0.3s;
-  }
-  .quiz-path a .arrow {
-    display: inline-block; width: 2rem; height: 1px;
-    background: var(--cognac); transition: width 0.4s ease;
-  }
-  .quiz-path a:hover .arrow { width: 3rem; }
-
   /* ══ Closing ══ */
   .scene-close {
     flex-direction: column; justify-content: center; align-items: flex-start;
@@ -473,6 +490,7 @@
     .scene-stucks .head { grid-template-columns: 1fr; gap: 2rem; }
     .scene-stucks .head .note { justify-self: start; text-align: left; padding-bottom: 0; }
     .stucks-grid { grid-template-columns: 1fr; }
+    .altitudes-grid { grid-template-columns: 1fr !important; }
     .stuck {
       border-right: none; border-bottom: 1px solid var(--line);
       padding: 2.5rem 0.5rem; min-height: auto;
@@ -480,14 +498,16 @@
     .stuck:last-child { border-bottom: none; }
     .stuck .caption { padding-top: 1.5rem; }
 
+    .scene-argument { padding: 10vh 6vw; }
+    .scene-argument .argument-body { font-size: 1.15rem; }
+    .scene-argument .argument-body .punchline { font-size: 1.3rem; }
+
     .scene-method .split { grid-template-columns: 1fr; }
     .method-image { min-height: 40vh; }
     .method-text { padding: 6rem 2rem; }
 
     .doors { grid-template-columns: 1fr; }
     .door { padding: 2.8rem 2rem; min-height: auto; }
-
-    .quiz-path { flex-direction: column; gap: 1.5rem; }
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
     footer .fine { flex-direction: column; gap: 0.8rem; }
@@ -503,28 +523,27 @@
 <nav class="top">
   <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
   <ul>
-    <li><a href="#stucks">The Method</a></li>
+    <li><a href="/about">About</a></li>
     <li><a href="#doors">Programmes</a></li>
-    <li><a href="/stuck-quiz">Diagnostic</a></li>
-    <li><a href="/about.html">About John</a></li>
-    <li><a href="/contact" class="cta">Book a call</a></li>
+    <li><a href="/in-practice">In Practice</a></li>
+    <li><a href="/contact" class="cta">Book a Session</a></li>
   </ul>
 </nav>
 
 <!-- ════ SCENE 01 — Masthead ════ -->
 <section class="scene scene-open">
   <div class="masthead-top">
-    <span>Issue N° 01</span>
+    <span>Issue N° 02</span>
     <span class="dot"></span>
-    <span><strong>Executive Coaching</strong></span>
+    <span><strong>Executive Thinking Partnership</strong></span>
     <span class="dot"></span>
     <span>London · Est. 2024</span>
   </div>
 
   <div class="hero-grid">
     <h1>
-      <span class="line">I get leaders</span>
-      <span class="line"><em class="accent">unstuck</em>.</span>
+      <span class="line">Don't get</span>
+      <span class="line"><em class="accent">stuck</em>.</span>
     </h1>
 
     <div class="hero-right">
@@ -532,7 +551,7 @@
         <span class="line"></span>
         <span>John Obidipe, Performance Coach</span>
       </div>
-      <p class="lede">Neuroscience-backed coaching for senior leaders who've stopped moving forward.</p>
+      <p class="lede">Strategic thinking, live. At the whiteboard. To a conclusion.</p>
     </div>
   </div>
 
@@ -549,185 +568,171 @@
 <section class="scene scene-premise">
   <div class="folio">01 · <span>The Premise</span></div>
   <blockquote>
-    You're not failing. But you're not moving <em class="accent">forward</em> either.
+    Nothing in your week is designed for <em class="accent">thinking</em>.
   </blockquote>
   <div class="attr">
     <span class="line"></span>
-    <span>Where most leaders arrive</span>
+    <span>Where most senior leaders arrive</span>
   </div>
 </section>
 
-<!-- ════ SCENE 03 — Four Stucks ════ -->
-<section class="scene scene-stucks" id="stucks">
+<!-- ════ SCENE 03 — Three Altitudes ════ -->
+<section class="scene scene-stucks" id="altitudes">
   <div class="head">
     <div>
-      <div class="label">02 · The Framework</div>
-      <h2>Four ways the brain gets <em class="accent">stuck</em>.</h2>
+      <div class="label">02 · The Work</div>
+      <h2>The work moves at three <em class="accent">altitudes</em>.</h2>
     </div>
-    <p class="note">Different patterns. Different interventions. One of them is probably yours.</p>
+    <p class="note">The session takes the altitude your problem needs.</p>
   </div>
 
-  <div class="stucks-grid">
+  <div class="stucks-grid altitudes-grid">
     <div class="stuck">
       <span class="num">i.</span>
-      <h3><em>Relating</em></h3>
-      <p class="caption">When presence under pressure disappears.</p>
+      <h3><em>Strategic</em></h3>
+      <p class="caption">The next eighteen months. The board narrative. The shape of growth.</p>
     </div>
     <div class="stuck">
       <span class="num">ii.</span>
-      <h3><em>Thinking</em></h3>
-      <p class="caption">When the mind goes blank in the room that matters.</p>
+      <h3><em>Mid-altitude</em></h3>
+      <p class="caption">Restructures and hiring. The change you need to land. The conversation you've been avoiding.</p>
     </div>
     <div class="stuck">
       <span class="num">iii.</span>
-      <h3><em>Outputting</em></h3>
-      <p class="caption">When the work is there, but nothing ships.</p>
-    </div>
-    <div class="stuck">
-      <span class="num">iv.</span>
-      <h3><em>Moving</em></h3>
-      <p class="caption">When the next decision never quite arrives.</p>
+      <h3><em>Tactical</em></h3>
+      <p class="caption">The meeting on Tuesday. The email you keep rewriting. The call you've been ducking.</p>
     </div>
   </div>
 </section>
 
-<!-- ════ SCENE 04 — First Testimonial ════ -->
-<section class="scene scene-pull">
-  <div class="folio">03 · <span>In Their Words</span></div>
-  <div class="mark">"</div>
-  <blockquote>
-    Renewed focus and confidence at a point in my career when I <em>really</em> needed it.
-    A genuine 1 + 1 = 3 moment.
-  </blockquote>
-  <div class="attr">
-    <span class="line"></span>
-    <span>Lead Strong client</span>
+<!-- ════ SCENE 04 — The Gap ════ -->
+<section class="scene scene-argument">
+  <div class="folio">03 · <span>The Gap</span></div>
+  <h2>Where the thinking time <em>goes</em>.</h2>
+  <div class="argument-body">
+    <p>Meetings aren't designed for thinking. They're designed for alignment and information transfer.</p>
+    <p>Email isn't designed for thinking. It's designed for response.</p>
+    <p>Team updates aren't designed for thinking. They're designed for visibility.</p>
+    <p>The board isn't designed for thinking. It's designed for governance.</p>
+    <p>Even the executive assistant is optimising the leader's time <em>away</em> from thinking, not toward it. Toward more meetings. More replies. More board prep.</p>
+    <p class="punchline">The Whiteboard Sessions are the hour in the week that <em>is</em>.</p>
   </div>
 </section>
 
-<!-- ════ SCENE 05 — Method ════ -->
+<!-- ════ SCENE 05 — The Whiteboard ════ -->
 <section class="scene scene-method">
   <div class="split">
-    <div class="method-image">
-      <div class="plate-label">Plate i · <span>The method</span></div>
+    <div class="method-image whiteboard-plate">
+      <div class="plate-label">Plate ii · <span>The Whiteboard</span></div>
+      <div class="plate-note">Whiteboard plate — photograph to follow.</div>
+      <!-- When ready, replace with: <img src="/images/whiteboard-plate.jpg" alt="A whiteboard mid-session"> and remove .plate-note -->
     </div>
 
     <div class="method-text">
-      <div class="label">04 · The Method</div>
-      <h2>Not motivation. <em>Retraining</em>.</h2>
-      <p class="standfirst">Most coaching redirects the brain. The work here rewires it — so Monday doesn't undo Friday.</p>
+      <div class="label">04 · The Session</div>
+      <h2>One whiteboard. Your hardest problem. Two people <em>thinking</em>.</h2>
+      <p class="standfirst">The session externalises what you've been carrying, pressure-tests it live, and ends in a conclusion you can act on by Monday.</p>
 
       <div class="three">
         <div class="beat">
           <span class="n">i.</span>
-          <span class="t">Identify the pattern<span>Which stuck state is yours.</span></span>
+          <span class="t">Externalise<span>Get what's swirling in your head onto the board.</span></span>
         </div>
         <div class="beat">
           <span class="n">ii.</span>
-          <span class="t">Retrain the response<span>Neuroscience-backed protocols.</span></span>
+          <span class="t">Pressure-test<span>Talk through the options out loud, live.</span></span>
         </div>
         <div class="beat">
           <span class="n">iii.</span>
-          <span class="t">Change what happens under pressure<span>The moment that matters.</span></span>
+          <span class="t">Conclude<span>Leave with a decision, not a homework prompt.</span></span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ SCENE 06 — Second Testimonial ════ -->
+<!-- ════ SCENE 06 — First Testimonial ════ -->
 <section class="scene scene-pull">
   <div class="folio">05 · <span>In Their Words</span></div>
   <div class="mark">"</div>
   <blockquote>
-    Before John, I often felt lost at work.<br />
-    Now I know exactly what I bring — and I step forward every day with <em>real</em> confidence.
+    [Placeholder — long-form testimonial to be supplied. Format: 3-4 sentences in client's voice,
+    specific to the engagement, naming an actual problem and an actual outcome. Long-form register,
+    not coaching-site short.]
   </blockquote>
   <div class="attr">
     <span class="line"></span>
-    <span>Lead Strong client</span>
+    <span>[Name and role to follow]</span>
   </div>
 </section>
 
-<!-- ════ SCENE 07 — Three Doors + Quiz ════ -->
+<!-- ════ SCENE 07 — Three Doors ════ -->
 <section class="scene scene-doors" id="doors">
   <div class="head">
-    <div class="label">06 · Programmes</div>
-    <h2>Three ways in, depending on <em class="accent">who's stuck</em>.</h2>
-    <p class="sub">The work is different for an individual leader, a team, and a leader running on empty. Start with who you are.</p>
+    <div class="label">06 · The Programmes</div>
+    <h2>Three contexts. One <em class="accent">practice</em>.</h2>
+    <p class="sub">The Whiteboard Sessions look different depending on who's in the room. The thinking stays the same. The context shapes what we think about.</p>
   </div>
 
   <div class="doors">
-    <!-- DOOR 1 — FOR THE LEADER -->
     <a class="door" href="/leadstrong">
       <span class="door-num">i.</span>
-      <span class="door-for">For the leader</span>
-      <h3>When one leader's <em>stuck</em>.</h3>
-      <p class="desc">1:1 coaching for senior leaders and founders ready to move again.</p>
+      <span class="door-for">For the corporate leader</span>
+      <h3><em>LeadStrong</em></h3>
+      <p class="desc">Strategic thinking for Directors, VPs and executives navigating organisations they don't own.</p>
       <div class="includes">
-        <span class="lab">What fits</span>
-        <span class="prog">Lead Strong</span>
-        <span class="prog">BuildStrong</span>
+        <span class="lab">Who it's for</span>
+        <span class="prog">Director · VP · Executive</span>
       </div>
       <span class="enter">
         <span class="arrow"></span>
-        Find your fit
+        Inside LeadStrong
       </span>
     </a>
 
-    <!-- DOOR 2 — FOR THE TEAM -->
-    <a class="door" href="/teamstrong">
+    <a class="door" href="/buildstrong">
       <span class="door-num">ii.</span>
-      <span class="door-for">For the team</span>
-      <h3>When the team's <em>stuck</em>.</h3>
-      <p class="desc">Team coaching for leadership groups that have lost alignment, momentum, or both.</p>
+      <span class="door-for">For the business owner</span>
+      <h3><em>BuildStrong</em></h3>
+      <p class="desc">Strategic thinking for entrepreneurs, MDs and business owners building the thing they lead.</p>
       <div class="includes">
-        <span class="lab">What fits</span>
-        <span class="prog">TeamStrong</span>
+        <span class="lab">Who it's for</span>
+        <span class="prog">Founder · MD · Owner</span>
       </div>
       <span class="enter">
         <span class="arrow"></span>
-        Open TeamStrong
+        Inside BuildStrong
       </span>
     </a>
 
-    <!-- DOOR 3 — FOR THE DEPLETED -->
-    <a class="door" href="/cognitive-reset">
+    <a class="door" href="/teamstrong">
       <span class="door-num">iii.</span>
-      <span class="door-for">For the depleted</span>
-      <h3>When the tank is <em>empty</em>.</h3>
-      <p class="desc">A one, two, or three-day restorative retreat for leaders running on empty.</p>
+      <span class="door-for">For the team in the room</span>
+      <h3><em>TeamStrong</em></h3>
+      <p class="desc">Strategic thinking for senior teams who need to think together, decide together, and move faster.</p>
       <div class="includes">
-        <span class="lab">What fits</span>
-        <span class="prog">Cognitive Reset</span>
+        <span class="lab">Who it's for</span>
+        <span class="prog">Leader and team</span>
       </div>
       <span class="enter">
         <span class="arrow"></span>
-        Open Cognitive Reset
+        Inside TeamStrong
       </span>
-    </a>
-  </div>
-
-  <!-- QUIZ — quiet secondary path -->
-  <div class="quiz-path">
-    <p class="text">Not sure which one fits? <em>Take the diagnostic.</em></p>
-    <a href="/stuck-quiz">
-      <span class="arrow"></span>
-      Eight questions, two minutes
     </a>
   </div>
 </section>
 
-<!-- ════ SCENE 08 — Third Testimonial ════ -->
+<!-- ════ SCENE 08 — Second Testimonial ════ -->
 <section class="scene scene-pull">
   <div class="folio">07 · <span>In Their Words</span></div>
   <div class="mark">"</div>
   <blockquote>
-    A safe space to talk, reflect, and stay focused on what <em>actually</em> matters.
+    [Placeholder — second testimonial to be supplied. Different client, different sector if possible.
+    Same long-form specific register.]
   </blockquote>
   <div class="attr">
     <span class="line"></span>
-    <span>TeamStrong client</span>
+    <span>[Name and role to follow]</span>
   </div>
 </section>
 
@@ -738,9 +743,12 @@
     If you've read this far,<br />
     you already <em>know</em>.
   </h2>
+  <p style="font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: 1.25rem; color: var(--stone); margin-top: -2rem; margin-bottom: 4rem; max-width: 36ch;">
+    You'll know inside the first hour whether this is the thinking partnership you've been looking for.
+  </p>
   <div class="button-row">
-    <a href="#doors" class="button">Choose your path</a>
-    <a href="/stuck-quiz" class="button ghost">Or take the diagnostic</a>
+    <a href="/contact" class="button">Book a Whiteboard Session</a>
+    <a href="/in-practice" class="button ghost">Read In Practice</a>
   </div>
 
   <div class="endline">
@@ -757,22 +765,19 @@
   </div>
   <div class="col">
     <h4>Programmes</h4>
-    <a href="/leadstrong">Lead Strong</a>
-    <a href="/teamstrong">TeamStrong</a>
+    <a href="/leadstrong">LeadStrong</a>
     <a href="/buildstrong">BuildStrong</a>
-    <a href="/cognitive-reset">Cognitive Reset</a>
+    <a href="/teamstrong">TeamStrong</a>
   </div>
   <div class="col">
-    <h4>The Work</h4>
+    <h4>Read</h4>
     <a href="/about">About John</a>
-    <a href="/stuck-quiz">The Diagnostic</a>
-    <a href="/testimonials">Testimonials</a>
-    <a href="/for-organisations">For organisations</a>
-    <a href="/contact">Contact</a>
+    <a href="/in-practice">In Practice</a>
+    <a href="/contact">Book a Session</a>
   </div>
   <div class="fine">
-    <span>© 2026 Catalyst Growth Coaching</span>
-    <span>London · Est. 2024</span>
+    <span>© Catalyst Growth Coaching, London · Est. 2024</span>
+    <span>Issue N° 02</span>
   </div>
 </footer>
 
