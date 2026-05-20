@@ -3,28 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TeamStrong — Catalyst Growth Coaching</title>
+<title>TeamStrong — Strategic Thinking for the Senior Team | Catalyst</title>
 
-<!-- ════ SEO METADATA — preserved from existing teamstrong.html ════ -->
-<meta name="description" content="12-week team coaching programme using CliftonStrengths. Unlock team potential, eliminate friction, build high-performance collaboration." />
+<!-- ════ SEO METADATA ════ -->
+<meta name="description" content="Strategic thinking partnership for senior teams that need to think together, decide together, and move faster." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/teamstrong" />
-<meta property="og:title" content="Leadership Team Coaching UK | TeamStrong | John Obidipe" />
-<meta property="og:description" content="12-week team coaching programme for leadership teams. CliftonStrengths-based. Get your team unstuck and performing at their best." />
+<meta property="og:title" content="TeamStrong — Strategic Thinking for the Senior Team | Catalyst" />
+<meta property="og:description" content="Strategic thinking partnership for senior teams that need to think together, decide together, and move faster." />
 <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
-<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta property="og:site_name" content="John Obidipe | Catalyst Growth Coaching" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Leadership Team Coaching UK | TeamStrong | John Obidipe" />
-<meta name="twitter:description" content="12-week team coaching programme for leadership teams. CliftonStrengths-based. Get your team unstuck and performing at their best." />
+<meta name="twitter:title" content="TeamStrong — Strategic Thinking for the Senior Team | Catalyst" />
+<meta name="twitter:description" content="Strategic thinking partnership for senior teams that need to think together, decide together, and move faster." />
 <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/teamstrong" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"TeamStrong Leadership Team Coaching","provider":{"@type":"Person","name":"John Obidipe"},"description":"12-week team coaching programme for leadership teams using Gallup CliftonStrengths methodology.","areaServed":"United Kingdom"}
+{"@context":"https://schema.org","@type":"Service","name":"TeamStrong — Strategic Thinking Partnership","provider":{"@type":"Person","name":"John Obidipe"},"description":"Strategic thinking partnership for senior teams that need to think together, decide together, and move faster.","areaServed":"United Kingdom"}
 </script>
 <!-- ════ END SEO METADATA ════ -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-
 <style>
   :root {
     --bg:         #0C0C0E;
@@ -41,14 +40,19 @@
     --font-d: 'Cormorant Garamond', Georgia, serif;
     --font-b: 'DM Sans', -apple-system, sans-serif;
   }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--bg); color: var(--bone);
-    font-family: var(--font-b); line-height: 1.7;
-    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    background: var(--bg);
+    color: var(--bone);
+    font-family: var(--font-b);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   ::selection { background: var(--cognac); color: var(--bg); }
+
   em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
 
   /* ─── Nav ─── */
@@ -56,90 +60,87 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1.5rem 2.5vw;
     display: flex; justify-content: space-between; align-items: center;
-    background: rgba(12,12,14,0.82); backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+    background: rgba(12,12,14,0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
   }
   nav.top .brand {
     font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
     letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
   }
   nav.top .brand span { color: var(--cognac); }
-  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul {
+    display: flex; gap: 2rem; list-style: none; align-items: center;
+  }
   nav.top ul a {
     font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--stone); text-decoration: none; font-weight: 500;
     transition: color 0.3s;
   }
-  nav.top ul a:hover, nav.top ul a.active { color: var(--cognac); }
+  nav.top ul a:hover { color: var(--cognac); }
   nav.top ul a.cta {
     color: var(--cognac); border: 1px solid var(--line-strong);
     padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
   }
-  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  nav.top ul a.cta:hover {
+    background: rgba(200,149,108,0.08); border-color: var(--cognac);
+  }
 
   /* ─── Scene base ─── */
   section.scene {
-    min-height: auto; padding: 12vh 6vw;
+    min-height: 100vh; padding: 10vh 6vw;
     position: relative; display: flex;
   }
 
-  /* ══ SCENE 01 — Editorial Masthead ══ */
-  .scene-open {
-    padding-top: 16vh; padding-bottom: 8vh;
-    flex-direction: column; justify-content: center;
-    border-bottom: 1px solid var(--line);
+  /* ══ SCENE — Feature Hero (Part 1 §3.3.1) ══ */
+  .scene-feature-hero {
+    padding-top: 14vh;
+    flex-direction: column;
+    justify-content: center;
   }
-  .scene-open .masthead-top {
-    display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+  .scene-feature-hero .feature-folio {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 5vh;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.5rem;
   }
-  .scene-open .masthead-top .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
-  .scene-open .masthead-top strong { color: var(--cognac); font-weight: 600; }
-  .scene-open .hero-grid {
+  .scene-feature-hero .feature-label {
+    font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash); margin-bottom: 3vh;
+  }
+  .scene-feature-hero .feature-grid {
     display: grid; grid-template-columns: 3fr 2fr;
     gap: 5vw; align-items: end;
   }
-  .scene-open h1 {
+  .scene-feature-hero h1 {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(3rem, 8vw, 6.4rem);
-    line-height: 0.96; letter-spacing: -0.015em;
+    font-size: clamp(2.8rem, 7.5vw, 5.5rem);
+    line-height: 1.0; letter-spacing: -0.01em;
   }
-  .scene-open h1 .l { display: block; }
-  .scene-open h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-open .right {
-    display: flex; flex-direction: column; gap: 1.8rem;
-    max-width: 32ch; padding-bottom: 0.8rem; justify-self: end;
+  .scene-feature-hero h1 .line { display: block; }
+  .scene-feature-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-feature-hero .feature-right {
+    display: flex; flex-direction: column; gap: 1.5rem;
+    max-width: 32ch; padding-bottom: 0.5rem; justify-self: end;
   }
-  .scene-open .byline {
-    display: flex; gap: 0.8rem; align-items: center;
-    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ash);
+  .scene-feature-hero .feature-byline {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ash); display: flex; gap: 0.8rem; align-items: center;
   }
-  .scene-open .byline .line { width: 30px; height: 1px; background: var(--cognac); }
-  .scene-open .lede {
+  .scene-feature-hero .feature-byline .line { width: 30px; height: 1px; background: var(--cognac); }
+  .scene-feature-hero .feature-lede {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
     font-size: 1.3rem; line-height: 1.5; color: var(--bone);
   }
-  .scene-open .meta-row {
-    margin-top: 6vh;
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--line); padding-top: 1.5rem;
-    gap: 2rem;
-  }
-  .scene-open .meta-row .item {
-    display: flex; flex-direction: column; gap: 0.4rem;
-  }
-  .scene-open .meta-row .lab {
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+  .scene-feature-hero .breadcrumb {
+    margin-top: 6vh; padding-top: 1.2rem; border-top: 1px solid var(--line);
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
     color: var(--ash);
   }
-  .scene-open .meta-row .val {
-    font-family: var(--font-d); font-size: 1.1rem; color: var(--bone); font-weight: 400;
+  .scene-feature-hero .breadcrumb a {
+    color: var(--cognac); text-decoration: none;
   }
-  .scene-open .meta-row .val em { font-style: italic; color: var(--cognac); }
 
-  /* ══ SCENE 02 — Premise pull-quote ══ */
+  /* ══ SCENE — Premise ══ */
   .scene-premise {
     flex-direction: column; justify-content: center; align-items: center;
     text-align: center; padding: 14vh 8vw; position: relative;
@@ -152,8 +153,8 @@
   .scene-premise .folio span { color: var(--cognac); }
   .scene-premise blockquote {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: 1.15; max-width: 26ch;
+    font-size: clamp(2.2rem, 6vw, 4.6rem);
+    line-height: 1.12; max-width: 22ch;
   }
   .scene-premise blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
   .scene-premise .attr {
@@ -164,60 +165,88 @@
   }
   .scene-premise .attr .line { width: 40px; height: 1px; background: var(--cognac); }
 
-  /* ══ SCENE 03 — What teams carry (signals 2x3) ══ */
-  .scene-signals {
+  /* ══ SCENE — Stucks/Altitudes ══ */
+  .scene-stucks {
     background: var(--bg-2);
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    flex-direction: column;
+    flex-direction: column; justify-content: center;
   }
-  .signals-head {
+  .scene-stucks .head {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 4vw; align-items: baseline; margin-bottom: 8vh;
   }
-  .signals-head .label {
+  .scene-stucks .head .label {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
   }
-  .signals-head h2 {
+  .scene-stucks .head h2 {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.1; max-width: 18ch;
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    line-height: 1.12; max-width: 15ch;
   }
-  .signals-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .signals-head .note {
+  .scene-stucks .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-stucks .head .note {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.2rem; color: var(--stone); max-width: 34ch;
+    font-size: 1.25rem; color: var(--stone); max-width: 30ch;
     line-height: 1.5; justify-self: end; text-align: right; padding-bottom: 0.4rem;
   }
-  .signals-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid var(--line-strong);
+  .stucks-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
   }
-  .signal {
-    padding: 2.6rem 2rem 3rem;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    display: flex; flex-direction: column; gap: 0.8rem; min-height: 240px;
+  .stuck {
+    padding: 3rem 2rem 3.5rem; border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1rem; min-height: 280px;
     transition: background 0.5s ease;
   }
-  .signal:nth-child(3n) { border-right: none; }
-  .signal:nth-child(n+4) { border-bottom: none; }
-  .signal:hover { background: rgba(200,149,108,0.04); }
-  .signal .num {
-    font-family: var(--font-d); font-style: italic; font-size: 1.1rem; color: var(--cognac);
+  .stuck:last-child { border-right: none; }
+  .stuck:hover { background: rgba(200,149,108,0.04); }
+  .stuck .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
   }
-  .signal h3 {
-    font-family: var(--font-d); font-weight: 400; font-size: 1.5rem;
-    line-height: 1.2; color: var(--bone); margin-top: 0.6rem;
+  .stuck h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 2rem;
+    line-height: 1.05; color: var(--bone); margin-top: 1rem;
   }
-  .signal h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .signal p {
+  .stuck h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .stuck .caption {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1rem; color: var(--stone); line-height: 1.5;
-    margin-top: auto; padding-top: 1.5rem;
+    font-size: 1.05rem; color: var(--stone); line-height: 1.4;
+    margin-top: auto; padding-top: 2.5rem; max-width: 20ch;
   }
 
-  /* ══ SCENE 04 — The Method (Two phases) ══ */
+  .altitudes-grid { grid-template-columns: repeat(3, 1fr) !important; }
+
+  /* ══ SCENE — Pull quote ══ */
+  .scene-pull {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 14vh 8vw; position: relative;
+  }
+  .scene-pull .folio {
+    position: absolute; top: 6vh; left: 6vw;
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .folio span { color: var(--cognac); }
+  .scene-pull .mark {
+    font-family: var(--font-d); font-style: italic; font-size: 4rem;
+    color: var(--cognac); line-height: 1; margin-bottom: 2rem; opacity: 0.6;
+  }
+  .scene-pull blockquote {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+    line-height: 1.2; max-width: 24ch; color: var(--bone);
+  }
+  .scene-pull blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-pull .attr {
+    margin-top: 4rem;
+    display: flex; gap: 1rem; align-items: center;
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ash);
+  }
+  .scene-pull .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+
+  /* ══ SCENE — Method (split) ══ */
   .scene-method { padding: 0; min-height: 100vh; }
   .scene-method .split {
     display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh;
@@ -256,408 +285,47 @@
   .method-text h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
   .method-text .standfirst {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.25rem; line-height: 1.5; color: var(--stone); max-width: 32ch;
+    font-size: 1.25rem; line-height: 1.5; color: var(--stone); max-width: 30ch;
   }
-  .method-text .three { display: flex; flex-direction: column; margin-top: 1rem; max-width: 44ch; }
+  .method-text .three { display: flex; flex-direction: column; margin-top: 1rem; max-width: 42ch; }
   .method-text .three .beat {
-    display: grid; grid-template-columns: 6.5rem 1fr; gap: 1.4rem;
-    padding: 1.6rem 0; border-bottom: 1px solid var(--line); align-items: baseline;
+    display: grid; grid-template-columns: 2rem 1fr; gap: 1.2rem;
+    padding: 1.1rem 0; border-bottom: 1px solid var(--line); align-items: baseline;
   }
   .method-text .three .beat:last-child { border-bottom: none; }
-  .method-text .three .beat .phase {
-    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
-    font-weight: 400;
+  .method-text .three .beat .n {
+    font-family: var(--font-d); font-style: italic; font-size: 1.1rem; color: var(--cognac);
   }
-  .method-text .three .beat .phase .wk {
-    display: block; font-family: var(--font-b); font-style: normal;
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash); margin-top: 0.3rem;
-  }
-  .method-text .three .beat .body { color: var(--bone); font-size: 1rem; line-height: 1.55; }
-  .method-text .three .beat .body .head {
-    display: block; font-family: var(--font-d); font-size: 1.25rem;
-    color: var(--bone); font-weight: 400; margin-bottom: 0.4rem;
-  }
-  .method-text .three .beat .body .head em { font-style: italic; color: var(--cognac); }
-  .method-text .three .beat .body .desc {
-    display: block; color: var(--stone); font-size: 0.92rem; line-height: 1.6;
+  .method-text .three .beat .t { color: var(--bone); font-size: 1rem; line-height: 1.45; }
+  .method-text .three .beat .t span {
+    display: block; color: var(--ash); font-size: 0.88rem; margin-top: 0.25rem;
   }
 
-  /* ══ SCENE — Pull-quote ══ */
-  .scene-pull {
-    flex-direction: column; justify-content: center; align-items: center;
-    text-align: center; padding: 14vh 8vw; position: relative;
-    min-height: 80vh;
-  }
-  .scene-pull .folio {
-    position: absolute; top: 6vh; left: 6vw;
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .scene-pull .folio span { color: var(--cognac); }
-  .scene-pull .mark {
-    font-family: var(--font-d); font-style: italic; font-size: 4rem;
-    color: var(--cognac); line-height: 1; margin-bottom: 2rem; opacity: 0.6;
-  }
-  .scene-pull blockquote {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(1.8rem, 4.2vw, 3.2rem);
-    line-height: 1.2; max-width: 26ch; color: var(--bone);
-  }
-  .scene-pull blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-pull .attr {
-    margin-top: 4rem;
-    display: flex; gap: 1rem; align-items: center;
-    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .scene-pull .attr .line { width: 40px; height: 1px; background: var(--cognac); }
-
-  /* ══ SCENE — The Experience Day (special, atmospheric) ══ */
-  .scene-experience {
-    flex-direction: column;
-    padding: 14vh 6vw;
-  }
-  .exp-head {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4vw; align-items: baseline; margin-bottom: 6vh;
-  }
-  .exp-head .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
-  }
-  .exp-head h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2.2rem, 4.5vw, 3.6rem);
-    line-height: 1.1; max-width: 18ch;
-  }
-  .exp-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .exp-head .note {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.2rem; color: var(--stone); max-width: 36ch;
-    line-height: 1.55; justify-self: end; text-align: right; padding-bottom: 0.4rem;
-  }
-  .exp-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem; margin-bottom: 4vh;
-  }
-  .exp-card {
-    background: var(--bg-2);
-    border: 1px solid var(--line);
-    padding: 0;
-    display: flex; flex-direction: column;
-    transition: border-color 0.4s ease;
-  }
-  .exp-card:hover { border-color: var(--line-strong); }
-  .exp-plate {
-    aspect-ratio: 4/3;
-    position: relative; overflow: hidden;
-    background: linear-gradient(145deg, #1a1410 0%, #0d0b09 100%);
-  }
-  .exp-plate .plate-tone {
-    position: absolute; inset: 0;
-    background: repeating-linear-gradient(115deg, transparent 0 8px, rgba(0,0,0,0.22) 8px 9px);
-    mix-blend-mode: multiply; opacity: 0.5;
-  }
-  .exp-plate.morning {
-    background:
-      radial-gradient(ellipse at 30% 40%, rgba(168,119,78,0.22), transparent 60%),
-      linear-gradient(145deg, #1c1612 0%, #0d0b09 100%);
-  }
-  .exp-plate.lunch {
-    background:
-      radial-gradient(ellipse at 65% 45%, rgba(200,149,108,0.22), transparent 60%),
-      linear-gradient(165deg, #1d1814 0%, #100d0b 100%);
-  }
-  .exp-plate.afternoon {
-    background:
-      radial-gradient(ellipse at 50% 30%, rgba(168,119,78,0.20), transparent 65%),
-      radial-gradient(ellipse at 30% 75%, rgba(200,149,108,0.15), transparent 55%),
-      linear-gradient(135deg, #1b1612 0%, #0e0b09 100%);
-  }
-  .exp-plate .plate-num {
-    position: absolute; top: 1.5rem; left: 1.5rem;
-    font-family: var(--font-d); font-style: italic;
-    font-size: 1.4rem; color: var(--cognac); z-index: 2;
-  }
-  .exp-plate .plate-label {
-    position: absolute; bottom: 1.5rem; left: 1.5rem;
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: rgba(242,240,236,0.55); z-index: 2;
-  }
-  .exp-plate .plate-label span { color: var(--cognac); }
-  .exp-card .body {
-    padding: 2rem 2rem 2.2rem;
-    display: flex; flex-direction: column; gap: 0.8rem; flex: 1;
-  }
-  .exp-card .time {
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600;
-  }
-  .exp-card h3 {
-    font-family: var(--font-d); font-weight: 400;
-    font-size: 1.5rem; line-height: 1.2; color: var(--bone);
-  }
-  .exp-card h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .exp-card .venue {
-    font-family: var(--font-d); font-style: italic;
-    font-size: 1rem; color: var(--cognac); margin-top: 0.2rem;
-  }
-  .exp-card .desc {
-    font-size: 0.92rem; color: var(--stone); line-height: 1.65; margin-top: 0.8rem;
-  }
-  .exp-foot {
-    margin-top: 2vh;
-    padding-top: 2.5rem; border-top: 1px solid var(--line);
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 3rem; align-items: end;
-  }
-  .exp-foot .summary {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.4rem; line-height: 1.5; color: var(--bone); max-width: 38ch;
-  }
-  .exp-foot .summary em { color: var(--cognac); font-style: italic; }
-  .exp-foot .meta {
-    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash); text-align: right;
-  }
-  .exp-foot .meta strong { color: var(--cognac); font-weight: 600; }
-
-  /* ══ SCENE — Six Themes Menu ══ */
-  .scene-themes {
-    background: var(--bg-2);
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    flex-direction: column;
-    padding: 14vh 6vw;
-  }
-  .themes-head {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4vw; align-items: baseline; margin-bottom: 6vh;
-  }
-  .themes-head .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
-  }
-  .themes-head h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.1; max-width: 20ch;
-  }
-  .themes-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .themes-head .note {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.2rem; color: var(--stone); max-width: 36ch;
-    line-height: 1.55; justify-self: end; text-align: right; padding-bottom: 0.4rem;
-  }
-  .themes-list {
-    border-top: 1px solid var(--line-strong);
-    border-bottom: 1px solid var(--line-strong);
-  }
-  .theme {
-    padding: 2.2rem 0;
-    border-bottom: 1px solid var(--line);
-    display: grid; grid-template-columns: 4rem 1fr 2fr 1.5fr;
-    gap: 2.5rem; align-items: baseline;
-    transition: background 0.5s ease;
-  }
-  .theme:last-child { border-bottom: none; }
-  .theme:hover { background: rgba(200,149,108,0.03); padding-left: 1.5rem; padding-right: 1.5rem; }
-  .theme .num {
-    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
-  }
-  .theme .name {
-    font-family: var(--font-d); font-weight: 400; font-size: 1.7rem;
-    line-height: 1.15; color: var(--bone);
-  }
-  .theme .name em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .theme .desc {
-    color: var(--stone); font-size: 0.96rem; line-height: 1.6;
-  }
-  .theme .for {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1rem; color: var(--ash); line-height: 1.5;
-  }
-  .theme .for .lab {
-    display: block;
-    font-family: var(--font-b); font-style: normal;
-    font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 0.4rem;
-  }
-
-  /* ══ SCENE — What's Included + Investment ══ */
-  .scene-included {
-    flex-direction: column;
-    padding: 14vh 6vw;
-  }
-  .included-head {
-    margin-bottom: 6vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4vw; align-items: baseline;
-  }
-  .included-head .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
-  }
-  .included-head h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.1; max-width: 18ch;
-  }
-  .included-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .included-head .note {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.2rem; color: var(--stone); max-width: 36ch;
-    line-height: 1.5; justify-self: end; text-align: right; padding-bottom: 0.4rem;
-  }
-  .included-diptych {
-    display: grid; grid-template-columns: 1.4fr 1fr;
-    gap: 4rem; align-items: start;
-  }
-  .included-list {
-    border-top: 1px solid var(--line-strong);
-  }
-  .inc-item {
-    padding: 1.3rem 0;
-    border-bottom: 1px solid var(--line);
-    display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem;
-    align-items: baseline;
-  }
-  .inc-item .n {
-    font-family: var(--font-d); font-style: italic; font-size: 1rem;
-    color: var(--cognac);
-  }
-  .inc-item .t {
-    font-size: 0.96rem; color: var(--bone); line-height: 1.55;
-  }
-  .inc-item .t .meta {
-    display: block; font-family: var(--font-d); font-style: italic;
-    font-size: 0.88rem; color: var(--ash); margin-top: 0.2rem;
-  }
-
-  /* Price card — TeamStrong has no public price */
-  .price-card {
-    background: var(--bg-2);
-    border: 1px solid var(--line-strong);
-    padding: 3rem 2.5rem;
-    position: sticky; top: 5rem;
-  }
-  .price-card .lab {
-    font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
-  }
-  .price-card .price {
-    font-family: var(--font-d); font-weight: 300; font-style: italic;
-    font-size: 2.2rem; line-height: 1.15; color: var(--bone);
-    margin-bottom: 0.6rem;
-  }
-  .price-card .terms {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.05rem; color: var(--stone); margin-bottom: 2rem;
-    padding-bottom: 1.5rem; border-bottom: 1px solid var(--line);
-  }
-  .price-card .button {
-    display: block; width: 100%;
-    padding: 1.1rem 1.5rem;
-    background: var(--cognac); color: var(--bg);
-    font-family: var(--font-b); font-size: 0.74rem; font-weight: 600;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    border: none; border-radius: 2px; cursor: pointer;
-    text-decoration: none; text-align: center;
-    transition: all 0.4s ease;
-  }
-  .price-card .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
-  .price-card .footnote {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 0.95rem; color: var(--stone); line-height: 1.5;
-    margin-top: 1.5rem; text-align: center;
-  }
-  .price-card .terms-list {
-    margin-top: 2rem; padding-top: 1.8rem;
-    border-top: 1px solid var(--line);
-  }
-  .price-card .terms-list .row {
-    display: grid; grid-template-columns: 6rem 1fr; gap: 1rem;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--line);
-    font-size: 0.82rem; line-height: 1.5;
-  }
-  .price-card .terms-list .row:last-child { border-bottom: none; }
-  .price-card .terms-list .row .k {
-    font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ash); padding-top: 0.15rem;
-  }
-  .price-card .terms-list .row .v {
-    color: var(--bone);
-  }
-  .price-card .terms-list .row .v em {
-    font-family: var(--font-d); font-style: italic; color: var(--cognac);
-  }
-
-  /* ══ SCENE — Why most fails (diptych) ══ */
-  .scene-why {
+  /* ══ SCENE — Note (Part 1 §3.3.5) ══ */
+  .scene-note {
+    min-height: auto; padding: 6vh 8vw;
+    flex-direction: column; align-items: center; text-align: center;
     background: var(--bg);
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    flex-direction: column;
-    padding: 14vh 6vw;
   }
-  .why-head {
-    margin-bottom: 6vh; max-width: 800px;
+  .scene-note .note-inner {
+    max-width: 60ch;
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; color: var(--stone); line-height: 1.7;
   }
-  .why-head .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  .scene-note .note-inner strong {
+    font-style: normal; font-weight: 500; color: var(--bone);
   }
-  .why-head h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; max-width: 20ch;
+  .scene-note .note-inner a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px; transition: border-color 0.3s;
   }
-  .why-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .why-diptych {
-    display: grid; grid-template-columns: 1fr 1fr;
-    border-top: 1px solid var(--line-strong);
-  }
-  .why-col {
-    padding: 3rem 2.5rem;
-    border-right: 1px solid var(--line);
-  }
-  .why-col:last-child { border-right: none; }
-  .why-col .col-head {
-    font-family: var(--font-d); font-style: italic; font-weight: 400;
-    font-size: 1.6rem; color: var(--bone); margin-bottom: 0.4rem;
-  }
-  .why-col .col-head em { color: var(--cognac); font-weight: 400; }
-  .why-col .col-sub {
-    font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 2.5rem;
-  }
-  .why-list { display: flex; flex-direction: column; }
-  .why-list .item {
-    padding: 1.4rem 0; border-bottom: 1px solid var(--line);
-    display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; align-items: start;
-  }
-  .why-list .item:last-child { border-bottom: none; }
-  .why-list .item .n {
-    font-family: var(--font-d); font-style: italic; font-size: 1.1rem;
-    color: var(--cognac); padding-top: 0.15rem;
-  }
-  .why-list.dont .item .n { color: var(--ash); }
-  .why-list .item .t .name {
-    font-size: 0.95rem; color: var(--bone); font-weight: 500; margin-bottom: 0.3rem;
-  }
-  .why-list.dont .item .t .name {
-    color: var(--stone);
-    text-decoration: line-through;
-    text-decoration-color: var(--ash);
-    text-decoration-thickness: 1px;
-  }
-  .why-list .item .t .desc {
-    font-size: 0.85rem; color: var(--ash); line-height: 1.55;
-  }
+  .scene-note .note-inner a:hover { border-color: var(--cognac); }
 
-  /* ══ SCENE — Closing ══ */
+  /* ══ Closing ══ */
   .scene-close {
     flex-direction: column; justify-content: center; align-items: flex-start;
-    padding: 14vh 6vw 12vh; position: relative; min-height: 80vh;
+    padding: 14vh 6vw; position: relative;
   }
   .scene-close .label {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
@@ -667,31 +335,12 @@
   .scene-close h2 {
     font-family: var(--font-d); font-weight: 300;
     font-size: clamp(2rem, 5vw, 3.6rem);
-    line-height: 1.15; max-width: 22ch; margin-bottom: 3rem;
+    line-height: 1.15; max-width: 22ch; margin-bottom: 4rem;
   }
   .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-close .standfirst {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.25rem; color: var(--stone); max-width: 38ch;
-    line-height: 1.55; margin-bottom: 3.5rem;
+  .scene-close .button-row {
+    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
   }
-  .scene-close .three-step {
-    margin-bottom: 3rem; max-width: 44ch;
-    border-top: 1px solid var(--line);
-  }
-  .scene-close .three-step .row {
-    padding: 1rem 0; border-bottom: 1px solid var(--line);
-    display: grid; grid-template-columns: 3rem 1fr; gap: 1rem;
-    align-items: baseline;
-  }
-  .scene-close .three-step .row .n {
-    font-family: var(--font-d); font-style: italic; font-size: 1rem;
-    color: var(--cognac);
-  }
-  .scene-close .three-step .row .t {
-    color: var(--bone); font-size: 0.95rem; line-height: 1.5;
-  }
-  .scene-close .button-row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
   .scene-close .button {
     display: inline-block; padding: 1.2rem 2.8rem;
     background: var(--cognac); color: var(--bg);
@@ -705,12 +354,15 @@
     background: transparent; color: var(--cognac);
     border: 1px solid var(--line-strong);
   }
-  .scene-close .button.ghost:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  .scene-close .button.ghost:hover {
+    background: rgba(200,149,108,0.08); border-color: var(--cognac);
+  }
   .scene-close .endline {
     position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
     display: flex; justify-content: space-between;
     font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash); border-top: 1px solid var(--line); padding-top: 1.5rem;
+    color: var(--ash);
+    border-top: 1px solid var(--line); padding-top: 1.5rem;
   }
 
   /* ── Footer ── */
@@ -735,7 +387,8 @@
     grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
     border-top: 1px solid var(--line);
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ash); display: flex; justify-content: space-between;
+    color: var(--ash);
+    display: flex; justify-content: space-between;
   }
 
   /* ── Mobile ── */
@@ -743,560 +396,202 @@
     nav.top { padding: 1rem 5vw; }
     nav.top ul { gap: 1rem; }
     nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
-    section.scene { padding: 10vh 6vw; }
+    section.scene { padding: 12vh 6vw; }
 
-    .scene-open { padding-top: 18vh; }
-    .scene-open .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .scene-open .right { max-width: 100%; justify-self: start; }
-    .scene-open h1 { font-size: clamp(2.6rem, 12vw, 4.4rem); }
-    .scene-open .meta-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-
-    .signals-head { grid-template-columns: 1fr; gap: 2rem; }
-    .signals-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
-    .signals-grid { grid-template-columns: 1fr; }
-    .signal {
-      border-right: none !important; border-bottom: 1px solid var(--line) !important;
-      padding: 2.4rem 0.5rem; min-height: auto;
+    .scene-feature-hero .feature-grid {
+      grid-template-columns: 1fr; gap: 2.5rem;
     }
-    .signal:last-child { border-bottom: none !important; }
-    .signal p { padding-top: 1rem; }
+    .scene-feature-hero .feature-right { max-width: 100%; justify-self: start; }
+    .scene-feature-hero h1 { font-size: clamp(2.4rem, 12vw, 4.2rem); }
+
+    .scene-stucks .head { grid-template-columns: 1fr; gap: 2rem; }
+    .scene-stucks .head .note { justify-self: start; text-align: left; padding-bottom: 0; }
+    .stucks-grid { grid-template-columns: 1fr; }
+    .altitudes-grid { grid-template-columns: 1fr !important; }
+    .stuck {
+      border-right: none; border-bottom: 1px solid var(--line);
+      padding: 2.5rem 0.5rem; min-height: auto;
+    }
+    .stuck:last-child { border-bottom: none; }
+    .stuck .caption { padding-top: 1.5rem; }
 
     .scene-method .split { grid-template-columns: 1fr; }
     .method-image { min-height: 40vh; }
     .method-text { padding: 6rem 2rem; }
-    .method-text .three .beat { grid-template-columns: 1fr; gap: 0.8rem; }
-    .method-text .three .beat .phase .wk { display: inline; margin-left: 0.6rem; }
 
-    .exp-head { grid-template-columns: 1fr; gap: 2rem; }
-    .exp-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
-    .exp-grid { grid-template-columns: 1fr; }
-    .exp-foot { grid-template-columns: 1fr; gap: 2rem; }
-    .exp-foot .meta { text-align: left; }
-
-    .themes-head { grid-template-columns: 1fr; gap: 2rem; }
-    .themes-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
-    .theme {
-      grid-template-columns: 3rem 1fr;
-      gap: 1rem 1.5rem;
-    }
-    .theme .desc, .theme .for { grid-column: 2; }
-    .theme:hover { padding-left: 0; padding-right: 0; }
-
-    .included-head { grid-template-columns: 1fr; gap: 2rem; }
-    .included-head .note { justify-self: start; text-align: left; padding-bottom: 0; }
-    .included-diptych { grid-template-columns: 1fr; gap: 2.5rem; }
-    .price-card { position: static; padding: 2.5rem 2rem; }
-
-    .why-diptych { grid-template-columns: 1fr; }
-    .why-col { border-right: none; border-bottom: 1px solid var(--line); }
-    .why-col:last-child { border-bottom: none; }
+    .scene-note { padding: 5vh 6vw; }
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
     footer .fine { flex-direction: column; gap: 0.8rem; }
   }
 </style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </head>
-
 <body>
 
 <!-- NAV -->
 <nav class="top">
   <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
   <ul>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/index.html#doors">Programmes</a></li>
-    <li><a href="/teamstrong.html" class="active">TeamStrong</a></li>
-    <li><a href="/stuck-quiz">Diagnostic</a></li>
-    <li><a href="/contact" class="cta">Book a call</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/#doors">Programmes</a></li>
+    <li><a href="/in-practice">In Practice</a></li>
+    <li><a href="/contact" class="cta">Book a Session</a></li>
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — Editorial Masthead ════ -->
-<section class="scene scene-open">
-  <div class="masthead-top">
-    <span>Programme N° 02</span>
-    <span class="dot"></span>
-    <span><strong>TeamStrong</strong></span>
-    <span class="dot"></span>
-    <span>Leadership Team Coaching · 12 Weeks</span>
-  </div>
+<!-- ════ SCENE 01 — Feature Hero ════ -->
+<section class="scene scene-feature-hero">
+  <div class="feature-folio">Feature · TeamStrong</div>
+  <div class="feature-label">For the team in the room · Leader and team together</div>
 
-  <div class="hero-grid">
+  <div class="feature-grid">
     <h1>
-      <span class="l">Get the team</span>
-      <span class="l">moving <em>together</em>.</span>
+      <span class="line">Strategic thinking,</span>
+      <span class="line">for the <em>team</em></span>
+      <span class="line">in the room.</span>
     </h1>
-    <div class="right">
-      <div class="byline">
+
+    <div class="feature-right">
+      <div class="feature-byline">
         <span class="line"></span>
-        <span>For leadership teams</span>
+        <span>John Obidipe</span>
       </div>
-      <p class="lede">A 12-week programme for leadership teams that have lost alignment, momentum, or both — built on behavioural diagnostics, not guesswork.</p>
+      <p class="feature-lede">For senior teams that need to think together, decide together, and move faster than they currently do.</p>
     </div>
   </div>
 
-  <div class="meta-row">
-    <div class="item">
-      <span class="lab">Format</span>
-      <span class="val"><em>Team</em> · 1:1 + group</span>
-    </div>
-    <div class="item">
-      <span class="lab">Duration</span>
-      <span class="val"><em>12</em> weeks</span>
-    </div>
-    <div class="item">
-      <span class="lab">Anchor</span>
-      <span class="val"><em>Experience Day</em> · The O2</span>
-    </div>
-    <div class="item">
-      <span class="lab">Investment</span>
-      <span class="val"><em>Tailored</em> to team size</span>
-    </div>
+  <div class="breadcrumb">
+    Issue N° 02 · <a href="/">Return to the issue</a>
   </div>
 </section>
 
-<!-- ════ SCENE 02 — The Premise ════ -->
+<!-- ════ SCENE 02 — The Problem ════ -->
 <section class="scene scene-premise">
-  <div class="folio">01 · <span>The Premise</span></div>
+  <div class="folio">01 · <span>The Problem</span></div>
   <blockquote>
-    No leader can feed every <em>mouth</em> alone.
+    Most senior teams lose more time to friction than to <em class="accent">incompetence</em>.
   </blockquote>
+
+  <div style="max-width: 56ch; margin-top: 4rem; font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: 1.25rem; line-height: 1.6; color: var(--stone); text-align: left;">
+    <p style="margin-bottom: 1.2rem;">The people are capable. The strategy exists somewhere. The intent is there.</p>
+    <p style="margin-bottom: 1.2rem;">But the team can't get to a decision quickly. Conversations circle. The same disagreements resurface in different shapes. The meeting after the meeting is where things actually get said. And the leader spends more time managing the dynamic than working the problem.</p>
+    <p>The cost shows up everywhere — slower decisions, blurred priorities, talent quietly disengaging, and a leader carrying more than they should because the team can't hold it together.</p>
+  </div>
+
   <div class="attr">
     <span class="line"></span>
-    <span>The reason teams stay stuck</span>
+    <span>Where the team sits</span>
   </div>
 </section>
 
-<!-- ════ SCENE 03 — What teams carry (six signals) ════ -->
-<section class="scene scene-signals">
-  <div class="signals-head">
+<!-- ════ SCENE 03 — The Work ════ -->
+<section class="scene scene-stucks">
+  <div class="head">
     <div>
-      <div class="label">02 · What Teams Carry</div>
-      <h2>Six things every team carries — until they're <em>named</em>.</h2>
+      <div class="label">02 · The Work</div>
+      <h2>A team that can <em class="accent">think together</em>.</h2>
     </div>
-    <p class="note">The org chart can't see these. The strategy deck doesn't help. But everyone in the room feels them.</p>
+    <p class="note">The unit of work shifts from one person to the group. The Whiteboard practice scales.</p>
   </div>
 
-  <div class="signals-grid">
-    <div class="signal">
+  <div class="stucks-grid altitudes-grid">
+    <div class="stuck">
       <span class="num">i.</span>
-      <h3>People searching for their <em>purpose</em></h3>
-      <p>Within the whole. Each individual quietly asking where they actually fit.</p>
+      <h3><em>Strategic</em></h3>
+      <p class="caption">The priorities the team has to agree on. The direction they're aligning behind. The decisions they keep deferring.</p>
     </div>
-    <div class="signal">
+    <div class="stuck">
       <span class="num">ii.</span>
-      <h3>Alignment that never quite <em>sticks</em></h3>
-      <p>Direction is set in the room and lost by Friday. The work pulls people apart again.</p>
+      <h3><em>Mid-altitude</em></h3>
+      <p class="caption">How the team makes decisions. What gets escalated to the leader. The trust gaps that show up in execution.</p>
     </div>
-    <div class="signal">
+    <div class="stuck">
       <span class="num">iii.</span>
-      <h3>One-to-one conflicts draining <em>energy</em></h3>
-      <p>Unspoken tension between two people, slowly contaminating the whole team's atmosphere.</p>
-    </div>
-    <div class="signal">
-      <span class="num">iv.</span>
-      <h3>Historic issues <em>nobody</em> has named</h3>
-      <p>Things that happened months or years ago. Still felt. Still shaping how the team behaves.</p>
-    </div>
-    <div class="signal">
-      <span class="num">v.</span>
-      <h3>Silos hardening as people <em>retreat</em></h3>
-      <p>Collaboration thins. People withdraw into their own remit. The team stops thinking together.</p>
-    </div>
-    <div class="signal">
-      <span class="num">vi.</span>
-      <h3>The <em>fun</em> has gone</h3>
-      <p>And with it, engagement. Work has become heavy. The energy that built the team is fading.</p>
+      <h3><em>Tactical</em></h3>
+      <p class="caption">The meeting that isn't working. The cross-functional handoff that keeps breaking. The conversation the team keeps avoiding.</p>
     </div>
   </div>
 </section>
 
-<!-- ════ SCENE 04 — The Method (Two phases) ════ -->
+<!-- ════ SCENE 04 — The Lenses ════ -->
 <section class="scene scene-method">
   <div class="split">
-    <div class="method-image">
-      <div class="plate-label">Plate i · <span>The architecture</span></div>
+    <div class="method-image lenses-plate">
+      <div class="plate-label">Plate iii · <span>The Lenses</span></div>
     </div>
 
     <div class="method-text">
-      <div class="label">03 · The Method</div>
-      <h2>Reconnect. Then <em>sustain</em>.</h2>
-      <p class="standfirst">Two phases across twelve weeks. First we build the foundation in person. Then we hold the change in place until the team carries it themselves.</p>
+      <div class="label">03 · The Lenses</div>
+      <h2>Three lenses I bring to the <em>work</em>.</h2>
+      <p class="standfirst">The Whiteboard Sessions are the practice. These are the lenses I bring to them.</p>
 
       <div class="three">
         <div class="beat">
-          <span class="phase">Phase i.<span class="wk">Weeks 1 – 4</span></span>
-          <span class="body">
-            <span class="head"><em>Reconnection &amp; synergy.</em></span>
-            <span class="desc">Individual CliftonStrengths assessment and 1:1 coaching with every team member in weeks 1–3. Then in week 4, the team comes together for a full Experience Day in London.</span>
-          </span>
-        </div>
-        <div class="beat">
-          <span class="phase">Phase ii.<span class="wk">Weeks 5 – 12</span></span>
-          <span class="body">
-            <span class="head"><em>Sustained connection.</em></span>
-            <span class="desc">Four bi-weekly group coaching sessions that respond to what's actually surfacing in the team — not a pre-set curriculum. Plus 1:1 check-ins between each session. By week 12, the team holds the space themselves.</span>
-          </span>
-        </div>
-        <div class="beat">
-          <span class="phase">Throughout</span>
-          <span class="body">
-            <span class="head"><em>The Leader Side Quest.</em></span>
-            <span class="desc">Separate 1:1 sessions for the team leader running parallel to the programme — how to lead through what the work surfaces, and hold the new culture once it lands.</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ SCENE 05 — First Testimonial ════ -->
-<section class="scene scene-pull">
-  <div class="folio">04 · <span>In Their Words</span></div>
-  <div class="mark">"</div>
-  <blockquote>
-    For anyone leading a team who wants to understand how it <em>actually</em> works — John.
-  </blockquote>
-  <div class="attr">
-    <span class="line"></span>
-    <span>Christian Caswell · Top Chiropractic</span>
-  </div>
-</section>
-
-<!-- ════ SCENE 06 — The Experience Day (atmospheric, full reveal) ════ -->
-<section class="scene scene-experience">
-  <div class="exp-head">
-    <div>
-      <div class="label">05 · The Experience Day</div>
-      <h2>One day. Three rooms. The team comes back <em>different</em>.</h2>
-    </div>
-    <p class="note">Week four. A full day at The O2 in London — venue, food, and activities all included in the programme.</p>
-  </div>
-
-  <div class="exp-grid">
-    <div class="exp-card">
-      <div class="exp-plate morning">
-        <div class="plate-tone"></div>
-        <span class="plate-num">i.</span>
-        <span class="plate-label">Morning · <span>The work</span></span>
-      </div>
-      <div class="body">
-        <span class="time">Morning</span>
-        <h3>The <em>workshop</em></h3>
-        <span class="venue">On-site at The O2</span>
-        <p class="desc">The team maps strengths, names the real friction points, and builds a shared operating system. This is where the serious work happens — facilitated, structured, and pointed at what's actually been getting in the way.</p>
-      </div>
-    </div>
-
-    <div class="exp-card">
-      <div class="exp-plate lunch">
-        <div class="plate-tone"></div>
-        <span class="plate-num">ii.</span>
-        <span class="plate-label">Lunch · <span>The table</span></span>
-      </div>
-      <div class="body">
-        <span class="time">Midday</span>
-        <h3>Breaking <em>bread</em> together</h3>
-        <span class="venue">TOCA Social, The O2</span>
-        <p class="desc">A proper meal. The conversation that started in the workshop carries into a shared table — the way real teams have always bonded. Not networking. Not performance. Just eating, talking, becoming people to each other again.</p>
-      </div>
-    </div>
-
-    <div class="exp-card">
-      <div class="exp-plate afternoon">
-        <div class="plate-tone"></div>
-        <span class="plate-num">iii.</span>
-        <span class="plate-label">Afternoon · <span>The play</span></span>
-      </div>
-      <div class="body">
-        <span class="time">Afternoon</span>
-        <h3>Playing <em>together</em></h3>
-        <span class="venue">Activate at The O2</span>
-        <p class="desc">The world's first interactive gaming facility. The team plays through nine dynamic game rooms in cooperative mode — physical, playful, built for groups. Laughter, movement, shared experience. The bonding the morning made possible.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="exp-foot">
-    <p class="summary">By the end of the day, the team has done <em>serious work</em> together and had <em>serious fun</em> together. That combination is what sets the foundation for the next eight weeks.</p>
-    <p class="meta">All venue, food &amp; activity costs<br /><strong>included in the programme</strong></p>
-  </div>
-</section>
-
-<!-- ════ SCENE 07 — Six Workshop Themes (quiet menu) ════ -->
-<section class="scene scene-themes">
-  <div class="themes-head">
-    <div>
-      <div class="label">06 · The Theme</div>
-      <h2>Six themes the work can be built <em>around</em>.</h2>
-    </div>
-    <p class="note">Every TeamStrong is built around one central theme — explored in 1:1s, anchored on the Experience Day, embedded in group coaching. Choose one, or agree something different on the call.</p>
-  </div>
-
-  <div class="themes-list">
-    <div class="theme">
-      <span class="num">i.</span>
-      <span class="name">From fearing AI to <em>leading</em> with it</span>
-      <span class="desc">Help the team stop worrying about AI and start using it to do better, higher-value work — together.</span>
-      <span class="for"><span class="lab">Best for</span>Teams facing transformation</span>
-    </div>
-    <div class="theme">
-      <span class="num">ii.</span>
-      <span class="name">New leader <em>integration</em></span>
-      <span class="desc">A new leader has joined. Help everyone get to know each other properly — who this person is, what they're about, how to work together from day one.</span>
-      <span class="for"><span class="lab">Best for</span>Teams with new leadership</span>
-    </div>
-    <div class="theme">
-      <span class="num">iii.</span>
-      <span class="name">Raising the <em>standard</em></span>
-      <span class="desc">Good enough isn't good enough any more. For teams ready to raise their own bar and hold each other to it.</span>
-      <span class="for"><span class="lab">Best for</span>Teams ready to level up</span>
-    </div>
-    <div class="theme">
-      <span class="num">iv.</span>
-      <span class="name">Embracing <em>innovation</em></span>
-      <span class="desc">Stop doing things the way they've always been done. Build a team that looks for better, not just familiar.</span>
-      <span class="for"><span class="lab">Best for</span>Teams stuck in defaults</span>
-    </div>
-    <div class="theme">
-      <span class="num">v.</span>
-      <span class="name">Stepping out of fear to take <em>risks</em></span>
-      <span class="desc">Play it safe and nothing changes. Help the team get comfortable with discomfort and back themselves.</span>
-      <span class="for"><span class="lab">Best for</span>Risk-averse teams</span>
-    </div>
-    <div class="theme">
-      <span class="num">vi.</span>
-      <span class="name">Strategic thinking as a <em>team</em></span>
-      <span class="desc">Stop working in silos. Start thinking together about the bigger picture — where the team fits and what decisions need making now.</span>
-      <span class="for"><span class="lab">Best for</span>Teams in silos</span>
-    </div>
-  </div>
-</section>
-
-<!-- ════ SCENE 08 — What's Included + Investment ════ -->
-<section class="scene scene-included">
-  <div class="included-head">
-    <div>
-      <div class="label">07 · What's Included</div>
-      <h2>Everything the team walks away <em>with</em>.</h2>
-    </div>
-    <p class="note">All venue costs, food, and activity fees for the Experience Day are included in the programme fee.</p>
-  </div>
-
-  <div class="included-diptych">
-    <div class="included-list">
-      <div class="inc-item">
-        <span class="n">i.</span>
-        <span class="t">
-          CliftonStrengths assessment for each team member
-          <span class="meta">Gallup-certified · individual report</span>
-        </span>
-      </div>
-      <div class="inc-item">
-        <span class="n">ii.</span>
-        <span class="t">
-          Individual 1:1 coaching sessions
-          <span class="meta">60 minutes per person · weeks 1–3</span>
-        </span>
-      </div>
-      <div class="inc-item">
-        <span class="n">iii.</span>
-        <span class="t">
-          Full Experience Day at The O2 — week 4
-          <span class="meta">Workshop · TOCA Social lunch · Activate at The O2</span>
-        </span>
-      </div>
-      <div class="inc-item">
-        <span class="n">iv.</span>
-        <span class="t">
-          Bi-weekly group coaching sessions
-          <span class="meta">Four sessions × 90 minutes · weeks 5–12</span>
-        </span>
-      </div>
-      <div class="inc-item">
-        <span class="n">v.</span>
-        <span class="t">
-          1:1 check-ins between group sessions
-          <span class="meta">Short, focused, personal — for every team member</span>
-        </span>
-      </div>
-      <div class="inc-item">
-        <span class="n">vi.</span>
-        <span class="t">
-          The Leader Side Quest
-          <span class="meta">Parallel 1:1 sessions for the team leader throughout</span>
-        </span>
-      </div>
-      <div class="inc-item">
-        <span class="n">vii.</span>
-        <span class="t">
-          Team playbook
-          <span class="meta">Behavioural insights and shared collaboration framework</span>
-        </span>
-      </div>
-      <div class="inc-item">
-        <span class="n">viii.</span>
-        <span class="t">
-          Ongoing accountability and support
-          <span class="meta">Across the full 12 weeks</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="price-card">
-      <div class="lab">Investment</div>
-      <div class="price">Tailored to your <em class="accent">team</em>.</div>
-      <p class="terms">Pricing depends on team size and chosen theme. Discussed on the discovery call.</p>
-      <a href="/contact" class="button">Book a discovery call</a>
-      <p class="footnote">A typical engagement runs from <em>six</em> to <em>twelve</em> people.</p>
-
-      <div class="terms-list">
-        <div class="row">
-          <span class="k">Team size</span>
-          <span class="v">Optimised for <em>6 – 12</em> team members.</span>
-        </div>
-        <div class="row">
-          <span class="k">Location</span>
-          <span class="v">Experience Day at <em>The O2</em>, London. 1:1s and group sessions remote.</span>
-        </div>
-        <div class="row">
-          <span class="k">Theme</span>
-          <span class="v">Choose <em>one</em> of six themes — or agree a custom one on the call.</span>
-        </div>
-        <div class="row">
-          <span class="k">Inclusive</span>
-          <span class="v">All <em>venue, food &amp; activity</em> costs included in the fee.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ SCENE 09 — Why most fails (diptych) ════ -->
-<section class="scene scene-why">
-  <div class="why-head">
-    <div class="label">08 · Why TeamStrong Works</div>
-    <h2>Why most team development <em>doesn't</em>.</h2>
-  </div>
-
-  <div class="why-diptych">
-    <div class="why-col">
-      <div class="col-head">What most teams <em>get</em></div>
-      <div class="col-sub">Where team development usually fails</div>
-      <div class="why-list dont">
-        <div class="item">
-          <span class="n">—</span>
-          <div class="t">
-            <div class="name">Generic exercises</div>
-            <div class="desc">Trust falls and icebreakers don't address real behavioural friction.</div>
-          </div>
-        </div>
-        <div class="item">
-          <span class="n">—</span>
-          <div class="t">
-            <div class="name">One-off workshops</div>
-            <div class="desc">Change doesn't embed without ongoing support and accountability.</div>
-          </div>
-        </div>
-        <div class="item">
-          <span class="n">—</span>
-          <div class="t">
-            <div class="name">Pre-set curriculum</div>
-            <div class="desc">A standard programme can't see what's actually surfacing in your room.</div>
-          </div>
-        </div>
-        <div class="item">
-          <span class="n">—</span>
-          <div class="t">
-            <div class="name">The leader left out</div>
-            <div class="desc">Team work without dedicated leader work asks the leader to hold what they haven't been resourced for.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="why-col">
-      <div class="col-head">What TeamStrong <em>brings</em></div>
-      <div class="col-sub">What replaces each above</div>
-      <div class="why-list">
-        <div class="item">
           <span class="n">i.</span>
-          <div class="t">
-            <div class="name">Behavioural diagnostics</div>
-            <div class="desc">CliftonStrengths reveals the real patterns driving team dynamics — not surface symptoms.</div>
-          </div>
+          <span class="t">CliftonStrengths<span>The most-used talent assessment in the world, used by 90%+ of the Fortune 500. Gallup's organisational data associates strengths-based development with 19% higher sales, 29% higher profit and 72% lower turnover. The individual phase also uses FITT16 — a 16-archetype map of each person's underlying drive — so the group sessions start with proper depth on every individual.</span></span>
         </div>
-        <div class="item">
+        <div class="beat">
           <span class="n">ii.</span>
-          <div class="t">
-            <div class="name">Sustained engagement</div>
-            <div class="desc">12 weeks of coaching embeds the change instead of creating a temporary boost.</div>
-          </div>
+          <span class="t">A shared operating language<span>Most teams don't have a precise vocabulary for how each person performs at their best. The strengths work gives the team that common language. It stops being about personalities and starts being about how the group is built.</span></span>
         </div>
-        <div class="item">
+        <div class="beat">
           <span class="n">iii.</span>
-          <div class="t">
-            <div class="name">Responsive group sessions</div>
-            <div class="desc">What surfaces in the room dictates where the work goes next — week by week.</div>
-          </div>
-        </div>
-        <div class="item">
-          <span class="n">iv.</span>
-          <div class="t">
-            <div class="name">The Leader Side Quest</div>
-            <div class="desc">A parallel coaching track resourcing the leader to hold the new culture once it lands.</div>
-          </div>
+          <span class="t">The strategic choice cascade<span>Senior teams often make decisions one at a time, in different meetings. We bring a lens that tests them as a system, so the team's calls fit together rather than competing.</span></span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════ SCENE 10 — Second Testimonial ════ -->
+<!-- ════ SCENE 05 — One Thing Worth Knowing ════ -->
 <section class="scene scene-pull">
-  <div class="folio">09 · <span>In Their Words</span></div>
+  <div class="folio">04 · <span>One Thing Worth Knowing</span></div>
   <div class="mark">"</div>
   <blockquote>
-    A safe space to talk, reflect, and stay focused on what <em>actually</em> matters.
+    Sometimes the friction is a <em>person</em>.
   </blockquote>
+  <div style="max-width: 50ch; margin-top: 3rem; font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: 1.2rem; line-height: 1.6; color: var(--stone); text-align: center;">
+    <p style="margin-bottom: 1.2rem;">Not the strategy. Not the structure. A person.</p>
+    <p style="margin-bottom: 1.2rem;">It might be the leader, whose pattern is quietly holding the team back. It might be a long-standing member struggling with a change in shape. It might be the high performer whose strengths overplay into how the room operates. It might be the person everyone politely avoids naming.</p>
+    <p style="margin-bottom: 1.2rem;">Naming this is harder in team contexts than individual ones. It's also where most of the work actually is — and the teams that get the most out of TeamStrong are the ones where the leader is prepared to look at where the friction is actually coming from, including themselves if that's where it lands.</p>
+    <p>If that's not how you want the team worked with, this isn't the right practice for you. If it is, you're in the right place.</p>
+  </div>
   <div class="attr">
     <span class="line"></span>
-    <span>Jeremy King · TeamStrong client</span>
+    <span>— John</span>
   </div>
 </section>
 
-<!-- ════ SCENE 11 — Closing ════ -->
-<section class="scene scene-close">
-  <div class="label">10 · <span>The Invitation</span></div>
-  <h2>
-    Tell me where the team is <em>stuck</em>.<br />
-    If TeamStrong fits, we'll know inside fifteen minutes.
-  </h2>
-  <p class="standfirst">A discovery call is a fifteen-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment your team is in.</p>
-
-  <div class="three-step">
-    <div class="row">
-      <span class="n">i.</span>
-      <span class="t">You tell me where the team is stuck.</span>
-    </div>
-    <div class="row">
-      <span class="n">ii.</span>
-      <span class="t">I show you the theme and shape that would fit.</span>
-    </div>
-    <div class="row">
-      <span class="n">iii.</span>
-      <span class="t">We decide together if it's a fit.</span>
-    </div>
+<!-- ════ SCENE 5b — How the work runs ════ -->
+<section class="scene scene-note">
+  <div class="note-inner">
+    <strong>Individual depth before group work.</strong><br><br>
+    TeamStrong begins with individual work with each team member. Before the team comes to the board together, we work one-to-one to understand the best each person brings and the patterns that get in the way.<br><br>
+    By the time the team sits down together, the dynamic in the room is understood, each individual feels well represented, and the strategic and operational work can be done at the speed the team actually needs.<br><br>
+    <a href="/leadstrong">TeamStrong often runs alongside LeadStrong for the leader →</a>
   </div>
+</section>
 
+<!-- ════ SCENE 06 — Close ════ -->
+<section class="scene scene-close">
+  <div class="label">05 · <span>The Invitation</span></div>
+  <h2>
+    Start with one <em>session</em>.
+  </h2>
+  <p style="font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: 1.25rem; color: var(--stone); margin-top: -2rem; margin-bottom: 4rem; max-width: 44ch;">
+    Bring the team situation you're carrying. By the end of the hour we'll know whether TeamStrong is the right next move, whether a different intervention is, or whether the hour itself was what you needed.
+  </p>
   <div class="button-row">
-    <a href="/contact" class="button">Book a discovery call</a>
-    <a href="/stuck-quiz" class="button ghost">Or take the diagnostic</a>
+    <a href="/contact" class="button">Book a Whiteboard Session to discuss your team</a>
+    <a href="/" class="button ghost">Return to the issue</a>
   </div>
 
   <div class="endline">
     <span>Catalyst Growth Coaching · TeamStrong</span>
-    <span>End of programme</span>
+    <span>End of feature</span>
   </div>
 </section>
 
@@ -1308,22 +603,19 @@
   </div>
   <div class="col">
     <h4>Programmes</h4>
-    <a href="/leadstrong">Lead Strong</a>
-    <a href="/teamstrong">TeamStrong</a>
+    <a href="/leadstrong">LeadStrong</a>
     <a href="/buildstrong">BuildStrong</a>
-    <a href="/cognitive-reset">Cognitive Reset</a>
+    <a href="/teamstrong">TeamStrong</a>
   </div>
   <div class="col">
-    <h4>The Work</h4>
+    <h4>Read</h4>
     <a href="/about">About John</a>
-    <a href="/stuck-quiz">The Diagnostic</a>
-    <a href="/testimonials">Testimonials</a>
-    <a href="/for-organisations">For organisations</a>
-    <a href="/contact">Contact</a>
+    <a href="/in-practice">In Practice</a>
+    <a href="/contact">Book a Session</a>
   </div>
   <div class="fine">
-    <span>© 2026 Catalyst Growth Coaching</span>
-    <span>London · Est. 2024</span>
+    <span>© Catalyst Growth Coaching, London · Est. 2024</span>
+    <span>Issue N° 02</span>
   </div>
 </footer>
 
