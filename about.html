@@ -188,6 +188,11 @@
     color: rgba(242,240,236,0.5); z-index: 2;
   }
   .method-image .plate-label span { color: var(--cognac); }
+  .method-image img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; z-index: 1;
+  }
   .method-text {
     padding: 12vh 5vw;
     display: flex; flex-direction: column; justify-content: center; gap: 2.5rem;
@@ -471,10 +476,7 @@
   </div>
 
   <div style="margin-top: 8vh; padding: 0; width: 100%;">
-    <img src="/images/about-img-02.png" alt="John Obidipe portrait" style="width: 100%; height: auto; display: block; max-height: 70vh; object-fit: cover; filter: brightness(0.95) contrast(1.05);">
-    <p style="font-family: var(--font-d); font-style: italic; font-size: 0.85rem; color: var(--ash); margin-top: 1rem; text-align: right;">
-      Portrait pending — current photo placeholder.
-    </p>
+    <img src="/images/john-portrait.jpg" alt="John Obidipe portrait" style="width: 100%; height: auto; display: block; max-height: 70vh; object-fit: cover; filter: brightness(0.95) contrast(1.05);">
   </div>
 </section>
 
@@ -494,6 +496,7 @@
 <section class="scene scene-method">
   <div class="split">
     <div class="method-image library-plate">
+      <img src="/images/library-plate.jpg" alt="Library plate — wooden shelf with toy cars and brushes">
       <div class="plate-label">Plate iv · <span>The Library</span></div>
     </div>
 

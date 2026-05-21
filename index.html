@@ -293,6 +293,11 @@
     color: rgba(242,240,236,0.5); z-index: 2;
   }
   .method-image .plate-label span { color: var(--cognac); }
+  .method-image img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; z-index: 1;
+  }
   .method-image .plate-note {
     position: absolute; inset: 0;
     display: flex; align-items: center; justify-content: center;
@@ -623,9 +628,8 @@
 <section class="scene scene-method">
   <div class="split">
     <div class="method-image whiteboard-plate">
+      <img src="/images/whiteboard-plate.jpg" alt="John watching a client at the whiteboard mid-session">
       <div class="plate-label">Plate ii · <span>The Whiteboard</span></div>
-      <div class="plate-note">Whiteboard plate — photograph to follow.</div>
-      <!-- When ready, replace with: <img src="/images/whiteboard-plate.jpg" alt="A whiteboard mid-session"> and remove .plate-note -->
     </div>
 
     <div class="method-text">
