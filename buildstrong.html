@@ -301,6 +301,76 @@
     display: block; color: var(--ash); font-size: 0.88rem; margin-top: 0.25rem;
   }
 
+  /* ══ SCENE — In Their Words (programme page) ══ */
+  .scene-quotes {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    justify-content: center;
+    padding: 12vh 6vw;
+  }
+  .scene-quotes .quotes-head {
+    margin-bottom: 6vh;
+    max-width: 720px;
+  }
+  .scene-quotes .quotes-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .scene-quotes .quotes-head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15; max-width: 22ch;
+  }
+  .scene-quotes .quotes-head h2 em {
+    font-style: italic; color: var(--cognac); font-weight: 400;
+  }
+  .quotes-grid {
+    display: grid; gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .quote-card {
+    padding: 2.5rem 2rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+  }
+  .quote-card .mark {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 3rem; color: var(--cognac);
+    line-height: 1; opacity: 0.5;
+  }
+  .quote-card blockquote {
+    font-family: var(--font-d); font-style: italic;
+    font-weight: 300; font-size: 1.2rem;
+    line-height: 1.55; color: var(--bone);
+    flex-grow: 1;
+  }
+  .quote-card blockquote em {
+    font-style: italic; color: var(--cognac); font-weight: 400;
+  }
+  .quote-card .attr {
+    display: flex; flex-direction: column;
+    gap: 0.3rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .quote-card .attr .name {
+    font-size: 0.92rem; color: var(--bone);
+    font-weight: 500; letter-spacing: 0.02em;
+  }
+  .quote-card .attr .meta {
+    font-size: 0.7rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ash);
+  }
+  .quote-card .attr .meta .prog {
+    color: var(--cognac);
+  }
+
   /* ══ SCENE — Note (Part 1 §3.3.5) ══ */
   .scene-note {
     min-height: auto; padding: 6vh 8vw;
@@ -418,6 +488,8 @@
     .scene-method .split { grid-template-columns: 1fr; }
     .method-image { min-height: 40vh; }
     .method-text { padding: 6rem 2rem; }
+
+    .quotes-grid { grid-template-columns: 1fr !important; }
 
     .scene-note { padding: 5vh 6vw; }
 
@@ -541,6 +613,25 @@
           <span class="n">iii.</span>
           <span class="t">The strategic choice cascade<span>Most owners make big decisions one at a time. The strongest strategic thinking treats them as a system.</span></span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SCENE 04b — In Their Words ════ -->
+<section class="scene scene-quotes">
+  <div class="quotes-head">
+    <div class="label">In Their Words</div>
+    <h2>From an owner who's worked this <em>way</em>.</h2>
+  </div>
+
+  <div class="quotes-grid" style="grid-template-columns: minmax(0, 640px); justify-content: center;">
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive mistakes in two previous <em>businesses</em>.</blockquote>
+      <div class="attr">
+        <span class="name">Stuart Ploughman</span>
+        <span class="meta">Serial Entrepreneur · <span class="prog">BuildStrong</span></span>
       </div>
     </div>
   </div>
