@@ -3,25 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact — Catalyst Growth Coaching</title>
+<title>Book a Whiteboard Session — Catalyst Growth Coaching</title>
 
-<!-- ════ SEO METADATA — preserved from existing contact.html ════ -->
-<meta name="description" content="Book a 15-minute discovery call with John Obidipe. Tell him where you're stuck, and find out if the work fits the moment you're in." />
+<!-- ════ SEO METADATA ════ -->
+<meta name="description" content="An hour at the board. Bring whatever you're carrying." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/contact" />
-<meta property="og:title" content="Book a Discovery Call | Catalyst Growth Coaching" />
-<meta property="og:description" content="A 15-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're in." />
+<meta property="og:title" content="Book a Whiteboard Session — Catalyst Growth Coaching" />
+<meta property="og:description" content="An hour at the board. Bring whatever you're carrying." />
 <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
-<meta property="og:site_name" content="John Obidipe | Executive Coach" />
+<meta property="og:site_name" content="John Obidipe | Catalyst Growth Coaching" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Book a Discovery Call | Catalyst Growth Coaching" />
-<meta name="twitter:description" content="A 15-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're in." />
+<meta name="twitter:title" content="Book a Whiteboard Session — Catalyst Growth Coaching" />
+<meta name="twitter:description" content="An hour at the board. Bring whatever you're carrying." />
 <meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/contact" />
 <!-- ════ END SEO METADATA ════ -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-
 <style>
   :root {
     --bg:         #0C0C0E;
@@ -38,16 +37,19 @@
     --font-d: 'Cormorant Garamond', Georgia, serif;
     --font-b: 'DM Sans', -apple-system, sans-serif;
   }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--bg); color: var(--bone);
-    font-family: var(--font-b); line-height: 1.7;
-    -webkit-font-smoothing: antialiased; overflow-x: hidden;
-    min-height: 100vh;
-    display: flex; flex-direction: column;
+    background: var(--bg);
+    color: var(--bone);
+    font-family: var(--font-b);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   ::selection { background: var(--cognac); color: var(--bg); }
+
   em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
 
   /* ─── Nav ─── */
@@ -55,169 +57,142 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1.5rem 2.5vw;
     display: flex; justify-content: space-between; align-items: center;
-    background: rgba(12,12,14,0.82); backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line);
+    background: rgba(12,12,14,0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
   }
   nav.top .brand {
     font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
     letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
   }
   nav.top .brand span { color: var(--cognac); }
-  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul {
+    display: flex; gap: 2rem; list-style: none; align-items: center;
+  }
   nav.top ul a {
     font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--stone); text-decoration: none; font-weight: 500;
     transition: color 0.3s;
   }
-  nav.top ul a:hover, nav.top ul a.active { color: var(--cognac); }
+  nav.top ul a:hover { color: var(--cognac); }
   nav.top ul a.cta {
     color: var(--cognac); border: 1px solid var(--line-strong);
     padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
   }
-  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
-
-  /* ═══ Single scene — full viewport, centred ═══ */
-  main.contact-scene {
-    flex: 1;
-    min-height: 100vh;
-    padding: 18vh 6vw 10vh;
-    display: flex; flex-direction: column; justify-content: center;
-    position: relative;
+  nav.top ul a.cta:hover {
+    background: rgba(200,149,108,0.08); border-color: var(--cognac);
   }
 
-  .contact-grid {
-    display: grid; grid-template-columns: 3fr 2fr;
-    gap: 6vw; align-items: end;
-    max-width: 1400px; margin: 0 auto; width: 100%;
+  /* ─── Scene base ─── */
+  section.scene {
+    min-height: 100vh; padding: 10vh 6vw;
+    position: relative; display: flex;
   }
 
-  /* Left column — masthead and headline */
-  .contact-left {
-    display: flex; flex-direction: column; gap: 4vh;
+  /* ══ SCENE — Feature Hero (Part 1 §3.3.1) ══ */
+  .scene-feature-hero {
+    padding-top: 14vh;
+    flex-direction: column;
+    justify-content: center;
   }
-  .contact-masthead {
-    display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;
+  .scene-feature-hero .feature-folio {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash);
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.5rem;
   }
-  .contact-masthead .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
-  .contact-masthead strong { color: var(--cognac); font-weight: 600; }
-
-  .contact-left h1 {
+  .scene-feature-hero .feature-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5vw; align-items: end;
+  }
+  .scene-feature-hero h1 {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(3rem, 8vw, 6.4rem);
-    line-height: 0.96; letter-spacing: -0.015em;
+    font-size: clamp(2.8rem, 7.5vw, 5.5rem);
+    line-height: 1.0; letter-spacing: -0.01em;
   }
-  .contact-left h1 .l { display: block; }
-  .contact-left h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-
-  /* Right column — promise + CTAs */
-  .contact-right {
-    display: flex; flex-direction: column; gap: 3rem;
-    max-width: 38ch; padding-bottom: 0.8rem; justify-self: end;
+  .scene-feature-hero h1 .line { display: block; }
+  .scene-feature-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-feature-hero .feature-right {
+    display: flex; flex-direction: column; gap: 1.5rem;
+    max-width: 32ch; padding-bottom: 0.5rem; justify-self: end;
   }
-  .contact-byline {
-    display: flex; gap: 0.8rem; align-items: center;
-    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  .scene-feature-hero .feature-lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.3rem; line-height: 1.5; color: var(--bone);
+  }
+  .scene-feature-hero .breadcrumb {
+    margin-top: 6vh; padding-top: 1.2rem; border-top: 1px solid var(--line);
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
     color: var(--ash);
   }
-  .contact-byline .line { width: 30px; height: 1px; background: var(--cognac); }
+  .scene-feature-hero .breadcrumb a {
+    color: var(--cognac); text-decoration: none;
+  }
 
-  .contact-promise {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.35rem; line-height: 1.5; color: var(--bone);
+  /* Booking embed block on the contact hero */
+  .booking-embed {
+    margin-top: 6vh; width: 100%;
+    background: var(--bg-2); border: 1px solid var(--line-strong);
+    border-radius: 4px; padding: 3rem; text-align: center;
   }
-  .contact-promise em { color: var(--cognac); font-style: italic; }
-
-  /* Three-row promise list */
-  .promise-list {
-    border-top: 1px solid var(--line);
-  }
-  .promise-list .row {
-    padding: 1rem 0; border-bottom: 1px solid var(--line);
-    display: grid; grid-template-columns: 3rem 1fr; gap: 1rem;
-    align-items: baseline;
-  }
-  .promise-list .row .n {
+  .booking-embed .note {
     font-family: var(--font-d); font-style: italic;
-    font-size: 1rem; color: var(--cognac);
+    color: var(--stone); margin-bottom: 2rem; font-size: 1.05rem;
   }
-  .promise-list .row .t {
-    color: var(--bone); font-size: 0.95rem; line-height: 1.5;
-  }
-  .promise-list .row .t em {
-    font-family: var(--font-d); font-style: italic; color: var(--cognac);
-  }
-
-  /* Primary CTA */
-  .contact-cta {
-    display: flex; flex-direction: column; gap: 1.2rem;
-    margin-top: 1rem;
-  }
-  .button-primary {
-    display: inline-block;
-    padding: 1.3rem 2.8rem;
+  .booking-embed .button {
+    display: inline-block; padding: 1.2rem 2.8rem;
     background: var(--cognac); color: var(--bg);
     font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
     letter-spacing: 0.2em; text-transform: uppercase;
-    border: none; border-radius: 2px; cursor: pointer;
-    text-decoration: none; text-align: center;
-    transition: all 0.4s ease;
+    border: none; border-radius: 2px;
+    text-decoration: none; transition: all 0.4s ease;
   }
-  .button-primary:hover { background: var(--cognac-2); transform: translateY(-2px); }
-  .button-primary .arrow {
-    display: inline-block;
-    margin-left: 0.7rem;
-    transition: transform 0.3s ease;
-  }
-  .button-primary:hover .arrow { transform: translateX(4px); }
+  .booking-embed .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
 
-  .cta-meta {
+  /* ══ SCENE — Stucks/Altitudes (reused for Notes) ══ */
+  .scene-stucks {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column; justify-content: center;
+  }
+  .scene-stucks .head {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4vw; align-items: baseline; margin-bottom: 8vh;
+  }
+  .scene-stucks .head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .scene-stucks .head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    line-height: 1.12; max-width: 15ch;
+  }
+  .scene-stucks .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .stucks-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .stuck {
+    padding: 3rem 2rem 3.5rem; border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 1rem; min-height: 280px;
+    transition: background 0.5s ease;
+  }
+  .stuck:last-child { border-right: none; }
+  .stuck:hover { background: rgba(200,149,108,0.04); }
+  .stuck .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
+  }
+  .stuck h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: 2rem;
+    line-height: 1.05; color: var(--bone); margin-top: 1rem;
+  }
+  .stuck h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .stuck .caption {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 0.95rem; color: var(--ash); line-height: 1.5;
+    font-size: 1.05rem; color: var(--stone); line-height: 1.4;
+    margin-top: auto; padding-top: 2.5rem; max-width: 20ch;
   }
-  .cta-meta em { color: var(--cognac); font-style: italic; }
-
-  /* Email line — quiet alternative */
-  .email-line {
-    margin-top: 1rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--line);
-    font-size: 0.82rem;
-    color: var(--ash); line-height: 1.6;
-  }
-  .email-line .lab {
-    display: block;
-    font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 0.6rem;
-  }
-  .email-line .addr {
-    font-family: var(--font-d); font-style: italic; font-weight: 400;
-    font-size: 1.05rem; color: var(--bone); letter-spacing: 0.01em;
-  }
-  .email-line .help {
-    display: block; margin-top: 0.4rem;
-    font-family: var(--font-d); font-style: italic;
-    font-size: 0.92rem; color: var(--ash);
-  }
-
-  /* Endline footer */
-  .contact-endline {
-    margin-top: auto;
-    padding-top: 4rem;
-    max-width: 1400px; margin-left: auto; margin-right: auto;
-    width: 100%;
-  }
-  .contact-endline .row {
-    display: flex; justify-content: space-between; align-items: center;
-    padding-top: 1.5rem; border-top: 1px solid var(--line);
-    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .contact-endline .row .scroll {
-    display: flex; gap: 0.8rem; align-items: center;
-  }
-  .contact-endline .row .scroll .line { width: 28px; height: 1px; background: var(--cognac); }
+  .altitudes-grid { grid-template-columns: repeat(3, 1fr) !important; }
 
   /* ── Footer ── */
   footer {
@@ -241,7 +216,8 @@
     grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
     border-top: 1px solid var(--line);
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ash); display: flex; justify-content: space-between;
+    color: var(--ash);
+    display: flex; justify-content: space-between;
   }
 
   /* ── Mobile ── */
@@ -249,112 +225,99 @@
     nav.top { padding: 1rem 5vw; }
     nav.top ul { gap: 1rem; }
     nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+    section.scene { padding: 12vh 6vw; }
 
-    main.contact-scene { padding: 14vh 6vw 8vh; }
+    .scene-feature-hero .feature-grid {
+      grid-template-columns: 1fr; gap: 2.5rem;
+    }
+    .scene-feature-hero .feature-right { max-width: 100%; justify-self: start; }
+    .scene-feature-hero h1 { font-size: clamp(2.4rem, 12vw, 4.2rem); }
 
-    .contact-grid { grid-template-columns: 1fr; gap: 4rem; }
-    .contact-right { max-width: 100%; justify-self: start; }
-    .contact-left h1 { font-size: clamp(2.6rem, 12vw, 4.4rem); }
+    .booking-embed { padding: 2rem 1.5rem; }
+
+    .scene-stucks .head { grid-template-columns: 1fr; gap: 2rem; }
+    .stucks-grid { grid-template-columns: 1fr; }
+    .altitudes-grid { grid-template-columns: 1fr !important; }
+    .stuck {
+      border-right: none; border-bottom: 1px solid var(--line);
+      padding: 2.5rem 0.5rem; min-height: auto;
+    }
+    .stuck:last-child { border-bottom: none; }
+    .stuck .caption { padding-top: 1.5rem; }
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
     footer .fine { flex-direction: column; gap: 0.8rem; }
   }
 </style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </head>
-
 <body>
 
 <!-- NAV -->
 <nav class="top">
   <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
   <ul>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/index.html#doors">Programmes</a></li>
-    <li><a href="/testimonials.html">Results</a></li>
-    <li><a href="/stuck-quiz">Diagnostic</a></li>
-    <li><a href="/contact.html" class="cta active">Book a call</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/#doors">Programmes</a></li>
+    <li><a href="/in-practice">In Practice</a></li>
+    <li><a href="/contact" class="cta">Book a Session</a></li>
   </ul>
 </nav>
 
-<!-- ════ SINGLE SCENE — Contact ════ -->
-<main class="contact-scene">
+<!-- ════ SCENE 01 — Booking Hero ════ -->
+<section class="scene scene-feature-hero">
+  <div class="feature-folio">Booking · One Whiteboard Session</div>
 
-  <div class="contact-grid">
+  <div class="feature-grid">
+    <h1>
+      <span class="line">An hour at the</span>
+      <span class="line"><em>board</em>.</span>
+    </h1>
 
-    <!-- Left: Masthead + Headline -->
-    <div class="contact-left">
-      <div class="contact-masthead">
-        <span>Contact</span>
-        <span class="dot"></span>
-        <span><strong>The discovery call</strong></span>
-        <span class="dot"></span>
-        <span>15 minutes · no pitch</span>
-      </div>
-
-      <h1>
-        <span class="l">Tell me where</span>
-        <span class="l">you're <em>stuck</em>.</span>
-      </h1>
-    </div>
-
-    <!-- Right: Promise + CTA -->
-    <div class="contact-right">
-      <div class="contact-byline">
-        <span class="line"></span>
-        <span>The discovery call</span>
-      </div>
-
-      <p class="contact-promise">
-        A fifteen-minute conversation. No preparation. No pitch. An honest read of whether the work fits the moment you're <em>in</em>.
-      </p>
-
-      <div class="promise-list">
-        <div class="row">
-          <span class="n">i.</span>
-          <span class="t">You tell me where you're <em>stuck</em>.</span>
-        </div>
-        <div class="row">
-          <span class="n">ii.</span>
-          <span class="t">I map the <em>pattern</em> keeping you there.</span>
-        </div>
-        <div class="row">
-          <span class="n">iii.</span>
-          <span class="t">We decide together <em>if</em> it's a fit.</span>
-        </div>
-      </div>
-
-      <div class="contact-cta">
-        <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule"
-           class="button-primary"
-           target="_blank"
-           rel="noopener">
-          Book a discovery call
-          <span class="arrow">→</span>
-        </a>
-        <p class="cta-meta">Opens in a <em>new window</em>. Choose the time that fits.</p>
-      </div>
-
-      <div class="email-line">
-        <span class="lab">Or by email</span>
-        <span class="addr">coach [at] catalystgrowthcoach.co.uk</span>
-        <span class="help">Replace [at] with @ to send.</span>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Endline -->
-  <div class="contact-endline">
-    <div class="row">
-      <span>Catalyst Growth Coaching</span>
-      <span class="scroll">
-        <span>End of issue</span>
-        <span class="line"></span>
-      </span>
+    <div class="feature-right">
+      <p class="feature-lede">Bring whatever you're carrying. By the end of the hour we'll know what to do next together — or whether the hour itself was what you needed.</p>
     </div>
   </div>
 
-</main>
+  <div class="booking-embed">
+    <p class="note">Choose a time that works for you.</p>
+    <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" target="_blank" rel="noopener" class="button">Open the booking calendar →</a>
+  </div>
+
+  <div class="breadcrumb">
+    Issue N° 02 · <a href="/">Return to the issue</a>
+  </div>
+</section>
+
+<!-- ════ SCENE 02 — Practical Notes ════ -->
+<section class="scene scene-stucks">
+  <div class="head">
+    <div>
+      <div class="label">Notes</div>
+      <h2>A few practical <em class="accent">details</em>.</h2>
+    </div>
+  </div>
+
+  <div class="stucks-grid altitudes-grid">
+    <div class="stuck">
+      <span class="num">i.</span>
+      <h3><em>Where</em></h3>
+      <p class="caption">In person in London, or virtual via video. Most sessions are virtual.</p>
+    </div>
+    <div class="stuck">
+      <span class="num">ii.</span>
+      <h3><em>Format</em></h3>
+      <p class="caption">A single session is 60–90 minutes. Bring your hardest problem.</p>
+    </div>
+    <div class="stuck">
+      <span class="num">iii.</span>
+      <h3><em>Pricing</em></h3>
+      <p class="caption">Discussed in conversation. No public rates.</p>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -364,22 +327,19 @@
   </div>
   <div class="col">
     <h4>Programmes</h4>
-    <a href="/leadstrong">Lead Strong</a>
-    <a href="/teamstrong">TeamStrong</a>
+    <a href="/leadstrong">LeadStrong</a>
     <a href="/buildstrong">BuildStrong</a>
-    <a href="/cognitive-reset">Cognitive Reset</a>
+    <a href="/teamstrong">TeamStrong</a>
   </div>
   <div class="col">
-    <h4>The Work</h4>
+    <h4>Read</h4>
     <a href="/about">About John</a>
-    <a href="/stuck-quiz">The Diagnostic</a>
-    <a href="/testimonials">Testimonials</a>
-    <a href="/for-organisations">For organisations</a>
-    <a href="/contact">Contact</a>
+    <a href="/in-practice">In Practice</a>
+    <a href="/contact">Book a Session</a>
   </div>
   <div class="fine">
-    <span>© 2026 Catalyst Growth Coaching</span>
-    <span>London · Est. 2024</span>
+    <span>© Catalyst Growth Coaching, London · Est. 2024</span>
+    <span>Issue N° 02</span>
   </div>
 </footer>
 
