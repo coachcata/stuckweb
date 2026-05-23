@@ -24,7 +24,7 @@
 <style>
   :root {
     --bg:         #0C0C0E;
-    --bg-2:       #141418;
+    --bg-2:       #0A0A0C;
     --bg-3:       #1A1A20;
     --card:       #1E1E26;
     --bone:       #F2F0EC;
@@ -83,6 +83,31 @@
   nav.top ul a.cta:hover {
     background: rgba(200,149,108,0.08); border-color: var(--cognac);
   }
+  /* Programmes dropdown */
+  nav.top .has-dropdown { position: relative; }
+  nav.top .has-dropdown > a::after {
+    content: '▾'; margin-left: 0.4rem; font-size: 0.7em; color: var(--cognac); opacity: 0.6;
+  }
+  nav.top .dropdown {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+    background: rgba(12,12,14,0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    padding: 0.8rem 0; min-width: 180px;
+    display: flex; flex-direction: column; gap: 0;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
+    list-style: none;
+  }
+  nav.top .has-dropdown:hover .dropdown,
+  nav.top .has-dropdown:focus-within .dropdown {
+    opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+  }
+  nav.top .dropdown li { display: block; }
+  nav.top .dropdown a {
+    display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
+    letter-spacing: 0.18em; color: var(--stone);
+  }
+  nav.top .dropdown a:hover { color: var(--cognac); background: rgba(200,149,108,0.06); }
 
   /* ─── Scene base ─── */
   section.scene {
@@ -90,369 +115,278 @@
     position: relative; display: flex;
   }
 
-  /* ══ SCENE 01 — Masthead ══ */
-  .scene-open { padding-top: 16vh; flex-direction: column; justify-content: center; }
-  .scene-open .masthead-top {
-    display: flex; gap: 2rem; align-items: center;
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 5vh;
-  }
-  .scene-open .masthead-top .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cognac); }
-  .scene-open .masthead-top strong { color: var(--cognac); font-weight: 600; }
-  .scene-open .hero-grid {
-    display: grid; grid-template-columns: 3fr 2fr;
-    gap: 6vw; align-items: end;
-  }
-  .scene-open h1 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(3.5rem, 10vw, 8rem);
-    line-height: 0.92; letter-spacing: -0.015em;
-  }
-  .scene-open h1 .line { display: block; }
-  .scene-open .hero-right {
-    display: flex; flex-direction: column; gap: 2rem;
-    max-width: 30ch; padding-bottom: 1rem; justify-self: end;
-  }
-  .scene-open .byline {
-    display: flex; gap: 0.8rem; align-items: center;
-    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .scene-open .byline .line { width: 30px; height: 1px; background: var(--cognac); }
-  .scene-open .lede {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.45rem; line-height: 1.45; color: var(--bone);
-  }
-  .scene-open .foot {
-    margin-top: 8vh;
-    display: flex; justify-content: space-between; align-items: center;
-    padding-top: 1.5rem; border-top: 1px solid var(--line);
-    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .scene-open .foot .scroll { display: flex; gap: 0.8rem; align-items: center; }
-  .scene-open .foot .scroll .arrow { width: 28px; height: 1px; background: var(--cognac); }
-
-  /* ══ SCENE 02 — Premise ══ */
-  .scene-premise {
-    flex-direction: column; justify-content: center; align-items: center;
-    text-align: center; padding: 14vh 8vw; position: relative;
-  }
-  .scene-premise .folio {
-    position: absolute; top: 6vh; left: 6vw;
+  /* ─── Folio markers ─── */
+  .folio {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--ash);
   }
-  .scene-premise .folio span { color: var(--cognac); }
-  .scene-premise blockquote {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2.2rem, 6vw, 4.6rem);
-    line-height: 1.12; max-width: 22ch;
-  }
-  .scene-premise .attr {
-    margin-top: 4rem;
-    display: flex; gap: 1rem; align-items: center;
-    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .scene-premise .attr .line { width: 40px; height: 1px; background: var(--cognac); }
+  .folio span { color: var(--cognac); }
 
-  /* ══ SCENE — Stucks/Altitudes ══ */
-  .scene-stucks {
-    background: var(--bg-2);
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    flex-direction: column; justify-content: center;
-  }
-  .scene-stucks .head {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4vw; align-items: baseline; margin-bottom: 8vh;
-  }
-  .scene-stucks .head .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
-  }
-  .scene-stucks .head h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
-    line-height: 1.12; max-width: 15ch;
-  }
-  .scene-stucks .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-stucks .head .note {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.25rem; color: var(--stone); max-width: 30ch;
-    line-height: 1.5; justify-self: end; text-align: right; padding-bottom: 0.4rem;
-  }
-  .stucks-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
-  }
-  .stuck {
-    padding: 3rem 2rem 3.5rem; border-right: 1px solid var(--line);
-    display: flex; flex-direction: column; gap: 1rem; min-height: 280px;
-    transition: background 0.5s ease;
-  }
-  .stuck:last-child { border-right: none; }
-  .stuck:hover { background: rgba(200,149,108,0.04); }
-  .stuck .num {
-    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
-  }
-  .stuck h3 {
-    font-family: var(--font-d); font-weight: 400; font-size: 2rem;
-    line-height: 1.05; color: var(--bone); margin-top: 1rem;
-  }
-  .stuck h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .stuck .caption {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.05rem; color: var(--stone); line-height: 1.4;
-    margin-top: auto; padding-top: 2.5rem; max-width: 20ch;
-  }
-
-  /* Three-cell variant of stucks-grid (used for The Three Altitudes) */
-  .altitudes-grid { grid-template-columns: repeat(3, 1fr) !important; }
-
-  /* ══ SCENE — Argument (prose) — Part 1 §3.3.2 ══ */
-  .scene-argument {
-    flex-direction: column; justify-content: center;
-    padding: 12vh 6vw; position: relative;
-  }
-  .scene-argument .folio {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 4rem;
-  }
-  .scene-argument .folio span { color: var(--cognac); }
-  .scene-argument h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4.2vw, 3.2rem);
-    line-height: 1.1; max-width: 18ch; margin-bottom: 4rem;
-  }
-  .scene-argument h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-argument .argument-body {
-    max-width: 56ch; font-family: var(--font-d); font-style: italic;
-    font-weight: 300; font-size: 1.4rem; line-height: 1.65; color: var(--stone);
-  }
-  .scene-argument .argument-body p {
-    margin-bottom: 1.2rem;
-  }
-  .scene-argument .argument-body .punchline {
-    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);
-    color: var(--bone); font-size: 1.55rem;
-  }
-  .scene-argument .argument-body .punchline em {
-    font-style: italic; color: var(--cognac); font-weight: 400;
-  }
-
-  /* ══ Testimonial scenes ══ */
-  .scene-pull {
-    flex-direction: column; justify-content: center; align-items: center;
-    text-align: center; padding: 14vh 8vw; position: relative;
-  }
-  .scene-pull .folio {
-    position: absolute; top: 6vh; left: 6vw;
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .scene-pull .folio span { color: var(--cognac); }
-  .scene-pull .mark {
-    font-family: var(--font-d); font-style: italic; font-size: 4rem;
-    color: var(--cognac); line-height: 1; margin-bottom: 2rem; opacity: 0.6;
-  }
-  .scene-pull blockquote {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(1.8rem, 4.5vw, 3.4rem);
-    line-height: 1.2; max-width: 24ch; color: var(--bone);
-  }
-  .scene-pull blockquote em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-pull .attr {
-    margin-top: 4rem;
-    display: flex; gap: 1rem; align-items: center;
-    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
-  }
-  .scene-pull .attr .line { width: 40px; height: 1px; background: var(--cognac); }
-
-  /* ══ SCENE — Method ══ */
-  .scene-method { padding: 0; min-height: 100vh; }
-  .scene-method .split {
-    display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh;
-  }
-  .method-image {
-    background:
-      radial-gradient(ellipse at 30% 40%, rgba(168,119,78,0.28), transparent 60%),
-      radial-gradient(ellipse at 70% 75%, rgba(200,149,108,0.15), transparent 55%),
-      linear-gradient(145deg, #1a1410 0%, #0d0b09 100%);
-    position: relative; overflow: hidden;
-  }
-  .method-image::after {
-    content: ''; position: absolute; inset: 0;
-    background: repeating-linear-gradient(115deg, transparent 0 10px, rgba(0,0,0,0.22) 10px 11px);
-    mix-blend-mode: multiply; opacity: 0.5;
-  }
-  .method-image .plate-label {
-    position: absolute; bottom: 3vh; left: 3vw;
-    font-size: 0.66rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: rgba(242,240,236,0.5); z-index: 2;
-  }
-  .method-image .plate-label span { color: var(--cognac); }
-  .method-image img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; z-index: 1;
-  }
-  .method-image .plate-note {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    color: rgba(242,240,236,0.5); font-size: 1.05rem; text-align: center;
-    padding: 2rem; z-index: 2;
-  }
-  .method-text {
-    padding: 12vh 5vw;
-    display: flex; flex-direction: column; justify-content: center; gap: 2.5rem;
-  }
-  .method-text .label {
+  /* ─── Eyebrow label ─── */
+  .eyebrow {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
   }
-  .method-text h2 {
+  .eyebrow em { font-style: italic; font-weight: 600; }
+
+  /* ══ Clip Scene (full-bleed video) ══ */
+  .scene-clip {
+    min-height: auto; padding: 0;
+    flex-direction: column;
+  }
+  .scene-clip .clip-frame {
+    position: relative; width: 100%; height: 60vh;
+    overflow: hidden; background: #0A0A0C;
+  }
+  .scene-clip.tall .clip-frame { height: 65vh; }
+  .scene-clip.short .clip-frame { height: 40vh; }
+  .scene-clip .clip-frame video {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    display: block;
+  }
+  .scene-clip .clip-caption {
+    position: absolute; right: 1.5rem; bottom: 1.2rem; z-index: 2;
+    font-family: var(--font-b); font-size: 0.66rem;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.5));
+  }
+  .scene-clip .clip-copy {
+    padding: 10vh 6vw;
+    display: flex; flex-direction: column; align-items: flex-start;
+    max-width: 100%;
+  }
+  .scene-clip .clip-copy.centred { align-items: center; text-align: center; }
+  .scene-clip .clip-copy.centred .body { max-width: 60ch; }
+  .scene-clip .clip-copy .folio { margin-bottom: 3rem; }
+  .scene-clip .clip-copy h2 {
     font-family: var(--font-d); font-weight: 300;
     font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.1; max-width: 16ch;
+    line-height: 1.15; max-width: 22ch; margin-bottom: 2.5rem;
   }
-  .method-text h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .method-text .standfirst {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.25rem; line-height: 1.5; color: var(--stone); max-width: 28ch;
+  .scene-clip .clip-copy h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-clip .clip-copy .body {
+    max-width: 56ch; font-family: var(--font-d); font-weight: 300;
+    font-size: 1.25rem; line-height: 1.65; color: var(--stone);
   }
-  .method-text .three { display: flex; flex-direction: column; margin-top: 1rem; max-width: 36ch; }
-  .method-text .three .beat {
-    display: grid; grid-template-columns: 2rem 1fr; gap: 1.2rem;
-    padding: 1.1rem 0; border-bottom: 1px solid var(--line); align-items: baseline;
-  }
-  .method-text .three .beat:last-child { border-bottom: none; }
-  .method-text .three .beat .n {
-    font-family: var(--font-d); font-style: italic; font-size: 1.1rem; color: var(--cognac);
-  }
-  .method-text .three .beat .t { color: var(--bone); font-size: 1rem; line-height: 1.45; }
-  .method-text .three .beat .t span {
-    display: block; color: var(--ash); font-size: 0.88rem; margin-top: 0.25rem;
-  }
+  .scene-clip .clip-copy .body p { margin-bottom: 1.2rem; }
+  .scene-clip .clip-copy .body em { font-style: italic; color: var(--bone); font-weight: 300; }
+  .scene-clip .clip-copy .body em.accent { color: var(--cognac); font-weight: 400; }
 
-  /* ══ SCENE — Three Doors ══ */
-  .scene-doors {
-    background: var(--bg-2); border-top: 1px solid var(--line);
-    flex-direction: column; padding: 12vh 6vw;
+  /* ══ Premise scene (Scene 01 — homepage) ══ */
+  .scene-premise-clip {
+    min-height: 100vh; padding: 0;
+    flex-direction: column;
+    background: var(--bg);
   }
-  .scene-doors .head { margin-bottom: 6vh; max-width: 820px; }
-  .scene-doors .head .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
-  }
-  .scene-doors .head h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
-    line-height: 1.12; max-width: 18ch;
-  }
-  .scene-doors .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-doors .head .sub {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.3rem; color: var(--stone); max-width: 40ch;
-    margin-top: 1.5rem; line-height: 1.5;
-  }
-
-  .doors {
-    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;
-  }
-  .door {
-    padding: 3.5rem 2.5rem; background: var(--bg);
-    border: 1px solid var(--line); border-radius: 4px;
-    display: flex; flex-direction: column; gap: 1.5rem; min-height: 440px;
-    position: relative; cursor: pointer; text-decoration: none; color: inherit;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .door:hover {
-    border-color: var(--line-strong); background: #111114; transform: translateY(-4px);
-  }
-  .door .door-num {
-    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
-  }
-  .door .door-for {
+  .scene-premise-clip .top-label {
+    padding: 16vh 6vw 4vh;
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
   }
-  .door h3 {
+  .scene-premise-clip .clip-frame {
+    position: relative; width: 100%; height: 60vh;
+    overflow: hidden; background: #0A0A0C;
+  }
+  .scene-premise-clip .clip-frame video {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+  }
+  .scene-premise-clip .premise-copy {
+    padding: 8vh 6vw 12vh;
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .scene-premise-clip .premise-copy blockquote {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.8rem, 4.6vw, 3.4rem);
+    line-height: 1.2; max-width: 24ch; color: var(--bone);
+  }
+  .scene-premise-clip .premise-copy blockquote p { margin-bottom: 1.5rem; }
+  .scene-premise-clip .premise-copy blockquote p:last-child { margin-bottom: 0; }
+
+  /* ══ Argument scene (text-only on darker bg) ══ */
+  .scene-argument {
+    flex-direction: column; justify-content: center;
+    padding: 14vh 6vw; background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-argument .folio { margin-bottom: 4rem; }
+  .scene-argument .body {
+    max-width: 60ch; margin: 0 auto;
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+    font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.6; color: var(--stone);
+  }
+  .scene-argument .body p { margin-bottom: 1.4rem; }
+  .scene-argument .body p:last-child { margin-bottom: 0; }
+  .scene-argument .body em {
+    font-style: italic; color: var(--bone); font-weight: 300;
+  }
+  .scene-argument .body em.accent { color: var(--cognac); font-weight: 400; }
+  .scene-argument .body .lede,
+  .scene-argument .body .punchline {
+    font-style: italic; color: var(--bone);
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    line-height: 1.4;
+  }
+  .scene-argument .body .punchline {
+    margin-top: 2.5rem; padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ══ Testimonial scene (image right + text left) ══ */
+  .scene-testimonial {
+    flex-direction: column; padding: 14vh 6vw;
+  }
+  .scene-testimonial .folio { margin-bottom: 4rem; }
+  .scene-testimonial .testimonial-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5vw; align-items: center;
+  }
+  .scene-testimonial .testimonial-body {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.15rem, 1.7vw, 1.35rem);
+    line-height: 1.6; color: var(--bone);
+  }
+  .scene-testimonial .testimonial-body p { margin-bottom: 1.2rem; }
+  .scene-testimonial .testimonial-body em {
+    font-style: italic; font-weight: 500; color: var(--cognac);
+  }
+  .scene-testimonial .testimonial-body strong {
+    font-style: normal; font-weight: 500; color: var(--cognac);
+  }
+  .scene-testimonial .attribution {
+    margin-top: 2rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.92rem; color: var(--stone);
+    font-family: var(--font-b); font-style: normal;
+  }
+  .scene-testimonial .attribution strong {
+    color: var(--bone); font-weight: 500; font-family: var(--font-b);
+  }
+  .scene-testimonial .testimonial-image {
+    width: 100%; aspect-ratio: 4/5;
+    background: var(--bg-3); position: relative; overflow: hidden;
+  }
+  .scene-testimonial .testimonial-image img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  /* ══ Programme tiles scene ══ */
+  .scene-tiles {
+    flex-direction: column; padding: 14vh 6vw;
+    background: var(--bg-2); border-top: 1px solid var(--line);
+  }
+  .scene-tiles .folio { margin-bottom: 2rem; }
+  .scene-tiles h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15; max-width: 18ch; margin-bottom: 6vh;
+  }
+  .scene-tiles h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .tiles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;
+  }
+  .tile {
+    display: flex; flex-direction: column; gap: 1.5rem;
+    text-decoration: none; color: inherit;
+    padding-bottom: 2rem;
+    transition: transform 0.4s ease;
+  }
+  .tile:hover { transform: translateY(-4px); }
+  .tile .tile-image {
+    width: 100%; aspect-ratio: 4/3;
+    background: var(--bg-3); overflow: hidden; position: relative;
+  }
+  .tile .tile-image img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity 0.4s ease; opacity: 0.85;
+  }
+  .tile:hover .tile-image img { opacity: 1; }
+  .tile h3 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: clamp(1.6rem, 2.4vw, 2.1rem);
     line-height: 1.1; color: var(--bone);
   }
-  .door h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .door .desc {
+  .tile .tile-desc {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.1rem; color: var(--stone); line-height: 1.5; max-width: 26ch;
+    font-size: 1.05rem; line-height: 1.5; color: var(--stone);
+    max-width: 28ch;
   }
-  .door .includes {
-    margin-top: 1rem; padding-top: 1.2rem;
-    border-top: 1px solid var(--line);
-    display: flex; flex-direction: column; gap: 0.4rem;
-  }
-  .door .includes .lab {
-    font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 0.3rem;
-  }
-  .door .includes .prog { font-size: 0.88rem; color: var(--bone); letter-spacing: 0.02em; }
-  .door .enter {
-    margin-top: auto; padding-top: 1.5rem;
-    display: inline-flex; gap: 0.8rem; align-items: center;
-    font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase;
+  .tile .tile-link {
+    margin-top: auto; padding-top: 1rem;
+    font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
   }
-  .door .enter .arrow {
-    display: inline-block; width: 2.2rem; height: 1px;
-    background: var(--cognac); transition: width 0.4s ease;
+  .tile .tile-link::after {
+    content: ' →'; transition: margin-left 0.3s;
   }
-  .door:hover .enter .arrow { width: 3.4rem; }
+  .tile:hover .tile-link::after { margin-left: 0.3em; }
 
-  /* ══ Closing ══ */
-  .scene-close {
-    flex-direction: column; justify-content: center; align-items: flex-start;
-    padding: 14vh 6vw; position: relative;
+  /* ══ Invitation scene (closing) ══ */
+  .scene-invitation {
+    flex-direction: column; padding: 0;
+    background: var(--bg);
   }
-  .scene-close .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 4rem;
+  .scene-invitation .clip-frame {
+    position: relative; width: 100%; height: 40vh;
+    overflow: hidden; background: #0A0A0C;
   }
-  .scene-close .label span { color: var(--cognac); }
-  .scene-close h2 {
+  .scene-invitation .clip-frame video {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .scene-invitation .invitation-copy {
+    padding: 10vh 6vw 14vh;
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .scene-invitation .invitation-copy .folio { margin-bottom: 3rem; }
+  .scene-invitation .invitation-copy .lede {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 5vw, 3.6rem);
-    line-height: 1.15; max-width: 22ch; margin-bottom: 4rem;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    line-height: 1.25; max-width: 24ch; margin-bottom: 1.5rem;
+    color: var(--bone);
   }
-  .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-close .button-row {
-    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
+  .scene-invitation .invitation-copy .lede em {
+    font-style: italic; color: var(--bone); font-weight: 300;
   }
-  .scene-close .button {
-    display: inline-block; padding: 1.2rem 2.8rem;
+  .scene-invitation .invitation-copy .sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; color: var(--stone); margin-bottom: 4rem;
+    max-width: 36ch;
+  }
+
+  /* ─── Buttons (cross-page) ─── */
+  .button {
+    display: inline-block; padding: 1.1rem 2.6rem;
     background: var(--cognac); color: var(--bg);
     font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
     letter-spacing: 0.2em; text-transform: uppercase;
     border: none; border-radius: 2px; cursor: pointer;
     text-decoration: none; transition: all 0.4s ease;
   }
-  .scene-close .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
-  .scene-close .button.ghost {
+  .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .button.ghost {
     background: transparent; color: var(--cognac);
     border: 1px solid var(--line-strong);
   }
-  .scene-close .button.ghost:hover {
+  .button.ghost:hover {
     background: rgba(200,149,108,0.08); border-color: var(--cognac);
   }
-  .scene-close .endline {
-    position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
-    display: flex; justify-content: space-between;
-    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
-    border-top: 1px solid var(--line); padding-top: 1.5rem;
+
+  /* ─── Asset placeholders (Part 7B) ─── */
+  .video-placeholder, .image-placeholder {
+    width: 100%; height: 100%;
+    background: #1A1A20;
+    border: 1px dashed var(--cognac);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cognac);
+    font-family: var(--font-b); font-size: 0.85rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    text-align: center; padding: 1rem;
   }
+  .video-placeholder::before { content: 'Video: '; opacity: 0.6; margin-right: 0.4em; }
+  .image-placeholder::before { content: 'Image: '; opacity: 0.6; margin-right: 0.4em; }
 
   /* ── Footer ── */
   footer {
@@ -477,45 +411,40 @@
     border-top: 1px solid var(--line);
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ash);
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  footer .fine .signoff {
+    font-family: var(--font-d); font-style: italic;
+    text-transform: none; letter-spacing: 0; color: var(--stone);
+    font-size: 0.9rem;
   }
 
   /* ── Mobile ── */
   @media (max-width: 900px) {
     nav.top { padding: 1rem 5vw; }
     nav.top ul { gap: 1rem; }
-    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
+    nav.top ul li:nth-child(1) { display: none; }
+    nav.top .has-dropdown > a::after { display: none; }
+    nav.top .dropdown { display: none; }
     section.scene { padding: 12vh 6vw; }
 
-    .scene-open { padding-top: 18vh; }
-    .scene-open .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .scene-open .hero-right { max-width: 100%; justify-self: start; }
-    .scene-open h1 { font-size: clamp(2.8rem, 14vw, 5rem); }
-
-    .scene-stucks .head { grid-template-columns: 1fr; gap: 2rem; }
-    .scene-stucks .head .note { justify-self: start; text-align: left; padding-bottom: 0; }
-    .stucks-grid { grid-template-columns: 1fr; }
-    .altitudes-grid { grid-template-columns: 1fr !important; }
-    .stuck {
-      border-right: none; border-bottom: 1px solid var(--line);
-      padding: 2.5rem 0.5rem; min-height: auto;
-    }
-    .stuck:last-child { border-bottom: none; }
-    .stuck .caption { padding-top: 1.5rem; }
-
+    .scene-premise-clip .clip-frame { height: 50vh; }
+    .scene-clip .clip-frame { height: 45vh; }
+    .scene-clip.tall .clip-frame { height: 50vh; }
+    .scene-clip.short .clip-frame { height: 30vh; }
+    .scene-clip .clip-copy { padding: 8vh 6vw; }
     .scene-argument { padding: 10vh 6vw; }
-    .scene-argument .argument-body { font-size: 1.15rem; }
-    .scene-argument .argument-body .punchline { font-size: 1.3rem; }
 
-    .scene-method .split { grid-template-columns: 1fr; }
-    .method-image { min-height: 40vh; }
-    .method-text { padding: 6rem 2rem; }
+    .scene-testimonial .testimonial-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-testimonial .testimonial-image { order: -1; aspect-ratio: 3/2; }
 
-    .doors { grid-template-columns: 1fr; }
-    .door { padding: 2.8rem 2rem; min-height: auto; }
+    .tiles-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+    .scene-invitation .clip-frame { height: 30vh; }
+    .scene-invitation .invitation-copy { padding: 8vh 6vw 10vh; }
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
-    footer .fine { flex-direction: column; gap: 0.8rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
   }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -529,223 +458,154 @@
   <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
   <ul>
     <li><a href="/about">About</a></li>
-    <li><a href="#doors">Programmes</a></li>
+    <li class="has-dropdown">
+      <a href="#programmes">Programmes</a>
+      <ul class="dropdown">
+        <li><a href="/leadstrong">LeadStrong</a></li>
+        <li><a href="/buildstrong">BuildStrong</a></li>
+        <li><a href="/teamstrong">TeamStrong</a></li>
+      </ul>
+    </li>
     <li><a href="/in-practice">In Practice</a></li>
-    <li><a href="/contact" class="cta">Book a Session</a></li>
+    <li><a href="/contact" class="cta">Contact</a></li>
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — Masthead ════ -->
-<section class="scene scene-open">
-  <div class="masthead-top">
-    <span>Issue N° 02</span>
-    <span class="dot"></span>
-    <span><strong>Executive Thinking Partnership</strong></span>
-    <span class="dot"></span>
-    <span>London · Est. 2024</span>
+<!-- ════ SCENE 01 — The Premise ════ -->
+<section class="scene scene-premise-clip">
+  <div class="top-label">Catalyst Growth Coaching · Issue N° 02</div>
+
+  <div class="clip-frame">
+    <video autoplay muted loop playsinline preload="metadata" aria-label="John writing the first word on the whiteboard">
+      <source src="/videos/drill.mp4" type="video/mp4">
+    </video>
   </div>
 
-  <div class="hero-grid">
-    <h1>
-      <span class="line">Don't get</span>
-      <span class="line"><em class="accent">stuck</em>.</span>
-    </h1>
-
-    <div class="hero-right">
-      <div class="byline">
-        <span class="line"></span>
-        <span>John Obidipe, Performance Coach</span>
-      </div>
-      <p class="lede">Strategic thinking, live. At the whiteboard. To a conclusion.</p>
-    </div>
-  </div>
-
-  <div class="foot">
-    <span>Open the issue</span>
-    <span class="scroll">
-      <span>Scroll</span>
-      <span class="arrow"></span>
-    </span>
+  <div class="premise-copy">
+    <blockquote>
+      <p><em>The first word goes on the board.</em></p>
+      <p><em>Everything that matters happens after that.</em></p>
+    </blockquote>
   </div>
 </section>
 
-<!-- ════ SCENE 02 — Premise ════ -->
-<section class="scene scene-premise">
-  <div class="folio">01 · <span>The Premise</span></div>
-  <blockquote>
-    Nothing in your week is designed for <em class="accent">thinking</em>.
-  </blockquote>
-  <div class="attr">
-    <span class="line"></span>
-    <span>Where most senior leaders arrive</span>
-  </div>
-</section>
-
-<!-- ════ SCENE 03 — The Gap ════ -->
+<!-- ════ SCENE 02 — The Argument ════ -->
 <section class="scene scene-argument">
-  <div class="folio">02 · <span>The Gap</span></div>
-  <h2>Where the thinking time <em>goes</em>.</h2>
-  <div class="argument-body">
-    <p>Meetings aren't designed for thinking. They're designed for alignment and information transfer.</p>
-    <p>Email isn't designed for thinking. It's designed for response.</p>
-    <p>Team updates aren't designed for thinking. They're designed for visibility.</p>
-    <p>The board isn't designed for thinking. It's designed for governance.</p>
-    <p>Even the executive assistant is optimising the leader's time <em>away</em> from thinking, not toward it. Toward more meetings. More replies. More board prep.</p>
-    <p class="punchline">The Whiteboard Sessions are the hour in the week that <em>is</em>.</p>
+  <div class="folio" style="text-align:center; margin-bottom: 4rem;">01 · <span>The Argument</span></div>
+  <div class="body">
+    <p class="lede"><em>Nothing in your week is designed for thinking.</em></p>
+    <p>Meetings are designed for decisions. Email is designed for response. The calendar is designed for time-blocking. Your assistant is designed for protection.</p>
+    <p>Every system around you is optimising for output. None of them are optimising for <em>thought</em>.</p>
+    <p>The result: you make decisions in the cracks. You arrive at the most important meeting of your quarter without having actually sat with the question. You leave the most expensive moments of your week to be navigated by reflex.</p>
+    <p class="punchline"><em>Whiteboard Sessions are the thing the rest of your week is incompatible with.</em></p>
   </div>
 </section>
 
-<!-- ════ SCENE 04 — Three Altitudes ════ -->
-<section class="scene scene-stucks" id="altitudes">
-  <div class="head">
-    <div>
-      <div class="label">03 · The Work</div>
-      <h2>The work moves at three <em class="accent">altitudes</em>.</h2>
-    </div>
-    <p class="note">The session takes the altitude your problem needs.</p>
+<!-- ════ SCENE 03 — The Practice ════ -->
+<section class="scene scene-clip">
+  <div class="clip-frame">
+    <video autoplay muted loop playsinline preload="metadata" aria-label="Wide view of a whiteboard session in progress">
+      <source src="/videos/session-wide.mp4" type="video/mp4">
+    </video>
+    <div class="clip-caption">Whiteboard Session · May 2026</div>
   </div>
 
-  <div class="stucks-grid altitudes-grid">
-    <div class="stuck">
-      <span class="num">i.</span>
-      <h3><em>Strategic</em></h3>
-      <p class="caption">The next eighteen months. The board narrative. The shape of growth.</p>
-    </div>
-    <div class="stuck">
-      <span class="num">ii.</span>
-      <h3><em>Mid-altitude</em></h3>
-      <p class="caption">Restructures and hiring. The change you need to land. The conversation you've been avoiding.</p>
-    </div>
-    <div class="stuck">
-      <span class="num">iii.</span>
-      <h3><em>Tactical</em></h3>
-      <p class="caption">The meeting on Tuesday. The email you keep rewriting. The call you've been ducking.</p>
+  <div class="clip-copy">
+    <div class="folio">02 · <span>The Practice</span></div>
+    <h2>A Whiteboard Session is what it <em>sounds</em> like.</h2>
+    <div class="body">
+      <p>You arrive. The board is empty. The session ends when the question is answered — when the next move is clear, the architecture is mapped, the decision is made.</p>
+      <p>Sometimes that takes an hour. Sometimes it takes three. The work is finished when the work is finished.</p>
+      <p><em>Strategic thinking, live, at the whiteboard, to a conclusion.</em></p>
     </div>
   </div>
 </section>
 
-<!-- ════ SCENE 05 — The Whiteboard ════ -->
-<section class="scene scene-method">
-  <div class="split">
-    <div class="method-image whiteboard-plate">
-      <img src="/images/whiteboard-plate.jpg" alt="John watching a client at the whiteboard mid-session">
-      <div class="plate-label">Plate ii · <span>The Whiteboard</span></div>
+<!-- ════ SCENE 04 — What Gets Resolved ════ -->
+<section class="scene scene-clip">
+  <div class="clip-frame">
+    <video autoplay muted loop playsinline preload="metadata" aria-label="A client writing on the whiteboard while John watches">
+      <source src="/videos/session-client-writing.mp4" type="video/mp4">
+    </video>
+    <div class="clip-caption">Whiteboard Session · April 2026</div>
+  </div>
+
+  <div class="clip-copy">
+    <div class="folio">03 · <span>What Gets Resolved</span></div>
+    <h2>Three things, <em>mostly</em>.</h2>
+    <div class="body">
+      <p><em>The strategic question you've been carrying without having sat with.</em> The thing you keep meaning to think about but haven't.</p>
+      <p><em>The mid-altitude problem that's stuck.</em> Where the system is producing the wrong output and you can't see where the leverage is.</p>
+      <p><em>The tactical decision you've been over-thinking.</em> Where you know what to do but haven't given yourself permission to do it.</p>
+      <p>These are the three altitudes. Most weeks have at least one of them building up. The session moves through whichever altitude needs the work.</p>
     </div>
+  </div>
+</section>
 
-    <div class="method-text">
-      <div class="label">04 · The Session</div>
-      <h2>One whiteboard. Your hardest problem. Two people <em>thinking</em>.</h2>
-      <p class="standfirst">The session externalises what you've been carrying, pressure-tests it live, and ends in a conclusion you can act on by Monday.</p>
+<!-- ════ SCENE 05 — In Their Words (Mark Schmull) ════ -->
+<section class="scene scene-testimonial">
+  <div class="folio">04 · <span>In Their Words</span></div>
+  <div class="testimonial-grid">
+    <div class="testimonial-body">
+      <p><em>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects — and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</em></p>
+      <p><em>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team — creating solutions that set the standard for the future.</em></p>
+      <p><em>Thanks, John.</em></p>
+      <div class="attribution">— <strong>Mark Schmull</strong>, MD, Arrow Planning</div>
+    </div>
+    <div class="testimonial-image">
+      <img src="/images/img-1739.jpg" alt="John and a client in a hospitality lounge, mid-conversation" loading="lazy">
+    </div>
+  </div>
+</section>
 
-      <div class="three">
-        <div class="beat">
-          <span class="n">i.</span>
-          <span class="t">Externalise<span>Get what's swirling in your head onto the board.</span></span>
-        </div>
-        <div class="beat">
-          <span class="n">ii.</span>
-          <span class="t">Pressure-test<span>Talk through the options out loud, live.</span></span>
-        </div>
-        <div class="beat">
-          <span class="n">iii.</span>
-          <span class="t">Conclude<span>Leave with a decision, not a homework prompt.</span></span>
-        </div>
+<!-- ════ SCENE 06 — The Programmes ════ -->
+<section class="scene scene-tiles" id="programmes">
+  <div class="folio">05 · <span>The Programmes</span></div>
+  <h2>Three contexts. Same <em>practice</em>.</h2>
+
+  <div class="tiles-grid">
+    <a class="tile" href="/leadstrong">
+      <div class="tile-image">
+        <img src="/images/img-1983.jpg" alt="Wall whiteboard session with a corporate leader" loading="lazy">
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ SCENE 06 — In Their Words ════ -->
-<section class="scene scene-pull">
-  <div class="folio">05 · <span>In Their Words</span></div>
-  <div class="mark">"</div>
-  <blockquote>
-    What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects — and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.
-    <br><br>
-    It takes a real <em>weight</em> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team — creating solutions that set the standard for the future.
-    <br><br>
-    Thanks, John.
-  </blockquote>
-  <div class="attr">
-    <span class="line"></span>
-    <span>Mark Schmull · MD, Arrow Planning</span>
-  </div>
-</section>
-
-<!-- ════ SCENE 07 — Three Doors ════ -->
-<section class="scene scene-doors" id="doors">
-  <div class="head">
-    <div class="label">06 · The Programmes</div>
-    <h2>Three contexts. One <em class="accent">practice</em>.</h2>
-    <p class="sub">The Whiteboard Sessions look different depending on who's in the room. The thinking stays the same. The context shapes what we think about.</p>
-  </div>
-
-  <div class="doors">
-    <a class="door" href="/leadstrong">
-      <span class="door-num">i.</span>
-      <span class="door-for">For the corporate leader</span>
-      <h3><em>LeadStrong</em></h3>
-      <p class="desc">Strategic thinking for Directors, VPs and executives navigating organisations they don't own.</p>
-      <div class="includes">
-        <span class="lab">Who it's for</span>
-        <span class="prog">Director · VP · Executive</span>
-      </div>
-      <span class="enter">
-        <span class="arrow"></span>
-        Inside LeadStrong
-      </span>
+      <h3>LeadStrong</h3>
+      <p class="tile-desc">For directors, VPs, and executives navigating the corporate altitude.</p>
+      <span class="tile-link">Learn more</span>
     </a>
 
-    <a class="door" href="/buildstrong">
-      <span class="door-num">ii.</span>
-      <span class="door-for">For the business owner</span>
-      <h3><em>BuildStrong</em></h3>
-      <p class="desc">Strategic thinking for entrepreneurs, MDs and business owners building the thing they lead.</p>
-      <div class="includes">
-        <span class="lab">Who it's for</span>
-        <span class="prog">Founder · MD · Owner</span>
+    <a class="tile" href="/buildstrong">
+      <div class="tile-image">
+        <img src="/images/img-1935.jpg" alt="Hospitality whiteboard session with a business owner" loading="lazy">
       </div>
-      <span class="enter">
-        <span class="arrow"></span>
-        Inside BuildStrong
-      </span>
+      <h3>BuildStrong</h3>
+      <p class="tile-desc">For founders, MDs, and owners building the business itself.</p>
+      <span class="tile-link">Learn more</span>
     </a>
 
-    <a class="door" href="/teamstrong">
-      <span class="door-num">iii.</span>
-      <span class="door-for">For the team in the room</span>
-      <h3><em>TeamStrong</em></h3>
-      <p class="desc">Strategic thinking for senior teams who need to think together, decide together, and move faster.</p>
-      <div class="includes">
-        <span class="lab">Who it's for</span>
-        <span class="prog">Leader and team</span>
+    <a class="tile" href="/teamstrong">
+      <div class="tile-image">
+        <img src="/images/img-1981.jpg" alt="Two people working together at a wall whiteboard" loading="lazy">
       </div>
-      <span class="enter">
-        <span class="arrow"></span>
-        Inside TeamStrong
-      </span>
+      <h3>TeamStrong</h3>
+      <p class="tile-desc">For the leader and the team, working together over twelve weeks.</p>
+      <span class="tile-link">Learn more</span>
     </a>
   </div>
 </section>
 
-<!-- ════ SCENE 08 — Closing ════ -->
-<section class="scene scene-close">
-  <div class="label">07 · <span>The Invitation</span></div>
-  <h2>
-    If you've read this far,<br />
-    you already <em>know</em>.
-  </h2>
-  <p style="font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: 1.25rem; color: var(--stone); margin-top: -2rem; margin-bottom: 4rem; max-width: 36ch;">
-    You'll know inside the first hour whether this is the thinking partnership you've been looking for.
-  </p>
-  <div class="button-row">
+<!-- ════ SCENE 07 — The Invitation ════ -->
+<section class="scene scene-invitation">
+  <div class="clip-frame">
+    <video autoplay muted loop playsinline preload="metadata" aria-label="John and a client at the whiteboard, conversation ending in laughter">
+      <source src="/videos/ember-laughter.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="invitation-copy">
+    <div class="folio">06 · <span>The Invitation</span></div>
+    <p class="lede"><em>The fastest way to know if this is for you is to be at the board for an hour.</em></p>
+    <p class="sub"><em>You'll know whether the practice fits you.</em></p>
     <a href="/contact" class="button">Book a Whiteboard Session</a>
-    <a href="/in-practice" class="button ghost">Read In Practice</a>
-  </div>
-
-  <div class="endline">
-    <span>Catalyst Growth Coaching</span>
-    <span>End of issue</span>
   </div>
 </section>
 
@@ -765,13 +625,15 @@
     <h4>Read</h4>
     <a href="/about">About John</a>
     <a href="/in-practice">In Practice</a>
-    <a href="/contact">Book a Session</a>
+    <a href="/going-further">Going Further</a>
+    <a href="/contact">Contact</a>
   </div>
   <div class="fine">
     <span>© Catalyst Growth Coaching, London · Est. 2024</span>
-    <span>Issue N° 02</span>
+    <span class="signoff">Don't get stuck.</span>
   </div>
 </footer>
 
+<script src="/main.js"></script>
 </body>
 </html>
