@@ -5,26 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>In Practice — Catalyst Growth Coaching</title>
 
-<!-- ════ SEO METADATA ════ -->
-<meta name="description" content="Two ongoing series. Lessons from the Room, and the People I Work With." />
+<meta name="description" content="Lessons distilled from sessions, and the leaders behind them. This is the room, after the work." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/in-practice" />
 <meta property="og:title" content="In Practice — Catalyst Growth Coaching" />
-<meta property="og:description" content="Two ongoing series. Lessons from the Room, and the People I Work With." />
+<meta property="og:description" content="Lessons distilled from sessions, and the leaders behind them. This is the room, after the work." />
 <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
-<meta property="og:site_name" content="John Obidipe | Catalyst Growth Coaching" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="In Practice — Catalyst Growth Coaching" />
-<meta name="twitter:description" content="Two ongoing series. Lessons from the Room, and the People I Work With." />
-<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/in-practice" />
-<!-- ════ END SEO METADATA ════ -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
     --bg:         #0C0C0E;
-    --bg-2:       #141418;
+    --bg-2:       #0A0A0C;
     --bg-3:       #1A1A20;
     --card:       #1E1E26;
     --bone:       #F2F0EC;
@@ -41,25 +35,19 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--bg);
-    color: var(--bone);
-    font-family: var(--font-b);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
   }
+  body.modal-open { overflow: hidden; }
   ::selection { background: var(--cognac); color: var(--bg); }
 
-  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
-
-  /* ─── Nav ─── */
   nav.top {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1.5rem 2.5vw;
     display: flex; justify-content: space-between; align-items: center;
     background: rgba(12,12,14,0.82);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--line);
   }
   nav.top .brand {
@@ -67,263 +55,275 @@
     letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
   }
   nav.top .brand span { color: var(--cognac); }
-  nav.top ul {
-    display: flex; gap: 2rem; list-style: none; align-items: center;
-  }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
   nav.top ul a {
     font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--stone); text-decoration: none; font-weight: 500;
-    transition: color 0.3s;
+    color: var(--stone); text-decoration: none; font-weight: 500; transition: color 0.3s;
   }
   nav.top ul a:hover { color: var(--cognac); }
   nav.top ul a.cta {
     color: var(--cognac); border: 1px solid var(--line-strong);
     padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
   }
-  nav.top ul a.cta:hover {
-    background: rgba(200,149,108,0.08); border-color: var(--cognac);
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  nav.top .has-dropdown { position: relative; }
+  nav.top .has-dropdown > a::after {
+    content: '▾'; margin-left: 0.4rem; font-size: 0.7em; color: var(--cognac); opacity: 0.6;
   }
+  nav.top .dropdown {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+    background: rgba(12,12,14,0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    padding: 0.8rem 0; min-width: 180px;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
+    list-style: none;
+  }
+  nav.top .has-dropdown:hover .dropdown,
+  nav.top .has-dropdown:focus-within .dropdown {
+    opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+  }
+  nav.top .dropdown a {
+    display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
+    letter-spacing: 0.18em; color: var(--stone);
+  }
+  nav.top .dropdown a:hover { color: var(--cognac); background: rgba(200,149,108,0.06); }
 
-  /* ─── Scene base ─── */
-  section.scene {
-    min-height: 100vh; padding: 10vh 6vw;
-    position: relative; display: flex;
-  }
+  section.scene { padding: 14vh 6vw; position: relative; display: flex; }
+  .folio { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ash); }
+  .folio span { color: var(--cognac); }
 
-  /* ══ SCENE — Feature Hero (Part 1 §3.3.1) ══ */
-  .scene-feature-hero {
-    padding-top: 14vh;
-    flex-direction: column;
-    justify-content: center;
+  .image-placeholder {
+    width: 100%; height: 100%;
+    background: #1A1A20; border: 1px dashed var(--cognac);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cognac);
+    font-family: var(--font-b); font-size: 0.85rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    text-align: center; padding: 1rem;
   }
-  .scene-feature-hero .feature-folio {
+  .image-placeholder::before { content: 'Image: '; opacity: 0.6; margin-right: 0.4em; }
+
+  /* ══ Hero ══ */
+  .scene-hero { padding: 0; flex-direction: column; min-height: auto; }
+  .scene-hero .hero-image {
+    position: relative; width: 100%; height: 50vh;
+    overflow: hidden; background: var(--bg-3);
+    margin-top: 0; padding-top: 7vh;
+  }
+  .scene-hero .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+  .scene-hero .hero-copy { padding: 10vh 6vw; max-width: 60ch; margin: 0 auto; text-align: left; }
+  .scene-hero .hero-copy .eyebrow {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600; margin-bottom: 1.5rem;
   }
-  .scene-feature-hero .feature-label {
-    font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 3vh;
-  }
-  .scene-feature-hero .feature-grid {
-    display: grid; grid-template-columns: 3fr 2fr;
-    gap: 5vw; align-items: end;
-  }
-  .scene-feature-hero h1 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2.8rem, 7.5vw, 5.5rem);
-    line-height: 1.0; letter-spacing: -0.01em;
-  }
-  .scene-feature-hero h1 .line { display: block; }
-  .scene-feature-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-feature-hero .feature-right {
-    display: flex; flex-direction: column; gap: 1.5rem;
-    max-width: 32ch; padding-bottom: 0.5rem; justify-self: end;
-  }
-  .scene-feature-hero .feature-lede {
+  .scene-hero .hero-copy h1 {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.3rem; line-height: 1.5; color: var(--bone);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1; margin-bottom: 2rem; color: var(--bone);
   }
-  .scene-feature-hero .breadcrumb {
-    margin-top: 6vh; padding-top: 1.2rem; border-top: 1px solid var(--line);
-    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
+  .scene-hero .hero-copy .body {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 1.2rem; line-height: 1.65; color: var(--stone);
   }
-  .scene-feature-hero .breadcrumb a {
-    color: var(--cognac); text-decoration: none;
-  }
-
-  /* Section preview cards on the hero */
-  .preview-cards {
-    margin-top: 8vh;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
-  }
-  .preview-card {
-    padding: 2rem; background: var(--bg-2);
-    border: 1px solid var(--line); border-radius: 4px;
-    text-decoration: none; color: inherit; display: block;
-    transition: all 0.4s ease;
-  }
-  .preview-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
-  .preview-card .lab {
-    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1rem;
-  }
-  .preview-card .desc {
-    font-family: var(--font-d); font-style: italic;
-    font-size: 1.2rem; color: var(--bone); line-height: 1.4;
-  }
-  .preview-card .more {
-    margin-top: 1.5rem;
-    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--cognac);
+  .scene-hero .hero-copy .body p { margin-bottom: 1.2rem; }
+  .scene-hero .hero-copy .body p:last-child {
+    margin-top: 1.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-style: italic; color: var(--ash);
   }
 
-  /* ══ SCENE — Lessons (Part 1 §3.3.6) ══ */
+  /* ══ Lessons ══ */
   .scene-lessons {
-    padding: 8vh 6vw;
-    flex-direction: column; min-height: auto;
+    flex-direction: column; padding: 10vh 6vw;
+    background: var(--bg);
   }
-  .scene-lessons .head {
-    margin-bottom: 6vh; max-width: 720px;
-  }
-  .scene-lessons .head .folio {
+  .scene-lessons .lessons-head { margin-bottom: 4vh; max-width: 720px; }
+  .scene-lessons .lessons-head .label {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 1.2rem;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.5rem;
   }
-  .scene-lessons .head .folio span { color: var(--cognac); }
-  .scene-lessons .head h2 {
+  .scene-lessons .lessons-head p {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15; max-width: 22ch; margin-bottom: 1.5rem;
-  }
-  .scene-lessons .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-lessons .head .sub {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.25rem; color: var(--stone); max-width: 40ch; line-height: 1.5;
+    font-size: 1.2rem; color: var(--stone); line-height: 1.5;
   }
   .lessons-list {
     max-width: 60ch; margin: 0 auto;
   }
-  .lesson {
-    padding: 4rem 0; border-bottom: 1px solid var(--line);
+  .lesson-card {
+    padding: 3.5rem 0; border-bottom: 1px solid var(--line);
   }
-  .lesson:last-child { border-bottom: none; }
-  .lesson .lesson-num {
+  .lesson-card:last-child { border-bottom: none; }
+  .lesson-card .lesson-num {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1rem; color: var(--cognac);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.2rem;
+  }
+  .lesson-card h3 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.25; color: var(--bone); margin-bottom: 1.5rem;
+  }
+  .lesson-card .preview {
+    font-size: 1.02rem; line-height: 1.7; color: var(--stone);
+    margin-bottom: 1.5rem;
+  }
+  .lesson-card .preview em { font-style: italic; color: var(--bone); }
+  .lesson-card .read-more {
+    background: none; border: none; padding: 0;
+    color: var(--cognac); font-family: var(--font-b);
+    font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
+    font-weight: 600; cursor: pointer;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 0.2rem;
+    transition: border-color 0.3s;
+  }
+  .lesson-card .read-more:hover { border-color: var(--cognac); }
+  .lesson-card .read-more::after { content: ' →'; }
+
+  /* ══ Modal overlay ══ */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: flex-start; justify-content: center;
+    overflow-y: auto;
+    padding: 8vh 1rem 4vh;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-container {
+    position: relative;
+    background: var(--bg);
+    max-width: 720px; width: 100%;
+    max-height: 85vh; overflow-y: auto;
+    padding: 4rem 3rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    margin: auto;
+  }
+  .modal-close {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    background: none; border: none;
+    color: var(--cognac);
+    font-size: 2rem; line-height: 1;
+    cursor: pointer; padding: 0.4rem 0.6rem;
+    transition: color 0.2s;
+  }
+  .modal-close:hover { color: var(--cognac-2); }
+  .modal-content .lesson-number {
     font-family: var(--font-d); font-style: italic;
     font-size: 1.1rem; color: var(--cognac);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem; letter-spacing: 0.1em;
   }
-  .lesson h3 {
+  .modal-content h2 {
     font-family: var(--font-d); font-weight: 400;
-    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
-    line-height: 1.25; color: var(--bone); margin-bottom: 1.8rem;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.2; color: var(--bone); margin-bottom: 2.5rem;
   }
-  .lesson h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .lesson .lesson-body {
-    font-size: 1.05rem; line-height: 1.8; color: var(--stone);
+  .modal-content .lesson-body {
+    font-size: 1.02rem; line-height: 1.8; color: var(--stone);
   }
-  .lesson .lesson-body p {
-    margin-bottom: 1.2rem;
-  }
-  .lesson .lesson-body em {
-    font-style: italic; color: var(--bone);
+  .modal-content .lesson-body p { margin-bottom: 1.2rem; }
+  .modal-content .lesson-body em { font-style: italic; color: var(--bone); }
+  .modal-content .lesson-coda {
+    margin-top: 2rem; padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; line-height: 1.5; color: var(--bone);
   }
 
-  /* ══ SCENE — People (custom for In Practice) ══ */
+  /* ══ People I Work With ══ */
   .scene-people {
-    padding: 8vh 6vw; min-height: auto;
-    flex-direction: column;
+    flex-direction: column; padding: 14vh 6vw;
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   }
-  .scene-people .head {
-    max-width: 720px; margin-bottom: 6vh;
-  }
-  .scene-people .head .folio {
+  .scene-people .people-head { margin-bottom: 5vh; max-width: 720px; }
+  .scene-people .people-head .label {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 1.2rem;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.5rem;
   }
-  .scene-people .head .folio span { color: var(--cognac); }
-  .scene-people .head h2 {
+  .scene-people .people-head h2 {
+    font-family: var(--font-d); font-weight: 300; font-style: italic;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.2; margin-bottom: 1rem; color: var(--bone);
+  }
+  .scene-people .people-head p {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15; max-width: 22ch; margin-bottom: 1.5rem;
-  }
-  .scene-people .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-people .head .sub {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.25rem; color: var(--stone); max-width: 40ch; line-height: 1.5;
+    font-size: 1.1rem; color: var(--stone); line-height: 1.6;
   }
   .people-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2rem; margin-top: 2rem;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    margin-top: 2rem;
   }
   .person-card {
-    padding: 2.5rem 2rem; background: var(--bg-2);
-    border: 1px solid var(--line); border-radius: 4px;
+    padding: 2.5rem 2rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
     display: flex; flex-direction: column; gap: 1rem;
   }
   .person-card .person-name {
-    font-family: var(--font-d); font-weight: 400; font-size: 1.5rem;
-    color: var(--bone);
+    font-family: var(--font-d); font-weight: 400;
+    font-size: 1.5rem; color: var(--bone);
   }
-  .person-card.placeholder .person-name { color: var(--stone); }
   .person-card .person-role {
     font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--cognac);
   }
-  .person-card.placeholder .person-role { color: var(--ash); }
   .person-card .person-excerpt {
     font-family: var(--font-d); font-style: italic;
     font-size: 1.05rem; line-height: 1.6; color: var(--stone);
     margin-top: 1rem;
   }
-  .person-card.placeholder .person-excerpt { color: var(--ash); }
-  .person-card a {
+  .person-card .person-link {
     margin-top: auto; padding-top: 1.5rem;
     font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--cognac); text-decoration: none; font-weight: 600;
+    color: var(--cognac); font-weight: 600;
+    text-decoration: none;
   }
-  .person-card .awaiting {
-    margin-top: auto; padding-top: 1.5rem;
-    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ash);
+  .scene-people .follow-link {
+    margin-top: 4rem; text-align: center;
+    font-family: var(--font-d); font-style: italic;
+    font-size: 1.1rem; color: var(--stone);
   }
-  .people-foot {
-    margin-top: 4rem; padding-top: 2.5rem;
-    border-top: 1px solid var(--line); text-align: center;
+  .scene-people .follow-link a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px; transition: border-color 0.3s;
   }
-  .people-foot .note {
+  .scene-people .follow-link a:hover { border-color: var(--cognac); }
+
+  /* ══ Close ══ */
+  .scene-close {
+    flex-direction: column; justify-content: center;
+    padding: 14vh 6vw; align-items: flex-start;
+  }
+  .scene-close .folio { margin-bottom: 3rem; }
+  .scene-close .lede {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.3; color: var(--bone);
+    max-width: 36ch; margin-bottom: 1rem;
+  }
+  .scene-close .lede em { font-style: italic; color: var(--cognac); }
+  .scene-close .sub {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.15rem; color: var(--stone); margin-bottom: 1rem;
-  }
-  .people-foot a {
-    font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--cognac); text-decoration: none; font-weight: 600;
+    font-size: 1.2rem; color: var(--stone); margin-bottom: 3rem; max-width: 36ch;
   }
 
-  /* ══ Closing ══ */
-  .scene-close {
-    flex-direction: column; justify-content: center; align-items: flex-start;
-    padding: 14vh 6vw; position: relative;
-  }
-  .scene-close .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--ash); margin-bottom: 4rem;
-  }
-  .scene-close .label span { color: var(--cognac); }
-  .scene-close h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 5vw, 3.6rem);
-    line-height: 1.15; max-width: 22ch; margin-bottom: 4rem;
-  }
-  .scene-close h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-close .button-row {
-    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
-  }
-  .scene-close .button {
-    display: inline-block; padding: 1.2rem 2.8rem;
+  .button {
+    display: inline-block; padding: 1.1rem 2.6rem;
     background: var(--cognac); color: var(--bg);
     font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
     letter-spacing: 0.2em; text-transform: uppercase;
     border: none; border-radius: 2px; cursor: pointer;
     text-decoration: none; transition: all 0.4s ease;
   }
-  .scene-close .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
-  .scene-close .button.ghost {
-    background: transparent; color: var(--cognac);
-    border: 1px solid var(--line-strong);
-  }
-  .scene-close .button.ghost:hover {
-    background: rgba(200,149,108,0.08); border-color: var(--cognac);
-  }
-  .scene-close .endline {
-    position: absolute; bottom: 4vh; left: 6vw; right: 6vw;
-    display: flex; justify-content: space-between;
-    font-size: 0.66rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
-    border-top: 1px solid var(--line); padding-top: 1.5rem;
-  }
+  .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
 
-  /* ── Footer ── */
   footer {
     background: var(--bg); padding: 4rem 6vw 3rem;
     border-top: 1px solid var(--line);
@@ -346,28 +346,33 @@
     border-top: 1px solid var(--line);
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ash);
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  footer .fine .signoff {
+    font-family: var(--font-d); font-style: italic;
+    text-transform: none; letter-spacing: 0; color: var(--stone); font-size: 0.9rem;
   }
 
-  /* ── Mobile ── */
   @media (max-width: 900px) {
     nav.top { padding: 1rem 5vw; }
     nav.top ul { gap: 1rem; }
-    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
-    section.scene { padding: 12vh 6vw; }
+    nav.top ul li:nth-child(1) { display: none; }
+    nav.top .has-dropdown > a::after { display: none; }
+    nav.top .dropdown { display: none; }
 
-    .scene-feature-hero .feature-grid {
-      grid-template-columns: 1fr; gap: 2.5rem;
-    }
-    .scene-feature-hero .feature-right { max-width: 100%; justify-self: start; }
-    .scene-feature-hero h1 { font-size: clamp(2.4rem, 12vw, 4.2rem); }
-
-    .preview-cards { grid-template-columns: 1fr; gap: 1.2rem; }
+    .scene-hero .hero-image { height: 40vh; }
 
     .people-grid { grid-template-columns: 1fr; }
 
+    .modal-container {
+      max-height: none; max-width: 100%;
+      height: auto; min-height: 80vh;
+      padding: 3rem 1.5rem; border-radius: 0;
+    }
+    .modal-overlay { padding: 4vh 0; }
+
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
-    footer .fine { flex-direction: column; gap: 0.8rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
   }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -381,210 +386,206 @@
   <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
   <ul>
     <li><a href="/about">About</a></li>
-    <li><a href="/#doors">Programmes</a></li>
+    <li class="has-dropdown">
+      <a href="/#programmes">Programmes</a>
+      <ul class="dropdown">
+        <li><a href="/leadstrong">LeadStrong</a></li>
+        <li><a href="/buildstrong">BuildStrong</a></li>
+        <li><a href="/teamstrong">TeamStrong</a></li>
+      </ul>
+    </li>
     <li><a href="/in-practice">In Practice</a></li>
-    <li><a href="/contact" class="cta">Book a Session</a></li>
+    <li><a href="/contact" class="cta">Contact</a></li>
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — Page Hero ════ -->
-<section class="scene scene-feature-hero">
-  <div class="feature-folio">In Practice · Two ongoing series</div>
+<!-- ════ SCENE 01 — Hero ════ -->
+<section class="scene scene-hero">
+  <div class="hero-image">
+    <!-- IMAGE PLACEHOLDER: fsr-2.jpg -->
+    <div class="image-placeholder">fsr-2.jpg</div>
+  </div>
 
-  <div class="feature-grid">
-    <h1>
-      <span class="line">In</span>
-      <span class="line"><em>Practice</em>.</span>
-    </h1>
-
-    <div class="feature-right">
-      <p class="feature-lede">Two perspectives on the same body of work. Reflections drawn from the practice, and the people I work with as they show up there.</p>
+  <div class="hero-copy">
+    <div class="eyebrow">In Practice</div>
+    <h1>Where the work shows itself.</h1>
+    <div class="body">
+      <p>Two sections. The first is what gets distilled from sessions — small essays on what the practice keeps revealing. The second is the leaders I've worked with, told their way.</p>
+      <p><em>Nothing here is selling. This is the room, after the work.</em></p>
     </div>
-  </div>
-
-  <div class="preview-cards">
-    <a href="#lessons" class="preview-card">
-      <div class="lab">Lessons from the Room</div>
-      <div class="desc">What working at the board has taught me. A considered collection.</div>
-      <div class="more">Read below ↓</div>
-    </a>
-
-    <a href="#people" class="preview-card">
-      <div class="lab">The People I Work With</div>
-      <div class="desc">A weekly series. Each week I write about a current or past client.</div>
-      <div class="more">Read below ↓</div>
-    </a>
-  </div>
-
-  <div class="breadcrumb">
-    Issue N° 02 · <a href="/">Return to the issue</a>
   </div>
 </section>
 
-<!-- ════ SCENE 02 — Lessons from the Room ════ -->
-<section class="scene scene-lessons" id="lessons">
-  <div class="head">
-    <div class="folio">01 · <span>Lessons from the Room</span></div>
-    <h2>What working at the board has taught <em>me</em>.</h2>
-    <p class="sub">A collection of reflections from years of strategic thinking work with senior leaders, founders and teams.</p>
+<!-- ════ SCENE 02 — Lessons ════ -->
+<section class="scene scene-lessons">
+  <div class="lessons-head">
+    <div class="label">Lessons</div>
+    <p>Each piece below is a single observation from a single client, anonymous but real. Read one, or read them all.</p>
   </div>
 
   <div class="lessons-list">
 
-    <div class="lesson">
-      <div class="lesson-num">Lesson i.</div>
-      <h3>When the noise drowns the <em>signal</em>.</h3>
-      <div class="lesson-body">
-        <p>A client of mine had been promoted to COO. In the first weeks she felt overwhelmed — too much new information, too many issues landing at once, and a real uncertainty about what she was actually supposed to be doing.</p>
-        <p>We took a whiteboard session and pushed past the noise. What had she noticed during her orientation? What had she seen while still in her last role? What were the key things her stakeholders were saying to her, repeatedly?</p>
-        <p>We mapped what we had against the things that mattered: impact if solved, complexity, time, resources available. The picture changed quickly. By the end of the hour she had a short list of the right things to work on first, in the right order.</p>
-        <p><em>The job of a senior leader isn't to handle everything that lands. It's to know which things to work on. Sometimes that means having someone in the room helping you sort signal from noise out loud.</em></p>
-      </div>
-    </div>
+    <article class="lesson-card">
+      <div class="lesson-num">i.</div>
+      <h3>Too simple to see</h3>
+      <p class="preview">I had a session with a very experienced business development manager. He'd been thinking about his situation for a long time and seemed to already know the options available to him.</p>
+      <button class="read-more" data-lesson="i">Read the full lesson</button>
+    </article>
 
-    <div class="lesson">
-      <div class="lesson-num">Lesson ii.</div>
-      <h3>Sometimes the answer is too simple to <em>see</em>.</h3>
-      <div class="lesson-body">
-        <p>I had a session with a very experienced business development manager. He'd been thinking about his situation for a long time and seemed to already know the options available to him. I thought I knew the answer too — but as I regularly do, I dropped my preconclusions and went in blank, asking questions.</p>
-        <p>The more I asked, the more we noted on the board. Once it was all out, we looked at what was there and traced the connections that became visible. What seemed obvious to me turned into natural options and routes he hadn't yet seen — including a new direction he hadn't considered.</p>
-        <p>The lightbulbs started turning on. He became visibly excited, and we went deeper into the new space of possibility.</p>
-        <p><em>Sometimes the answer is staring you in the face. You can't see it because you're looking for something more complicated. It can be too simple to see as anything.</em></p>
-      </div>
-    </div>
+    <article class="lesson-card">
+      <div class="lesson-num">ii.</div>
+      <h3>The answer isn't always in you</h3>
+      <p class="preview">A lot of coaches say the answer is always in you. Sometimes it is. Sometimes it isn't. Sometimes it only comes from a conversation with someone who has a different perspective.</p>
+      <button class="read-more" data-lesson="ii">Read the full lesson</button>
+    </article>
 
-    <div class="lesson">
-      <div class="lesson-num">Lesson iii.</div>
-      <h3>The answer isn't always <em>in</em> you.</h3>
-      <div class="lesson-body">
-        <p>A lot of coaches say the answer is always in you. Sometimes it is. Sometimes it isn't. Sometimes it only comes from a conversation with someone who has a different perspective.</p>
-        <p>I was working with a business owner so focused on the present that the future he could see had very little detail. That bothered him. Alongside the work of freeing up his time through delegation, we had whiteboard sessions to explore what he really wanted.</p>
-        <p>Looking at his FITT16 report, I was able to help him put words to what he'd felt inside but had not been able to articulate. He could have arrived at it eventually on his own — but we generated that understanding there and then, and fleshed it out over a few more sessions.</p>
-        <p>That vision is now what he's working towards daily.</p>
-        <p><em>The answer isn't always in you. Sometimes it's in the room between you and the right thinking partner.</em></p>
-      </div>
-    </div>
+    <article class="lesson-card">
+      <div class="lesson-num">iii.</div>
+      <h3>What only writing reveals</h3>
+      <p class="preview">A pattern I've noticed across many whiteboard sessions: leaders have epiphanies that come not from new information, but from finally seeing what they already knew laid out in front of them.</p>
+      <button class="read-more" data-lesson="iii">Read the full lesson</button>
+    </article>
 
-    <div class="lesson">
-      <div class="lesson-num">Lesson iv.</div>
-      <h3>What only <em>writing it down</em> reveals.</h3>
-      <div class="lesson-body">
-        <p>A pattern I've noticed across many whiteboard sessions: leaders have epiphanies that come not from new information, but from finally seeing what they already knew laid out in front of them.</p>
-        <p>Three versions of the same observation, from clients who've described it to me:</p>
-        <p><em>Sometimes you only see things when they're written out in front of you.</em></p>
-        <p><em>Sometimes decisions only become clear when you see all the elements written out on the page.</em></p>
-        <p><em>Sometimes decisions only become solid once you write them out.</em></p>
-        <p>Each one says it slightly differently. The common thread is that thought held in the head is fundamentally different from thought made visible. The same content, externalised on a board, behaves differently. Connections become visible. Weighting becomes possible. A decision that felt impossible internally becomes obvious externally.</p>
-        <p><em>The whiteboard isn't a teaching tool. It's a thinking tool. The lesson is what people see in their own thinking once they can actually see it.</em></p>
-      </div>
-    </div>
+    <article class="lesson-card">
+      <div class="lesson-num">iv.</div>
+      <h3>When the noise drowns the signal</h3>
+      <p class="preview">A client of mine had been promoted to COO. In the first weeks she felt overwhelmed — too much new information, too many issues landing at once, and a real uncertainty about what she was actually supposed to be doing.</p>
+      <button class="read-more" data-lesson="iv">Read the full lesson</button>
+    </article>
 
-    <div class="lesson">
-      <div class="lesson-num">Lesson v.</div>
-      <h3>The path you're avoiding is the one you have no data <em>on</em>.</h3>
-      <div class="lesson-body">
-        <p>There's a reason you don't know what to do, and it's that you're avoiding a particular path — not because it's wrong, but because you have so little data on how to handle it. It feels like a dead end. So you keep choosing the paths you know.</p>
-        <p>A client of mine has a perfectionist tendency. He sticks to familiar routes that reliably produce the outcomes he wants. He's very successful at it — but he's not the most flexible, and he knows that isn't to his advantage. There are options he can see are available to him that he doesn't explore, because exploring them isn't his natural inclination.</p>
-        <p>Whiteboard sessions have given him the confidence to map what those new options actually look like — what implementation would involve, what the early steps would be, what the risks really are.</p>
-        <p><em>The path you don't take isn't always the wrong path. Sometimes it's just the one you've never had time to think about properly.</em></p>
-      </div>
-    </div>
+    <article class="lesson-card">
+      <div class="lesson-num">v.</div>
+      <h3>The path you're avoiding</h3>
+      <p class="preview">There's a reason you don't know what to do, and it's that you're avoiding a particular path — not because it's wrong, but because you have so little data on how to handle it. It feels like a dead end. So you keep choosing the paths you know.</p>
+      <button class="read-more" data-lesson="v">Read the full lesson</button>
+    </article>
 
-    <div class="lesson">
-      <div class="lesson-num">Lesson vi.</div>
-      <h3>Confidence comes from truly <em>seeing</em> yourself.</h3>
-      <div class="lesson-body">
-        <p>A leader I worked with was feeling imposter syndrome after a new promotion. He didn't feel worthy of taking on the role. The internal narrative had taken over — <em>I shouldn't be here, I'm not the right person, somebody's about to notice</em> — and he couldn't argue his way out of it from the inside.</p>
-        <p>So I asked him question after question about what he'd actually achieved. We put it all on the board. The work, the wins, the moments that had earned him the seat. As the board grew, so did his smile.</p>
-        <p>He didn't need new information. He had all of it already. What he needed was to see who he was, how he'd got there, and why he was deserving of the role he'd been offered — laid out in front of him, where the imposter narrative couldn't argue against it.</p>
-        <p>He stepped into the role with new energy.</p>
-        <p><em>Confidence often isn't about adding something. It's about seeing what's already there clearly enough that the inner critic loses the argument.</em></p>
-      </div>
-    </div>
+    <article class="lesson-card">
+      <div class="lesson-num">vi.</div>
+      <h3>Confidence, from seeing yourself</h3>
+      <p class="preview">A leader I worked with was feeling imposter syndrome after a new promotion. He didn't feel worthy of taking on the role. The internal narrative had taken over — <em>I shouldn't be here, I'm not the right person, somebody's about to notice</em> — and he couldn't argue his way out of it from the inside.</p>
+      <button class="read-more" data-lesson="vi">Read the full lesson</button>
+    </article>
 
-    <div class="lesson">
-      <div class="lesson-num">Lesson vii.</div>
-      <h3>The obvious choice rarely <em>survives</em> the longer list.</h3>
-      <div class="lesson-body">
-        <p>Two partners had been handed a remarkable opportunity. An inventor had brought them a product he had no interest in commercialising himself — the business side was theirs to build. The product was revolutionary. The applications looked endless.</p>
-        <p>That was the problem. They had so many options they were overwhelmed, and the first option that had occurred to them had already started to feel like the obvious choice.</p>
-        <p>We hired a white room for the day. Out with the whiteboard pen. We spent a full session breaking down the product, the applications, the players in each adjacent space, the partnerships available, the resources each direction would require.</p>
-        <p>By the end of a vibrant day's discussion, the best options weren't just clearer — they were obvious. And the option they'd walked in thinking was the answer wasn't even in the top three. They left with a clear action plan: who to contact, who to hire, what came next.</p>
-        <p><em>The obvious choice rarely survives the longer list. Most strategic mistakes happen when the second option never gets named.</em></p>
-      </div>
-    </div>
+    <article class="lesson-card">
+      <div class="lesson-num">vii.</div>
+      <h3>The obvious choice rarely wins</h3>
+      <p class="preview">Two partners had been handed a remarkable opportunity. An inventor had brought them a product he had no interest in commercialising himself — the business side was theirs to build. The product was revolutionary. The applications looked endless.</p>
+      <button class="read-more" data-lesson="vii">Read the full lesson</button>
+    </article>
 
   </div>
 </section>
 
 <!-- ════ SCENE 03 — The People I Work With ════ -->
-<section class="scene scene-people" id="people">
-  <div class="head">
-    <div class="folio">02 · <span>The People I Work With</span></div>
-    <h2>A weekly <em>series</em>.</h2>
-    <p class="sub">Each week I write about a current or past client. Not what they paid me for — what makes them remarkable as leaders. It's the testimonial that doesn't ask the client to write anything.</p>
+<section class="scene scene-people">
+  <div class="people-head">
+    <div class="label">The People I Work With</div>
+    <h2>A small ongoing series.</h2>
+    <p>Once a week — sometimes more — I share something about a leader I've worked with. Their work, their character, what makes them remarkable. These are the three most recent.</p>
   </div>
 
   <div class="people-grid">
-    <!-- Slot 1: Tim (most recent post) -->
-    <div class="person-card">
+    <article class="person-card">
       <div class="person-name">Tim</div>
       <div class="person-role">AVP · Wisconsin</div>
-      <p class="person-excerpt">
-        Today I'm celebrating another past client: Tim Cook, now an AVP in Wisconsin.<br><br>
-        When I first met Tim, he struck me as quietly pensive — incredibly intelligent, observant, and astute. The kind of person who's listening and thinking more than he's saying…
-      </p>
-      <a href="https://www.linkedin.com/posts/johnobi_today-im-celebrating-another-past-client-activity-7462385307611488256-7kmP" target="_blank" rel="noopener">Read on LinkedIn →</a>
-    </div>
+      <p class="person-excerpt">Today I'm celebrating another past client: Tim Cook, now an AVP in Wisconsin.<br><br>When I first met Tim, he struck me as quietly pensive — incredibly intelligent, observant, and astute. The kind of person who's listening and thinking more than he's saying…</p>
+      <a class="person-link" href="[TIM LINKEDIN POST URL TO BE SUPPLIED]" target="_blank" rel="noopener">Read on LinkedIn →</a>
+    </article>
 
-    <!-- Slot 2: Ashley (second most recent post) -->
-    <div class="person-card">
+    <article class="person-card">
       <div class="person-name">Ashley</div>
       <div class="person-role">Strategic delivery leader · Atlanta</div>
-      <p class="person-excerpt">
-        Over the years I've had the privilege of coaching some genuinely impressive leaders. Today I want to celebrate one of them: Ashley.<br><br>
-        Working with Ashley was a privilege. She's deeply thoughtful, experienced, and well-travelled — yet so open to learning…
-      </p>
-      <!-- When live, replace the span with: <a href="..." target="_blank" rel="noopener">Read on LinkedIn →</a> -->
-      <span class="awaiting">Live on LinkedIn next week</span>
-    </div>
+      <p class="person-excerpt">Over the years I've had the privilege of coaching some genuinely impressive leaders. Today I want to celebrate one of them: Ashley.<br><br>Working with Ashley was a privilege. She's deeply thoughtful, experienced, and well-travelled — yet so open to learning…</p>
+      <a class="person-link" href="[ASHLEY LINKEDIN POST URL TO BE SUPPLIED]" target="_blank" rel="noopener">Read on LinkedIn →</a>
+    </article>
 
-    <!-- Slot 3: Oli (earlier post) -->
-    <div class="person-card">
+    <article class="person-card">
       <div class="person-name">Oli</div>
       <div class="person-role">Chef and restaurateur · Hertford</div>
-      <p class="person-excerpt">
-        Oli is one of my favourite types of clients to work with because he's both an entrepreneur and a craftsman. He's completely committed to his craft — having finished top of his class, he developed in the toughest of kitchens…
-      </p>
-      <!-- When live, replace the span with: <a href="..." target="_blank" rel="noopener">Read on LinkedIn →</a> -->
-      <span class="awaiting">Live on LinkedIn the week after</span>
-    </div>
+      <p class="person-excerpt">Oli is one of my favourite types of clients to work with because he's both an entrepreneur and a craftsman. He's completely committed to his craft — having finished top of his class, he developed in the toughest of kitchens…</p>
+      <a class="person-link" href="[OLI LINKEDIN POST URL TO BE SUPPLIED]" target="_blank" rel="noopener">Read on LinkedIn →</a>
+    </article>
   </div>
 
-  <div class="people-foot">
-    <p class="note">More posts published weekly on LinkedIn.</p>
-    <a href="https://www.linkedin.com/in/johnobi" target="_blank" rel="noopener">Follow the series on LinkedIn →</a>
-  </div>
+  <p class="follow-link"><a href="https://www.linkedin.com/in/johnobidipe" target="_blank" rel="noopener">Follow the full series on LinkedIn →</a></p>
 </section>
 
 <!-- ════ SCENE 04 — Close ════ -->
 <section class="scene scene-close">
-  <div class="label">03 · <span>The Invitation</span></div>
-  <h2>
-    Two ways to keep reading.<br>
-    Or one way to start <em>working</em>.
-  </h2>
-  <div class="button-row">
-    <a href="https://www.linkedin.com/in/johnobi" target="_blank" rel="noopener" class="button ghost">Follow on LinkedIn</a>
-    <a href="/" class="button ghost">Return to the issue</a>
-    <a href="/contact" class="button">Book a Whiteboard Session</a>
+  <div class="folio">05 · <span>Next</span></div>
+  <p class="lede"><em>If something in here pointed at a question you've been carrying, the fastest way to know if the practice fits is to be at the board for an hour.</em></p>
+  <p class="sub"><em>You'll know whether the practice fits you.</em></p>
+  <a href="/contact" class="button">Book a Whiteboard Session</a>
+</section>
+
+<!-- ════ MODAL OVERLAY (single instance) ════ -->
+<div id="lesson-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-lesson-title" aria-hidden="true">
+  <div class="modal-container">
+    <button class="modal-close" id="modal-close" aria-label="Close lesson">×</button>
+    <div class="modal-content">
+      <div class="lesson-number" id="modal-lesson-num"></div>
+      <h2 id="modal-lesson-title"></h2>
+      <div class="lesson-body" id="modal-lesson-body"></div>
+      <div class="lesson-coda" id="modal-lesson-coda"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ LESSON DATA (hidden templates) ════ -->
+<template id="lesson-data">
+  <div data-id="i" data-title="Too simple to see" data-num="Lesson i.">
+    <p>I had a session with a very experienced business development manager. He'd been thinking about his situation for a long time and seemed to already know the options available to him. I thought I knew the answer too — but as I regularly do, I dropped my preconclusions and went in blank, asking questions.</p>
+    <p>The more I asked, the more we noted on the board. Once it was all out, we looked at what was there and traced the connections that became visible. What seemed obvious to me turned into natural options and routes he hadn't yet seen — including a new direction he hadn't considered.</p>
+    <p>The lightbulbs started turning on. He became visibly excited, and we went deeper into the new space of possibility.</p>
+    <p data-coda>Sometimes the answer is staring you in the face. You can't see it because you're looking for something more complicated. It can be too simple to see as anything.</p>
   </div>
 
-  <div class="endline">
-    <span>Catalyst Growth Coaching · In Practice</span>
-    <span>Continues</span>
+  <div data-id="ii" data-title="The answer isn't always in you" data-num="Lesson ii.">
+    <p>A lot of coaches say the answer is always in you. Sometimes it is. Sometimes it isn't. Sometimes it only comes from a conversation with someone who has a different perspective.</p>
+    <p>I was working with a business owner so focused on the present that the future he could see had very little detail. That bothered him. Alongside the work of freeing up his time through delegation, we had whiteboard sessions to explore what he really wanted.</p>
+    <p>Looking at his FITT16 report, I was able to help him put words to what he'd felt inside but had not been able to articulate. He could have arrived at it eventually on his own — but we generated that understanding there and then, and fleshed it out over a few more sessions.</p>
+    <p>That vision is now what he's working towards daily.</p>
+    <p data-coda>The answer isn't always in you. Sometimes it's in the room between you and the right thinking partner.</p>
   </div>
-</section>
+
+  <div data-id="iii" data-title="What only writing reveals" data-num="Lesson iii.">
+    <p>A pattern I've noticed across many whiteboard sessions: leaders have epiphanies that come not from new information, but from finally seeing what they already knew laid out in front of them.</p>
+    <p>One client put it like this: <em>sometimes decisions only become clear when you see all the elements written out on the page.</em></p>
+    <p>The common thread is that thought held in the head is fundamentally different from thought made visible. The same content, externalised on a board, behaves differently. Connections become visible. Weighting becomes possible. A decision that felt impossible internally becomes obvious externally.</p>
+    <p data-coda>The whiteboard isn't a teaching tool. It's a thinking tool. The lesson is what people see in their own thinking once they can actually see it.</p>
+  </div>
+
+  <div data-id="iv" data-title="When the noise drowns the signal" data-num="Lesson iv.">
+    <p>A client of mine had been promoted to COO. In the first weeks she felt overwhelmed — too much new information, too many issues landing at once, and a real uncertainty about what she was actually supposed to be doing.</p>
+    <p>We took a whiteboard session and pushed past the noise. What had she noticed during her orientation? What had she seen while still in her last role? What were the key things her stakeholders were saying to her, repeatedly?</p>
+    <p>We mapped what we had against the things that mattered: impact if solved, complexity, time, resources available. The picture changed quickly. By the end of the hour she had a short list of the right things to work on first, in the right order.</p>
+    <p data-coda>The job of a senior leader isn't to handle everything that lands. It's to know which things to work on. Sometimes that means having someone in the room helping you sort signal from noise out loud.</p>
+  </div>
+
+  <div data-id="v" data-title="The path you're avoiding" data-num="Lesson v.">
+    <p>There's a reason you don't know what to do, and it's that you're avoiding a particular path — not because it's wrong, but because you have so little data on how to handle it. It feels like a dead end. So you keep choosing the paths you know.</p>
+    <p>A client of mine has a perfectionist tendency. He sticks to familiar routes that reliably produce the outcomes he wants. He's very successful at it — but he's not the most flexible, and he knows that isn't to his advantage. There are options he can see are available to him that he doesn't explore, because exploring them isn't his natural inclination.</p>
+    <p>Whiteboard sessions have given him the confidence to map what those new options actually look like — what implementation would involve, what the early steps would be, what the risks really are.</p>
+    <p data-coda>The path you don't take isn't always the wrong path. Sometimes it's just the one you've never had time to think about properly.</p>
+  </div>
+
+  <div data-id="vi" data-title="Confidence, from seeing yourself" data-num="Lesson vi.">
+    <p>A leader I worked with was feeling imposter syndrome after a new promotion. He didn't feel worthy of taking on the role. The internal narrative had taken over — <em>I shouldn't be here, I'm not the right person, somebody's about to notice</em> — and he couldn't argue his way out of it from the inside.</p>
+    <p>So I asked him question after question about what he'd actually achieved. We put it all on the board. The work, the wins, the moments that had earned him the seat. As the board grew, so did his smile.</p>
+    <p>He didn't need new information. He had all of it already. What he needed was to see who he was, how he'd got there, and why he was deserving of the role he'd been offered — laid out in front of him, where the imposter narrative couldn't argue against it.</p>
+    <p>He stepped into the role with new energy.</p>
+    <p data-coda>Confidence often isn't about adding something. It's about seeing what's already there clearly enough that the inner critic loses the argument.</p>
+  </div>
+
+  <div data-id="vii" data-title="The obvious choice rarely wins" data-num="Lesson vii.">
+    <p>Two partners had been handed a remarkable opportunity. An inventor had brought them a product he had no interest in commercialising himself — the business side was theirs to build. The product was revolutionary. The applications looked endless.</p>
+    <p>That was the problem. They had so many options they were overwhelmed, and the first option that had occurred to them had already started to feel like the obvious choice.</p>
+    <p>We hired a white room for the day. Out with the whiteboard pen. We spent a full session breaking down the product, the applications, the players in each adjacent space, the partnerships available, the resources each direction would require.</p>
+    <p>By the end of a vibrant day's discussion, the best options weren't just clearer — they were obvious. And the option they'd walked in thinking was the answer wasn't even in the top three. They left with a clear action plan: who to contact, who to hire, what came next.</p>
+    <p data-coda>The obvious choice rarely survives the longer list. Most strategic mistakes happen when the second option never gets named.</p>
+  </div>
+</template>
 
 <!-- FOOTER -->
 <footer>
@@ -602,13 +603,80 @@
     <h4>Read</h4>
     <a href="/about">About John</a>
     <a href="/in-practice">In Practice</a>
-    <a href="/contact">Book a Session</a>
+    <a href="/going-further">Going Further</a>
+    <a href="/contact">Contact</a>
   </div>
   <div class="fine">
     <span>© Catalyst Growth Coaching, London · Est. 2024</span>
-    <span>Issue N° 02</span>
+    <span class="signoff">Don't get stuck.</span>
   </div>
 </footer>
 
+<script>
+  (function() {
+    'use strict';
+
+    const modal       = document.getElementById('lesson-modal');
+    const modalClose  = document.getElementById('modal-close');
+    const modalNum    = document.getElementById('modal-lesson-num');
+    const modalTitle  = document.getElementById('modal-lesson-title');
+    const modalBody   = document.getElementById('modal-lesson-body');
+    const modalCoda   = document.getElementById('modal-lesson-coda');
+    const template    = document.getElementById('lesson-data');
+    let lastTrigger   = null;
+
+    // Build a lookup of lesson nodes by data-id
+    const lessons = {};
+    template.content.querySelectorAll('[data-id]').forEach(node => {
+      lessons[node.dataset.id] = node;
+    });
+
+    function openLesson(id, trigger) {
+      const source = lessons[id];
+      if (!source) return;
+      lastTrigger = trigger;
+
+      modalNum.textContent   = source.dataset.num || '';
+      modalTitle.textContent = source.dataset.title || '';
+
+      // Build body and coda from cloned paragraphs
+      modalBody.innerHTML = '';
+      modalCoda.innerHTML = '';
+      source.querySelectorAll('p').forEach(p => {
+        const clone = p.cloneNode(true);
+        if (p.hasAttribute('data-coda')) {
+          clone.removeAttribute('data-coda');
+          modalCoda.appendChild(clone);
+        } else {
+          modalBody.appendChild(clone);
+        }
+      });
+
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      setTimeout(() => modalClose.focus(), 0);
+    }
+
+    function closeLesson() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      if (lastTrigger) lastTrigger.focus();
+      lastTrigger = null;
+    }
+
+    document.querySelectorAll('.read-more[data-lesson]').forEach(btn => {
+      btn.addEventListener('click', () => openLesson(btn.dataset.lesson, btn));
+    });
+
+    modalClose.addEventListener('click', closeLesson);
+    modal.addEventListener('click', e => { if (e.target === modal) closeLesson(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeLesson();
+    });
+  })();
+</script>
+<script src="/main.js"></script>
 </body>
 </html>

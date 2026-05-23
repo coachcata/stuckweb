@@ -5,26 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Book a Whiteboard Session — Catalyst Growth Coaching</title>
 
-<!-- ════ SEO METADATA ════ -->
 <meta name="description" content="An hour at the board. Bring whatever you're carrying." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/contact" />
 <meta property="og:title" content="Book a Whiteboard Session — Catalyst Growth Coaching" />
 <meta property="og:description" content="An hour at the board. Bring whatever you're carrying." />
 <meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
-<meta property="og:site_name" content="John Obidipe | Catalyst Growth Coaching" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Book a Whiteboard Session — Catalyst Growth Coaching" />
-<meta name="twitter:description" content="An hour at the board. Bring whatever you're carrying." />
-<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/contact" />
-<!-- ════ END SEO METADATA ════ -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
     --bg:         #0C0C0E;
-    --bg-2:       #141418;
+    --bg-2:       #0A0A0C;
     --bg-3:       #1A1A20;
     --card:       #1E1E26;
     --bone:       #F2F0EC;
@@ -34,6 +28,7 @@
     --cognac-2:   #D4A97D;
     --line:       rgba(200,149,108,0.12);
     --line-strong:rgba(200,149,108,0.28);
+    --err:        #8B5A5A;
     --font-d: 'Cormorant Garamond', Georgia, serif;
     --font-b: 'DM Sans', -apple-system, sans-serif;
   }
@@ -41,25 +36,18 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--bg);
-    color: var(--bone);
-    font-family: var(--font-b);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
   }
   ::selection { background: var(--cognac); color: var(--bg); }
 
-  em.accent { font-style: italic; color: var(--cognac); font-weight: 400; }
-
-  /* ─── Nav ─── */
   nav.top {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1.5rem 2.5vw;
     display: flex; justify-content: space-between; align-items: center;
     background: rgba(12,12,14,0.82);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--line);
   }
   nav.top .brand {
@@ -67,134 +55,180 @@
     letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
   }
   nav.top .brand span { color: var(--cognac); }
-  nav.top ul {
-    display: flex; gap: 2rem; list-style: none; align-items: center;
-  }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
   nav.top ul a {
     font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--stone); text-decoration: none; font-weight: 500;
-    transition: color 0.3s;
+    color: var(--stone); text-decoration: none; font-weight: 500; transition: color 0.3s;
   }
   nav.top ul a:hover { color: var(--cognac); }
   nav.top ul a.cta {
     color: var(--cognac); border: 1px solid var(--line-strong);
     padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
   }
-  nav.top ul a.cta:hover {
-    background: rgba(200,149,108,0.08); border-color: var(--cognac);
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  nav.top .has-dropdown { position: relative; }
+  nav.top .has-dropdown > a::after {
+    content: '▾'; margin-left: 0.4rem; font-size: 0.7em; color: var(--cognac); opacity: 0.6;
   }
+  nav.top .dropdown {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+    background: rgba(12,12,14,0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    padding: 0.8rem 0; min-width: 180px;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
+    list-style: none;
+  }
+  nav.top .has-dropdown:hover .dropdown,
+  nav.top .has-dropdown:focus-within .dropdown {
+    opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+  }
+  nav.top .dropdown a {
+    display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
+    letter-spacing: 0.18em; color: var(--stone);
+  }
+  nav.top .dropdown a:hover { color: var(--cognac); background: rgba(200,149,108,0.06); }
 
-  /* ─── Scene base ─── */
-  section.scene {
-    min-height: 100vh; padding: 10vh 6vw;
-    position: relative; display: flex;
-  }
+  section.scene { padding: 14vh 6vw; position: relative; display: flex; }
+  .folio { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ash); }
+  .folio span { color: var(--cognac); }
 
-  /* ══ SCENE — Feature Hero (Part 1 §3.3.1) ══ */
-  .scene-feature-hero {
-    padding-top: 14vh;
-    flex-direction: column;
-    justify-content: center;
+  /* ══ Booking path ══ */
+  .scene-booking {
+    flex-direction: column; align-items: flex-start;
+    padding-top: 16vh;
   }
-  .scene-feature-hero .feature-folio {
+  .scene-booking .eyebrow {
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600; margin-bottom: 1.5rem;
   }
-  .scene-feature-hero .feature-grid {
-    display: grid; grid-template-columns: 3fr 2fr;
-    gap: 5vw; align-items: end;
-  }
-  .scene-feature-hero h1 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2.8rem, 7.5vw, 5.5rem);
-    line-height: 1.0; letter-spacing: -0.01em;
-  }
-  .scene-feature-hero h1 .line { display: block; }
-  .scene-feature-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .scene-feature-hero .feature-right {
-    display: flex; flex-direction: column; gap: 1.5rem;
-    max-width: 32ch; padding-bottom: 0.5rem; justify-self: end;
-  }
-  .scene-feature-hero .feature-lede {
+  .scene-booking h1 {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.3rem; line-height: 1.5; color: var(--bone);
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    line-height: 1.1; margin-bottom: 2rem; color: var(--bone);
+    max-width: 22ch;
   }
-  .scene-feature-hero .breadcrumb {
-    margin-top: 6vh; padding-top: 1.2rem; border-top: 1px solid var(--line);
-    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ash);
+  .scene-booking .lede {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); line-height: 1.6;
+    max-width: 48ch; margin-bottom: 2.5rem;
   }
-  .scene-feature-hero .breadcrumb a {
-    color: var(--cognac); text-decoration: none;
+  .scene-booking .cta-row {
+    display: flex; gap: 1rem; align-items: center; margin-bottom: 2.5rem; flex-wrap: wrap;
+  }
+  .scene-booking .closer {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.05rem; color: var(--ash); max-width: 48ch; line-height: 1.6;
   }
 
-  /* Booking embed block on the contact hero */
-  .booking-embed {
-    margin-top: 6vh; width: 100%;
-    background: var(--bg-2); border: 1px solid var(--line-strong);
-    border-radius: 4px; padding: 3rem; text-align: center;
+  /* ══ Alternatives (with form) ══ */
+  .scene-alternatives {
+    flex-direction: column;
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   }
-  .booking-embed .note {
+  .scene-alternatives .folio { margin-bottom: 3rem; }
+  .alt-intro {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); line-height: 1.6;
+    max-width: 60ch; margin-bottom: 1.5rem;
+  }
+  .alt-prompt {
     font-family: var(--font-d); font-style: italic;
-    color: var(--stone); margin-bottom: 2rem; font-size: 1.05rem;
+    font-size: 1.2rem; color: var(--bone); line-height: 1.5;
+    margin-bottom: 2.5rem;
   }
-  .booking-embed .button {
-    display: inline-block; padding: 1.2rem 2.8rem;
+  .contact-form {
+    display: grid; gap: 1.5rem; max-width: 640px;
+    padding: 2.5rem; background: var(--bg);
+    border: 1px solid var(--line); border-radius: 4px;
+    margin-bottom: 3rem;
+  }
+  .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-field label {
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--bone);
+  }
+  .form-field input,
+  .form-field textarea {
+    background: var(--bg-3); color: var(--bone);
+    border: 1px solid var(--line);
+    padding: 0.8rem 1rem; border-radius: 2px;
+    font-family: var(--font-b); font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  .form-field input:focus,
+  .form-field textarea:focus {
+    outline: none; border-color: var(--cognac);
+  }
+  .form-field textarea { resize: vertical; min-height: 8rem; }
+  .form-radios {
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+  }
+  .form-radios label {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--font-b); font-size: 0.95rem; font-weight: 400;
+    text-transform: none; letter-spacing: 0;
+    color: var(--stone); cursor: pointer;
+  }
+  .form-radios input[type="radio"] {
+    accent-color: var(--cognac);
+    width: 1rem; height: 1rem;
+  }
+  .form-error {
+    color: var(--err); font-size: 0.85rem; margin-top: 0.3rem;
+    display: none;
+  }
+  .form-field.has-error input,
+  .form-field.has-error textarea {
+    border-color: var(--err);
+  }
+  .form-field.has-error .form-error { display: block; }
+  .form-submit {
     background: var(--cognac); color: var(--bg);
     font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
     letter-spacing: 0.2em; text-transform: uppercase;
-    border: none; border-radius: 2px;
+    padding: 1.1rem 2.4rem; border: none; border-radius: 2px;
+    cursor: pointer; transition: all 0.3s; justify-self: start;
+  }
+  .form-submit:hover { background: var(--cognac-2); }
+  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+  .form-confirmation {
+    display: none; padding: 1.5rem; background: rgba(200, 149, 108, 0.06);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    font-family: var(--font-d); font-style: italic; font-size: 1.15rem;
+    color: var(--bone); line-height: 1.5;
+  }
+  .form-confirmation.show { display: block; }
+  .contact-form.submitted { display: none; }
+  .email-line {
+    font-family: var(--font-b); font-size: 1.02rem;
+    color: var(--stone); line-height: 1.7;
+    margin-bottom: 1rem; max-width: 60ch;
+  }
+  .email-line a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px;
+  }
+  .email-line a:hover { border-color: var(--cognac); }
+  .closing-italic {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.05rem; color: var(--ash); max-width: 48ch; line-height: 1.6;
+  }
+
+  /* ─── Buttons ─── */
+  .button {
+    display: inline-block; padding: 1.1rem 2.6rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
     text-decoration: none; transition: all 0.4s ease;
   }
-  .booking-embed .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+  .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
 
-  /* ══ SCENE — Stucks/Altitudes (reused for Notes) ══ */
-  .scene-stucks {
-    background: var(--bg-2);
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    flex-direction: column; justify-content: center;
-  }
-  .scene-stucks .head {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4vw; align-items: baseline; margin-bottom: 8vh;
-  }
-  .scene-stucks .head .label {
-    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
-  }
-  .scene-stucks .head h2 {
-    font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
-    line-height: 1.12; max-width: 15ch;
-  }
-  .scene-stucks .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .stucks-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
-  }
-  .stuck {
-    padding: 3rem 2rem 3.5rem; border-right: 1px solid var(--line);
-    display: flex; flex-direction: column; gap: 1rem; min-height: 280px;
-    transition: background 0.5s ease;
-  }
-  .stuck:last-child { border-right: none; }
-  .stuck:hover { background: rgba(200,149,108,0.04); }
-  .stuck .num {
-    font-family: var(--font-d); font-style: italic; font-size: 1.2rem; color: var(--cognac);
-  }
-  .stuck h3 {
-    font-family: var(--font-d); font-weight: 400; font-size: 2rem;
-    line-height: 1.05; color: var(--bone); margin-top: 1rem;
-  }
-  .stuck h3 em { font-style: italic; color: var(--cognac); font-weight: 400; }
-  .stuck .caption {
-    font-family: var(--font-d); font-style: italic; font-weight: 300;
-    font-size: 1.05rem; color: var(--stone); line-height: 1.4;
-    margin-top: auto; padding-top: 2.5rem; max-width: 20ch;
-  }
-  .altitudes-grid { grid-template-columns: repeat(3, 1fr) !important; }
-
-  /* ── Footer ── */
   footer {
     background: var(--bg); padding: 4rem 6vw 3rem;
     border-top: 1px solid var(--line);
@@ -217,36 +251,23 @@
     border-top: 1px solid var(--line);
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ash);
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  footer .fine .signoff {
+    font-family: var(--font-d); font-style: italic;
+    text-transform: none; letter-spacing: 0; color: var(--stone); font-size: 0.9rem;
   }
 
-  /* ── Mobile ── */
   @media (max-width: 900px) {
     nav.top { padding: 1rem 5vw; }
     nav.top ul { gap: 1rem; }
-    nav.top ul li:nth-child(1), nav.top ul li:nth-child(2) { display: none; }
-    section.scene { padding: 12vh 6vw; }
+    nav.top ul li:nth-child(1) { display: none; }
+    nav.top .has-dropdown > a::after { display: none; }
+    nav.top .dropdown { display: none; }
 
-    .scene-feature-hero .feature-grid {
-      grid-template-columns: 1fr; gap: 2.5rem;
-    }
-    .scene-feature-hero .feature-right { max-width: 100%; justify-self: start; }
-    .scene-feature-hero h1 { font-size: clamp(2.4rem, 12vw, 4.2rem); }
-
-    .booking-embed { padding: 2rem 1.5rem; }
-
-    .scene-stucks .head { grid-template-columns: 1fr; gap: 2rem; }
-    .stucks-grid { grid-template-columns: 1fr; }
-    .altitudes-grid { grid-template-columns: 1fr !important; }
-    .stuck {
-      border-right: none; border-bottom: 1px solid var(--line);
-      padding: 2.5rem 0.5rem; min-height: auto;
-    }
-    .stuck:last-child { border-bottom: none; }
-    .stuck .caption { padding-top: 1.5rem; }
-
+    .contact-form { padding: 1.5rem; }
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
-    footer .fine { flex-direction: column; gap: 0.8rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
   }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -260,63 +281,88 @@
   <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
   <ul>
     <li><a href="/about">About</a></li>
-    <li><a href="/#doors">Programmes</a></li>
+    <li class="has-dropdown">
+      <a href="/#programmes">Programmes</a>
+      <ul class="dropdown">
+        <li><a href="/leadstrong">LeadStrong</a></li>
+        <li><a href="/buildstrong">BuildStrong</a></li>
+        <li><a href="/teamstrong">TeamStrong</a></li>
+      </ul>
+    </li>
     <li><a href="/in-practice">In Practice</a></li>
-    <li><a href="/contact" class="cta">Book a Session</a></li>
+    <li><a href="/contact" class="cta">Contact</a></li>
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — Booking Hero ════ -->
-<section class="scene scene-feature-hero">
-  <div class="feature-folio">Booking · One Whiteboard Session</div>
+<!-- ════ SCENE 01 — The Booking Path ════ -->
+<section class="scene scene-booking">
+  <div class="eyebrow">Contact</div>
+  <h1>Let's get an hour in the diary.</h1>
+  <p class="lede">The first step is the same regardless of what you're thinking about. An hour at the board, working on whatever's actually live for you right now.</p>
 
-  <div class="feature-grid">
-    <h1>
-      <span class="line">An hour at the</span>
-      <span class="line"><em>board</em>.</span>
-    </h1>
-
-    <div class="feature-right">
-      <p class="feature-lede">Bring whatever you're carrying. By the end of the hour we'll know what to do next together — or whether the hour itself was what you needed.</p>
-    </div>
+  <div class="cta-row">
+    <!-- TODO: confirm Dubsado booking URL with John before deploy -->
+    <a href="https://catalystgrowthcoaching.dubsado.com/" target="_blank" rel="noopener" class="button">Book via Dubsado →</a>
   </div>
 
-  <div class="booking-embed">
-    <p class="note">Choose a time that works for you.</p>
-    <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" target="_blank" rel="noopener" class="button">Open the booking calendar →</a>
-  </div>
-
-  <div class="breadcrumb">
-    Issue N° 02 · <a href="/">Return to the issue</a>
-  </div>
+  <p class="closer"><em>No prep needed. Just bring the thing you'd think about if you had the time.</em></p>
 </section>
 
-<!-- ════ SCENE 02 — Practical Notes ════ -->
-<section class="scene scene-stucks">
-  <div class="head">
-    <div>
-      <div class="label">Notes</div>
-      <h2>A few practical <em class="accent">details</em>.</h2>
+<!-- ════ SCENE 02 — The Alternatives ════ -->
+<section class="scene scene-alternatives">
+  <div class="folio">01 · <span>If You'd Rather Ask First</span></div>
+
+  <p class="alt-intro">Some people want a brief conversation before booking a session. Some are enquiring on behalf of an organisation. Some have a specific question that needs an answer before any of this makes sense.</p>
+
+  <p class="alt-prompt">Quick enquiry or organisational interest? Use the form below.</p>
+
+  <!-- Contact form. Netlify-attributes are included so the form is captured automatically
+       on Netlify deploys. If a different backend is in use (Formspree, custom), this still
+       degrades to a standard POST. Confirm the action target before deploy. -->
+  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="source-page" value="Contact form" />
+    <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+    <div class="form-field" data-field="name">
+      <label for="cf-name">Name</label>
+      <input id="cf-name" name="name" type="text" required autocomplete="name" />
+      <span class="form-error">Please enter your name.</span>
     </div>
+
+    <div class="form-field" data-field="email">
+      <label for="cf-email">Email</label>
+      <input id="cf-email" name="email" type="email" required autocomplete="email" />
+      <span class="form-error">Please enter a valid email address.</span>
+    </div>
+
+    <div class="form-field" data-field="enquiry-type">
+      <label>Enquiry type</label>
+      <div class="form-radios">
+        <label><input type="radio" name="enquiry-type" value="Individual" required> Individual</label>
+        <label><input type="radio" name="enquiry-type" value="Organisational"> Organisational</label>
+        <label><input type="radio" name="enquiry-type" value="Other"> Other</label>
+      </div>
+      <span class="form-error">Please choose one.</span>
+    </div>
+
+    <div class="form-field" data-field="message">
+      <label for="cf-message">Message</label>
+      <textarea id="cf-message" name="message" rows="5" required></textarea>
+      <span class="form-error">Please add a short message.</span>
+    </div>
+
+    <button type="submit" class="form-submit">Send Message</button>
+  </form>
+
+  <div class="form-confirmation" id="form-confirmation">
+    Got it. I'll be in touch within one working day. — John
   </div>
 
-  <div class="stucks-grid altitudes-grid">
-    <div class="stuck">
-      <span class="num">i.</span>
-      <h3><em>Where</em></h3>
-      <p class="caption">In person in London, or virtual via video. Most sessions are virtual.</p>
-    </div>
-    <div class="stuck">
-      <span class="num">ii.</span>
-      <h3><em>Format</em></h3>
-      <p class="caption">A single session is 60–90 minutes. Bring your hardest problem.</p>
-    </div>
-    <div class="stuck">
-      <span class="num">iii.</span>
-      <h3><em>Pricing</em></h3>
-      <p class="caption">Discussed in conversation. No public rates.</p>
-    </div>
-  </div>
+  <!-- Cloudflare email protection workaround: wrapping in .notranslate prevents auto-cloaking. -->
+  <p class="email-line">Want to write something longer, or just prefer email? <a href="mailto:coach@catalystgrowthcoach.co.uk"><span class="notranslate">coach@catalystgrowthcoach.co.uk</span></a></p>
+
+  <p class="closing-italic"><em>I read everything that comes in. I'll reply within one working day.</em></p>
 </section>
 
 <!-- FOOTER -->
@@ -335,13 +381,84 @@
     <h4>Read</h4>
     <a href="/about">About John</a>
     <a href="/in-practice">In Practice</a>
-    <a href="/contact">Book a Session</a>
+    <a href="/going-further">Going Further</a>
+    <a href="/contact">Contact</a>
   </div>
   <div class="fine">
     <span>© Catalyst Growth Coaching, London · Est. 2024</span>
-    <span>Issue N° 02</span>
+    <span class="signoff">Don't get stuck.</span>
   </div>
 </footer>
 
+<script>
+  (function() {
+    const form  = document.getElementById('contact-form');
+    const confirmation = document.getElementById('form-confirmation');
+
+    function clearError(field) {
+      const wrapper = field.closest('.form-field');
+      if (wrapper) wrapper.classList.remove('has-error');
+    }
+
+    function showError(field) {
+      const wrapper = field.closest('.form-field');
+      if (wrapper) wrapper.classList.add('has-error');
+    }
+
+    form.querySelectorAll('input, textarea').forEach(field => {
+      field.addEventListener('input', () => clearError(field));
+      field.addEventListener('change', () => clearError(field));
+    });
+
+    form.addEventListener('submit', async function(e) {
+      let valid = true;
+      // Native HTML5 validation for required text/email/textarea
+      ['name', 'email', 'message'].forEach(name => {
+        const field = form.querySelector(`[name="${name}"]`);
+        if (!field.checkValidity()) {
+          showError(field);
+          valid = false;
+        }
+      });
+      // Radio group check
+      if (!form.querySelector('input[name="enquiry-type"]:checked')) {
+        const wrapper = form.querySelector('[data-field="enquiry-type"]');
+        if (wrapper) wrapper.classList.add('has-error');
+        valid = false;
+      }
+
+      if (!valid) { e.preventDefault(); return; }
+
+      // Attempt to submit via fetch so we can show inline confirmation without redirect.
+      // If the action attribute is # (no backend set), we just show the confirmation locally.
+      const action = form.getAttribute('action');
+      if (!action || action === '#') {
+        e.preventDefault();
+        form.classList.add('submitted');
+        confirmation.classList.add('show');
+        return;
+      }
+
+      e.preventDefault();
+      try {
+        const formData = new FormData(form);
+        const body = new URLSearchParams(formData).toString();
+        const response = await fetch(action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body
+        });
+        if (!response.ok) throw new Error('Submission failed');
+        form.classList.add('submitted');
+        confirmation.classList.add('show');
+        form.reset();
+      } catch (err) {
+        // Fall back to native submit on network failure
+        form.submit();
+      }
+    });
+  })();
+</script>
+<script src="/main.js"></script>
 </body>
 </html>
