@@ -130,8 +130,9 @@
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     line-height: 1.5; color: var(--stone); max-width: 36ch;
   }
+  /* img-1935.jpg native 2000x1125 (16:9) */
   .scene-feature-hero .feature-image {
-    width: 100%; aspect-ratio: 4/5;
+    width: 100%; aspect-ratio: 16/9;
     background: var(--bg-3); position: relative; overflow: hidden;
   }
   .scene-feature-hero .feature-image img {
@@ -181,8 +182,9 @@
   }
   .scene-split .split-text .body p { margin-bottom: 1.2rem; }
   .scene-split .split-text .body em { color: var(--cognac); font-style: italic; font-weight: 400; }
+  /* img-1739.jpg native 1139x2000 (portrait) */
   .scene-split .split-image {
-    width: 100%; aspect-ratio: 4/5;
+    width: 100%; aspect-ratio: 1139/2000;
     background: var(--bg-3); position: relative; overflow: hidden;
   }
   .scene-split .split-image img {
@@ -363,9 +365,9 @@
     nav.top .dropdown { display: none; }
 
     .scene-feature-hero .feature-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .scene-feature-hero .feature-image { order: -1; aspect-ratio: 3/2; }
+    .scene-feature-hero .feature-image { order: -1; max-height: 60vh; }
     .scene-split .split-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .scene-split .split-image { aspect-ratio: 3/2; max-height: 50vh; }
+    .scene-split .split-image { max-height: 70vh; }
 
     .lenses-grid { grid-template-columns: 1fr; }
     .lens { border-right: none; border-bottom: 1px solid var(--line); }

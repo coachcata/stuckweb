@@ -111,8 +111,10 @@
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
   }
+  /* img-1984.jpg native 2000x1143 (~16:9) */
   .scene-hero .hero-image {
-    position: relative; width: 100%; height: 50vh;
+    position: relative; width: 100%;
+    aspect-ratio: 2000/1143; max-height: 80vh;
     overflow: hidden; background: var(--bg-3);
   }
   .scene-hero .hero-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -179,8 +181,9 @@
     border-top: 1px solid var(--line);
     font-size: 1.3rem; color: var(--bone); font-style: italic;
   }
+  /* img-1739.jpg native 1139x2000 (portrait) */
   .scene-split .split-image {
-    width: 100%; aspect-ratio: 4/5;
+    width: 100%; aspect-ratio: 1139/2000;
     background: var(--bg-3); position: relative; overflow: hidden;
   }
   .scene-split .split-image img {
@@ -250,9 +253,9 @@
     nav.top .has-dropdown > a::after { display: none; }
     nav.top .dropdown { display: none; }
 
-    .scene-hero .hero-image { height: 40vh; }
+    .scene-hero .hero-image { max-height: 50vh; }
     .scene-split .split-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .scene-split .split-image { aspect-ratio: 3/2; max-height: 50vh; }
+    .scene-split .split-image { max-height: 70vh; }
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
     footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
