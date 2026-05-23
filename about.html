@@ -121,11 +121,13 @@
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
   }
+  /* Portrait tablet-annotation.mp4 — contained, dark sides */
   .scene-hero .clip-frame {
-    position: relative; width: 100%; height: 65vh;
-    overflow: hidden; background: #0A0A0C;
+    position: relative; width: 100%; height: 78vh;
+    overflow: hidden; background: var(--bg-2);
+    display: flex; align-items: center; justify-content: center;
   }
-  .scene-hero .clip-frame video { width: 100%; height: 100%; object-fit: cover; }
+  .scene-hero .clip-frame video { height: 100%; max-width: 100%; width: auto; }
   .scene-hero .hero-copy {
     padding: 8vh 6vw 10vh; max-width: 60ch; margin: 0 auto;
   }
@@ -152,11 +154,13 @@
     gap: 5vw; align-items: center;
   }
   .scene-split.image-narrow .split-grid { grid-template-columns: 2fr 3fr; }
+  /* Scene 02 — img-1739.jpg (portrait 1139:2000) */
   .scene-split .split-image {
-    width: 100%; aspect-ratio: 4/5;
+    width: 100%; aspect-ratio: 1139/2000;
     background: var(--bg-3); position: relative; overflow: hidden;
   }
-  .scene-split.image-narrow .split-image { aspect-ratio: 3/4; }
+  /* Scene 06 — drill.mp4 inset (portrait 9:16) */
+  .scene-split.image-narrow .split-image { aspect-ratio: 9/16; }
   .scene-split .split-image img,
   .scene-split .split-image video {
     width: 100%; height: 100%; object-fit: cover;
@@ -179,10 +183,11 @@
     font-size: 1.3rem; color: var(--bone); font-style: italic;
   }
 
-  /* ══ Full-bleed clip scene (At the Board) ══ */
+  /* ══ Full-bleed clip scene (At the Board — landscape 16:9) ══ */
   .scene-clip { min-height: auto; padding: 0; flex-direction: column; }
   .scene-clip .clip-frame {
-    position: relative; width: 100%; height: 60vh;
+    position: relative; width: 100%;
+    aspect-ratio: 16/9; max-height: 85vh;
     overflow: hidden; background: #0A0A0C;
   }
   .scene-clip .clip-frame video { width: 100%; height: 100%; object-fit: cover; }
@@ -345,10 +350,10 @@
     nav.top .has-dropdown > a::after { display: none; }
     nav.top .dropdown { display: none; }
 
-    .scene-hero .clip-frame { height: 50vh; }
-    .scene-clip .clip-frame { height: 45vh; }
+    .scene-hero .clip-frame { height: 60vh; }
+    .scene-clip .clip-frame { aspect-ratio: 16/9; max-height: 60vh; }
     .scene-split .split-grid { grid-template-columns: 1fr !important; gap: 3rem; }
-    .scene-split .split-image { order: -1; aspect-ratio: 3/2; max-height: 50vh; }
+    .scene-split .split-image { order: -1; max-height: 70vh; }
     .scene-split { padding: 10vh 6vw; }
 
     .credentials-grid { grid-template-columns: 1fr 1fr; }

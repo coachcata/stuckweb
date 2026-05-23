@@ -135,11 +135,10 @@
     flex-direction: column;
   }
   .scene-clip .clip-frame {
-    position: relative; width: 100%; height: 60vh;
+    position: relative; width: 100%;
+    aspect-ratio: 16/9; max-height: 85vh;
     overflow: hidden; background: #0A0A0C;
   }
-  .scene-clip.tall .clip-frame { height: 65vh; }
-  .scene-clip.short .clip-frame { height: 40vh; }
   .scene-clip .clip-frame video {
     width: 100%; height: 100%; object-fit: cover; object-position: center;
     display: block;
@@ -174,7 +173,7 @@
   .scene-clip .clip-copy .body em { font-style: italic; color: var(--bone); font-weight: 300; }
   .scene-clip .clip-copy .body em.accent { color: var(--cognac); font-weight: 400; }
 
-  /* ══ Premise scene (Scene 01 — homepage) ══ */
+  /* ══ Premise scene (Scene 01 — homepage; portrait drill.mp4 with side padding) ══ */
   .scene-premise-clip {
     min-height: 100vh; padding: 0;
     flex-direction: column;
@@ -186,11 +185,12 @@
     color: var(--cognac); font-weight: 600;
   }
   .scene-premise-clip .clip-frame {
-    position: relative; width: 100%; height: 60vh;
-    overflow: hidden; background: #0A0A0C;
+    position: relative; width: 100%; height: 75vh;
+    overflow: hidden; background: var(--bg-2);
+    display: flex; align-items: center; justify-content: center;
   }
   .scene-premise-clip .clip-frame video {
-    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    height: 100%; max-width: 100%; width: auto;
   }
   .scene-premise-clip .premise-copy {
     padding: 8vh 6vw 12vh;
@@ -265,7 +265,7 @@
     color: var(--bone); font-weight: 500; font-family: var(--font-b);
   }
   .scene-testimonial .testimonial-image {
-    width: 100%; aspect-ratio: 4/5;
+    width: 100%; aspect-ratio: 1139/2000;
     background: var(--bg-3); position: relative; overflow: hidden;
   }
   .scene-testimonial .testimonial-image img {
@@ -294,8 +294,9 @@
     transition: transform 0.4s ease;
   }
   .tile:hover { transform: translateY(-4px); }
+  /* Tiles share one ratio; 2:1 balances the 1.78 and 2.17 photos (≤11% crop) */
   .tile .tile-image {
-    width: 100%; aspect-ratio: 4/3;
+    width: 100%; aspect-ratio: 2/1;
     background: var(--bg-3); overflow: hidden; position: relative;
   }
   .tile .tile-image img {
@@ -329,11 +330,12 @@
     background: var(--bg);
   }
   .scene-invitation .clip-frame {
-    position: relative; width: 100%; height: 40vh;
+    position: relative; width: 100%; height: 45vh;
     overflow: hidden; background: #0A0A0C;
+    display: flex; align-items: center; justify-content: center;
   }
   .scene-invitation .clip-frame video {
-    width: 100%; height: 100%; object-fit: cover;
+    height: 100%; max-width: 100%; width: auto;
   }
   .scene-invitation .invitation-copy {
     padding: 10vh 6vw 14vh;
@@ -428,19 +430,18 @@
     nav.top .dropdown { display: none; }
     section.scene { padding: 12vh 6vw; }
 
-    .scene-premise-clip .clip-frame { height: 50vh; }
-    .scene-clip .clip-frame { height: 45vh; }
-    .scene-clip.tall .clip-frame { height: 50vh; }
-    .scene-clip.short .clip-frame { height: 30vh; }
+    .scene-premise-clip .clip-frame { height: 60vh; }
+    .scene-clip .clip-frame { aspect-ratio: 16/9; max-height: 60vh; }
     .scene-clip .clip-copy { padding: 8vh 6vw; }
     .scene-argument { padding: 10vh 6vw; }
 
     .scene-testimonial .testimonial-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .scene-testimonial .testimonial-image { order: -1; aspect-ratio: 3/2; }
+    .scene-testimonial .testimonial-image { order: -1; aspect-ratio: 1139/2000; max-height: 70vh; }
 
     .tiles-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .tile .tile-image { aspect-ratio: 2/1; }
 
-    .scene-invitation .clip-frame { height: 30vh; }
+    .scene-invitation .clip-frame { height: 35vh; }
     .scene-invitation .invitation-copy { padding: 8vh 6vw 10vh; }
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
