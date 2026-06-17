@@ -15,12 +15,15 @@ site. There is no `main`/`master`/`live` branch.
 3. Open a PR via `mcp__github__create_pull_request` with
    `base = claude/add-client-logo-bar-gmN4g` and `head = <feature branch>`.
    Use the standard Summary / Test plan template.
-4. Report the PR URL back. The user merges via the GitHub UI; the merge
-   is what deploys.
+4. **Auto-merge the PR** via `mcp__github__merge_pull_request` with
+   `merge_method = "merge"` (matches existing history). The merge
+   publishes to the live site.
+5. Report the merge SHA and confirm the change is live.
 
 Do **not** ask which branch to target — it's always
-`claude/add-client-logo-bar-gmN4g`. Do **not** attempt to push directly
-to the default branch.
+`claude/add-client-logo-bar-gmN4g`. Do **not** ask whether to merge —
+auto-merge is the default. Do **not** attempt to push directly to the
+default branch (still go through a PR + merge so the history is clean).
 
 ## Dual directory structure
 
