@@ -25,6 +25,8 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/contact" />
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
@@ -348,7 +350,7 @@
   <!-- Contact form. Netlify-attributes are included so the form is captured automatically
        on Netlify deploys. If a different backend is in use (Formspree, custom), this still
        degrades to a standard POST. Confirm the action target before deploy. -->
-  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#">
+  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#" novalidate>
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="source-page" value="Contact form" />
     <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
@@ -458,32 +460,38 @@
 
       if (!valid) { e.preventDefault(); return; }
 
-      // Attempt to submit via fetch so we can show inline confirmation without redirect.
-      // If the action attribute is # (no backend set), we just show the confirmation locally.
+      // Submit via fetch so we can show inline confirmation without redirect.
+      // With no explicit backend (action="#"), post to the page's own path —
+      // Netlify-style hosts capture that POST; if it isn't accepted we still
+      // show the confirmation, matching the previous local-only behaviour.
+      e.preventDefault();
+      if (form.dataset.submitting) return;
+      form.dataset.submitting = '1';
       const action = form.getAttribute('action');
-      if (!action || action === '#') {
-        e.preventDefault();
+      const hasBackend = action && action !== '#';
+      const endpoint = hasBackend ? action : window.location.pathname;
+      const showConfirmation = () => {
         form.classList.add('submitted');
         confirmation.classList.add('show');
-        return;
-      }
-
-      e.preventDefault();
+      };
       try {
         const formData = new FormData(form);
         const body = new URLSearchParams(formData).toString();
-        const response = await fetch(action, {
+        const response = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body
         });
         if (!response.ok) throw new Error('Submission failed');
-        form.classList.add('submitted');
-        confirmation.classList.add('show');
+        showConfirmation();
         form.reset();
       } catch (err) {
-        // Fall back to native submit on network failure
-        form.submit();
+        if (hasBackend) {
+          // Fall back to native submit on network failure
+          form.submit();
+        } else {
+          showConfirmation();
+        }
       }
     });
   })();
