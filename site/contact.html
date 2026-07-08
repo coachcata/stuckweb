@@ -228,6 +228,14 @@
     color: var(--bone); line-height: 1.5;
   }
   .form-confirmation.show { display: block; }
+  .form-failure {
+    display: none; padding: 1rem 1.2rem;
+    border: 1px solid var(--err); border-radius: 2px;
+    font-family: var(--font-b); font-size: 0.92rem;
+    color: var(--bone); line-height: 1.6;
+  }
+  .form-failure a { color: var(--cognac); }
+  .form-failure.show { display: block; }
   .contact-form.submitted { display: none; }
   .email-line {
     font-family: var(--font-b); font-size: 1.02rem;
@@ -347,9 +355,10 @@
 
   <p class="alt-prompt">Quick enquiry or organisational interest? Use the form below.</p>
 
-  <!-- Contact form. Netlify-attributes are included so the form is captured automatically
-       on Netlify deploys. If a different backend is in use (Formspree, custom), this still
-       degrades to a standard POST. Confirm the action target before deploy. -->
+  <!-- Contact form, captured by Netlify Forms (the site is hosted on Netlify:
+       www CNAMEs to cgcunstuck.netlify.app). The script POSTs form-encoded data to
+       this page's own path, which Netlify intercepts. Form detection must be enabled
+       in the Netlify dashboard (Site configuration → Forms) for capture to work. -->
   <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#" novalidate>
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="source-page" value="Contact form" />
@@ -384,6 +393,10 @@
     </div>
 
     <button type="submit" class="form-submit">Send Message</button>
+
+    <div class="form-failure" id="form-failure" role="alert">
+      That didn't send. Try again, or email me directly: <a href="mailto:coach@catalystgrowthcoach.co.uk"><span class="notranslate">coach@catalystgrowthcoach.co.uk</span></a>
+    </div>
   </form>
 
   <div class="form-confirmation" id="form-confirmation">
@@ -425,6 +438,7 @@
   (function() {
     const form  = document.getElementById('contact-form');
     const confirmation = document.getElementById('form-confirmation');
+    const failure = document.getElementById('form-failure');
 
     function clearError(field) {
       const wrapper = field.closest('.form-field');
@@ -461,19 +475,18 @@
       if (!valid) { e.preventDefault(); return; }
 
       // Submit via fetch so we can show inline confirmation without redirect.
-      // With no explicit backend (action="#"), post to the page's own path —
-      // Netlify-style hosts capture that POST; if it isn't accepted we still
-      // show the confirmation, matching the previous local-only behaviour.
+      // Netlify Forms captures a form-encoded POST to any path on the site,
+      // so we post to this page's own path. If the POST is rejected (form
+      // detection off, network trouble), say so and offer email — never
+      // pretend the message was sent.
       e.preventDefault();
       if (form.dataset.submitting) return;
       form.dataset.submitting = '1';
+      const submitBtn = form.querySelector('.form-submit');
+      submitBtn.disabled = true;
+      failure.classList.remove('show');
       const action = form.getAttribute('action');
-      const hasBackend = action && action !== '#';
-      const endpoint = hasBackend ? action : window.location.pathname;
-      const showConfirmation = () => {
-        form.classList.add('submitted');
-        confirmation.classList.add('show');
-      };
+      const endpoint = (action && action !== '#') ? action : window.location.pathname;
       try {
         const formData = new FormData(form);
         const body = new URLSearchParams(formData).toString();
@@ -483,15 +496,13 @@
           body
         });
         if (!response.ok) throw new Error('Submission failed');
-        showConfirmation();
+        form.classList.add('submitted');
+        confirmation.classList.add('show');
         form.reset();
       } catch (err) {
-        if (hasBackend) {
-          // Fall back to native submit on network failure
-          form.submit();
-        } else {
-          showConfirmation();
-        }
+        failure.classList.add('show');
+        delete form.dataset.submitting;
+        submitBtn.disabled = false;
       }
     });
   })();
