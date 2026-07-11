@@ -227,6 +227,15 @@
   }
   .form-confirmation.show { display: block; }
   .contact-form.submitted { display: none; }
+  .form-fallback {
+    display: none; font-size: 0.95rem; color: var(--stone); line-height: 1.6;
+  }
+  .form-fallback.show { display: block; }
+  .form-fallback a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 1px;
+  }
+  .form-fallback a:hover { border-color: var(--cognac); }
   .email-line {
     font-family: var(--font-b); font-size: 1.02rem;
     color: var(--stone); line-height: 1.7;
@@ -349,7 +358,7 @@
        submissions land in the Netlify dashboard (Forms → contact) and trigger any
        email notifications configured there. The action URL doubles as the success
        page for native (non-fetch) submits. -->
-  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact?success=true">
+  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=true">
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="source-page" value="Contact form" />
     <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
@@ -383,6 +392,8 @@
     </div>
 
     <button type="submit" class="form-submit">Send Message</button>
+
+    <p class="form-fallback" id="form-fallback">That didn't send. Email me instead at <a href="mailto:coach@catalystgrowthcoach.co.uk"><span class="notranslate">coach@catalystgrowthcoach.co.uk</span></a> and it comes to the same place.</p>
   </form>
 
   <div class="form-confirmation" id="form-confirmation">
@@ -476,7 +487,13 @@
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body
         });
-        if (!response.ok) throw new Error('Submission failed');
+        if (!response.ok) {
+          // The backend refused the post (e.g. form not registered with Netlify).
+          // A native submit would land on the same error as a full-page 404,
+          // so point at email rather than navigating away.
+          document.getElementById('form-fallback').classList.add('show');
+          return;
+        }
         form.classList.add('submitted');
         confirmation.classList.add('show');
         form.reset();
