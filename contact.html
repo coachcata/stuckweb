@@ -345,10 +345,11 @@
 
   <p class="alt-prompt">Quick enquiry or organisational interest? Use the form below.</p>
 
-  <!-- Contact form. Netlify-attributes are included so the form is captured automatically
-       on Netlify deploys. If a different backend is in use (Formspree, custom), this still
-       degrades to a standard POST. Confirm the action target before deploy. -->
-  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#">
+  <!-- Netlify Forms backend. The form is registered at deploy time via data-netlify;
+       submissions land in the Netlify dashboard (Forms → contact) and trigger any
+       email notifications configured there. The action URL doubles as the success
+       page for native (non-fetch) submits. -->
+  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact?success=true">
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="source-page" value="Contact form" />
     <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
@@ -424,6 +425,13 @@
     const form  = document.getElementById('contact-form');
     const confirmation = document.getElementById('form-confirmation');
 
+    // Returning from a native (non-fetch) submit: Netlify redirects back with ?success=true.
+    if (new URLSearchParams(location.search).get('success') === 'true') {
+      form.classList.add('submitted');
+      confirmation.classList.add('show');
+      confirmation.scrollIntoView({ block: 'center' });
+    }
+
     function clearError(field) {
       const wrapper = field.closest('.form-field');
       if (wrapper) wrapper.classList.remove('has-error');
@@ -458,21 +466,12 @@
 
       if (!valid) { e.preventDefault(); return; }
 
-      // Attempt to submit via fetch so we can show inline confirmation without redirect.
-      // If the action attribute is # (no backend set), we just show the confirmation locally.
-      const action = form.getAttribute('action');
-      if (!action || action === '#') {
-        e.preventDefault();
-        form.classList.add('submitted');
-        confirmation.classList.add('show');
-        return;
-      }
-
+      // Submit to Netlify via fetch so the inline confirmation shows without a redirect.
       e.preventDefault();
       try {
         const formData = new FormData(form);
         const body = new URLSearchParams(formData).toString();
-        const response = await fetch(action, {
+        const response = await fetch(form.getAttribute('action'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body
@@ -481,6 +480,7 @@
         form.classList.add('submitted');
         confirmation.classList.add('show');
         form.reset();
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: 'contact_form' });
       } catch (err) {
         // Fall back to native submit on network failure
         form.submit();
