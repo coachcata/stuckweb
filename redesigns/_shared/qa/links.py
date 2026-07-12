@@ -18,7 +18,9 @@ class C(HTMLParser):
         for k in ("href", "src", "poster"):
             if k in a and a[k]: self.refs.append((ln, tag, a[k], a))
         if tag == "img" and not a.get("alt", "").strip():
-            self.issues.append((ln, f"<img src={a.get('src')}> missing alt"))
+            decorative = a.get("aria-hidden") == "true" or a.get("role") == "presentation" or "alt" in a
+            if not decorative:
+                self.issues.append((ln, f"<img src={a.get('src')}> missing alt"))
         if tag == "video":
             for req in ("autoplay", "muted", "loop", "playsinline"):
                 if req not in a: self.issues.append((ln, f"<video> missing {req}"))
