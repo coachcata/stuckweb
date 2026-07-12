@@ -1,4 +1,4 @@
-/* Catalyst Growth Coaching, The Journey. Shared behaviour. */
+/* Catalyst Growth Coaching, companion pages. Shared behaviour. */
 
 (function () {
   'use strict';
@@ -17,17 +17,6 @@
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add('visible'); });
-  }
-
-  // Form confirmation: if the page was reloaded with ?sent=1,
-  // swap the form for its confirmation line.
-  if (window.location.search.indexOf('sent=1') !== -1) {
-    document.querySelectorAll('form.quiet-form').forEach(function (f) {
-      f.style.display = 'none';
-    });
-    document.querySelectorAll('.form-received').forEach(function (el) {
-      el.style.display = 'block';
-    });
   }
 
   // Background video rescue (adapted from the main site).
