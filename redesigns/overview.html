@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalyst Growth Coaching · Five Design Recreations</title>
+<meta name="description" content="Five complete recreations of catalystgrowthcoach.co.uk, each with a fundamentally different design. Same words, same offer, five atmospheres.">
+<style>
+  :root {
+    --paper: #FAF9F6; --ink: #1C1B18; --soft: #605C54; --line: #E2DFD8; --accent: #1F4E8C;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font: 400 1.05rem/1.65 Georgia, 'Times New Roman', serif;
+    padding: clamp(2rem, 6vw, 5rem) clamp(1.2rem, 6vw, 4rem);
+  }
+  main { max-width: 720px; margin-inline: auto; }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; font-weight: 400; letter-spacing: -0.01em; }
+  .kicker {
+    font: 600 0.72rem/1 system-ui, sans-serif; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--soft); display: block; margin-bottom: 1.1rem;
+  }
+  .standfirst { font-style: italic; color: var(--soft); margin-top: 1.2rem; max-width: 56ch; }
+  section { margin-top: clamp(2.6rem, 7vw, 4rem); border-top: 1px solid var(--line); padding-top: 1.8rem; }
+  h2 { font-size: 1.35rem; font-weight: 600; }
+  h2 .num { color: var(--accent); font-weight: 400; margin-right: 0.5rem; }
+  .thesis { font-style: italic; margin-top: 0.5rem; }
+  .diff { margin-top: 0.8rem; color: var(--soft); }
+  .file { font: 500 0.78rem/1.6 ui-monospace, monospace; color: var(--soft); margin-top: 0.8rem; display: block; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  .open-link { font: 500 0.82rem/1 system-ui, sans-serif; letter-spacing: 0.06em; }
+  ol { padding-left: 1.4rem; margin-top: 1rem; }
+  ol li { margin-top: 0.6rem; }
+  .note { margin-top: 1.2rem; font-size: 0.95rem; color: var(--soft); }
+  footer { margin-top: clamp(3rem, 8vw, 5rem); border-top: 1px solid var(--line); padding-top: 1.4rem;
+           font-size: 0.85rem; color: var(--soft); }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #161513; --ink: #ECEAE4; --soft: #A5A199; --line: #2E2C28; --accent: #7FA6D9; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="kicker">Catalyst Growth Coaching · Design Exploration</span>
+    <h1>One site, five designs.</h1>
+    <p class="standfirst">Five complete recreations of catalystgrowthcoach.co.uk. The words, the photographs, the films and the booking path are identical on all five. The design is what changes: five different rooms for the same practice.</p>
+  </header>
+
+  <section>
+    <h2><span class="num">01</span>The Broadsheet</h2>
+    <p class="thesis">A quality Sunday paper's long read: the practice presented as serious journalism.</p>
+    <p class="diff">Cream paper and ink, a proper masthead, columned text with hairline rules, drop caps, photography run as documentary plates with italic captions. Almost nothing moves; the confidence is entirely in the typography.</p>
+    <span class="file">catalyst-01-broadsheet.zip · <a class="open-link" href="01-broadsheet/index.html">open locally →</a></span>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>The Architect's Studio</h2>
+    <p class="thesis">A modernist architect's portfolio: the practice presented as built work.</p>
+    <p class="diff">White space, an exposed drawing-board grid, numbered plates, monospaced annotations and one drafting-blue accent. Sessions read as projects, credentials as a data sheet, and the footer as a draughtsman's title block.</p>
+    <span class="file">catalyst-02-architects-studio.zip · <a class="open-link" href="02-architects-studio/index.html">open locally →</a></span>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>The Quiet Gallery</h2>
+    <p class="thesis">A private gallery hang: each idea given a wall of its own.</p>
+    <p class="diff">The most spacious of the five. Every page is a room, every photograph is hung and captioned like a work in a museum, and there is no accent colour at all. Slow fades, gallery pace, engraved-invitation booking cards.</p>
+    <span class="file">catalyst-03-quiet-gallery.zip · <a class="open-link" href="03-quiet-gallery/index.html">open locally →</a></span>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>The Title Sequence</h2>
+    <p class="thesis">A film's opening titles: dark, cinematic, scroll-driven scenes.</p>
+    <p class="diff">Near-black throughout, the session films run full width like scenes, headings arrive like title cards as you scroll, and the menu opens like end credits. The darkest and most atmospheric of the five.</p>
+    <span class="file">catalyst-04-title-sequence.zip · <a class="open-link" href="04-title-sequence/index.html">open locally →</a></span>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>The Whiteboard</h2>
+    <p class="thesis">One continuous thinking session: the whole site is a single board worked from the first word to the solution.</p>
+    <p class="diff">One long page instead of separate pages. It opens with "Stuck." struck through in marker, and blue marker strokes draw themselves in as you read. The signature line is the structure of the site itself: thinking, board, solution.</p>
+    <span class="file">catalyst-05-whiteboard.zip · <a class="open-link" href="05-whiteboard/index.html">open locally →</a></span>
+  </section>
+
+  <section>
+    <h2>Publishing a design</h2>
+    <p class="diff">Each zip is a complete website. To put one on the internet:</p>
+    <ol>
+      <li>Go to <a href="https://app.netlify.com/drop" rel="noopener" target="_blank">app.netlify.com/drop</a> (a free account is fine).</li>
+      <li>Drag a zip file, unopened, onto the drop area on that page.</li>
+      <li>After a few seconds Netlify shows a link ending in .netlify.app. That is the site, live. Repeat for the others; each gets its own link.</li>
+    </ol>
+    <p class="note">These are demonstration copies. Nothing here touches, changes or deploys over catalystgrowthcoach.co.uk.</p>
+  </section>
+
+  <footer>
+    Catalyst Growth Coaching · design exploration · the live site is untouched.
+  </footer>
+</main>
+</body>
+</html>
