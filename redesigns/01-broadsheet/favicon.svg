@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Catalyst Growth Coaching, The Broadsheet: paper, double rules, oxblood end mark -->
+  <rect width="64" height="64" fill="#F7F3EA"/>
+  <rect x="8" y="10" width="48" height="2" fill="#1A1815"/>
+  <rect x="8" y="15" width="48" height="1" fill="#1A1815"/>
+  <rect x="8" y="48" width="48" height="1" fill="#1A1815"/>
+  <rect x="8" y="52" width="48" height="2" fill="#1A1815"/>
+  <rect x="26" y="26" width="12" height="12" fill="#6E1E2B"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- A drawing sheet: frame, grid, one plate placed on it. -->
+  <rect width="32" height="32" fill="#FCFCFB"/>
+  <rect x="1.5" y="1.5" width="29" height="29" fill="none" stroke="#17181A" stroke-width="1.6"/>
+  <path d="M11 2v28M21 2v28M2 11h28M2 21h28" stroke="#DDDCD8" stroke-width="1"/>
+  <rect x="11" y="11" width="10" height="10" fill="#2B4C7E"/>
+</svg>

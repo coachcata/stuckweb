@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Whiteboard Session | Catalyst Growth Coaching</title>
+<meta name="description" content="An hour at the board. Bring whatever you're carrying.">
+<meta property="og:title" content="Book a Whiteboard Session | Catalyst Growth Coaching">
+<meta property="og:description" content="An hour at the board. Bring whatever you're carrying.">
+<meta property="og:image" content="images/img-1983.jpg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/main.css">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="topbar">
+  <a class="wordmark" href="index.html">Catalyst <span>Growth Coaching</span></a>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-haspopup="dialog">Menu</button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Site menu">
+  <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">&times;</button>
+  <ol class="menu-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><span class="menu-kicker">Programmes</span><a href="leadstrong.html">LeadStrong</a></li>
+    <li><a href="buildstrong.html">BuildStrong</a></li>
+    <li><a href="teamstrong.html">TeamStrong</a></li>
+    <li><a href="in-practice.html">In Practice</a></li>
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
+  </ol>
+</nav>
+
+<main id="main">
+
+  <!-- The Booking Path -->
+  <section class="contact-open">
+    <div class="col">
+      <p class="kicker seq-1">Contact</p>
+      <h1 class="display-title seq-2">Let&rsquo;s get an hour in the diary.</h1>
+      <p class="lede seq-3">The first step is the same regardless of what you&rsquo;re thinking about. An hour at the board, working on whatever&rsquo;s actually live for you right now.</p>
+      <div class="seq-3">
+        <a class="btn" href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" target="_blank" rel="noopener">Book a Whiteboard Session</a>
+        <p class="closer"><em>No prep needed. Just bring the thing you&rsquo;d think about if you had the time.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What the hour is like -->
+  <section class="scene">
+    <div class="note-card reveal">
+      <p class="kicker">What the hour is like</p>
+      <p>It&rsquo;s a full session, the same work I do with anyone at the board. You bring what&rsquo;s live, we think it through together, and you leave with a real conclusion, not a summary of what we could do if you signed up. If it turns out to be a fit, we&rsquo;ll talk about working together. If it doesn&rsquo;t, you&rsquo;ve still spent a genuinely useful hour. Either way, the hour is yours.</p>
+    </div>
+  </section>
+
+  <!-- 01 · If You'd Rather Ask First -->
+  <section class="scene scene--charcoal">
+    <div class="col tc">
+      <p class="kicker reveal">01 &middot; If You&rsquo;d Rather Ask First</p>
+      <div class="prose reveal">
+        <p>Some people want a brief conversation before booking a session. Some are enquiring on behalf of an organisation. Some have a specific question that needs an answer before any of this makes sense.</p>
+        <p>Quick enquiry or organisational interest? Use the form below.</p>
+      </div>
+    </div>
+    <div class="form-wrap reveal" style="margin-top: 72px;">
+      <form id="contactForm" name="contact" method="POST" action="#" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="source-page" value="contact">
+        <p class="hp" aria-hidden="true"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="field" id="fieldName">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" aria-describedby="nameError">
+          <p class="error-msg" id="nameError">Please enter your name.</p>
+        </div>
+
+        <div class="field" id="fieldEmail">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="emailError">
+          <p class="error-msg" id="emailError">Please enter a valid email address.</p>
+        </div>
+
+        <div class="field" id="fieldType">
+          <fieldset aria-describedby="typeError">
+            <legend>Enquiry type</legend>
+            <div class="radio-row">
+              <label><input type="radio" name="enquiry-type" value="Individual"> Individual</label>
+              <label><input type="radio" name="enquiry-type" value="Organisational"> Organisational</label>
+              <label><input type="radio" name="enquiry-type" value="Other"> Other</label>
+            </div>
+            <p class="error-msg" id="typeError">Please choose one.</p>
+          </fieldset>
+        </div>
+
+        <div class="field" id="fieldMessage">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" aria-describedby="messageError"></textarea>
+          <p class="error-msg" id="messageError">Please add a short message.</p>
+        </div>
+
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+
+      <div class="confirmation" id="confirmation" hidden tabindex="-1">
+        <p>Got it. I&rsquo;ll be in touch within one working day.</p>
+        <p class="signed">John</p>
+      </div>
+    </div>
+
+    <p class="email-line reveal">Want to write something longer, or just prefer email? <a href="mailto:coach@catalystgrowthcoach.co.uk">coach@catalystgrowthcoach.co.uk</a></p>
+    <p class="closing-italic reveal"><em>I read everything that comes in. I&rsquo;ll reply within one working day.</em></p>
+  </section>
+
+  <!-- End card -->
+  <section class="end-card">
+    <div>
+      <p class="mark reveal">Catalyst <span>Growth Coaching</span></p>
+      <p class="est reveal">London &middot; Est. 2024</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__brand">Catalyst <span>Growth Coaching</span></p>
+  <p class="footer__tag">No need to get stuck.</p>
+  <nav class="footer__links" aria-label="Footer">
+    <span class="k">Programmes</span>
+    <a href="leadstrong.html">LeadStrong</a>
+    <a href="buildstrong.html">BuildStrong</a>
+    <a href="teamstrong.html">TeamStrong</a>
+    <span class="k">Read</span>
+    <a href="about.html">About John</a>
+    <a href="in-practice.html">In Practice</a>
+    <a href="going-further.html">Going Further</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p class="footer__fine">&copy; Catalyst Growth Coaching, London &middot; Est. 2024</p>
+  <p class="footer__signoff">Don&rsquo;t get stuck.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

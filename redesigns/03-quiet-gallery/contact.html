@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Whiteboard Session | Catalyst Growth Coaching</title>
+<meta name="description" content="An hour at the board. Bring whatever you're carrying.">
+<meta property="og:title" content="Book a Whiteboard Session | Catalyst Growth Coaching">
+<meta property="og:description" content="An hour at the board. Bring whatever you're carrying.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/img-1983.jpg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/main.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="door">
+  <a class="brand" href="index.html" aria-label="Catalyst Growth Coaching, home">
+    <span class="brand-a">Catalyst</span>
+    <span class="brand-b">Growth Coaching</span>
+  </a>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="leadstrong.html">LeadStrong</a></li>
+      <li><a href="buildstrong.html">BuildStrong</a></li>
+      <li><a href="teamstrong.html">TeamStrong</a></li>
+      <li><a href="in-practice.html">In Practice</a></li>
+      <li><a class="nav-cta" href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+  <hr class="door-rule">
+</header>
+
+<main id="main">
+
+  <!-- Wall · The booking path -->
+  <section class="wall wall--entry" aria-labelledby="ct-heading">
+    <div class="hang">
+      <p class="room reveal"><span class="room-no">Room VIII</span><span class="room-name">The Invitation</span></p>
+      <div class="wall-text reveal" style="margin-top: clamp(2rem, 6vh, 3.5rem);">
+        <span class="label eyebrow">Contact</span>
+        <h1 id="ct-heading" class="display">Let&rsquo;s get an hour in the diary.</h1>
+        <p class="lede">The first step is the same regardless of what you&rsquo;re thinking about. An hour at the board, working on whatever&rsquo;s actually live for you right now.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wall · The booking card -->
+  <section class="wall" aria-labelledby="ct-book">
+    <div class="hang">
+      <div class="invite reveal">
+        <span class="label invite-label">The Invitation</span>
+        <p class="invite-lede" id="ct-book">An hour at the board. Bring whatever you&rsquo;re carrying.</p>
+        <a class="invite-cta" href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" target="_blank" rel="noopener">Book a Whiteboard Session</a>
+        <p class="invite-sub" style="margin-top:2rem;"><em>No prep needed. Just bring the thing you&rsquo;d think about if you had the time.</em></p>
+      </div>
+      <div class="vitrine after-work reveal" style="max-width:640px;">
+        <p class="label" style="margin-bottom:1.4rem;">What the hour is like</p>
+        <blockquote style="font-size:1.08rem;">
+          <p>It&rsquo;s a full session, the same work I do with anyone at the board. You bring what&rsquo;s live, we think it through together, and you leave with a real conclusion, not a summary of what we could do if you signed up. If it turns out to be a fit, we&rsquo;ll talk about working together. If it doesn&rsquo;t, you&rsquo;ve still spent a genuinely useful hour. Either way, the hour is yours.</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wall · If you'd rather ask first -->
+  <section class="wall" aria-labelledby="ct-ask">
+    <div class="hang">
+      <div class="wall-text reveal">
+        <span class="label eyebrow">If You&rsquo;d Rather Ask First</span>
+        <div class="copy" id="ct-ask" style="margin-top:0;">
+          <p>Some people want a brief conversation before booking a session. Some are enquiring on behalf of an organisation. Some have a specific question that needs an answer before any of this makes sense.</p>
+          <p>Quick enquiry or organisational interest? Use the form below.</p>
+        </div>
+      </div>
+
+      <form class="enquiry reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="source-page" value="contact.html">
+        <p class="hp" aria-hidden="true">
+          <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="field" id="field-name">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required aria-describedby="err-name">
+          <p class="field-error" id="err-name">Please enter your name.</p>
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" autocomplete="email" required aria-describedby="err-email">
+          <p class="field-error" id="err-email">Please enter a valid email address.</p>
+        </div>
+
+        <div class="field" id="field-type">
+          <fieldset aria-describedby="err-type">
+            <legend>Enquiry type</legend>
+            <div class="radio-row">
+              <label><input type="radio" name="enquiry-type" value="Individual" required> Individual</label>
+              <label><input type="radio" name="enquiry-type" value="Organisational"> Organisational</label>
+              <label><input type="radio" name="enquiry-type" value="Other"> Other</label>
+            </div>
+          </fieldset>
+          <p class="field-error" id="err-type">Please choose one.</p>
+        </div>
+
+        <div class="field" id="field-message">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" required aria-describedby="err-message"></textarea>
+          <p class="field-error" id="err-message">Please add a short message.</p>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+
+      <div class="form-confirm" id="form-confirmation" hidden role="status">
+        <p class="confirm-line">Got it. I&rsquo;ll be in touch within one working day.</p>
+        <p class="confirm-sig">John</p>
+      </div>
+
+      <div class="contact-lines reveal">
+        <p>Want to write something longer, or just prefer email? <a href="mailto:coach@catalystgrowthcoach.co.uk">coach@catalystgrowthcoach.co.uk</a></p>
+        <p><em>I read everything that comes in. I&rsquo;ll reply within one working day.</em></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="closing">
+  <a class="brand" href="index.html" aria-label="Catalyst Growth Coaching, home">
+    <span class="brand-a">Catalyst</span>
+    <span class="brand-b">Growth Coaching</span>
+  </a>
+  <p class="tag">No need to get stuck.</p>
+  <nav class="foot-groups" aria-label="Footer">
+    <div class="foot-group">
+      <span class="foot-group-label">Programmes</span>
+      <ul class="foot-nav">
+        <li><a href="leadstrong.html">LeadStrong</a></li>
+        <li><a href="buildstrong.html">BuildStrong</a></li>
+        <li><a href="teamstrong.html">TeamStrong</a></li>
+      </ul>
+    </div>
+    <div class="foot-group">
+      <span class="foot-group-label">Read</span>
+      <ul class="foot-nav">
+        <li><a href="about.html">About John</a></li>
+        <li><a href="in-practice.html">In Practice</a></li>
+        <li><a href="going-further.html">Going Further</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <p class="fine">&copy; Catalyst Growth Coaching, London &middot; Est. 2024</p>
+  <p class="signoff">Don&rsquo;t get stuck.</p>
+</footer>
+
+</body>
+</html>
