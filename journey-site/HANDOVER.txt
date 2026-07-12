@@ -1,0 +1,87 @@
+CATALYST GROWTH COACHING, THE JOURNEY
+Handover note for John
+=====================================
+
+WHAT THIS IS
+
+A standalone six-page site, one page per stage of the considered-purchase
+journey, plus a routing index and the free-tool page. It is completely
+separate from the live site and does not touch it. Open index.html to see
+the map of all six pages with one line on who each is for.
+
+The pages and their files:
+
+  index.html                index for you, links all six with routing notes
+  fine.html                 Stage 1, unaware and satisfied
+  the-cost.html             Stage 2, aware but not looking
+  this-week.html            Stage 3, the breaking point
+  the-options.html          Stage 4, assessing options
+  begin.html                Stage 5, purchase
+  onward.html               Stage 6, review, clients past and present
+  an-hour-at-the-board.html the free self-guided thinking hour
+
+HOW TO PUBLISH IT (about five minutes, nothing technical)
+
+  1. Unzip the file you were sent. You will get a folder called
+     journey-site with index.html inside it.
+  2. In your web browser, go to:  https://app.netlify.com/drop
+  3. Log in if it asks (the same Netlify account the main site uses is
+     fine, or a free new one).
+  4. Drag the whole journey-site FOLDER (not the zip) from your computer
+     onto the big drop area on that page.
+  5. Wait for the upload bar to finish. Netlify then shows you a link
+     that looks like  https://something-random.netlify.app
+  6. That link is the live site. Open it, check it, and share the
+     individual page addresses whenever you want to route someone, for
+     example  https://something-random.netlify.app/fine.html
+  7. Optional: in Netlify under Site settings you can rename
+     "something-random" to a name you prefer, or attach a domain later.
+
+The email forms (the newsletter and the free hour) work automatically
+once the site is on Netlify. Submitted addresses appear in the Netlify
+dashboard under Forms: one form named "considered-leader" and one named
+"hour-at-the-board". No setup is needed, but do submit a test yourself
+after publishing to see them arrive.
+
+PLACEHOLDERS FOR YOU TO REPLACE
+
+  1. "An Hour at the Board, On Your Own" does not exist as a written
+     document anywhere in the repository, so the page describing it
+     (an-hour-at-the-board.html) is placeholder copy written in the
+     site voice. It promises "a single page" sent by email. Until you
+     have written that page and have a way to send it, treat every
+     address that arrives in the "hour-at-the-board" form as a promise
+     to keep manually.
+  2. "The Considered Leader" newsletter also does not exist yet on the
+     site or in the repository. The signup forms collect addresses, but
+     nothing is sent automatically. Same rule: addresses that arrive
+     are promises to keep.
+  3. Booking link. Your brief gave one scheduler address, but the live
+     site's contact page uses a different one. As agreed, every booking
+     link here uses the LIVE SITE's address (the one ending
+     ...6045bde2cbf031000aba1a55/schedule). If the address in your brief
+     was a new scheduler you set up deliberately, tell me, or search and
+     replace it in the-options.html, begin.html, this-week.html and
+     onward.html.
+
+SMALL EDITORIAL NOTES
+
+  - The three testimonials on the-options.html are the real ones from
+    the live site (Mark Schmull, Martin Malins, Stuart Ploughman),
+    unchanged except punctuation: the site style here uses no dashes,
+    so one dash inside the Schmull quote became a comma. No words were
+    changed. The Ralph Shorthose quote was left out because it contains
+    a word this set of pages avoids.
+  - All photos, videos and client logos are reused from the existing
+    site. Fonts are included in the folder itself, so the pages depend
+    on nothing external.
+  - The pages carry a "noindex" tag, meaning search engines will not
+    list them. That is deliberate while the placeholders above stand,
+    and because you route people to these pages directly. If you later
+    want them found by search, remove the robots meta line near the top
+    of each file.
+
+A copy of this whole folder was also saved to a side branch of the
+website repository (claude/catalyst-journey-pages-j8rmpb) purely as a
+backup. It is not connected to the live site and nothing will publish
+from it.
