@@ -1,0 +1,41 @@
+name: Verify Growth Audit live site
+
+# Post-deploy smoke test for https://catalyst-growth-audit.netlify.app —
+# page content, asset availability, and a test Netlify Forms submission.
+# Run manually from the Actions tab after a deploy.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Page and asset checks
+        run: |
+          set -e
+          BASE=https://catalyst-growth-audit.netlify.app
+          echo "== HTTPS status =="
+          curl -sS -o /tmp/page.html -w "status=%{http_code} ssl_verify=%{ssl_verify_result}\n" "$BASE/"
+          echo "== Content checks (each must be >=1) =="
+          echo -n "hero question: ";      grep -c "Why does growth still depend on" /tmp/page.html
+          echo -n "session-wide clip: ";  grep -c 'data-src="/videos/session-wide.mp4"' /tmp/page.html
+          echo -n "client-writing clip: ";grep -c 'data-src="/videos/session-client-writing.mp4"' /tmp/page.html
+          echo -n "band caption: ";       grep -c "A real question, an hour at the board" /tmp/page.html
+          echo -n "form-name field: ";    grep -c 'name="form-name" value="series-signup"' /tmp/page.html
+          echo -n "honeypot field: ";     grep -c 'name="bot-field"' /tmp/page.html
+          echo "== Hero must have no video =="
+          ! sed -n '/<header>/,/<\/header>/p' /tmp/page.html | grep -q "<video"
+          echo "hero is text-only: OK"
+          echo "== Assets =="
+          for p in /videos/session-wide.mp4 /videos/session-client-writing.mp4 /images/img-1981.jpg /images/img-1983.jpg; do
+            curl -sS -o /dev/null -w "$p -> %{http_code} (%{size_download} bytes)\n" "$BASE$p"
+          done
+
+      - name: Test form submission
+        run: |
+          BASE=https://catalyst-growth-audit.netlify.app
+          curl -sS -o /tmp/form.out -w "form_post_status=%{http_code}\n" \
+            -X POST "$BASE/" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            --data "form-name=series-signup&email=deploy-test%40catalystgrowthcoach.co.uk&bot-field="
