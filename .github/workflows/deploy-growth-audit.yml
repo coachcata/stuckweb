@@ -27,7 +27,9 @@ jobs:
 
       - name: Mask one-off token if provided
         if: ${{ github.event.inputs.netlify_auth_token != '' }}
-        run: echo "::add-mask::${{ github.event.inputs.netlify_auth_token }}"
+        env:
+          ONE_OFF_TOKEN: ${{ github.event.inputs.netlify_auth_token }}
+        run: echo "::add-mask::$ONE_OFF_TOKEN"
 
       - name: Deploy growth-audit/ to Netlify
         env:
