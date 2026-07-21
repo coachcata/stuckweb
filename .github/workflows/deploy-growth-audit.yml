@@ -1,0 +1,40 @@
+name: Deploy Growth Audit to Netlify
+
+# Deploys the standalone growth-audit/ folder to the separate Netlify
+# project "catalyst-growth-audit". Run manually from the Actions tab.
+#
+# Auth: set a NETLIFY_AUTH_TOKEN repository secret (Settings → Secrets
+# and variables → Actions) and leave the input blank — or paste a
+# token into the input for a one-off run and revoke it afterwards.
+
+on:
+  workflow_dispatch:
+    inputs:
+      netlify_auth_token:
+        description: "Netlify auth token (leave blank to use the NETLIFY_AUTH_TOKEN repo secret)"
+        required: false
+        default: ""
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Mask one-off token if provided
+        if: ${{ github.event.inputs.netlify_auth_token != '' }}
+        run: echo "::add-mask::${{ github.event.inputs.netlify_auth_token }}"
+
+      - name: Deploy growth-audit/ to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ github.event.inputs.netlify_auth_token != '' && github.event.inputs.netlify_auth_token || secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npx --yes netlify-cli deploy \
+            --prod \
+            --dir growth-audit \
+            --site 9f60f5a9-d288-4e73-9abe-68c1957b9bf2 \
+            --message "Growth Audit deploy from ${{ github.ref_name }} (${{ github.sha }})"
