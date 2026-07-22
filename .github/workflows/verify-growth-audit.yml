@@ -9,18 +9,33 @@ name: Verify Growth Audit live page
 
 on:
   workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Base URL to test against"
+        required: false
+        default: "https://www.catalystgrowthcoach.co.uk"
 
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
+      - name: Connection diagnostics
+        run: |
+          BASE="${{ github.event.inputs.base_url || 'https://www.catalystgrowthcoach.co.uk' }}"
+          HOST=$(echo "$BASE" | sed 's|https\?://||;s|/.*||')
+          echo "== DNS =="
+          getent hosts "$HOST" || echo "no DNS record"
+          echo "== TLS/HTTP reachability (15s cap) =="
+          curl -sv -o /dev/null --connect-timeout 10 --max-time 15 "$BASE/" 2>&1 | grep -E "Connected to|subject:|HTTP/|[Ll]ocation" || true
+
       - name: Page and asset checks
         run: |
           set -e
-          BASE=https://www.catalystgrowthcoach.co.uk
+          BASE="${{ github.event.inputs.base_url || 'https://www.catalystgrowthcoach.co.uk' }}"
+          CURL="curl -sSL --connect-timeout 10 --max-time 40"
           echo "== HTTPS status, URL stays on main domain =="
-          curl -sSL -o /tmp/page.html -w "status=%{http_code} final_url=%{url_effective}\n" "$BASE/growth-audit"
-          curl -sS -o /dev/null -w "no-redirect-off-domain check: %{redirect_url}\n" "$BASE/growth-audit" | grep -v "netlify.app" || true
+          $CURL -o /tmp/page.html -w "status=%{http_code} final_url=%{url_effective}\n" "$BASE/growth-audit"
           echo "== Content checks (each must be >=1) =="
           echo -n "hero question: ";      grep -c "Why does growth still depend on" /tmp/page.html
           echo -n "session-wide clip: ";  grep -c 'data-src="/videos/session-wide.mp4"' /tmp/page.html
@@ -34,15 +49,15 @@ jobs:
           echo "hero is text-only: OK"
           echo "== Assets resolve on the main domain =="
           for p in /videos/session-wide.mp4 /videos/session-client-writing.mp4 /images/img-1981.jpg /images/img-1983.jpg; do
-            curl -sSL -o /dev/null -w "$p -> %{http_code} (%{size_download} bytes)\n" "$BASE$p"
+            $CURL -o /dev/null -w "$p -> %{http_code} (%{size_download} bytes)\n" "$BASE$p"
           done
           echo "== Navigation back to main site =="
           grep -c 'class="wordmark" href="/"' /tmp/page.html
 
       - name: Test form submission through the live path
         run: |
-          BASE=https://www.catalystgrowthcoach.co.uk
-          curl -sS -o /tmp/form.out -w "form_post_status=%{http_code}\n" \
+          BASE="${{ github.event.inputs.base_url || 'https://www.catalystgrowthcoach.co.uk' }}"
+          curl -sS --connect-timeout 10 --max-time 30 -o /tmp/form.out -w "form_post_status=%{http_code}\n" \
             -X POST "$BASE/growth-audit/" \
             -H "Content-Type: application/x-www-form-urlencoded" \
             --data "form-name=series-signup&email=deploy-test%40catalystgrowthcoach.co.uk&bot-field="
