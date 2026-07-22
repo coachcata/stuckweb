@@ -1,8 +1,11 @@
-name: Verify Growth Audit live site
+name: Verify Growth Audit live page
 
-# Post-deploy smoke test for https://catalyst-growth-audit.netlify.app —
-# page content, asset availability, and a test Netlify Forms submission.
-# Run manually from the Actions tab after a deploy.
+# Post-deploy smoke test for the Growth Audit page on the MAIN domain —
+# https://www.catalystgrowthcoach.co.uk/growth-audit (Route B: the page
+# is part of the main site build; merging to the default branch
+# publishes it). Checks page content, asset availability through the
+# live path, and a test Netlify Forms submission.
+# Run manually from the Actions tab.
 
 on:
   workflow_dispatch:
@@ -14,9 +17,10 @@ jobs:
       - name: Page and asset checks
         run: |
           set -e
-          BASE=https://catalyst-growth-audit.netlify.app
-          echo "== HTTPS status =="
-          curl -sS -o /tmp/page.html -w "status=%{http_code} ssl_verify=%{ssl_verify_result}\n" "$BASE/"
+          BASE=https://www.catalystgrowthcoach.co.uk
+          echo "== HTTPS status, URL stays on main domain =="
+          curl -sSL -o /tmp/page.html -w "status=%{http_code} final_url=%{url_effective}\n" "$BASE/growth-audit"
+          curl -sS -o /dev/null -w "no-redirect-off-domain check: %{redirect_url}\n" "$BASE/growth-audit" | grep -v "netlify.app" || true
           echo "== Content checks (each must be >=1) =="
           echo -n "hero question: ";      grep -c "Why does growth still depend on" /tmp/page.html
           echo -n "session-wide clip: ";  grep -c 'data-src="/videos/session-wide.mp4"' /tmp/page.html
@@ -24,18 +28,21 @@ jobs:
           echo -n "band caption: ";       grep -c "A real question, an hour at the board" /tmp/page.html
           echo -n "form-name field: ";    grep -c 'name="form-name" value="series-signup"' /tmp/page.html
           echo -n "honeypot field: ";     grep -c 'name="bot-field"' /tmp/page.html
+          echo -n "canonical URL: ";      grep -c 'rel="canonical" href="https://www.catalystgrowthcoach.co.uk/growth-audit"' /tmp/page.html
           echo "== Hero must have no video =="
           ! sed -n '/<header>/,/<\/header>/p' /tmp/page.html | grep -q "<video"
           echo "hero is text-only: OK"
-          echo "== Assets =="
+          echo "== Assets resolve on the main domain =="
           for p in /videos/session-wide.mp4 /videos/session-client-writing.mp4 /images/img-1981.jpg /images/img-1983.jpg; do
-            curl -sS -o /dev/null -w "$p -> %{http_code} (%{size_download} bytes)\n" "$BASE$p"
+            curl -sSL -o /dev/null -w "$p -> %{http_code} (%{size_download} bytes)\n" "$BASE$p"
           done
+          echo "== Navigation back to main site =="
+          grep -c 'class="wordmark" href="/"' /tmp/page.html
 
-      - name: Test form submission
+      - name: Test form submission through the live path
         run: |
-          BASE=https://catalyst-growth-audit.netlify.app
+          BASE=https://www.catalystgrowthcoach.co.uk
           curl -sS -o /tmp/form.out -w "form_post_status=%{http_code}\n" \
-            -X POST "$BASE/" \
+            -X POST "$BASE/growth-audit/" \
             -H "Content-Type: application/x-www-form-urlencoded" \
             --data "form-name=series-signup&email=deploy-test%40catalystgrowthcoach.co.uk&bot-field="
