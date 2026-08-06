@@ -61,11 +61,24 @@
   .gets li{position:relative;counter-increment:g;border-bottom:1px solid var(--line);padding:20px 0 20px 52px;color:var(--stone);font-size:16.5px;line-height:1.6;max-width:62ch}
   .gets li::before{content:counter(g,lower-roman) ".";position:absolute;left:0;top:20px;font-family:var(--font-d);font-style:italic;font-size:20px;color:var(--cognac);line-height:1.35}
 
-  /* how it runs */
+  /* deliverables and how it runs */
   .rows{margin-top:30px;border-top:1px solid var(--line)}
   .row{display:grid;grid-template-columns:180px 1fr;gap:26px;padding:30px 0;border-bottom:1px solid var(--line)}
   .row h3{font-family:var(--font-d);font-weight:500;font-size:25px;line-height:1.2;color:var(--bone)}
+  .row h3 span{display:block;font-family:var(--font-b);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cognac);font-weight:600;margin-bottom:8px}
   .row p{color:var(--stone);font-size:16.5px;max-width:56ch}
+  .subhead{margin-top:46px;font-family:var(--font-d);font-weight:500;font-size:24px;color:var(--bone)}
+  .subhead + .gets{margin-top:22px}
+
+  /* price */
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:44px 40px;margin-top:32px}
+  .price{font-family:var(--font-d);font-weight:300;font-size:clamp(50px,7vw,72px);line-height:1;color:var(--bone)}
+  .price-meta{margin-top:18px;color:var(--stone);font-size:16px;max-width:52ch}
+  .credit{margin-top:24px;padding-top:22px;border-top:1px solid var(--line);color:var(--stone);font-size:16px;max-width:58ch}
+  .credit b{color:var(--cognac);font-weight:500}
+
+  /* where it stops */
+  .pull{font-family:var(--font-d);font-style:italic;font-weight:300;font-size:clamp(22px,3.2vw,31px);line-height:1.32;color:var(--bone);border-left:2px solid var(--cognac);padding-left:26px;margin:40px 0 24px;max-width:30ch}
 
   /* ambient clip: a living photo, not a player */
   .band{position:relative;margin-top:88px;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
@@ -159,7 +172,7 @@
     <ol class="gets">
       <li>An outside read of the business, from somebody with no stake in the answer</li>
       <li>A method rather than an opinion, so you can see how each conclusion was reached</li>
-      <li>What is holding the business back, ranked in order of what it is costing you</li>
+      <li>Three structural risks, ranked in order of what they are costing you. Always three</li>
       <li>All of it in writing, so you can sit with it rather than remember it</li>
       <li>The evidence behind each finding, so you can check it rather than take my word</li>
       <li>A clear split between what you can act on alone and what would need somebody alongside you</li>
@@ -173,20 +186,50 @@
 
 <section>
   <div class="wrap reveal">
+    <div class="eyebrow">The deliverables</div>
+    <h2>Three things, and the report is the <em>spine</em>.</h2>
+    <div class="rows">
+      <div class="row">
+        <h3><span>One</span>The report</h3>
+        <p>Eight to twelve pages of prose. Not slides. Written to be read twice, and to survive being forwarded to the one person you trust.</p>
+      </div>
+      <div class="row">
+        <h3><span>Two</span>The working session</h3>
+        <p>Ninety minutes, you and me, working through what the report found. It is not always comfortable. It is the part owners tell me they remember.</p>
+      </div>
+      <div class="row">
+        <h3><span>Three</span>The debriefs</h3>
+        <p>Every leader who took a CliftonStrengths assessment gets their own debrief. Your team gets something directly out of this, rather than only being reported on.</p>
+      </div>
+    </div>
+
+    <h3 class="subhead">What is in the report</h3>
+    <ol class="gets">
+      <li>A one-page summary at the front, written so it can be forwarded on its own</li>
+      <li>The question you asked, in your words, on page one</li>
+      <li>What we found</li>
+      <li>Three ranked structural risks. Always three, never a list that trails off</li>
+      <li>Sequenced ninety-day recommendations, at least half of them actionable without me</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
     <div class="eyebrow">How it runs</div>
     <h2>Three weeks</h2>
     <div class="rows">
       <div class="row">
         <h3>Week one</h3>
-        <p>Two sessions at the board with you, and access to whatever numbers and documents make sense. I am building a picture of where decisions actually get made, which is rarely where the org chart says.</p>
+        <p>A single kickoff of ninety minutes, where you state the question this audit answers in your own words. That sentence goes on page one of the report, and everything after it is judged against it.</p>
       </div>
       <div class="row">
         <h3>Week two</h3>
-        <p>Conversations with two or three people in the business, chosen with you. Not a staff survey. I am checking whether what you have told me matches what happens on a Tuesday.</p>
+        <p>Fieldwork. Up to six confidential interviews with your senior people, up to six CliftonStrengths assessments, and structural analysis of how decisions actually flow and what depends on whom. Not a staff survey. I am checking whether what you have told me matches what happens on a Tuesday.</p>
       </div>
       <div class="row">
         <h3>Week three</h3>
-        <p>The written report, and a session to work through it. Ranked findings, the evidence, and what I would do first.</p>
+        <p>The report is written, and we spend ninety minutes working through it together. The plan is in your hands within twenty-four hours of that session.</p>
       </div>
     </div>
   </div>
@@ -195,6 +238,38 @@
 <div class="band reveal">
   <video muted autoplay loop playsinline preload="none" poster="/images/img-1983.jpg" data-src="/videos/session-client-writing.mp4" aria-label="A client writing on the whiteboard during a working session"></video>
 </div>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What it costs</div>
+    <h2>One price, stated like <em>everything else</em>.</h2>
+    <div class="price-card">
+      <div class="price">&pound;1,995</div>
+      <p class="price-meta">For a senior team of up to six. Where the senior team is six or more, &pound;2,495, agreed before we start rather than after.</p>
+      <p class="price-meta">Half on booking, half on delivery.</p>
+      <p class="credit">If we go on to advisory work within thirty days, the fee is <b>credited in full</b> against the first quarter. The audit costs you nothing in that case, and you keep what it found either way.</p>
+    </div>
+    <div class="body" style="margin-top:28px">
+      <p>There is no proposal, no scoping call that turns into a sales call, and no negotiation. The price is the price because the product is the product, which is also what makes it safe for an accountant to put their name to.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">Where it stops</div>
+    <h2>The edges, stated <em>before</em> you buy.</h2>
+    <div class="body">
+      <p>Up to six confidential interviews and up to six CliftonStrengths assessments. If your senior team is larger than that, we agree the shape of it before we start.</p>
+      <p>The report is delivered once. It is a diagnosis, not a document we redraft together until everybody is comfortable with it.</p>
+      <p>Implementation, workshops and ongoing coaching are separate engagements, priced separately, if and when you want them. Keeping them out is what keeps three weeks to three weeks.</p>
+    </div>
+    <p class="pull">Anything touching tax, funding structures or formal valuation goes back to the referring accountant, by name.</p>
+    <div class="body">
+      <p>Those are their questions, not mine, and the report says so in writing rather than quietly straying into them. If you came here through your accountant, they stay in the loop throughout and nothing in this cuts across them.</p>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap reveal">
