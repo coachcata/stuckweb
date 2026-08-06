@@ -1,5 +1,5 @@
 /* ============================================================
-   CATALYST GROWTH COACHING — DESIGN SYSTEM
+   CATALYST GROWTH COACHING, DESIGN SYSTEM
    Aesthetic: Refined dark luxury · Private members' club
    ICP: Burnt-out C-suite, VPs, Founders
    ============================================================ */
@@ -326,7 +326,7 @@ img { max-width: 100%; display: block; }
 .text-center { text-align: center; }
 .text-center .section-subtitle { margin-left: auto; margin-right: auto; }
 
-/* ===================== HERO — PAGE HERO ===================== */
+/* ===================== HERO, PAGE HERO ===================== */
 .page-hero {
   padding: 10rem 2rem 5rem;
   position: relative;
@@ -412,7 +412,7 @@ img { max-width: 100%; display: block; }
   animation: fadeUp 0.8s 0.8s var(--ease) forwards;
 }
 
-/* HOME HERO — FULL HEIGHT */
+/* HOME HERO, FULL HEIGHT */
 .home-hero {
   min-height: 100vh;
   display: flex;

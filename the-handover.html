@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+
+<!-- META PIXEL: paste Meta pixel code here -->
+
+<!-- GOOGLE ANALYTICS (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2Z17HSYFCV');
+</script>
+<!-- END GOOGLE ANALYTICS -->
+
+<title>An Hour at the Board | Catalyst Growth Coaching</title>
+
+<meta name="description" content="Could you go away for two weeks and not be phoned? An hour at the board, no charge, no pitch at the end of it." />
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #0A0A0C;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --err:        #8B5A5A;
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+
+  /* Wordmark only. No menu, nothing linking away from this page. */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.1rem 6vw;
+    display: flex; align-items: center;
+    background: rgba(12,12,14,0.82);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.1rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone);
+  }
+  nav.top .brand span { color: var(--cognac); }
+
+  section.scene { padding: 10vh 6vw; position: relative; display: flex; flex-direction: column; }
+  .eyebrow {
+    font-size: 0.66rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; font-family: var(--font-b);
+    display: block; margin-bottom: 1.2rem;
+  }
+
+  h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    line-height: 1.12; color: var(--bone); margin-bottom: 1.8rem;
+  }
+  h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  .body {
+    max-width: 60ch;
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 4.4vw, 1.35rem); line-height: 1.65; color: var(--stone);
+  }
+  .body p { margin-bottom: 1.3rem; }
+  .body p:last-child { margin-bottom: 0; }
+  .body em { font-style: italic; color: var(--bone); }
+
+  /* ── Hero: the call to action sits above the fold ── */
+  .scene-hero {
+    min-height: 100svh; justify-content: center;
+    padding: calc(64px + 6vh) 6vw 8vh;
+  }
+  .scene-hero h1 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: clamp(2.1rem, 8.5vw, 4.4rem);
+    line-height: 1.05; letter-spacing: -0.015em;
+    color: var(--bone); max-width: 18ch; margin-bottom: 1.8rem;
+  }
+  .scene-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-hero .sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.15rem, 4.4vw, 1.45rem);
+    line-height: 1.5; color: var(--stone);
+    max-width: 44ch; margin-bottom: 2.6rem;
+  }
+  .under-button {
+    margin-top: 1rem; font-family: var(--font-b);
+    font-size: 0.85rem; color: var(--stone); letter-spacing: 0.01em;
+  }
+  .under-button.ash { color: var(--ash); }
+
+  .scene-dark {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+
+  /* ── Quiet list ── */
+  .quiet-list {
+    list-style: none; max-width: 60ch;
+    margin: 2.4rem 0 0; border-top: 1px solid var(--line);
+  }
+  .quiet-list li {
+    padding: 1.1rem 0 1.1rem 1.6rem;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-b); font-size: 1rem;
+    line-height: 1.6; color: var(--stone); position: relative;
+  }
+  .quiet-list li::before {
+    content: '·'; position: absolute; left: 0.2rem; top: 1rem;
+    color: var(--cognac); font-size: 1.2rem; line-height: 1.4;
+  }
+  .list-note {
+    margin-top: 2rem; max-width: 60ch;
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; line-height: 1.6; color: var(--stone);
+  }
+
+  /* ── How it runs ── */
+  .runs-list { list-style: none; max-width: 68ch; margin-top: 1rem; }
+  .runs-list li {
+    padding: 1.6rem 0; border-bottom: 1px solid var(--line);
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 4.4vw, 1.35rem); line-height: 1.55; color: var(--stone);
+  }
+  .runs-list li:first-child { border-top: 1px solid var(--line); }
+
+  /* ── Who I am ── */
+  .bio { max-width: 60ch; font-size: 1rem; line-height: 1.75; color: var(--stone); }
+
+  .quote-card {
+    margin-top: 3.5rem; max-width: 640px;
+    padding: 2.2rem 1.8rem;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 4px;
+    display: flex; flex-direction: column; gap: 1.3rem;
+  }
+  .quote-card .mark {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 2.6rem; color: var(--cognac); line-height: 1; opacity: 0.5;
+  }
+  .quote-card blockquote {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; line-height: 1.55; color: var(--bone);
+  }
+  .quote-card blockquote p { margin-bottom: 1rem; }
+  .quote-card blockquote p:last-child { margin-bottom: 0; }
+  .quote-card blockquote strong { font-style: normal; font-weight: 500; color: var(--cognac); }
+  .quote-card .attr {
+    display: flex; flex-direction: column; gap: 0.3rem;
+    padding-top: 1.3rem; border-top: 1px solid var(--line);
+  }
+  .quote-card .attr .name { font-size: 0.92rem; color: var(--bone); font-weight: 500; }
+  .quote-card .attr .meta {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ash);
+  }
+
+  /* ── Form ── */
+  .scene-form { scroll-margin-top: 70px; }
+  .booking-form {
+    display: grid; gap: 1.5rem; max-width: 520px; width: 100%;
+    padding: 2.2rem 1.8rem; background: var(--bg);
+    border: 1px solid var(--line); border-radius: 4px;
+    margin-top: 2.5rem;
+  }
+  .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-field label {
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--bone);
+  }
+  .form-field input,
+  .form-field select {
+    background: var(--bg-3); color: var(--bone);
+    border: 1px solid var(--line);
+    padding: 0.9rem 1rem; border-radius: 2px;
+    font-family: var(--font-b); font-size: 1rem;
+    transition: border-color 0.2s; width: 100%;
+    -webkit-appearance: none; appearance: none;
+  }
+  .form-field select {
+    background-image: linear-gradient(45deg, transparent 50%, var(--cognac) 50%),
+                      linear-gradient(135deg, var(--cognac) 50%, transparent 50%);
+    background-position: calc(100% - 20px) center, calc(100% - 14px) center;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 2.6rem;
+  }
+  .form-field select option { background: var(--bg-3); color: var(--bone); }
+  .form-field input:focus,
+  .form-field select:focus { outline: none; border-color: var(--cognac); }
+  .form-error { color: var(--err); font-size: 0.85rem; margin-top: 0.3rem; display: none; }
+  .form-field.has-error input,
+  .form-field.has-error select { border-color: var(--err); }
+  .form-field.has-error .form-error { display: block; }
+  .form-submit {
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 1.1rem 2.4rem; border: none; border-radius: 2px;
+    cursor: pointer; transition: all 0.3s; justify-self: stretch;
+  }
+  .form-submit:hover { background: var(--cognac-2); }
+  .form-confirmation {
+    display: none; margin-top: 2.5rem; max-width: 520px;
+    padding: 1.5rem; background: rgba(200, 149, 108, 0.06);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    font-family: var(--font-d); font-style: italic; font-size: 1.15rem;
+    color: var(--bone); line-height: 1.5;
+  }
+  .form-confirmation.show { display: block; }
+  .booking-form.submitted { display: none; }
+  .form-fallback { display: none; font-size: 0.95rem; color: var(--stone); line-height: 1.6; }
+  .form-fallback.show { display: block; }
+  .form-fallback a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 1px;
+  }
+
+  .button {
+    display: inline-block; padding: 1.1rem 2.6rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+    align-self: flex-start;
+  }
+  .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+
+  footer {
+    background: var(--bg); padding: 3rem 6vw;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+  }
+
+  @media (min-width: 900px) {
+    section.scene { padding: 14vh 6vw; }
+    .quiet-list li { font-size: 1.05rem; }
+    .booking-form { padding: 2.5rem; }
+    .form-submit { justify-self: start; }
+  }
+
+  @media (max-width: 420px) {
+    .button { padding: 1.1rem 1.8rem; letter-spacing: 0.16em; }
+  }
+</style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body>
+
+<!-- NAV, wordmark only -->
+<nav class="top">
+  <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+</nav>
+
+<!-- SCENE 01, Hero -->
+<section class="scene scene-hero">
+  <span class="eyebrow">An hour at the board</span>
+  <h1>Could you go away for two weeks and <em>not be phoned</em>?</h1>
+  <p class="sub">Most owners answer that with a pause and then a qualification. The pause is the answer. If it is yours, an hour at the board is free and there is no pitch at the end of it.</p>
+  <a href="#book" class="button">Book the hour</a>
+  <p class="under-button">One hour, no charge, nothing to prepare.</p>
+</section>
+
+<!-- SCENE 02, The Problem -->
+<section class="scene scene-dark">
+  <span class="eyebrow">The problem</span>
+  <h2>Every hard call <em>stops with you</em>.</h2>
+  <div class="body">
+    <p>You built it, and the difficult decisions get made at eleven at night or they do not get made at all. Not because you cannot make them, but because there is nobody at your level to test them against first.</p>
+    <p>Everyone you would talk to about it works for you. However good they are, they cannot be neutral about a decision that affects their own job. So the thought stays in your head, unfinished, and comes back the following week in exactly the same shape.</p>
+    <p>That is not a failure of nerve and it is not a problem with your people. It is what owning something is like.</p>
+  </div>
+</section>
+
+<!-- SCENE 03, What Owners Bring -->
+<section class="scene">
+  <span class="eyebrow">What owners bring</span>
+  <h2>You probably already know <em>which one it is</em>.</h2>
+  <div class="body">
+    <p>Most owners I sit with have one thing they have been carrying for months.</p>
+  </div>
+
+  <ul class="quiet-list">
+    <li>The senior hire that would take you out of delivery, and keeps not being made</li>
+    <li>Somebody who has the title but not the authority, and has noticed</li>
+    <li>A business that could not run for a fortnight without you in it</li>
+    <li>Growth that has flattened with no clear reason in the numbers</li>
+    <li>A partner or long serving colleague the firm has grown past</li>
+    <li>Whether you want to be doing this in six years</li>
+  </ul>
+
+  <p class="list-note">If yours is not on that list it still counts. The list is only here to show you that you are not unusual.</p>
+
+  <a href="#book" class="button" style="margin-top: 3rem;">Book the hour</a>
+</section>
+
+<!-- SCENE 04, The Hour -->
+<section class="scene scene-dark">
+  <span class="eyebrow">The hour</span>
+  <h2>Your thinking, out of your head, onto the board, into a <em>solution</em>.</h2>
+  <div class="body">
+    <p>You bring whatever is actually live. It goes up on the board, all of it, including the parts you have not said out loud to anybody. Then we work it through together until it is settled.</p>
+    <p>It is not advice and it is not consulting. I do not arrive with your answer, because most of it is already in your head in pieces. What is missing is a surface to put it on and somebody with no stake in which way you go.</p>
+    <p>Nothing to prepare. Bring the thing you would be turning over on the drive home anyway.</p>
+  </div>
+</section>
+
+<!-- SCENE 05, The Thing That Is Not Working -->
+<section class="scene">
+  <span class="eyebrow">The thing that is not working</span>
+  <h2>It agrees with <em>everything</em>.</h2>
+  <div class="body">
+    <p>Most owners have tried working this through with an AI at midnight. It is genuinely useful, right up to the point you notice it agrees with whatever you put into it. Which is the same problem you have during the day, in a building full of people who work for you.</p>
+    <p>A thinking partner is somebody who can afford to tell you that you are wrong. That is the whole job.</p>
+  </div>
+</section>
+
+<!-- SCENE 06, How It Runs -->
+<section class="scene scene-dark">
+  <span class="eyebrow">How it runs</span>
+  <ul class="runs-list">
+    <li>In person, at a real board, in central London or Milton Keynes.</li>
+    <li>Or on a call wherever you are, with the board shared live on screen. The board travels, the work does not change.</li>
+    <li>One hour. No charge, and no pitch at the end of it.</li>
+  </ul>
+</section>
+
+<!-- SCENE 07, Who I Am -->
+<section class="scene">
+  <span class="eyebrow">Who I am</span>
+  <h2>John Obidipe</h2>
+  <p class="bio">Fifteen years across organisational consulting and executive coaching. Gallup certified in CliftonStrengths and a FITT16 practitioner. I have worked with leaders inside Toyota, Convatec and the University of Oxford, and with owners running firms between one and five million.</p>
+
+  <div class="quote-card">
+    <span class="mark">"</span>
+    <blockquote>
+      <p>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects, and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</p>
+      <p>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
+      <p>Thanks, John.</p>
+    </blockquote>
+    <div class="attr">
+      <span class="name">Mark Schmull</span>
+      <span class="meta">MD, Arrow Planning</span>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 08, The Form -->
+<section class="scene scene-dark scene-form" id="book">
+  <span class="eyebrow">The form</span>
+  <h2>Put an hour in the <em>diary</em>.</h2>
+  <div class="body">
+    <p>Three questions, and then I will come back with some times.</p>
+  </div>
+
+  <!-- Netlify Forms backend. Registered at deploy time via data-netlify;
+       submissions land in the Netlify dashboard (Forms, handover). The action
+       URL doubles as the success page for native (non-fetch) submits. -->
+  <form class="booking-form" id="handover-form" name="handover" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/the-handover.html?success=true">
+    <input type="hidden" name="form-name" value="handover" />
+    <input type="hidden" name="source-page" value="The Handover" />
+    <p style="display:none"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+    <div class="form-field" data-field="name">
+      <label for="hf-name">Your name</label>
+      <input id="hf-name" name="name" type="text" required autocomplete="name" />
+      <span class="form-error">Please enter your name.</span>
+    </div>
+
+    <div class="form-field" data-field="email">
+      <label for="hf-email">Email</label>
+      <input id="hf-email" name="email" type="email" required autocomplete="email" />
+      <span class="form-error">Please enter a valid email address.</span>
+    </div>
+
+    <div class="form-field" data-field="location">
+      <label for="hf-location">Where are you</label>
+      <select id="hf-location" name="location" required>
+        <option value="" selected disabled>Choose one</option>
+        <option value="Central London">Central London</option>
+        <option value="Milton Keynes">Milton Keynes</option>
+        <option value="Elsewhere in the UK">Elsewhere in the UK</option>
+        <option value="Outside the UK">Outside the UK</option>
+      </select>
+      <span class="form-error">Please choose one.</span>
+    </div>
+
+    <button type="submit" class="form-submit">Book the hour</button>
+
+    <p class="form-fallback" id="form-fallback">That didn't send. Email me instead at <a href="mailto:coach@catalystgrowthcoach.co.uk"><span class="notranslate">coach@catalystgrowthcoach.co.uk</span></a> and it comes to the same place.</p>
+  </form>
+
+  <p class="under-button ash">I read every one myself.</p>
+
+  <div class="form-confirmation" id="form-confirmation">
+    Got it. I'll come back with some times within one working day.
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © Catalyst Growth Coaching, London · Est. 2024
+</footer>
+
+<script>
+  (function() {
+    const form = document.getElementById('handover-form');
+    const confirmation = document.getElementById('form-confirmation');
+
+    // Returning from a native (non-fetch) submit: Netlify redirects back with ?success=true.
+    if (new URLSearchParams(location.search).get('success') === 'true') {
+      form.classList.add('submitted');
+      confirmation.classList.add('show');
+      confirmation.scrollIntoView({ block: 'center' });
+    }
+
+    function setError(field, on) {
+      const wrapper = field.closest('.form-field');
+      if (wrapper) wrapper.classList.toggle('has-error', on);
+    }
+
+    form.querySelectorAll('input, select').forEach(field => {
+      field.addEventListener('input', () => setError(field, false));
+      field.addEventListener('change', () => setError(field, false));
+    });
+
+    form.addEventListener('submit', async function(e) {
+      let valid = true;
+      ['name', 'email', 'location'].forEach(name => {
+        const field = form.querySelector(`[name="${name}"]`);
+        if (!field.checkValidity()) { setError(field, true); valid = false; }
+      });
+
+      if (!valid) { e.preventDefault(); return; }
+
+      e.preventDefault();
+      try {
+        const body = new URLSearchParams(new FormData(form)).toString();
+        const response = await fetch(form.getAttribute('action'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body
+        });
+        if (!response.ok) {
+          document.getElementById('form-fallback').classList.add('show');
+          return;
+        }
+        form.classList.add('submitted');
+        confirmation.classList.add('show');
+        form.reset();
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: 'handover_form' });
+      } catch (err) {
+        form.submit();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
