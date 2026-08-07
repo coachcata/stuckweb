@@ -4,8 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Growth Audit | Catalyst Growth Coaching</title>
-<meta name="description" content="A fixed-fee, three-week diagnostic of what's actually holding your business back: structure, leadership, and decision-making. £1,995, no lock-in.">
+<meta name="description" content="A three week diagnostic that answers why growth has flattened. Fixed fee, findings in writing, ranked by what they are costing you. For owners of firms between one and five million.">
 <link rel="canonical" href="https://catalystgrowthcoach.co.uk/growth-audit">
+<meta property="og:title" content="The Growth Audit">
+<meta property="og:description" content="Why the business stopped growing. Three weeks, a fixed price, and a written answer you can act on.">
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/growth-audit">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -35,113 +39,74 @@
   .nav-cta:hover{background:var(--cognac);color:var(--bg)}
 
   /* hero */
-  header{min-height:88vh;display:flex;align-items:center;padding:90px 0 70px}
-  .kicker{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac);margin-bottom:34px}
-  h1{font-family:var(--font-d);font-weight:300;font-style:italic;font-size:clamp(44px,8.2vw,96px);line-height:1.06;letter-spacing:-0.01em;max-width:14ch}
+  header{padding:96px 0 60px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac);margin-bottom:32px}
+  h1{font-family:var(--font-d);font-weight:300;font-size:clamp(44px,8.2vw,92px);line-height:1.05;letter-spacing:-0.01em;max-width:15ch}
   h1 em{font-style:italic;color:var(--cognac)}
-  .sub{margin-top:34px;max-width:52ch;color:var(--stone);font-size:19px}
-  .cta-row{margin-top:40px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-  .btn{display:inline-block;font-weight:500;font-size:15px;letter-spacing:.05em;padding:15px 30px;border-radius:2px;transition:transform .2s,background .25s,color .25s;border:none;cursor:pointer;font-family:var(--font-b)}
-  .btn-primary{background:var(--cognac);color:var(--bg)}
-  .btn-primary:hover{background:var(--cognac-2);color:var(--bg);transform:translateY(-1px)}
-  .btn-ghost{border:1px solid var(--line);color:var(--stone)}
-  .btn-ghost:hover{border-color:var(--cognac);color:var(--bone)}
-  .micro{margin-top:26px;font-size:13.5px;letter-spacing:.08em;color:var(--ash);text-transform:uppercase}
-  .micro b{color:var(--stone);font-weight:500}
-
-  /* referred strip */
-  .strip{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0}
-  .strip p{max-width:64ch;color:var(--stone);font-size:16.5px}
-  .strip b{color:var(--bone);font-weight:500}
+  .sub{margin-top:30px;max-width:54ch;color:var(--stone);font-size:19px}
 
   /* sections */
-  section{padding:110px 0 30px}
-  .sec-num{font-size:12px;font-weight:600;letter-spacing:.28em;color:var(--cognac);margin-bottom:16px}
-  h2{font-family:var(--font-d);font-weight:400;font-size:clamp(32px,4.6vw,50px);line-height:1.12;max-width:22ch;margin-bottom:28px}
+  section{padding:88px 0 0}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac);margin-bottom:16px}
+  h2{font-family:var(--font-d);font-weight:400;font-size:clamp(30px,4.6vw,48px);line-height:1.14;max-width:22ch;margin-bottom:28px}
+  h2 em{font-style:italic;color:var(--cognac)}
   .body{max-width:62ch;color:var(--stone)}
   .body p{margin-bottom:22px}
-  .body b,strong{color:var(--bone);font-weight:500}
-  .pull{font-family:var(--font-d);font-style:italic;font-weight:300;font-size:clamp(26px,3.6vw,38px);line-height:1.3;color:var(--bone);border-left:2px solid var(--cognac);padding-left:28px;margin:54px 0 20px;max-width:24ch}
+  .body p:last-child{margin-bottom:0}
+  .body em{font-style:italic;color:var(--bone)}
+  .body b,.body strong{color:var(--bone);font-weight:500}
 
-  /* lenses */
-  .lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:44px 0 26px}
-  .lens{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:30px 26px;transition:border-color .3s,transform .3s}
-  .lens:hover{border-color:var(--cognac);transform:translateY(-3px)}
-  .lens h3{font-family:var(--font-d);font-weight:500;font-size:26px;margin-bottom:14px}
-  .lens .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cognac);display:block;margin-bottom:12px}
-  .lens p{font-size:15.5px;color:var(--stone);line-height:1.65}
-  .after-line{color:var(--ash);font-style:italic;font-family:var(--font-d);font-size:20px}
+  /* what you get: ordered list, order is the point */
+  .gets{list-style:none;counter-reset:g;margin:34px 0 30px;border-top:1px solid var(--line)}
+  .gets li{position:relative;counter-increment:g;border-bottom:1px solid var(--line);padding:20px 0 20px 52px;color:var(--stone);font-size:16.5px;line-height:1.6;max-width:62ch}
+  .gets li::before{content:counter(g,lower-roman) ".";position:absolute;left:0;top:20px;font-family:var(--font-d);font-style:italic;font-size:20px;color:var(--cognac);line-height:1.35}
 
-  /* deliverables + weeks */
-  .rows{margin-top:34px;border-top:1px solid var(--line)}
-  .row{display:grid;grid-template-columns:200px 1fr;gap:26px;padding:32px 0;border-bottom:1px solid var(--line)}
-  .row h3{font-family:var(--font-d);font-weight:500;font-size:25px;line-height:1.2}
-  .row h3 span{display:block;font-family:var(--font-b);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cognac);margin-bottom:8px;font-weight:600}
-  .row p{color:var(--stone);font-size:16px;max-width:58ch}
-
-  /* ambient video clips (added for whiteboard session footage) */
-  .clip{position:relative;border-radius:4px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
-  .clip video{display:block;width:100%;height:100%;object-fit:cover}
-  .row-media{grid-template-columns:200px 1fr 300px;align-items:center}
-  .row-media .clip{aspect-ratio:16/9;width:100%}
-
-  /* quiet full-width band between 03 and 04, full 16:9 frame, no crop */
-  .band{position:relative;overflow:hidden;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .band video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-  .band .band-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,14,.30) 0%,rgba(12,12,14,.62) 100%)}
-  .band .band-caption{position:absolute;left:0;right:0;bottom:36px;z-index:1}
-  .band .band-caption span{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac-2)}
+  /* deliverables and how it runs */
+  .rows{margin-top:30px;border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:180px 1fr;gap:26px;padding:30px 0;border-bottom:1px solid var(--line)}
+  .row h3{font-family:var(--font-d);font-weight:500;font-size:25px;line-height:1.2;color:var(--bone)}
+  .row h3 span{display:block;font-family:var(--font-b);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cognac);font-weight:600;margin-bottom:8px}
+  .row p{color:var(--stone);font-size:16.5px;max-width:56ch}
+  .subhead{margin-top:46px;font-family:var(--font-d);font-weight:500;font-size:24px;color:var(--bone)}
+  .subhead + .gets{margin-top:22px}
 
   /* price */
-  .price-card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:46px 42px;margin-top:38px}
-  .price{font-family:var(--font-d);font-weight:300;font-size:clamp(52px,7vw,76px);line-height:1;color:var(--bone)}
-  .price small{font-size:20px;color:var(--ash);font-family:var(--font-b);letter-spacing:.02em}
-  .price-meta{margin-top:18px;color:var(--stone);font-size:15.5px}
-  .credit{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);color:var(--stone);font-size:16px;max-width:60ch}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:44px 40px;margin-top:32px}
+  .price{font-family:var(--font-d);font-weight:300;font-size:clamp(50px,7vw,72px);line-height:1;color:var(--bone)}
+  .price-meta{margin-top:18px;color:var(--stone);font-size:16px;max-width:52ch}
+  .credit{margin-top:24px;padding-top:22px;border-top:1px solid var(--line);color:var(--stone);font-size:16px;max-width:58ch}
   .credit b{color:var(--cognac);font-weight:500}
 
-  /* fit */
-  .fit{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
-  .fit-col{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:32px 28px}
-  .fit-col h3{font-family:var(--font-d);font-size:24px;font-weight:500;margin-bottom:16px}
-  .fit-col ul{list-style:none}
-  .fit-col li{color:var(--stone);font-size:15.5px;padding:9px 0 9px 24px;position:relative;line-height:1.55}
-  .fit-col li::before{content:"·";position:absolute;left:0;color:var(--cognac)}
-  .promise{margin-top:26px;max-width:62ch;color:var(--stone);font-size:16.5px}
-  .promise b{color:var(--bone)}
+  /* where it stops */
+  .pull{font-family:var(--font-d);font-style:italic;font-weight:300;font-size:clamp(22px,3.2vw,31px);line-height:1.32;color:var(--bone);border-left:2px solid var(--cognac);padding-left:26px;margin:40px 0 24px;max-width:30ch}
 
-  /* about */
-  .about-quote{font-family:var(--font-d);font-style:italic;font-weight:300;font-size:clamp(22px,3vw,30px);color:var(--bone);line-height:1.4;max-width:30ch;margin-top:30px}
+  /* ambient clip: a living photo, not a player */
+  .band{position:relative;margin-top:88px;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+  .band video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+  .band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,14,.34),rgba(12,12,14,.48));pointer-events:none}
 
-  /* series capture */
-  .capture{background:var(--bg-2);border:1px solid var(--line);border-radius:4px;padding:52px 46px;margin-top:38px}
-  .capture h3{font-family:var(--font-d);font-weight:400;font-size:32px;margin-bottom:16px}
-  .capture p{color:var(--stone);max-width:58ch;margin-bottom:26px;font-size:16px}
-  form{display:flex;gap:12px;flex-wrap:wrap;max-width:520px}
-  form[hidden]{display:none}
-  input[type=email]{flex:1;min-width:240px;background:var(--bg);border:1px solid var(--line);border-radius:2px;color:var(--bone);font-family:var(--font-b);font-size:15.5px;padding:14px 16px;outline:none;transition:border-color .25s}
-  input[type=email]:focus{border-color:var(--cognac)}
-  input::placeholder{color:var(--ash)}
-  .privacy{font-size:13px;color:var(--ash);margin-top:14px}
-  .capture p.form-confirm{color:var(--cognac-2);font-size:16px;margin-bottom:26px}
-  .form-confirm[hidden]{display:none}
+  /* close */
+  .close .btn-row{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+  .btn{display:inline-block;font-family:var(--font-b);font-weight:600;font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;padding:16px 34px;border-radius:2px;transition:transform .2s,background .25s,color .25s;border:none;cursor:pointer}
+  .btn-primary{background:var(--cognac);color:var(--bg)}
+  .btn-primary:hover{background:var(--cognac-2);color:var(--bg);transform:translateY(-1px)}
+  .quiet{font-size:15.5px;color:var(--ash)}
+  .quiet a{color:var(--stone);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .25s,border-color .25s}
+  .quiet a:hover{color:var(--cognac);border-color:var(--cognac)}
 
-  /* faq */
-  details{border-bottom:1px solid var(--line);padding:22px 0}
-  details:first-of-type{border-top:1px solid var(--line);margin-top:34px}
-  summary{cursor:pointer;font-family:var(--font-d);font-size:22px;font-weight:500;color:var(--bone);list-style:none;position:relative;padding-right:36px}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";position:absolute;right:4px;top:0;color:var(--cognac);font-family:var(--font-b);font-weight:400;transition:transform .25s}
-  details[open] summary::after{transform:rotate(45deg)}
-  details p{margin-top:14px;color:var(--stone);font-size:16px;max-width:62ch}
+  /* testimonial */
+  .quote{margin-top:88px;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:78px 0}
+  .quote .eyebrow{margin-bottom:26px}
+  .quote blockquote{font-family:var(--font-d);font-style:italic;font-weight:300;font-size:clamp(20px,2.7vw,27px);line-height:1.45;color:var(--bone);max-width:46ch}
+  .quote blockquote p{margin-bottom:20px}
+  .quote blockquote p:last-child{margin-bottom:0}
+  .quote blockquote strong{font-weight:400;color:var(--cognac)}
+  .attr{margin-top:30px;padding-top:20px;border-top:1px solid var(--line);max-width:46ch}
+  .attr .name{display:block;font-size:15px;color:var(--bone);font-weight:500}
+  .attr .meta{display:block;margin-top:4px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ash)}
 
-  /* final */
-  .final{text-align:left;padding:130px 0 120px}
-  .final h2{max-width:none}
-  .final p{max-width:58ch;color:var(--stone);margin-bottom:36px}
-
-  footer{border-top:1px solid var(--line);padding:44px 0 60px;color:var(--ash);font-size:14px}
-  footer .wordmark{font-size:18px;margin-bottom:12px;display:block}
+  footer{border-top:1px solid var(--line);margin-top:0;padding:48px 0 62px;color:var(--ash);font-size:14px}
+  footer .wordmark{font-size:18px;margin-bottom:14px;display:block}
   footer a{color:var(--stone)}
 
   /* reveal */
@@ -151,13 +116,13 @@
     .reveal{opacity:1;transform:none;transition:none}
     html{scroll-behavior:auto}
   }
-  @media (max-width:760px){
-    .lenses{grid-template-columns:1fr}
-    .fit{grid-template-columns:1fr}
+  @media (max-width:680px){
+    header{padding:64px 0 44px}
+    section{padding:66px 0 0}
     .row{grid-template-columns:1fr;gap:8px}
-    .row-media .clip{order:-1;margin-bottom:14px;aspect-ratio:16/9}
-    section{padding:80px 0 20px}
-    .price-card,.capture{padding:34px 26px}
+    .band,.quote{margin-top:66px}
+    .quote{padding:56px 0}
+    .gets li{padding-left:42px}
   }
 </style>
 </head>
@@ -166,86 +131,105 @@
 <nav>
   <div class="nav-in">
     <a class="wordmark" href="/">Catalyst<span>.</span></a>
-    <a class="nav-cta" href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045b7ceee54c1fc7b50df29/form">Book a call</a>
+    <a class="nav-cta" href="/the-handover.html">Book the hour</a>
   </div>
 </nav>
 
 <header>
   <div class="wrap">
-    <div class="kicker reveal">The Growth Audit &middot; For owner-managed businesses</div>
-    <h1 class="reveal">&ldquo;Why does growth still depend on <em>me?</em>&rdquo;</h1>
-    <p class="sub reveal">A fixed-fee, three-week diagnostic of what&rsquo;s actually holding your business back: structure, leadership, and decision-making. Evidence, not opinion. Written down, so you can act on it.</p>
-    <div class="cta-row reveal">
-      <a class="btn btn-primary" href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045b7ceee54c1fc7b50df29/form">Book a qualifying call</a>
-      <a class="btn btn-ghost" href="#problem">See how it works ↓</a>
-    </div>
-    <div class="micro reveal"><b>&pound;1,995 fixed</b> &nbsp;&middot;&nbsp; <b>Three weeks</b> &nbsp;&middot;&nbsp; No retainer, no lock-in</div>
+    <div class="kicker reveal">The Growth Audit</div>
+    <h1 class="reveal">Why the business stopped <em>growing</em></h1>
+    <p class="sub reveal">Three weeks, one thousand nine hundred and ninety five pounds, and a written answer you can act on. For owners of firms between one and five million who are working as hard as they ever have and cannot see why the numbers have flattened.</p>
   </div>
 </header>
 
-<div class="strip">
+<section>
   <div class="wrap reveal">
-    <p><b>Sent here by your accountant?</b> They can see something in your numbers that isn&rsquo;t solvable from the numbers. This is the next step they meant, and they&rsquo;ll stay in the loop throughout, if you want them to.</p>
-  </div>
-</div>
-
-<section id="problem">
-  <div class="wrap">
-    <div class="sec-num reveal">01</div>
-    <h2 class="reveal">The numbers show it. They can&rsquo;t explain it.</h2>
-    <div class="body reveal">
-      <p>Revenue has plateaued, despite good people working hard. Decisions still find their way to your desk, all of them, eventually. The leadership team is capable, but somehow the business only moves at the speed you personally push it.</p>
-      <p>You&rsquo;ve stared at the management accounts. The answer isn&rsquo;t in them, because by the time a problem shows up in the numbers, the numbers are the symptom. The cause lives in structure: how decisions actually flow, whether your senior people are in the right seats, and how aligned they really are about what matters. And structure has one inconvenient property, it is almost impossible to see from inside.</p>
+    <div class="eyebrow">The question it answers</div>
+    <h2>You already know the <em>symptoms</em>.</h2>
+    <div class="body">
+      <p>Revenue in roughly the same band for three years. A team that is busy. Costs that have moved and prices that have not. And a growing suspicion that the answer is somewhere you cannot see from inside it.</p>
+      <p>Your accountant can show you what happened. What the numbers cannot tell you is why, because the cause is almost never in them.</p>
     </div>
-    <div class="pull reveal">&ldquo;You cannot see the pattern you&rsquo;re standing in.&rdquo;</div>
   </div>
 </section>
 
-<section id="lenses">
-  <div class="wrap">
-    <div class="sec-num reveal">02</div>
-    <h2 class="reveal">One audit. Three ways of seeing.</h2>
-    <div class="body reveal"><p>Three weeks, three lenses on the same business, because the finding is almost always in how they connect.</p></div>
-    <div class="lenses">
-      <div class="lens reveal">
-        <span class="tag">Lens one</span>
-        <h3>Structure</h3>
-        <p>How decisions actually flow, versus how the organisation chart says they do. Which decisions only you can make. What the meeting load is compensating for. The real operating model, mapped against the intended one.</p>
-      </div>
-      <div class="lens reveal">
-        <span class="tag">Lens two</span>
-        <h3>Capacity</h3>
-        <p>CliftonStrengths across you and your senior team, read as collective capability, not personality. Where the team&rsquo;s talents cluster, what&rsquo;s genuinely missing, and which strengths are sitting in the wrong seats.</p>
-      </div>
-      <div class="lens reveal">
-        <span class="tag">Lens three</span>
-        <h3>Alignment</h3>
-        <p>A confidential, structured interview with each senior person: what they believe the priorities are, where they think growth is stuck. The gaps between their answers are usually the finding.</p>
-      </div>
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What it examines</div>
+    <h2>The whole business, through <em>one lens</em>.</h2>
+    <div class="body">
+      <p>I look at the same things any decent diagnostic would. Where the money comes from and what it costs to get. How the work actually flows. Which clients are worth having. What the team can and cannot do. Where time goes.</p>
+      <p>The lens is different. At this size, the constraint is usually not strategy and it is rarely effort. It is that a specific set of decisions can only be made by one person, and that person is you. So every finding gets tested against a single question: <em>what would have to be true for this to happen without you.</em></p>
     </div>
-    <p class="after-line reveal">Most reviews do only the middle one. The combination is the point.</p>
   </div>
 </section>
 
-<section id="receive">
-  <div class="wrap">
-    <div class="sec-num reveal">03</div>
-    <h2 class="reveal">Three deliverables. No decks.</h2>
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What you get</div>
+    <h2>In writing. Ranked. With the <em>evidence</em> attached.</h2>
+    <ol class="gets">
+      <li>An outside read of the business, from somebody with no stake in the answer</li>
+      <li>A method rather than an opinion, so you can see how each conclusion was reached</li>
+      <li>Three structural risks, ranked in order of what they are costing you. Always three</li>
+      <li>All of it in writing, so you can sit with it rather than remember it</li>
+      <li>The evidence behind each finding, so you can check it rather than take my word</li>
+      <li>A clear split between what you can act on alone and what would need somebody alongside you</li>
+      <li>A fixed price and a defined end. Three weeks, and then it is finished</li>
+    </ol>
+    <div class="body">
+      <p>That last one matters more than it sounds. Open ended consulting is how most owners at this size have been burnt before, and I would rather you knew the shape of this before you agreed to it.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">The deliverables</div>
+    <h2>Three things, and the report is the <em>spine</em>.</h2>
     <div class="rows">
-      <div class="row reveal">
-        <h3><span>Deliverable one</span>The report</h3>
-        <p>Eight to twelve pages of plain-English prose: the three structural risks holding growth back, ranked and evidenced, and a sequenced 90-day plan, at least half of it actionable without spending another pound with me. Written to be re-read, and to be forwarded to the one person you trust.</p>
+      <div class="row">
+        <h3><span>One</span>The report</h3>
+        <p>Eight to twelve pages of prose. Not slides. Written to be read twice, and to survive being forwarded to the one person you trust.</p>
       </div>
-      <div class="row row-media reveal">
-        <h3><span>Deliverable two</span>The working session</h3>
-        <p>Ninety minutes, you and me. Bring one trusted co-director if you like. The first genuinely outside-in view of your business you&rsquo;ll have had since you started it. It is not always comfortable. It is always useful.</p>
-        <div class="clip">
-          <video muted autoplay loop playsinline preload="none" poster="/images/img-1981.jpg" data-src="/videos/session-wide.mp4" aria-label="Wide view of a whiteboard working session in progress"></video>
-        </div>
+      <div class="row">
+        <h3><span>Two</span>The working session</h3>
+        <p>Ninety minutes, you and me, working through what the report found. It is not always comfortable. It is the part owners tell me they remember.</p>
       </div>
-      <div class="row reveal">
-        <h3><span>Deliverable three</span>The debriefs</h3>
-        <p>Every assessed leader, up to six, gets a personal CliftonStrengths debrief. Your team experiences direct value from the audit, not just a report about them.</p>
+      <div class="row">
+        <h3><span>Three</span>The debriefs</h3>
+        <p>Every leader who took a CliftonStrengths assessment gets their own debrief. Your team gets something directly out of this, rather than only being reported on.</p>
+      </div>
+    </div>
+
+    <h3 class="subhead">What is in the report</h3>
+    <ol class="gets">
+      <li>A one-page summary at the front, written so it can be forwarded on its own</li>
+      <li>The question you asked, in your words, on page one</li>
+      <li>What we found</li>
+      <li>Three ranked structural risks. Always three, never a list that trails off</li>
+      <li>Sequenced ninety-day recommendations, at least half of them actionable without me</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">How it runs</div>
+    <h2>Three weeks</h2>
+    <div class="rows">
+      <div class="row">
+        <h3>Week one</h3>
+        <p>A single kickoff of ninety minutes, where you state the question this audit answers in your own words. That sentence goes on page one of the report, and everything after it is judged against it.</p>
+      </div>
+      <div class="row">
+        <h3>Week two</h3>
+        <p>Fieldwork. A confidential interview and a CliftonStrengths assessment for each leader in scope, and structural analysis of how decisions actually flow and what depends on whom. Not a staff survey. I am checking whether what you have told me matches what happens on a Tuesday.</p>
+      </div>
+      <div class="row">
+        <h3>Week three</h3>
+        <p>The report is written, and we spend ninety minutes working through it together. The plan is in your hands within twenty-four hours of that session.</p>
       </div>
     </div>
   </div>
@@ -253,148 +237,91 @@
 
 <div class="band reveal">
   <video muted autoplay loop playsinline preload="none" poster="/images/img-1983.jpg" data-src="/videos/session-client-writing.mp4" aria-label="A client writing on the whiteboard during a working session"></video>
-  <div class="band-shade"></div>
-  <div class="band-caption">
-    <div class="wrap"><span>A real question, an hour at the board.</span></div>
-  </div>
 </div>
 
-<section id="how">
-  <div class="wrap">
-    <div class="sec-num reveal">04</div>
-    <h2 class="reveal">Three weeks, start to answer.</h2>
-    <div class="rows">
-      <div class="row reveal">
-        <h3><span>Week one</span>Intake</h3>
-        <p>A 90-minute kickoff where you state the question this audit answers, in your own words, on page one of the report. Documents in, assessments out.</p>
-      </div>
-      <div class="row reveal">
-        <h3><span>Week two</span>Fieldwork</h3>
-        <p>Confidential interviews with your senior team, strengths assessments, and structural analysis: decision flows, dependencies, the four-weeks-without-you test.</p>
-      </div>
-      <div class="row reveal">
-        <h3><span>Week three</span>The answer</h3>
-        <p>The report, written; the working session, delivered; the plan, in your hands within 24 hours.</p>
-      </div>
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What it costs</div>
+    <h2>One price, stated like <em>everything else</em>.</h2>
+    <div class="price-card">
+      <div class="price">&pound;1,995</div>
+      <p class="price-meta">For a senior team of up to six leaders. Seven to nine leaders, &pound;2,495. More than nine, <a href="/contact">talk to me first</a> and we agree the shape before we start.</p>
+      <p class="price-meta">Half on booking, half on delivery.</p>
+      <p class="credit">If we go on to advisory work within thirty days, the fee is <b>credited in full</b> against the first quarter. The audit costs you nothing in that case, and you keep what it found either way.</p>
     </div>
-    <p class="after-line reveal" style="margin-top:30px">Fixed at three weeks, deliberately. A diagnosis that drifts becomes a lodger.</p>
-  </div>
-</section>
-
-<section id="investment">
-  <div class="wrap">
-    <div class="sec-num reveal">05</div>
-    <h2 class="reveal">One price. Stated up front, like everything else.</h2>
-    <div class="price-card reveal">
-      <div class="price">&pound;1,995 <small>fixed</small></div>
-      <p class="price-meta">Up to six assessed leaders &middot; assessments included &middot; half on booking, half on delivery.<br>Larger senior teams: &pound;2,495, agreed before we start.</p>
-      <p class="credit"><b>Credited in full</b> against the first quarter if we continue working together within 30 days, most commonly as your board advisor. The audit becomes free; the clarity you keep either way.</p>
-    </div>
-    <div class="body reveal" style="margin-top:30px">
-      <p>There are no proposals, no scoping calls that become sales calls, and no negotiation. The price is the price because the product is the product. That&rsquo;s also why it&rsquo;s safe for your accountant to put their name to.</p>
+    <div class="body" style="margin-top:28px">
+      <p>There is no proposal, no scoping call that turns into a sales call, and no negotiation. The price is the price because the product is the product, which is also what makes it safe for an accountant to put their name to.</p>
     </div>
   </div>
 </section>
 
-<section id="fit">
-  <div class="wrap">
-    <div class="sec-num reveal">06</div>
-    <h2 class="reveal">For you, and honestly, not for everyone.</h2>
-    <div class="fit">
-      <div class="fit-col reveal">
-        <h3>For you if</h3>
-        <ul>
-          <li>You run an owner-managed business, roughly &pound;1m to &pound;20m, with a senior team of three or more</li>
-          <li>Growth has slowed, and you suspect the cause is structural</li>
-          <li>You&rsquo;d rather hear an uncomfortable finding than a comfortable summary</li>
-        </ul>
-      </div>
-      <div class="fit-col reveal">
-        <h3>Not for you if</h3>
-        <ul>
-          <li>You want implementation done for you by next Tuesday</li>
-          <li>You&rsquo;re looking for coaching for one individual. I do that; it&rsquo;s a different conversation</li>
-          <li>You want your existing plan validated rather than examined</li>
-        </ul>
-      </div>
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">Where it stops</div>
+    <h2>The edges, stated <em>before</em> you buy.</h2>
+    <div class="body">
+      <p>One confidential interview and one CliftonStrengths assessment for each leader in scope. Up to six of them on the standard engagement, seven to nine on the larger one. Above nine it stops being a fixed product, so we talk about the shape of it before we start rather than after.</p>
+      <p>The report is delivered once. It is a diagnosis, not a document we redraft together until everybody is comfortable with it.</p>
+      <p>Implementation, workshops and ongoing coaching are separate engagements, priced separately, if and when you want them. Keeping them out is what keeps three weeks to three weeks.</p>
     </div>
-    <p class="promise reveal">The walk-away promise: if the qualifying call shows you need something else, whether a bookkeeper, one difficult conversation or a different specialist, <b>I&rsquo;ll say so, point you there, and charge you nothing.</b> You&rsquo;ll leave that call with something useful either way. That&rsquo;s the deal.</p>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <div class="sec-num reveal">07</div>
-    <h2 class="reveal">A transformation specialist who coaches. In that order.</h2>
-    <div class="body reveal">
-      <p>I&rsquo;m John Obidipe. I spent years leading business transformation inside large organisations, reading operating models, decision flows, and the gap between how companies think they work and how they actually do. I&rsquo;m also a Gallup-Certified CliftonStrengths coach, which means I read people with the same rigour I read structure.</p>
-    </div>
-    <p class="about-quote reveal">&ldquo;The Growth Audit exists because almost nobody does both, and the answer to a stalled business is almost never in just one of them.&rdquo;</p>
-  </div>
-</section>
-
-<section id="series">
-  <div class="wrap">
-    <div class="sec-num reveal">08</div>
-    <h2 class="reveal">Not ready to talk? Read instead.</h2>
-    <div class="capture reveal">
-      <h3>The Numbers, In Plain English</h3>
-      <p>A three-part series for leaders who privately feel they should understand the finances better than they do. No jargon, no shame. The words, the story they tell, and the questions that let you lead the conversation. One email gets all three, plus the Learning Hub: audio versions, flashcards, and a quiz for each part, so you can digest it however you think best.</p>
-      <!--
-        Netlify Forms capture. Submissions collect in the Netlify dashboard
-        (Forms → series-signup); enable email notification to
-        coach@catalystgrowthcoach.co.uk under Forms → Notifications.
-
-        JOHN, DELIVERY HOOK GOES HERE:
-        actual delivery of the In Plain English guides + Learning Hub access
-        (Brief 02) connects later, either a Netlify Forms outgoing
-        webhook/Zapier into your email tool, or swap the fetch() in the
-        submit handler below to POST to your email platform's API.
-        Capture works today; delivery is the only missing wire.
-      -->
-      <form name="series-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="series-signup">
-        <p style="display:none" aria-hidden="true"><label>Don&rsquo;t fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <input type="email" name="email" placeholder="you@yourcompany.co.uk" required aria-label="Email address">
-        <button class="btn btn-primary" type="submit">Send me the series</button>
-      </form>
-      <p class="form-confirm" hidden role="status">The series is on its way. Check your inbox.</p>
-      <p class="privacy">One short series, then the occasional essay. Unsubscribe any time.</p>
+    <p class="pull">Anything touching tax, funding structures or formal valuation goes back to the referring accountant, by name.</p>
+    <div class="body">
+      <p>Those are their questions, not mine, and the report says so in writing rather than quietly straying into them. If you came here through your accountant, they stay in the loop throughout and nothing in this cuts across them.</p>
     </div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="wrap">
-    <div class="sec-num reveal">FAQ</div>
-    <h2 class="reveal">Asked, answered.</h2>
-    <details class="reveal">
-      <summary>Will my team see what individuals said?</summary>
-      <p>Never. Comments are unattributed from the moment of note-taking; strengths profiles are shared within the group, sources are not. Candour depends on it, and it&rsquo;s in writing before any interview starts.</p>
-    </details>
-    <details class="reveal">
-      <summary>What happens after the report?</summary>
-      <p>One of three things, all fine: you act alone and the report is designed for it; we continue with me alongside you; or you take one specific piece. There&rsquo;s a follow-on call 7 to 10 days later, and I don&rsquo;t chase.</p>
-    </details>
-    <details class="reveal">
-      <summary>Do you implement the recommendations?</summary>
-      <p>Not inside the audit. Implementation, workshops and coaching are separate engagements, priced separately, if and when you want them. The audit&rsquo;s crispness is the point.</p>
-    </details>
-    <details class="reveal">
-      <summary>We&rsquo;ve done personality tests before.</summary>
-      <p>So has every team, and the reports live in a drawer. The assessment here is one of three inputs; the audit is about how your structure, capacity and priorities line up. The drawer report is what this replaces.</p>
-    </details>
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What it usually finds</div>
+    <h2>The constraint is a <em>person</em>, and it is usually you.</h2>
+    <div class="body">
+      <p>Not because of anything you have done wrong. Because you built the thing, and the judgement you make forty times a week has never been built in anybody else, and that cannot be documented or recruited.</p>
+      <p>When that is the finding, the audit produces the plan for fixing it: what somebody else would need to be able to do, what could be handed over and in what order, and what would need to change about how you hand things over. Whether you do that with me afterwards is a separate conversation, and the report is yours either way.</p>
+    </div>
   </div>
 </section>
 
-<section class="final">
-  <div class="wrap">
-    <div class="sec-num reveal">Next</div>
-    <h2 class="reveal">The question is already in your head.</h2>
-    <p class="reveal">A qualifying call is thirty to forty-five minutes, free, and useful whether or not we go further. That&rsquo;s a promise, not a pitch. Worst case, you leave with one good insight and my honest view that the audit isn&rsquo;t what you need.</p>
-    <a class="btn btn-primary reveal" href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045b7ceee54c1fc7b50df29/form">Book the qualifying call</a>
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">When it is not that</div>
+    <h2>Sometimes the answer is <em>documentation</em>.</h2>
+    <div class="body">
+      <p>If nothing has ever been written down and you are answering the same question forty times a week, that is a documentation problem and it has a straightforward fix. If the constraint is capacity rather than judgement, you need to hire rather than develop. If it is pricing, it is arithmetic and a difficult fortnight.</p>
+      <p>All of those are real findings and I have delivered all of them. In each case you leave with something you can act on without me, which is the point.</p>
+    </div>
   </div>
 </section>
+
+<section class="close">
+  <div class="wrap reveal">
+    <div class="eyebrow">Before you book</div>
+    <h2>Start with the <em>hour</em>.</h2>
+    <div class="body">
+      <p>I would rather you had an hour at the board first. It is free, there is no pitch at the end of it, and by the end of it we will both know whether the audit is the right next thing or whether it is not.</p>
+      <p>Some owners do the hour and then the audit. Some do the hour and go away and fix something themselves. Both are fine, and I would rather that than you buying three weeks of my time on the strength of a web page.</p>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/the-handover.html">Book the hour</a>
+      <span class="quiet"><a href="/contact">Or ask about the audit directly</a></span>
+    </div>
+  </div>
+</section>
+
+<div class="quote">
+  <div class="wrap reveal">
+    <div class="eyebrow">In their words</div>
+    <blockquote>
+      <p>What can I say about the work John has done with us today at Arrow Planning. He&rsquo;s just delivered a fantastic coaching session with the team. We&rsquo;ve been working through some genuinely difficult subjects, and he&rsquo;s presented them in a way that&rsquo;s allowed everybody to engage properly with these difficult matters.</p>
+      <p>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn&rsquo;t solely on me. I&rsquo;m not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
+      <p>Thanks, John.</p>
+    </blockquote>
+    <div class="attr">
+      <span class="name">Mark Schmull</span>
+      <span class="meta">Managing Director, Arrow Planning</span>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
@@ -405,22 +332,19 @@
 </footer>
 
 <script>
-  // Scroll reveals (unchanged from the approved page)
+  // Scroll reveals (same pattern as the rest of the site)
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   },{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // ── Ambient video: lazy-load + reduced-motion ────────────────────────
-  // Clips ship with no src, only a poster, so they never block first
-  // paint. The src attaches when the clip nears the viewport. If the
-  // visitor prefers reduced motion, the src is never attached and the
-  // poster still stands in; the page reads fully without any video.
+  // Ambient clip: ships with a poster and no src, so it never blocks first
+  // paint. The src attaches as it nears the viewport. Reduced motion means
+  // the src is never attached and the poster stands in.
   (function(){
     const clips = document.querySelectorAll('video[data-src]');
     if(!clips.length) return;
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(reduceMotion) return; // posters only
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const tryPlay = v => { const p = v.play(); if(p && p.catch) p.catch(()=>{}); };
 
@@ -439,41 +363,11 @@
       clips.forEach(v=>{ v.src = v.dataset.src; tryPlay(v); });
     }
 
-    // Autoplay rescue for iOS Low Power Mode / Data Saver: retry any
-    // paused clip on the first user gesture. Posters cover the rest.
+    // Autoplay rescue for iOS Low Power Mode: retry on the first gesture.
     const retry = ()=>clips.forEach(v=>{ if(v.src && v.paused) tryPlay(v); });
     ['touchstart','click','scroll'].forEach(ev=>
       document.addEventListener(ev, retry, {once:true, passive:true})
     );
-  })();
-
-  // ── Series signup: Netlify Forms, inline confirmation ────────────────
-  (function(){
-    const form = document.querySelector('form[name="series-signup"]');
-    if(!form) return;
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      const btn = form.querySelector('button[type=submit]');
-      btn.disabled = true;
-      // NOTE FOR JOHN: this POST only *captures* the email in Netlify
-      // Forms. When the Learning Hub / email tool is ready (Brief 02),
-      // hook delivery in via a Netlify Forms notification/webhook, no
-      // change needed here.
-      fetch('/', {
-        method:'POST',
-        headers:{'Content-Type':'application/x-www-form-urlencoded'},
-        body:new URLSearchParams(new FormData(form)).toString()
-      }).then(res=>{
-        if(!res.ok) throw new Error('submit failed');
-        form.hidden = true;
-        document.querySelector('.form-confirm').hidden = false;
-      }).catch(()=>{
-        // Network hiccup: fall back to a native POST so the email is
-        // still captured (Netlify shows its default success page).
-        // form.submit() bypasses this handler, so no loop.
-        form.submit();
-      });
-    });
   })();
 </script>
 </body>
