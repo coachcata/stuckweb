@@ -1,0 +1,22 @@
+# Canonical host: catalystgrowthcoach.co.uk (no www).
+#
+# Both the apex and the www hostname resolve to this same Netlify project,
+# so the two should never diverge. These rules make that structural rather
+# than incidental: anything arriving on www is sent to the apex with a 301
+# before a page is ever served, so a stale or cached www response cannot be
+# handed to a visitor.
+#
+# force = true so the redirect wins even when a matching file exists in the
+# publish directory.
+
+[[redirects]]
+  from = "https://www.catalystgrowthcoach.co.uk/*"
+  to = "https://catalystgrowthcoach.co.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.catalystgrowthcoach.co.uk/*"
+  to = "https://catalystgrowthcoach.co.uk/:splat"
+  status = 301
+  force = true

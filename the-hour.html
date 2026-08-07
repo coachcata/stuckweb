@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- GOOGLE ANALYTICS (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2Z17HSYFCV');
+</script>
+<!-- END GOOGLE ANALYTICS -->
+
+<title>Two Hours at the Board, An Invitation for Business Owners | Catalyst</title>
+
+<meta name="description" content="Two Whiteboard Sessions for business owners, on whatever is actually live. Your thinking, out of your head, onto the board, into a solution." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/the-hour" />
+<meta property="og:title" content="Two Hours at the Board, Catalyst Growth Coaching" />
+<meta property="og:description" content="Two Whiteboard Sessions for business owners, on whatever is actually live. Your thinking, out of your head, onto the board, into a solution." />
+<meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/the-hour" />
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #0A0A0C;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500; transition: color 0.3s;
+  }
+  nav.top ul a:hover { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  nav.top .has-dropdown { position: relative; }
+  nav.top .has-dropdown > a::after {
+    content: '▾'; margin-left: 0.4rem; font-size: 0.7em; color: var(--cognac); opacity: 0.6;
+  }
+  nav.top .dropdown {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+    background: rgba(12,12,14,0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    padding: 0.8rem 0; min-width: 180px;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
+    list-style: none;
+  }
+  nav.top .has-dropdown:hover .dropdown,
+  nav.top .has-dropdown:focus-within .dropdown {
+    opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+  }
+  nav.top .dropdown a {
+    display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
+    letter-spacing: 0.18em; color: var(--stone);
+  }
+  nav.top .dropdown a:hover { color: var(--cognac); background: rgba(200,149,108,0.06); }
+
+  section.scene { min-height: auto; padding: 14vh 6vw; position: relative; display: flex; }
+  .eyebrow {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; font-family: var(--font-b);
+  }
+
+  .scene-feature-hero {
+    padding-top: 16vh; flex-direction: column; justify-content: center; min-height: 90vh;
+  }
+  .scene-feature-hero .feature-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5vw; align-items: center;
+  }
+  .scene-feature-hero .feature-text {
+    display: flex; flex-direction: column; gap: 2rem;
+  }
+  .scene-feature-hero h1 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    line-height: 1.02; letter-spacing: -0.015em; color: var(--bone);
+  }
+  .scene-feature-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-feature-hero .lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.5; color: var(--stone); max-width: 40ch;
+  }
+  /* img-1739.jpg native 1139x2000 (portrait), framed as the homepage frames it */
+  .scene-feature-hero .feature-image {
+    width: 100%; aspect-ratio: 1139/2000; max-height: 78vh;
+    background: var(--bg-3); position: relative; overflow: hidden;
+    margin-left: auto;
+  }
+  .scene-feature-hero .feature-image img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  .scene-argument {
+    flex-direction: column; justify-content: center;
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-argument.plain { background: var(--bg); border: none; }
+  .scene-argument .body {
+    max-width: 60ch; margin: 0 auto;
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.6; color: var(--stone);
+  }
+  .scene-argument .body .eyebrow { margin-bottom: 1.4rem; display: block; }
+  .scene-argument .body p { margin-bottom: 1.4rem; }
+  .scene-argument .body p:last-child { margin-bottom: 0; }
+  .scene-argument .body em { font-style: italic; color: var(--bone); font-weight: 300; }
+  .scene-argument .body .lede,
+  .scene-argument .body .punchline {
+    font-style: italic; color: var(--bone);
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    line-height: 1.4;
+  }
+  .scene-argument .body .lede { margin-bottom: 2.2rem; }
+  .scene-argument .body .punchline {
+    margin-top: 2.5rem; padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+  /* The three altitudes, set as the homepage sets them */
+  .scene-argument .body .altitude { margin-bottom: 1.4rem; }
+  .scene-argument .body .altitude em { color: var(--bone); }
+
+  /* The one condition */
+  .scene-condition {
+    flex-direction: column; align-items: center; text-align: center;
+  }
+  .scene-condition .eyebrow { display: block; margin-bottom: 3rem; }
+  .condition-card {
+    background: var(--card); border: 1px solid var(--line-strong);
+    border-radius: 4px; padding: 4rem 3rem;
+    max-width: 720px; width: 100%;
+  }
+  .condition-card p {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.2; color: var(--bone);
+  }
+  .condition-body {
+    max-width: 60ch; margin: 3rem auto 0; text-align: left;
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.6; color: var(--stone);
+  }
+  .condition-body p { margin-bottom: 1.4rem; }
+  .condition-body p:last-child { margin-bottom: 0; }
+
+  .scene-quotes {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    flex-direction: column; padding: 14vh 6vw;
+  }
+  .scene-quotes .quotes-head { margin-bottom: 6vh; max-width: 720px; }
+  .scene-quotes .quotes-head .label {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  .quotes-grid {
+    display: grid; gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 780px; align-items: start;
+  }
+  .quote-card {
+    padding: 2.5rem 2rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .quote-card .mark {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 3rem; color: var(--cognac);
+    line-height: 1; opacity: 0.5;
+  }
+  .quote-card blockquote {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; line-height: 1.55; color: var(--bone);
+  }
+  .quote-card blockquote p { margin-bottom: 1.1rem; }
+  .quote-card blockquote p:last-child { margin-bottom: 0; }
+  .quote-card .attr {
+    display: flex; flex-direction: column; gap: 0.3rem;
+    padding-top: 1.5rem; border-top: 1px solid var(--line);
+    margin-top: auto;
+  }
+  .quote-card .attr .name {
+    font-size: 0.92rem; color: var(--bone); font-weight: 500;
+  }
+  .quote-card .attr .meta {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ash);
+  }
+
+  .scene-invitation {
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 14vh 6vw;
+  }
+  .scene-invitation .eyebrow { display: block; margin-bottom: 3rem; }
+  .scene-invitation .lede {
+    font-family: var(--font-d); font-weight: 300; font-style: italic;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    line-height: 1.25; color: var(--bone);
+    max-width: 28ch; margin-bottom: 2rem;
+  }
+  .scene-invitation .invite-body {
+    font-family: var(--font-b); font-size: 1.05rem;
+    line-height: 1.7; color: var(--stone);
+    max-width: 52ch; margin-bottom: 3rem;
+  }
+  .scene-invitation .under-button {
+    margin-top: 1.6rem; max-width: 48ch;
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.05rem; line-height: 1.6; color: var(--stone);
+  }
+
+  .button {
+    display: inline-block; padding: 1.1rem 2.6rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+  }
+  .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1) { display: none; }
+    nav.top .has-dropdown > a::after { display: none; }
+    nav.top .dropdown { display: none; }
+
+    section.scene { padding: 10vh 6vw; }
+
+    .scene-feature-hero .feature-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-feature-hero .feature-image { order: -1; max-height: 60vh; margin-left: 0; }
+
+    .condition-card { padding: 3rem 1.75rem; }
+    .quote-card { padding: 2rem 1.5rem; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  }
+
+  /* Narrow phones: keep the wordmark on one line and the CTA on screen */
+  @media (max-width: 600px) {
+    nav.top { padding: 0.9rem 5vw; gap: 0.8rem; }
+    nav.top .brand { font-size: 0.95rem; white-space: nowrap; }
+    nav.top ul { gap: 0.9rem; flex-shrink: 0; }
+    nav.top ul li:nth-child(3) { display: none; }
+    nav.top ul a { font-size: 0.62rem; letter-spacing: 0.14em; }
+    nav.top ul a.cta { padding: 0.55rem 0.9rem; }
+  }
+</style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li class="has-dropdown">
+      <a href="/#programmes">Programmes</a>
+      <ul class="dropdown">
+        <li><a href="/leadstrong">LeadStrong</a></li>
+        <li><a href="/buildstrong">BuildStrong</a></li>
+        <li><a href="/teamstrong">TeamStrong</a></li>
+      </ul>
+    </li>
+    <li><a href="/in-practice">In Practice</a></li>
+    <li><a href="/contact" class="cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- SCENE 01, Feature Hero -->
+<section class="scene scene-feature-hero">
+  <div class="feature-grid">
+    <div class="feature-text">
+      <div class="eyebrow">An invitation for business owners</div>
+      <h1>Two hours <em>at the board</em>.</h1>
+      <p class="lede">Somebody thought you'd get something out of this, so they passed it on to you. Two Whiteboard Sessions, an hour each, on whatever is actually live for you at the moment.</p>
+    </div>
+    <div class="feature-image">
+      <img src="/images/img-1739.jpg" alt="John and a business owner in a hospitality lounge, mid-conversation">
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 02, What This Is -->
+<section class="scene scene-argument">
+  <div class="body">
+    <span class="eyebrow">01 · What This Is</span>
+    <p class="lede">It isn't a consultation, and it isn't a sales call.</p>
+    <p>You arrive with whatever is on your mind. It goes on the board. We think it through together, out loud, until it is clear enough to act on.</p>
+    <p>There is no assessment to complete first, no framework to be walked through, and nothing to prepare. The session starts with the actual question, not with an introduction to a method.</p>
+    <p>I am not there to watch you think. I am the other mind in the room, asking the question you had stopped asking, catching the thing you have gone blind to because you see it every day.</p>
+    <p class="punchline">Your thinking, out of your head, onto the board, into a solution.</p>
+  </div>
+</section>
+
+<!-- SCENE 03, What Owners Actually Bring -->
+<section class="scene scene-argument plain">
+  <div class="body">
+    <span class="eyebrow">02 · What Owners Actually Bring</span>
+    <p>There is no right thing to bring. Whatever has been sitting with you longest is usually the right thing. In practice it tends to be one of these.</p>
+    <p class="altitude"><em>The decision you have been carrying for months.</em> The one you keep meaning to sit down and think about properly, and keep not doing, because the week never leaves room for it.</p>
+    <p class="altitude"><em>The thing that is stuck and you cannot see why.</em> Where you know the output is wrong but you cannot work out which part of the machine is producing it.</p>
+    <p class="altitude"><em>The call you have already made and have not committed to.</em> Where you know what you are going to do and something is holding you back from doing it.</p>
+    <p>Most owners arrive thinking they will need to explain the background first. It usually takes about four minutes, and then we are into it.</p>
+  </div>
+</section>
+
+<!-- SCENE 04, The One Condition -->
+<section class="scene scene-condition">
+  <span class="eyebrow">03 · The One Condition</span>
+  <div class="condition-card">
+    <p>You have to run your own business.</p>
+  </div>
+  <div class="condition-body">
+    <p>That is genuinely the only condition. It does not matter what stage you are at, how many people you have, or whether the thing on your mind is strategic, operational or personal. If you own the business, the invitation applies.</p>
+    <p>There is no expiry date on it either. Use it when there is something actually worth an hour of proper thinking.</p>
+  </div>
+</section>
+
+<!-- SCENE 05, What Happens Afterwards -->
+<section class="scene scene-argument">
+  <div class="body">
+    <span class="eyebrow">04 · What Happens Afterwards</span>
+    <p class="lede">Nothing, unless you want it to.</p>
+    <p>You have been given two hours. If at the end of them the thinking is done and you have what you came for, that is a complete outcome and there is nothing further to discuss.</p>
+    <p>Some owners want to keep going, and that conversation happens naturally in the room rather than through a follow-up sequence. Either way, the two hours are yours and they are not conditional on anything.</p>
+  </div>
+</section>
+
+<!-- SCENE 06, In Their Words -->
+<section class="scene scene-quotes">
+  <div class="quotes-head">
+    <div class="label">05 · In Their Words</div>
+  </div>
+
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>
+        <p>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects, and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</p>
+        <p>It takes a real weight off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
+      </blockquote>
+      <div class="attr">
+        <span class="name">Mark Schmull</span>
+        <span class="meta">MD, Arrow Planning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENE 07, The Invitation -->
+<section class="scene scene-invitation">
+  <span class="eyebrow">06 · The Invitation</span>
+  <p class="lede"><em>The hour is the point. Not a step towards something else.</em></p>
+  <p class="invite-body">Pick a time that suits you. Bring whatever is actually on your mind, including if it is not fully formed yet. That is usually a better starting point than a tidy question.</p>
+  <a href="https://bit.ly/45HaqvF" class="button">Book Your First Session</a>
+  <p class="under-button">Sessions run online with the board shared live on screen, or in person in central London and Milton Keynes.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">LeadStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/teamstrong">TeamStrong</a>
+  </div>
+  <div class="col">
+    <h4>Read</h4>
+    <a href="/about">About John</a>
+    <a href="/in-practice">In Practice</a>
+    <a href="/hold-the-place">Hold the Place</a>
+    <a href="/going-further">Going Further</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© Catalyst Growth Coaching, London · Est. 2024</span>
+  </div>
+</footer>
+
+<script src="/main.js"></script>
+</body>
+</html>
