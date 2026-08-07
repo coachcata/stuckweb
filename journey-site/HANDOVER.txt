@@ -1,0 +1,80 @@
+CATALYST GROWTH COACHING, COMPANION PAGES
+Handover note for John (updated after the second round of changes)
+==================================================================
+
+WHAT THIS IS
+
+A standalone site, completely separate from the live site. It contains
+five public pages for five different weeks, a public front door, one
+gift page, one client-only page, and your private routing map.
+
+  index.html                the PUBLIC FRONT DOOR: five doors, one gift
+                            line. Safe to post anywhere; this is the
+                            link for profiles and bios.
+  fine.html                 "Fine. Just busy."
+  the-cost.html             "So you've decided this is what the job costs."
+  this-week.html            "Something has put it in front of you."
+  the-options.html          "You're weighing ways to get help."
+  begin.html                "Good. Let's get an hour in the diary."
+  onward.html               For clients past and present. SEND-ONLY:
+                            never posted publicly, not listed on the
+                            front door.
+  an-hour-at-the-board.html The full written piece, free and ungated,
+                            with a print option.
+  map.html                  YOUR PRIVATE ROUTING MAP. Linked from
+                            nowhere. Bookmark it; never share the
+                            address.
+
+Pages one to four each end with a single quiet line that opens the next
+door, so a reader who wanders in at the wrong page can find their own
+way. Nothing anywhere names the architecture.
+
+HOW TO PUBLISH IT (about five minutes, nothing technical)
+
+  1. Unzip the file you were sent. You will get a folder called
+     journey-site with index.html inside it.
+  2. In your web browser, go to:  https://app.netlify.com/drop
+  3. Log in if it asks (the same Netlify account the main site uses is
+     fine, or a free new one).
+  4. Drag the whole journey-site FOLDER (not the zip) from your computer
+     onto the big drop area on that page.
+  5. Wait for the upload bar to finish. Netlify then shows you a link
+     that looks like  https://something-random.netlify.app
+  6. That link is the front door. The other pages sit behind it, for
+     example  https://something-random.netlify.app/fine.html  and your
+     private map at  .../map.html
+  7. Optional: in Netlify under Site settings you can rename
+     "something-random" to a name you prefer, or attach a domain later.
+
+RESOLVED SINCE THE LAST HANDOVER
+
+  - The Considered Leader is live on LinkedIn. Every page that mentions
+    it now links straight to the subscribe page there. The email-capture
+    forms are gone; nothing on the site collects addresses any more.
+  - An Hour at the Board, On Your Own is no longer a placeholder. The
+    page now carries the full written piece, ungated, with a quiet
+    "Print this page" link so a reader can take it away.
+
+STILL WORTH KNOWING
+
+  1. Booking link. All booking links use the live site's scheduler (the
+     address ending ...aba1a55/schedule), which is what the contact page
+     of catalystgrowthcoach.co.uk uses today. Your original brief named
+     a different scheduler address; if that one was deliberate, say so
+     and it can be swapped in four files.
+  2. The pages carry a "noindex" tag, so search engines will not list
+     them. Readers arrive only by the links you send or post. If you
+     ever want search engines to find the front door or the gift page,
+     the robots line near the top of those files comes out.
+  3. The testimonials on the-options.html are word-for-word from the
+     live site except one dash became a comma (site style uses no
+     dashes). The Ralph Shorthose quote was left out because it
+     contains a word these pages avoid.
+  4. One deliberate judgement call: the written piece contains the
+     sentence "You will know this stage is done when you slow down."
+     The word appears nowhere else on any public page, and here it
+     plainly means a step of the exercise, so the piece was kept
+     verbatim as instructed. If you would rather it read "this part is
+     done", change that one word.
+  5. Fonts, images and videos are all inside the folder; the pages
+     depend on nothing external except the LinkedIn and booking links.
