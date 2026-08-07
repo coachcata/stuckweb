@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- GOOGLE ANALYTICS (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2Z17HSYFCV');
+</script>
+<!-- END GOOGLE ANALYTICS -->
+
+<title>Why You Cannot Find Anyone to Hold Your Place | Catalyst</title>
+
+<meta name="description" content="A long read for owners who have tried to hire a second in command three or four times. Why judgement cannot be documented, and what has to happen instead." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/hold-the-place" />
+<meta property="og:title" content="Why You Cannot Find Anyone to Hold Your Place" />
+<meta property="og:description" content="A long read for owners who have tried to hire a second in command three or four times. Why judgement cannot be documented, and what has to happen instead." />
+<meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/hold-the-place" />
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #0A0A0C;
+    --bg-3:       #1A1A20;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500; transition: color 0.3s;
+  }
+  nav.top ul a:hover { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  nav.top .has-dropdown { position: relative; }
+  nav.top .has-dropdown > a::after {
+    content: '▾'; margin-left: 0.4rem; font-size: 0.7em; color: var(--cognac); opacity: 0.6;
+  }
+  nav.top .dropdown {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+    background: rgba(12,12,14,0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    padding: 0.8rem 0; min-width: 180px;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
+    list-style: none;
+  }
+  nav.top .has-dropdown:hover .dropdown,
+  nav.top .has-dropdown:focus-within .dropdown {
+    opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+  }
+  nav.top .dropdown a {
+    display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
+    letter-spacing: 0.18em; color: var(--stone);
+  }
+  nav.top .dropdown a:hover { color: var(--cognac); background: rgba(200,149,108,0.06); }
+
+  /* ── The read ── */
+  .read-head {
+    padding: calc(64px + 10vh) 6vw 6vh;
+    border-bottom: 1px solid var(--line);
+  }
+  .read-head .eyebrow {
+    font-size: 0.66rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; display: block; margin-bottom: 1.6rem;
+  }
+  .read-head h1 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: clamp(2.2rem, 7.5vw, 4.4rem);
+    line-height: 1.05; letter-spacing: -0.015em;
+    color: var(--bone); max-width: 20ch;
+  }
+  .read-head h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+
+  article.read {
+    padding: 8vh 6vw 4vh;
+    max-width: 68ch; margin: 0 auto;
+  }
+  article.read p {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.2rem, 4.4vw, 1.4rem);
+    line-height: 1.85; color: var(--stone);
+    margin-bottom: 1.9rem;
+  }
+  article.read p em { font-style: italic; color: var(--bone); }
+  article.read h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.7rem, 5.5vw, 2.4rem);
+    line-height: 1.15; color: var(--bone);
+    margin: 5rem 0 2rem;
+    padding-top: 2.5rem; border-top: 1px solid var(--line);
+  }
+  article.read h2:first-of-type { margin-top: 3rem; }
+
+  /* ── Foot line ── */
+  .read-foot {
+    padding: 6vh 6vw 12vh;
+    max-width: 68ch; margin: 0 auto;
+  }
+  .read-foot p {
+    padding-top: 3rem; border-top: 1px solid var(--line);
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; line-height: 1.7; color: var(--stone);
+  }
+  .read-foot a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px; transition: border-color 0.3s;
+  }
+  .read-foot a:hover { border-color: var(--cognac); }
+
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1) { display: none; }
+    nav.top .has-dropdown > a::after { display: none; }
+    nav.top .dropdown { display: none; }
+
+    .read-head { padding: calc(56px + 8vh) 6vw 5vh; }
+    article.read { padding: 6vh 6vw 2vh; }
+    article.read h2 { margin: 3.5rem 0 1.6rem; padding-top: 2rem; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  }
+
+  /* Narrow phones: keep the wordmark on one line and the CTA on screen */
+  @media (max-width: 600px) {
+    nav.top { padding: 0.9rem 5vw; gap: 0.8rem; }
+    nav.top .brand { font-size: 0.95rem; white-space: nowrap; }
+    nav.top ul { gap: 0.9rem; flex-shrink: 0; }
+    nav.top ul li:nth-child(3) { display: none; }
+    nav.top ul a { font-size: 0.62rem; letter-spacing: 0.14em; }
+    nav.top ul a.cta { padding: 0.55rem 0.9rem; }
+  }
+</style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li class="has-dropdown">
+      <a href="/#programmes">Programmes</a>
+      <ul class="dropdown">
+        <li><a href="/leadstrong">LeadStrong</a></li>
+        <li><a href="/buildstrong">BuildStrong</a></li>
+        <li><a href="/teamstrong">TeamStrong</a></li>
+      </ul>
+    </li>
+    <li><a href="/in-practice">In Practice</a></li>
+    <li><a href="/contact" class="cta">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="read-head">
+  <span class="eyebrow">A long read</span>
+  <h1>Why you cannot find anyone to <em>hold your place</em></h1>
+</header>
+
+<article class="read">
+  <p>Most owners of firms this size have tried to solve this by hiring. Three or four times, usually, across four or five years. And after each one the conclusion has been about the market: that the good ones are expensive, that they stay where they are, that there is nobody out there who can do what you do.</p>
+
+  <p>I want to offer a different reading of the same four years, and I want to be careful about how I put it, because it is easily heard as criticism and it is not meant as one.</p>
+
+  <h2>Week six and month three</h2>
+
+  <p>Every senior person you have hired was excellent for about six weeks. They asked good questions, they learned quickly, and you were pleased.</p>
+
+  <p>Month three is different. Month three is when somebody stops learning how things are done here and starts deciding things. And that is where the pattern lives, all four times.</p>
+
+  <p>What happens at month three is that they make a call. It is a reasonable call, and it is not the call you would have made. Something wobbles, in the way that things do. And you step in, because you can see the answer and because the client relationship matters and because it will take you four minutes.</p>
+
+  <p>You tell them afterwards, lightly, because you do not want them feeling checked up on.</p>
+
+  <p>From where you are standing you have solved a problem, which you have. From where they are standing something different has happened. They have found out where the line is.</p>
+
+  <p>Do that four times over eighteen months and you have not taught anybody anything. You have demonstrated, four times, what the actual limits are. And around month fourteen they start looking, and they leave, and they say it was about the commute.</p>
+
+  <h2>What you are actually trying to hand over</h2>
+
+  <p>Here is the part that makes this genuinely difficult rather than simply frustrating.</p>
+
+  <p>You have probably written the processes down. Most owners at this size have, at some point, on a weekend. And it helped a little and it did not fix it, and the reason is that a process covers the situation you anticipated.</p>
+
+  <p>Everything that still reaches you is the situation you did not.</p>
+
+  <p>The client who is threatening to leave and has not quite said so. The two options that are both defensible and one of which is quietly worse. The quote that does not fit the price list. The person who needs a difficult conversation this week rather than next month.</p>
+
+  <p>None of those was ever the same twice, which is exactly why none of them is written down anywhere.</p>
+
+  <p>That is judgement. And judgement is not on a CV, does not arrive during a probation period, and cannot be documented. It is built, in a specific person, by letting them near the difficult end of things and correcting them, repeatedly, over a period considerably longer than anybody wants it to take.</p>
+
+  <h2>Nobody taught you this</h2>
+
+  <p>There is one more thing, and it is the part owners find hardest to hear and usually the most useful.</p>
+
+  <p>Being excellent at something makes you worse at teaching it. Not better.</p>
+
+  <p>When you have done a thing ten thousand times, you stop seeing the steps. You see the answer, immediately, and you are right. Which means that watching somebody work towards it slowly, getting there, going to get there, is genuinely uncomfortable. Not because you are impatient. Because you are fluent, and fluency has no memory of how it was learned.</p>
+
+  <p>So you step in. With good intentions, every time.</p>
+
+  <p>Developing people is a specialism. It has techniques and a discipline and people spend careers on it. Nobody ever taught it to you. You were taught the work, you got good at the work, and then one day you had staff and everybody assumed you would work the rest out.</p>
+
+  <p>There is no particular reason you would be good at this. That is a gap rather than a flaw, and gaps close in a way that flaws do not.</p>
+
+  <h2>The person is probably already there</h2>
+
+  <p>In most firms I sit in, there is somebody. They have been there eight or nine years, they run delivery, they are in every difficult meeting, and they have a title that sounds like something.</p>
+
+  <p>They also cannot sign anything above a limit set when the firm was half this size. They found out about the last price change from a client. And they asked about the future once, obliquely, about eighteen months ago, got something warm in reply, and read that as an answer.</p>
+
+  <p>They are not certain they could run it. Neither are you. And the reason neither of you knows is the same reason: they have never been near the end where you would find out.</p>
+
+  <p>That is an exposure question rather than a character one, and exposure is arrangeable.</p>
+
+  <h2>What actually has to happen</h2>
+
+  <p>Four things, in this order, and most people start at the second.</p>
+
+  <p>First, what he needs to be able to do, and what he cannot do yet. Not a job description. A list of the specific judgements that currently only you can make.</p>
+
+  <p>Second, what gets handed over and in what order. Some things go early because the cost of a mistake is low. Some go last because the client relationship is thirty years old.</p>
+
+  <p>Third, what you keep. Deliberately, rather than by habit. There will be things that should stay with you and it is worth naming them, so that everything else is unambiguous.</p>
+
+  <p>Fourth, and this is the one everybody skips, what you will do the first time he gets one wrong. Decided in advance, written down, while nobody is under any pressure. Because in the moment, instinct wins. It always does, and the only way to beat it is to have made the decision outside the moment.</p>
+
+  <h2>And one more thing, which is about you</h2>
+
+  <p>Letting go requires somewhere to go.</p>
+
+  <p>If he holds the client relationships, and he makes the calls you used to make, and the place runs without you in it, then a question arrives that most owners have not said out loud. What are you for.</p>
+
+  <p>It is not a small thing to have been the person everything depends on for nineteen years, and nobody warns you that stepping back feels like a loss for quite a while before it feels like a relief. What happens then is that a Tuesday afternoon arrives with nothing on it that needs you, and within a month some of the work has quietly come back. Not out of distrust. Out of vacancy.</p>
+
+  <p>Which is why the next chapter has to be worked on at the same time rather than afterwards. And when it is, there is usually something specific underneath. Most owners liked one part of this job, and there was a reason they started, and somewhere across nineteen years of doing everything they stopped doing it.</p>
+
+  <p>It is still there. Stepping back is the route to it, not away from it.</p>
+
+  <h2>When this is not your problem</h2>
+
+  <p>It is worth saying plainly that sometimes it is not judgement at all.</p>
+
+  <p>If nothing has ever been written down and you are answering the same question forty times a week, that is documentation and a person will not fix it. If the work is repeatable with clear rules, that should be a system. If it is compliance or safety, it should never depend on anybody's judgement. And if you are doing your own bookkeeping at ten at night, that is a capacity problem and you should hire a bookkeeper.</p>
+
+  <p>A test you can run tonight. Name the last five things that came to you. Then ask, for each one, whether the answer was written down anywhere. If four of them were, go and fix that, and you do not need me.</p>
+
+  <p>If none of them were, and each one required weighing two imperfect options against each other, then it is judgement, and judgement is the thing that has to be built in somebody.</p>
+</article>
+
+<div class="read-foot">
+  <p>If you want an hour at the board on where you actually are with this, it is free and there is no pitch at the end of it. <a href="/the-handover">Details are here.</a></p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">LeadStrong</a>
+    <a href="/buildstrong">BuildStrong</a>
+    <a href="/teamstrong">TeamStrong</a>
+  </div>
+  <div class="col">
+    <h4>Read</h4>
+    <a href="/about">About John</a>
+    <a href="/in-practice">In Practice</a>
+    <a href="/hold-the-place">Hold the Place</a>
+    <a href="/hold-the-place">Hold the Place</a>
+    <a href="/going-further">Going Further</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© Catalyst Growth Coaching, London · Est. 2024</span>
+  </div>
+</footer>
+
+<script src="/main.js"></script>
+</body>
+</html>

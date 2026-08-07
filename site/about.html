@@ -14,18 +14,18 @@
 </script>
 <!-- ════ END GOOGLE ANALYTICS ════ -->
 
-<title>About John Obidipe — Catalyst Growth Coaching</title>
+<title>About John Obidipe | Catalyst Growth Coaching</title>
 
 <!-- ════ SEO METADATA ════ -->
 <meta name="description" content="Executive coach, strategy and change consultant. 15+ years working with senior leaders. The person at the other end of the whiteboard." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/about" />
-<meta property="og:title" content="About John Obidipe — Catalyst Growth Coaching" />
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/about" />
+<meta property="og:title" content="About John Obidipe | Catalyst Growth Coaching" />
 <meta property="og:description" content="Executive coach, strategy and change consultant. 15+ years working with senior leaders." />
-<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta property="og:site_name" content="John Obidipe | Catalyst Growth Coaching" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/about" />
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/about" />
 <!-- ════ END SEO METADATA ════ -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -123,7 +123,7 @@
   .video-placeholder::before { content: 'Video: '; opacity: 0.6; margin-right: 0.4em; }
   .image-placeholder::before { content: 'Image: '; opacity: 0.6; margin-right: 0.4em; }
 
-  /* ══ Scene 01 — The Practitioner (Hero) ══ */
+  /* ══ Scene 01, The Practitioner (Hero) ══ */
   .scene-hero {
     min-height: auto; padding: 0; flex-direction: column;
   }
@@ -132,7 +132,7 @@
     font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
   }
-  /* Portrait tablet-annotation.mp4 — contained, dark sides */
+  /* Portrait tablet-annotation.mp4, contained, dark sides */
   .scene-hero .clip-frame {
     position: relative; width: 100%; height: 78vh;
     overflow: hidden; background: var(--bg-2);
@@ -165,12 +165,12 @@
     gap: 5vw; align-items: center;
   }
   .scene-split.image-narrow .split-grid { grid-template-columns: 2fr 3fr; }
-  /* Scene 01 — img-1985.jpg (landscape 16:9) */
+  /* Scene 01, img-1985.jpg (landscape 16:9) */
   .scene-split .split-image {
     width: 100%; aspect-ratio: 16/9;
     background: var(--bg-3); position: relative; overflow: hidden;
   }
-  /* Scene 06 — drill-portrait.mp4 inset (portrait 9:16) */
+  /* Scene 06, drill-portrait.mp4 inset (portrait 9:16) */
   .scene-split.image-narrow .split-image { aspect-ratio: 9/16; }
   .scene-split .split-image img,
   .scene-split .split-image video {
@@ -194,7 +194,7 @@
     font-size: 1.3rem; color: var(--bone); font-style: italic;
   }
 
-  /* ══ Full-bleed clip scene (At the Board — landscape 16:9) ══ */
+  /* ══ Full-bleed clip scene (At the Board, landscape 16:9) ══ */
   .scene-clip { min-height: auto; padding: 0; flex-direction: column; }
   .scene-clip .clip-frame {
     position: relative; width: 100%;
@@ -382,6 +382,16 @@
     .cred { border-right: none; border-bottom: 1px solid var(--line); }
     .cred:last-child { border-bottom: none; }
   }
+
+  /* Narrow phones: keep the wordmark on one line and the CTA on screen */
+  @media (max-width: 600px) {
+    nav.top { padding: 0.9rem 5vw; gap: 0.8rem; }
+    nav.top .brand { font-size: 0.95rem; white-space: nowrap; }
+    nav.top ul { gap: 0.9rem; flex-shrink: 0; }
+    nav.top ul li:nth-child(3) { display: none; }
+    nav.top ul a { font-size: 0.62rem; letter-spacing: 0.14em; }
+    nav.top ul a.cta { padding: 0.55rem 0.9rem; }
+  }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -407,7 +417,7 @@
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — The Practitioner (Hero) ════ -->
+<!-- ════ SCENE 01, The Practitioner (Hero) ════ -->
 <section class="scene scene-hero">
   <div class="hero-label">The Practitioner · John Obidipe</div>
 
@@ -423,14 +433,14 @@
   </div>
 </section>
 
-<!-- ════ SCENE 02 — Two Careers, One Practice ════ -->
+<!-- ════ SCENE 02, Two Careers, One Practice ════ -->
 <section class="scene scene-split">
   <div class="folio">01 · <span>Two Careers, One Practice</span></div>
   <div class="split-grid">
     <div class="split-text">
       <div class="body">
         <p>For over a decade I consulted to organisations on change, business architecture, and strategy. That's where the organisational instinct comes from.</p>
-        <p>Alongside and after that, I trained as an executive coach and built a practice with senior leaders, directors, VPs, and founders. That's where the people-side instinct comes from — how high-performing leaders behave under pressure, where their patterns trip them up, what changes when the right question gets asked at the right moment.</p>
+        <p>Alongside and after that, I trained as an executive coach and built a practice with senior leaders, directors, VPs, and founders. That's where the people-side instinct comes from: how high-performing leaders behave under pressure, where their patterns trip them up, what changes when the right question gets asked at the right moment.</p>
         <p class="punchline">The Whiteboard Sessions are what happens when those two careers sit at the same board.</p>
       </div>
     </div>
@@ -440,7 +450,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 03 — At the Board ════ -->
+<!-- ════ SCENE 03, At the Board ════ -->
 <section class="scene scene-clip">
   <div class="clip-frame">
     <video autoplay muted loop playsinline preload="metadata" aria-label="Wide view of a whiteboard session with John and a client">
@@ -458,7 +468,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 04 — The Credentials ════ -->
+<!-- ════ SCENE 04, The Credentials ════ -->
 <section class="scene scene-credentials">
   <div class="head">
     <div class="folio">03 · <span>The Credentials</span></div>
@@ -489,7 +499,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 05 — Selected Clients ════ -->
+<!-- ════ SCENE 05, Selected Clients ════ -->
 <section class="scene scene-clients">
   <div class="folio">04 · <span>Selected Clients</span></div>
   <h2>Organisations and leaders worked with.</h2>
@@ -507,11 +517,11 @@
   </div>
 
   <p class="individuals-line">
-    <strong>Individual leaders coached from</strong> AWS, Bassett Mechanical, Volkswagen Financial Services, Nexans — among others, across industries and countries.
+    <strong>Individual leaders coached from</strong> AWS, Bassett Mechanical, Volkswagen Financial Services, Nexans, among others, across industries and countries.
   </p>
 </section>
 
-<!-- ════ SCENE 06 — How I Work ════ -->
+<!-- ════ SCENE 06, How I Work ════ -->
 <section class="scene scene-split image-narrow">
   <div class="folio">05 · <span>How I Work</span></div>
   <div class="split-grid">
@@ -531,10 +541,10 @@
   </div>
 </section>
 
-<!-- ════ SCENE 07 — The Fuller Story ════ -->
+<!-- ════ SCENE 07, The Fuller Story ════ -->
 <section class="scene scene-note">
   <div class="note-inner">
-    <p><em>The fuller personal story — the path that led to this work, what came before — sits on a separate page.</em></p>
+    <p><em>The fuller personal story sits on a separate page. The path that led to this work, and what came before.</em></p>
     <p><em><a href="https://www.johnob1.co.uk" target="_blank" rel="noopener">Read the fuller story →</a></em></p>
   </div>
 </section>
@@ -549,7 +559,6 @@
 <footer>
   <div>
     <div class="brand"><span>Catalyst</span> Growth Coaching</div>
-    <div class="tag">No need to get stuck.</div>
   </div>
   <div class="col">
     <h4>Programmes</h4>
@@ -561,12 +570,12 @@
     <h4>Read</h4>
     <a href="/about">About John</a>
     <a href="/in-practice">In Practice</a>
+    <a href="/hold-the-place">Hold the Place</a>
     <a href="/going-further">Going Further</a>
     <a href="/contact">Contact</a>
   </div>
   <div class="fine">
     <span>© Catalyst Growth Coaching, London · Est. 2024</span>
-    <span class="signoff">Don't get stuck.</span>
   </div>
 </footer>
 

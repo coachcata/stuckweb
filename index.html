@@ -14,21 +14,21 @@
 </script>
 <!-- ════ END GOOGLE ANALYTICS ════ -->
 
-<title>Catalyst Growth Coaching — Strategic Thinking Partnership</title>
+<title>Catalyst Growth Coaching, Strategic Thinking Partnership</title>
 
 <!-- ════ SEO METADATA ════ -->
 <meta name="description" content="Your thinking, out of your head, onto the board, into a solution. The Whiteboard Sessions for senior leaders, founders and teams." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/" />
-<meta property="og:title" content="Catalyst Growth Coaching — Strategic Thinking Partnership" />
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/" />
+<meta property="og:title" content="Catalyst Growth Coaching, Strategic Thinking Partnership" />
 <meta property="og:description" content="Your thinking, out of your head, onto the board, into a solution. The Whiteboard Sessions for senior leaders, founders and teams." />
-<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta property="og:site_name" content="John Obidipe | Catalyst Growth Coaching" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Catalyst Growth Coaching — Strategic Thinking Partnership" />
+<meta name="twitter:title" content="Catalyst Growth Coaching, Strategic Thinking Partnership" />
 <meta name="twitter:description" content="Your thinking, out of your head, onto the board, into a solution. The Whiteboard Sessions for senior leaders, founders and teams." />
-<meta name="twitter:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
-<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/" />
+<meta name="twitter:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/" />
 <!-- ════ END SEO METADATA ════ -->
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -184,7 +184,7 @@
   .scene-clip .clip-copy .body em { font-style: italic; color: var(--bone); font-weight: 300; }
   .scene-clip .clip-copy .body em.accent { color: var(--cognac); font-weight: 400; }
 
-  /* ══ Premise scene (Scene 01 — homepage; landscape drill-landscape.mp4, full-bleed) ══ */
+  /* ══ Premise scene (Scene 01, homepage; landscape drill-landscape.mp4, full-bleed) ══ */
   .scene-premise-clip {
     min-height: 100vh; padding: 0;
     flex-direction: column;
@@ -290,6 +290,47 @@
   .scene-testimonial .testimonial-image img {
     width: 100%; height: 100%; object-fit: cover;
   }
+
+  /* ══ Proof strip (clients, credentials, one move from the top) ══ */
+  .scene-proof {
+    min-height: auto; flex-direction: column;
+    padding: 10vh 6vw; background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-proof .folio { margin-bottom: 3rem; }
+  .logo-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 3rem 3.5rem; align-items: center; justify-items: center;
+    padding-bottom: 3rem; border-bottom: 1px solid var(--line);
+  }
+  .logo-cell {
+    width: 100%; max-width: 150px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-cell img {
+    max-height: 48px; max-width: 100%;
+    width: auto; height: auto; object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.7; transition: opacity 0.4s ease;
+  }
+  .logo-cell img:hover { opacity: 1; }
+  .proof-lines {
+    margin-top: 3rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 5vw;
+  }
+  .proof-lines p {
+    font-family: var(--font-b); font-size: 0.98rem;
+    color: var(--stone); line-height: 1.7; max-width: 46ch;
+  }
+  .proof-lines p strong {
+    color: var(--bone); font-weight: 500; display: block; margin-bottom: 0.3rem;
+  }
+  .proof-lines a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px; transition: border-color 0.3s;
+  }
+  .proof-lines a:hover { border-color: var(--cognac); }
 
   /* ══ Programme tiles scene ══ */
   .scene-tiles {
@@ -457,6 +498,11 @@
     .scene-testimonial .testimonial-grid { grid-template-columns: 1fr; gap: 3rem; }
     .scene-testimonial .testimonial-image { order: -1; aspect-ratio: 1139/2000; max-height: 70vh; }
 
+    .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 2rem; }
+    .logo-cell { max-width: 130px; height: 42px; }
+    .logo-cell img { max-height: 42px; }
+    .proof-lines { grid-template-columns: 1fr; gap: 2rem; }
+
     .tiles-grid { grid-template-columns: 1fr; gap: 3rem; }
     .tile .tile-image { aspect-ratio: 2/1; }
 
@@ -465,6 +511,16 @@
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
     footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  }
+
+  /* Narrow phones: keep the wordmark on one line and the CTA on screen */
+  @media (max-width: 600px) {
+    nav.top { padding: 0.9rem 5vw; gap: 0.8rem; }
+    nav.top .brand { font-size: 0.95rem; white-space: nowrap; }
+    nav.top ul { gap: 0.9rem; flex-shrink: 0; }
+    nav.top ul li:nth-child(3) { display: none; }
+    nav.top ul a { font-size: 0.62rem; letter-spacing: 0.14em; }
+    nav.top ul a.cta { padding: 0.55rem 0.9rem; }
   }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -491,7 +547,7 @@
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — The Premise ════ -->
+<!-- ════ SCENE 01, The Premise ════ -->
 <section class="scene scene-premise-clip">
   <div class="top-label">Catalyst Growth Coaching · Issue N° 02</div>
   <p class="orient-line">Strategic thinking, out loud, at a whiteboard. Another mind in the room with you. For senior leaders.</p>
@@ -510,7 +566,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 02 — The Argument ════ -->
+<!-- ════ SCENE 02, The Argument ════ -->
 <section class="scene scene-argument">
   <div class="folio" style="text-align:center; margin-bottom: 4rem;">01 · <span>The Argument</span></div>
   <div class="body">
@@ -522,7 +578,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 03 — The Practice ════ -->
+<!-- ════ SCENE 03, The Practice ════ -->
 <section class="scene scene-clip">
   <div class="clip-frame">
     <video autoplay muted loop playsinline preload="metadata" aria-label="Wide view of a whiteboard session in progress">
@@ -542,7 +598,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 04 — What Gets Resolved ════ -->
+<!-- ════ SCENE 04, What Gets Resolved ════ -->
 <section class="scene scene-clip">
   <div class="clip-frame">
     <video autoplay muted loop playsinline preload="metadata" aria-label="A client writing on the whiteboard while John watches">
@@ -563,15 +619,15 @@
   </div>
 </section>
 
-<!-- ════ SCENE 05 — In Their Words (Mark Schmull) ════ -->
+<!-- ════ SCENE 05, In Their Words (Mark Schmull) ════ -->
 <section class="scene scene-testimonial">
   <div class="folio">04 · <span>In Their Words</span></div>
   <div class="testimonial-grid">
     <div class="testimonial-body">
-      <p><em>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects — and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</em></p>
-      <p><em>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team — creating solutions that set the standard for the future.</em></p>
+      <p><em>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects, and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</em></p>
+      <p><em>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</em></p>
       <p><em>Thanks, John.</em></p>
-      <div class="attribution">— <strong>Mark Schmull</strong>, MD, Arrow Planning</div>
+      <div class="attribution"><strong>Mark Schmull</strong>, MD, Arrow Planning</div>
     </div>
     <div class="testimonial-image">
       <img src="/images/img-1739.jpg" alt="John and a client in a hospitality lounge, mid-conversation" loading="lazy">
@@ -579,7 +635,29 @@
   </div>
 </section>
 
-<!-- ════ SCENE 06 — The Programmes ════ -->
+<!-- SCENE 05b, The Proof -->
+<section class="scene scene-proof">
+  <div class="folio">Selected clients · <span>Credentials</span></div>
+
+  <div class="logo-grid">
+    <div class="logo-cell"><img src="/images/logos/toyota.png" alt="Toyota" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/lexus.png" alt="Lexus" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/convatec.png" alt="Convatec" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/cambridge-up.png" alt="Cambridge University Press" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/autoglass.png" alt="Autoglass" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/oxford.png" alt="University of Oxford" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/new-socks.png" alt="New Socks" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/arrow-planning.png" alt="Arrow Planning" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/nextenergy.png" alt="NextEnergy Capital" loading="lazy"></div>
+  </div>
+
+  <div class="proof-lines">
+    <p><strong>Who John is</strong>Fifteen years across organisational consulting and executive coaching. Gallup certified in CliftonStrengths and a FITT16 practitioner. <a href="/about">The credentials in full</a></p>
+    <p><strong>Who John works with</strong>Individual leaders coached from AWS, Bassett Mechanical, Volkswagen Financial Services and Nexans, among others, across industries and countries. <a href="/in-practice">What the work looks like in the room</a></p>
+  </div>
+</section>
+
+<!-- SCENE 06, The Programmes -->
 <section class="scene scene-tiles" id="programmes">
   <div class="folio">05 · <span>The Programmes</span></div>
   <h2>Three contexts. Same <em>practice</em>.</h2>
@@ -599,7 +677,7 @@
         <img src="/images/img-1935.jpg" alt="Hospitality whiteboard session with a business owner" loading="lazy">
       </div>
       <h3>BuildStrong</h3>
-      <p class="tile-desc">For founders, MDs, and owners building the business itself.</p>
+      <p class="tile-desc">For the owner who cannot step back because nobody can hold his place.</p>
       <span class="tile-link">Learn more</span>
     </a>
 
@@ -614,7 +692,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 07 — The Invitation ════ -->
+<!-- ════ SCENE 07, The Invitation ════ -->
 <section class="scene scene-invitation">
   <div class="clip-frame">
     <video autoplay muted loop playsinline preload="metadata" aria-label="John and a client at the whiteboard, conversation ending in laughter">
@@ -634,7 +712,6 @@
 <footer>
   <div>
     <div class="brand"><span>Catalyst</span> Growth Coaching</div>
-    <div class="tag">No need to get stuck.</div>
   </div>
   <div class="col">
     <h4>Programmes</h4>
@@ -646,12 +723,12 @@
     <h4>Read</h4>
     <a href="/about">About John</a>
     <a href="/in-practice">In Practice</a>
+    <a href="/hold-the-place">Hold the Place</a>
     <a href="/going-further">Going Further</a>
     <a href="/contact">Contact</a>
   </div>
   <div class="fine">
     <span>© Catalyst Growth Coaching, London · Est. 2024</span>
-    <span class="signoff">Don't get stuck.</span>
   </div>
 </footer>
 

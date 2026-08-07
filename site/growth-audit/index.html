@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Growth Audit | Catalyst Growth Coaching</title>
+<meta name="description" content="A three week diagnostic that answers why growth has flattened. Fixed fee, findings in writing, ranked by what they are costing you. For owners of firms between one and five million.">
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/growth-audit">
+<meta property="og:title" content="The Growth Audit">
+<meta property="og:description" content="Why the business stopped growing. Three weeks, a fixed price, and a written answer you can act on.">
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/growth-audit">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C0C0E; --bg-2:#0A0A0C; --card:#1E1E26;
+    --bone:#F2F0EC; --stone:#A8A5A0; --ash:#6B6862;
+    --cognac:#C8956C; --cognac-2:#D4A97D;
+    --line:rgba(200,149,108,0.14);
+    --font-d:'Cormorant Garamond',Georgia,serif;
+    --font-b:'DM Sans',-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--bone);font-family:var(--font-b);font-weight:400;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--cognac);color:var(--bg)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  a{color:var(--cognac);text-decoration:none}
+  a:hover{color:var(--cognac-2)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(12,12,14,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1080px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+  .wordmark{font-family:var(--font-d);font-size:20px;letter-spacing:.02em;color:var(--bone)}
+  .wordmark span{color:var(--cognac)}
+  .nav-cta{font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--cognac);padding:9px 18px;border-radius:2px;transition:background .25s,color .25s}
+  .nav-cta:hover{background:var(--cognac);color:var(--bg)}
+
+  /* hero */
+  header{padding:96px 0 60px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac);margin-bottom:32px}
+  h1{font-family:var(--font-d);font-weight:300;font-size:clamp(44px,8.2vw,92px);line-height:1.05;letter-spacing:-0.01em;max-width:15ch}
+  h1 em{font-style:italic;color:var(--cognac)}
+  .sub{margin-top:30px;max-width:54ch;color:var(--stone);font-size:19px}
+
+  /* sections */
+  section{padding:88px 0 0}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac);margin-bottom:16px}
+  h2{font-family:var(--font-d);font-weight:400;font-size:clamp(30px,4.6vw,48px);line-height:1.14;max-width:22ch;margin-bottom:28px}
+  h2 em{font-style:italic;color:var(--cognac)}
+  .body{max-width:62ch;color:var(--stone)}
+  .body p{margin-bottom:22px}
+  .body p:last-child{margin-bottom:0}
+  .body em{font-style:italic;color:var(--bone)}
+  .body b,.body strong{color:var(--bone);font-weight:500}
+
+  /* what you get: ordered list, order is the point */
+  .gets{list-style:none;counter-reset:g;margin:34px 0 30px;border-top:1px solid var(--line)}
+  .gets li{position:relative;counter-increment:g;border-bottom:1px solid var(--line);padding:20px 0 20px 52px;color:var(--stone);font-size:16.5px;line-height:1.6;max-width:62ch}
+  .gets li::before{content:counter(g,lower-roman) ".";position:absolute;left:0;top:20px;font-family:var(--font-d);font-style:italic;font-size:20px;color:var(--cognac);line-height:1.35}
+
+  /* deliverables and how it runs */
+  .rows{margin-top:30px;border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:180px 1fr;gap:26px;padding:30px 0;border-bottom:1px solid var(--line)}
+  .row h3{font-family:var(--font-d);font-weight:500;font-size:25px;line-height:1.2;color:var(--bone)}
+  .row h3 span{display:block;font-family:var(--font-b);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cognac);font-weight:600;margin-bottom:8px}
+  .row p{color:var(--stone);font-size:16.5px;max-width:56ch}
+  .subhead{margin-top:46px;font-family:var(--font-d);font-weight:500;font-size:24px;color:var(--bone)}
+  .subhead + .gets{margin-top:22px}
+
+  /* price */
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:44px 40px;margin-top:32px}
+  .price{font-family:var(--font-d);font-weight:300;font-size:clamp(50px,7vw,72px);line-height:1;color:var(--bone)}
+  .price-meta{margin-top:18px;color:var(--stone);font-size:16px;max-width:52ch}
+  .credit{margin-top:24px;padding-top:22px;border-top:1px solid var(--line);color:var(--stone);font-size:16px;max-width:58ch}
+  .credit b{color:var(--cognac);font-weight:500}
+
+  /* where it stops */
+  .pull{font-family:var(--font-d);font-style:italic;font-weight:300;font-size:clamp(22px,3.2vw,31px);line-height:1.32;color:var(--bone);border-left:2px solid var(--cognac);padding-left:26px;margin:40px 0 24px;max-width:30ch}
+
+  /* ambient clip: a living photo, not a player */
+  .band{position:relative;margin-top:88px;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+  .band video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+  .band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,14,.34),rgba(12,12,14,.48));pointer-events:none}
+
+  /* close */
+  .close .btn-row{margin-top:34px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+  .btn{display:inline-block;font-family:var(--font-b);font-weight:600;font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;padding:16px 34px;border-radius:2px;transition:transform .2s,background .25s,color .25s;border:none;cursor:pointer}
+  .btn-primary{background:var(--cognac);color:var(--bg)}
+  .btn-primary:hover{background:var(--cognac-2);color:var(--bg);transform:translateY(-1px)}
+  .quiet{font-size:15.5px;color:var(--ash)}
+  .quiet a{color:var(--stone);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .25s,border-color .25s}
+  .quiet a:hover{color:var(--cognac);border-color:var(--cognac)}
+
+  /* testimonial */
+  .quote{margin-top:88px;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:78px 0}
+  .quote .eyebrow{margin-bottom:26px}
+  .quote blockquote{font-family:var(--font-d);font-style:italic;font-weight:300;font-size:clamp(20px,2.7vw,27px);line-height:1.45;color:var(--bone);max-width:46ch}
+  .quote blockquote p{margin-bottom:20px}
+  .quote blockquote p:last-child{margin-bottom:0}
+  .quote blockquote strong{font-weight:400;color:var(--cognac)}
+  .attr{margin-top:30px;padding-top:20px;border-top:1px solid var(--line);max-width:46ch}
+  .attr .name{display:block;font-size:15px;color:var(--bone);font-weight:500}
+  .attr .meta{display:block;margin-top:4px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ash)}
+
+  footer{border-top:1px solid var(--line);margin-top:0;padding:48px 0 62px;color:var(--ash);font-size:14px}
+  footer .wordmark{font-size:18px;margin-bottom:14px;display:block}
+  footer a{color:var(--stone)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+  @media (max-width:680px){
+    header{padding:64px 0 44px}
+    section{padding:66px 0 0}
+    .row{grid-template-columns:1fr;gap:8px}
+    .band,.quote{margin-top:66px}
+    .quote{padding:56px 0}
+    .gets li{padding-left:42px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="wordmark" href="/">Catalyst<span>.</span></a>
+    <a class="nav-cta" href="/the-handover.html">Book the hour</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="kicker reveal">The Growth Audit</div>
+    <h1 class="reveal">Why the business stopped <em>growing</em></h1>
+    <p class="sub reveal">Three weeks, one thousand nine hundred and ninety five pounds, and a written answer you can act on. For owners of firms between one and five million who are working as hard as they ever have and cannot see why the numbers have flattened.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">The question it answers</div>
+    <h2>You already know the <em>symptoms</em>.</h2>
+    <div class="body">
+      <p>Revenue in roughly the same band for three years. A team that is busy. Costs that have moved and prices that have not. And a growing suspicion that the answer is somewhere you cannot see from inside it.</p>
+      <p>Your accountant can show you what happened. What the numbers cannot tell you is why, because the cause is almost never in them.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What it examines</div>
+    <h2>The whole business, through <em>one lens</em>.</h2>
+    <div class="body">
+      <p>I look at the same things any decent diagnostic would. Where the money comes from and what it costs to get. How the work actually flows. Which clients are worth having. What the team can and cannot do. Where time goes.</p>
+      <p>The lens is different. At this size, the constraint is usually not strategy and it is rarely effort. It is that a specific set of decisions can only be made by one person, and that person is you. So every finding gets tested against a single question: <em>what would have to be true for this to happen without you.</em></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What you get</div>
+    <h2>In writing. Ranked. With the <em>evidence</em> attached.</h2>
+    <ol class="gets">
+      <li>An outside read of the business, from somebody with no stake in the answer</li>
+      <li>A method rather than an opinion, so you can see how each conclusion was reached</li>
+      <li>Three structural risks, ranked in order of what they are costing you. Always three</li>
+      <li>All of it in writing, so you can sit with it rather than remember it</li>
+      <li>The evidence behind each finding, so you can check it rather than take my word</li>
+      <li>A clear split between what you can act on alone and what would need somebody alongside you</li>
+      <li>A fixed price and a defined end. Three weeks, and then it is finished</li>
+    </ol>
+    <div class="body">
+      <p>That last one matters more than it sounds. Open ended consulting is how most owners at this size have been burnt before, and I would rather you knew the shape of this before you agreed to it.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">The deliverables</div>
+    <h2>Three things, and the report is the <em>spine</em>.</h2>
+    <div class="rows">
+      <div class="row">
+        <h3><span>One</span>The report</h3>
+        <p>Eight to twelve pages of prose. Not slides. Written to be read twice, and to survive being forwarded to the one person you trust.</p>
+      </div>
+      <div class="row">
+        <h3><span>Two</span>The working session</h3>
+        <p>Ninety minutes, you and me, working through what the report found. It is not always comfortable. It is the part owners tell me they remember.</p>
+      </div>
+      <div class="row">
+        <h3><span>Three</span>The debriefs</h3>
+        <p>Every leader who took a CliftonStrengths assessment gets their own debrief. Your team gets something directly out of this, rather than only being reported on.</p>
+      </div>
+    </div>
+
+    <h3 class="subhead">What is in the report</h3>
+    <ol class="gets">
+      <li>A one-page summary at the front, written so it can be forwarded on its own</li>
+      <li>The question you asked, in your words, on page one</li>
+      <li>What we found</li>
+      <li>Three ranked structural risks. Always three, never a list that trails off</li>
+      <li>Sequenced ninety-day recommendations, at least half of them actionable without me</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">How it runs</div>
+    <h2>Three weeks</h2>
+    <div class="rows">
+      <div class="row">
+        <h3>Week one</h3>
+        <p>A single kickoff of ninety minutes, where you state the question this audit answers in your own words. That sentence goes on page one of the report, and everything after it is judged against it.</p>
+      </div>
+      <div class="row">
+        <h3>Week two</h3>
+        <p>Fieldwork. A confidential interview and a CliftonStrengths assessment for each leader in scope, and structural analysis of how decisions actually flow and what depends on whom. Not a staff survey. I am checking whether what you have told me matches what happens on a Tuesday.</p>
+      </div>
+      <div class="row">
+        <h3>Week three</h3>
+        <p>The report is written, and we spend ninety minutes working through it together. The plan is in your hands within twenty-four hours of that session.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band reveal">
+  <video muted autoplay loop playsinline preload="none" poster="/images/img-1983.jpg" data-src="/videos/session-client-writing.mp4" aria-label="A client writing on the whiteboard during a working session"></video>
+</div>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What it costs</div>
+    <h2>One price, stated like <em>everything else</em>.</h2>
+    <div class="price-card">
+      <div class="price">&pound;1,995</div>
+      <p class="price-meta">For a senior team of up to six leaders. Seven to nine leaders, &pound;2,495. More than nine, <a href="/contact">talk to me first</a> and we agree the shape before we start.</p>
+      <p class="price-meta">Half on booking, half on delivery.</p>
+      <p class="credit">If we go on to advisory work within thirty days, the fee is <b>credited in full</b> against the first quarter. The audit costs you nothing in that case, and you keep what it found either way.</p>
+    </div>
+    <div class="body" style="margin-top:28px">
+      <p>There is no proposal, no scoping call that turns into a sales call, and no negotiation. The price is the price because the product is the product, which is also what makes it safe for an accountant to put their name to.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">Where it stops</div>
+    <h2>The edges, stated <em>before</em> you buy.</h2>
+    <div class="body">
+      <p>One confidential interview and one CliftonStrengths assessment for each leader in scope. Up to six of them on the standard engagement, seven to nine on the larger one. Above nine it stops being a fixed product, so we talk about the shape of it before we start rather than after.</p>
+      <p>The report is delivered once. It is a diagnosis, not a document we redraft together until everybody is comfortable with it.</p>
+      <p>Implementation, workshops and ongoing coaching are separate engagements, priced separately, if and when you want them. Keeping them out is what keeps three weeks to three weeks.</p>
+    </div>
+    <p class="pull">Anything touching tax, funding structures or formal valuation goes back to the referring accountant, by name.</p>
+    <div class="body">
+      <p>Those are their questions, not mine, and the report says so in writing rather than quietly straying into them. If you came here through your accountant, they stay in the loop throughout and nothing in this cuts across them.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">What it usually finds</div>
+    <h2>The constraint is a <em>person</em>, and it is usually you.</h2>
+    <div class="body">
+      <p>Not because of anything you have done wrong. Because you built the thing, and the judgement you make forty times a week has never been built in anybody else, and that cannot be documented or recruited.</p>
+      <p>When that is the finding, the audit produces the plan for fixing it: what somebody else would need to be able to do, what could be handed over and in what order, and what would need to change about how you hand things over. Whether you do that with me afterwards is a separate conversation, and the report is yours either way.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap reveal">
+    <div class="eyebrow">When it is not that</div>
+    <h2>Sometimes the answer is <em>documentation</em>.</h2>
+    <div class="body">
+      <p>If nothing has ever been written down and you are answering the same question forty times a week, that is a documentation problem and it has a straightforward fix. If the constraint is capacity rather than judgement, you need to hire rather than develop. If it is pricing, it is arithmetic and a difficult fortnight.</p>
+      <p>All of those are real findings and I have delivered all of them. In each case you leave with something you can act on without me, which is the point.</p>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap reveal">
+    <div class="eyebrow">Before you book</div>
+    <h2>Start with the <em>hour</em>.</h2>
+    <div class="body">
+      <p>I would rather you had an hour at the board first. It is free, there is no pitch at the end of it, and by the end of it we will both know whether the audit is the right next thing or whether it is not.</p>
+      <p>Some owners do the hour and then the audit. Some do the hour and go away and fix something themselves. Both are fine, and I would rather that than you buying three weeks of my time on the strength of a web page.</p>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/the-handover.html">Book the hour</a>
+      <span class="quiet"><a href="/contact">Or ask about the audit directly</a></span>
+    </div>
+  </div>
+</section>
+
+<div class="quote">
+  <div class="wrap reveal">
+    <div class="eyebrow">In their words</div>
+    <blockquote>
+      <p>What can I say about the work John has done with us today at Arrow Planning. He&rsquo;s just delivered a fantastic coaching session with the team. We&rsquo;ve been working through some genuinely difficult subjects, and he&rsquo;s presented them in a way that&rsquo;s allowed everybody to engage properly with these difficult matters.</p>
+      <p>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn&rsquo;t solely on me. I&rsquo;m not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
+      <p>Thanks, John.</p>
+    </blockquote>
+    <div class="attr">
+      <span class="name">Mark Schmull</span>
+      <span class="meta">Managing Director, Arrow Planning</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span class="wordmark">Catalyst<span style="color:var(--cognac)">.</span></span>
+    <p>The Growth Audit is delivered by John Obidipe, Gallup-Certified CliftonStrengths Coach.<br>
+    <a href="mailto:coach@catalystgrowthcoach.co.uk">coach@catalystgrowthcoach.co.uk</a> &middot; <a href="https://catalystgrowthcoach.co.uk">catalystgrowthcoach.co.uk</a></p>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveals (same pattern as the rest of the site)
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Ambient clip: ships with a poster and no src, so it never blocks first
+  // paint. The src attaches as it nears the viewport. Reduced motion means
+  // the src is never attached and the poster stands in.
+  (function(){
+    const clips = document.querySelectorAll('video[data-src]');
+    if(!clips.length) return;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const tryPlay = v => { const p = v.play(); if(p && p.catch) p.catch(()=>{}); };
+
+    if('IntersectionObserver' in window){
+      const vio = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(!e.isIntersecting) return;
+          const v = e.target;
+          if(!v.src){ v.src = v.dataset.src; v.load(); }
+          tryPlay(v);
+          vio.unobserve(v);
+        });
+      },{rootMargin:'200px 0px'});
+      clips.forEach(v=>vio.observe(v));
+    } else {
+      clips.forEach(v=>{ v.src = v.dataset.src; tryPlay(v); });
+    }
+
+    // Autoplay rescue for iOS Low Power Mode: retry on the first gesture.
+    const retry = ()=>clips.forEach(v=>{ if(v.src && v.paused) tryPlay(v); });
+    ['touchstart','click','scroll'].forEach(ev=>
+      document.addEventListener(ev, retry, {once:true, passive:true})
+    );
+  })();
+</script>
+</body>
+</html>

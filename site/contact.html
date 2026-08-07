@@ -14,16 +14,16 @@
 </script>
 <!-- ════ END GOOGLE ANALYTICS ════ -->
 
-<title>Book a Whiteboard Session — Catalyst Growth Coaching</title>
+<title>Book a Whiteboard Session | Catalyst Growth Coaching</title>
 
 <meta name="description" content="An hour at the board. Bring whatever you're carrying." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/contact" />
-<meta property="og:title" content="Book a Whiteboard Session — Catalyst Growth Coaching" />
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/contact" />
+<meta property="og:title" content="Book a Whiteboard Session | Catalyst Growth Coaching" />
 <meta property="og:description" content="An hour at the board. Bring whatever you're carrying." />
-<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/contact" />
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/contact" />
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
@@ -227,6 +227,15 @@
   }
   .form-confirmation.show { display: block; }
   .contact-form.submitted { display: none; }
+  .form-fallback {
+    display: none; font-size: 0.95rem; color: var(--stone); line-height: 1.6;
+  }
+  .form-fallback.show { display: block; }
+  .form-fallback a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 1px;
+  }
+  .form-fallback a:hover { border-color: var(--cognac); }
   .email-line {
     font-family: var(--font-b); font-size: 1.02rem;
     color: var(--stone); line-height: 1.7;
@@ -294,6 +303,16 @@
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
     footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
   }
+
+  /* Narrow phones: keep the wordmark on one line and the CTA on screen */
+  @media (max-width: 600px) {
+    nav.top { padding: 0.9rem 5vw; gap: 0.8rem; }
+    nav.top .brand { font-size: 0.95rem; white-space: nowrap; }
+    nav.top ul { gap: 0.9rem; flex-shrink: 0; }
+    nav.top ul li:nth-child(3) { display: none; }
+    nav.top ul a { font-size: 0.62rem; letter-spacing: 0.14em; }
+    nav.top ul a.cta { padding: 0.55rem 0.9rem; }
+  }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -319,7 +338,7 @@
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — The Booking Path ════ -->
+<!-- ════ SCENE 01, The Booking Path ════ -->
 <section class="scene scene-booking">
   <div class="eyebrow">Contact</div>
   <h1>Let's get an hour in the diary.</h1>
@@ -337,7 +356,7 @@
   </div>
 </section>
 
-<!-- ════ SCENE 02 — The Alternatives ════ -->
+<!-- ════ SCENE 02, The Alternatives ════ -->
 <section class="scene scene-alternatives">
   <div class="folio">01 · <span>If You'd Rather Ask First</span></div>
 
@@ -349,7 +368,7 @@
        submissions land in the Netlify dashboard (Forms → contact) and trigger any
        email notifications configured there. The action URL doubles as the success
        page for native (non-fetch) submits. -->
-  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact?success=true">
+  <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=true">
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="source-page" value="Contact form" />
     <p style="display:none"><label>Don't fill this out: <input name="bot-field" /></label></p>
@@ -383,10 +402,12 @@
     </div>
 
     <button type="submit" class="form-submit">Send Message</button>
+
+    <p class="form-fallback" id="form-fallback">That didn't send. Email me instead at <a href="mailto:coach@catalystgrowthcoach.co.uk"><span class="notranslate">coach@catalystgrowthcoach.co.uk</span></a> and it comes to the same place.</p>
   </form>
 
   <div class="form-confirmation" id="form-confirmation">
-    Got it. I'll be in touch within one working day. — John
+    Got it. I'll be in touch within one working day.<br>John
   </div>
 
   <!-- Cloudflare email protection workaround: wrapping in .notranslate prevents auto-cloaking. -->
@@ -399,7 +420,6 @@
 <footer>
   <div>
     <div class="brand"><span>Catalyst</span> Growth Coaching</div>
-    <div class="tag">No need to get stuck.</div>
   </div>
   <div class="col">
     <h4>Programmes</h4>
@@ -411,12 +431,12 @@
     <h4>Read</h4>
     <a href="/about">About John</a>
     <a href="/in-practice">In Practice</a>
+    <a href="/hold-the-place">Hold the Place</a>
     <a href="/going-further">Going Further</a>
     <a href="/contact">Contact</a>
   </div>
   <div class="fine">
     <span>© Catalyst Growth Coaching, London · Est. 2024</span>
-    <span class="signoff">Don't get stuck.</span>
   </div>
 </footer>
 
@@ -476,7 +496,13 @@
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body
         });
-        if (!response.ok) throw new Error('Submission failed');
+        if (!response.ok) {
+          // The backend refused the post (e.g. form not registered with Netlify).
+          // A native submit would land on the same error as a full-page 404,
+          // so point at email rather than navigating away.
+          document.getElementById('form-fallback').classList.add('show');
+          return;
+        }
         form.classList.add('submitted');
         confirmation.classList.add('show');
         form.reset();

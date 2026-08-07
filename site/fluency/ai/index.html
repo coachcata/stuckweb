@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2Z17HSYFCV');
+</script>
+<title>AI — The Fluency Series | Catalyst Growth Coaching</title>
+<meta name="description" content="AI, without the hype. A free three-part fluency series for leaders: the language of AI, the story behind the promises, and the questions that keep it accountable. Director's and Founder's editions.">
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/fluency/ai">
+<meta property="og:title" content="AI — The Fluency Series">
+<meta property="og:description" content="Fluent, not fluent in hype. The three levels, free to take — plus audio and infographics in the Leadership Hub.">
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/fluency/ai">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C0C0E; --bg-2:#0A0A0C; --card:#1E1E26;
+    --bone:#F2F0EC; --stone:#A8A5A0; --ash:#6B6862;
+    --cognac:#C8956C; --cognac-2:#D4A97D;
+    --line:rgba(200,149,108,0.14);
+    --font-d:'Cormorant Garamond',Georgia,serif;
+    --font-b:'DM Sans',-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--bone);font-family:var(--font-b);font-weight:400;line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--cognac);color:var(--bg)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  a{color:var(--cognac);text-decoration:none}
+  a:hover{color:var(--cognac-2)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(12,12,14,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1080px;margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+  .wordmark{font-family:var(--font-d);font-size:20px;letter-spacing:.02em;color:var(--bone)}
+  .wordmark span{color:var(--cognac)}
+  .nav-cta{font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--cognac);padding:9px 18px;border-radius:2px;transition:background .25s,color .25s}
+  .nav-cta:hover{background:var(--cognac);color:var(--bg)}
+
+  /* hero */
+  header{padding:96px 0 54px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac);margin-bottom:28px}
+  h1{font-family:var(--font-d);font-weight:300;font-size:clamp(52px,10vw,110px);line-height:1.02;letter-spacing:-0.01em}
+  .sub{margin-top:24px;max-width:46ch;color:var(--stone);font-size:20px;font-family:var(--font-d);font-style:italic;font-weight:300}
+
+  /* context */
+  .context{padding:8px 0 20px}
+  .context p{max-width:60ch;color:var(--stone);font-size:18px}
+  .context b,.context strong{color:var(--bone);font-weight:500}
+
+  /* parts */
+  .parts{padding:64px 0 20px}
+  .parts-head{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--cognac);margin-bottom:34px}
+  .part{border-top:1px solid var(--line);padding:38px 0;display:grid;grid-template-columns:132px 1fr;gap:30px}
+  .part:last-of-type{border-bottom:1px solid var(--line)}
+  .part-index{font-family:var(--font-d)}
+  .part-num{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cognac);font-family:var(--font-b);margin-bottom:6px}
+  .part-level{font-family:var(--font-d);font-size:27px;font-weight:500;line-height:1.15;color:var(--bone)}
+  .part-body p{color:var(--stone);font-size:16.5px;max-width:56ch;margin-bottom:22px}
+  .dl-row{display:flex;gap:14px;flex-wrap:wrap}
+  .dl{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-b);font-weight:500;font-size:14.5px;letter-spacing:.03em;padding:12px 22px;border-radius:2px;border:1px solid var(--line);color:var(--bone);background:var(--card);transition:border-color .25s,transform .2s,background .25s;cursor:pointer}
+  .dl:hover{border-color:var(--cognac);color:var(--bone);transform:translateY(-1px)}
+  .dl .ed{color:var(--cognac);font-weight:600}
+  .dl svg{width:15px;height:15px;flex:none;stroke:var(--cognac)}
+
+  /* hub invitation */
+  .hub{margin:64px 0 20px}
+  .hub-card{background:var(--bg-2);border:1px solid var(--line);border-radius:6px;padding:52px 46px;position:relative;overflow:hidden}
+  .hub-card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 140% at 100% 0%,rgba(200,149,108,0.10),transparent 55%);pointer-events:none}
+  .hub-eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--cognac);margin-bottom:16px}
+  .hub-card h2{font-family:var(--font-d);font-weight:400;font-size:clamp(30px,4.4vw,42px);line-height:1.14;margin-bottom:18px;max-width:22ch}
+  .hub-card p{color:var(--stone);max-width:56ch;font-size:17px;margin-bottom:30px}
+  .btn{display:inline-block;font-family:var(--font-b);font-weight:500;font-size:15px;letter-spacing:.05em;padding:15px 32px;border-radius:2px;transition:transform .2s,background .25s,color .25s;border:none;cursor:pointer}
+  .btn-primary{background:var(--cognac);color:var(--bg)}
+  .btn-primary:hover{background:var(--cognac-2);color:var(--bg);transform:translateY(-1px)}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);margin-top:70px;padding:44px 0 60px;color:var(--ash);font-size:14px}
+  footer .wordmark{font-size:18px;margin-bottom:14px;display:block}
+  footer a{color:var(--stone)}
+  .cold-line{color:var(--stone);font-size:16px;max-width:60ch;margin-bottom:26px;line-height:1.6}
+  .cold-line b{color:var(--bone);font-weight:500}
+  .foot-meta{color:var(--ash)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+  @media (max-width:680px){
+    header{padding:66px 0 40px}
+    .part{grid-template-columns:1fr;gap:14px}
+    .part-index{display:flex;align-items:baseline;gap:12px}
+    .part-num{margin-bottom:0}
+    .hub-card{padding:36px 26px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="wordmark" href="/">Catalyst<span>.</span></a>
+    <a class="nav-cta" href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045b7ceee54c1fc7b50df29/form">Book a call</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="kicker reveal">The Fluency Series</div>
+    <h1 class="reveal">AI</h1>
+    <p class="sub reveal">Fluent, not fluent in hype. The three levels, free to take.</p>
+  </div>
+</header>
+
+<section class="context">
+  <div class="wrap reveal">
+    <p>The barrier was never intelligence &mdash; it&rsquo;s that AI arrived faster than the language to think about it clearly. So leaders nod along to the vendor, or freeze, when the job is to judge. These three short guides give you the words, the real story behind the promises, and the questions that keep AI accountable to you &mdash; rather than the other way round. <b>Read them in order; each one gives the next something to grip.</b></p>
+  </div>
+</section>
+
+<section class="parts">
+  <div class="wrap">
+    <div class="parts-head reveal">The three levels</div>
+
+    <div class="part reveal">
+      <div class="part-index">
+        <div class="part-num">Part One</div>
+        <div class="part-level">The Language</div>
+      </div>
+      <div class="part-body">
+        <p>Model, token, hallucination, agent &mdash; the words behind the hype, in plain English. Learn the vocabulary and the vendor demo stops being a spell and starts being something you can weigh.</p>
+        <div class="dl-row">
+          <a class="dl" href="/guides/ai/the-language-directors.pdf" download data-part="the-language" data-edition="directors">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span class="ed">Director&rsquo;s</span>&nbsp;Edition
+          </a>
+          <a class="dl" href="/guides/ai/the-language-founders.pdf" download data-part="the-language" data-edition="founders">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span class="ed">Founder&rsquo;s</span>&nbsp;Edition
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="part reveal">
+      <div class="part-index">
+        <div class="part-num">Part Two</div>
+        <div class="part-level">Reading the Story</div>
+      </div>
+      <div class="part-body">
+        <p>AI is confident even when it&rsquo;s wrong, and &ldquo;time saved&rdquo; can quietly cost you more than it returns. Learn to read what a tool is actually doing &mdash; and what it isn&rsquo;t &mdash; behind the headline promise.</p>
+        <div class="dl-row">
+          <a class="dl" href="/guides/ai/reading-the-story-directors.pdf" download data-part="reading-the-story" data-edition="directors">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span class="ed">Director&rsquo;s</span>&nbsp;Edition
+          </a>
+          <a class="dl" href="/guides/ai/reading-the-story-founders.pdf" download data-part="reading-the-story" data-edition="founders">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span class="ed">Founder&rsquo;s</span>&nbsp;Edition
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="part reveal">
+      <div class="part-index">
+        <div class="part-num">Part Three</div>
+        <div class="part-level">Asking the Questions</div>
+      </div>
+      <div class="part-body">
+        <p>When AI gets it wrong, who owns the consequence? The questions that keep a tool &mdash; and the people selling it &mdash; accountable, before you bet the business on it.</p>
+        <div class="dl-row">
+          <a class="dl" href="/guides/ai/asking-the-questions-directors.pdf" download data-part="asking-the-questions" data-edition="directors">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span class="ed">Director&rsquo;s</span>&nbsp;Edition
+          </a>
+          <a class="dl" href="/guides/ai/asking-the-questions-founders.pdf" download data-part="asking-the-questions" data-edition="founders">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span class="ed">Founder&rsquo;s</span>&nbsp;Edition
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hub">
+  <div class="wrap">
+    <div class="hub-card reveal">
+      <div class="hub-eyebrow">The Leadership Hub</div>
+      <h2>Prefer to listen, or see it on one page?</h2>
+      <p>The same three parts live in the Leadership Hub in whatever format suits &mdash; read the guide, listen on the drive, and take it in as a one-page infographic. Free to join; take it however you think best.</p>
+      <a class="btn btn-primary hub-btn" href="https://learn.catalystgrowthcoach.co.uk" data-hub="ai">Get the full experience</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="cold-line reveal">New here? These guides are drawn from <b>The Considered Leader</b> &mdash; a weekly note for leaders who&rsquo;d rather think than be told what to think. <a href="https://www.linkedin.com/newsletters/the-considered-leader-7467987988011048960/" class="newsletter-link" target="_blank" rel="noopener">Read it on LinkedIn</a>.</p>
+    <span class="wordmark">Catalyst<span style="color:var(--cognac)">.</span></span>
+    <p class="foot-meta">The Fluency Series is written by John Obidipe, Gallup-Certified CliftonStrengths Coach.<br>
+    <a href="mailto:coach@catalystgrowthcoach.co.uk">coach@catalystgrowthcoach.co.uk</a> &middot; <a href="https://catalystgrowthcoach.co.uk">catalystgrowthcoach.co.uk</a></p>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveals (same pattern as the rest of the site)
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // GA4 events: which level + edition people take, and Hub interest.
+  (function(){
+    document.querySelectorAll('a.dl').forEach(function(a){
+      a.addEventListener('click', function(){
+        gtag('event', 'guide_download', {
+          topic: 'ai',
+          part: a.dataset.part,
+          edition: a.dataset.edition
+        });
+      });
+    });
+    var hub = document.querySelector('.hub-btn');
+    if(hub){
+      hub.addEventListener('click', function(){
+        gtag('event', 'hub_click', { topic: 'ai', location: 'fluency_ai' });
+      });
+    }
+  })();
+</script>
+</body>
+</html>

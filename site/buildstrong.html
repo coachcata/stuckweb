@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ════ GOOGLE ANALYTICS (GA4) ════ -->
+<!-- GOOGLE ANALYTICS (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -12,18 +12,18 @@
   gtag('js', new Date());
   gtag('config', 'G-2Z17HSYFCV');
 </script>
-<!-- ════ END GOOGLE ANALYTICS ════ -->
+<!-- END GOOGLE ANALYTICS -->
 
-<title>BuildStrong — Strategic Thinking for the Business Owner | Catalyst</title>
+<title>BuildStrong, Building Somebody Who Can Hold Your Place | Catalyst</title>
 
-<meta name="description" content="Strategic thinking partnership for entrepreneurs, MDs and business owners building the thing they lead." />
+<meta name="description" content="For the owner who cannot step back because nobody in the business can hold his place. The owner learns to let go, the successor learns to step up." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.catalystgrowthcoach.co.uk/buildstrong" />
-<meta property="og:title" content="BuildStrong — Catalyst Growth Coaching" />
-<meta property="og:description" content="Strategic thinking partnership for entrepreneurs, MDs and business owners building the thing they lead." />
-<meta property="og:image" content="https://www.catalystgrowthcoach.co.uk/images/og-image.jpg" />
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/buildstrong" />
+<meta property="og:title" content="BuildStrong, Catalyst Growth Coaching" />
+<meta property="og:description" content="For the owner who cannot step back because nobody in the business can hold his place. The owner learns to let go, the successor learns to step up." />
+<meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://www.catalystgrowthcoach.co.uk/buildstrong" />
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/buildstrong" />
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
@@ -103,6 +103,10 @@
   section.scene { min-height: auto; padding: 14vh 6vw; position: relative; display: flex; }
   .folio { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ash); }
   .folio span { color: var(--cognac); }
+  .eyebrow {
+    font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; font-family: var(--font-b);
+  }
 
   .video-placeholder, .image-placeholder {
     width: 100%; height: 100%;
@@ -126,20 +130,17 @@
   .scene-feature-hero .feature-text {
     display: flex; flex-direction: column; gap: 2rem;
   }
-  .scene-feature-hero .eyebrow {
-    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--cognac); font-weight: 600;
-  }
   .scene-feature-hero .eyebrow em { font-style: italic; font-weight: 600; }
   .scene-feature-hero h1 {
     font-family: var(--font-d); font-weight: 400;
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    line-height: 0.95; letter-spacing: -0.015em; color: var(--bone);
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    line-height: 1.02; letter-spacing: -0.015em; color: var(--bone);
   }
+  .scene-feature-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
   .scene-feature-hero .lede {
     font-family: var(--font-d); font-style: italic; font-weight: 300;
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-    line-height: 1.5; color: var(--stone); max-width: 36ch;
+    line-height: 1.5; color: var(--stone); max-width: 40ch;
   }
   /* img-1935.jpg native 2000x1125 (16:9) */
   .scene-feature-hero .feature-image {
@@ -155,12 +156,19 @@
     background: var(--bg-2);
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   }
-  .scene-argument .folio { margin-bottom: 4rem; }
+  .scene-argument.plain { background: var(--bg); border: none; }
   .scene-argument .body {
     max-width: 60ch; margin: 0 auto;
     font-family: var(--font-d); font-weight: 300;
     font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.6; color: var(--stone);
   }
+  .scene-argument .body .eyebrow { margin-bottom: 1.4rem; display: block; }
+  .scene-argument .body h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+    line-height: 1.12; color: var(--bone); margin-bottom: 2.2rem;
+  }
+  .scene-argument .body h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
   .scene-argument .body p { margin-bottom: 1.4rem; }
   .scene-argument .body p:last-child { margin-bottom: 0; }
   .scene-argument .body em { font-style: italic; color: var(--bone); font-weight: 300; }
@@ -177,21 +185,23 @@
   }
 
   .scene-split { flex-direction: column; }
-  .scene-split .folio { margin-bottom: 4rem; }
   .scene-split .split-grid {
     display: grid; grid-template-columns: 3fr 2fr;
     gap: 5vw; align-items: center;
   }
+  .scene-split .split-text .eyebrow { display: block; margin-bottom: 1.4rem; }
   .scene-split .split-text h2 {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
-    line-height: 1.15; margin-bottom: 2rem;
+    font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+    line-height: 1.12; margin-bottom: 2rem;
   }
+  .scene-split .split-text h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
   .scene-split .split-text .body {
     font-family: var(--font-d); font-weight: 300;
     font-size: 1.2rem; line-height: 1.65; color: var(--stone);
   }
   .scene-split .split-text .body p { margin-bottom: 1.2rem; }
+  .scene-split .split-text .body p:last-child { margin-bottom: 0; }
   .scene-split .split-text .body em { color: var(--cognac); font-style: italic; font-weight: 400; }
   /* img-1989.jpg native 16:9 (landscape) */
   .scene-split .split-image {
@@ -203,17 +213,23 @@
   }
 
   .scene-lenses { flex-direction: column; }
-  .scene-lenses .head { margin-bottom: 6vh; max-width: 820px; }
-  .scene-lenses .head .folio { margin-bottom: 1.5rem; }
+  .scene-lenses .head { margin-bottom: 6vh; max-width: 900px; }
+  .scene-lenses .head .eyebrow { display: block; margin-bottom: 1.4rem; }
   .scene-lenses .head h2 {
     font-family: var(--font-d); font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15; max-width: 22ch;
+    font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+    line-height: 1.12; max-width: 26ch; margin-bottom: 1.6rem;
+  }
+  .scene-lenses .head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-lenses .head .head-sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); max-width: 44ch;
   }
   .lenses-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
   }
+  .lenses-grid.two-up { grid-template-columns: repeat(2, 1fr); }
   .lens {
     padding: 3rem 2rem 3.5rem;
     border-right: 1px solid var(--line);
@@ -232,6 +248,11 @@
     font-size: 0.98rem; color: var(--stone); line-height: 1.7; margin-top: 0.5rem;
   }
   .lens .detail em { font-style: italic; color: var(--cognac); }
+  .lenses-note {
+    margin-top: 3rem; max-width: 60ch;
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; line-height: 1.6; color: var(--stone);
+  }
 
   .scene-quotes {
     background: var(--bg-2);
@@ -251,8 +272,8 @@
   .scene-quotes .quotes-head h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
   .quotes-grid {
     display: grid; gap: 2rem;
-    grid-template-columns: minmax(0, 640px);
-    justify-content: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
   }
   .quote-card {
     padding: 2.5rem 2rem;
@@ -270,12 +291,18 @@
     font-family: var(--font-d); font-style: italic; font-weight: 300;
     font-size: 1.2rem; line-height: 1.55; color: var(--bone);
   }
+  .quote-card blockquote p { margin-bottom: 1.1rem; }
+  .quote-card blockquote p:last-child { margin-bottom: 0; }
   .quote-card blockquote em {
     font-style: italic; color: var(--cognac); font-weight: 400;
+  }
+  .quote-card blockquote strong {
+    font-style: normal; font-weight: 500; color: var(--cognac);
   }
   .quote-card .attr {
     display: flex; flex-direction: column; gap: 0.3rem;
     padding-top: 1.5rem; border-top: 1px solid var(--line);
+    margin-top: auto;
   }
   .quote-card .attr .name {
     font-size: 0.92rem; color: var(--bone); font-weight: 500;
@@ -289,13 +316,14 @@
     flex-direction: column; justify-content: center; text-align: center;
     align-items: center;
   }
-  .scene-one-thing .folio { margin-bottom: 4rem; }
+  .scene-one-thing .eyebrow { margin-bottom: 2.5rem; }
   .scene-one-thing .one-thing {
     font-family: var(--font-d); font-weight: 300; font-style: italic;
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     line-height: 1.25; color: var(--bone);
     max-width: 26ch; margin-bottom: 2.5rem;
   }
+  .scene-one-thing .one-thing em { font-style: italic; color: var(--cognac); font-weight: 400; }
   .scene-one-thing .support {
     font-family: var(--font-b); font-size: 1.05rem;
     line-height: 1.7; color: var(--stone); max-width: 48ch;
@@ -305,7 +333,7 @@
     flex-direction: column; justify-content: center; align-items: flex-start;
     padding: 14vh 6vw;
   }
-  .scene-invitation .folio { margin-bottom: 3rem; }
+  .scene-invitation .eyebrow { display: block; margin-bottom: 3rem; }
   .scene-invitation .lede {
     font-family: var(--font-d); font-weight: 300; font-style: italic;
     font-size: clamp(1.8rem, 3.6vw, 2.6rem);
@@ -346,7 +374,6 @@
   }
   footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
   footer .brand span { color: var(--cognac); }
-  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
   footer .col h4 {
     font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
@@ -363,10 +390,6 @@
     color: var(--ash);
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
   }
-  footer .fine .signoff {
-    font-family: var(--font-d); font-style: italic;
-    text-transform: none; letter-spacing: 0; color: var(--stone); font-size: 0.9rem;
-  }
 
   @media (max-width: 900px) {
     nav.top { padding: 1rem 5vw; }
@@ -375,17 +398,32 @@
     nav.top .has-dropdown > a::after { display: none; }
     nav.top .dropdown { display: none; }
 
+    section.scene { padding: 10vh 6vw; }
+
     .scene-feature-hero .feature-grid { grid-template-columns: 1fr; gap: 3rem; }
     .scene-feature-hero .feature-image { order: -1; max-height: 60vh; }
     .scene-split .split-grid { grid-template-columns: 1fr; gap: 3rem; }
     .scene-split .split-image { max-height: 70vh; }
 
-    .lenses-grid { grid-template-columns: 1fr; }
-    .lens { border-right: none; border-bottom: 1px solid var(--line); }
+    .lenses-grid, .lenses-grid.two-up { grid-template-columns: 1fr; }
+    .lens { border-right: none; border-bottom: 1px solid var(--line); padding: 2.5rem 0 3rem; }
     .lens:last-child { border-bottom: none; }
+
+    .quotes-grid { grid-template-columns: 1fr; }
+    .quote-card { padding: 2rem 1.5rem; }
 
     footer { grid-template-columns: 1fr; gap: 2.5rem; }
     footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  }
+
+  /* Narrow phones: keep the wordmark on one line and the CTA on screen */
+  @media (max-width: 600px) {
+    nav.top { padding: 0.9rem 5vw; gap: 0.8rem; }
+    nav.top .brand { font-size: 0.95rem; white-space: nowrap; }
+    nav.top ul { gap: 0.9rem; flex-shrink: 0; }
+    nav.top ul li:nth-child(3) { display: none; }
+    nav.top ul a { font-size: 0.62rem; letter-spacing: 0.14em; }
+    nav.top ul a.cta { padding: 0.55rem 0.9rem; }
   }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -412,13 +450,13 @@
   </ul>
 </nav>
 
-<!-- ════ SCENE 01 — Feature Hero ════ -->
+<!-- SCENE 01, Feature Hero -->
 <section class="scene scene-feature-hero">
   <div class="feature-grid">
     <div class="feature-text">
-      <div class="eyebrow">A feature for <em>Founders, MDs, and Owners</em></div>
-      <h1>BuildStrong.</h1>
-      <p class="lede">For the leader who is also building the business. Where the strategic question and the operational reality are the same thing.</p>
+      <div class="eyebrow">BuildStrong</div>
+      <h1>The business runs. It runs <em>through you</em>.</h1>
+      <p class="lede">You built it, and every hard call still stops at your desk. Not because the work is difficult, but because there is nobody else who can make those calls the way you would. BuildStrong is the work of building somebody who can.</p>
     </div>
     <div class="feature-image">
       <img src="/images/img-1935.jpg" alt="John and a business owner at a portable whiteboard in a hospitality setting">
@@ -426,26 +464,26 @@
   </div>
 </section>
 
-<!-- ════ SCENE 02 — The Problem ════ -->
+<!-- SCENE 02, The Problem -->
 <section class="scene scene-argument">
-  <div class="folio">01 · <span>The Problem</span></div>
   <div class="body">
-    <p class="lede"><em>You're running a business that exists because you built it. That's not the problem.</em></p>
-    <p>The problem is that the business now needs you to be in the <em class="seat">strategic seat</em> and the <em class="seat">operational seat</em> and the <em class="seat">founder seat</em> — and there's no time to sit in any of them properly.</p>
-    <p>You make decisions at speed because there's no other speed available. You over-rotate on whichever fire is loudest. The thing you most need to think about — the long view — is the thing that's hardest to actually look at.</p>
-    <p class="punchline"><em>That's the gap BuildStrong is built around.</em></p>
+    <span class="eyebrow">The Problem</span>
+    <h2>You have written the processes down. They <em>still ring you</em>.</h2>
+    <p>Everything that still reaches you is a judgement call. The client threatening to leave. The two bad options. The quote that does not fit the price list. None of it can be documented, because it was never the same situation twice.</p>
+    <p>That is the part a system cannot hold. It has to be built in a person, by exposure and correction, over time.</p>
   </div>
 </section>
 
-<!-- ════ SCENE 03 — The Work ════ -->
+<!-- SCENE 03, What Usually Happens Instead -->
 <section class="scene scene-split">
-  <div class="folio">02 · <span>The Work</span></div>
   <div class="split-grid">
     <div class="split-text">
-      <h2>A BuildStrong engagement runs differently from the corporate version because owners run differently.</h2>
+      <span class="eyebrow">What usually happens instead</span>
+      <h2>You have tried to hire it <em>four times</em>.</h2>
       <div class="body">
-        <p>Sessions happen when the business needs them — not on a quarterly calendar. The work moves between altitudes because the work <em>of being an owner</em> moves between altitudes. One week we're working on the next ten-year question; the next we're working on the hire that's quietly breaking the team.</p>
-        <p>The session is the space where the founder-seat, the strategic-seat, and the operational-seat are all the same chair, and they get to talk to each other.</p>
+        <p>Different names, different years, the same role. One you did not offer to. One turned you down. One came and left within a year. The conclusion each time was about the market, that the good ones are expensive and stay where they are.</p>
+        <p>Every one of them was fine at week six. Something happens around month three, which is when a senior person stops learning how things are done here and starts deciding things.</p>
+        <p>Hiring is a way of buying somebody who already knows how you decide. That is not on a CV and it does not arrive during a probation period.</p>
       </div>
     </div>
     <div class="split-image">
@@ -454,43 +492,87 @@
   </div>
 </section>
 
-<!-- ════ SCENE 04 — The Lenses ════ -->
-<section class="scene scene-lenses">
-  <div class="head">
-    <div class="folio">03 · <span>The Lenses</span></div>
-    <h2>Three frames the work moves through.</h2>
-  </div>
-
-  <div class="lenses-grid">
-    <div class="lens">
-      <span class="num">i.</span>
-      <h3>The owner altitude.</h3>
-      <p class="detail">Owners think differently from corporate leaders because owners <em>are</em> the business in a way corporate leaders aren't. The session respects that.</p>
-    </div>
-    <div class="lens">
-      <span class="num">ii.</span>
-      <h3>The CliftonStrengths lens.</h3>
-      <p class="detail">A profile of how you actually operate. Used to make the business fit the founder — not the other way around. Most founders build companies that demand they be people they aren't. We use the lens to stop that.</p>
-    </div>
-    <div class="lens">
-      <span class="num">iii.</span>
-      <h3>The FITT16 lens.</h3>
-      <p class="detail">A 16-archetype model built from your CliftonStrengths Full 34. It maps the <em>drive</em> underneath the strengths, so the business fits the founder, not just the operator.</p>
-    </div>
+<!-- SCENE 04, The Part Nobody Says -->
+<section class="scene scene-argument">
+  <div class="body">
+    <span class="eyebrow">The part nobody says</span>
+    <h2>Not everyone is good at <em>developing others</em>.</h2>
+    <p>Being excellent at something makes you worse at teaching it, not better. When you have done a thing ten thousand times you stop seeing the steps, you see the answer. So watching somebody work it out slowly is genuinely difficult, and you step in, every time with good intentions.</p>
+    <p>Developing people is a specialism with its own techniques and its own discipline. Nobody ever taught it to you. You were taught the work, you got good at the work, and one day you had staff.</p>
+    <p>That is a gap rather than a flaw, and gaps close.</p>
   </div>
 </section>
 
-<!-- ════ SCENE 04b — In Their Words ════ -->
+<!-- SCENE 05, The Work -->
+<section class="scene scene-lenses">
+  <div class="head">
+    <span class="eyebrow">The work</span>
+    <h2>The owner learns to let go. The successor learns to <em>step up</em>.</h2>
+    <p class="head-sub">Two halves, and they run together rather than in sequence.</p>
+  </div>
+
+  <div class="lenses-grid two-up">
+    <div class="lens">
+      <span class="num">i.</span>
+      <h3>Plan and strategise with the owner</h3>
+      <p class="detail">What the successor needs to be able to do, and what he cannot do yet. Then what gets handed over and in what order, what you keep deliberately rather than by habit, and what happens the first time he gets one wrong. That last one is the step everybody skips and it decides whether the rest holds.</p>
+    </div>
+    <div class="lens">
+      <span class="num">ii.</span>
+      <h3>Build and stretch the successor</h3>
+      <p class="detail">Exposure, correction, proof. Live decisions worked through at the board, scenario testing, off stage practice for on stage performance, and the work of merging his own values with the role so that what comes out is his rather than an imitation of you.</p>
+    </div>
+  </div>
+
+  <p class="lenses-note">We start with assessments that make each of you legible to the other, and there are regular check ins with you throughout, because the hardest part of this is usually not his development.</p>
+</section>
+
+<!-- SCENE 06, Two Phases -->
+<section class="scene scene-argument">
+  <div class="body">
+    <span class="eyebrow">Two phases</span>
+    <h2>First somebody who can hold the place. Then somebody you could <em>leave in charge</em>.</h2>
+    <p>Holding the place means the business runs for a fortnight without you and nothing needs deciding twice. That takes eighteen months to two years, and it is the part most owners actually want.</p>
+    <p>What comes after that is a different conversation, and it is one worth having deliberately rather than drifting into.</p>
+  </div>
+</section>
+
+<!-- SCENE 07, When This Is Not the Answer -->
+<section class="scene scene-argument plain">
+  <div class="body">
+    <span class="eyebrow">When this is not the answer</span>
+    <h2>Sometimes it is genuinely <em>process</em>.</h2>
+    <p>If nothing has ever been written down and you are answering the same question forty times a week, a person will not fix that. If the work is repeatable with clear rules, that should be a system rather than somebody's judgement. And if there is nobody in the business who could plausibly hold the place, this is a hiring conversation rather than this one.</p>
+    <p>I would rather say so in the first hour than six months in.</p>
+  </div>
+</section>
+
+<!-- SCENE 08, In Their Words -->
 <section class="scene scene-quotes">
   <div class="quotes-head">
     <div class="label">In Their Words</div>
-    <h2>From an owner who's worked this <em>way</em>.</h2>
+    <h2>From owners who have worked this <em>way</em>.</h2>
   </div>
 
   <div class="quotes-grid">
     <div class="quote-card">
       <span class="mark">"</span>
-      <blockquote>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive mistakes in two previous <em>businesses</em>.</blockquote>
+      <blockquote>
+        <p>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects, and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</p>
+        <p>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
+        <p>Thanks, John.</p>
+      </blockquote>
+      <div class="attr">
+        <span class="name">Mark Schmull</span>
+        <span class="meta">MD, Arrow Planning</span>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <span class="mark">"</span>
+      <blockquote>
+        <p>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive mistakes in two previous <em>businesses</em>.</p>
+      </blockquote>
       <div class="attr">
         <span class="name">Stuart Ploughman</span>
         <span class="meta">Serial Entrepreneur · <span class="prog">BuildStrong</span></span>
@@ -499,19 +581,19 @@
   </div>
 </section>
 
-<!-- ════ SCENE 05 — One Thing Worth Knowing ════ -->
+<!-- SCENE 09, What It Leads To -->
 <section class="scene scene-one-thing">
-  <div class="folio">04 · <span>One Thing Worth Knowing</span></div>
-  <p class="one-thing">Most founders are accidentally the bottleneck in their own business.</p>
-  <p class="support">Not because they're bad at it. Because the business needs them to be three people, and they're trying to be three people in the same hour. The work is on what changes when only one of those people has to be in the room.</p>
+  <span class="eyebrow">What it leads to</span>
+  <p class="one-thing">Two weeks away without the <em>phone going</em>.</p>
+  <p class="support">Not stepping back entirely. Most owners do not want that and it is not the goal. Being able to leave, and having proof that the business is not entirely load bearing on one person.</p>
 </section>
 
-<!-- ════ SCENE 06 — The Invitation ════ -->
+<!-- SCENE 10, The Invitation -->
 <section class="scene scene-invitation">
-  <div class="folio">05 · <span>The Invitation</span></div>
+  <span class="eyebrow">The Invitation</span>
   <p class="lede"><em>The fastest way to know whether BuildStrong fits is to be at the board for an hour.</em></p>
   <p class="sub">You'll know whether the practice is for you. The hour is enough.</p>
-  <a href="/contact" class="button">Book a Whiteboard Session</a>
+  <a href="/the-handover" class="button">Book an hour at the board</a>
 
   <p class="stepping-further">
     <em>Wondering what this looks like when the relationship deepens?</em>
@@ -523,7 +605,6 @@
 <footer>
   <div>
     <div class="brand"><span>Catalyst</span> Growth Coaching</div>
-    <div class="tag">No need to get stuck.</div>
   </div>
   <div class="col">
     <h4>Programmes</h4>
@@ -535,12 +616,13 @@
     <h4>Read</h4>
     <a href="/about">About John</a>
     <a href="/in-practice">In Practice</a>
+    <a href="/hold-the-place">Hold the Place</a>
+    <a href="/hold-the-place">Hold the Place</a>
     <a href="/going-further">Going Further</a>
     <a href="/contact">Contact</a>
   </div>
   <div class="fine">
     <span>© Catalyst Growth Coaching, London · Est. 2024</span>
-    <span class="signoff">Don't get stuck.</span>
   </div>
 </footer>
 
