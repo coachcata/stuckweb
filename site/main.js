@@ -1,4 +1,4 @@
-/* Catalyst Growth Coaching — Shared JS */
+/* Catalyst Growth Coaching, Shared JS */
 
 (function () {
   'use strict';
