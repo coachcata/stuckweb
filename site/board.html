@@ -54,6 +54,8 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 .wm span{color:var(--cog)}
 .navr{display:flex;align-items:center;gap:1.4rem}
 .navr .st{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);font-weight:600}
+.navr .backlink{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);font-weight:600;text-decoration:none;transition:.25s}
+.navr .backlink:hover{color:var(--cog)}
 .navcta{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cog);text-decoration:none;font-weight:700;border:1px solid var(--brs);padding:.65rem 1.2rem;border-radius:2px}
 /* hero */
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
@@ -148,12 +150,12 @@ footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:
 .board{padding:1.5rem 1.3rem}.board .ln{grid-template-columns:42px 1fr 40px;gap:.6rem}}
 /* At phone width the nav status line collides with the wordmark and forces the
    CTA to wrap. Drop it here — the same line is in the footer. */
-@media(max-width:640px){.navr .st{display:none}.wm{font-size:.95rem}
+@media(max-width:640px){.navr .st,.navr .backlink{display:none}.wm{font-size:.95rem}
 .navcta{padding:.55rem .95rem;font-size:.6rem;white-space:nowrap}}
 </style></head><body>
 
-<nav><div class="wrap"><a href="#" class="wm">at.<span>theboard</span></a>
-<div class="navr"><div class="st">Circle One full &middot; Circle Two opens January</div><a href="#book" class="navcta">Book the free hour</a></div></div></nav>
+<nav><div class="wrap"><a href="/board" class="wm">at.<span>theboard</span></a>
+<div class="navr"><div class="st">Circle One full &middot; Circle Two opens January</div><a href="/" class="backlink">Catalyst Growth Coaching</a><a href="#book" class="navcta">Book the free hour</a></div></div></nav>
 
 <div class="hero"><div class="bg"></div><div class="veil"></div><div class="wrap">
 <div class="eb">For men who own and run a business</div>
@@ -390,15 +392,38 @@ footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M17 17l14 14M31 17L17 31"/></svg></div><h3>No pitch afterwards</h3><p>Free whether you join or not. No follow-up sequence.</p></div>
 </div>
 <p style="margin-top:1.8rem">I say what I think as we go rather than saving it up for the end. That includes telling you if what you have is a process problem rather than a judgement one, in which case I will say so and send you off to fix the process. That happens, and it costs me the work, which is fine.</p>
-<div class="form">
-<label>Name</label><input type="text">
-<label>Email</label><input type="email">
-<label>Phone</label><input type="tel"><div class="hint">So I can call you rather than start an email chain.</div>
-<label>What is currently unresolved?</label><textarea></textarea>
-<div style="margin-top:1.8rem"><a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6040903c2c6afaa004b25015/schedule" class="btn">Book the hour</a></div>
-</div>
+<!-- Netlify Forms backend. The form is registered at deploy time via data-netlify;
+     submissions land in the Netlify dashboard (Forms &rarr; board) and trigger any
+     email notifications configured there. The action URL doubles as the success
+     page for the native submit. -->
+<form class="form" id="board-form" name="board" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/board.html?success=true">
+<input type="hidden" name="form-name" value="board">
+<input type="hidden" name="source-page" value="at.theboard">
+<p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+<label for="bf-name">Name</label><input id="bf-name" name="name" type="text" required autocomplete="name">
+<label for="bf-email">Email</label><input id="bf-email" name="email" type="email" required autocomplete="email">
+<label for="bf-phone">Phone</label><input id="bf-phone" name="phone" type="tel" required autocomplete="tel"><div class="hint">So I can call you rather than start an email chain.</div>
+<label for="bf-msg">What is currently unresolved?</label><textarea id="bf-msg" name="message" required></textarea>
+<div style="margin-top:1.8rem"><button type="submit" class="btn">Send this and I will call you</button></div>
+<p class="hint" style="margin-top:1.1rem">Or skip the form and <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6040903c2c6afaa004b25015/schedule" style="color:var(--cog)">put the hour straight in the diary</a>.</p>
+</form>
+<div class="pull" id="board-confirmation" style="display:none"><p>That's with me. I will call you on the number you left, usually within a day or two, and we will find an hour that works.</p></div>
 </div></section>
 
 <footer><div class="wrap"><div class="wm">at.<span>theboard</span></div>
-<div class="sm">Run by John Obidipe &middot; Milton Keynes &middot; London coming soon &middot; Circle Two opens January</div></div></footer>
+<div class="sm">Run by John Obidipe &middot; Milton Keynes &middot; London coming soon &middot; Circle Two opens January</div>
+<div class="sm" style="margin-top:1.1rem"><a href="/" style="color:var(--cog);text-decoration:none">Catalyst Growth Coaching</a></div></div></footer>
+
+<script>
+  (function () {
+    // Netlify redirects back with ?success=true after a native submit.
+    if (new URLSearchParams(location.search).get('success') !== 'true') return;
+    var form = document.getElementById('board-form');
+    var confirmation = document.getElementById('board-confirmation');
+    if (!form || !confirmation) return;
+    form.style.display = 'none';
+    confirmation.style.display = '';
+    confirmation.scrollIntoView({ block: 'center' });
+  })();
+</script>
 </body></html>
