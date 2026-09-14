@@ -20,3 +20,63 @@
   to = "https://catalystgrowthcoach.co.uk/:splat"
   status = 301
   force = true
+
+# Repository files that live in the publish root but are not site content.
+# Netlify serves anything in the publish directory, so they are 404'd here.
+# force = true because the files do exist. Mirrored in _redirects.
+
+[[redirects]]
+  from = "/.mcp.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_headers"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_redirects"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.github/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_backup-pre-editorial-rebuild/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Security headers on every response. Mirrored in _headers.
+# No CSP yet: pages carry inline scripts and load Google Fonts, so a useful
+# policy needs per-page nonces or hashes first. HSTS deliberately omits
+# includeSubDomains: portal. and learn. are separate properties.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    Strict-Transport-Security = "max-age=31536000"

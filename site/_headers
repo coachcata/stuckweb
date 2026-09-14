@@ -1,0 +1,17 @@
+# Security headers for every response. Mirrored in netlify.toml [[headers]]
+# so the two cannot diverge, same as the redirects.
+#
+# No Content-Security-Policy yet: every page carries inline scripts (GA4,
+# form confirmation) and loads Google Fonts, so a useful CSP needs nonces
+# or hashes on each page first. Add it as a deliberate piece of work, not
+# a header dropped in here.
+#
+# HSTS is set without includeSubDomains on purpose: portal. and learn.
+# are separate properties and this file cannot vouch for them.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000
