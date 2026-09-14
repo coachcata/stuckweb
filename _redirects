@@ -1,2 +1,13 @@
 https://www.catalystgrowthcoach.co.uk/*  https://catalystgrowthcoach.co.uk/:splat  301!
 http://www.catalystgrowthcoach.co.uk/*   https://catalystgrowthcoach.co.uk/:splat  301!
+
+# Repository files that live in the publish root but are not site content.
+# Netlify serves anything in the publish directory, so they are 404'd here.
+# The ! forces the rule even though the file exists.
+/.mcp.json                         /404.html  404!
+/CLAUDE.md                         /404.html  404!
+/netlify.toml                      /404.html  404!
+/_headers                          /404.html  404!
+/_redirects                        /404.html  404!
+/.github/*                         /404.html  404!
+/_backup-pre-editorial-rebuild/*   /404.html  404!
