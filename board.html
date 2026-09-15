@@ -25,9 +25,9 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://catalystgrowthcoach.co.uk/board" />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<!-- at.theboard's own icons, from its design system: mark below 56px, stack above -->
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo-at-theboard-mark-32.png" />
+<link rel="apple-touch-icon" href="/images/logo-at-theboard-stack-256.png" />
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@0,400;0,500;0,600;0,700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
 <style>
@@ -50,8 +50,13 @@ strong{color:var(--bone);font-weight:600}
 .btn:hover{background:var(--cogl);transform:translateY(-2px)}
 nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(12,12,14,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--br);padding:.9rem 0}
 nav .wrap{display:flex;justify-content:space-between;align-items:center}
-.wm{font-size:1.02rem;font-weight:700;letter-spacing:-.01em;color:var(--bone);text-decoration:none}
-.wm span{color:var(--cog)}
+/* Wordmark is the at.theboard lockup (PNG, per the design-system README:
+   the SVGs carry live DM Sans text that an <img> cannot reach). Below 640px
+   the lockup gives way to the square mark, the README's small-size fallback. */
+.wm{display:inline-flex;align-items:center;text-decoration:none;line-height:0}
+.wm img{display:block;height:34px;width:auto}
+.wm .mk{display:none;height:40px;width:40px}
+footer .wm img{height:30px}
 .navr{display:flex;align-items:center;gap:1.4rem}
 .navr .st{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);font-weight:600}
 .navr .backlink{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);font-weight:600;text-decoration:none;transition:.25s}
@@ -150,11 +155,12 @@ footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:
 .board{padding:1.5rem 1.3rem}.board .ln{grid-template-columns:42px 1fr 40px;gap:.6rem}}
 /* At phone width the nav status line collides with the wordmark and forces the
    CTA to wrap. Drop it here — the same line is in the footer. */
-@media(max-width:640px){.navr .st,.navr .backlink{display:none}.wm{font-size:.95rem}
+@media(max-width:1100px){.navr .st{display:none}}
+@media(max-width:640px){.navr .backlink{display:none}.wm .lk{display:none}.wm .mk{display:block}
 .navcta{padding:.55rem .95rem;font-size:.6rem;white-space:nowrap}}
 </style></head><body>
 
-<nav><div class="wrap"><a href="/board" class="wm">at.<span>theboard</span></a>
+<nav><div class="wrap"><a href="/board" class="wm"><img class="lk" src="/images/logo-at-theboard-lockup-512.png" srcset="/images/logo-at-theboard-lockup-512.png 1x, /images/logo-at-theboard-lockup-1024.png 2x" alt="at.theboard" width="311" height="39"><img class="mk" src="/images/logo-at-theboard-mark-88.png" alt="at.theboard" width="88" height="88"></a>
 <div class="navr"><div class="st">Circle One full &middot; Circle Two opens January</div><a href="/" class="backlink">Catalyst Growth Coaching</a><a href="#book" class="navcta">Book the free hour</a></div></div></nav>
 
 <div class="hero"><div class="bg"></div><div class="veil"></div><div class="wrap">
@@ -410,7 +416,7 @@ footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:
 <div class="pull" id="board-confirmation" style="display:none"><p>That's with me. I will call you on the number you left, usually within a day or two, and we will find an hour that works.</p></div>
 </div></section>
 
-<footer><div class="wrap"><div class="wm">at.<span>theboard</span></div>
+<footer><div class="wrap"><div class="wm"><img src="/images/logo-at-theboard-lockup-512.png" srcset="/images/logo-at-theboard-lockup-512.png 1x, /images/logo-at-theboard-lockup-1024.png 2x" alt="at.theboard" width="311" height="39"></div>
 <div class="sm">Run by John Obidipe &middot; Milton Keynes &middot; London coming soon &middot; Circle Two opens January</div>
 <div class="sm" style="margin-top:1.1rem"><a href="/" style="color:var(--cog);text-decoration:none">Catalyst Growth Coaching</a></div></div></footer>
 
