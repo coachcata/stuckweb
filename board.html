@@ -16,11 +16,11 @@
 
 <title>at.theboard &middot; five men, one circle, twelve months</title>
 
-<meta name="description" content="A twelve month circle for five men who own and run their business. Twice a month in Milton Keynes, a walk and a whiteboard, run by John Obidipe." />
+<meta name="description" content="A twelve month circle for five men who own and run their business. Twice a month in Milton Keynes, a walk and a whiteboard, run by John Obidipe. Selecting the first five." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://catalystgrowthcoach.co.uk/board" />
 <meta property="og:title" content="at.theboard, five men, one circle, twelve months" />
-<meta property="og:description" content="A twelve month circle for five men who own and run their business. Twice a month in Milton Keynes, a walk and a whiteboard, run by John Obidipe." />
+<meta property="og:description" content="A twelve month circle for five men who own and run their business. Twice a month in Milton Keynes, a walk and a whiteboard, run by John Obidipe. Selecting the first five." />
 <meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/img-1990.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://catalystgrowthcoach.co.uk/board" />
@@ -46,26 +46,39 @@ p{color:var(--stone);font-size:1.02rem;margin-bottom:1.1rem;max-width:62ch}
 p.lead{font-size:1.18rem;color:var(--bone);font-weight:500}
 strong{color:var(--bone);font-weight:600}
 .num{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--cog);letter-spacing:-.03em;line-height:.9}
-.btn{display:inline-block;padding:1.05rem 2.4rem;background:var(--cog);color:var(--ob);font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:.25s}
+.btn{display:inline-block;padding:1.05rem 2.4rem;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;background:var(--cog);color:var(--ob);font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:.25s}
 .btn:hover{background:var(--cogl);transform:translateY(-2px)}
-nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(12,12,14,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--br);padding:.9rem 0}
+nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(12,12,14,.94);transition:background .3s,border-color .3s;backdrop-filter:blur(18px);border-bottom:1px solid var(--br);padding:.9rem 0}
 nav .wrap{display:flex;justify-content:space-between;align-items:center}
-/* Wordmark is the at.theboard lockup (PNG, per the design-system README:
-   the SVGs carry live DM Sans text that an <img> cannot reach). Below 640px
-   the lockup gives way to the square mark, the README's small-size fallback. */
-.wm{display:inline-flex;align-items:center;text-decoration:none;line-height:0}
-.wm img{display:block;height:34px;width:auto}
+.wm{display:flex;align-items:center;text-decoration:none}
+.wm img{height:19px;display:block}
 .wm .mk{display:none;height:40px;width:40px}
-footer .wm img{height:30px}
+.wm span{color:var(--cog)}
 .navr{display:flex;align-items:center;gap:1.4rem}
 .navr .st{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);font-weight:600}
-.navr .backlink{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);font-weight:600;text-decoration:none;transition:.25s}
-.navr .backlink:hover{color:var(--cog)}
 .navcta{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cog);text-decoration:none;font-weight:700;border:1px solid var(--brs);padding:.65rem 1.2rem;border-radius:2px}
 /* hero */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background:url(/images/img-1990.jpg) center/cover;opacity:.46}
-.hero .veil{position:absolute;inset:0;background:linear-gradient(95deg,var(--ob) 20%,rgba(12,12,14,.74) 58%,rgba(12,12,14,.35))}
+.hero{min-height:88vh;display:flex;align-items:center;position:relative;background:var(--bone);padding:8.5rem 0 4rem;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(/images/img-1990.jpg) center/cover;opacity:.72;filter:saturate(.9)}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,var(--bone) 2%,rgba(242,240,236,.96) 30%,rgba(242,240,236,.80) 52%,rgba(242,240,236,.28) 82%,rgba(242,240,236,.08) 100%)}
+.hero:after{content:'';position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(180deg,rgba(242,240,236,0),rgba(242,240,236,.75) 60%,var(--bone))}
+.hero .wrap{position:relative;z-index:2;padding-top:0}
+.hero p{max-width:44ch}
+.hero h1{max-width:17ch}
+.herods{position:absolute;left:32px;right:32px;bottom:1.6rem;display:flex;justify-content:space-between;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#8A8782;font-weight:600;max-width:1180px;margin:0 auto}
+.herods span:last-child{color:#A8774E;font-weight:700}
+.hero h1,.hero h2,.hero p.lead{color:var(--ob)}
+.hero p{color:#5A5752}
+.hero .eb{color:#A8774E}
+.hero em{color:#A8774E}
+.hero .rec{background:#E7E4DD;border:1px solid rgba(12,12,14,.1)}
+.hero .rec div{border-right:1px solid rgba(12,12,14,.1)}
+.hero .rec b{color:#A8774E}
+.hero .rec span{color:#8A8782}
+nav{background:rgba(242,240,236,.94);border-bottom:1px solid rgba(12,12,14,.12)}
+.navr .st{color:#8A8782}
+.navcta{color:#A8774E;border-color:rgba(168,119,78,.45)}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
 .hero .wrap{position:relative;padding-top:5rem}
 .hero h1{max-width:17ch}
 .hero p{max-width:46ch}
@@ -149,21 +162,75 @@ footer .wm img{height:30px}
 .form .hint{font-size:.8rem;color:var(--ash);margin-top:.35rem}
 footer{padding:3.5rem 0 2.8rem;border-top:1px solid var(--br);text-align:center}
 footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-top:.7rem}
+
+/* ============ THE THRESHOLD ============
+   Obsidian hero (John / Catalyst site), bone from the first section (the club). */
+.light{background:var(--bone);color:var(--ob)}
+.light section{border-top:1px solid rgba(12,12,14,.12)}
+.light h1,.light h2,.light h3{color:var(--ob)}
+.light p{color:#5A5752}
+.light p.lead{color:var(--ob)}
+.light strong{color:var(--ob)}
+.light .eb{color:#A8774E}
+.light em{color:#A8774E}
+.light .card{background:#E7E4DD;border:1px solid rgba(12,12,14,.10)}
+.light .card:hover{border-color:rgba(168,119,78,.42)}
+.light .card p{color:#6B6862}
+.light .card svg,.light .rail svg{stroke:#A8774E}
+.light .rail .r{background:#E7E4DD;border:1px solid rgba(12,12,14,.10)}
+.light .rail .r:hover{border-color:rgba(168,119,78,.42)}
+.light .rail .t{color:var(--ob)}
+.light .rail .m{color:#A8774E}
+.light .step{border-bottom:1px solid rgba(12,12,14,.12)}
+.light .step .n{color:#A8774E}
+.light .step .t{color:#6B6862}
+.light .more{border-top:1px solid rgba(12,12,14,.12)}
+.light .more .ml{color:#6B6862}
+.light .row{border-bottom:1px solid rgba(12,12,14,.10)}
+.light .row .l{color:#8A8782}.light .row .r{color:var(--ob)}
+.light .rowh{border-bottom:1px solid rgba(168,119,78,.45)}
+.light .rowh .a{color:#8A8782}.light .rowh .b{color:#A8774E}
+.light .pull{background:#E7E4DD;border-left:2px solid var(--cog)}
+.light .pull p{color:var(--ob)}
+.light .vsb{background:#E7E4DD;border:1px solid rgba(12,12,14,.10)}
+.light .vsb.hi{border-color:rgba(168,119,78,.45)}
+.light .vsb .lab{color:#8A8782}.light .vsb.hi .lab{color:#A8774E}
+.light .vsb li{color:#5A5752;border-top:1px solid rgba(12,12,14,.08)}
+.light .vsb.hi li{color:var(--ob)}
+.light .facts div{border-bottom:1px solid rgba(12,12,14,.10);color:#8A8782}
+.light .facts div b{color:var(--ob)}
+.light .chip{border:1px solid rgba(12,12,14,.14);color:#5A5752}
+.light .chip.no{color:#9A9791}
+.light .form label{color:#A8774E}
+.light .form input,.light .form textarea{background:#E7E4DD;border:1px solid rgba(12,12,14,.12);color:var(--ob)}
+.light .form .hint{color:#8A8782}
+.light footer{border-top:1px solid rgba(12,12,14,.12)}
+.light footer .wm{color:var(--ob)}
+footer .wm{justify-content:center}
+.light footer .sm{color:#8A8782}
+/* the record block stays an obsidian tile sitting on bone */
+.light .board{background:var(--ob);border:1px solid rgba(12,12,14,.2)}
+.light .board .ln span{color:var(--bone)}
+.light .board .ln b{color:var(--bone)}
 @media(max-width:860px){section{padding:3.8rem 0}.wrap{padding:0 20px}.rec{grid-template-columns:1fr 1fr}.rec div:nth-child(2){border-right:none}
 .g3,.g2,.vs,.facts{grid-template-columns:1fr}.step{grid-template-columns:40px 1fr;gap:.9rem}.step .t{grid-column:2;text-align:left;padding-top:.4rem}
-.row,.rowh{grid-template-columns:1fr 54px 1fr;gap:.4rem}.rail{grid-template-columns:1fr 1fr}.row{font-size:.85rem}.hero .veil{background:linear-gradient(180deg,rgba(12,12,14,.7),var(--ob) 78%)}
+.row,.rowh{grid-template-columns:1fr 54px 1fr;gap:.4rem}.rail{grid-template-columns:1fr 1fr}.row{font-size:.85rem}.hero .veil{background:linear-gradient(180deg,rgba(242,240,236,.85),var(--bone) 78%)}
 .board{padding:1.5rem 1.3rem}.board .ln{grid-template-columns:42px 1fr 40px;gap:.6rem}}
-/* At phone width the nav status line collides with the wordmark and forces the
-   CTA to wrap. Drop it here — the same line is in the footer. */
-@media(max-width:1100px){.navr .st{display:none}}
-@media(max-width:640px){.navr .backlink{display:none}.wm .lk{display:none}.wm .mk{display:block}
-.navcta{padding:.55rem .95rem;font-size:.6rem;white-space:nowrap}}
+/* Nav at small widths: the status line goes first, then the lockup gives way to the
+   square mark (the design system's small-size fallback) so the CTA never wraps. */
+@media(max-width:760px){.navr .st{display:none}}
+@media(max-width:640px){.wm .lk{display:none}.wm .mk{display:block}.navcta{white-space:nowrap}}
+/* Footer lockup: 34px tall on a laptop; on a phone it is wider than the screen, so it
+   scales to the width available instead. */
+footer .wm img{height:34px}
+@media(max-width:640px){footer .wm img{height:auto;width:100%;max-width:300px}}
 </style></head><body>
 
-<nav><div class="wrap"><a href="/board" class="wm"><img class="lk" src="/images/logo-at-theboard-lockup-512.png" srcset="/images/logo-at-theboard-lockup-512.png 1x, /images/logo-at-theboard-lockup-1024.png 2x" alt="at.theboard" width="311" height="39"><img class="mk" src="/images/logo-at-theboard-mark-88.png" alt="at.theboard" width="88" height="88"></a>
-<div class="navr"><div class="st">Circle One full &middot; Circle Two opens January</div><a href="/" class="backlink">Catalyst Growth Coaching</a><a href="#book" class="navcta">Book the free hour</a></div></div></nav>
+<nav><div class="wrap"><a href="/board" class="wm"><img class="lk" src="/images/logo-at-theboard-lockup-dark.png" alt="at.theboard"><img class="mk" src="/images/logo-at-theboard-mark-dark-88.png" alt="at.theboard"></a>
+<div class="navr"><div class="st">Selecting the first five</div><a href="#book" class="navcta">Book the free hour</a></div></div></nav>
 
 <div class="hero"><div class="bg"></div><div class="veil"></div><div class="wrap">
+<div>
 <div class="eb">For men who own and run a business</div>
 <h1>Twelve months of pushing harder, with <em>four men doing the same</em></h1>
 <p class="lead" style="margin-top:1.4rem">The one room where you do not have to hold anything back.</p>
@@ -173,8 +240,11 @@ footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:
 <div><b>5</b><span>men in the circle</span></div><div><b>2</b><span>meetings a month</span></div>
 <div><b>6</b><span>hours a month</span></div><div><b>12</b><span>month term, not rolling</span></div>
 </div>
-</div></div>
+</div>
+</div>
+<div class="herods"><span>On the walk, Milton Keynes</span><span>12.02</span></div></div>
 
+<div class="light">
 <section><div class="wrap">
 <div class="eb">What it is</div>
 <h2>Four men as serious about their business <em>as you are about yours</em></h2>
@@ -384,7 +454,7 @@ footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:
 <div><span>Term</span><b>Twelve months</b></div>
 <div><span>Leaving</span><b>Free to leave in the first three sessions</b></div>
 <div><span>Month thirteen</span><b>A night away, priced separately at cost</b></div>
-<div><span>Next intake</span><b>Circle Two, January</b></div>
+<div><span>Status</span><b>Selecting the first five</b></div>
 </div>
 <p style="margin-top:1.6rem">The fee is discussed on the call, because it depends on which circle you join and when. Founding members hold their rate for as long as they stay.</p>
 </div></section>
@@ -398,38 +468,28 @@ footer .sm{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M17 17l14 14M31 17L17 31"/></svg></div><h3>No pitch afterwards</h3><p>Free whether you join or not. No follow-up sequence.</p></div>
 </div>
 <p style="margin-top:1.8rem">I say what I think as we go rather than saving it up for the end. That includes telling you if what you have is a process problem rather than a judgement one, in which case I will say so and send you off to fix the process. That happens, and it costs me the work, which is fine.</p>
-<!-- Netlify Forms backend. The form is registered at deploy time via data-netlify;
-     submissions land in the Netlify dashboard (Forms &rarr; board) and trigger any
-     email notifications configured there. The action URL doubles as the success
-     page for the native submit. -->
-<form class="form" id="board-form" name="board" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/board.html?success=true">
-<input type="hidden" name="form-name" value="board">
-<input type="hidden" name="source-page" value="at.theboard">
-<p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-<label for="bf-name">Name</label><input id="bf-name" name="name" type="text" required autocomplete="name">
-<label for="bf-email">Email</label><input id="bf-email" name="email" type="email" required autocomplete="email">
-<label for="bf-phone">Phone</label><input id="bf-phone" name="phone" type="tel" required autocomplete="tel"><div class="hint">So I can call you rather than start an email chain.</div>
-<label for="bf-msg">What is currently unresolved?</label><textarea id="bf-msg" name="message" required></textarea>
-<div style="margin-top:1.8rem"><button type="submit" class="btn">Send this and I will call you</button></div>
-<p class="hint" style="margin-top:1.1rem">Or skip the form and <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6040903c2c6afaa004b25015/schedule" style="color:var(--cog)">put the hour straight in the diary</a>.</p>
+<form class="form" name="the-hour" method="POST" data-netlify="true" netlify-honeypot="company" action="/board?sent=1">
+<input type="hidden" name="form-name" value="the-hour">
+<p style="display:none"><label>Leave this empty <input name="company"></label></p>
+<label for="f-name">Name</label><input id="f-name" type="text" name="name" required>
+<label for="f-email">Email</label><input id="f-email" type="email" name="email" required>
+<label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" required><div class="hint">So I can call you rather than start an email chain.</div>
+<label for="f-live">What is currently unresolved?</label><textarea id="f-live" name="unresolved" required></textarea>
+<div style="margin-top:1.8rem"><button type="submit" class="btn">Book the hour</button></div>
+<div class="hint" style="margin-top:1.2rem">Or go straight to the diary: <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6040903c2c6afaa004b25015/schedule" style="color:#A8774E">pick a time</a>.</div>
 </form>
-<div class="pull" id="board-confirmation" style="display:none"><p>That's with me. I will call you on the number you left, usually within a day or two, and we will find an hour that works.</p></div>
+<div id="sent" class="pull" style="display:none;margin-top:1.6rem"><p>Got it. I will be in touch within one working day.<br>John</p></div>
+<script>
+if (location.search.indexOf('sent=1') > -1) {
+  var f = document.querySelector('form.form'); var s = document.getElementById('sent');
+  if (f) f.style.display = 'none'; if (s) s.style.display = 'block';
+  if (s) s.scrollIntoView({behavior:'smooth', block:'center'});
+}
+</script>
 </div></section>
 
-<footer><div class="wrap"><div class="wm"><img src="/images/logo-at-theboard-lockup-512.png" srcset="/images/logo-at-theboard-lockup-512.png 1x, /images/logo-at-theboard-lockup-1024.png 2x" alt="at.theboard" width="311" height="39"></div>
-<div class="sm">Run by John Obidipe &middot; Milton Keynes &middot; London coming soon &middot; Circle Two opens January</div>
-<div class="sm" style="margin-top:1.1rem"><a href="/" style="color:var(--cog);text-decoration:none">Catalyst Growth Coaching</a></div></div></footer>
-
-<script>
-  (function () {
-    // Netlify redirects back with ?success=true after a native submit.
-    if (new URLSearchParams(location.search).get('success') !== 'true') return;
-    var form = document.getElementById('board-form');
-    var confirmation = document.getElementById('board-confirmation');
-    if (!form || !confirmation) return;
-    form.style.display = 'none';
-    confirmation.style.display = '';
-    confirmation.scrollIntoView({ block: 'center' });
-  })();
-</script>
+<footer><div class="wrap"><div class="wm"><img src="/images/logo-at-theboard-lockup-dark.png" alt="at.theboard"></div>
+<div class="sm">Run by John Obidipe &middot; Milton Keynes &middot; London coming soon</div>
+<div class="sm" style="margin-top:1.1rem"><a href="/" style="color:#A8774E;text-decoration:none">Catalyst Growth Coaching</a></div></div></footer>
+</div>
 </body></html>
