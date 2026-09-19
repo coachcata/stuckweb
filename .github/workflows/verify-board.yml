@@ -31,9 +31,11 @@ jobs:
           echo "== Content checks (each must be >=1) =="
           echo -n "hero heading: ";     grep -c "Twelve months of pushing harder" /tmp/page.html
           echo -n "nav status: ";       grep -c "Selecting the first five" /tmp/page.html
-          echo -n "form registered: ";  grep -c 'name="the-hour"' /tmp/page.html
+          # Netlify rewrites the <form> tag at deploy (data-netlify and netlify-honeypot
+          # are stripped), so check the parts that survive: the hidden form-name input
+          # it injects, and the honeypot input itself.
           echo -n "form-name field: ";  grep -c 'name="form-name" value="the-hour"' /tmp/page.html
-          echo -n "honeypot field: ";   grep -c 'netlify-honeypot="company"' /tmp/page.html
+          echo -n "honeypot input: ";   grep -c 'name="company"' /tmp/page.html
           echo -n "return action: ";    grep -c 'action="/board?sent=1"' /tmp/page.html
           echo -n "scheduler link: ";   grep -c '6040903c2c6afaa004b25015/schedule' /tmp/page.html
           echo -n "canonical URL: ";    grep -c 'rel="canonical" href="https://catalystgrowthcoach.co.uk/board"' /tmp/page.html
