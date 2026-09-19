@@ -1,0 +1,59 @@
+name: Verify /board live page
+
+# Post-deploy smoke test for the at.theboard page at
+# https://catalystgrowthcoach.co.uk/board. Checks that the page is served
+# from the main domain, that the copy and assets are the ones committed,
+# that the Netlify form is registered, and sends one test submission
+# through the live path so delivery can be confirmed in Netlify → Forms
+# → the-hour and in the notification inbox.
+# Run manually from the Actions tab.
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Base URL to test against"
+        required: false
+        default: "https://catalystgrowthcoach.co.uk"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Page and asset checks
+        run: |
+          set -e
+          BASE="${{ github.event.inputs.base_url || 'https://catalystgrowthcoach.co.uk' }}"
+          CURL="curl -sSL --connect-timeout 10 --max-time 40"
+          echo "== HTTPS status, URL stays on main domain =="
+          $CURL -o /tmp/page.html -w "status=%{http_code} final_url=%{url_effective}\n" "$BASE/board"
+          echo "== Content checks (each must be >=1) =="
+          echo -n "hero heading: ";     grep -c "Twelve months of pushing harder" /tmp/page.html
+          echo -n "nav status: ";       grep -c "Selecting the first five" /tmp/page.html
+          echo -n "form registered: ";  grep -c 'name="the-hour"' /tmp/page.html
+          echo -n "form-name field: ";  grep -c 'name="form-name" value="the-hour"' /tmp/page.html
+          echo -n "honeypot field: ";   grep -c 'netlify-honeypot="company"' /tmp/page.html
+          echo -n "return action: ";    grep -c 'action="/board?sent=1"' /tmp/page.html
+          echo -n "scheduler link: ";   grep -c '6040903c2c6afaa004b25015/schedule' /tmp/page.html
+          echo -n "canonical URL: ";    grep -c 'rel="canonical" href="https://catalystgrowthcoach.co.uk/board"' /tmp/page.html
+          echo -n "GA4 tag: ";          grep -c 'G-2Z17HSYFCV' /tmp/page.html
+          echo "== Assets resolve on the main domain =="
+          for p in /images/img-1990.jpg /images/img-1991.jpg /images/img-1992.jpg /images/img-1993.jpg /images/img-1994.jpg /images/img-1995.jpg /images/logo-at-theboard-lockup-dark.png /images/logo-at-theboard-mark-32.png; do
+            $CURL -o /dev/null -w "$p -> %{http_code} (%{size_download} bytes)\n" "$BASE$p"
+          done
+          echo "== Both trees: the mirror copy is byte-identical =="
+          $CURL -o /tmp/mirror.html "$BASE/site/board"
+          cmp /tmp/page.html /tmp/mirror.html && echo "mirror identical: OK"
+          echo "== Confirmation state on return =="
+          $CURL -o /tmp/sent.html "$BASE/board?sent=1"
+          grep -c 'id="sent"' /tmp/sent.html
+
+      - name: Test form submission through the live path
+        run: |
+          BASE="${{ github.event.inputs.base_url || 'https://catalystgrowthcoach.co.uk' }}"
+          curl -sS --connect-timeout 10 --max-time 30 -o /tmp/form.out -w "form_post_status=%{http_code}\n" \
+            -X POST "$BASE/board" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            --data "form-name=the-hour&name=Deploy%20test&email=deploy-test%40catalystgrowthcoach.co.uk&phone=00000000000&unresolved=Automated%20deploy%20check%2C%20please%20ignore.&company="
+          echo "A 200 or 303 here means Netlify accepted the submission; confirm it in Netlify → Forms → the-hour and in the inbox."
