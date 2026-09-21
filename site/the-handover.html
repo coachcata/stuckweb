@@ -253,6 +253,15 @@
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ash);
   }
+  footer .footer-links {
+    margin: 0 0 1.25rem; letter-spacing: 0.12em;
+  }
+  footer .footer-links a {
+    color: var(--ash); text-decoration: none;
+    border-bottom: 1px solid var(--line); padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  footer .footer-links a:hover { color: var(--bone); border-color: var(--cognac); }
 
   @media (min-width: 900px) {
     section.scene { padding: 14vh 6vw; }
@@ -353,18 +362,16 @@
 <section class="scene">
   <span class="eyebrow">Who I am</span>
   <h2>John Obidipe</h2>
-  <p class="bio">Fifteen years across organisational consulting and executive coaching. Gallup certified in CliftonStrengths and a FITT16 practitioner. I have worked with leaders inside Toyota, Convatec and the University of Oxford, and with owners running firms between one and five million.</p>
+  <p class="bio">Fifteen years across organisational consulting and executive coaching. Gallup certified in CliftonStrengths and a FITT16 practitioner (a 16-type profile built from your CliftonStrengths results). I have coached individual leaders from AWS, Toyota, Volkswagen Financial Services, Convatec, Nexans, Bassett Mechanical and the University of Oxford, among others, and worked with owners running firms with annual revenue of £1m–£5m.</p>
 
   <div class="quote-card">
     <span class="mark">"</span>
     <blockquote>
-      <p>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects, and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</p>
-      <p>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
-      <p>Thanks, John.</p>
+      <p>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive <strong>mistakes</strong> in two previous businesses.</p>
     </blockquote>
     <div class="attr">
-      <span class="name">Mark Schmull</span>
-      <span class="meta">MD, Arrow Planning</span>
+      <span class="name">Stuart Ploughman</span>
+      <span class="meta">Serial entrepreneur</span>
     </div>
   </div>
 </section>
@@ -423,7 +430,12 @@
 
 <!-- FOOTER -->
 <footer>
-  © Catalyst Growth Coaching, London · Est. 2024
+  <p class="footer-links">
+    <a href="/about">More about John</a> ·
+    <a href="/in-practice">In Practice</a> ·
+    <a href="/">catalystgrowthcoach.co.uk</a>
+  </p>
+  © 2026 Catalyst Growth Coaching, London · Est. 2020
 </footer>
 
 <script>
