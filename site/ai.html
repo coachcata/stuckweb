@@ -276,6 +276,14 @@ section{padding:5rem 0}
   padding:2rem 0;text-align:center;
   font-size:0.75rem;color:var(--ash);
 }
+.footer .footer-links{margin:0 0 0.9rem}
+.footer .footer-links a{
+  color:var(--ash);text-decoration:none;
+  border-bottom:1px solid var(--border);padding-bottom:2px;
+  transition:color 0.2s,border-color 0.2s;
+}
+.footer .footer-links a:hover{color:var(--bone);border-color:var(--cognac)}
+a.logo{text-decoration:none;color:inherit}
 
 /* ── Reveal ── */
 .reveal{opacity:0;transform:translateY(20px);transition:all 0.6s ease}
@@ -293,6 +301,11 @@ section{padding:5rem 0}
   .comp-table{font-size:0.78rem}
   .comp-table th,.comp-table td{padding:0.7rem 0.8rem}
 }
+
+.stat-src{
+  margin-top:0.6rem;font-size:0.7rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--ash);opacity:0.75;
+}
 </style>
 </head>
 <body>
@@ -300,7 +313,7 @@ section{padding:5rem 0}
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="wrap top-bar-inner">
-    <div class="logo">Catalyst <span>Growth</span> Coaching</div>
+    <a class="logo" href="/">Catalyst <span>Growth</span> Coaching</a>
     <a href="#book" class="top-cta">Book a Discovery Call</a>
   </div>
 </div>
@@ -323,16 +336,19 @@ section{padding:5rem 0}
     <h2 class="s-title reveal">This Isn't a Future Problem.<br>It's a Right Now Problem.</h2>
     <div class="stats">
       <div class="stat reveal">
-        <div class="stat-num">78%</div>
-        <div class="stat-label">of business leaders say the skills gap is a major risk to their organisation</div>
+        <div class="stat-num">75%</div>
+        <div class="stat-label">of board members and executives see skills and talent availability as a major source of risk</div>
+        <div class="stat-src">Deloitte, 2024</div>
       </div>
       <div class="stat reveal">
-        <div class="stat-num">64%</div>
-        <div class="stat-label">of employees say they don't have time to learn what they need for the future</div>
+        <div class="stat-num">61%</div>
+        <div class="stat-label">of employees say time is the barrier to their own development</div>
+        <div class="stat-src">Cornerstone</div>
       </div>
       <div class="stat reveal">
-        <div class="stat-num">22%</div>
-        <div class="stat-label">of organisations have a clear AI plan their people actually understand</div>
+        <div class="stat-num">14%</div>
+        <div class="stat-label">of enterprises deploying AI say they have a clear strategy with defined goals and outcomes</div>
+        <div class="stat-src">Altimetrik &amp; HFS Research, 2026</div>
       </div>
     </div>
   </div>
@@ -557,7 +573,13 @@ section{padding:5rem 0}
 <!-- FOOTER -->
 <div class="footer">
   <div class="wrap">
-    &copy; 2026 John Obidipe · Catalyst Growth Coaching · coach@catalystgrowthcoach.co.uk
+    <p class="footer-links">
+      <a href="/about">More about John</a> &middot;
+      <a href="/teamstrong">TeamStrong</a> &middot;
+      <a href="/in-practice">In Practice</a> &middot;
+      <a href="/">catalystgrowthcoach.co.uk</a>
+    </p>
+    &copy; 2026 Catalyst Growth Coaching, London &middot; Est. 2020 &middot; coach@catalystgrowthcoach.co.uk
   </div>
 </div>
 
