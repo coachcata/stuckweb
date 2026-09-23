@@ -124,7 +124,7 @@
   .image-placeholder::before { content: 'Image: '; opacity: 0.6; margin-right: 0.4em; }
 
   /* ══ Scene 01, The Practitioner (Hero) ══ */
-  .scene-hero {
+  section.scene.scene-hero {
     min-height: auto; padding: 0; flex-direction: column;
   }
   .scene-hero .hero-label {
@@ -195,7 +195,7 @@
   }
 
   /* ══ Full-bleed clip scene (At the Board, landscape 16:9) ══ */
-  .scene-clip { min-height: auto; padding: 0; flex-direction: column; }
+  section.scene.scene-clip { min-height: auto; padding: 0; flex-direction: column; }
   .scene-clip .clip-frame {
     position: relative; width: 100%;
     aspect-ratio: 16/9; max-height: 85vh;
@@ -259,7 +259,7 @@
     line-height: 1.15; max-width: 22ch; margin-bottom: 5vh;
   }
   .logo-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
+    display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 4rem 5rem; align-items: center; justify-items: center;
     padding: 2rem 0 3rem;
   }
@@ -286,7 +286,7 @@
   }
 
   /* ══ Note scene (Fuller Story) ══ */
-  .scene-note {
+  section.scene.scene-note {
     min-height: auto; padding: 10vh 6vw;
     flex-direction: column; align-items: center; text-align: center;
     background: var(--bg-2);
@@ -514,7 +514,6 @@
     <div class="logo-cell"><img src="/images/logos/cambridge-up.png" alt="Cambridge University Press"></div>
     <div class="logo-cell"><img src="/images/logos/autoglass.png" alt="Autoglass"></div>
     <div class="logo-cell"><img src="/images/logos/oxford.png" alt="University of Oxford"></div>
-    <div class="logo-cell"><img src="/images/logos/new-socks.png" alt="New Socks"></div>
     <div class="logo-cell"><img src="/images/logos/arrow-planning.png" alt="Arrow Planning"></div>
     <div class="logo-cell"><img src="/images/logos/nextenergy.png" alt="NextEnergy Capital"></div>
   </div>

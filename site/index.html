@@ -141,7 +141,7 @@
   .eyebrow em { font-style: italic; font-weight: 600; }
 
   /* ══ Clip Scene (full-bleed video) ══ */
-  .scene-clip {
+  section.scene.scene-clip {
     min-height: auto; padding: 0;
     flex-direction: column;
   }
@@ -292,14 +292,14 @@
   }
 
   /* ══ Proof strip (clients, credentials, one move from the top) ══ */
-  .scene-proof {
+  section.scene.scene-proof {
     min-height: auto; flex-direction: column;
     padding: 10vh 6vw; background: var(--bg-2);
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   }
   .scene-proof .folio { margin-bottom: 3rem; }
   .logo-grid {
-    display: grid; grid-template-columns: repeat(5, 1fr);
+    display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 3rem 3.5rem; align-items: center; justify-items: center;
     padding-bottom: 3rem; border-bottom: 1px solid var(--line);
   }
@@ -669,7 +669,6 @@
     <div class="logo-cell"><img src="/images/logos/cambridge-up.png" alt="Cambridge University Press" loading="lazy"></div>
     <div class="logo-cell"><img src="/images/logos/autoglass.png" alt="Autoglass" loading="lazy"></div>
     <div class="logo-cell"><img src="/images/logos/oxford.png" alt="University of Oxford" loading="lazy"></div>
-    <div class="logo-cell"><img src="/images/logos/new-socks.png" alt="New Socks" loading="lazy"></div>
     <div class="logo-cell"><img src="/images/logos/arrow-planning.png" alt="Arrow Planning" loading="lazy"></div>
     <div class="logo-cell"><img src="/images/logos/nextenergy.png" alt="NextEnergy Capital" loading="lazy"></div>
   </div>
