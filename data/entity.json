@@ -1,0 +1,49 @@
+{
+  "_readme": "Single source of truth for how Catalyst Growth Coaching and at.theboard are named and described. scripts/build.mjs generates the Organization schema on every page from this file, and data/listing-checklist.md for the directory listings. Not published: /data/* is 404'd in _redirects and netlify.toml. Fields set to null are waiting on John.",
+  "site": "https://catalystgrowthcoach.co.uk",
+  "catalyst": {
+    "id": "https://catalystgrowthcoach.co.uk/#organization",
+    "name": "Catalyst Growth Coaching",
+    "url": "https://catalystgrowthcoach.co.uk/",
+    "logo": "https://catalystgrowthcoach.co.uk/apple-touch-icon.png",
+    "description": "John Obidipe's executive coaching practice, based in Milton Keynes, England. Strategic thinking, out loud, at a whiteboard, for senior leaders, founders and owner-managers.",
+    "address": "Milton Keynes, England",
+    "email": "coach@catalystgrowthcoach.co.uk",
+    "telephone": null,
+    "sameAs": [
+      "https://www.linkedin.com/in/johnobidipe"
+    ]
+  },
+  "board": {
+    "id": "https://catalystgrowthcoach.co.uk/board#organization",
+    "name": "at.theboard",
+    "url": "https://catalystgrowthcoach.co.uk/board",
+    "logo": "https://catalystgrowthcoach.co.uk/images/logo-at-theboard-stack-256.png",
+    "description": "A men's business group in Milton Keynes. A circle of five male owner-managers who meet at a whiteboard for twelve months, in person at the Shire Retreat and online between sessions. Run by John Obidipe of Catalyst Growth Coaching.",
+    "address": "Milton Keynes, England",
+    "venue": "The Shire Retreat, Milton Keynes",
+    "email": "coach@catalystgrowthcoach.co.uk",
+    "telephone": null,
+    "areaServed": "Milton Keynes",
+    "sameAs": [
+      "https://www.instagram.com/at.theboard/"
+    ],
+    "linkedin": null,
+    "googleBusinessProfile": null
+  },
+  "founder": {
+    "id": "https://catalystgrowthcoach.co.uk/about#john-obidipe",
+    "name": "John Obidipe",
+    "jobTitle": "Founder, Catalyst Growth Coaching",
+    "url": "https://catalystgrowthcoach.co.uk/about",
+    "image": "https://catalystgrowthcoach.co.uk/images/img-1995.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/johnobidipe"
+    ]
+  },
+  "confirmed": {
+    "_readme": "Set either to the approved wording once John confirms it. While null, it stays off the page, the schema, board.md and llms.txt.",
+    "price": null,
+    "menOnly": null
+  }
+}

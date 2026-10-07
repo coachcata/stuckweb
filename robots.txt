@@ -1,4 +1,11 @@
+# Every crawler is welcome, search engines and AI assistants alike
+# (Googlebot, Bingbot, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot,
+# Claude-SearchBot, PerplexityBot, Perplexity-User, Google-Extended,
+# Applebot, Meta-ExternalAgent). Do not add blocks here without a reason.
 User-agent: *
 Allow: /
 
 Sitemap: https://catalystgrowthcoach.co.uk/sitemap.xml
+
+# llms: https://catalystgrowthcoach.co.uk/llms.txt
+# llms-full: https://catalystgrowthcoach.co.uk/llms-full.txt

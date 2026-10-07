@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Catalyst Growth Coaching and at.theboard</title>
+<link>https://catalystgrowthcoach.co.uk/</link>
+<atom:link href="https://catalystgrowthcoach.co.uk/feed.xml" rel="self" type="application/rss+xml" />
+<description>Updates to at.theboard, the men's business group in Milton Keynes, and to John Obidipe's Catalyst Growth Coaching pages.</description>
+<language>en-gb</language>
+<lastBuildDate>Wed, 07 Oct 2026 09:00:00 +0000</lastBuildDate>
+<item>
+<title>Men's Business Group in Milton Keynes | at.theboard</title>
+<link>https://catalystgrowthcoach.co.uk/board</link>
+<guid isPermaLink="true">https://catalystgrowthcoach.co.uk/board</guid>
+<pubDate>Wed, 07 Oct 2026 09:00:00 +0000</pubDate>
+<description>A circle of five owner-managers in Milton Keynes. Twelve months, in person and online every month, one whiteboard. Men only. Start with a free hour.</description>
+</item>
+<item>
+<title>AI: The Fluency Series | Catalyst Growth Coaching</title>
+<link>https://catalystgrowthcoach.co.uk/fluency/ai</link>
+<guid isPermaLink="true">https://catalystgrowthcoach.co.uk/fluency/ai</guid>
+<pubDate>Fri, 24 Jul 2026 09:00:00 +0000</pubDate>
+<description>AI, without the hype. A free three-part fluency series for leaders: the language of AI, the story behind the promises, and the questions that keep it accountable. Director's and Founder's editions.</description>
+</item>
+<item>
+<title>The Numbers | The Fluency Series | Catalyst Growth Coaching</title>
+<link>https://catalystgrowthcoach.co.uk/fluency/numbers</link>
+<guid isPermaLink="true">https://catalystgrowthcoach.co.uk/fluency/numbers</guid>
+<pubDate>Thu, 23 Jul 2026 09:00:00 +0000</pubDate>
+<description>The Numbers, in plain English. A free three-part fluency series for leaders: the language of finance, the story the accounts tell, and the questions that let you lead the conversation. Director's and Founder's editions.</description>
+</item>
+</channel>
+</rss>

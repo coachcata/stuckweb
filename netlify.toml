@@ -1,3 +1,15 @@
+# Build: regenerates the schema, board.md, llms.txt, llms-full.txt, feed.xml
+# and sitemap dates from the pages and data/entity.json. See scripts/build.mjs.
+[build]
+  command = "node scripts/build.mjs"
+
+# After each production deploy, tell Bing and the other IndexNow engines which
+# pages changed. The key file sits at the site root (both trees).
+[[plugins]]
+  package = "./netlify/plugins/indexnow"
+  [plugins.inputs]
+    key = "f00f922d73a0075460a49641f6091c2a"
+
 # Canonical host: catalystgrowthcoach.co.uk (no www).
 #
 # Both the apex and the www hostname resolve to this same Netlify project,
@@ -67,6 +79,42 @@
   status = 404
   force = true
 
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/data/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package-lock.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/node_modules/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Security headers on every response. Mirrored in _headers.
 # No CSP yet: pages carry inline scripts and load Google Fonts, so a useful
 # policy needs per-page nonces or hashes first. HSTS deliberately omits
@@ -80,3 +128,66 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
     Strict-Transport-Security = "max-age=31536000"
+
+# Machine-readable copies and cache rules. Mirrored in _headers.
+[[headers]]
+  for = "/board.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/board.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board>; rel=\"canonical\""
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+
+[[headers]]
+  for = "/site/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/site/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/site/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/site/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/site/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

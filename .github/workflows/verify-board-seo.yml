@@ -1,0 +1,140 @@
+name: Verify /board search and AI setup
+
+# Live checks for the SEO and AI-search work on /board (brief v2, 7 Oct 2026).
+# Runs after every push to the default branch, waits for Netlify to publish
+# that commit, then checks the live site with plain curl: what a crawler sees.
+# Also runnable by hand from the Actions tab.
+
+on:
+  push:
+    branches: ["claude/add-client-logo-bar-gmN4g"]
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Base URL to test against"
+        required: false
+        default: "https://catalystgrowthcoach.co.uk"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      BASE: ${{ github.event.inputs.base_url || 'https://catalystgrowthcoach.co.uk' }}
+      KEY: f00f922d73a0075460a49641f6091c2a
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for Netlify to publish this commit
+        run: |
+          WANT=$(grep -o 'datetime="[0-9-]*"' board.html | head -1)
+          for i in $(seq 1 40); do
+            if curl -sS --max-time 20 "$BASE/board" | grep -q "$WANT" && \
+               curl -sS --max-time 20 -o /dev/null -w "%{http_code}" "$BASE/board.md" | grep -q 200; then
+              echo "Live site carries $WANT"; exit 0; fi
+            sleep 15
+          done
+          echo "Live site never showed $WANT"; exit 1
+
+      - name: Page, head tags and indexing signals
+        run: |
+          set -e
+          fail=0; ok(){ echo "ok   $1"; }; bad(){ echo "FAIL $1"; fail=1; }
+          curl -sS -D /tmp/h.txt -o /tmp/board.html "$BASE/board"
+          grep -qi '^HTTP/[0-9.]* 200' /tmp/h.txt && ok "200 on /board" || bad "status on /board"
+          grep -qi '^x-robots-tag' /tmp/h.txt && bad "X-Robots-Tag header present" || ok "no X-Robots-Tag header"
+          grep -q 'name="robots"' /tmp/board.html && bad "robots meta on /board" || ok "no robots meta"
+          [ "$(grep -o '<h1' /tmp/board.html | wc -l)" = 1 ] && ok "exactly one h1" || bad "h1 count"
+          grep -q "<h1 class=\"eb\">A men&rsquo;s business group for owner-managers in Milton Keynes</h1>" /tmp/board.html && ok "h1 text" || bad "h1 text"
+          grep -q "<title>Men's Business Group in Milton Keynes | at.theboard</title>" /tmp/board.html && ok "title" || bad "title"
+          grep -q 'content="A circle of five owner-managers in Milton Keynes. Twelve months, in person and online every month, one whiteboard. Men only. Start with a free hour."' /tmp/board.html && ok "meta description" || bad "meta description"
+          grep -q 'rel="canonical" href="https://catalystgrowthcoach.co.uk/board"' /tmp/board.html && ok "canonical" || bad "canonical"
+          for s in "data-md=\"opening\"" "In person at the Shire Retreat, Milton Keynes" "John Obidipe runs at.theboard" \
+                   "What owners ask before they join" "Page last reviewed" "Twelve months of pushing harder" \
+                   'name="form-name" value="the-hour"' 'name="found"' "business-groups-milton-keynes"; do
+            grep -q "$s" /tmp/board.html && ok "in raw HTML: $s" || bad "missing from raw HTML: $s"
+          done
+          grep -qi "men only?" /tmp/board.html && bad "men-only question is live" || ok "no men-only question"
+          grep -q "&pound;550\|£550" /tmp/board.html && bad "price is live" || ok "no price"
+          curl -sS "$BASE/robots.txt" | tee /tmp/robots.txt | grep -q "Sitemap: https://catalystgrowthcoach.co.uk/sitemap.xml" && ok "robots names sitemap" || bad "robots sitemap line"
+          grep -qi "^disallow: */\?$" /tmp/robots.txt && bad "robots disallows" || ok "robots blocks nothing"
+          curl -sS "$BASE/sitemap.xml" | grep -q "<loc>https://catalystgrowthcoach.co.uk/board</loc>" && ok "board in sitemap" || bad "board not in sitemap"
+          curl -sS "$BASE/sitemap.xml" | grep -q "business-groups-milton-keynes\|/the-hour<" && bad "noindex page in sitemap" || ok "sitemap holds no noindex page"
+          exit $fail
+
+      - name: Machine-readable files, both trees
+        run: |
+          fail=0
+          for p in board.md llms.txt llms-full.txt feed.xml $KEY.txt; do
+            for pre in "" "/site"; do
+              out=$(curl -sS -o /tmp/f -w "%{http_code} %{content_type}" "$BASE$pre/$p")
+              echo "$pre/$p -> $out"
+              case "$out" in 200*) ;; *) fail=1;; esac
+              case "$p" in
+                board.md) echo "$out" | grep -q "text/markdown" || fail=1;;
+                llms*) echo "$out" | grep -q "text/plain" || fail=1;;
+                feed.xml) echo "$out" | grep -q "rss+xml" || fail=1;;
+              esac
+              if grep -q $'—\|–' /tmp/f; then echo "  FAIL: em or en dash in $pre/$p"; fail=1; fi
+              if grep -qi "why is it men only\|£550" /tmp/f; then echo "  FAIL: unconfirmed copy in $pre/$p"; fail=1; fi
+            done
+          done
+          curl -sS "$BASE/board.md" | head -1 | grep -q "canonical: https://catalystgrowthcoach.co.uk/board" || { echo "FAIL board.md canonical line"; fail=1; }
+          curl -sS "$BASE/$KEY.txt" | grep -qx "$KEY" || { echo "FAIL key file content"; fail=1; }
+          exit $fail
+
+      - name: Comparison page shell
+        run: |
+          curl -sS -o /tmp/c.html -w "status %{http_code}\n" "$BASE/business-groups-milton-keynes"
+          grep -q 'name="robots" content="noindex' /tmp/c.html && echo "ok   noindex" || { echo "FAIL noindex"; exit 1; }
+          echo "placeholders: $(grep -o 'JOHN TO SUPPLY' /tmp/c.html | wc -l)"
+          curl -sS "$BASE/" | grep -q 'href="/business-groups-milton-keynes"' && echo "ok   linked from homepage" || { echo "FAIL homepage link"; exit 1; }
+
+      - name: Repo files are not served
+        run: |
+          fail=0
+          for p in /data/entity.json /scripts/build.mjs /netlify/edge-functions/ai-crawler-log.ts /package.json /CLAUDE.md /this-page-does-not-exist; do
+            s=$(curl -sS -o /dev/null -w "%{http_code}" "$BASE$p"); echo "$p -> $s"; [ "$s" = 404 ] || fail=1
+          done
+          exit $fail
+
+      - name: Redirect hops into /board
+        run: |
+          for p in /board/ /board.html /site/board; do
+            curl -sS -o /dev/null -L -w "$p -> %{http_code} after %{num_redirects} redirect(s), ends at %{url_effective}\n" "$BASE$p"
+          done
+
+      - name: AI crawler log (spoofed GPTBot)
+        run: |
+          curl -sS -D - -o /dev/null -A "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.2; +https://openai.com/gptbot" "$BASE/board" | tee /tmp/bot.txt | grep -i "^x-ai-crawler-log"
+          grep -qi "^x-ai-crawler-log: GPTBot; recorded=yes" /tmp/bot.txt || { echo "FAIL: visit not recorded"; exit 1; }
+          curl -sS -D - -o /dev/null "$BASE/board" | grep -qi "^x-ai-crawler-log" && { echo "FAIL: ordinary visitor was tagged"; exit 1; } || echo "ok   ordinary visitor untouched"
+
+      - name: IndexNow test ping
+        run: |
+          s=$(curl -sS -o /tmp/in.txt -w "%{http_code}" -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"catalystgrowthcoach.co.uk\",\"key\":\"$KEY\",\"keyLocation\":\"https://catalystgrowthcoach.co.uk/$KEY.txt\",\"urlList\":[\"https://catalystgrowthcoach.co.uk/board\"]}")
+          echo "IndexNow -> $s"; cat /tmp/in.txt; echo
+          [ "$s" = 200 ] || [ "$s" = 202 ]
+
+      - name: Structured data validator (schema.org)
+        continue-on-error: true
+        run: |
+          curl -sS -X POST https://validator.schema.org/validate --data-urlencode "url=$BASE/board" | tail -c +5 > /tmp/v.json || true
+          python3 - <<'EOF'
+          import json
+          try:
+              d = json.load(open("/tmp/v.json"))
+          except Exception as e:
+              print("validator gave no JSON:", e); raise SystemExit(0)
+          print("errors:", d.get("numObjects"), "objects,", d.get("totalNumErrors"), "errors,", d.get("totalNumWarnings"), "warnings")
+          for t in d.get("tripleGroups", []):
+              for n in t.get("nodes", []):
+                  for e in n.get("errors", []): print("  ", n.get("typeGroup"), e)
+          EOF
+
+      - name: DNS and edge (is Cloudflare in front?)
+        run: |
+          dig +short NS catalystgrowthcoach.co.uk || true
+          curl -sSI "$BASE/board" | grep -i "^server:\|^cf-ray\|^x-nf-request-id" || true

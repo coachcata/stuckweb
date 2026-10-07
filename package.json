@@ -1,0 +1,15 @@
+{
+  "name": "stuckweb",
+  "private": true,
+  "description": "catalystgrowthcoach.co.uk. Static site; these packages are only for the Netlify edge function and build step.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.3"
+  },
+  "devDependencies": {
+    "@netlify/edge-functions": "^4.0.2"
+  }
+}
