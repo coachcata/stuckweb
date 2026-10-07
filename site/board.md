@@ -73,7 +73,7 @@ All of it. That is what makes the rest possible.
 
 ## Who runs it
 
-John Obidipe runs at.theboard. He has spent more than fifteen years in organisational consulting and executive coaching, is Gallup-certified in CliftonStrengths, and has coached leaders inside Toyota, Convatec and the University of Oxford as well as owners running firms of £1m to £5m. Every member takes CliftonStrengths when he joins.
+John Obidipe runs at.theboard. He has spent more than fifteen years in organisational consulting and executive coaching, is Gallup-certified in CliftonStrengths, and has coached leaders inside Toyota, Convatec and the University of Oxford as well as owners running firms of £500k to £5m. Every member takes CliftonStrengths when he joins.
 
 I will not tell you how to run your business. What I will do is bring what I have seen work and fail in other companies, large and small, and then find the answer with you rather than hand you one.
 
