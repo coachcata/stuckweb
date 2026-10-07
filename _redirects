@@ -11,3 +11,9 @@ http://www.catalystgrowthcoach.co.uk/*   https://catalystgrowthcoach.co.uk/:spla
 /_redirects                        /404.html  404!
 /.github/*                         /404.html  404!
 /_backup-pre-editorial-rebuild/*   /404.html  404!
+/scripts/*                         /404.html  404!
+/data/*                            /404.html  404!
+/netlify/*                         /404.html  404!
+/package.json                      /404.html  404!
+/package-lock.json                 /404.html  404!
+/node_modules/*                    /404.html  404!

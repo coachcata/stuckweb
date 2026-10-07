@@ -1,0 +1,5 @@
+name: indexnow
+inputs:
+  - name: key
+    description: IndexNow key. The file <key>.txt containing it must be at the site root.
+    required: true

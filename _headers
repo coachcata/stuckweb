@@ -15,3 +15,36 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
   Strict-Transport-Security: max-age=31536000
+
+# Machine-readable copies of the site for AI assistants and feed readers.
+# board.md points back to /board as the canonical page. Mirrored in netlify.toml.
+/board.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/board>; rel="canonical"
+/site/board.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/board>; rel="canonical"
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+/site/llms.txt
+  Content-Type: text/plain; charset=utf-8
+/site/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+/site/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+
+# Photos and video can be cached for a day; a replaced image shows within 24
+# hours. HTML keeps Netlify's default (always revalidate), so a deploy shows
+# straight away.
+/images/*
+  Cache-Control: public, max-age=86400
+/site/images/*
+  Cache-Control: public, max-age=86400
+/videos/*
+  Cache-Control: public, max-age=86400
+/site/videos/*
+  Cache-Control: public, max-age=86400
