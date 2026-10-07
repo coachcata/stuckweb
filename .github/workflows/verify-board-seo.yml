@@ -62,11 +62,13 @@ jobs:
           curl -sS "$BASE/sitemap.xml" | grep -q "business-groups-milton-keynes\|/the-hour<" && bad "noindex page in sitemap" || ok "sitemap holds no noindex page"
           exit $fail
 
-      - name: Machine-readable files, both trees
+      # Netlify publishes the /site/ folder, so both repo copies are served at
+      # the same addresses; there is no separate /site/... URL to test.
+      - name: Machine-readable files
         run: |
           fail=0
           for p in board.md llms.txt llms-full.txt feed.xml $KEY.txt; do
-            for pre in "" "/site"; do
+            for pre in ""; do
               out=$(curl -sS -o /tmp/f -w "%{http_code} %{content_type}" "$BASE$pre/$p")
               echo "$pre/$p -> $out"
               case "$out" in 200*) ;; *) fail=1;; esac
