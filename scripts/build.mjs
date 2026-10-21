@@ -278,6 +278,11 @@ const SERVICES = {
     description: "Six sessions over three months with the person who could run the business when the owner is not there. £1,800, which is £300 a session. Open to BuildStrong clients and at.theboard members.",
     price: 1800,
   }],
+  // Priced per team and agreed before the work starts, so no offer.
+  "teamstrong.html": [{
+    slug: "teamstrong", name: "TeamStrong",
+    description: "Six months with a leader and their team of four to twelve: a new direction, a new culture or new standards, carried by the team rather than routed through the leader. FITT16 and CliftonStrengths for every member, one-to-ones, and monthly team sessions at the whiteboard.",
+  }],
 };
 function service(url, s) {
   return {
@@ -292,7 +297,7 @@ for (const [file, list] of Object.entries(SERVICES)) {
 }
 // Every other public page carries the Catalyst Organization and nothing else.
 const ORG_ONLY = [
-  "about.html", "teamstrong.html", "in-practice.html",
+  "about.html", "in-practice.html",
   "going-further.html", "contact.html", "hold-the-place.html", "growth-audit/index.html",
   "fluency/numbers/index.html", "fluency/ai/index.html",
 ];
