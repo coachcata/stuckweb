@@ -343,7 +343,8 @@ function boardMarkdown() {
     `Page last reviewed ${longDate(boardReviewed)}`,
   ];
   if (entity.confirmed.menOnly) parts.splice(parts.length - 3, 0, "## Why is it men only?\n\n" + entity.confirmed.menOnly);
-  if (entity.confirmed.price) parts.splice(parts.length - 3, 0, "## How much does it cost?\n\n" + entity.confirmed.price.text);
+  // The cost question is now asked in the page's own FAQ; only add it here if it is not.
+  if (entity.confirmed.price && !/How much does it cost\?/.test(section(board, "faq"))) parts.splice(parts.length - 3, 0, "## How much does it cost?\n\n" + entity.confirmed.price.text);
   return parts.join("\n\n") + "\n";
 }
 const boardMd = boardMarkdown();

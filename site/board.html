@@ -121,7 +121,7 @@
         "@id": "https://catalystgrowthcoach.co.uk/#website"
       },
       "datePublished": "2026-09-19",
-      "dateModified": "2026-10-07",
+      "dateModified": "2026-10-21",
       "about": {
         "@id": "https://catalystgrowthcoach.co.uk/board#organization"
       },
@@ -151,6 +151,23 @@
       "audience": {
         "@type": "BusinessAudience",
         "name": "Male owner-managers of businesses with £500k to £5m turnover"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "550",
+        "priceCurrency": "GBP",
+        "url": "https://catalystgrowthcoach.co.uk/board",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "550",
+          "priceCurrency": "GBP",
+          "unitText": "per month",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": 1,
+            "unitCode": "MON"
+          }
+        }
       }
     },
     {
@@ -174,7 +191,7 @@
           "name": "Who is it for?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Men who own and run a business in or near Milton Keynes, usually with £500k to £5m turnover and five or more staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do."
+            "text": "Men who own and run a business in or near Milton Keynes, usually with £500k to £5m turnover and five to twenty-five staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do. Smaller businesses are welcome to book the free hour and talk."
           }
         },
         {
@@ -187,10 +204,26 @@
         },
         {
           "@type": "Question",
+          "name": "What does a year in the circle change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The business, in figures you already track: profit and what you take home, turnover past the point where you have stalled, sales that no longer all run through you, a business that can run without you for a fortnight, and what it would be worth to a buyer. Each man writes down at joining what the year has to be worth to him, and the circle holds him to it in month seven and month thirteen."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How long do I commit for?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Twelve months. The circle stays the same five men for the year, because the value comes from people who know your business well enough to notice when you are coasting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "£550 a month for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost."
           }
         },
         {
@@ -214,7 +247,7 @@
           "name": "How do I join?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Start with a free hour at the whiteboard with John on whatever is live in your business. The free hour is open to anyone. A place in a circle is not, because one man coasting costs the other four their year. The first circle is being selected now."
+            "text": "Start with a free hour at the whiteboard with John on whatever is live in your business. The free hour is open to anyone. A place in a circle is not. If a circle is right for you, you go on a waiting list until John can place you in one where nobody does what you do. The first circle is being selected now."
           }
         }
       ]
@@ -432,7 +465,7 @@ footer .wm{justify-content:center}
 .light .board .ln b{color:var(--bone)}
 @media(max-width:860px){section{padding:3.8rem 0}.wrap{padding:0 20px}.rec{grid-template-columns:1fr 1fr}.rec div:nth-child(2){border-right:none}
 .g3,.g2,.vs,.facts{grid-template-columns:1fr}.step{grid-template-columns:40px 1fr;gap:.9rem}.step .t{grid-column:2;text-align:left;padding-top:.4rem}
-.row,.rowh{grid-template-columns:1fr 54px 1fr;gap:.4rem}.rail{grid-template-columns:1fr 1fr}.row{font-size:.85rem}.hero .veil{background:linear-gradient(180deg,rgba(242,240,236,.85),var(--bone) 78%)}
+.row,.rowh{grid-template-columns:1fr 54px 1fr;gap:.4rem}.rail,.rail.r5{grid-template-columns:1fr 1fr}.g5,.g2.cards{grid-template-columns:1fr}.row{font-size:.85rem}.hero .veil{background:linear-gradient(180deg,rgba(242,240,236,.85),var(--bone) 78%)}
 .board{padding:1.5rem 1.3rem}.board .ln{grid-template-columns:42px 1fr 40px;gap:.6rem}}
 /* Nav at small widths: the status line goes first, then the lockup gives way to the
    square mark (the design system's small-size fallback) so the CTA never wraps. */
@@ -452,6 +485,20 @@ footer .wm{justify-content:center}
 .faq p{margin:0}
 .light a.tl{color:#A8774E}
 .form select{width:100%;background:#E7E4DD;border:1px solid rgba(12,12,14,.12);border-radius:2px;color:var(--ob);font-family:'DM Sans';font-size:.98rem;padding:.9rem 1rem}
+/* Oct 2026 copy pack: five-card row, five-stop rail, two cards side by side,
+   a plain block, and the cognac "click" tile. */
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:1.1rem;margin-top:2.2rem}
+@media(max-width:1060px){.g5{grid-template-columns:repeat(2,1fr)}}
+.rail.r5{grid-template-columns:repeat(5,1fr)}
+@media(max-width:1060px){.rail.r5{grid-template-columns:repeat(3,1fr)}}
+.g2.cards{align-items:stretch;margin-top:2.2rem;gap:1.1rem}
+.blk{margin-top:2.4rem;padding:1.9rem 1.9rem 1.6rem;border:1px solid rgba(12,12,14,.12);border-radius:3px}
+.blk h3{margin-bottom:.7rem}
+.blk p+p{margin-top:.9rem}
+.click{background:#C8956C;border-radius:3px;padding:1.7rem 1.9rem;margin-top:1.4rem}
+.light .click p{color:#0C0C0E;margin:0}
+.click .ml{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#0C0C0E;opacity:.7;margin-bottom:.6rem}
+.sm-line{font-size:.82rem;margin-top:1.4rem;opacity:.85}
 footer .wm img{height:34px;width:auto}
 @media(max-width:640px){footer .wm img{height:auto;width:100%;max-width:300px}}
 </style></head><body>
@@ -465,7 +512,7 @@ footer .wm img{height:34px;width:auto}
 <h2 class="hl">Twelve months of pushing harder, with <em>four men doing the same</em></h2>
 <p class="lead" style="margin-top:1.4rem">The one room where you do not have to hold anything back.</p>
 <p>Five men, one circle, twice a month. Run by me, John Obidipe, in Milton Keynes.</p>
-<p class="intro" data-md="opening">at.theboard is a men&rsquo;s business group in Milton Keynes for owner-managers running businesses of roughly &pound;500k to &pound;5m with five or more staff. Five men form a circle and stay together for twelve months. Once a month the circle meets in person at the Shire Retreat for a walk and a half day at the whiteboard, and a fortnight later it meets online for ninety minutes. Every man&rsquo;s challenge goes on the whiteboard every month, with his name and a date against what he said he would do. It is run by John Obidipe of Catalyst Growth Coaching.</p>
+<p class="intro" data-md="opening">at.theboard is a men&rsquo;s business group in Milton Keynes for owners running businesses of roughly &pound;500k to &pound;5m with five to twenty-five staff. Five men form a circle and stay together for twelve months. Once a month the circle meets in person at the Shire Retreat for a walk and a half day at the whiteboard, and a fortnight later it meets online for ninety minutes. Every man&rsquo;s challenge goes on the whiteboard every month, and every man leaves with what he said he would do written up in his own hand, with a date against it. The year is built to change the business: more profit and more of it to you, turnover past where you have stalled, sales that do not all run through you, and a business that needs you less. It is run by John Obidipe of Catalyst Growth Coaching.</p>
 <div style="margin-top:1.8rem"><a href="#book" class="btn">Start with a free hour</a></div>
 <div class="rec">
 <div><b>5</b><span>men in the circle</span></div><div><b>2</b><span>meetings a month</span></div>
@@ -477,9 +524,23 @@ footer .wm img{height:34px;width:auto}
 
 <div class="light">
 <section><div class="wrap">
+<div class="eb">What the year is for</div>
+<h2>A real change in the business <em>by month twelve</em></h2>
+<p class="lead">Not a better month. A business that looks different from the one you brought to the first session, in figures you already keep score in. You decide at joining what the year has to be worth to you, and in month seven and month thirteen we hold it up against what actually happened.</p>
+<div class="g5">
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="26" width="7" height="14"/><rect x="17" y="18" width="7" height="22"/><rect x="28" y="10" width="7" height="30"/><path d="M6 44h36"/></svg></div><h3>More profit, and more of it to you</h3><p>Busy all year and the profit is not there, prices you know are too low, and you paying yourself last. Pricing and margin go on the board until the numbers move.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l3.2 9.8L37 19l-9.8 3.2L24 32l-3.2-9.8L11 19l9.8-3.2z"/><path d="M36 32l1.4 4.2L42 38l-4.6 1.4L36 44l-1.4-4.6L30 38l4.6-1.4z"/></svg></div><h3>Turnover past where you have stalled</h3><p>The same size for three years, one client who is a third of the business, more work out there than you have people for. What the next size is and the decision that gets you there.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="5"/><circle cx="33" cy="18" r="4.2"/><path d="M6 38c0-6 4-11 10-11s10 5 10 11M28 38c0-5 2-9 6-9s6 4 6 9"/></svg></div><h3>Sales that do not all run through you</h3><p>If you are not out selling, nobody is, and one bad month of yours is a bad quarter for the firm. Who else can win work, and how.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l8 5"/></svg></div><h3>A business that needs you less</h3><p>Everything still comes back to you and it is all in your head. Either you step out of the day to day, or you step up into the work only you can do, and the business keeps running either way.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34a16 16 0 1 1 32 0"/><path d="M24 34l9-9"/><circle cx="24" cy="34" r="2.4" fill="#C8956C" stroke="none"/></svg></div><h3>A business worth more, whether or not you sell</h3><p>You find out how the year went when the accountant tells you, months late, and you are not sure anyone would buy it. What drives the value, and what moves it.</p></div>
+</div>
+<div class="pull"><p>Each of these is a thing you can measure in your own accounts. None of them is a feeling.</p></div>
+</div></section>
+
+<section><div class="wrap">
 <div class="eb">What it is</div>
 <h2>Four men as serious about their business <em>as you are about yours</em></h2>
-<p class="lead">Five men who own and run businesses, meeting twice a month with a whiteboard and me, to work through whatever each of them is actually stuck on.</p>
+<p class="lead">Five men who own and run businesses, meeting twice a month with a whiteboard and me, to work out what is next for each of them and for the business, and then to do it.</p>
 <p>You have been moderating yourself in every room you are in, for years, and you probably stopped noticing. Ambition in front of your team sounds like pressure and they start worrying about workload. Full intensity at home reads as not being present. So you turn it down, everywhere, all week.</p>
 <div class="g3">
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="5"/><circle cx="33" cy="18" r="4.2"/><path d="M6 38c0-6 4-11 10-11s10 5 10 11M28 38c0-5 2-9 6-9s6 4 6 9"/></svg></div><h3>Nobody here needs protecting from your ambition</h3><p>None of them works for you, buys from you or lives with you. So you can say the whole thing at full size, and watch what four men do with it.</p></div>
@@ -487,14 +548,14 @@ footer .wm img{height:34px;width:auto}
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 26V12a3 3 0 0 1 6 0v10M21 22V9a3 3 0 0 1 6 0v13M27 22V12a3 3 0 0 1 6 0v14M33 26v-4a3 3 0 0 1 6 0v9c0 8-6 12-13 12s-13-4-13-12v-9a3 3 0 0 1 6 0"/></svg></div><h3>Nothing leaves the room</h3><p>That is not there to make it comfortable. It is what makes the rest possible, because you cannot go flat out somewhere you have to be careful.</p></div>
 </div>
 <div class="pull"><p>Ask anyone who has done a HYROX why they went quicker on the day than they ever did in training. It was not the programming. It was the man beside them.</p></div>
-<p style="margin-top:1.6rem">Five in the circle, not thirty. Your challenge gets its own hour, everyone knows what you are carrying, and somebody asks you next month what happened. Nobody trains properly for a race they have not entered. That is what the twelve months is.</p>
+<p style="margin-top:1.6rem">Five in the circle, not thirty. Your challenge goes on the whiteboard every month, everyone knows what you are carrying, and somebody asks you next month what happened. Nobody trains properly for a race they have not entered. That is what the twelve months is.</p>
 </div></section>
 
 <section data-md="turn-up"><div class="wrap">
 <div class="eb">A month in the circle</div>
 <h2>What you turn up to</h2>
 <p class="lead">You set the targets. Four men doing the same make sure you hit them.</p>
-<p>Every fortnight, you tell the circle where you’ve got to with what you set out to do. Every month, you put whatever’s pressing on the board, and the five of you work it through. Every few months, the full hour is yours, on the biggest thing you’re taking on.</p>
+<p>Every fortnight, you tell the circle where you have got to with what you set out to do. Every month, you put whatever is pressing on the whiteboard, the five of us work it through, and you leave with the first step written in your own hand. Every few months, the full hour is yours, on the biggest thing you are taking on.</p>
 <div class="rail">
 <div class="r"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 40c9-10 3-18 12-22s15 1 24-11" stroke-dasharray="4 5"/><circle cx="6" cy="40" r="2.6" fill="#C8956C" stroke="none"/><circle cx="42" cy="7" r="2.6" fill="#C8956C" stroke="none"/></svg></div><div class="t">We walk</div><div class="m">60 min, any weather</div></div>
 <div class="r"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18h26v12a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8V18z"/><path d="M34 21h4a5 5 0 0 1 0 10h-4"/><path d="M14 8v5M21 6v7M28 8v5"/></svg></div><div class="t">Coffee is waiting</div><div class="m">Delivered to the room</div></div>
@@ -507,10 +568,10 @@ footer .wm img{height:34px;width:auto}
 <div class="steps">
 <div class="step"><div class="n">01</div><div><h3>We walk, whatever the weather</h3><p>All five of you and me, outdoors. You change who you walk beside so you speak to everyone. Saying the hard thing is easier when nobody is looking at your face.</p></div><div class="t">60 min</div></div>
 <div class="step"><div class="n">02</div><div><h3>Coffee is waiting</h3><p>It is ordered ahead and delivered to the room, so nobody loses twenty minutes to a queue. The walk loosens the thinking, the room finishes it.</p></div><div class="t">On arrival</div></div>
-<div class="step"><div class="n">03</div><div><h3>One man, the full hour</h3><p>The biggest thing he is taking on goes up and stays there until it has a shape and something he can do on Monday. The full hour comes round to each man roughly every five months.</p></div><div class="t">60 min</div></div>
-<div class="step"><div class="n">04</div><div><h3>Then two men, half an hour each</h3><p>Whatever is pressing, and whatever is keeping things moving. Half an hour gets somewhere when four men already know your business.</p></div><div class="t">60 min</div></div>
-<div class="step"><div class="n">05</div><div><h3>A fortnight later, online</h3><p>The first half hour is all five of you saying where you have got to with what you set out to do. Then two men take half an hour each on the board.</p></div><div class="t">90 min</div></div>
-<div class="step"><div class="n">06</div><div><h3>Just you and me</h3><p>Ninety minutes with the whiteboard, for whatever you are not ready to say in front of the other four yet.</p></div><div class="t">Every 2 months</div></div>
+<div class="step"><div class="n">03</div><div><h3>One man, the full hour</h3><p>The biggest thing he is taking on goes up and stays there until it has a shape and a first step he can take on Monday. He writes that step on the whiteboard himself before he sits down. The full hour comes round to each man roughly every five months.</p></div><div class="t">60 min</div></div>
+<div class="step"><div class="n">04</div><div><h3>Then two men, half an hour each</h3><p>Whatever is pressing. Half an hour gets somewhere when four men already know your business, and it ends the same way, with a line in your handwriting and a date against it.</p></div><div class="t">60 min</div></div>
+<div class="step"><div class="n">05</div><div><h3>A fortnight later, online</h3><p>The first half hour is all five of you saying where you have got to with what you wrote on the board last time. Four times a year this half hour becomes the numbers round. Then two men take half an hour each on the board.</p></div><div class="t">90 min</div></div>
+<div class="step"><div class="n">06</div><div><h3>Just you and me</h3><p>Ninety minutes with the whiteboard, for whatever you are not ready to say in front of the other four yet, and for the pattern I have seen in your decisions since we last sat down.</p></div><div class="t">90 min, every 2 months</div></div>
 </div>
 <p style="margin-top:1.4rem">Every man is on the board every month. The full hour is yours roughly every five months.</p></div>
 <p data-md="location" style="margin-top:1.4rem">In person at the Shire Retreat, Milton Keynes. Online between sessions. Members come from across Milton Keynes and the surrounding area.</p>
@@ -520,7 +581,7 @@ footer .wm img{height:34px;width:auto}
 <section><div class="wrap">
 <div class="eb">The record</div>
 <h2>Everything you commit to <em>goes on the board</em></h2>
-<p>In your handwriting, with your initials next to it, in front of four other men. Next session it gets checked. Not by me, by them.</p>
+<p>Every time you are on the board, full hour or half hour, you finish by writing one commitment in your own handwriting, with your initials and a date next to it, in front of four other men. Next session it gets checked. Not by me, by them.</p>
 <div class="board">
 <div class="bh"><span>Circle One &middot; Session 04</span><span>14.03</span></div>
 <div class="ln"><b>DM</b><span>put the price up, top ten accounts</span><span class="tk">&#10003;</span></div>
@@ -531,6 +592,7 @@ footer .wm img{height:34px;width:auto}
 <div class="bf"><span>Four of five carried</span><span>Initials only. Nothing else leaves the room</span></div>
 </div>
 <div class="pull"><p>&ldquo;Not yet, and here is why&rdquo; counts. Saying why is the rep.</p></div>
+<p class="sm-line">We photograph and film the walk and the room from time to time. Faces are in it by choice, and nothing on the whiteboard is ever readable. Members use the pictures in their own content if they want to, because being in a circle is something to show.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -539,6 +601,23 @@ footer .wm img{height:34px;width:auto}
 <p>Your company goes through seasons. Good months, thin months, the quarter where three things go wrong at once. You do not get to sit those out, and neither does this.</p>
 <p>So we walk in the rain. We walk in January. If it is coming down hard we take the shorter loop and get wetter, and the session happens exactly as it would have done.</p>
 <div class="pull"><p>You do not miss a meeting. That is not strictness for its own sake. It is the only way four other men can rely on you being there.</p></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eb">The year in quarters</div>
+<h2>Twelve months is a long effort, <em>so it runs as four</em></h2>
+<p class="lead">Three months at a time, with the numbers round at the turn of each quarter and a day to recharge before the next one starts. Month thirteen does the same job for the fourth.</p>
+<div class="rail r5">
+<div class="r"><div class="t">Q1, months 1 to 3</div><div class="m">Numbers round</div></div>
+<div class="r"><div class="t">Q2, months 4 to 6</div><div class="m">Numbers round</div></div>
+<div class="r"><div class="t">Q3, months 7 to 9</div><div class="m">Numbers round</div></div>
+<div class="r"><div class="t">Q4, months 10 to 12</div><div class="m">Numbers round</div></div>
+<div class="r"><div class="t">Month 13</div><div class="m">Away</div></div>
+</div>
+<div class="g2 cards">
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="26" width="7" height="14"/><rect x="17" y="18" width="7" height="22"/><rect x="28" y="10" width="7" height="30"/><path d="M6 44h36"/></svg></div><h3>The numbers round</h3><p>Four times a year, the opening half hour online becomes the numbers round. Each man says three figures out loud: turnover for the quarter, profit for the quarter, and one figure of his own choosing. You set each one against yourself, where you were, where you could have been and where you want to be, and the other four ask one question each about what the numbers are telling you. Nothing is written down and nobody is ranked. Five businesses differ in too many ways for a league table to mean anything. What you get is a benchmark against the only business that matters, which is yours, and most owners have not had one since the day they started.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l8 5"/></svg></div><h3>The Reset</h3><p>At the end of each of the first three quarters there is an optional day, lightly guided, to put down what you have been carrying and keep your momentum into the next three months. Movement first, phones off, then lunch together. Forty-five minutes to get everything you are holding onto paper, sorted into keep, hand over or drop. The afternoon is yours. Then half an hour with me to settle the one thing you carry into the next quarter. It sits on top of that month&rsquo;s sessions, never in place of one, and you pay for it separately. Think of it the way an athlete treats a recovery week: part of the training, not a break from it.</p></div>
+</div>
 </div></section>
 
 <section><div class="wrap">
@@ -558,7 +637,7 @@ footer .wm img{height:34px;width:auto}
 <div class="eb">Why men join</div>
 <h2>Nine things you do not <em>have today</em></h2>
 <div class="g3">
-<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34a16 16 0 1 1 32 0"/><path d="M24 34l9-9"/><circle cx="24" cy="34" r="2.4" fill="#C8956C" stroke="none"/></svg></div><h3>An honest read on how you are doing</h3><p>No appraisal since the day you started, and the accounts lag a year. Four other owners is the first real calibration most men get.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34a16 16 0 1 1 32 0"/><path d="M24 34l9-9"/><circle cx="24" cy="34" r="2.4" fill="#C8956C" stroke="none"/></svg></div><h3>An honest read on how you are doing</h3><p>No appraisal since the day you started, and the accounts lag a year. Four times a year you say your numbers out loud and set them against where you were and where you want to be. Most owners have never done that in front of anyone.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="26" width="7" height="14"/><rect x="17" y="18" width="7" height="22"/><rect x="28" y="10" width="7" height="30"/><path d="M6 44h36"/></svg></div><h3>Four more businesses to learn from</h3><p>You have run one company, through one downturn, from one seat. Everything you believe about pricing and hiring comes from a sample of one.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 26V12a3 3 0 0 1 6 0v10M21 22V9a3 3 0 0 1 6 0v13M27 22V12a3 3 0 0 1 6 0v14M33 26v-4a3 3 0 0 1 6 0v9c0 8-6 12-13 12s-13-4-13-12v-9a3 3 0 0 1 6 0"/></svg></div><h3>Somebody going at it as hard as you</h3><p>Staff want security, customers want service, your family wants you off the phone. Name one man you spoke to this week who wanted nothing from you.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="13"/><path d="M31 31l10 10"/></svg></div><h3>Men who will tell you when you are wrong</h3><p>Being the most capable person in your own building is comfortable and it has made you slower. Nobody has properly disagreed with you in years.</p></div>
@@ -570,11 +649,19 @@ footer .wm img{height:34px;width:auto}
 </div>
 </div></section>
 
-<section><div class="wrap"><div class="g2">
-<div>
+<section><div class="wrap">
 <div class="eb">The method</div>
-<h2>What happens at the <em>whiteboard</em></h2>
-<p>You start talking about the challenge, however it comes out. As you talk I write it up on the whiteboard, so the things that matter are out of your head and where you can see them. Then the real work starts.</p>
+<h2>Every slot starts with the same question. <em>What&rsquo;s next?</em></h2>
+<p class="lead">For you, and for the business. Your challenge goes up on the whiteboard however it comes out, and where you are starting from decides how the hour runs.</p>
+<div class="g3">
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="13"/><path d="M31 31l10 10"/></svg></div><h3>You do not know what&rsquo;s next</h3><p>We work out exactly where you are trying to get to, then lay out the options for the next step, so you are choosing between real moves rather than staring at a blank.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="38" height="26" rx="2"/><path d="M11 16h15M11 22h21M11 28h10M24 34v7M18 41h12"/></svg></div><h3>You know the next step, but not how to take it</h3><p>We open it up and put more ways of doing it on the board than you would have found alone. Four other owners have usually taken a version of that step already.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 34a16 16 0 1 1 32 0"/><path d="M24 34l9-9"/><circle cx="24" cy="34" r="2.4" fill="#C8956C" stroke="none"/></svg></div><h3>You want to move, but you are buried in the detail</h3><p>We step back, connect what is in front of you to the bigger picture, and then you decide. The detail is still there when you get back to it.</p></div>
+</div>
+<p style="margin-top:1.8rem">The other four look in from outside, and that matters more than it sounds. An owner goes nose blind to his own business. You are so close to the detail that you stop seeing what is obvious to anyone walking in the door for the first time. Four men walking in the door is the point.</p>
+<div class="g2" style="margin-top:2.6rem;align-items:start">
+<div>
+<h3>As it goes up on the board</h3>
 <div class="steps">
 <div class="step"><div class="n">01</div><div><h3>Find the connections</h3><p>Most of what looks like six separate challenges turns out to be two.</p></div><div class="t"></div></div>
 <div class="step"><div class="n">02</div><div><h3>Find what is missing</h3><p>The information or the numbers you have been deciding without.</p></div><div class="t"></div></div>
@@ -584,10 +671,13 @@ footer .wm img{height:34px;width:auto}
 </div>
 </div>
 <div><div class="fig"><img src="/images/img-1992.jpg" alt="A session room, the whiteboard covered in working notes." width="1300" height="820" loading="lazy" decoding="async"><div class="ds"><div class="l">At the whiteboard</div><div class="r">Session 04</div></div></div>
-<div class="pull" style="margin-top:1.4rem"><p>By then I know how you are wired, so the questions are aimed at the way you think. The other four must ask you a question before they offer an opinion. That is a rule of the room.</p></div>
-<div class="chips"><span class="chip no">Frameworks</span><span class="chip no">Models</span><span class="chip no">Homework</span><span class="chip no">Slides</span></div>
+<div class="click"><div class="ml">The click</div><p>Every slot is working towards one moment. The point where the approach becomes clear, the strategy with it, and so do the next steps. You know when it has happened. You leave with the first of those steps written on the board in your own hand, and that is what the other four ask you about next time.</p></div>
+<p style="margin-top:1.4rem">When the bigger plan needs money, people or kit you do not have yet, that goes on the board too: where it could come from, and what it would cost you.</p>
 </div>
-</div></div></section>
+</div>
+<div class="pull"><p>By then I know how you are wired, so my questions are aimed at the way you think. The first part of every slot is yours and mine: I ask, you answer, nobody else speaks. Longer in the full hour, shorter in the half hours. Then the floor opens and the other four come in with their questions and their views. That is how the room runs, and I hold it to it.</p></div>
+<div class="chips"><span class="chip no">Frameworks</span><span class="chip no">Models</span><span class="chip no">Homework</span><span class="chip no">Slides</span></div>
+</div></section>
 
 <section><div class="wrap"><div class="g2">
 <div>
@@ -601,17 +691,22 @@ footer .wm img{height:34px;width:auto}
 </div></div></section>
 
 <section data-md="rules"><div class="wrap">
-<div class="eb">The standard</div>
+<div class="eb">The rules</div>
 <h2>What the room <em>asks of you</em></h2>
-<p>Five obligations, and they are the reason it works. Every man signs up to the same ones.</p>
+<p>Six rules, and they are the reason it works. Every man signs up to the same ones before his first session.</p>
 <div class="g3">
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="10" width="34" height="32" rx="2"/><path d="M7 19h34M16 5v9M32 5v9"/><circle cx="18" cy="29" r="2.4" fill="#C8956C" stroke="none"/><circle cx="30" cy="29" r="2.4" fill="#C8956C" stroke="none"/></svg></div><h3>You turn up</h3><p>Twice a month, for twelve months. Not when it suits, and not only when the weather is good.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="38" height="26" rx="2"/><path d="M11 16h15M11 22h21M11 28h10M24 34v7M18 41h12"/></svg></div><h3>You bring something real</h3><p>Not the summary. The thing you have been going round in the car.</p></div>
-<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M16 24l6 6 11-13"/></svg></div><h3>You do what you said, or say why not</h3><p>The first half hour of every online session is exactly this.</p></div>
-<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="13"/><path d="M31 31l10 10"/></svg></div><h3>You ask before you advise</h3><p>Nobody offers a view until he has asked a question. House rule, and I enforce it.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M16 24l6 6 11-13"/></svg></div><h3>You do what you said, or say why not</h3><p>The first half hour of every online session is exactly this. &ldquo;Not yet, and here is why&rdquo; counts.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="13"/><path d="M31 31l10 10"/></svg></div><h3>You wait your turn at the board</h3><p>The first part of every slot is the man on the board and me, questions only. Then the floor opens and you come in. Nobody jumps in early, and I hold the line on it.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 26V12a3 3 0 0 1 6 0v10M21 22V9a3 3 0 0 1 6 0v13M27 22V12a3 3 0 0 1 6 0v14M33 26v-4a3 3 0 0 1 6 0v9c0 8-6 12-13 12s-13-4-13-12v-9a3 3 0 0 1 6 0"/></svg></div><h3>You keep it in the room</h3><p>All of it. That is what makes the rest possible.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="5"/><circle cx="33" cy="18" r="4.2"/><path d="M6 38c0-6 4-11 10-11s10 5 10 11M28 38c0-5 2-9 6-9s6 4 6 9"/></svg></div><h3>If a man is coasting, the other four say so</h3><p>Out loud, in the room, before I have to.</p></div>
 </div>
 <div class="pull"><p>Four men who will hold you to what you said, and never repeat a word of it outside the room.</p></div>
+<div class="blk"><h3>If you drift</h3>
+<p>The rules are what make the circle something you can fail at, which is why it is worth being in. So there is a line, and here is where it is.</p>
+<p>Miss two commitments in a row without saying why, and you and I have a conversation before the next session, to find out what has changed. A third, or a pattern across a quarter, and we talk about whether the circle is still right for you this year. If the drifting carries on, you step out. You stop paying, you go back on the waiting list to join a later circle when the time is right, and your seat goes to the next man waiting, so the other four keep a circle of five.</p>
+<p>A missed commitment with an honest reason does not count. Nor does a planned break. Saying why is the rep.</p></div>
 </div></section>
 
 <section><div class="wrap"><div class="g2">
@@ -620,7 +715,7 @@ footer .wm img{height:34px;width:auto}
 <h2>&ldquo;Will I be the one who is <em>behind?</em>&rdquo;</h2>
 <p>Almost everybody wonders it. Almost nobody says it.</p>
 <p>Circles are not built by size of business. They are built by whether five men are stuck on challenges they can usefully think about together. Nine staff and a partnership falling apart is more use to twenty-four staff and no successor than any matching turnover would be.</p>
-<p>You will be ahead of the others on some things and behind on others. That is the arrangement, and it is the only way to find out where you actually are.</p>
+<p>You are not measured against the other four. You are measured against where your own business was a year ago, and that is the only comparison that tells you anything.</p>
 </div>
 <div><div class="fig"><img src="/images/img-1994.jpg" alt="A business owner taking a call outdoors, on his own." width="1400" height="780" loading="lazy" decoding="async"><div class="ds"><div class="l">Deciding it alone, again</div><div class="r">06.02</div></div></div></div>
 </div></div></section>
@@ -646,16 +741,34 @@ footer .wm img{height:34px;width:auto}
 <li>Looking for men to sell to</li><li>Looking for a speaker or a conference</li><li>Want somebody to tell you what to do</li><li>Would not say the real thing in front of four others</li><li>Would coast for a month and let the others carry it</li></ul></div>
 </div>
 <p style="margin-top:1.6rem">The hour is free and open to anybody. A place in a circle is not. I build these rather than fill them, because in a circle of five, one man coasting costs the other four their year.</p>
+<p style="margin-top:1rem">If your business is smaller than this and you are going at it, book the hour anyway. The range is a guide to who sits well together, not a door.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="eb">Joining</div>
+<h2>Every man comes in through the whiteboard, <em>and nobody joins without being placed</em></h2>
+<p class="lead">Five steps, in this order. None of them is a sales process. They exist so that the four men you sit with are the right four.</p>
+<div class="steps">
+<div class="step"><div class="n">01</div><div><h3>A free hour at the whiteboard.</h3><p>Open to anyone. Whatever is live in your business goes on the board, and we work it until it has a shape. No pitch at the end. It is how I find out who you are, what your business is and what you are going at.</p></div><div class="t"></div></div>
+<div class="step"><div class="n">02</div><div><h3>The waiting list, and your place.</h3><p>If a circle is right for you, you go on the waiting list until I can place you in the right one. Every circle is built for variety. No member does what another member does, so you are never sitting across from a competitor, and you spend the year looking at four businesses nothing like yours.</p></div><div class="t"></div></div>
+<div class="step"><div class="n">03</div><div><h3>The rules, agreed in writing.</h3><p>The six rules above, and the drift rule. Everyone signs the same ones.</p></div><div class="t"></div></div>
+<div class="step"><div class="n">04</div><div><h3>CliftonStrengths 34.</h3><p>Done before your first session and talked through in your first one-to-one. It is how I know how you are wired before you are on the board.</p></div><div class="t"></div></div>
+<div class="step"><div class="n">05</div><div><h3>What the year has to be worth.</h3><p>In that first one-to-one you write down, in your own terms, what would make the twelve months worth the money and the hours. It sits at the top of your record. We hold it up again in month seven, and in month thirteen you say whether the year delivered it.</p></div><div class="t"></div></div>
+</div>
+<div class="blk"><h3>Three sessions, then you decide.</h3>
+<p>Membership runs for twelve months, because a circle men drift in and out of stops being a circle.</p>
+<p>But you cannot tell from one hour whether these four are the right four. So your first three sessions, roughly six weeks, are yours to walk away from. Say so and we stop, with nothing to pay for the rest and no conversation about why.</p></div>
 </div></section>
 
 <section><div class="wrap">
 <div class="eb">How the year ends</div>
-<h2>Month thirteen, <em>away</em></h2>
+<h2>Month thirteen, <em>together</em></h2>
 <p>Twelve months of this should not simply stop. The first week after the year is done, the five of you go away together.</p>
-<div class="g3">
+<div class="g2 cards">
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="38" height="26" rx="2"/><path d="M11 16h15M11 22h21M11 28h10M24 34v7M18 41h12"/></svg></div><h3>Your twelve boards, on the wall</h3><p>Every commitment you made and every tick, printed and up in the room. It is the only record of the year that exists.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="5"/><circle cx="33" cy="18" r="4.2"/><path d="M6 38c0-6 4-11 10-11s10 5 10 11M28 38c0-5 2-9 6-9s6 4 6 9"/></svg></div><h3>Each man&rsquo;s year, out loud</h3><p>What he said in session one and what actually happened. Twenty minutes each, and the only time the circle looks backwards.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="10" width="34" height="32" rx="2"/><path d="M7 19h34M16 5v9M32 5v9"/><circle cx="18" cy="29" r="2.4" fill="#C8956C" stroke="none"/><circle cx="30" cy="29" r="2.4" fill="#C8956C" stroke="none"/></svg></div><h3>Another twelve months, or not</h3><p>Decided in the room, face to face, rather than by email in month eleven.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M16 24l6 6 11-13"/></svg></div><h3>What you wrote at joining</h3><p>What you said the year had to be worth, read back in the room, and whether it did. Then each man says what he is going towards next.</p></div>
 </div>
 <p style="margin-top:1.6rem">Priced separately and at cost, because I make nothing on it. Named at joining so it is part of the shape of the year rather than something sprung on you in month eleven.</p>
 </div></section>
@@ -666,16 +779,9 @@ footer .wm img{height:34px;width:auto}
 <p>The circle is the spine of it. These are open to members only, and none of them is pushed at you.</p>
 <div class="g3">
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="16" r="6"/><path d="M6 40c0-7 5-12 11-12s11 5 11 12"/><rect x="31" y="14" width="12" height="16" rx="1"/><path d="M34 20h6M34 25h6"/></svg></div><h3>One to one with me, fortnightly</h3><p>Instead of the ninety minutes every two months. For a year where a great deal is happening at once.</p></div>
-<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 26V12a3 3 0 0 1 6 0v10M21 22V9a3 3 0 0 1 6 0v13M27 22V12a3 3 0 0 1 6 0v14M33 26v-4a3 3 0 0 1 6 0v9c0 8-6 12-13 12s-13-4-13-12v-9a3 3 0 0 1 6 0"/></svg></div><h3>Coaching your second in command</h3><p>Six sessions over three months with the man who could run things when you are not there.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 26V12a3 3 0 0 1 6 0v10M21 22V9a3 3 0 0 1 6 0v13M27 22V12a3 3 0 0 1 6 0v14M33 26v-4a3 3 0 0 1 6 0v9c0 8-6 12-13 12s-13-4-13-12v-9a3 3 0 0 1 6 0"/></svg></div><h3>Coaching your second in command</h3><p>Six sessions over three months with the person who could run things when you are not there. The same work I do with owners through BuildStrong, open to members at the member rate.</p><p style="margin-top:.8rem"><a class="tl" href="/buildstrong#add-on">How the add-on works</a></p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><circle cx="10" cy="30" r="5"/><circle cx="38" cy="30" r="5"/><path d="M24 17v8M20 27l-6 2M28 27l6 2"/></svg></div><h3>A day with your whole team</h3><p>All of them in a room with the whiteboard, working the decisions that currently reach your desk by default.</p></div>
 </div>
-</div></section>
-
-<section><div class="wrap">
-<div class="eb">If it turns out not to be right</div>
-<h2>Three sessions, <em>then you decide</em></h2>
-<p>Membership runs for twelve months, because a circle men drift in and out of stops being a circle.</p>
-<p>But you cannot tell from one hour whether these four are the right four. So your first three sessions, roughly six weeks, are yours to walk away from. Say so and we stop, with nothing to pay for the rest and no conversation about why.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -683,17 +789,19 @@ footer .wm img{height:34px;width:auto}
 <h2>What membership includes</h2>
 <div class="facts">
 <div><span>Circle size</span><b>Five men</b></div>
-<div><span>Long session</span><b>Monthly, half a day, in person</b></div>
+<div><span>Long session</span><b>Monthly, half a day, in person at the Shire Retreat</b></div>
 <div><span>Short session</span><b>Monthly, 90 minutes, online</b></div>
 <div><span>One to one with me</span><b>Ninety minutes, every two months</b></div>
-<div><span>On joining</span><b>CliftonStrengths 34, plus two hours</b></div>
+<div><span>On joining</span><b>CliftonStrengths 34, debriefed in your first one-to-one</b></div>
+<div><span>Every quarter</span><b>The numbers round, and the optional Reset day</b></div>
 <div><span>Where</span><b>Milton Keynes. London coming soon</b></div>
 <div><span>Term</span><b>Twelve months</b></div>
 <div><span>Leaving</span><b>Free to leave in the first three sessions</b></div>
-<div><span>Month thirteen</span><b>A night away, priced separately at cost</b></div>
+<div><span>Month thirteen</span><b>Together, away from the room, priced separately at cost</b></div>
+<div><span>Fee</span><b>&pound;550 a month, the intro price for members of the first circle, held for as long as you stay</b></div>
 <div><span>Status</span><b>Selecting the first five</b></div>
 </div>
-<p style="margin-top:1.6rem">The fee is discussed on the call, because it depends on which circle you join and when. Founding members hold their rate for as long as they stay.</p>
+<p style="margin-top:1.6rem">&pound;550 a month is the price for the first circle only. Later circles pay more, and a man who joins the first one keeps his rate for as long as he stays. For six hours a month with four other owners and me, one avoided mistake at your size pays for the year.</p>
 </div></section>
 
 <section id="questions" data-md="faq"><div class="wrap">
@@ -701,21 +809,22 @@ footer .wm img{height:34px;width:auto}
 <h2>What owners ask before they join</h2>
 <div class="faq">
 <div class="q"><h3>Is there a men&rsquo;s business group in Milton Keynes?</h3><p>Yes. at.theboard is a circle of five male owner-managers in Milton Keynes who meet in person every month at the Shire Retreat and online a fortnight later, for twelve months. It is a business peer group for owners who want to be pushed on their numbers and their decisions, rather than a social or wellbeing group.</p></div>
-<div class="q"><h3>Who is it for?</h3><p>Men who own and run a business in or near Milton Keynes, usually with &pound;500k to &pound;5m turnover and five or more staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do.</p></div>
+<div class="q"><h3>Who is it for?</h3><p>Men who own and run a business in or near Milton Keynes, usually with &pound;500k to &pound;5m turnover and five to twenty-five staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do. Smaller businesses are welcome to book the free hour and talk.</p></div>
 <div class="q"><h3>How often does the circle meet?</h3><p>Twice a month. One in-person half day at the Shire Retreat: a sixty-minute walk, coffee, then the whiteboard, where one man takes a full hour and two men take half an hour each. A fortnight later, ninety minutes online. Each member also has ninety minutes one to one with John every two months. That comes to about six hours a month.</p></div>
+<div class="q"><h3>What does a year in the circle change?</h3><p>The business, in figures you already track: profit and what you take home, turnover past the point where you have stalled, sales that no longer all run through you, a business that can run without you for a fortnight, and what it would be worth to a buyer. Each man writes down at joining what the year has to be worth to him, and the circle holds him to it in month seven and month thirteen.</p></div>
 <div class="q"><h3>How long do I commit for?</h3><p>Twelve months. The circle stays the same five men for the year, because the value comes from people who know your business well enough to notice when you are coasting.</p></div>
+<div class="q"><h3>How much does it cost?</h3><p>&pound;550 a month for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.</p></div>
 <div class="q"><h3>How is this different from a networking group?</h3><p>Networking groups in Milton Keynes meet weekly or fortnightly to pass referrals. at.theboard has no referral target and no selling in the room. Five owners work on each other&rsquo;s real decisions, and every commitment is written on the whiteboard with a name and a date.</p></div>
 <div class="q"><h3>How does it compare with Vistage or The Alternative Board?</h3><p>Both are established peer advisory options. Vistage groups usually have twelve to sixteen members meeting for a day each month, and The Alternative Board runs monthly advisory boards in Milton Keynes. at.theboard is smaller, five men, with every member on the whiteboard every month, a walk built into each session, and a fixed twelve-month circle.</p></div>
-<div class="q"><h3>How do I join?</h3><p>Start with a free hour at the whiteboard with John on whatever is live in your business. The free hour is open to anyone. A place in a circle is not, because one man coasting costs the other four their year. The first circle is being selected now.</p></div>
+<div class="q"><h3>How do I join?</h3><p>Start with a free hour at the whiteboard with John on whatever is live in your business. The free hour is open to anyone. A place in a circle is not. If a circle is right for you, you go on a waiting list until John can place you in one where nobody does what you do. The first circle is being selected now.</p></div>
 </div>
-<p style="margin-top:1.6rem"><a class="tl" href="/business-groups-milton-keynes">How at.theboard compares with the other options in Milton Keynes</a></p>
 </div></section>
 
 <section id="book" data-md="join"><div class="wrap">
 <div class="eb">The way in</div>
 <h2>An hour at the whiteboard. <em>Free.</em></h2>
 <div class="g3">
-<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="38" height="26" rx="2"/><path d="M11 16h15M11 22h21M11 28h10M24 34v7M18 41h12"/></svg></div><h3>It goes on the whiteboard</h3><p>Whatever is genuinely live this week, in your words, not the tidy version.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="38" height="26" rx="2"/><path d="M11 16h15M11 22h21M11 28h10M24 34v7M18 41h12"/></svg></div><h3>It goes on the whiteboard</h3><p>Whatever is live this week, in your words, not the tidy version.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M16 24l6 6 11-13"/></svg></div><h3>You leave with something to do</h3><p>We stay with it until it has a shape and something you can act on Monday.</p></div>
 <div class="card"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="#C8956C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M17 17l14 14M31 17L17 31"/></svg></div><h3>No pitch afterwards</h3><p>Free whether you join or not. No follow-up sequence.</p></div>
 </div>
@@ -753,6 +862,6 @@ if (location.search.indexOf('sent=1') > -1) {
 <footer><div class="wrap"><div class="wm"><img src="/images/logo-at-theboard-lockup-dark.png" alt="at.theboard" width="1864" height="117" loading="lazy"></div>
 <div class="sm">Run by John Obidipe &middot; Milton Keynes &middot; London coming soon</div>
 <div class="sm" style="margin-top:1.1rem"><a href="/" style="color:#A8774E;text-decoration:none">Catalyst Growth Coaching</a></div>
-<div class="sm" style="margin-top:1.1rem" data-md="reviewed">Page last reviewed <time class="reviewed" datetime="2026-10-07">7 October 2026</time></div></div></footer>
+<div class="sm" style="margin-top:1.1rem" data-md="reviewed">Page last reviewed <time class="reviewed" datetime="2026-10-21">21 October 2026</time></div></div></footer>
 </div>
 </body></html>
