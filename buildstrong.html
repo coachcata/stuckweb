@@ -585,7 +585,18 @@
     line-height: 1.7; color: var(--stone); max-width: 48ch;
   }
 
+  /* Photos and living-photo clips between the text */
+  .pack-figure {
+    margin: 4rem 0 0; width: 100%; aspect-ratio: 16/9;
+    overflow: hidden; background: var(--bg-3);
+  }
+  .pack-figure img, .pack-figure video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pack-pair { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .pack-pair .pack-figure { margin: 0; aspect-ratio: 3/2; }
+
   @media (max-width: 900px) {
+    .pack-pair { grid-template-columns: 1fr; gap: 1rem; }
+    .pack-figure { margin-top: 2.5rem; max-height: 60vh; }
     .proof-grid { grid-template-columns: 1fr; }
     .proof-logos, .proof-logos.six { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .work-rail, .work-rail.four { grid-template-columns: 1fr; }
@@ -711,6 +722,7 @@
     <p>So you decide alone, usually in the van or at eleven at night, and then you lie awake marking your own homework. Your team cannot tell you when you are wrong. Your accountant tells you how the year went months after it ended. Your family wants you off the phone. There is nobody in your week whose job is to think about the business with you, and it shows in the decisions that keep getting pushed to next month.</p>
     <p class="punchline"><em>That is what BuildStrong is for. Not the work. The deciding.</em></p>
   </div>
+  <div class="pack-figure"><img src="/images/img-1994.jpg" alt="A business owner on the phone by a window, deciding it alone" loading="lazy"></div>
 </section>
 
 <!-- SCENE 03, Who you would be thinking with -->
@@ -743,14 +755,6 @@
       </div>
     </div>
   </div>
-  <div class="proof-logos six">
-    <div class="logo-cell"><img src="/images/logos/arrow-planning.png" alt="Arrow Planning" loading="lazy"></div>
-    <div class="logo-cell"><img src="/images/logos/toyota.png" alt="Toyota" loading="lazy"></div>
-    <div class="logo-cell"><img src="/images/logos/convatec.png" alt="Convatec" loading="lazy"></div>
-    <div class="logo-cell"><img src="/images/logos/oxford.png" alt="University of Oxford" loading="lazy"></div>
-    <div class="logo-cell"><img src="/images/logos/autoglass.png" alt="Autoglass" loading="lazy"></div>
-    <div class="logo-cell"><img src="/images/logos/nextenergy.png" alt="NextEnergy Capital" loading="lazy"></div>
-  </div>
 </section>
 
 <!-- SCENE 04, The Work -->
@@ -776,6 +780,7 @@
     </div>
   </div>
   <p class="price-line">Six months, a session every fortnight, so twelve at the board. £3,600 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £1,800. No retainer, and nothing added on.</p>
+  <div class="pack-figure"><video autoplay muted loop playsinline preload="metadata" aria-label="A client writing on the whiteboard while John watches"><source src="/videos/session-client-writing.mp4" type="video/mp4"></video></div>
 </section>
 
 <!-- SCENE 05, A Session -->
@@ -796,6 +801,10 @@
       <h3>You leave with a decision, or the action that gets you to one.</h3>
       <p>Written on the board before we finish, and the first thing I ask about next time. And I say what I think. You are not paying for somebody to nod. When I have a view you get it, marked as mine, and you do what you like with it.</p>
     </div>
+  </div>
+  <div class="pack-pair">
+    <div class="pack-figure"><img src="/images/img-1984.jpg" alt="A skylit session room with a long whiteboard mind-map" loading="lazy"></div>
+    <div class="pack-figure"><img src="/images/img-1992.jpg" alt="A session room, the whiteboard covered in working notes" loading="lazy"></div>
   </div>
   <p class="pack-note">Online with the board shared live on screen, or in person in central London or Milton Keynes. Nobody else is in it. You pay, so there is no sponsor, no report and nobody to answer to but you.</p>
 </section>
@@ -849,6 +858,7 @@
       <tr><td>"It felt like therapy. I wanted the price list sorted."</td><td>Every session is about a decision in the business. If what is in the way is personal, I will say so, and that is a different conversation with a different person.</td></tr>
     </tbody>
   </table>
+  <div class="pack-figure"><video autoplay muted loop playsinline preload="metadata" aria-label="John and a client at the whiteboard, conversation ending in laughter"><source src="/videos/ember-laughter.mp4" type="video/mp4"></video></div>
 </section>
 
 <!-- SCENE 08, The add-on -->
@@ -870,6 +880,7 @@
       <p>Six sessions over three months with the person who could run things when you are not there. Live decisions worked through at the board, scenario practice off stage for performance on stage, and the work of merging their own values with the role so that what comes out is theirs rather than an imitation of you. You and I check in throughout, because the hardest part of this is usually not their development.</p>
     </div>
   </div>
+  <div class="pack-figure"><img src="/images/img-1989.jpg" alt="A team mapping project oversight, squad leadership and delegation at the whiteboard" loading="lazy"></div>
   <p class="price-line">£1,800 for the six sessions, which is £300 a session. Open to BuildStrong clients and to at.theboard members, at the same price.</p>
   <p class="pack-note">The aim is not that you step back entirely. Most owners do not want that. It is that the business runs for a fortnight without you and nothing needs deciding twice.</p>
 </section>
