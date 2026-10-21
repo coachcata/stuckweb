@@ -55,11 +55,13 @@ jobs:
             grep -q "$s" /tmp/board.html && ok "in raw HTML: $s" || bad "missing from raw HTML: $s"
           done
           grep -qi "men only?" /tmp/board.html && bad "men-only question is live" || ok "no men-only question"
-          grep -q "&pound;550\|£550" /tmp/board.html && bad "price is live" || ok "no price"
+          grep -q "&pound;550 a month\|£550 a month" /tmp/board.html && ok "price shown (confirmed Oct 2026)" || bad "price missing"
+          grep -q '"price": "550"' /tmp/board.html && ok "price in schema" || bad "price missing from schema"
           curl -sS "$BASE/robots.txt" | tee /tmp/robots.txt | grep -q "Sitemap: https://catalystgrowthcoach.co.uk/sitemap.xml" && ok "robots names sitemap" || bad "robots sitemap line"
           grep -qi "^disallow: */\?$" /tmp/robots.txt && bad "robots disallows" || ok "robots blocks nothing"
           curl -sS "$BASE/sitemap.xml" | grep -q "<loc>https://catalystgrowthcoach.co.uk/board</loc>" && ok "board in sitemap" || bad "board not in sitemap"
-          curl -sS "$BASE/sitemap.xml" | grep -q "business-groups-milton-keynes\|/the-hour<" && bad "noindex page in sitemap" || ok "sitemap holds no noindex page"
+          curl -sS "$BASE/sitemap.xml" | tee /tmp/sm.xml | grep -q "/the-hour<" && bad "noindex page in sitemap" || ok "sitemap holds no noindex page"
+          grep -q "<loc>https://catalystgrowthcoach.co.uk/business-groups-milton-keynes</loc>" /tmp/sm.xml && ok "comparison page in sitemap" || bad "comparison page not in sitemap"
           exit $fail
 
       # Netlify publishes the /site/ folder, so both repo copies are served at
@@ -78,18 +80,19 @@ jobs:
                 feed.xml) echo "$out" | grep -q "rss+xml" || fail=1;;
               esac
               if grep -q $'—\|–' /tmp/f; then echo "  FAIL: em or en dash in $pre/$p"; fail=1; fi
-              if grep -qi "why is it men only\|£550" /tmp/f; then echo "  FAIL: unconfirmed copy in $pre/$p"; fail=1; fi
+              if grep -qi "why is it men only" /tmp/f; then echo "  FAIL: unconfirmed copy in $pre/$p"; fail=1; fi
             done
           done
           curl -sS "$BASE/board.md" | head -1 | grep -q "canonical: https://catalystgrowthcoach.co.uk/board" || { echo "FAIL board.md canonical line"; fail=1; }
           curl -sS "$BASE/$KEY.txt" | grep -qx "$KEY" || { echo "FAIL key file content"; fail=1; }
           exit $fail
 
-      - name: Comparison page shell
+      # Filled with John's copy on 21 Oct 2026, so it is now indexable.
+      - name: Comparison page
         run: |
           curl -sS -o /tmp/c.html -w "status %{http_code}\n" "$BASE/business-groups-milton-keynes"
-          grep -q 'name="robots" content="noindex' /tmp/c.html && echo "ok   noindex" || { echo "FAIL noindex"; exit 1; }
-          echo "placeholders: $(grep -o 'JOHN TO SUPPLY' /tmp/c.html | wc -l)"
+          grep -q 'name="robots" content="noindex' /tmp/c.html && { echo "FAIL still noindex"; exit 1; } || echo "ok   indexable"
+          grep -q 'JOHN TO SUPPLY' /tmp/c.html && { echo "FAIL placeholders left"; exit 1; } || echo "ok   no placeholders"
           curl -sS "$BASE/" | grep -q 'href="/business-groups-milton-keynes"' && echo "ok   linked from homepage" || { echo "FAIL homepage link"; exit 1; }
 
       - name: Repo files are not served
