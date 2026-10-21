@@ -283,7 +283,48 @@
   }
 
   .book-note{margin-top:1.1rem;font-family:var(--font-d);font-style:italic;font-weight:300;font-size:1rem;line-height:1.6;color:var(--stone);}
-  </style>
+  
+  /* ══ Programme cards (same component as the homepage tiles) ══ */
+  .scene-argument .tiles-grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 5rem; max-width: none; }
+    .tile {
+    display: flex; flex-direction: column; gap: 1.5rem;
+    text-decoration: none; color: inherit;
+    padding-bottom: 2rem;
+    transition: transform 0.4s ease;
+  }
+  .tile:hover { transform: translateY(-4px); }
+  /* Tiles share one ratio; 2:1 balances the 1.78 and 2.17 photos (≤11% crop) */
+  .tile .tile-image {
+    width: 100%; aspect-ratio: 2/1;
+    background: var(--bg-3); overflow: hidden; position: relative;
+  }
+  .tile .tile-image img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity 0.4s ease; opacity: 0.85;
+  }
+  .tile:hover .tile-image img { opacity: 1; }
+  .tile h3 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+    line-height: 1.1; color: var(--bone);
+  }
+  .tile .tile-desc {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.05rem; line-height: 1.5; color: var(--stone);
+    max-width: 28ch;
+  }
+  .tile .tile-link {
+    margin-top: auto; padding-top: 1rem;
+    font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .tile .tile-link::after {
+    content: ' →'; transition: margin-left 0.3s;
+  }
+  .tile:hover .tile-link::after { margin-left: 0.3em; }
+  @media (max-width: 1100px) { .scene-argument .tiles-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) { .scene-argument .tiles-grid { grid-template-columns: 1fr; gap: 3rem; } }
+</style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -359,8 +400,34 @@
   <div class="folio">01 · <span>The Argument</span></div>
   <div class="body">
     <p class="lede"><em>The Whiteboard Sessions are where the work begins.</em></p>
-    <p>What happens next depends on what the sessions reveal. Sometimes it's more sessions, because the question is bigger than an hour allowed. Sometimes it's working with the team, because the thinking needs to happen with them, not just about them. Sometimes it's coaching the person you're developing, the successor question is best answered with the successor in the room. Sometimes it's being in the business with you for a period, alongside whatever you're working through.</p>
-    <p class="punchline"><em>The shape of the work follows the work. Not the other way around.</em></p>
+    <p>What happens next depends on what the hour reveals. Sometimes it is a run of sessions on your own decisions, because the question is bigger than an hour allowed. Sometimes it is working with the team, because the thinking has to happen with them, not just about them. Sometimes it is coaching the person you are developing, because the question of who runs things without you is best answered with that person in the room. And for an owner, sometimes it is four other owners, because what you need is not a coach but a room.</p>
+    <p class="punchline"><em>Each of those is a fixed piece of work with an end you can see from the start. None of them is a retainer.</em></p>
+  </div>
+  <div class="tiles-grid">
+    <a class="tile" href="/leadstrong">
+      <div class="tile-image"><img src="/images/img-1983.jpg" alt="Wall whiteboard session with a corporate leader" loading="lazy"></div>
+      <h3>LeadStrong</h3>
+      <p class="tile-desc">Six months of weekly Whiteboard Sessions for a corporate leader, on two or three outcomes agreed at the start.</p>
+      <span class="tile-link">Read about LeadStrong</span>
+    </a>
+    <a class="tile" href="/buildstrong">
+      <div class="tile-image"><img src="/images/img-1935.jpg" alt="Hospitality whiteboard session with a business owner" loading="lazy"></div>
+      <h3>BuildStrong</h3>
+      <p class="tile-desc">Six months of fortnightly Whiteboard Sessions for an owner, on the decisions that keep coming back to your desk.</p>
+      <span class="tile-link">Read about BuildStrong</span>
+    </a>
+    <a class="tile" href="/teamstrong">
+      <div class="tile-image"><img src="/images/img-1981.jpg" alt="Two people working together at a wall whiteboard" loading="lazy"></div>
+      <h3>TeamStrong</h3>
+      <p class="tile-desc">Six months with you and the team, when what you have changed needs them to change too.</p>
+      <span class="tile-link">Read about TeamStrong</span>
+    </a>
+    <a class="tile" href="/board">
+      <div class="tile-image"><img src="/images/img-1991.jpg" alt="Two business owners walking a wooded path in Milton Keynes" loading="lazy"></div>
+      <h3>at.theboard</h3>
+      <p class="tile-desc">Twelve months in a circle of five owner-managers in Milton Keynes, every man on the whiteboard every month.</p>
+      <span class="tile-link">Read about at.theboard</span>
+    </a>
   </div>
 </section>
 
@@ -370,10 +437,11 @@
   <div class="split-grid">
     <div class="split-text">
       <div class="body">
-        <p>A client booked a session because they were stuck on a strategic question. We worked through it at the board. By the end, the question wasn't the strategic one. It was a question about the team that needed to think differently. We ran the next session with the team.</p>
-        <p>A client booked a session about whether to promote a particular person to the leadership team. We worked through it at the board. The session revealed the person was ready but the role needed redesigning around their actual capabilities. The next sessions were with that person, redesigning their remit.</p>
-        <p>A client booked a session because the business was scaling faster than their bandwidth allowed. We worked through it at the board. The session revealed they couldn't do their actual job because they were doing three other jobs as well. The next phase was me being in the business with them, helping them work out what to delegate, what to hire, and what to stop doing.</p>
-        <p class="punchline">In each case, the first session set the next move. The relationship took shape around the work.</p>
+        <p><em>Three ways it has gone.</em></p>
+        <p>A client booked a session because they were stuck on a strategic question. We worked through it at the board. By the end, the question wasn't the strategic one. It was a question about the team that needed to think differently. That became six months of TeamStrong.</p>
+        <p>A client booked a session about whether to promote a particular person to the leadership team. We worked through it at the board. The session revealed the person was ready but the role needed redesigning around their actual capabilities. The next six sessions were with that person, redesigning their remit: the second-in-command work that now sits alongside BuildStrong.</p>
+        <p>A client booked a session because the business was scaling faster than their bandwidth allowed. We worked through it at the board. The session revealed they couldn't do their actual job because they were doing three other jobs as well. Six months of BuildStrong followed, fortnightly, on what to delegate, what to hire and what to stop doing.</p>
+        <p class="punchline">In each case the first hour set the next move, and the next move had a shape and an end date before it started.</p>
       </div>
     </div>
     <div class="split-image">
@@ -386,7 +454,7 @@
 <section class="scene scene-invitation">
   <div class="folio">03 · <span>The Invitation</span></div>
   <p class="lede"><em>If you're at the point of asking what this could look like for you, the conversation starts the same way as anything else here. An hour at the board.</em></p>
-  <p class="sub">The first session will tell us both whether there's a longer relationship in this, and what shape it should take.</p>
+  <p class="sub">The first hour will tell us both whether there is a next piece of work in this, and which one.</p>
   <a href="/contact" class="button">Book a Whiteboard Session</a>
   <p class="book-note">One hour. No charge, nothing to prepare.</p>
 </section>
