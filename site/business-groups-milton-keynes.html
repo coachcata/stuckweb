@@ -184,6 +184,10 @@ p{color:var(--ink);font-size:1.02rem;margin-bottom:1.1rem;max-width:64ch}
 .rv{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-top:1.4rem}
 .intro{margin-top:1.6rem}
 section{padding:3.2rem 0;border-bottom:1px solid var(--line)}
+/* .wrap sets side padding only; keep the vertical rhythm on sections that are also .wrap */
+section.wrap{padding-top:3.6rem;padding-bottom:3.6rem}
+#compare .tw{margin-top:1.8rem}
+#next .btn{margin-top:1.2rem}
 dl{margin-top:1.6rem}
 dl div{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;padding:1.25rem 0;border-top:1px solid var(--line)}
 dl div:last-child{border-bottom:1px solid var(--line)}
@@ -201,7 +205,7 @@ tbody th{font-weight:600;white-space:nowrap}
 .btn{display:inline-block;padding:1rem 2.2rem;background:#C8956C;color:var(--ob);font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px;margin-top:.6rem}
 footer{padding:3rem 0;text-align:center;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
 footer a{text-decoration:none}
-@media(max-width:700px){.wrap{padding:0 16px}header{padding:3.4rem 0 2rem}dl div{grid-template-columns:1fr;gap:.55rem;padding:1.1rem 0}}
+@media(max-width:700px){.wrap{padding:0 16px}section.wrap{padding-top:2.8rem;padding-bottom:2.8rem}header{padding:3.4rem 0 2rem}dl div{grid-template-columns:1fr;gap:.55rem;padding:1.1rem 0}}
 </style>
 </head>
 <body>
