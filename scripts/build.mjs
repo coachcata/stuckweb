@@ -261,9 +261,29 @@ const PAGES = {
   },
   "index.html": () => [catalystOrg(), person(), website()],
 };
+// The one-to-one and team programmes: the Catalyst Organization plus one
+// Service per offer. A price goes in only where the page publishes one.
+const SERVICES = {
+  "leadstrong.html": [{
+    slug: "leadstrong", name: "LeadStrong",
+    description: "Six months of weekly Whiteboard Sessions for a corporate leader, around twenty-four sessions, on two or three outcomes agreed at the start. £7,200 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £3,600.",
+    price: 7200,
+  }],
+};
+function service(url, s) {
+  return {
+    "@type": "Service", "@id": url + "#service" + (s.anchor ? "-" + s.anchor : ""), name: s.name,
+    description: s.description, provider: { "@id": entity.catalyst.id }, url: s.anchor ? url + "#" + s.anchor : url,
+    offers: s.price ? { "@type": "Offer", price: String(s.price), priceCurrency: "GBP", url } : null,
+  };
+}
+for (const [file, list] of Object.entries(SERVICES)) {
+  const url = SITE + "/" + list[0].slug;
+  PAGES[file] = () => [catalystOrg(), ...list.map((s) => service(url, s))];
+}
 // Every other public page carries the Catalyst Organization and nothing else.
 const ORG_ONLY = [
-  "about.html", "leadstrong.html", "buildstrong.html", "teamstrong.html", "in-practice.html",
+  "about.html", "buildstrong.html", "teamstrong.html", "in-practice.html",
   "going-further.html", "contact.html", "hold-the-place.html", "growth-audit/index.html",
   "fluency/numbers/index.html", "fluency/ai/index.html",
 ];
