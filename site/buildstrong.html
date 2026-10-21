@@ -14,13 +14,13 @@
 </script>
 <!-- END GOOGLE ANALYTICS -->
 
-<title>BuildStrong, Building Somebody Who Can Hold Your Place | Catalyst</title>
+<title>BuildStrong, Strategic Thinking for the Business Owner | Catalyst</title>
 
-<meta name="description" content="For the owner who cannot step back because nobody in the business can hold their place. The owner learns to let go, the successor learns to step up." />
+<meta name="description" content="Six months of fortnightly Whiteboard Sessions for the owner carrying every decision in the business. Two or three outcomes agreed at the start, a break at three months, and a free first hour." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://catalystgrowthcoach.co.uk/buildstrong" />
 <meta property="og:title" content="BuildStrong, Catalyst Growth Coaching" />
-<meta property="og:description" content="For the owner who cannot step back because nobody in the business can hold their place. The owner learns to let go, the successor learns to step up." />
+<meta property="og:description" content="Six months of fortnightly Whiteboard Sessions for the owner carrying every decision in the business. Two or three outcomes agreed at the start, a break at three months, and a free first hour." />
 <meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://catalystgrowthcoach.co.uk/buildstrong" />
@@ -427,7 +427,178 @@
   }
 
   .book-note{margin-top:1.1rem;font-family:var(--font-d);font-style:italic;font-weight:300;font-size:1rem;line-height:1.6;color:var(--stone);}
-  </style>
+  
+  /* ══ Shared programme components (LeadStrong, BuildStrong, TeamStrong): keep identical on all three ══ */
+  .scene-prose { flex-direction: column; }
+  section.scene[id] { scroll-margin-top: 5.5rem; }
+  .scene-prose.alt, .scene-proof-block {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-prose .folio, .scene-proof-block .folio, .scene-work .folio,
+  .scene-session .folio, .scene-complaints .folio, .scene-cards .folio { margin-bottom: 3rem; }
+  .scene-prose .eyebrow, .scene-proof-block .eyebrow, .scene-work .eyebrow,
+  .scene-session .eyebrow, .scene-complaints .eyebrow, .scene-cards .eyebrow { display: block; margin-bottom: 3rem; }
+  .pack-h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    line-height: 1.15; max-width: 26ch; margin-bottom: 2rem; color: var(--bone);
+  }
+  .pack-lead {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.6;
+    color: var(--stone); max-width: 62ch; margin-bottom: 3.5rem;
+  }
+  .pack-body {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.65;
+    color: var(--stone); max-width: 62ch;
+  }
+  .pack-body p { margin-bottom: 1.4rem; }
+  .pack-body p:last-child { margin-bottom: 0; }
+  .pack-body a, .pack-cred a, .pack-signpost a, .scene-argument .body a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); transition: border-color 0.3s;
+  }
+  .pack-body a:hover, .pack-cred a:hover, .pack-signpost a:hover, .scene-argument .body a:hover { border-color: var(--cognac); }
+  .pack-close {
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.45;
+    color: var(--bone); max-width: 52ch;
+  }
+
+  /* Proof block: credentials left, two testimonials right, logo strip beneath */
+  .scene-proof-block { flex-direction: column; }
+  .proof-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem 5vw; align-items: start;
+  }
+  .pack-cred {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 1.2rem; line-height: 1.7; color: var(--stone);
+  }
+  .proof-quotes { display: flex; flex-direction: column; gap: 2rem; }
+  .proof-quotes .quote-card { background: var(--bg); }
+  .proof-pull {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1.3; color: var(--bone);
+  }
+  .proof-logos {
+    margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem 3rem; align-items: center; justify-items: center;
+  }
+  .proof-logos.six { grid-template-columns: repeat(3, 1fr); }
+  .proof-logos .logo-cell {
+    width: 100%; max-width: 150px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .proof-logos .logo-cell img {
+    max-height: 44px; max-width: 100%; width: auto; height: auto; object-fit: contain;
+    filter: brightness(0) invert(1); opacity: 0.7;
+  }
+
+  /* Fixed-term Work rail: stages in columns, price line beneath */
+  .scene-work, .scene-session, .scene-complaints, .scene-cards { flex-direction: column; }
+  .work-rail {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .work-rail.four { grid-template-columns: repeat(4, 1fr); }
+  .work-stage {
+    padding: 2.5rem 2rem 3rem; border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .work-stage:last-child { border-right: none; }
+  .work-stage .num { font-family: var(--font-d); font-style: italic; font-size: 1.05rem; color: var(--cognac); }
+  .work-stage h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.45rem; line-height: 1.2; color: var(--cognac);
+  }
+  .work-stage p { font-size: 0.98rem; color: var(--stone); line-height: 1.7; }
+  .price-line {
+    margin-top: 3rem; padding: 1.8rem 2rem;
+    border-left: 2px solid var(--cognac); background: var(--bg-3);
+    font-size: 1.02rem; line-height: 1.7; color: var(--bone); max-width: 72ch;
+  }
+  .pack-note {
+    margin-top: 2.5rem; font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; line-height: 1.6; color: var(--stone); max-width: 62ch;
+  }
+  .pack-strip {
+    margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 720px;
+  }
+  .pack-strip img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+
+  /* "A Session": three blocks */
+  .session-blocks {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .session-block {
+    padding: 2.5rem 2rem; background: var(--card);
+    border: 1px solid var(--line); border-radius: 4px;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .session-block h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.4rem; line-height: 1.25; color: var(--cognac);
+  }
+  .session-block p { font-size: 0.98rem; color: var(--stone); line-height: 1.7; }
+
+  /* Cards grid (what people bring, where it starts) */
+  .pack-cards {
+    display: grid; gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+  .pack-card {
+    padding: 2.2rem 2rem; border: 1px solid var(--line); border-radius: 4px;
+    background: var(--bg-2); display: flex; flex-direction: column; gap: 0.9rem;
+  }
+  .pack-card h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.3rem; line-height: 1.3; color: var(--bone);
+  }
+  .pack-card p { font-size: 0.96rem; color: var(--stone); line-height: 1.7; }
+
+  /* Two-column complaints table */
+  .complaints { width: 100%; border-collapse: collapse; }
+  .complaints th {
+    text-align: left; font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; padding: 0 2rem 1.2rem 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .complaints td {
+    padding: 1.8rem 2rem 1.8rem 0; border-bottom: 1px solid var(--line);
+    vertical-align: top; line-height: 1.7;
+  }
+  .complaints td:first-child {
+    width: 42%; font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; line-height: 1.45; color: var(--bone);
+  }
+  .complaints td:last-child { font-size: 0.98rem; color: var(--stone); padding-right: 0; }
+
+  /* One thing worth knowing: the signpost line */
+  .pack-signpost {
+    margin-top: 2rem; font-family: var(--font-b); font-size: 1rem;
+    line-height: 1.7; color: var(--stone); max-width: 48ch;
+  }
+
+  @media (max-width: 900px) {
+    .proof-grid { grid-template-columns: 1fr; }
+    .proof-logos, .proof-logos.six { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .work-rail, .work-rail.four { grid-template-columns: 1fr; }
+    .work-stage { border-right: none; border-bottom: 1px solid var(--line); padding: 2rem 0; }
+    .work-stage:last-child { border-bottom: none; }
+    .session-blocks { grid-template-columns: 1fr; }
+    .price-line { padding: 1.4rem 1.2rem; }
+    .complaints thead { display: none; }
+    .complaints, .complaints tbody, .complaints tr, .complaints td { display: block; width: 100%; }
+    .complaints tr { padding: 1.6rem 0; border-bottom: 1px solid var(--line); }
+    .complaints td { border-bottom: none; padding: 0; }
+    .complaints td:first-child { width: 100%; margin-bottom: 0.8rem; }
+  }
+</style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -457,6 +628,38 @@
       "sameAs": [
         "https://www.linkedin.com/in/johnobidipe"
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://catalystgrowthcoach.co.uk/buildstrong#service",
+      "name": "BuildStrong",
+      "description": "Six months of fortnightly Whiteboard Sessions for a business owner, twelve sessions, on two or three outcomes agreed at the start. £3,600 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £1,800.",
+      "provider": {
+        "@id": "https://catalystgrowthcoach.co.uk/#organization"
+      },
+      "url": "https://catalystgrowthcoach.co.uk/buildstrong",
+      "offers": {
+        "@type": "Offer",
+        "price": "3600",
+        "priceCurrency": "GBP",
+        "url": "https://catalystgrowthcoach.co.uk/buildstrong"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://catalystgrowthcoach.co.uk/buildstrong#service-add-on",
+      "name": "Second-in-command coaching",
+      "description": "Six sessions over three months with the person who could run the business when the owner is not there. £1,800, which is £300 a session. Open to BuildStrong clients and at.theboard members.",
+      "provider": {
+        "@id": "https://catalystgrowthcoach.co.uk/#organization"
+      },
+      "url": "https://catalystgrowthcoach.co.uk/buildstrong#add-on",
+      "offers": {
+        "@type": "Offer",
+        "price": "1800",
+        "priceCurrency": "GBP",
+        "url": "https://catalystgrowthcoach.co.uk/buildstrong"
+      }
     }
   ]
 }
@@ -490,7 +693,7 @@
     <div class="feature-text">
       <div class="eyebrow">BuildStrong</div>
       <h1>The business runs. It runs <em>through you</em>.</h1>
-      <p class="lede">You built it, and every hard call still stops at your desk. Not because the work is difficult, but because there is nobody else who can make those calls the way you would. BuildStrong is the work of building somebody who can.</p>
+      <p class="lede">You built it, and every hard call still stops at your desk. The price rise you have been putting off, the hire you are not sure about, the client who is a third of the turnover. BuildStrong is six months of working those decisions through, one every fortnight, at a whiteboard, with somebody who has no stake in the answer.</p>
     </div>
     <div class="feature-image">
       <img src="/images/img-1935.jpg" alt="John and a business owner at a portable whiteboard in a hospitality setting">
@@ -501,130 +704,196 @@
 <!-- SCENE 02, The Problem -->
 <section class="scene scene-argument">
   <div class="body">
-    <span class="eyebrow">The Problem</span>
+    <span class="eyebrow">01 · The Problem</span>
     <h2>You have written the processes down. They <em>still ring you</em>.</h2>
     <p>Everything that still reaches you is a judgement call. The client threatening to leave. The two bad options. The quote that does not fit the price list. None of it can be documented, because it was never the same situation twice.</p>
-    <p>That is the part a system cannot hold. It has to be built in a person, by exposure and correction, over time.</p>
+    <p>So you decide alone, usually in the van or at eleven at night, and then you lie awake marking your own homework. Your team cannot tell you when you are wrong. Your accountant tells you how the year went months after it ended. Your family wants you off the phone. There is nobody in your week whose job is to think about the business with you, and it shows in the decisions that keep getting pushed to next month.</p>
+    <p class="punchline"><em>That is what BuildStrong is for. Not the work. The deciding.</em></p>
   </div>
 </section>
 
-<!-- SCENE 03, What Usually Happens Instead -->
-<section class="scene scene-split">
-  <div class="split-grid">
-    <div class="split-text">
-      <span class="eyebrow">What usually happens instead</span>
-      <h2>You have tried to hire it <em>four times</em>.</h2>
-      <div class="body">
-        <p>Different names, different years, the same role. One you did not offer to. One turned you down. One came and left within a year. The conclusion each time was about the market, that the good ones are expensive and stay where they are.</p>
-        <p>Every one of them was fine at week six. Something happens around month three, which is when a senior person stops learning how things are done here and starts deciding things.</p>
-        <p>Hiring is a way of buying somebody who already knows how you decide. That is not on a CV and it does not arrive during a probation period.</p>
+<!-- SCENE 03, Who you would be thinking with -->
+<section class="scene scene-proof-block">
+  <span class="eyebrow">02 · Who you would be thinking with</span>
+  <div class="proof-grid">
+    <p class="pack-cred">Fifteen years across organisational consulting and executive coaching, much of it inside large organisations as a senior business analyst and transformation specialist, which is where the habit of putting a problem on a wall and working it comes from. Gallup-certified in CliftonStrengths and a FITT16 practitioner. Owners and leaders coached in firms of five staff to five thousand, including Arrow Planning, Toyota, Convatec and the University of Oxford. <a href="/about">The credentials in full</a></p>
+    <div class="proof-quotes">
+      <div class="quote-card">
+        <span class="mark">"</span>
+        <blockquote>
+          <p>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects, and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</p>
+          <p>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
+          <p>Thanks, John.</p>
+        </blockquote>
+        <div class="attr">
+          <span class="name">Mark Schmull</span>
+          <span class="meta">MD, Arrow Planning</span>
+        </div>
+      </div>
+      <div class="quote-card">
+        <span class="mark">"</span>
+        <blockquote>
+          <p>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive mistakes in two previous <em>businesses</em>.</p>
+        </blockquote>
+        <div class="attr">
+          <span class="name">Stuart Ploughman</span>
+          <span class="meta">Serial Entrepreneur · <span class="prog">BuildStrong</span></span>
+        </div>
       </div>
     </div>
-    <div class="split-image">
-      <img src="/images/img-1989.jpg" alt="A team mapping project oversight, squad leadership and delegation at the whiteboard" loading="lazy">
-    </div>
+  </div>
+  <div class="proof-logos six">
+    <div class="logo-cell"><img src="/images/logos/arrow-planning.png" alt="Arrow Planning" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/toyota.png" alt="Toyota" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/convatec.png" alt="Convatec" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/oxford.png" alt="University of Oxford" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/autoglass.png" alt="Autoglass" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/nextenergy.png" alt="NextEnergy Capital" loading="lazy"></div>
   </div>
 </section>
 
-<!-- SCENE 04, The Part Nobody Says -->
-<section class="scene scene-argument">
-  <div class="body">
-    <span class="eyebrow">The part nobody says</span>
-    <h2>Not everyone is good at <em>developing others</em>.</h2>
-    <p>Being excellent at something makes you worse at teaching it, not better. When you have done a thing ten thousand times you stop seeing the steps, you see the answer. So watching somebody work it out slowly is genuinely difficult, and you step in, every time with good intentions.</p>
-    <p>Developing people is a specialism with its own techniques and its own discipline. Nobody ever taught it to you. You were taught the work, you got good at the work, and one day you had staff.</p>
-    <p>That is a gap rather than a flaw, and gaps close.</p>
-  </div>
-</section>
-
-<!-- SCENE 05, The Work -->
-<section class="scene scene-lenses">
-  <div class="head">
-    <span class="eyebrow">The work</span>
-    <h2>The owner learns to let go. The successor learns to <em>step up</em>.</h2>
-    <p class="head-sub">Two halves, and they run together rather than in sequence.</p>
-  </div>
-
-  <div class="lenses-grid two-up">
-    <div class="lens">
+<!-- SCENE 04, The Work -->
+<section class="scene scene-work">
+  <span class="eyebrow">03 · The Work</span>
+  <h2 class="pack-h2">Six months, with an end you can see from the start</h2>
+  <p class="pack-lead">BuildStrong is not a retainer and it does not run on. It is six months with two or three outcomes we agree before it begins, a midpoint at three months where we check them, and an end date after which you carry on the thinking without me.</p>
+  <div class="work-rail">
+    <div class="work-stage">
       <span class="num">i.</span>
-      <h3>Plan and strategise with the owner</h3>
-      <p class="detail">What the successor needs to be able to do, and what they cannot do yet. Then what gets handed over and in what order, what you keep deliberately rather than by habit, and what happens the first time they get one wrong. That last one is the step everybody skips and it decides whether the rest holds.</p>
+      <h3>At the start.</h3>
+      <p>In the first session we agree what has to be different by the end, in two or three figures you already keep: prices up and the margin that follows, a client won without you in the room, a fortnight away without the phone going. They go on the whiteboard and they stay there for the six months.</p>
     </div>
-    <div class="lens">
+    <div class="work-stage">
       <span class="num">ii.</span>
-      <h3>Build and stretch the successor</h3>
-      <p class="detail">Exposure, correction, proof. Live decisions worked through at the board, scenario testing, off stage practice for on stage performance, and the work of merging their own values with the role so that what comes out is theirs rather than an imitation of you.</p>
+      <h3>At three months.</h3>
+      <p>We hold the outcomes up against where the business is. If the work is doing what it should, we carry on. If it is not, you can stop there and pay for the half you have had. You run a business; you would not sign anything without a break clause, and nor should you here.</p>
+    </div>
+    <div class="work-stage">
+      <span class="num">iii.</span>
+      <h3>At six.</h3>
+      <p>The outcomes are met or they are not, and we say which. By then you have done this often enough to run it yourself: the question, the board, the decision. Some owners come back for a second six months on new outcomes. Nobody drifts on.</p>
     </div>
   </div>
-
-  <p class="lenses-note">We start with assessments that make each of you legible to the other, and there are regular check ins with you throughout, because the hardest part of this is usually not their development.</p>
+  <p class="price-line">Six months, a session every fortnight, so twelve at the board. £3,600 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £1,800. No retainer, and nothing added on.</p>
 </section>
 
-<!-- SCENE 06, Two Phases -->
-<section class="scene scene-argument">
-  <div class="body">
-    <span class="eyebrow">Two phases</span>
-    <h2>First somebody who can hold the place. Then somebody you could <em>leave in charge</em>.</h2>
-    <p>Holding the place means the business runs for a fortnight without you and nothing needs deciding twice. That takes eighteen months to two years, and it is the part most owners actually want.</p>
-    <p>What comes after that is a different conversation, and it is one worth having deliberately rather than drifting into.</p>
+<!-- SCENE 05, A Session -->
+<section class="scene scene-session">
+  <span class="eyebrow">04 · A Session</span>
+  <h2 class="pack-h2">You bring the decision. We leave with it made.</h2>
+  <p class="pack-lead">Every session is a Whiteboard Session. Your thinking, out of your head, onto the board, into a solution. What goes up is your call, and it is always something live in the business this week.</p>
+  <div class="session-blocks">
+    <div class="session-block">
+      <h3>You bring the live one.</h3>
+      <p>The thing you have been going round in the car. Not a reflection on last year. The decision that is costing you money or sleep right now.</p>
+    </div>
+    <div class="session-block">
+      <h3>We work it on the board.</h3>
+      <p>I write as you talk, so the whole of it is where you can see it. Then we find what connects, what is missing, where your own way of running the place is sitting inside the problem, and what will actually hold. Nothing between sessions. The thinking happens here.</p>
+    </div>
+    <div class="session-block">
+      <h3>You leave with a decision, or the action that gets you to one.</h3>
+      <p>Written on the board before we finish, and the first thing I ask about next time. And I say what I think. You are not paying for somebody to nod. When I have a view you get it, marked as mine, and you do what you like with it.</p>
+    </div>
   </div>
+  <p class="pack-note">Online with the board shared live on screen, or in person in central London or Milton Keynes. Nobody else is in it. You pay, so there is no sponsor, no report and nobody to answer to but you.</p>
 </section>
 
-<!-- SCENE 07, When This Is Not the Answer -->
+<!-- SCENE 06, What owners bring -->
+<section class="scene scene-cards">
+  <span class="eyebrow">05 · What owners bring</span>
+  <h2 class="pack-h2">The decisions that keep coming back to your desk</h2>
+  <div class="pack-cards">
+    <div class="pack-card">
+      <h3>"I know we're too cheap, but I'm scared to put prices up."</h3>
+      <p>The price rise, worked through client by client, with the number you would actually say out loud.</p>
+    </div>
+    <div class="pack-card">
+      <h3>"If I'm not out selling, nobody is."</h3>
+      <p>Where the work comes from, who else in the business could win it, and what they need from you to do it.</p>
+    </div>
+    <div class="pack-card">
+      <h3>"We've been stuck at this size for years."</h3>
+      <p>What the next size is, what breaks on the way there, and the one decision that gets you moving.</p>
+    </div>
+    <div class="pack-card">
+      <h3>"Everything still comes back to me."</h3>
+      <p>Which of it should, which of it is habit, and what has to be true for the business to run a fortnight without you.</p>
+    </div>
+    <div class="pack-card">
+      <h3>"I only find out how we've done when the accountant tells me."</h3>
+      <p>The three or four figures you should see every month, and what they are telling you about the value of what you have built.</p>
+    </div>
+    <div class="pack-card">
+      <h3>"I keep hiring the same person and it keeps going wrong."</h3>
+      <p>Your own pattern, read through your CliftonStrengths profile, and what to do differently on the next one.</p>
+    </div>
+  </div>
+  <p class="pack-close">Six months is long enough to get through most of this list. You choose the order.</p>
+</section>
+
+<!-- SCENE 07, What puts owners off coaching -->
+<section class="scene scene-complaints">
+  <span class="eyebrow">06 · What puts owners off coaching</span>
+  <p class="pack-lead">Most of the owners I work with have been sold coaching before, or a mastermind, or a programme with a workbook. Here is what they tell me put them off, and how this is built against it.</p>
+  <table class="complaints">
+    <thead>
+      <tr><th scope="col">What you may have had before</th><th scope="col">What BuildStrong does instead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>"They'd never run a business. They'd read about it."</td><td>I have spent fifteen years inside organisations watching what works and fails, and the owners and leaders I coach run firms of five staff to five thousand. I bring what I have seen. I do not pretend to have carried your payroll.</td></tr>
+      <tr><td>"Twelve-month contract, direct debit, and I stopped turning up in month four."</td><td>Six months, and a break at three where you can stop and pay for half. If you are not getting the return, you leave.</td></tr>
+      <tr><td>"A framework for everything and an answer for nothing."</td><td>No frameworks on the wall. Your decision on the board, worked until it is made. If I have a view, you get it.</td></tr>
+      <tr><td>"Ninety minutes of me talking and them nodding."</td><td>I write as you talk, I push back when I disagree, and you leave with something written down and a date on it.</td></tr>
+      <tr><td>"It felt like therapy. I wanted the price list sorted."</td><td>Every session is about a decision in the business. If what is in the way is personal, I will say so, and that is a different conversation with a different person.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- SCENE 08, The add-on -->
+<section class="scene scene-session" id="add-on">
+  <span class="eyebrow">07 · The add-on: coaching your second in command</span>
+  <h2 class="pack-h2">When the decision is to hand over, there is a second piece of work</h2>
+  <p class="pack-lead">Sometimes what comes off the board is that somebody else has to be able to make the calls. Not the processes, which you have written down. The judgement. That is built in a person, by exposure and correction, over time, and it is a separate piece of work with its own price.</p>
+  <div class="session-blocks">
+    <div class="session-block">
+      <h3>You have probably tried to hire it.</h3>
+      <p>Different names, different years, the same role. Every one of them was fine at week six. Something happens around month three, when a senior person stops learning how things are done here and starts deciding things. Hiring is a way of buying somebody who already knows how you decide, and that is not on a CV.</p>
+    </div>
+    <div class="session-block">
+      <h3>Being good at it makes you worse at teaching it.</h3>
+      <p>When you have done a thing ten thousand times you stop seeing the steps, you see the answer. So watching somebody work it out slowly is hard, and you step in, every time with good intentions. Developing people is a specialism nobody taught you. That is a gap rather than a flaw, and gaps close.</p>
+    </div>
+    <div class="session-block">
+      <h3>What the add-on is.</h3>
+      <p>Six sessions over three months with the person who could run things when you are not there. Live decisions worked through at the board, scenario practice off stage for performance on stage, and the work of merging their own values with the role so that what comes out is theirs rather than an imitation of you. You and I check in throughout, because the hardest part of this is usually not their development.</p>
+    </div>
+  </div>
+  <p class="price-line">£1,800 for the six sessions, which is £300 a session. Open to BuildStrong clients and to at.theboard members, at the same price.</p>
+  <p class="pack-note">The aim is not that you step back entirely. Most owners do not want that. It is that the business runs for a fortnight without you and nothing needs deciding twice.</p>
+</section>
+
+<!-- SCENE 09, When This Is Not the Answer -->
 <section class="scene scene-argument plain">
   <div class="body">
-    <span class="eyebrow">When this is not the answer</span>
-    <h2>Sometimes it is genuinely <em>process</em>.</h2>
-    <p>If nothing has ever been written down and you are answering the same question forty times a week, a person will not fix that. If the work is repeatable with clear rules, that should be a system rather than somebody's judgement. And if there is nobody in the business who could plausibly hold the place, this is a hiring conversation rather than this one.</p>
-    <p>I would rather say so in the first hour than six months in.</p>
+    <span class="eyebrow">08 · When this is not the answer</span>
+    <h2>Sometimes it is <em>process</em>.</h2>
+    <p>If nothing has ever been written down and you are answering the same question forty times a week, an hour at a whiteboard will not fix that, and I will tell you so and send you off to write it down. If the decisions that reach you are repeatable with clear rules, that should be a system rather than your judgement. And if what you need is five other owners rather than one coach, <a href="/board">at.theboard</a> is the room for that, and I will say so.</p>
+    <p>I would rather say any of this in the first hour than three months in. It costs me the work, which is fine.</p>
   </div>
 </section>
 
-<!-- SCENE 08, In Their Words -->
-<section class="scene scene-quotes">
-  <div class="quotes-head">
-    <div class="label">In Their Words</div>
-    <h2>From owners who have worked this <em>way</em>.</h2>
-  </div>
-
-  <div class="quotes-grid">
-    <div class="quote-card">
-      <span class="mark">"</span>
-      <blockquote>
-        <p>What can I say about the work John has done with us today at Arrow Planning. He's just delivered a fantastic coaching session with the team. We've been working through some genuinely difficult subjects, and he's presented them in a way that's allowed everybody to engage properly with these difficult matters.</p>
-        <p>It takes a real <strong>weight</strong> off my shoulders. The pressure and expectation isn't solely on me. I'm not standing there having to find a way through these problems alone. John leads me through them, then comes in and helps me actually activate them within the team, creating solutions that set the standard for the future.</p>
-        <p>Thanks, John.</p>
-      </blockquote>
-      <div class="attr">
-        <span class="name">Mark Schmull</span>
-        <span class="meta">MD, Arrow Planning</span>
-      </div>
-    </div>
-
-    <div class="quote-card">
-      <span class="mark">"</span>
-      <blockquote>
-        <p>I just wish I'd met John years ago. The frameworks he uses would have saved me from expensive mistakes in two previous <em>businesses</em>.</p>
-      </blockquote>
-      <div class="attr">
-        <span class="name">Stuart Ploughman</span>
-        <span class="meta">Serial Entrepreneur · <span class="prog">BuildStrong</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SCENE 09, What It Leads To -->
+<!-- SCENE 10, One thing worth knowing -->
 <section class="scene scene-one-thing">
-  <span class="eyebrow">What it leads to</span>
-  <p class="one-thing">Two weeks away without the <em>phone going</em>.</p>
-  <p class="support">Not stepping back entirely. Most owners do not want that and it is not the goal. Being able to leave, and having proof that the business is not entirely load bearing on one person.</p>
+  <span class="eyebrow">09 · One thing worth knowing</span>
+  <p class="one-thing">The point is to leave you able to do this without me.</p>
+  <p class="support">Not new frameworks and not a programme. The deciding you would already be doing if your week had an hour in it with nobody wanting anything from you, done often enough at the board that by month six you run it yourself. If you come back, it is for a new set of outcomes, not because the first set never closed.</p>
+  <p class="pack-signpost">If what comes off the board needs the team to change too, <a href="/teamstrong">TeamStrong</a> is the next step.</p>
 </section>
 
-<!-- SCENE 10, The Invitation -->
+<!-- SCENE 11, The Invitation -->
 <section class="scene scene-invitation">
-  <span class="eyebrow">The Invitation</span>
+  <span class="eyebrow">10 · The Invitation</span>
   <p class="lede"><em>The fastest way to know whether BuildStrong fits is to be at the board for an hour.</em></p>
   <p class="sub">You'll know whether the practice is for you. The hour is enough.</p>
   <a href="/the-handover" class="button">Book an hour at the board</a>

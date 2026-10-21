@@ -421,12 +421,15 @@
   
   /* ══ Shared programme components (LeadStrong, BuildStrong, TeamStrong): keep identical on all three ══ */
   .scene-prose { flex-direction: column; }
+  section.scene[id] { scroll-margin-top: 5.5rem; }
   .scene-prose.alt, .scene-proof-block {
     background: var(--bg-2);
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   }
   .scene-prose .folio, .scene-proof-block .folio, .scene-work .folio,
   .scene-session .folio, .scene-complaints .folio, .scene-cards .folio { margin-bottom: 3rem; }
+  .scene-prose .eyebrow, .scene-proof-block .eyebrow, .scene-work .eyebrow,
+  .scene-session .eyebrow, .scene-complaints .eyebrow, .scene-cards .eyebrow { display: block; margin-bottom: 3rem; }
   .pack-h2 {
     font-family: var(--font-d); font-weight: 300;
     font-size: clamp(1.8rem, 3.4vw, 2.6rem);
@@ -444,11 +447,11 @@
   }
   .pack-body p { margin-bottom: 1.4rem; }
   .pack-body p:last-child { margin-bottom: 0; }
-  .pack-body a, .pack-cred a, .pack-signpost a {
+  .pack-body a, .pack-cred a, .pack-signpost a, .scene-argument .body a {
     color: var(--cognac); text-decoration: none;
     border-bottom: 1px solid var(--line-strong); transition: border-color 0.3s;
   }
-  .pack-body a:hover, .pack-cred a:hover, .pack-signpost a:hover { border-color: var(--cognac); }
+  .pack-body a:hover, .pack-cred a:hover, .pack-signpost a:hover, .scene-argument .body a:hover { border-color: var(--cognac); }
   .pack-close {
     margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);
     font-family: var(--font-d); font-style: italic; font-weight: 300;
@@ -477,6 +480,7 @@
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem 3rem; align-items: center; justify-items: center;
   }
+  .proof-logos.six { grid-template-columns: repeat(3, 1fr); }
   .proof-logos .logo-cell {
     width: 100%; max-width: 150px; height: 44px;
     display: flex; align-items: center; justify-content: center;
@@ -573,7 +577,7 @@
 
   @media (max-width: 900px) {
     .proof-grid { grid-template-columns: 1fr; }
-    .proof-logos { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .proof-logos, .proof-logos.six { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .work-rail, .work-rail.four { grid-template-columns: 1fr; }
     .work-stage { border-right: none; border-bottom: 1px solid var(--line); padding: 2rem 0; }
     .work-stage:last-child { border-bottom: none; }

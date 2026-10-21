@@ -269,6 +269,15 @@ const SERVICES = {
     description: "Six months of weekly Whiteboard Sessions for a corporate leader, around twenty-four sessions, on two or three outcomes agreed at the start. £7,200 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £3,600.",
     price: 7200,
   }],
+  "buildstrong.html": [{
+    slug: "buildstrong", name: "BuildStrong",
+    description: "Six months of fortnightly Whiteboard Sessions for a business owner, twelve sessions, on two or three outcomes agreed at the start. £3,600 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £1,800.",
+    price: 3600,
+  }, {
+    slug: "buildstrong", anchor: "add-on", name: "Second-in-command coaching",
+    description: "Six sessions over three months with the person who could run the business when the owner is not there. £1,800, which is £300 a session. Open to BuildStrong clients and at.theboard members.",
+    price: 1800,
+  }],
 };
 function service(url, s) {
   return {
@@ -283,7 +292,7 @@ for (const [file, list] of Object.entries(SERVICES)) {
 }
 // Every other public page carries the Catalyst Organization and nothing else.
 const ORG_ONLY = [
-  "about.html", "buildstrong.html", "teamstrong.html", "in-practice.html",
+  "about.html", "teamstrong.html", "in-practice.html",
   "going-further.html", "contact.html", "hold-the-place.html", "growth-audit/index.html",
   "fluency/numbers/index.html", "fluency/ai/index.html",
 ];
