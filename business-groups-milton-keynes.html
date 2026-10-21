@@ -184,12 +184,14 @@ p{color:var(--ink);font-size:1.02rem;margin-bottom:1.1rem;max-width:64ch}
 .rv{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-top:1.4rem}
 .intro{margin-top:1.6rem}
 section{padding:3.2rem 0;border-bottom:1px solid var(--line)}
+/* .wrap sets side padding only; keep the vertical rhythm on sections that are also .wrap */
+section.wrap{padding-top:3.6rem;padding-bottom:3.6rem}
+#compare .tw{margin-top:1.8rem}
+#next .btn{margin-top:1.2rem}
 dl{margin-top:1.6rem}
 dl div{display:grid;grid-template-columns:220px 1fr;gap:1.4rem;padding:1.25rem 0;border-top:1px solid var(--line)}
 dl div:last-child{border-bottom:1px solid var(--line)}
 .src{margin-top:1.6rem}
-.ph-fig{margin:2rem 0 0;border-radius:3px;overflow:hidden}
-.ph-fig img{width:100%;height:auto;display:block}
 dt{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:700;padding-top:.25rem}
 dd{color:var(--ob)}
 .src{font-size:.88rem}
@@ -203,7 +205,7 @@ tbody th{font-weight:600;white-space:nowrap}
 .btn{display:inline-block;padding:1rem 2.2rem;background:#C8956C;color:var(--ob);font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:2px;margin-top:.6rem}
 footer{padding:3rem 0;text-align:center;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
 footer a{text-decoration:none}
-@media(max-width:700px){.wrap{padding:0 16px}header{padding:3.4rem 0 2rem}dl div{grid-template-columns:1fr;gap:.55rem;padding:1.1rem 0}}
+@media(max-width:700px){.wrap{padding:0 16px}section.wrap{padding-top:2.8rem;padding-bottom:2.8rem}header{padding:3.4rem 0 2rem}dl div{grid-template-columns:1fr;gap:.55rem;padding:1.1rem 0}}
 </style>
 </head>
 <body>
@@ -214,7 +216,6 @@ footer a{text-decoration:none}
 <div class="intro">
 <p>If you own a business in Milton Keynes and want other business people in your week, there are at least six ways to get that, and they are not the same thing. Some are breakfast networking, built around referrals and conversation. One is a civic membership body. Two are peer advisory boards. One is a circle of five. This page sets them side by side so you can see which one fits what you actually need, and it is written by the man who runs the circle of five, so read the last entry with that in mind.</p>
 </div>
-<div class="ph-fig"><img src="/images/img-1990.jpg" alt="Two business owners walking and talking on a path in Milton Keynes" width="1500" height="850"></div>
 </div></header>
 
 <main>
@@ -283,7 +284,6 @@ footer a{text-decoration:none}
 <div><dt>What happens in the room</dt><dd>Every man's challenge goes on the whiteboard every month, and he leaves with what he will do written in his own hand with a date on it. Four times a year each man says his numbers out loud and measures them against his own past, not the others. There is no selling in the room and no referral target.</dd></div>
 <div><dt>What it is not</dt><dd>Not networking, not a course, and not open: the free hour is open to anyone, a place in a circle is not. &pound;550 a month for members of the first circle, held for as long as they stay.</dd></div>
 </dl>
-<div class="ph-fig"><img src="/images/img-1993.jpg" alt="Two owners talking as they walk a tree-lined path in Milton Keynes, before a session at the whiteboard" width="1400" height="880" loading="lazy"></div>
 <p class="src"><a href="/board">More about at.theboard</a></p>
 </section>
 </div>
