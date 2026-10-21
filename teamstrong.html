@@ -549,7 +549,18 @@
     line-height: 1.7; color: var(--stone); max-width: 48ch;
   }
 
+  /* Photos and living-photo clips between the text */
+  .pack-figure {
+    margin: 4rem 0 0; width: 100%; aspect-ratio: 16/9;
+    overflow: hidden; background: var(--bg-3);
+  }
+  .pack-figure img, .pack-figure video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pack-pair { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .pack-pair .pack-figure { margin: 0; aspect-ratio: 3/2; }
+
   @media (max-width: 900px) {
+    .pack-pair { grid-template-columns: 1fr; gap: 1rem; }
+    .pack-figure { margin-top: 2.5rem; max-height: 60vh; }
     .proof-grid { grid-template-columns: 1fr; }
     .proof-logos, .proof-logos.six { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .work-rail, .work-rail.four { grid-template-columns: 1fr; }
@@ -654,6 +665,7 @@
     <p>That is not a people problem. It is the normal gap between a leader who has changed and a team who have not been given the means to.</p>
     <p class="punchline"><em>TeamStrong is six months of closing that gap, with you and with them.</em></p>
   </div>
+  <div class="pack-figure"><img src="/images/img-1987.jpg" alt="A small group session in a skylit room, two clients working alongside John at the shared screen" loading="lazy"></div>
 </section>
 
 <!-- ════ SCENE 03, Where it starts ════ -->
@@ -680,6 +692,7 @@
     </div>
   </div>
   <p class="pack-close">If one of these is where you are, the team version of the work is the next step, and it starts with you.</p>
+  <div class="pack-figure"><img src="/images/img-1988.jpg" alt="A team working together in a skylit session room" loading="lazy"></div>
 </section>
 
 <!-- ════ SCENE 04, Who you would be working with ════ -->
@@ -748,6 +761,7 @@
       <p>The team runs a session with me watching rather than leading, and we judge the outcomes together.</p>
     </div>
   </div>
+  <div class="pack-figure"><video autoplay muted loop playsinline preload="metadata" aria-label="Wide view of a whiteboard session in progress"><source src="/videos/session-wide.mp4" type="video/mp4"></video></div>
   <p class="pack-note">Teams that want a day away from the building can add the Experience Day at The O2: a morning workshop, lunch at TOCA Social, an afternoon at Activate. It is a good day and it is optional, priced separately and at cost. The work does not depend on it.</p>
   <div class="pack-strip">
     <img src="/images/teamstrong-img-04.jpg" alt="The O2, London" loading="lazy">
@@ -783,6 +797,7 @@
     </div>
   </div>
   <p class="pack-note">Every member gets their own profiles and an hour with me on them. The team gets the map of all of them together, on the wall, for the six months.</p>
+  <div class="pack-figure"><img src="/images/about-img-03.jpg" alt="John presenting CliftonStrengths to a room of team members" loading="lazy"></div>
 </section>
 
 <!-- ════ SCENE 07, What puts leaders off team coaching ════ -->
@@ -810,6 +825,7 @@
   <div class="pack-body">
     <p>By month six the team runs a session while I watch. They bring the decision, they work it, they make it, and the question "what would John want" does not come up because they already know, and because they have stopped needing to ask. For an owner, that is the first time the business has run on something other than you. For a corporate leader, it is the team your next role needs you to have already built.</p>
   </div>
+  <div class="pack-figure"><img src="/images/img-1981.jpg" alt="Two people working together at a wall whiteboard" loading="lazy"></div>
 </section>
 
 <!-- ════ SCENE 09, When this is not the answer ════ -->

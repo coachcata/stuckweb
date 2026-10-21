@@ -576,7 +576,18 @@
     line-height: 1.7; color: var(--stone); max-width: 48ch;
   }
 
+  /* Photos and living-photo clips between the text */
+  .pack-figure {
+    margin: 4rem 0 0; width: 100%; aspect-ratio: 16/9;
+    overflow: hidden; background: var(--bg-3);
+  }
+  .pack-figure img, .pack-figure video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pack-pair { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .pack-pair .pack-figure { margin: 0; aspect-ratio: 3/2; }
+
   @media (max-width: 900px) {
+    .pack-pair { grid-template-columns: 1fr; gap: 1rem; }
+    .pack-figure { margin-top: 2.5rem; max-height: 60vh; }
     .proof-grid { grid-template-columns: 1fr; }
     .proof-logos, .proof-logos.six { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
     .work-rail, .work-rail.four { grid-template-columns: 1fr; }
@@ -687,6 +698,7 @@
     <p>The result: you're operating at the new altitude with the old way of thinking.</p>
     <p class="punchline"><em>That's the gap LeadStrong is built around.</em></p>
   </div>
+  <div class="pack-figure"><video autoplay muted loop playsinline preload="metadata" aria-label="John writing the first word on the whiteboard"><source src="/videos/drill-landscape.mp4" type="video/mp4"></video></div>
 </section>
 
 <!-- ════ SCENE 03, Who you would be thinking with ════ -->
@@ -748,6 +760,7 @@
     </div>
   </div>
   <p class="price-line">Six months, a session a week, so around twenty-four at the board. £7,200 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £3,600. No retainer, and nothing added on.</p>
+  <div class="pack-figure"><img src="/images/img-1985.jpg" alt="A leader and John working at a wall whiteboard" loading="lazy"></div>
 </section>
 
 <!-- ════ SCENE 05, A Session ════ -->
@@ -768,6 +781,10 @@
       <h3>You leave with a decision, or the action that gets you to one.</h3>
       <p>Written on the board before we finish. And I say what I think. A thinking partner who only asks questions is half a partner, so when I have a view you get it, clearly marked as mine, and you do what you like with it.</p>
     </div>
+  </div>
+  <div class="pack-pair">
+    <div class="pack-figure"><img src="/images/fsr.jpg" alt="John seated with a laptop while a client reads the whiteboard" loading="lazy"></div>
+    <div class="pack-figure"><img src="/images/img-1986.jpg" alt="John and a client close-in at a populated wall whiteboard" loading="lazy"></div>
   </div>
   <p class="pack-note">Online with the board shared live on screen, or in person in central London or Milton Keynes.</p>
 </section>
@@ -824,6 +841,7 @@
     <p>Where it helps, and only where it helps, I will do a three-way conversation with your line manager at the start and at the end, so the outcomes you set match what the organisation is expecting of you. For a president, a CEO or a leader paying their own way, there is no third party, no sponsor report and nobody to report to but you.</p>
     <p>What is said in the room stays in the room. I will say that to you in the first hour, in person, rather than hand you a clause.</p>
   </div>
+  <div class="pack-figure"><video autoplay muted loop playsinline preload="metadata" aria-label="Wide view of a whiteboard session in progress"><source src="/videos/session-wide.mp4" type="video/mp4"></video></div>
 </section>
 
 <!-- ════ SCENE 09, One Thing Worth Knowing ════ -->
