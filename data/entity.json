@@ -43,7 +43,26 @@
   },
   "confirmed": {
     "_readme": "Set either to the approved wording once John confirms it. While null, it stays off the page, the schema, board.md and llms.txt.",
-    "price": null,
+    "price": {
+      "text": "£550 a month for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.",
+      "offer": {
+        "@type": "Offer",
+        "price": "550",
+        "priceCurrency": "GBP",
+        "url": "https://catalystgrowthcoach.co.uk/board",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "550",
+          "priceCurrency": "GBP",
+          "unitText": "per month",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": 1,
+            "unitCode": "MON"
+          }
+        }
+      }
+    },
     "menOnly": null
   }
 }

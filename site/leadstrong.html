@@ -16,11 +16,11 @@
 
 <title>LeadStrong, Strategic Thinking for the Corporate Leader | Catalyst</title>
 
-<meta name="description" content="Strategic thinking partnership for Directors, VPs and executives navigating organisations they don't own." />
+<meta name="description" content="Six months of weekly Whiteboard Sessions for the corporate leader carrying decisions nobody else in the week can help them think through. Two or three outcomes agreed at the start, a break at three months, and a free first hour." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://catalystgrowthcoach.co.uk/leadstrong" />
 <meta property="og:title" content="LeadStrong | Catalyst Growth Coaching" />
-<meta property="og:description" content="Strategic thinking partnership for Directors, VPs and executives navigating organisations they don't own." />
+<meta property="og:description" content="Six months of weekly Whiteboard Sessions for the corporate leader carrying decisions nobody else in the week can help them think through. Two or three outcomes agreed at the start, a break at three months, and a free first hour." />
 <meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://catalystgrowthcoach.co.uk/leadstrong" />
@@ -418,7 +418,179 @@
   }
 
   .book-note{margin-top:1.1rem;font-family:var(--font-d);font-style:italic;font-weight:300;font-size:1rem;line-height:1.6;color:var(--stone);}
-  </style>
+  
+  /* ══ Shared programme components (LeadStrong, BuildStrong, TeamStrong): keep identical on all three ══ */
+  .scene-prose { flex-direction: column; }
+  section.scene[id] { scroll-margin-top: 5.5rem; }
+  .scene-prose.alt, .scene-proof-block {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-prose .folio, .scene-proof-block .folio, .scene-work .folio,
+  .scene-session .folio, .scene-complaints .folio, .scene-cards .folio { margin-bottom: 3rem; }
+  .scene-prose .eyebrow, .scene-proof-block .eyebrow, .scene-work .eyebrow,
+  .scene-session .eyebrow, .scene-complaints .eyebrow, .scene-cards .eyebrow { display: block; margin-bottom: 3rem; }
+  .pack-h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    line-height: 1.15; max-width: 26ch; margin-bottom: 2rem; color: var(--bone);
+  }
+  .pack-lead {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.6;
+    color: var(--stone); max-width: 62ch; margin-bottom: 3.5rem;
+  }
+  .pack-body {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.65;
+    color: var(--stone); max-width: 62ch;
+  }
+  .pack-body p { margin-bottom: 1.4rem; }
+  .pack-body p:last-child { margin-bottom: 0; }
+  .pack-body a, .pack-cred a, .pack-signpost a, .scene-argument .body a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); transition: border-color 0.3s;
+  }
+  .pack-body a:hover, .pack-cred a:hover, .pack-signpost a:hover, .scene-argument .body a:hover { border-color: var(--cognac); }
+  .pack-close {
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.45;
+    color: var(--bone); max-width: 52ch;
+  }
+
+  /* Proof block: credentials left, two testimonials right, logo strip beneath */
+  .scene-proof-block { flex-direction: column; }
+  .proof-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem 5vw; align-items: start;
+  }
+  .pack-cred {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 1.2rem; line-height: 1.7; color: var(--stone);
+  }
+  .proof-quotes { display: flex; flex-direction: column; gap: 2rem; }
+  .proof-quotes .quote-card { background: var(--bg); }
+  .proof-pull {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1.3; color: var(--bone);
+  }
+  .proof-logos {
+    margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem 3rem; align-items: center; justify-items: center;
+  }
+  .proof-logos.six { grid-template-columns: repeat(3, 1fr); }
+  .proof-logos .logo-cell {
+    width: 100%; max-width: 150px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .proof-logos .logo-cell img {
+    max-height: 44px; max-width: 100%; width: auto; height: auto; object-fit: contain;
+    filter: brightness(0) invert(1); opacity: 0.7;
+  }
+
+  /* Fixed-term Work rail: stages in columns, price line beneath */
+  .scene-work, .scene-session, .scene-complaints, .scene-cards { flex-direction: column; }
+  .work-rail {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .work-rail.four { grid-template-columns: repeat(4, 1fr); }
+  .work-rail + .work-rail { margin-top: 3rem; }
+  .work-stage {
+    padding: 2.5rem 2rem 3rem; border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .work-stage:last-child { border-right: none; }
+  .work-stage .num { font-family: var(--font-d); font-style: italic; font-size: 1.05rem; color: var(--cognac); }
+  .work-stage h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.45rem; line-height: 1.2; color: var(--cognac);
+  }
+  .work-stage p { font-size: 0.98rem; color: var(--stone); line-height: 1.7; }
+  .price-line {
+    margin-top: 3rem; padding: 1.8rem 2rem;
+    border-left: 2px solid var(--cognac); background: var(--bg-3);
+    font-size: 1.02rem; line-height: 1.7; color: var(--bone); max-width: 72ch;
+  }
+  .pack-note {
+    margin-top: 2.5rem; font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; line-height: 1.6; color: var(--stone); max-width: 62ch;
+  }
+  .pack-strip {
+    margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 720px;
+  }
+  .pack-strip img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+
+  /* "A Session": three blocks */
+  .session-blocks {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .session-block {
+    padding: 2.5rem 2rem; background: var(--card);
+    border: 1px solid var(--line); border-radius: 4px;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .session-block h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.4rem; line-height: 1.25; color: var(--cognac);
+  }
+  .session-block p { font-size: 0.98rem; color: var(--stone); line-height: 1.7; }
+
+  /* Cards grid (what people bring, where it starts) */
+  .pack-cards {
+    display: grid; gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+  .pack-card {
+    padding: 2.2rem 2rem; border: 1px solid var(--line); border-radius: 4px;
+    background: var(--bg-2); display: flex; flex-direction: column; gap: 0.9rem;
+  }
+  .pack-card h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.3rem; line-height: 1.3; color: var(--bone);
+  }
+  .pack-card p { font-size: 0.96rem; color: var(--stone); line-height: 1.7; }
+
+  /* Two-column complaints table */
+  .complaints { width: 100%; border-collapse: collapse; }
+  .complaints th {
+    text-align: left; font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; padding: 0 2rem 1.2rem 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .complaints td {
+    padding: 1.8rem 2rem 1.8rem 0; border-bottom: 1px solid var(--line);
+    vertical-align: top; line-height: 1.7;
+  }
+  .complaints td:first-child {
+    width: 42%; font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; line-height: 1.45; color: var(--bone);
+  }
+  .complaints td:last-child { font-size: 0.98rem; color: var(--stone); padding-right: 0; }
+
+  /* One thing worth knowing: the signpost line */
+  .pack-signpost {
+    margin-top: 2rem; font-family: var(--font-b); font-size: 1rem;
+    line-height: 1.7; color: var(--stone); max-width: 48ch;
+  }
+
+  @media (max-width: 900px) {
+    .proof-grid { grid-template-columns: 1fr; }
+    .proof-logos, .proof-logos.six { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .work-rail, .work-rail.four { grid-template-columns: 1fr; }
+    .work-stage { border-right: none; border-bottom: 1px solid var(--line); padding: 2rem 0; }
+    .work-stage:last-child { border-bottom: none; }
+    .session-blocks { grid-template-columns: 1fr; }
+    .price-line { padding: 1.4rem 1.2rem; }
+    .complaints thead { display: none; }
+    .complaints, .complaints tbody, .complaints tr, .complaints td { display: block; width: 100%; }
+    .complaints tr { padding: 1.6rem 0; border-bottom: 1px solid var(--line); }
+    .complaints td { border-bottom: none; padding: 0; }
+    .complaints td:first-child { width: 100%; margin-bottom: 0.8rem; }
+  }
+</style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -448,6 +620,22 @@
       "sameAs": [
         "https://www.linkedin.com/in/johnobidipe"
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://catalystgrowthcoach.co.uk/leadstrong#service",
+      "name": "LeadStrong",
+      "description": "Six months of weekly Whiteboard Sessions for a corporate leader, around twenty-four sessions, on two or three outcomes agreed at the start. £7,200 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £3,600.",
+      "provider": {
+        "@id": "https://catalystgrowthcoach.co.uk/#organization"
+      },
+      "url": "https://catalystgrowthcoach.co.uk/leadstrong",
+      "offers": {
+        "@type": "Offer",
+        "price": "7200",
+        "priceCurrency": "GBP",
+        "url": "https://catalystgrowthcoach.co.uk/leadstrong"
+      }
     }
   ]
 }
@@ -495,33 +683,99 @@
   <div class="body">
     <p class="lede"><em>You're already operating at a high level. That's not the problem.</em></p>
     <p>The problem is the gap between the decisions you're making and the thinking those decisions deserve.</p>
-    <p>The promotion happens. The remit expands. The decisions get more consequential. But nothing changes about <em>how</em> you think about them. You're still making them in the same fifteen-minute windows between meetings.</p>
-    <p>The result: you're operating at the new altitude with the old thinking infrastructure.</p>
+    <p>The promotion happens. The remit expands. The decisions get more consequential. But nothing changes about <em>how</em> you think about them. You're still making them in the same fifteen-minute windows between meetings, and you know it, because the one that matters this quarter has been sitting at the back of your mind for a month and you have not yet given it an hour.</p>
+    <p>The result: you're operating at the new altitude with the old way of thinking.</p>
     <p class="punchline"><em>That's the gap LeadStrong is built around.</em></p>
   </div>
 </section>
 
-<!-- ════ SCENE 03, The Work ════ -->
-<section class="scene scene-split">
-  <div class="folio">02 · <span>The Work</span></div>
-  <div class="split-grid">
-    <div class="split-text">
-      <h2>A LeadStrong engagement is a sustained thinking partnership.</h2>
-      <div class="body">
-        <p>Each session is a Whiteboard Session. Your thinking, out of your head, onto the board, into a solution. Between sessions there is no homework; the thinking happens at the board, not in the gaps. We work on whatever altitude the week presents, the quarter-defining decision, the team dynamic that's stuck, the calendar question that's quietly draining you.</p>
-        <p>The work is finished when the work is finished. Most engagements run for years, not because the leader is stuck, but because the <em>thinking partnership</em> compounds.</p>
+<!-- ════ SCENE 03, Who you would be thinking with ════ -->
+<section class="scene scene-proof-block">
+  <div class="folio">02 · <span>Who you would be thinking with</span></div>
+  <div class="proof-grid">
+    <p class="pack-cred">Fifteen years across organisational consulting and executive coaching, much of it inside large organisations as a senior business analyst and transformation specialist, which is where the habit of putting a problem on a wall and working it comes from. Gallup-certified in CliftonStrengths and a FITT16 practitioner. Leaders coached inside Toyota, Lexus, Convatec, Cambridge University Press, Autoglass, the University of Oxford and NextEnergy Capital, and individually from AWS, Volkswagen Financial Services, Nexans and Bassett Mechanical. <a href="/about">The credentials in full</a></p>
+    <div class="proof-quotes">
+      <div class="quote-card">
+        <span class="mark">"</span>
+        <blockquote>Working with John has been transformative. I came in overwhelmed and stuck; I left with a clear structure for how I lead and make decisions <em>under pressure</em>.</blockquote>
+        <div class="attr">
+          <span class="name">Ralph Shorthose</span>
+          <span class="meta">Redhouse Bank · <span class="prog">LeadStrong</span></span>
+        </div>
+      </div>
+      <div class="quote-card">
+        <span class="mark">"</span>
+        <blockquote>Working with John has given me renewed focus and confidence at a point in my career when I really needed it. The CliftonStrengths work was the most <em>clarifying</em> thing I've done professionally.</blockquote>
+        <div class="attr">
+          <span class="name">Martin Malins</span>
+          <span class="meta">Senior Leader · <span class="prog">LeadStrong</span></span>
+        </div>
       </div>
     </div>
-    <div class="split-image">
-      <img src="/images/fsr.jpg" alt="John seated with a laptop while a client reads the whiteboard" loading="lazy">
-    </div>
+  </div>
+  <div class="proof-logos">
+    <div class="logo-cell"><img src="/images/logos/toyota.png" alt="Toyota" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/lexus.png" alt="Lexus" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/convatec.png" alt="Convatec" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/cambridge-up.png" alt="Cambridge University Press" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/autoglass.png" alt="Autoglass" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/oxford.png" alt="University of Oxford" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/arrow-planning.png" alt="Arrow Planning" loading="lazy"></div>
+    <div class="logo-cell"><img src="/images/logos/nextenergy.png" alt="NextEnergy Capital" loading="lazy"></div>
   </div>
 </section>
 
-<!-- ════ SCENE 04, The Lenses ════ -->
+<!-- ════ SCENE 04, The Work ════ -->
+<section class="scene scene-work">
+  <div class="folio">03 · <span>The Work</span></div>
+  <h2 class="pack-h2">A fixed piece of work, with an end you can see from the start</h2>
+  <p class="pack-lead">LeadStrong is not an open-ended relationship. It is six months of work with two or three outcomes we agree before it begins, a midpoint at three months where we check them, and an end date after which you carry on the thinking without me.</p>
+  <div class="work-rail">
+    <div class="work-stage">
+      <span class="num">i.</span>
+      <h3>At the start.</h3>
+      <p>In the first session we agree what has to be different by the end, in two or three measures you would recognise in your own work: a decision made and announced, a team that no longer routes everything through you, a strategy your board has signed. They go on the whiteboard and they stay there for the whole engagement.</p>
+    </div>
+    <div class="work-stage">
+      <span class="num">ii.</span>
+      <h3>At the midpoint.</h3>
+      <p>We hold the outcomes up against where you are. If the work is doing what it should, we carry on. If it is not, you can stop there, and you pay only for the half you have had. That is not a get-out clause for me. It is how you know I am as exposed to the result as you are.</p>
+    </div>
+    <div class="work-stage">
+      <span class="num">iii.</span>
+      <h3>At the end.</h3>
+      <p>The outcomes are either met or they are not, and we say which. By then you have run enough sessions to run the method yourself: the question, the board, the decision. Some leaders come back for a second engagement with new outcomes. Nobody drifts on.</p>
+    </div>
+  </div>
+  <p class="price-line">Six months, a session a week, so around twenty-four at the board. £7,200 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £3,600. No retainer, and nothing added on.</p>
+</section>
+
+<!-- ════ SCENE 05, A Session ════ -->
+<section class="scene scene-session">
+  <div class="folio">04 · <span>A Session</span></div>
+  <h2 class="pack-h2">You choose the decision. We leave with it made.</h2>
+  <p class="pack-lead">Every session is a Whiteboard Session. Your thinking, out of your head, onto the board, into a solution. What goes up is your call, and it is always something live.</p>
+  <div class="session-blocks">
+    <div class="session-block">
+      <h3>You bring the live one.</h3>
+      <p>The decision you are being asked for this month, or the strategic approach you have not had an hour to think through. Not a reflection on last quarter. The thing that is in front of you.</p>
+    </div>
+    <div class="session-block">
+      <h3>We work it on the board.</h3>
+      <p>I write as you talk, so the whole of it is where you can see it, then we find what connects, what is missing, where your own way of leading is sitting inside the problem, and what will actually hold. There is no homework between sessions. The thinking happens here.</p>
+    </div>
+    <div class="session-block">
+      <h3>You leave with a decision, or the action that gets you to one.</h3>
+      <p>Written on the board before we finish. And I say what I think. A thinking partner who only asks questions is half a partner, so when I have a view you get it, clearly marked as mine, and you do what you like with it.</p>
+    </div>
+  </div>
+  <p class="pack-note">Online with the board shared live on screen, or in person in central London or Milton Keynes.</p>
+</section>
+
+<!-- ════ SCENE 06, The Lenses ════ -->
 <section class="scene scene-lenses">
   <div class="head">
-    <div class="folio">03 · <span>The Lenses</span></div>
+    <div class="folio">05 · <span>The Lenses</span></div>
     <h2>Three frames the work moves through.</h2>
   </div>
 
@@ -529,7 +783,7 @@
     <div class="lens">
       <span class="num">i.</span>
       <h3>The strategic altitude.</h3>
-      <p class="detail">Most senior leaders don't get to think at altitude during the week. The session is where you do, without losing the texture of the operational reality below.</p>
+      <p class="detail">Most senior leaders don't get to think at altitude during the week. The session is where you do, with the day-to-day still in view.</p>
     </div>
     <div class="lens">
       <span class="num">ii.</span>
@@ -544,44 +798,45 @@
   </div>
 </section>
 
-<!-- ════ SCENE 04b, In Their Words ════ -->
-<section class="scene scene-quotes">
-  <div class="quotes-head">
-    <div class="label">In Their Words</div>
-    <h2>From leaders who've worked this <em>way</em>.</h2>
-  </div>
+<!-- ════ SCENE 07, What puts senior leaders off coaching ════ -->
+<section class="scene scene-complaints">
+  <div class="folio">06 · <span>What puts senior leaders off coaching</span></div>
+  <p class="pack-lead">Most of the leaders I work with had a coach once and did not go back. The reasons are usually the same five, so here is how this is built against each one.</p>
+  <table class="complaints">
+    <thead>
+      <tr><th scope="col">What you may have had before</th><th scope="col">What LeadStrong does instead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>"It went on for a year and I could not tell you what changed."</td><td>Six months. Two or three outcomes agreed in session one, checked at three months, judged at six. You can tell.</td></tr>
+      <tr><td>"They only ever asked me questions. I could have done that in the shower."</td><td>I ask, and then I say what I think, marked as my view. You are paying for a second mind, not a mirror.</td></tr>
+      <tr><td>"Homework. Journals. A model with an acronym."</td><td>Nothing between sessions. The thinking happens at the board, on the live decision, and ends with it made.</td></tr>
+      <tr><td>"It felt like therapy for people with a budget."</td><td>Every session is about a decision in front of you now. If what is in the way is personal, I will say so, and that is a different conversation with a different person.</td></tr>
+      <tr><td>"I never knew if I could stop."</td><td>A fixed end date. A midpoint where you can walk away and pay for half. Nobody is kept on a retainer.</td></tr>
+    </tbody>
+  </table>
+</section>
 
-  <div class="quotes-grid">
-    <div class="quote-card">
-      <span class="mark">"</span>
-      <blockquote>Working with John has been transformative. I came in overwhelmed and stuck; I left with a clear structure for how I lead and make decisions <em>under pressure</em>.</blockquote>
-      <div class="attr">
-        <span class="name">Ralph Shorthose</span>
-        <span class="meta">Redhouse Bank · <span class="prog">LeadStrong</span></span>
-      </div>
-    </div>
-
-    <div class="quote-card">
-      <span class="mark">"</span>
-      <blockquote>Working with John has given me renewed focus and confidence at a point in my career when I really needed it. The CliftonStrengths work was the most <em>clarifying</em> thing I've done professionally.</blockquote>
-      <div class="attr">
-        <span class="name">Martin Malins</span>
-        <span class="meta">Senior Leader · <span class="prog">LeadStrong</span></span>
-      </div>
-    </div>
+<!-- ════ SCENE 08, If your organisation is paying ════ -->
+<section class="scene scene-prose alt">
+  <div class="folio">07 · <span>If your organisation is paying</span></div>
+  <div class="pack-body">
+    <p>Some leaders come to this on their own account. Others are sent, sometimes because somebody has decided they are the problem, and in my experience the person seen as the problem is usually the one least able to show what they actually intend, beyond how it comes across. Either way, the work is the same and the outcomes are yours.</p>
+    <p>Where it helps, and only where it helps, I will do a three-way conversation with your line manager at the start and at the end, so the outcomes you set match what the organisation is expecting of you. For a president, a CEO or a leader paying their own way, there is no third party, no sponsor report and nobody to report to but you.</p>
+    <p>What is said in the room stays in the room. I will say that to you in the first hour, in person, rather than hand you a clause.</p>
   </div>
 </section>
 
-<!-- ════ SCENE 05, One Thing Worth Knowing ════ -->
+<!-- ════ SCENE 09, One Thing Worth Knowing ════ -->
 <section class="scene scene-one-thing">
-  <div class="folio">04 · <span>One Thing Worth Knowing</span></div>
-  <p class="one-thing">The point of the practice is to make the thinking that should already be happening, happen.</p>
-  <p class="support">Not new knowledge. Not new frameworks. The thinking you'd already be doing if your week had room for it.</p>
+  <div class="folio">08 · <span>One Thing Worth Knowing</span></div>
+  <p class="one-thing">The point is to leave you able to do this without me.</p>
+  <p class="support">Not new knowledge. Not new frameworks. The thinking you'd already be doing if your week had room for it, done often enough at the board that by the end date you can run the method on your own: the question, the whiteboard, the decision. If you come back, it is for a new set of outcomes, not because the first set never closed.</p>
+  <p class="pack-signpost">If what comes off the board needs the team to change too, <a href="/teamstrong">TeamStrong</a> is the next step.</p>
 </section>
 
-<!-- ════ SCENE 06, The Invitation ════ -->
+<!-- ════ SCENE 10, The Invitation ════ -->
 <section class="scene scene-invitation">
-  <div class="folio">05 · <span>The Invitation</span></div>
+  <div class="folio">09 · <span>The Invitation</span></div>
   <p class="lede"><em>The fastest way to know whether LeadStrong fits is to be at the board for an hour.</em></p>
   <p class="sub">You'll know whether the practice is for you. The hour is enough.</p>
   <a href="/contact" class="button">Book a Whiteboard Session</a>

@@ -261,9 +261,43 @@ const PAGES = {
   },
   "index.html": () => [catalystOrg(), person(), website()],
 };
+// The one-to-one and team programmes: the Catalyst Organization plus one
+// Service per offer. A price goes in only where the page publishes one.
+const SERVICES = {
+  "leadstrong.html": [{
+    slug: "leadstrong", name: "LeadStrong",
+    description: "Six months of weekly Whiteboard Sessions for a corporate leader, around twenty-four sessions, on two or three outcomes agreed at the start. £7,200 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £3,600.",
+    price: 7200,
+  }],
+  "buildstrong.html": [{
+    slug: "buildstrong", name: "BuildStrong",
+    description: "Six months of fortnightly Whiteboard Sessions for a business owner, twelve sessions, on two or three outcomes agreed at the start. £3,600 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £1,800.",
+    price: 3600,
+  }, {
+    slug: "buildstrong", anchor: "add-on", name: "Second-in-command coaching",
+    description: "Six sessions over three months with the person who could run the business when the owner is not there. £1,800, which is £300 a session. Open to BuildStrong clients and at.theboard members.",
+    price: 1800,
+  }],
+  // Priced per team and agreed before the work starts, so no offer.
+  "teamstrong.html": [{
+    slug: "teamstrong", name: "TeamStrong",
+    description: "Six months with a leader and their team of four to twelve: a new direction, a new culture or new standards, carried by the team rather than routed through the leader. FITT16 and CliftonStrengths for every member, one-to-ones, and monthly team sessions at the whiteboard.",
+  }],
+};
+function service(url, s) {
+  return {
+    "@type": "Service", "@id": url + "#service" + (s.anchor ? "-" + s.anchor : ""), name: s.name,
+    description: s.description, provider: { "@id": entity.catalyst.id }, url: s.anchor ? url + "#" + s.anchor : url,
+    offers: s.price ? { "@type": "Offer", price: String(s.price), priceCurrency: "GBP", url } : null,
+  };
+}
+for (const [file, list] of Object.entries(SERVICES)) {
+  const url = SITE + "/" + list[0].slug;
+  PAGES[file] = () => [catalystOrg(), ...list.map((s) => service(url, s))];
+}
 // Every other public page carries the Catalyst Organization and nothing else.
 const ORG_ONLY = [
-  "about.html", "leadstrong.html", "buildstrong.html", "teamstrong.html", "in-practice.html",
+  "about.html", "in-practice.html",
   "going-further.html", "contact.html", "hold-the-place.html", "growth-audit/index.html",
   "fluency/numbers/index.html", "fluency/ai/index.html",
 ];
@@ -309,7 +343,8 @@ function boardMarkdown() {
     `Page last reviewed ${longDate(boardReviewed)}`,
   ];
   if (entity.confirmed.menOnly) parts.splice(parts.length - 3, 0, "## Why is it men only?\n\n" + entity.confirmed.menOnly);
-  if (entity.confirmed.price) parts.splice(parts.length - 3, 0, "## How much does it cost?\n\n" + entity.confirmed.price.text);
+  // The cost question is now asked in the page's own FAQ; only add it here if it is not.
+  if (entity.confirmed.price && !/How much does it cost\?/.test(section(board, "faq"))) parts.splice(parts.length - 3, 0, "## How much does it cost?\n\n" + entity.confirmed.price.text);
   return parts.join("\n\n") + "\n";
 }
 const boardMd = boardMarkdown();
