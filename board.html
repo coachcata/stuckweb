@@ -310,7 +310,8 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 /* hero */
 .hero{min-height:88vh;display:flex;align-items:center;position:relative;background:var(--bone);padding:8.5rem 0 4rem;overflow:hidden}
 .hero .bg{position:absolute;inset:0;background:url(/videos/board/board-hero-walk-poster.jpg) center/cover;opacity:.72;filter:saturate(.9)}
-@media(max-width:767.98px){.hero .bg{background-image:url(/videos/board/board-hero-walk-mobile-poster.jpg)}}
+.hero-m{display:none}
+@media(max-width:767.98px){.hero .bg,.hero .veil{display:none}.hero-m{display:block;position:relative;margin:1.8rem 0 .4rem;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:url(/videos/board/board-hero-walk-mobile-poster.jpg) center/cover}.hero-m video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.hero-m .vt{right:.8rem;bottom:.8rem}div.hero{min-height:0;padding-top:6rem}div.hero .wrap{padding-top:0}}
 .hero .bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .vt{position:absolute;right:32px;bottom:1.1rem;z-index:3;width:38px;height:38px;border:0;border-radius:50%;background:rgba(12,12,14,.62);color:var(--bone);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
 .vt[hidden]{display:none}.vt:hover{background:rgba(12,12,14,.8)}.vt:focus-visible{outline:2px solid var(--cog);outline-offset:3px}
@@ -517,6 +518,7 @@ footer .wm img{height:34px;width:auto}
 <h1 class="eb">A men&rsquo;s business group for owner-managers in Milton Keynes</h1>
 <h2 class="hl">Twelve months of pushing harder, with <em>four men doing the same</em></h2>
 <p class="lead" style="margin-top:1.4rem">The one room where you do not have to hold anything back.</p>
+<div class="hero-m" id="hero-m" aria-hidden="true"></div>
 <p>Five men, one circle, twice a month. Run by me, John Obidipe, in Milton Keynes.</p>
 <p class="intro" data-md="opening">at.theboard is a men&rsquo;s business group in Milton Keynes for owners running businesses of roughly &pound;500k to &pound;5m with five to twenty-five staff. Five men form a circle and stay together for twelve months. Once a month the circle meets in person at the Shire Retreat for a walk and a half day at the whiteboard, and a fortnight later it meets online for ninety minutes. Every man&rsquo;s challenge goes on the whiteboard every month, and every man leaves with what he said he would do written up in his own hand, with a date against it. The year is built to change the business: more profit and more of it to you, turnover past where you have stalled, sales that do not all run through you, and a business that needs you less. It is run by John Obidipe of Catalyst Growth Coaching.</p>
 <div style="margin-top:1.8rem"><a href="#book" class="btn">Start with a free hour</a></div>
@@ -883,7 +885,10 @@ if (location.search.indexOf('sent=1') > -1) {
   // Hero: pick one file by width before anything loads.
   var hero = document.getElementById('hero-loop'), btn = document.getElementById('hero-toggle');
   if (hero) {
-    var base = '/videos/board/board-hero-walk' + (window.innerWidth < 768 ? '-mobile' : '');
+    var phone = window.innerWidth < 768, slot = document.getElementById('hero-m');
+    var base = '/videos/board/board-hero-walk' + (phone ? '-mobile' : '');
+    // Phones: the loop sits on its own under the headline, not behind the text.
+    if (phone && slot) { slot.appendChild(hero); slot.appendChild(btn); }
     hero.poster = base + '-poster.jpg';
     if (!still) {
       hero.src = base + '.mp4'; play(hero);
