@@ -309,13 +309,18 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center}
 .navcta{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cog);text-decoration:none;font-weight:700;border:1px solid var(--brs);padding:.65rem 1.2rem;border-radius:2px}
 /* hero */
 .hero{min-height:88vh;display:flex;align-items:center;position:relative;background:var(--bone);padding:8.5rem 0 4rem;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background:url(/images/img-1990.jpg) center/cover;opacity:.72;filter:saturate(.9)}
+.hero .bg{position:absolute;inset:0;background:url(/videos/board/board-hero-walk-poster.jpg) center/cover;opacity:.72;filter:saturate(.9)}
+@media(max-width:767.98px){.hero .bg{background-image:url(/videos/board/board-hero-walk-mobile-poster.jpg)}}
+.hero .bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vt{position:absolute;right:32px;bottom:1.1rem;z-index:3;width:38px;height:38px;border:0;border-radius:50%;background:rgba(12,12,14,.62);color:var(--bone);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.vt[hidden]{display:none}.vt:hover{background:rgba(12,12,14,.8)}.vt:focus-visible{outline:2px solid var(--cog);outline-offset:3px}
+.vt svg{width:14px;height:14px;fill:currentColor}.vt .i-play{display:none}.vt.paused .i-play{display:block}.vt.paused .i-pause{display:none}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,var(--bone) 2%,rgba(242,240,236,.96) 30%,rgba(242,240,236,.80) 52%,rgba(242,240,236,.28) 82%,rgba(242,240,236,.08) 100%)}
 .hero:after{content:'';position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(180deg,rgba(242,240,236,0),rgba(242,240,236,.75) 60%,var(--bone))}
 .hero .wrap{position:relative;z-index:2;padding-top:0}
 .hero p{max-width:44ch}
 .hero h1{max-width:17ch}
-.herods{position:absolute;left:32px;right:32px;bottom:1.6rem;display:flex;justify-content:space-between;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#8A8782;font-weight:600;max-width:1180px;margin:0 auto}
+.herods{position:absolute;left:32px;right:86px;bottom:1.6rem;display:flex;justify-content:space-between;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#8A8782;font-weight:600;max-width:1180px;margin:0 auto}
 .herods span:last-child{color:#A8774E;font-weight:700}
 .hero h1,.hero h2,.hero p.lead{color:var(--ob)}
 .hero p{color:#5A5752}
@@ -341,6 +346,7 @@ nav{background:rgba(242,240,236,.94);border-bottom:1px solid rgba(12,12,14,.12)}
 /* data-strip image */
 .fig{position:relative;border-radius:3px;overflow:hidden}
 .fig img,.fig video{width:100%;height:auto;display:block}
+.fig video.loop{height:auto;object-fit:cover}
 .fig .ds{position:absolute;left:0;right:0;bottom:0;padding:.9rem 1.2rem;background:linear-gradient(180deg,transparent,rgba(12,12,14,.92));display:flex;justify-content:space-between;align-items:flex-end}
 .fig .ds .l{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(242,240,236,.88);font-weight:600}
 .fig .ds .r{font-size:.64rem;letter-spacing:.14em;color:var(--cog);font-weight:700}
@@ -506,7 +512,7 @@ footer .wm img{height:34px;width:auto}
 <nav><div class="wrap"><a href="/board" class="wm"><img class="lk" src="/images/logo-at-theboard-lockup-dark.png" alt="at.theboard" width="304" height="19"><img class="mk" src="/images/logo-at-theboard-mark-dark-88.png" alt="at.theboard" width="40" height="40"></a>
 <div class="navr"><div class="st">Selecting the first five</div><a href="#book" class="navcta">Book the free hour</a></div></div></nav>
 
-<div class="hero"><div class="bg"></div><div class="veil"></div><div class="wrap">
+<div class="hero"><div class="bg"><video id="hero-loop" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div><div class="veil"></div><div class="wrap">
 <div>
 <h1 class="eb">A men&rsquo;s business group for owner-managers in Milton Keynes</h1>
 <h2 class="hl">Twelve months of pushing harder, with <em>four men doing the same</em></h2>
@@ -520,7 +526,7 @@ footer .wm img{height:34px;width:auto}
 </div>
 </div>
 </div>
-<div class="herods"><span>On the walk, Milton Keynes</span><span>12.02</span></div></div>
+<div class="herods"><span>On the walk, Milton Keynes</span><span>12.02</span></div><button type="button" class="vt" id="hero-toggle" aria-label="Pause background video" hidden><svg class="i-pause" viewBox="0 0 14 14" aria-hidden="true"><rect x="2" y="1" width="3.6" height="12" rx=".6"/><rect x="8.4" y="1" width="3.6" height="12" rx=".6"/></svg><svg class="i-play" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.2v11.6a.6.6 0 0 0 .9.5l9.2-5.8a.6.6 0 0 0 0-1L3.9.7A.6.6 0 0 0 3 1.2z"/></svg></button></div>
 
 <div class="light">
 <section><div class="wrap">
@@ -576,7 +582,7 @@ footer .wm img{height:34px;width:auto}
 </div>
 <p style="margin-top:1.4rem">Every man is on the board every month. The full hour is yours roughly every five months.</p></div>
 <p data-md="location" style="margin-top:1.4rem">In person at the Shire Retreat, Milton Keynes. Online between sessions. Members come from across Milton Keynes and the surrounding area.</p>
-<div class="fig"><img src="/images/img-1991.jpg" alt="Two business owners walking a wooded path in Milton Keynes, mid-conversation, before a whiteboard session." width="1400" height="780" loading="lazy" decoding="async"><div class="ds"><div class="l">The walk &middot; Milton Keynes</div><div class="r">14.03</div></div></div>
+<div class="fig"><video class="loop" autoplay muted loop playsinline preload="metadata" aria-hidden="true" width="1400" height="780" style="aspect-ratio:1400/780" poster="/videos/board/board-month-room-poster.jpg" data-src="/videos/board/board-month-room.mp4"></video></div>
 </div></section>
 
 <section><div class="wrap">
@@ -672,7 +678,7 @@ footer .wm img{height:34px;width:auto}
 <div class="step"><div class="n">05</div><div><h3>Work out what will hold</h3><p>Which solutions survive all of the above, and which quietly will not.</p></div><div class="t"></div></div>
 </div>
 </div>
-<div><div class="fig"><img src="/images/img-1992.jpg" alt="A session room, the whiteboard covered in working notes." width="1300" height="820" loading="lazy" decoding="async"><div class="ds"><div class="l">At the whiteboard</div><div class="r">Session 04</div></div></div>
+<div><div class="fig"><video class="loop" autoplay muted loop playsinline preload="metadata" aria-hidden="true" width="1300" height="820" style="aspect-ratio:1300/820" poster="/videos/board/board-whiteboard-poster.jpg" data-src="/videos/board/board-whiteboard.mp4"></video></div>
 <div class="click"><div class="ml">The click</div><p>Every slot is working towards one moment. The point where the approach becomes clear, the strategy with it, and so do the next steps. You know when it has happened. You leave with the first of those steps written on the board in your own hand, and that is what the other four ask you about next time.</p></div>
 <p style="margin-top:1.4rem">When the bigger plan needs money, people or kit you do not have yet, that goes on the board too: where it could come from, and what it would cost you.</p>
 </div>
@@ -867,5 +873,53 @@ if (location.search.indexOf('sent=1') > -1) {
 <div class="sm">Run by John Obidipe &middot; Milton Keynes &middot; London coming soon</div>
 <div class="sm" style="margin-top:1.1rem"><a href="/" style="color:#A8774E;text-decoration:none">Catalyst Growth Coaching</a></div>
 <div class="sm" style="margin-top:1.1rem" data-md="reviewed">Page last reviewed <time class="reviewed" datetime="2026-10-28">28 October 2026</time></div></div></footer>
+<script>
+// Living-photo loops. Reduced motion or Save-Data: posters only, nothing downloads.
+(function () {
+  var still = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) ||
+    (navigator.connection && navigator.connection.saveData === true);
+  function play(v) { v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+
+  // Hero: pick one file by width before anything loads.
+  var hero = document.getElementById('hero-loop'), btn = document.getElementById('hero-toggle');
+  if (hero) {
+    var base = '/videos/board/board-hero-walk' + (window.innerWidth < 768 ? '-mobile' : '');
+    hero.poster = base + '-poster.jpg';
+    if (!still) {
+      hero.src = base + '.mp4'; play(hero);
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        var pause = !hero.paused;
+        if (pause) hero.pause(); else play(hero);
+        btn.classList.toggle('paused', pause);
+        btn.setAttribute('aria-label', pause ? 'Play background video' : 'Pause background video');
+      });
+    }
+  }
+
+  // Section loops: src set about one screen ahead; play only while on screen.
+  var loops = document.querySelectorAll('video.loop[data-src]');
+  if (still || !loops.length || !('IntersectionObserver' in window)) return;
+  var near = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.src = e.target.getAttribute('data-src');
+      near.unobserve(e.target);
+    });
+  }, { rootMargin: '100% 0px' });
+  var seen = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) { if (e.target.src) play(e.target); } else e.target.pause();
+    });
+  });
+  loops.forEach(function (v) {
+    near.observe(v); seen.observe(v);
+    v.addEventListener('loadeddata', function () {
+      var r = v.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < window.innerHeight) play(v); else v.pause();
+    });
+  });
+})();
+</script>
 </div>
 </body></html>
