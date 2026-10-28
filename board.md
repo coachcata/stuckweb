@@ -59,7 +59,7 @@ Not the summary. The thing you have been going round in the car.
 
 ### You do what you said, or say why not
 
-The first half hour of every online session is exactly this. “Not yet, and here is why” counts.
+The first half hour of every online session is exactly this.
 
 ### You wait your turn at the board
 
@@ -153,4 +153,4 @@ I say what I think as we go rather than saving it up for the end. That includes 
 
 Book the free hour: https://catalystgrowthcoach.co.uk/board#book
 
-Page last reviewed 21 October 2026
+Page last reviewed 28 October 2026
