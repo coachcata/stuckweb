@@ -364,6 +364,48 @@ for (const [file, t] of Object.entries(TEAMSTRONG)) {
   };
 }
 
+// LeadStrong for medical devices: two sister pages of /leadstrong, each for
+// one reader. Same offer and price as LeadStrong; reached by direct link,
+// not from the menus.
+const MEDTECH = {
+  "mdsvp.html": {
+    path: "/mdsvp", crumb: "For vice presidents in medical devices",
+    audience: "Vice presidents in medical device companies working towards general manager, regional leadership or the executive committee",
+  },
+  "mdsdir.html": {
+    path: "/mdsdir", crumb: "For sales directors in medical devices",
+    audience: "Sales directors in medical device companies working towards vice president",
+  },
+};
+for (const [file, t] of Object.entries(MEDTECH)) {
+  PAGES[file] = (html) => {
+    const url = SITE + t.path;
+    const page = webPage(url, html, "2026-11-23");
+    page.breadcrumb = { "@id": url + "#breadcrumb" };
+    page.mainEntity = { "@id": url + "#service" };
+    return [
+      catalystOrg(), website(), page,
+      {
+        "@type": "Service", "@id": url + "#service", name: "LeadStrong",
+        serviceType: "One-to-one executive coaching",
+        description: "Six months of weekly one-to-one coaching at the whiteboard, about 24 sessions, on two or three outcomes agreed at the start. £7,200 for six months, or £3,600 to stop at three months.",
+        provider: { "@id": entity.catalyst.id }, url,
+        isRelatedTo: { "@id": SITE + "/leadstrong#service" },
+        audience: { "@type": "BusinessAudience", name: t.audience },
+        offers: { "@type": "Offer", price: "7200", priceCurrency: "GBP", url: url + "#book" },
+      },
+      {
+        "@type": "BreadcrumbList", "@id": url + "#breadcrumb",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" },
+          { "@type": "ListItem", position: 2, name: "LeadStrong", item: SITE + "/leadstrong" },
+          { "@type": "ListItem", position: 3, name: t.crumb, item: url },
+        ],
+      },
+    ];
+  };
+}
+
 // Every other public page carries the Catalyst Organization and nothing else.
 const ORG_ONLY = [
   "about.html", "in-practice.html",
@@ -423,7 +465,7 @@ writeBoth("board.md", undash(boardMd));
 
 // One plain Markdown copy per TeamStrong page, served at /teamstrong.md,
 // /teamstrong/one-team.md and /teamstrong/leaders.md (see _redirects).
-function pageMarkdown(file, path) {
+function pageMarkdown(file, path, cta = "Book a conversation") {
   const html = read(file);
   let body = must(html.match(/<main>([\s\S]*?)<\/main>/), "<main> on " + file)[1];
   // a whole-card link: keep the card's heading and text, then the link
@@ -434,9 +476,18 @@ function pageMarkdown(file, path) {
   return [
     `<!-- canonical: ${SITE}${path} -->`,
     toMarkdown(body),
-    `Book a conversation: ${SITE}${path}#book`,
+    `${cta}: ${SITE}${path}#book`,
   ].join("\n\n") + "\n";
 }
+function writeMd([file, path, md]) {
+  const out = undash(pageMarkdown(file, path, "Book a free hour"));
+  writeBoth(md, out);
+  return { path, out };
+}
+const MEDTECH_MD = [
+  ["mdsvp.html", "/mdsvp", "mdsvp.md"],
+  ["mdsdir.html", "/mdsdir", "mdsdir.md"],
+].map(writeMd);
 const TEAMSTRONG_MD = [
   ["teamstrong.html", "/teamstrong", "teamstrong.md"],
   ["teamstrong-one-team.html", "/teamstrong/one-team", "teamstrong-one-team.md"],
@@ -455,6 +506,7 @@ const facts = [
   "- Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.",
   "- Way in: one free hour at the whiteboard, open to anyone.",
 ];
+facts.push("- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Six months, weekly, £7,200.");
 facts.push("- TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.");
 if (entity.confirmed.menOnly) facts.push("- Why men only: " + entity.confirmed.menOnly);
 if (entity.confirmed.price) facts.push("- Price: " + entity.confirmed.price.text);
@@ -480,6 +532,9 @@ A circle is the five men who meet together for the year.
 ## Catalyst Growth Coaching
 
 - [Home](${SITE}/): the practice and the free hour at the whiteboard
+- [LeadStrong](${SITE}/leadstrong): six months of weekly Whiteboard Sessions for a corporate leader
+- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Six months, weekly, £7,200.
+- Plain text: [for vice presidents](${SITE}/mdsvp.md), [for sales directors](${SITE}/mdsdir.md)
 - [The Growth Audit](${SITE}/growth-audit): a three-week audit for owner-managed firms
 - [Leadership Hub](https://learn.catalystgrowthcoach.co.uk/): the Fluency Series in podcast, slides and infographic form
 
@@ -497,7 +552,7 @@ const home = read("index.html");
 const homeMd = toMarkdown(home.replace(/^[\s\S]*?<body[^>]*>/, ""));
 const llmsFull = `# Catalyst Growth Coaching and at.theboard, full text
 
-> The full text of ${SITE}/board, ${SITE}/ and the three TeamStrong pages, as Markdown. See ${SITE}/llms.txt for the short version.
+> The full text of ${SITE}/board, ${SITE}/, the three TeamStrong pages and the two LeadStrong pages for medical devices, as Markdown. See ${SITE}/llms.txt for the short version.
 
 ${boardMd.replace(/^<!-- canonical:.*\n\n/, "")}
 ---
@@ -507,7 +562,7 @@ ${boardMd.replace(/^<!-- canonical:.*\n\n/, "")}
 # Catalyst Growth Coaching, home page
 
 ${homeMd}
-${TEAMSTRONG_MD.map((t) => "\n---\n\n" + t.out).join("")}`;
+${[...TEAMSTRONG_MD, ...MEDTECH_MD].map((t) => "\n---\n\n" + t.out).join("")}`;
 writeBoth("llms-full.txt", undash(llmsFull));
 
 // ---------------------------------------------------------------- sitemap

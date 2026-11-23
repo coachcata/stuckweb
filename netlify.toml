@@ -164,6 +164,30 @@
     Link = "<https://catalystgrowthcoach.co.uk/board>; rel=\"canonical\""
 
 [[headers]]
+  for = "/mdsvp.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsvp>; rel=\"canonical\""
+
+[[headers]]
+  for = "/mdsdir.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsdir>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/mdsvp.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsvp>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/mdsdir.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsdir>; rel=\"canonical\""
+
+[[headers]]
   for = "/teamstrong.md"
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
