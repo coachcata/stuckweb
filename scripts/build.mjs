@@ -429,8 +429,6 @@ function pageMarkdown(file, path) {
   // a whole-card link: keep the card's heading and text, then the link
   body = body.replace(/<a class="route-card" href="([^"]+)">([\s\S]*?)<span class="go">([\s\S]*?)<\/span>\s*<\/a>/g,
     (_, href, inner, go) => `${inner}<p><a href="${href}">${go}</a></p>`);
-  // the Questions block has a folio rather than a heading on the page
-  body = body.replace(/<div class="folio">[^<]*<span>Questions<\/span><\/div>/, "<h2>Questions</h2>");
   return [
     `<!-- canonical: ${SITE}${path} -->`,
     toMarkdown(body),

@@ -1,6 +1,6 @@
 <!-- canonical: https://catalystgrowthcoach.co.uk/teamstrong/leaders -->
 
-# We spend the meeting on the numbers. The real story is in how we lead.
+# “We spend the meeting on the numbers. The real story is in how we lead.”
 
 For leadership teams of five to ten where each leader runs their own region, function or division. You are not trying to become one team. Each of you is growing in how you lead your own people, and you are doing it alongside each other.
 
@@ -8,17 +8,17 @@ For leadership teams of five to ten where each leader runs their own region, fun
 
 ### If you sit around the table
 
-I know exactly how my numbers are doing. I am less sure how I am doing.
+> “I know exactly how my numbers are doing. I am less sure how I am doing.”
 
-My team takes its lead from me. I am not always sure what it is taking.
+> “My team takes its lead from me. I am not always sure what it is taking.”
 
-I can see what is not working in my area. I am less sure how much of it starts with me.
+> “I can see what is not working in my area. I am less sure how much of it starts with me.”
 
 ### If you lead the leaders, or look after them
 
-Some of my leaders are further along than others. We all know it, and nobody says it.
+> “Some of my leaders are further along than others. We all know it, and nobody says it.”
 
-I want every one of my leaders to grow, each at their own level. This is how I invest in all of them at once, and nobody is singled out.
+> “I want every one of my leaders to grow, each at their own level. This is how I invest in all of them at once, and nobody is singled out.”
 
 ## A clearer view of how each of you leads
 
@@ -46,21 +46,10 @@ From £3,500 plus VAT for a leadership team, priced on numbers. One price, with 
 
 One high impact session a month, each in a different setting, so the growth keeps moving and has time to show up in each leader’s own team. The mix is chosen for your leaders. A typical shape:
 
-### Month one, the site.
-
-How each of you leads today.
-
-### Month two, the strengths lens.
-
-Why you lead that way.
-
-### Months three to five, the board.
-
-Real challenges from each area, with actions and dates checked each month.
-
-### Month six, back to the site.
-
-The same task, and a clear view of how each of you has changed.
+- Month one, the site.How each of you leads today.
+- Month two, the strengths lens.Why you lead that way.
+- Months three to five, the board.Real challenges from each area, with actions and dates checked each month.
+- Month six, back to the site.The same task, and a clear view of how each of you has changed.
 
 Leaders can have their own one-to-one sessions alongside where it helps. Price agreed with each team.
 
