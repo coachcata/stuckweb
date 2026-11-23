@@ -278,11 +278,6 @@ const SERVICES = {
     description: "Six sessions over three months with the person who could run the business when the owner is not there. £1,800, which is £300 a session. Open to BuildStrong clients and at.theboard members.",
     price: 1800,
   }],
-  // Priced per team and agreed before the work starts, so no offer.
-  "teamstrong.html": [{
-    slug: "teamstrong", name: "TeamStrong",
-    description: "Six months with a leader and their team of four to twelve: a new direction, a new culture or new standards, carried by the team rather than routed through the leader. FITT16 and CliftonStrengths for every member, one-to-ones, and monthly team sessions at the whiteboard.",
-  }],
 };
 function service(url, s) {
   return {
@@ -295,6 +290,80 @@ for (const [file, list] of Object.entries(SERVICES)) {
   const url = SITE + "/" + list[0].slug;
   PAGES[file] = () => [catalystOrg(), ...list.map((s) => service(url, s))];
 }
+// TeamStrong: a short main page and one page for each kind of leadership
+// team. The Day is priced from £3,500 plus VAT; the Six Months is agreed per
+// team and never published, so only the Day carries an offer.
+const TEAMSTRONG = {
+  "teamstrong-one-team.html": {
+    path: "/teamstrong/one-team", crumb: "For teams who work as one",
+    audience: "Leadership teams of five to ten who run the business together",
+  },
+  "teamstrong-leaders.html": {
+    path: "/teamstrong/leaders", crumb: "For leaders who each run their own area",
+    audience: "Leadership teams of five to ten where each leader runs their own region, function or division",
+  },
+};
+// Questions are read off the visible accordion, so the schema can never
+// carry a question the page does not show.
+function faqFromDetails(html, file) {
+  const qs = [...section(html, "faq").matchAll(/<details>\s*<summary><h3>([\s\S]*?)<\/h3><\/summary>\s*<p>([\s\S]*?)<\/p>\s*<\/details>/g)];
+  must(qs.length || null, "FAQ questions on " + file);
+  return qs.map(([, q, a]) => ({
+    "@type": "Question", name: text(q),
+    acceptedAnswer: { "@type": "Answer", text: text(a) },
+  }));
+}
+PAGES["teamstrong.html"] = (html) => {
+  const url = SITE + "/teamstrong";
+  const page = webPage(url, html, "2026-11-23");
+  page.breadcrumb = { "@id": url + "#breadcrumb" };
+  page.hasPart = Object.values(TEAMSTRONG).map((t) => ({ "@id": SITE + t.path + "#webpage" }));
+  return [
+    catalystOrg(), website(), page,
+    {
+      "@type": "Service", "@id": url + "#service", name: "TeamStrong",
+      description: "For leadership teams of five to ten. One high impact day, or six months, at your venue or ours.",
+      provider: { "@id": entity.catalyst.id }, url,
+    },
+    breadcrumb(url, "TeamStrong"),
+  ];
+};
+for (const [file, t] of Object.entries(TEAMSTRONG)) {
+  PAGES[file] = (html) => {
+    const url = SITE + t.path;
+    const page = webPage(url, html, "2026-11-23");
+    page.breadcrumb = { "@id": url + "#breadcrumb" };
+    page.isPartOf = [{ "@id": SITE + "/#website" }, { "@id": SITE + "/teamstrong#webpage" }];
+    page.mainEntity = { "@id": url + "#the-day" };
+    return [
+      catalystOrg(), website(), page,
+      {
+        "@type": "Service", "@id": url + "#the-day", name: "TeamStrong: The Day",
+        serviceType: "Leadership team development day",
+        description: text(para(html, "day")),
+        provider: { "@id": entity.catalyst.id }, url: url + "#the-day",
+        isRelatedTo: { "@id": SITE + "/teamstrong#service" },
+        audience: { "@type": "BusinessAudience", name: t.audience },
+        offers: {
+          "@type": "Offer", url: url + "#the-day", priceCurrency: "GBP", price: "3500",
+          priceSpecification: {
+            "@type": "PriceSpecification", minPrice: 3500, priceCurrency: "GBP", valueAddedTaxIncluded: false,
+          },
+        },
+      },
+      { "@type": "FAQPage", "@id": url + "#faq", url, isPartOf: { "@id": url + "#webpage" }, mainEntity: faqFromDetails(html, file) },
+      {
+        "@type": "BreadcrumbList", "@id": url + "#breadcrumb",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" },
+          { "@type": "ListItem", position: 2, name: "TeamStrong", item: SITE + "/teamstrong" },
+          { "@type": "ListItem", position: 3, name: t.crumb, item: url },
+        ],
+      },
+    ];
+  };
+}
+
 // Every other public page carries the Catalyst Organization and nothing else.
 const ORG_ONLY = [
   "about.html", "in-practice.html",
@@ -350,6 +419,34 @@ function boardMarkdown() {
 const boardMd = boardMarkdown();
 writeBoth("board.md", undash(boardMd));
 
+// ---------------------------------------------------------------- TeamStrong .md
+
+// One plain Markdown copy per TeamStrong page, served at /teamstrong.md,
+// /teamstrong/one-team.md and /teamstrong/leaders.md (see _redirects).
+function pageMarkdown(file, path) {
+  const html = read(file);
+  let body = must(html.match(/<main>([\s\S]*?)<\/main>/), "<main> on " + file)[1];
+  // a whole-card link: keep the card's heading and text, then the link
+  body = body.replace(/<a class="route-card" href="([^"]+)">([\s\S]*?)<span class="go">([\s\S]*?)<\/span>\s*<\/a>/g,
+    (_, href, inner, go) => `${inner}<p><a href="${href}">${go}</a></p>`);
+  // the Questions block has a folio rather than a heading on the page
+  body = body.replace(/<div class="folio">[^<]*<span>Questions<\/span><\/div>/, "<h2>Questions</h2>");
+  return [
+    `<!-- canonical: ${SITE}${path} -->`,
+    toMarkdown(body),
+    `Book a conversation: ${SITE}${path}#book`,
+  ].join("\n\n") + "\n";
+}
+const TEAMSTRONG_MD = [
+  ["teamstrong.html", "/teamstrong", "teamstrong.md"],
+  ["teamstrong-one-team.html", "/teamstrong/one-team", "teamstrong-one-team.md"],
+  ["teamstrong-leaders.html", "/teamstrong/leaders", "teamstrong-leaders.md"],
+].map(([file, path, md]) => {
+  const out = undash(pageMarkdown(file, path));
+  writeBoth(md, out);
+  return { path, out };
+});
+
 // ---------------------------------------------------------------- llms.txt
 
 const facts = [
@@ -358,6 +455,7 @@ const facts = [
   "- Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.",
   "- Way in: one free hour at the whiteboard, open to anyone.",
 ];
+facts.push("- TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.");
 if (entity.confirmed.menOnly) facts.push("- Why men only: " + entity.confirmed.menOnly);
 if (entity.confirmed.price) facts.push("- Price: " + entity.confirmed.price.text);
 
@@ -371,6 +469,13 @@ A circle is the five men who meet together for the year.
 
 - [at.theboard](${SITE}/board): what the circle is, how it meets, the rules, who it is for, how to join
 - [at.theboard, plain text](${SITE}/board.md): the same page as Markdown
+
+## TeamStrong, for leadership teams of five to ten
+
+- [TeamStrong](${SITE}/teamstrong): one high impact day, or six months, at your venue or ours
+- [For teams who work as one](${SITE}/teamstrong/one-team): leadership teams who run the business together
+- [For leaders who each run their own area](${SITE}/teamstrong/leaders): leaders who each run a region, function or division
+- Plain text: [TeamStrong](${SITE}/teamstrong.md), [teams who work as one](${SITE}/teamstrong/one-team.md), [leaders who each run their own area](${SITE}/teamstrong/leaders.md)
 
 ## Catalyst Growth Coaching
 
@@ -392,7 +497,7 @@ const home = read("index.html");
 const homeMd = toMarkdown(home.replace(/^[\s\S]*?<body[^>]*>/, ""));
 const llmsFull = `# Catalyst Growth Coaching and at.theboard, full text
 
-> The full text of ${SITE}/board and ${SITE}/, as Markdown. See ${SITE}/llms.txt for the short version.
+> The full text of ${SITE}/board, ${SITE}/ and the three TeamStrong pages, as Markdown. See ${SITE}/llms.txt for the short version.
 
 ${boardMd.replace(/^<!-- canonical:.*\n\n/, "")}
 ---
@@ -402,7 +507,7 @@ ${boardMd.replace(/^<!-- canonical:.*\n\n/, "")}
 # Catalyst Growth Coaching, home page
 
 ${homeMd}
-`;
+${TEAMSTRONG_MD.map((t) => "\n---\n\n" + t.out).join("")}`;
 writeBoth("llms-full.txt", undash(llmsFull));
 
 // ---------------------------------------------------------------- sitemap

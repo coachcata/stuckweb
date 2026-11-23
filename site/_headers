@@ -24,6 +24,30 @@
 /site/board.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://catalystgrowthcoach.co.uk/board>; rel="canonical"
+/teamstrong.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong>; rel="canonical"
+/teamstrong/one-team.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong/one-team>; rel="canonical"
+/teamstrong-one-team.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong/one-team>; rel="canonical"
+/teamstrong/leaders.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong/leaders>; rel="canonical"
+/teamstrong-leaders.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong/leaders>; rel="canonical"
+/site/teamstrong.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong>; rel="canonical"
+/site/teamstrong-one-team.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong/one-team>; rel="canonical"
+/site/teamstrong-leaders.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://catalystgrowthcoach.co.uk/teamstrong/leaders>; rel="canonical"
 /llms.txt
   Content-Type: text/plain; charset=utf-8
 /llms-full.txt

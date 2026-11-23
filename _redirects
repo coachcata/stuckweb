@@ -17,3 +17,11 @@ http://www.catalystgrowthcoach.co.uk/*   https://catalystgrowthcoach.co.uk/:spla
 /package.json                      /404.html  404!
 /package-lock.json                 /404.html  404!
 /node_modules/*                    /404.html  404!
+
+# TeamStrong's two pages for each kind of leadership team, and their plain
+# Markdown copies. The files sit flat beside teamstrong.html so /teamstrong
+# is never mistaken for a folder. 200 = served at the pretty address.
+/teamstrong/one-team       /teamstrong-one-team.html  200
+/teamstrong/leaders        /teamstrong-leaders.html   200
+/teamstrong/one-team.md    /teamstrong-one-team.md    200
+/teamstrong/leaders.md     /teamstrong-leaders.md     200

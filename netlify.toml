@@ -115,6 +115,27 @@
   status = 404
   force = true
 
+# TeamStrong's two sub-pages and their Markdown copies. Mirrored in _redirects.
+[[redirects]]
+  from = "/teamstrong/one-team"
+  to = "/teamstrong-one-team.html"
+  status = 200
+
+[[redirects]]
+  from = "/teamstrong/leaders"
+  to = "/teamstrong-leaders.html"
+  status = 200
+
+[[redirects]]
+  from = "/teamstrong/one-team.md"
+  to = "/teamstrong-one-team.md"
+  status = 200
+
+[[redirects]]
+  from = "/teamstrong/leaders.md"
+  to = "/teamstrong-leaders.md"
+  status = 200
+
 # Security headers on every response. Mirrored in _headers.
 # No CSP yet: pages carry inline scripts and load Google Fonts, so a useful
 # policy needs per-page nonces or hashes first. HSTS deliberately omits
@@ -141,6 +162,54 @@
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
     Link = "<https://catalystgrowthcoach.co.uk/board>; rel=\"canonical\""
+
+[[headers]]
+  for = "/teamstrong.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong>; rel=\"canonical\""
+
+[[headers]]
+  for = "/teamstrong/one-team.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong/one-team>; rel=\"canonical\""
+
+[[headers]]
+  for = "/teamstrong-one-team.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong/one-team>; rel=\"canonical\""
+
+[[headers]]
+  for = "/teamstrong/leaders.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong/leaders>; rel=\"canonical\""
+
+[[headers]]
+  for = "/teamstrong-leaders.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong/leaders>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/teamstrong.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/teamstrong-one-team.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong/one-team>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/teamstrong-leaders.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/teamstrong/leaders>; rel=\"canonical\""
 
 [[headers]]
   for = "/llms.txt"
