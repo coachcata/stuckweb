@@ -1,18 +1,18 @@
 <!-- canonical: https://catalystgrowthcoach.co.uk/teamstrong/one-team -->
 
-# Everyone around the table is capable. We still do not work as one.
+# “Everyone around the table is capable. We still do not work as one.”
 
-For leadership teams of five to ten who share the decisions, the pressure and the outcomes. We find out how your team really works, through the lens that suits you best, then work through what it shows you, at the board, until it changes how you lead together.
+For leadership teams of five to ten who share the decisions, the pressure and the outcomes. I find out how your team really works, through the lens that suits you best. Then we work through what it shows you, at the board, until it changes how you lead together.
 
 ## You know this team is better than it performs
 
-We agree in the meeting, and by Thursday nothing has moved.
+> “We agree in the meeting, and by Thursday nothing has moved.”
 
-I know who is strongest at what. I am not sure they do.
+> “I know who is strongest at what. I am not sure they do.”
 
-We are polite with each other, and I think the politeness is costing us.
+> “We are polite with each other, and I think the politeness is costing us.”
 
-Some days I am sure it is that person over there. Other days I wonder if it is me.
+> “Some days I am sure it is that person over there. Other days I wonder if it is me.”
 
 ## There is more than one way to see how a team really works
 
@@ -40,21 +40,10 @@ From £3,500 plus VAT for a leadership team, priced on numbers. One price, with 
 
 One high impact session a month, each in a different setting, so the team keeps moving. The mix is chosen for your team. A typical shape:
 
-### Month one, the site.
-
-The team as it is today.
-
-### Month two, the strengths lens.
-
-Why it works that way.
-
-### Months three to five, the board.
-
-Real decisions, worked through together, with actions and dates checked each month.
-
-### Month six, back to the site.
-
-The same task, the same team, and a very different result.
+- Month one, the site.The team as it is today.
+- Month two, the strengths lens.Why it works that way.
+- Months three to five, the board.Real decisions, worked through together, with actions and dates checked each month.
+- Month six, back to the site.The same task, the same team, and a very different result.
 
 The leader has their own one-to-one sessions alongside. Price agreed with each team.
 
