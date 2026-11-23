@@ -9,6 +9,13 @@ A circle is the five men who meet together for the year.
 - [at.theboard](https://catalystgrowthcoach.co.uk/board): what the circle is, how it meets, the rules, who it is for, how to join
 - [at.theboard, plain text](https://catalystgrowthcoach.co.uk/board.md): the same page as Markdown
 
+## TeamStrong, for leadership teams of five to ten
+
+- [TeamStrong](https://catalystgrowthcoach.co.uk/teamstrong): one high impact day, or six months, at your venue or ours
+- [For teams who work as one](https://catalystgrowthcoach.co.uk/teamstrong/one-team): leadership teams who run the business together
+- [For leaders who each run their own area](https://catalystgrowthcoach.co.uk/teamstrong/leaders): leaders who each run a region, function or division
+- Plain text: [TeamStrong](https://catalystgrowthcoach.co.uk/teamstrong.md), [teams who work as one](https://catalystgrowthcoach.co.uk/teamstrong/one-team.md), [leaders who each run their own area](https://catalystgrowthcoach.co.uk/teamstrong/leaders.md)
+
 ## Catalyst Growth Coaching
 
 - [Home](https://catalystgrowthcoach.co.uk/): the practice and the free hour at the whiteboard
@@ -21,6 +28,7 @@ A circle is the five men who meet together for the year.
 - at.theboard circle: five male owner-managers, twelve months, two sessions a month, every man on the whiteboard every month.
 - Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.
 - Way in: one free hour at the whiteboard, open to anyone.
+- TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.
 - Price: £550 a month for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.
 
 ## Optional
