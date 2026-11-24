@@ -1,6 +1,6 @@
 <!-- canonical: https://catalystgrowthcoach.co.uk/teamstrong/leaders -->
 
-# We spend the meeting on the numbers. The real story is in how we lead.
+# “We spend the meeting on the numbers. The real story is in how we lead.”
 
 For leadership teams of five to ten where each leader runs their own region, function or division. You are not trying to become one team. Each of you is growing in how you lead your own people, and you are doing it alongside each other.
 
@@ -8,17 +8,17 @@ For leadership teams of five to ten where each leader runs their own region, fun
 
 ### If you sit around the table
 
-I know exactly how my numbers are doing. I am less sure how I am doing.
+> “I know exactly how my numbers are doing. I am less sure how I am doing.”
 
-My team takes its lead from me. I am not always sure what it is taking.
+> “My team takes its lead from me. I am not always sure what it is taking.”
 
-I can see what is not working in my area. I am less sure how much of it starts with me.
+> “I can see what is not working in my area. I am less sure how much of it starts with me.”
 
 ### If you lead the leaders, or look after them
 
-Some of my leaders are further along than others. We all know it, and nobody says it.
+> “Some of my leaders are further along than others. We all know it, and nobody says it.”
 
-I want every one of my leaders to grow, each at their own level. This is how I invest in all of them at once, and nobody is singled out.
+> “I want every one of my leaders to grow, each at their own level. This is how I invest in all of them at once, and nobody is singled out.”
 
 ## A clearer view of how each of you leads
 
@@ -28,7 +28,7 @@ It is hard to see how you lead from inside your own area. So we step outside it 
 
 A single, high impact day at your venue or ours, in the setting you choose. Each leader leaves with a clear picture of how they show up, and two or three changes to take back to their own team.
 
-### The site.
+### The construction site.
 
 A working miniature construction site, six metres by three, brought to your venue. You operate the machines to complete a set task together, and each leader’s habits show up within minutes: how they plan, how they communicate, when they step in and when they let go.
 
@@ -46,27 +46,16 @@ From £3,500 plus VAT for a leadership team, priced on numbers. One price, with 
 
 One high impact session a month, each in a different setting, so the growth keeps moving and has time to show up in each leader’s own team. The mix is chosen for your leaders. A typical shape:
 
-### Month one, the site.
-
-How each of you leads today.
-
-### Month two, the strengths lens.
-
-Why you lead that way.
-
-### Months three to five, the board.
-
-Real challenges from each area, with actions and dates checked each month.
-
-### Month six, back to the site.
-
-The same task, and a clear view of how each of you has changed.
+- Month one, the construction site.How each of you leads today.
+- Month two, the strengths lens.Why you lead that way.
+- Months three to five, the board.Real challenges from each area, with actions and dates checked each month.
+- Month six, back to the construction site.The same task, and a clear view of how each of you has changed.
 
 Leaders can have their own one-to-one sessions alongside where it helps. Price agreed with each team.
 
 ## Questions
 
-### What space does the site need?
+### What space does the construction site need?
 
 Two areas side by side: one for the construction site, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.
 
@@ -76,7 +65,7 @@ That is fine. There is plenty to do without driving, and planning the task is of
 
 ### What is included in the price?
 
-Everything. The Day is one price for the whole package, site included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.
+Everything. The Day is one price for the whole package, construction site included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.
 
 ### Our leaders do not work together day to day. Will this still work?
 
