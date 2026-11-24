@@ -406,6 +406,37 @@ for (const [file, t] of Object.entries(MEDTECH)) {
   };
 }
 
+// at.theboard one-to-one: one-to-one coaching for business owners, men and
+// women. Served at /board/one-to-one from board-one-to-one.html (see _redirects).
+PAGES["board-one-to-one.html"] = (html) => {
+  const url = SITE + "/board/one-to-one";
+  const page = webPage(url, html, "2026-11-24");
+  page.breadcrumb = { "@id": url + "#breadcrumb" };
+  page.mainEntity = { "@id": url + "#service" };
+  return [
+    catalystOrg(), boardOrg(), person(), website(), page,
+    {
+      "@type": "Service", "@id": url + "#service", name: "at.theboard one-to-one",
+      serviceType: "One-to-one business coaching for owners",
+      description: "Six months of fortnightly one-to-one coaching at the whiteboard for business owners, men and women, online or in person in Milton Keynes. Twelve sessions of 90 minutes. £600 a month, £3,600 for the six months, or £1,800 to stop at three months.",
+      provider: { "@id": entity.board.id }, url,
+      areaServed: [city, { "@type": "Country", name: "United Kingdom" }],
+      audience: { "@type": "BusinessAudience", name: "Business owners, men and women, with 5 to 25 staff" },
+      offers: { "@type": "Offer", price: "3600", priceCurrency: "GBP", url: url + "#book",
+        description: "£600 a month for six months, or £1,800 if you stop at three months" },
+    },
+    { "@type": "FAQPage", "@id": url + "#faq", url, isPartOf: { "@id": url + "#webpage" }, mainEntity: faqFromPage(html) },
+    {
+      "@type": "BreadcrumbList", "@id": url + "#breadcrumb",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" },
+        { "@type": "ListItem", position: 2, name: "at.theboard", item: SITE + "/board" },
+        { "@type": "ListItem", position: 3, name: "One-to-one", item: url },
+      ],
+    },
+  ];
+};
+
 // Every other public page carries the Catalyst Organization and nothing else.
 const ORG_ONLY = [
   "about.html", "in-practice.html",
@@ -477,11 +508,17 @@ function pageMarkdown(file, path, cta = "Book a conversation") {
     `${cta}: ${SITE}${path}#book`,
   ].join("\n\n") + "\n";
 }
+function writeMdAs([file, path, md], cta) {
+  const out = undash(pageMarkdown(file, path, cta));
+  writeBoth(md, out);
+  return { path, out };
+}
 function writeMd([file, path, md]) {
   const out = undash(pageMarkdown(file, path, "Book a free hour"));
   writeBoth(md, out);
   return { path, out };
 }
+const ONE_TO_ONE_MD = writeMdAs(["board-one-to-one.html", "/board/one-to-one", "board-one-to-one.md"], "Book the free hour");
 const MEDTECH_MD = [
   ["mdsvp.html", "/mdsvp", "mdsvp.md"],
   ["mdsdir.html", "/mdsdir", "mdsdir.md"],
@@ -519,6 +556,8 @@ A circle is the five men who meet together for the year.
 
 - [at.theboard](${SITE}/board): what the circle is, how it meets, the rules, who it is for, how to join
 - [at.theboard, plain text](${SITE}/board.md): the same page as Markdown
+- [at.theboard one-to-one](${SITE}/board/one-to-one): one-to-one coaching at the whiteboard for business owners, men and women. Six months, fortnightly, online or in Milton Keynes.
+- [at.theboard one-to-one, plain text](${SITE}/board/one-to-one.md): the same page as Markdown
 
 ## TeamStrong, for leadership teams of five to ten
 
@@ -550,7 +589,7 @@ const home = read("index.html");
 const homeMd = toMarkdown(home.replace(/^[\s\S]*?<body[^>]*>/, ""));
 const llmsFull = `# Catalyst Growth Coaching and at.theboard, full text
 
-> The full text of ${SITE}/board, ${SITE}/, the three TeamStrong pages and the two LeadStrong pages for medical devices, as Markdown. See ${SITE}/llms.txt for the short version.
+> The full text of ${SITE}/board, ${SITE}/, the at.theboard one-to-one page, the three TeamStrong pages and the two LeadStrong pages for medical devices, as Markdown. See ${SITE}/llms.txt for the short version.
 
 ${boardMd.replace(/^<!-- canonical:.*\n\n/, "")}
 ---
@@ -560,7 +599,7 @@ ${boardMd.replace(/^<!-- canonical:.*\n\n/, "")}
 # Catalyst Growth Coaching, home page
 
 ${homeMd}
-${[...TEAMSTRONG_MD, ...MEDTECH_MD].map((t) => "\n---\n\n" + t.out).join("")}`;
+${[ONE_TO_ONE_MD, ...TEAMSTRONG_MD, ...MEDTECH_MD].map((t) => "\n---\n\n" + t.out).join("")}`;
 writeBoth("llms-full.txt", undash(llmsFull));
 
 // ---------------------------------------------------------------- sitemap

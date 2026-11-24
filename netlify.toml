@@ -136,6 +136,17 @@
   to = "/teamstrong-leaders.md"
   status = 200
 
+# at.theboard one-to-one and its Markdown copy. Mirrored in _redirects.
+[[redirects]]
+  from = "/board/one-to-one"
+  to = "/board-one-to-one.html"
+  status = 200
+
+[[redirects]]
+  from = "/board/one-to-one.md"
+  to = "/board-one-to-one.md"
+  status = 200
+
 # Security headers on every response. Mirrored in _headers.
 # No CSP yet: pages carry inline scripts and load Google Fonts, so a useful
 # policy needs per-page nonces or hashes first. HSTS deliberately omits
@@ -186,6 +197,24 @@
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
     Link = "<https://catalystgrowthcoach.co.uk/mdsdir>; rel=\"canonical\""
+
+[[headers]]
+  for = "/board/one-to-one.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board/one-to-one>; rel=\"canonical\""
+
+[[headers]]
+  for = "/board-one-to-one.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board/one-to-one>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/board-one-to-one.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board/one-to-one>; rel=\"canonical\""
 
 [[headers]]
   for = "/teamstrong.md"

@@ -16,6 +16,8 @@ You lead your own region, function or division, and you want every leader to gro
 
 [For leaders who run their own area](https://catalystgrowthcoach.co.uk/teamstrong/leaders)
 
+## In the room with leadership teams
+
 ## Start with a conversation
 
 Book a conversation: https://catalystgrowthcoach.co.uk/teamstrong#book

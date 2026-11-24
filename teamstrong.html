@@ -720,6 +720,26 @@
     .route-card { padding: 2.2rem 1.6rem; }
     .clips { grid-template-columns: 1fr; }
   }
+
+  /* Teams I have worked with: films with sound, each in its own shape */
+  .scene-teams { flex-direction: column; background: var(--bg-2); border-top: 1px solid var(--line); }
+  .scene-teams .folio { margin-bottom: 3rem; }
+  .tfilm { margin: 0; }
+  .tfilm video { width: 100%; display: block; object-fit: contain; background: var(--bg-3); }
+  .tfilm figcaption {
+    margin-top: 0.8rem; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash); line-height: 1.6;
+  }
+  .tfilm.feat { max-width: 480px; }
+  .tfilm.feat video, .tfilm.portrait video { aspect-ratio: 3/4; }
+  .tfilm.wide video { aspect-ratio: 4/3; }
+  /* 4:3 beside 3:4 at the same height: column widths in the ratio 4/3 to 3/4 */
+  .tpair { display: grid; grid-template-columns: 1.3333fr 0.75fr; gap: 1.2rem; margin-top: 3rem; max-width: 980px; align-items: start; }
+  .tfilm.small { max-width: 360px; margin-top: 3rem; }
+  .tfilm.small video { aspect-ratio: 2276/1280; object-fit: cover; }
+  @media (max-width: 700px) {
+    .tpair { grid-template-columns: 1fr; gap: 2.2rem; }
+    .tfilm.feat, .tfilm.small { max-width: none; }
+  }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -871,6 +891,18 @@
   <div class="route-cta"><a href="#book" class="button" data-book="main">Book a conversation</a></div>
 </section>
 
+<!-- ════ Teams I have worked with ════ -->
+<section class="scene scene-teams" id="teams">
+  <div class="folio"><span>Teams I have worked with</span></div>
+  <h2 class="pack-h2">In the room with leadership teams</h2>
+  <figure class="tfilm feat"><video controls playsinline preload="none" poster="/videos/teams/team-arrow-alignment-feedback-poster.jpg"><source src="/videos/teams/team-arrow-alignment-feedback.mp4" type="video/mp4"></video><figcaption>Arrow Planning, feedback after the Team Alignment session</figcaption></figure>
+  <div class="tpair">
+    <figure class="tfilm wide"><video controls playsinline preload="none" poster="/videos/teams/team-convatec-lisbon-poster.jpg"><source src="/videos/teams/team-convatec-lisbon.mp4" type="video/mp4"></video><figcaption>Convatec, Wound European Leadership Team, Lisbon</figcaption></figure>
+    <figure class="tfilm portrait"><video controls playsinline preload="none" poster="/videos/teams/team-convatec-growth-poster.jpg"><source src="/videos/teams/team-convatec-growth.mp4" type="video/mp4"></video><figcaption>Convatec, AWC Europe Leadership Team</figcaption></figure>
+  </div>
+  <figure class="tfilm small"><video class="living" muted loop playsinline preload="none" poster="/videos/teams/team-arrow-workshop-poster.jpg" aria-label="Arrow Planning team workshop"><source src="/videos/teams/team-arrow-workshop.mp4" type="video/mp4"></video><figcaption>Arrow Planning, team workshop</figcaption></figure>
+</section>
+
 <!-- ════ The way in ════ -->
 <section class="scene scene-book" id="book">
   <h2 class="pack-h2">Start with a conversation</h2>
@@ -936,6 +968,32 @@
     if (f) f.style.display = 'none';
     if (s) { s.style.display = 'block'; s.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
     ev('teamstrong_form_submit', { page: 'teamstrong' });
+  }
+})();
+</script>
+<script>
+(function () {
+  function ev(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+  // Films with sound: one at a time, and a GA4 event when one starts.
+  var films = document.querySelectorAll('main video[controls]');
+  films.forEach(function (v) {
+    v.addEventListener('play', function () {
+      films.forEach(function (o) { if (o !== v) o.pause(); });
+      var s = v.currentSrc || (v.querySelector('source') || {}).src || '';
+      ev('video_play', { page: 'teamstrong', file: s.split('/').pop() });
+    });
+  });
+  // The short workshop clip is a silent living photo. It loads only when it
+  // scrolls into view, so nothing downloads on first page load.
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var live = document.querySelector('video.living');
+  if (live && !still && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { var p = live.play(); if (p && p.catch) p.catch(function () {}); }
+        else live.pause();
+      });
+    }, { threshold: 0.4 }).observe(live);
   }
 })();
 </script>

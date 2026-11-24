@@ -25,3 +25,7 @@ http://www.catalystgrowthcoach.co.uk/*   https://catalystgrowthcoach.co.uk/:spla
 /teamstrong/leaders        /teamstrong-leaders.html   200
 /teamstrong/one-team.md    /teamstrong-one-team.md    200
 /teamstrong/leaders.md     /teamstrong-leaders.md     200
+
+# at.theboard one-to-one, served flat beside board.html like the TeamStrong pages.
+/board/one-to-one       /board-one-to-one.html  200
+/board/one-to-one.md    /board-one-to-one.md    200
