@@ -56,8 +56,6 @@ Online, with the whiteboard shared live on screen. If you are local to Milton Ke
 
 Short films of owners who have worked at the whiteboard with me. Tap to play with sound.
 
-## In their words
-
 ## Six things I commit to before we start
 
 ### Outcomes you can measure
@@ -113,8 +111,6 @@ For men who want to keep pushing after six months: a circle of five owner-manage
 ### Coaching your second in command
 
 Six sessions over three months with the person who could run things when you are not there. £1,800.
-
-[How it works](https://catalystgrowthcoach.co.uk/board#second-in-command)
 
 ### TeamStrong
 

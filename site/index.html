@@ -347,6 +347,12 @@
   .tiles-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;
   }
+  .tiles-grid.pair { grid-template-columns: repeat(2, 1fr); }
+  .tiles-grid.pair + .tiles-group { margin-top: 5vh; }
+  .tiles-group {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 2rem;
+  }
   .tile {
     display: flex; flex-direction: column; gap: 1.5rem;
     text-decoration: none; color: inherit;
@@ -504,6 +510,7 @@
     .proof-lines { grid-template-columns: 1fr; gap: 2rem; }
 
     .tiles-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .tiles-grid.pair { grid-template-columns: 1fr; }
     .tile .tile-image { aspect-ratio: 2/1; }
 
     .scene-invitation .clip-frame { height: 35vh; }
@@ -611,7 +618,7 @@
       <a href="#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
         <li><a href="/board">At the Board</a></li>
       </ul>
@@ -738,9 +745,10 @@
 <!-- SCENE 06, The Programmes -->
 <section class="scene scene-tiles" id="programmes">
   <div class="folio">05 · <span>The Programmes</span></div>
-  <h2>Three contexts. Same <em>practice</em>.</h2>
+  <h2>Two kinds of leader. Same <em>practice</em>.</h2>
 
-  <div class="tiles-grid">
+  <div class="tiles-group">For corporate leaders</div>
+  <div class="tiles-grid pair">
     <a class="tile" href="/leadstrong">
       <div class="tile-image">
         <img src="/images/img-1983.jpg" alt="Wall whiteboard session with a corporate leader" loading="lazy">
@@ -750,21 +758,33 @@
       <span class="tile-link">Learn more</span>
     </a>
 
-    <a class="tile" href="/buildstrong">
-      <div class="tile-image">
-        <img src="/images/img-1935.jpg" alt="Hospitality whiteboard session with a business owner" loading="lazy">
-      </div>
-      <h3>BuildStrong</h3>
-      <p class="tile-desc">For the owner whose every hard decision still stops at his desk.</p>
-      <span class="tile-link">Learn more</span>
-    </a>
-
     <a class="tile" href="/teamstrong">
       <div class="tile-image">
         <img src="/images/img-1981.jpg" alt="Two people working together at a wall whiteboard" loading="lazy">
       </div>
       <h3>TeamStrong</h3>
       <p class="tile-desc">For leadership teams of five to ten. One high impact day, or six months, at your venue or ours.</p>
+      <span class="tile-link">Learn more</span>
+    </a>
+  </div>
+
+  <div class="tiles-group">For business owners</div>
+  <div class="tiles-grid pair">
+    <a class="tile" href="/board/one-to-one">
+      <div class="tile-image">
+        <img src="/images/img-1935.jpg" alt="Hospitality whiteboard session with a business owner" loading="lazy">
+      </div>
+      <h3>at.theboard one-to-one</h3>
+      <p class="tile-desc">For an owner whose hard decisions still end up with them. Six months at the whiteboard, online or in Milton Keynes.</p>
+      <span class="tile-link">Learn more</span>
+    </a>
+
+    <a class="tile" href="/board">
+      <div class="tile-image">
+        <img src="/images/img-1991.jpg" alt="Two business owners walking a wooded path in Milton Keynes" loading="lazy">
+      </div>
+      <h3>at.theboard circles</h3>
+      <p class="tile-desc">A men&rsquo;s business group in Milton Keynes. Five owner-managers, twelve months.</p>
       <span class="tile-link">Learn more</span>
     </a>
   </div>
@@ -803,7 +823,7 @@
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
     <a href="/teamstrong">TeamStrong</a>
     <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
   </div>

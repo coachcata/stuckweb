@@ -21,6 +21,61 @@
 # force = true so the redirect wins even when a matching file exists in the
 # publish directory.
 
+# Retired 20 November 2026: BuildStrong, The Handover and the succession article. Mirrored in _redirects.
+[[redirects]]
+  from = "/buildstrong"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/buildstrong.html"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/buildstrong/"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-handover"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-handover.html"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-handover/"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hold-the-place"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hold-the-place.html"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hold-the-place/"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "https://www.catalystgrowthcoach.co.uk/*"
   to = "https://catalystgrowthcoach.co.uk/:splat"

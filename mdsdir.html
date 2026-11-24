@@ -394,7 +394,7 @@
   }
   .quote-card .attr .meta .prog { color: var(--cognac); }
 
-  /* ══ Shared programme components (LeadStrong, BuildStrong, TeamStrong): keep identical on all three ══ */
+  /* ══ Shared programme components (LeadStrong, TeamStrong and the medtech pages): keep identical ══ */
   .scene-prose { flex-direction: column; }
   section.scene[id] { scroll-margin-top: 5.5rem; }
   .scene-prose.alt, .scene-proof-block {
@@ -721,6 +721,19 @@
   @media (max-width: 1100px) { .terms-cards { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 900px) { .clips.three { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 600px) { .terms-cards, .clips.three { grid-template-columns: 1fr; } }
+
+  /* In the room: films with sound side by side at one height, then silent clips */
+  .tfilms { display: grid; grid-template-columns: 1.3333fr 0.75fr 0.75fr; gap: 1.2rem; align-items: start; }
+  .tfilm { margin: 0; }
+  .tfilm video { width: 100%; display: block; object-fit: contain; background: var(--bg-3); }
+  .tfilm.wide video { aspect-ratio: 4/3; }
+  .tfilm.tall video { aspect-ratio: 3/4; }
+  .tfilm figcaption, .clip figcaption { line-height: 1.6; }
+  .tfilm figcaption { margin-top: 0.8rem; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash); }
+  .clips.portrait { margin-top: 3rem; max-width: 760px; }
+  .clips.portrait .clip video { aspect-ratio: 9/16; }
+  @media (max-width: 900px) { .tfilms { grid-template-columns: 1fr 1fr; } .tfilm.wide { grid-column: 1 / -1; } }
+  @media (max-width: 600px) { .tfilms { grid-template-columns: 1fr; gap: 2.2rem; } .clips.portrait { grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem; } }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
@@ -845,7 +858,7 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
         <li><a href="/board">At the Board</a></li>
       </ul>
@@ -918,22 +931,23 @@
   NEWSLETTER -->
 </section>
 
-<!-- ════ In the room with your team ════
-     Held until the three Convatec clips are in /videos/teams/ and /site/videos/teams/.
-     To switch on, delete this comment's first and last lines (the ones with TEAM CLIPS).
-TEAM CLIPS
-<section class="scene scene-cards scene-prose alt">
+<!-- ════ In the room with your team ════ -->
+<section class="scene scene-cards scene-prose alt" id="teams">
   <div class="folio"><span>With leadership teams</span></div>
   <h2 class="pack-h2">When the work reaches your team</h2>
   <p class="pack-lead">Some of my work with directors goes on to include sessions with their own team of managers, so everyone around them thinks and decides in the same way. Here are some of those sessions.</p>
-  <div class="clips three">
-    <figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-1.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
-    <figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-2.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
-    <figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-3.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
+  <div class="tfilms">
+    <figure class="tfilm wide"><video controls playsinline preload="none" poster="/videos/teams/team-convatec-lisbon-poster.jpg"><source src="/videos/teams/team-convatec-lisbon.mp4" type="video/mp4"></video><figcaption>Convatec, Wound European Leadership Team, Lisbon</figcaption></figure>
+    <figure class="tfilm tall"><video controls playsinline preload="none" poster="/videos/teams/team-convatec-growth-poster.jpg"><source src="/videos/teams/team-convatec-growth.mp4" type="video/mp4"></video><figcaption>Convatec, AWC Europe Leadership Team</figcaption></figure>
+    <figure class="tfilm tall"><video controls playsinline preload="none" poster="/videos/teams/team-arrow-alignment-feedback-poster.jpg"><source src="/videos/teams/team-arrow-alignment-feedback.mp4" type="video/mp4"></video><figcaption>Arrow Planning, feedback after the Team Alignment session</figcaption></figure>
+  </div>
+  <div class="clips three portrait">
+    <figure class="clip"><video class="living" muted loop playsinline preload="none" poster="/videos/teams/team-convatec-presenting-1.jpg" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-1.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
+    <figure class="clip"><video class="living" muted loop playsinline preload="none" poster="/videos/teams/team-convatec-presenting-2.jpg" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-2.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
+    <figure class="clip"><video class="living" muted loop playsinline preload="none" poster="/videos/teams/team-convatec-presenting-3.jpg" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-3.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
   </div>
   <a class="text-link" href="/teamstrong" data-link="teamstrong">How team sessions work &rarr;</a>
 </section>
-TEAM CLIPS -->
 
 <!-- ════ About John ════ -->
 <section class="scene scene-prose alt">
@@ -989,7 +1003,7 @@ TEAM CLIPS -->
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
     <a href="/teamstrong">TeamStrong</a>
     <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
   </div>
@@ -1022,6 +1036,22 @@ TEAM CLIPS -->
       ev('medtech_director_video_play', { page: 'mdsdir', video: s ? s.getAttribute('src') : '' });
     }, { once: true });
   });
+  // Films with sound: one at a time.
+  var films = document.querySelectorAll('main video[controls]');
+  films.forEach(function (v) {
+    v.addEventListener('play', function () { films.forEach(function (o) { if (o !== v) o.pause(); }); });
+  });
+  // Silent clips load and play only while on screen.
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!still && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { var p = e.target.play(); if (p && p.catch) p.catch(function () {}); }
+        else e.target.pause();
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('video.living').forEach(function (v) { io.observe(v); });
+  }
   // Netlify sends a successful submission back to this page with ?sent=1.
   if (location.search.indexOf('sent=1') > -1) {
     var f = document.querySelector('form.form'), s = document.getElementById('sent');

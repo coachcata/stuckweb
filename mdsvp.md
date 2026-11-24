@@ -34,6 +34,10 @@ I work with directors and vice presidents across three of the sector’s leading
 
 I have also written at length about the move from vice president to the C-suite in my LinkedIn newsletter, so you can read how I think before we ever meet.
 
+## When the work reaches your leadership team
+
+Much of my work with vice presidents goes on to include sessions with their own leadership team, so the directors around them think and decide in the same way. Here are some of those sessions.
+
 I am John Obidipe, an executive coach with more than fifteen years in organisational consulting and coaching. I am Gallup-certified in CliftonStrengths and a FITT16 practitioner, and I use both to show you how you lead at your best and where pressure pulls you away from it.
 
 ### Six months, a fixed end date.
