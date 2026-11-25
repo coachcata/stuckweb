@@ -110,7 +110,7 @@ For men who want to keep pushing after six months: a circle of five owner-manage
 
 ### Coaching your second in command
 
-Six sessions over three months with the person who could run things when you are not there. £1,800.
+For the person who could keep the business running when you are not there, such as an operations manager or a trusted senior team member. Six one-to-one sessions with me over three months, so more of the decisions that land on your desk can stop with them. £1,800.
 
 ### TeamStrong
 

@@ -22,9 +22,11 @@ Ask a leadership team how they work together and you will hear how they would li
 
 A single, high impact day at your venue or ours, in the setting you choose. Each leads to the same place: a clear, shared picture of how you really work as a team, and two or three changes you agree before you leave.
 
-### The construction site.
+### The immersive mini construction site.
 
-A working miniature construction site, six metres by three, brought to your venue. Your team operates the machines to complete a set task together. Within minutes the patterns show themselves: who communicates, who plans, who is strongest at which job, and what happens when the plan meets the ground.
+A working construction site in miniature, six metres by three, with real working machines, brought to your venue. Your team operates the machines to complete a set task together. Within minutes the patterns show themselves: who communicates, who plans, who is strongest at which job, and what happens when the plan meets the ground.
+
+Site footage coming soon.
 
 ### The board.
 

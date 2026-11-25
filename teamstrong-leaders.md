@@ -28,9 +28,11 @@ It is hard to see how you lead from inside your own area. So we step outside it 
 
 A single, high impact day at your venue or ours, in the setting you choose. Each leader leaves with a clear picture of how they show up, and two or three changes to take back to their own team.
 
-### The construction site.
+### The immersive mini construction site.
 
-A working miniature construction site, six metres by three, brought to your venue. You operate the machines to complete a set task together, and each leader’s habits show up within minutes: how they plan, how they communicate, when they step in and when they let go.
+A working construction site in miniature, six metres by three, with real working machines, brought to your venue. You operate the machines to complete a set task together, and each leader’s habits show up within minutes: how they plan, how they communicate, when they step in and when they let go.
+
+Site footage coming soon.
 
 ### The board.
 
