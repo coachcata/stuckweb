@@ -512,10 +512,34 @@ footer .wm{justify-content:center}
 .sm-line{font-size:.82rem;margin-top:1.4rem;opacity:.85}
 footer .wm img{height:34px;width:auto}
 @media(max-width:640px){footer .wm img{height:auto;width:100%;max-width:300px}}
+
+/* Site menu inside the at.theboard bar */
+.gn{display:flex;gap:1.6rem;list-style:none;align-items:center;margin:0}
+.gn a{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:#5A5752;text-decoration:none;font-weight:600;transition:color .2s}
+.gn a:hover{color:#A8774E}
+.gn .dd{position:relative}
+.gn .dd>a::after{content:'\25BE';margin-left:.35rem;font-size:.8em;color:#A8774E}
+.gn .dd ul{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);list-style:none;margin:0;padding:.7rem 0;min-width:220px;background:rgba(242,240,236,.98);border:1px solid rgba(12,12,14,.12);border-radius:2px;box-shadow:0 10px 30px rgba(12,12,14,.08);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.gn .dd:hover ul,.gn .dd:focus-within ul{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+.gn .dd ul a{display:block;padding:.55rem 1.3rem;letter-spacing:.14em;white-space:nowrap}
+.gn .dd ul a:hover{background:rgba(168,119,78,.07)}
+@media(max-width:1180px){.navr .st{display:none}}
+@media(max-width:900px){.gn .hide-sm{display:none}.gn .dd>a::after{display:none}.gn .dd ul{display:none}}
+@media(max-width:420px){.gn{gap:1rem}.gn a{letter-spacing:.1em}}
 </style></head><body>
 
 <nav><div class="wrap"><a href="/board" class="wm"><img class="lk" src="/images/logo-at-theboard-lockup-dark.png" alt="at.theboard" width="304" height="19"><img class="mk" src="/images/logo-at-theboard-mark-dark-88.png" alt="at.theboard" width="40" height="40"></a>
-<div class="navr"><div class="st">Selecting the first five</div><a href="#book" class="navcta" data-book="nav">Book the free hour</a></div></div></nav>
+<div class="navr"><ul class="gn">
+<li class="hide-sm"><a href="/about">About</a></li>
+<li class="dd"><a href="/#programmes">Programmes</a><ul>
+<li><a href="/leadstrong">LeadStrong</a></li>
+<li><a href="/teamstrong">TeamStrong</a></li>
+<li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+<li><a href="/board">at.theboard circles</a></li>
+</ul></li>
+<li class="hide-sm"><a href="/in-practice">In Practice</a></li>
+</ul>
+<div class="st">Selecting the first five</div><a href="#book" class="navcta" data-book="nav">Book the free hour</a></div></div></nav>
 
 <div class="hero"><div class="bg"><video id="hero-loop" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div><div class="veil"></div><div class="wrap">
 <div>

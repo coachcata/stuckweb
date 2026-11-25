@@ -28,19 +28,19 @@ It is hard to see how you lead from inside your own area. So we step outside it 
 
 A single, high impact day at your venue or ours, in the setting you choose. Each leader leaves with a clear picture of how they show up, and two or three changes to take back to their own team.
 
-### The immersive mini construction site.
+### The immersive building experience.
 
-A working construction site in miniature, six metres by three, with real working machines, brought to your venue. You operate the machines to complete a set task together, and each leader’s habits show up within minutes: how they plan, how they communicate, when they step in and when they let go.
+A team building experience that every leader takes part in. On the immersive mini construction site, six metres by three and brought to your venue, you plan and build together through competitions and activities. Each leader’s habits show up quickly, and we talk about how you communicate, how you plan, who takes ownership and how you work with others.
 
 Site footage coming soon.
 
 ### The board.
 
-Each leader brings a live challenge from their own area, and we work it through at the whiteboard with the rest of the group as a second set of minds. Everyone learns from everyone else’s problem.
+Each leader brings a live problem from their own area, and we harness the creativity and problem solving of the whole group, live at the whiteboard. Problems that have been running for a while get solved, and I guide each leader to set out a plan to put the solution into action and test it.
 
 ### The strengths lens.
 
-Everyone completes FITT16 and CliftonStrengths beforehand. On the day each leader sees why they lead the way they do, and what that means for the people who report to them.
+When cohesion and collaboration are the focus, you need to go beyond skin deep. Everyone completes FITT16 and CliftonStrengths beforehand, so each leader understands the others at a deep level, and sees what their own way of leading means for the people who report to them.
 
 From £3,500 plus VAT for a leadership team, priced on numbers. One price, with everything included.
 
@@ -48,18 +48,18 @@ From £3,500 plus VAT for a leadership team, priced on numbers. One price, with 
 
 One high impact session a month, each in a different setting, so the growth keeps moving and has time to show up in each leader’s own team. The mix is chosen for your leaders. A typical shape:
 
-- Month one, the construction site.How each of you leads today.
+- Month one, the immersive building experience.How each of you leads today.
 - Month two, the strengths lens.Why you lead that way.
 - Months three to five, the board.Real challenges from each area, with actions and dates checked each month.
-- Month six, back to the construction site.The same task, and a clear view of how each of you has changed.
+- Month six, back to the immersive building experience.The same task, and a clear view of how each of you has changed.
 
 Leaders can have their own one-to-one sessions alongside where it helps. Price agreed with each team.
 
 ## Questions
 
-### What space does the construction site need?
+### What space does the immersive building experience need?
 
-Two areas side by side: one for the construction site, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.
+Two areas side by side: one for the immersive building experience, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.
 
 ### What if someone would rather not drive the machines?
 
@@ -67,7 +67,7 @@ That is fine. There is plenty to do without driving, and planning the task is of
 
 ### What is included in the price?
 
-Everything. The Day is one price for the whole package, construction site included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.
+Everything. The Day is one price for the whole package, immersive building experience included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.
 
 ### Our leaders do not work together day to day. Will this still work?
 
