@@ -563,7 +563,6 @@ A circle is the five men who meet together for the year.
 - [LeadStrong](${SITE}/leadstrong): six months of weekly Whiteboard Sessions for a corporate leader
 - LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Six months, weekly, £7,200.
 - Plain text: [for vice presidents](${SITE}/mdsvp.md), [for sales directors](${SITE}/mdsdir.md)
-- [The Growth Audit](${SITE}/growth-audit): a three-week audit for owner-managed firms
 - [Leadership Hub](https://learn.catalystgrowthcoach.co.uk/): the Fluency Series in podcast, slides and infographic form
 
 ## Key facts
