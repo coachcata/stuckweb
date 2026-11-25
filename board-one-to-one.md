@@ -8,7 +8,7 @@ Six months, one owner, one whiteboard.
 
 Several decisions settled in every session, each with an action and a date, and every one checked next time.
 
-One-to-one coaching for business owners, men and women. Online or in Milton Keynes, £600 a month, starting with a free hour with me, John Obidipe.
+One-to-one coaching for business owners, men and women. Online or in Milton Keynes, £600 a month, starting with a free Whiteboard Session with me, John Obidipe.
 
 An hour on something real in your business. No pitch at the end.
 
@@ -28,7 +28,7 @@ For owners of businesses with roughly 5 to 25 staff and £500k to £5m turnover,
 
 ### “I am good at what I do. I am less sure I am good at running the thing I built.”
 
-> If two or more of those sound like something you have said to yourself late at night, the free hour is worth taking.
+> If two or more of those sound like something you have said to yourself late at night, the free Whiteboard Session is worth taking.
 
 ## Out of your head and onto the whiteboard
 
@@ -96,9 +96,9 @@ One hour is enough to know whether this is for you.
 - Stopping early: Stop at three months and pay £1,800
 - Included: CliftonStrengths assessment and debrief at the start
 - Who it is for: Business owners, men and women
-- Way in: The free hour at the whiteboard, with no pitch at the end
+- Way in: A free Whiteboard Session, with no pitch at the end
 
-If after the free hour this is not the right fit, I will say so and point you somewhere better.
+If after the Whiteboard Session this is not the right fit, I will say so and point you somewhere better.
 
 ## Where the one-to-one can lead
 
@@ -158,7 +158,7 @@ Yes, if you are a man and a place suits you. Men who apply have a session at the
 
 ## Bring one real thing to the whiteboard
 
-The free hour is exactly what it sounds like.
+The free Whiteboard Session is exactly what it sounds like.
 
 You bring whatever is pressing in your business, we work it through at the whiteboard, and you leave with your next step written down. If we both think there is more to do, we talk about the six months. If not, you still have the hour.
 
@@ -174,4 +174,4 @@ We stay with it until it has a shape and something you can act on Monday.
 
 Free whether you carry on or not. No follow-up sequence.
 
-Book the free hour: https://catalystgrowthcoach.co.uk/board/one-to-one#book
+Book a Whiteboard Session: https://catalystgrowthcoach.co.uk/board/one-to-one#book

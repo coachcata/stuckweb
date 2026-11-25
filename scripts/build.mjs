@@ -475,7 +475,7 @@ function boardMarkdown() {
     toMarkdown(section(board, "faq")),
     "## Location\n\n" + text(para(board, "location")),
     "## How to join\n\n" + toMarkdown(section(board, "join")).replace(/^## .*\n\n/, "") +
-      `\n\nBook the free hour: ${SITE}/board#book`,
+      `\n\nBook a Whiteboard Session: ${SITE}/board#book`,
     `Page last reviewed ${longDate(boardReviewed)}`,
   ];
   if (entity.confirmed.menOnly) parts.splice(parts.length - 3, 0, "## Why is it men only?\n\n" + entity.confirmed.menOnly);
@@ -508,11 +508,11 @@ function writeMdAs([file, path, md], cta) {
   return { path, out };
 }
 function writeMd([file, path, md]) {
-  const out = undash(pageMarkdown(file, path, "Book a free hour"));
+  const out = undash(pageMarkdown(file, path, "Book a Whiteboard Session"));
   writeBoth(md, out);
   return { path, out };
 }
-const ONE_TO_ONE_MD = writeMdAs(["board-one-to-one.html", "/board/one-to-one", "board-one-to-one.md"], "Book the free hour");
+const ONE_TO_ONE_MD = writeMdAs(["board-one-to-one.html", "/board/one-to-one", "board-one-to-one.md"], "Book a Whiteboard Session");
 const MEDTECH_MD = [
   ["mdsvp.html", "/mdsvp", "mdsvp.md"],
   ["mdsdir.html", "/mdsdir", "mdsdir.md"],
@@ -533,7 +533,7 @@ const facts = [
   "- Location: Milton Keynes, England. In-person sessions at the Shire Retreat; online between sessions.",
   "- at.theboard circle: five male owner-managers, twelve months, two sessions a month, every man on the whiteboard every month.",
   "- Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.",
-  "- Way in: one free hour at the whiteboard, open to anyone.",
+  "- Way in: one free Whiteboard Session, open to anyone.",
 ];
 facts.push("- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Six months, weekly, £7,200.");
 facts.push("- TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.");
@@ -562,7 +562,7 @@ A circle is the five men who meet together for the year.
 
 ## Catalyst Growth Coaching
 
-- [Home](${SITE}/): the practice and the free hour at the whiteboard
+- [Home](${SITE}/): the practice and the free Whiteboard Session
 - [LeadStrong](${SITE}/leadstrong): six months of weekly Whiteboard Sessions for a corporate leader
 - LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Six months, weekly, £7,200.
 - Plain text: [for vice presidents](${SITE}/mdsvp.md), [for sales directors](${SITE}/mdsdir.md)

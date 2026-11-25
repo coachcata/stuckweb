@@ -26,7 +26,7 @@ You want to walk into the VP role already leading at that level, with a team of 
 
 Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with a decision, an action and a date. At the next session we check every one, so nothing slips.
 
-I ask questions first, because the answer is usually already in your thinking and the whiteboard lets you see it. When it helps, I give you my honest view as well. Sessions run online with the whiteboard shared live on screen, or in person.
+I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Sessions run online with the whiteboard shared live on screen, or in person.
 
 ## Senior leaders at Convatec, Urgo and Becton Dickinson
 
@@ -58,8 +58,8 @@ What you bring stays between us, including when your company is paying.
 
 The price. Six months, a session a week, about 24 sessions in all, for £7,200. If you would rather stop at the halfway point, three months costs £3,600. Many directors have this funded by their company, and I am happy to speak with your sponsor or L&D team.
 
-## One free hour at the whiteboard
+## One free Whiteboard Session
 
 Bring whatever is most live for you right now. We will work on it properly for an hour, and at the end you will know whether working together makes sense. There is no sales conversation and no obligation.
 
-Book a free hour: https://catalystgrowthcoach.co.uk/mdsdir#book
+Book a Whiteboard Session: https://catalystgrowthcoach.co.uk/mdsdir#book

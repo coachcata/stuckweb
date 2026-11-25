@@ -611,7 +611,7 @@
   .vfilm { margin: 0; }
   .vfilm video { width: 100%; aspect-ratio: 16/9; object-fit: contain; display: block; background: #000; }
   .vfilm figcaption { margin-top: 0.8rem; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash); line-height: 1.6; }
-  .parts { display: flex; gap: 1.6rem; margin-top: 0.7rem; }
+  .parts { display: flex; flex-wrap: wrap; gap: 0.8rem 1.6rem; margin-top: 0.7rem; }
   .parts button {
     background: none; border: 0; padding: 0 0 0.2rem; cursor: pointer; font-family: var(--font-b);
     font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;
@@ -698,7 +698,7 @@
 <section class="scene scene-feature-hero">
   <div class="feature-grid">
     <div class="feature-text">
-      <div class="eyebrow">A feature for <em>Directors, VPs, and Executives</em></div>
+      <div class="eyebrow">For <em>Directors, VPs, and Executives</em></div>
       <h1>LeadStrong.</h1>
       <p class="lede">For the corporate leader carrying decisions that nobody else in your week can help you think through.</p>
       <p class="pack-signpost">Leading in a medical device company? Read the page for <a href="/mdsvp">vice presidents</a> or for <a href="/mdsdir">sales directors</a>.</p>
@@ -765,7 +765,7 @@
   <figure class="vfilm">
     <video id="mark-player" controls playsinline preload="none" poster="/videos/clients/mark-schmull-part-1-poster.jpg"><source src="/videos/clients/mark-schmull-part-1.mp4" type="video/mp4"></video>
     <figcaption>Mark Schmull, Managing Director, Arrow Planning</figcaption>
-    <div class="parts"><button type="button" data-part="mark-schmull-part-2" aria-pressed="false">Part 2</button><button type="button" data-part="mark-schmull-part-3" aria-pressed="false">Part 3</button></div>
+    <div class="parts"><button type="button" data-part="mark-schmull-part-1" aria-pressed="true">Mark Schmull part one</button><button type="button" data-part="mark-schmull-part-2" aria-pressed="false">Mark Schmull part two</button><button type="button" data-part="mark-schmull-part-3" aria-pressed="false">Mark Schmull part three</button></div>
   </figure>
   <h2 class="films-h next">Clients I have worked with</h2>
   <div class="vrow">
@@ -942,7 +942,7 @@
       ev('video_play', { page: 'leadstrong', file: s.split('/').pop() });
     });
   });
-  // Mark's Part 2 and Part 3 play in the featured player.
+  // Mark's three parts play in the featured player.
   var mark = document.getElementById('mark-player');
   document.querySelectorAll('.parts button').forEach(function (b) {
     b.addEventListener('click', function () {

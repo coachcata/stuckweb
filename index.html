@@ -197,12 +197,17 @@
     color: var(--cognac); font-weight: 600;
   }
   .scene-premise-clip .orient-line {
-    padding: 0 6vw 4vh;
+    margin: 0; padding: 0 6vw 0.8rem;
     max-width: 62ch;
     font-family: var(--font-b); font-weight: 400;
     font-size: clamp(0.92rem, 1.5vw, 1.05rem);
     line-height: 1.55; letter-spacing: 0.01em;
     color: var(--stone);
+  }
+  .scene-premise-clip .orient-sub {
+    padding: 0 6vw 4vh; max-width: 62ch;
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ash);
   }
   .scene-premise-clip .clip-frame {
     position: relative; width: 100%; height: 75vh;
@@ -385,6 +390,10 @@
     font-family: var(--font-d); font-style: italic; font-weight: 300;
     font-size: 1.05rem; line-height: 1.5; color: var(--stone);
     max-width: 28ch;
+  }
+  .tile .tile-price {
+    margin-top: 0.7rem; font-size: 0.72rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--cognac);
   }
   .tile .tile-link {
     margin-top: auto; padding-top: 1rem;
@@ -637,7 +646,8 @@
 <!-- ════ SCENE 01, The Premise ════ -->
 <section class="scene scene-premise-clip">
   <div class="top-label">Catalyst Growth Coaching · The Practice</div>
-  <p class="orient-line">Strategic thinking, out loud, at a whiteboard. Another mind in the room with you. For senior leaders.</p>
+  <h1 class="orient-line">Strategic thinking, out loud, at a whiteboard. Another mind in the room with you. For senior leaders.</h1>
+  <p class="orient-sub">Executive coaching for senior leaders in London and Milton Keynes.</p>
 
   <div class="clip-frame">
     <video autoplay muted loop playsinline preload="metadata" aria-label="John writing the first word on the whiteboard">
@@ -763,6 +773,7 @@
       </div>
       <h3>LeadStrong</h3>
       <p class="tile-desc">For directors, VPs, and executives navigating the corporate altitude.</p>
+      <p class="tile-price">£7,200 for six months</p>
       <span class="tile-link">Learn more</span>
     </a>
 
@@ -772,6 +783,7 @@
       </div>
       <h3>TeamStrong</h3>
       <p class="tile-desc">For leadership teams of five to ten. One high impact day, or six months, at your venue or ours.</p>
+      <p class="tile-price">From £3,500 plus VAT</p>
       <span class="tile-link">Learn more</span>
     </a>
   </div>
@@ -784,6 +796,7 @@
       </div>
       <h3>at.theboard one-to-one</h3>
       <p class="tile-desc">For an owner whose hard decisions still end up with them. Six months at the whiteboard, online or in Milton Keynes.</p>
+      <p class="tile-price">£600 a month</p>
       <span class="tile-link">Learn more</span>
     </a>
 
@@ -793,6 +806,7 @@
       </div>
       <h3>at.theboard circles</h3>
       <p class="tile-desc">A men&rsquo;s business group in Milton Keynes. Five owner-managers, twelve months.</p>
+      <p class="tile-price">£550 a month</p>
       <span class="tile-link">Learn more</span>
     </a>
   </div>
@@ -810,7 +824,7 @@
     <div class="folio">06 · <span>The Invitation</span></div>
     <p class="lede"><em>The fastest way to know if this is for you is to be at the board for an hour.</em></p>
     <p class="sub"><em>You'll know whether the practice fits you.</em></p>
-    <a href="/contact" class="button">Book a Whiteboard Session</a>
+    <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" class="button">Book a Whiteboard Session</a>
     <p class="book-note">One hour. No charge, nothing to prepare.</p>
 
     <div class="practicals">
@@ -818,7 +832,7 @@
       <div><span>Where</span>Online with the board shared live on screen, or in person in central London or Milton Keynes.</div>
       <div><span>What to bring</span>Whatever is actually live for you. Nothing to prepare, no forms, no pre-reading.</div>
       <div><span>What it costs</span>The first hour is free, and there is no pitch at the end of it.</div>
-      <div><span>For owners</span><a href="/board">Men&rsquo;s business group in Milton Keynes</a>: five owner-managers, twelve months, one whiteboard. <a href="/business-groups-milton-keynes">How it compares with the other options in Milton Keynes</a>.</div>
+      <div><span>For owners</span><a href="/board">at.theboard circles</a>, the men&rsquo;s business group in Milton Keynes: five owner-managers, twelve months, one whiteboard. <a href="/business-groups-milton-keynes">How it compares with the other options in Milton Keynes</a>.</div>
     </div>
   </div>
 </section>
