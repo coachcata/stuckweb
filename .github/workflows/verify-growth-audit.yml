@@ -48,7 +48,7 @@ jobs:
           echo -n "canonical URL: ";       grep -c 'rel="canonical" href="https://catalystgrowthcoach.co.uk/growth-audit"' /tmp/page.html
           echo -n "GA4 tag: ";             grep -c 'G-2Z17HSYFCV' /tmp/page.html
           echo "== No form on this page any more; it must convert by link =="
-          echo -n "link to /the-handover: "; grep -c 'href="/the-handover"' /tmp/page.html
+          echo -n "link to /board/one-to-one: "; grep -c 'href="/board/one-to-one#book"' /tmp/page.html
           echo -n "link to /contact: ";      grep -c 'href="/contact"' /tmp/page.html
           echo "== Hero must have no video =="
           ! sed -n '/<header>/,/<\/header>/p' /tmp/page.html | grep -q "<video"
@@ -65,6 +65,6 @@ jobs:
           set -e
           BASE="${{ github.event.inputs.base_url || 'https://catalystgrowthcoach.co.uk' }}"
           CURL="curl -sSL --connect-timeout 10 --max-time 40"
-          for p in /the-handover /contact; do
+          for p in /board/one-to-one /contact; do
             $CURL -o /dev/null -w "$p -> %{http_code}\n" "$BASE$p"
           done

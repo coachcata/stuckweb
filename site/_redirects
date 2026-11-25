@@ -1,3 +1,14 @@
+# Retired 20 November 2026: BuildStrong, The Handover and the succession article.
+/buildstrong                /board/one-to-one  301!
+/buildstrong.html           /board/one-to-one  301!
+/buildstrong/               /board/one-to-one  301!
+/the-handover               /board/one-to-one  301!
+/the-handover.html          /board/one-to-one  301!
+/the-handover/              /board/one-to-one  301!
+/hold-the-place             /board/one-to-one  301!
+/hold-the-place.html        /board/one-to-one  301!
+/hold-the-place/            /board/one-to-one  301!
+
 https://www.catalystgrowthcoach.co.uk/*  https://catalystgrowthcoach.co.uk/:splat  301!
 http://www.catalystgrowthcoach.co.uk/*   https://catalystgrowthcoach.co.uk/:splat  301!
 
@@ -25,3 +36,7 @@ http://www.catalystgrowthcoach.co.uk/*   https://catalystgrowthcoach.co.uk/:spla
 /teamstrong/leaders        /teamstrong-leaders.html   200
 /teamstrong/one-team.md    /teamstrong-one-team.md    200
 /teamstrong/leaders.md     /teamstrong-leaders.md     200
+
+# at.theboard one-to-one, served flat beside board.html like the TeamStrong pages.
+/board/one-to-one       /board-one-to-one.html  200
+/board/one-to-one.md    /board-one-to-one.md    200

@@ -95,7 +95,8 @@
   nav.top .has-dropdown:focus-within .dropdown {
     opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
   }
-  nav.top .dropdown a {
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
     display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
     letter-spacing: 0.18em; color: var(--stone);
   }
@@ -336,9 +337,9 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
-        <li><a href="/board">At the Board</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
       </ul>
     </li>
     <li><a href="/in-practice">In Practice</a></li>
@@ -432,7 +433,7 @@
   <span class="eyebrow">06 · The Invitation</span>
   <p class="lede"><em>The hour is the point. Not a step towards something else.</em></p>
   <p class="invite-body">Pick a time that suits you. Bring whatever is actually on your mind, including if it is not fully formed yet. That is usually a better starting point than a tidy question.</p>
-  <a href="https://bit.ly/45HaqvF" class="button">Book Your First Session</a>
+  <a href="/contact" class="button">Book Your First Session</a>
   <p class="under-button">Two hours, no charge, nothing to prepare. Sessions run online with the board shared live on screen, or in person in central London and Milton Keynes.</p>
 </section>
 
@@ -444,9 +445,9 @@
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
     <a href="/teamstrong">TeamStrong</a>
-    <a href="/board">At the Board</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
   </div>
   <div class="col">
     <h4>Read</h4>

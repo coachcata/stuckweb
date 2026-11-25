@@ -95,7 +95,8 @@
   nav.top .has-dropdown:focus-within .dropdown {
     opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
   }
-  nav.top .dropdown a {
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
     display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
     letter-spacing: 0.18em; color: var(--stone);
   }
@@ -397,7 +398,18 @@
   }
 
   .book-note{margin-top:1.1rem;font-family:var(--font-d);font-style:italic;font-weight:300;font-size:1rem;line-height:1.6;color:var(--stone);}
-  </style>
+  
+  /* Strategy walks: films with sound, one at a time */
+  .scene-walks { flex-direction: column; }
+  .scene-walks .label { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem; }
+  .scene-walks h2 { font-family: var(--font-d); font-weight: 300; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem; }
+  .scene-walks .walks-lead { font-family: var(--font-d); font-weight: 300; font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.6; color: var(--stone); max-width: 58ch; margin-bottom: 3rem; }
+  .walks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+  .walks figure { margin: 0; }
+  .walks video { width: 100%; aspect-ratio: 16/9; object-fit: contain; display: block; background: #000; }
+  .walks figcaption { margin-top: 0.8rem; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash); line-height: 1.6; }
+  @media (max-width: 900px) { .walks { grid-template-columns: 1fr; gap: 2rem; } }
+</style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -444,9 +456,9 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
-        <li><a href="/board">At the Board</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
       </ul>
     </li>
     <li><a href="/in-practice">In Practice</a></li>
@@ -543,7 +555,7 @@
     <article class="person-card">
       <div class="person-name">Tim</div>
       <div class="person-role">AVP · Wisconsin</div>
-      <p class="person-excerpt">Today I'm celebrating another past client: Tim Cook, now an AVP in Wisconsin.<br><br>When I first met Tim, he struck me as quietly pensive, incredibly intelligent, observant, and astute. The kind of person who's listening and thinking more than he's saying…</p>
+      <p class="person-excerpt">Today I'm celebrating another past client: Tim C., now an AVP in Wisconsin.<br><br>When I first met Tim, he struck me as quietly pensive, incredibly intelligent, observant, and astute. The kind of person who's listening and thinking more than he's saying…</p>
       <a class="person-link" href="https://www.linkedin.com/posts/johnobi_today-im-celebrating-another-past-client-activity-7462385307611488256-7kmP" target="_blank" rel="noopener">Read on LinkedIn →</a>
     </article>
 
@@ -565,12 +577,24 @@
   <p class="follow-link"><a href="https://www.linkedin.com/in/johnobidipe" target="_blank" rel="noopener">Follow the full series on LinkedIn →</a></p>
 </section>
 
+<!-- ════ Strategy walks ════ -->
+<section class="scene scene-walks" id="walks">
+  <div class="label">On a strategy walk</div>
+  <h2>Not every session happens at the board.</h2>
+  <p class="walks-lead">Some of the thinking is done side by side, walking. Three of the owners I work with, on a strategy walk.</p>
+  <div class="walks">
+    <figure><video controls playsinline preload="none" poster="/videos/clients/rhys-johnson-walk-poster.jpg"><source src="/videos/clients/rhys-johnson-walk.mp4" type="video/mp4"></video><figcaption>Rhys Johnson, recruitment co-owner</figcaption></figure>
+    <figure><video controls playsinline preload="none" poster="/videos/clients/dan-keyte-strategy-walk-poster.jpg"><source src="/videos/clients/dan-keyte-strategy-walk.mp4" type="video/mp4"></video><figcaption>Dan Keyte, Inflo Media</figcaption></figure>
+    <figure><video controls playsinline preload="none" poster="/videos/clients/joe-peel-strategy-walk-poster.jpg"><source src="/videos/clients/joe-peel-strategy-walk.mp4" type="video/mp4"></video><figcaption>Joe Peel, Software Dream</figcaption></figure>
+  </div>
+</section>
+
 <!-- ════ SCENE 04, Close ════ -->
 <section class="scene scene-close">
-  <div class="folio">05 · <span>Next</span></div>
+  <div class="folio"><span>Next</span></div>
   <p class="lede"><em>If something in here pointed at a question you've been carrying, the fastest way to know if the practice fits is to be at the board for an hour.</em></p>
   <p class="sub"><em>You'll know whether the practice fits you.</em></p>
-  <a href="/contact" class="button">Book a Whiteboard Session</a>
+  <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" class="button">Book a Whiteboard Session</a>
   <p class="book-note">One hour. No charge, nothing to prepare.</p>
 </section>
 
@@ -650,9 +674,9 @@
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
     <a href="/teamstrong">TeamStrong</a>
-    <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
   </div>
   <div class="col">
     <h4>Read</h4>
@@ -732,5 +756,18 @@
   })();
 </script>
 <script src="/main.js"></script>
+<script>
+(function () {
+  function ev(name, params) { if (typeof gtag === 'function') gtag('event', name, params || {}); }
+  var films = document.querySelectorAll('video[controls]');
+  films.forEach(function (v) {
+    v.addEventListener('play', function () {
+      films.forEach(function (o) { if (o !== v) o.pause(); });
+      var s = v.currentSrc || (v.querySelector('source') || {}).src || '';
+      ev('video_play', { page: 'in-practice', file: s.split('/').pop() });
+    });
+  });
+})();
+</script>
 </body>
 </html>

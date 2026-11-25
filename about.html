@@ -99,7 +99,8 @@
   nav.top .has-dropdown:focus-within .dropdown {
     opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
   }
-  nav.top .dropdown a {
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
     display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
     letter-spacing: 0.18em; color: var(--stone);
   }
@@ -441,9 +442,9 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
-        <li><a href="/board">At the Board</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
       </ul>
     </li>
     <li><a href="/in-practice">In Practice</a></li>
@@ -527,8 +528,8 @@
     </div>
     <div class="cred">
       <span class="num">iv.</span>
-      <h3>Multi-year retained relationships</h3>
-      <p class="detail">Clients across industries and countries. See selected clients below.</p>
+      <h3>Clients who come back</h3>
+      <p class="detail">Clients across industries and countries, many continuing after the first piece of work. See selected clients below.</p>
     </div>
   </div>
 </section>
@@ -568,7 +569,7 @@
       <div class="body">
         <p><em>i. Mixed questions, asked directly.</em><br>Reflective when the moment calls for it. Practical when there's a real problem to solve. Obvious when no one else is willing to ask. The work is done in the room, through to a solution. Not in questions you take away.</p>
         <p><em>ii. I'll tell you when I think you're the problem.</em><br>Not bluntly. Not unkindly. But I won't pretend not to see it, because that's the most expensive thing a coach can do.</p>
-        <p><em>iii. Long-term by default.</em><br>The clients who get the most from this work tend to stay for years. Not because they're stuck. Because the thinking partnership compounds.</p>
+        <p><em>iii. A fixed term, then your choice.</em><br>Each client stays for the fixed term of the work, and many choose to continue afterwards. Not because they're stuck. Because the thinking partnership compounds.</p>
       </div>
     </div>
   </div>
@@ -605,7 +606,7 @@
 <!-- Closing CTA -->
 <section class="closing-cta">
   <p>Ready to be at the board?</p>
-  <a href="/contact" class="button">Book a Whiteboard Session</a>
+  <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" class="button">Book a Whiteboard Session</a>
   <p class="book-note">One hour. No charge, nothing to prepare.</p>
 </section>
 
@@ -617,9 +618,9 @@
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
     <a href="/teamstrong">TeamStrong</a>
-    <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
   </div>
   <div class="col">
     <h4>Read</h4>

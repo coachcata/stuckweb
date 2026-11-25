@@ -14,12 +14,12 @@
 </script>
 <!-- ════ END GOOGLE ANALYTICS ════ -->
 
-<title>Book a Whiteboard Session | Catalyst Growth Coaching</title>
+<title>Contact John | Catalyst Growth Coaching</title>
 
 <meta name="description" content="An hour at the board. Bring whatever you're carrying." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://catalystgrowthcoach.co.uk/contact" />
-<meta property="og:title" content="Book a Whiteboard Session | Catalyst Growth Coaching" />
+<meta property="og:title" content="Contact John | Catalyst Growth Coaching" />
 <meta property="og:description" content="An hour at the board. Bring whatever you're carrying." />
 <meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -95,7 +95,8 @@
   nav.top .has-dropdown:focus-within .dropdown {
     opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
   }
-  nav.top .dropdown a {
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
     display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
     letter-spacing: 0.18em; color: var(--stone);
   }
@@ -362,9 +363,9 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
-        <li><a href="/board">At the Board</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
       </ul>
     </li>
     <li><a href="/in-practice">In Practice</a></li>
@@ -372,30 +373,11 @@
   </ul>
 </nav>
 
-<!-- ════ SCENE 01, The Booking Path ════ -->
+<!-- ════ SCENE 01, Ask first ════ -->
 <section class="scene scene-booking">
   <div class="eyebrow">Contact</div>
-  <h1>Let's get an hour in the diary.</h1>
-  <p class="lede">The first step is the same regardless of what you're thinking about. An hour at the board, working on whatever's actually live for you right now.</p>
-
-  <div class="cta-row">
-    <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" target="_blank" rel="noopener" class="button">Book a Whiteboard Session →</a>
-  <p class="book-note">One hour. No charge, nothing to prepare.</p>
-  </div>
-
-  <p class="closer"><em>No prep needed. Just bring the thing you'd think about if you had the time.</em></p>
-
-  <div class="expect-note">
-    <div class="note-label">What the hour is like</div>
-    <p>It's a full session, the same work I do with anyone at the board. You bring what's live, we think it through together, and you leave with a real conclusion, not a summary of what we could do if you signed up. If it turns out to be a fit, we'll talk about working together. If it doesn't, you've still spent a genuinely useful hour. Either way, the hour is yours.</p>
-  </div>
-</section>
-
-<!-- ════ SCENE 02, The Alternatives ════ -->
-<section class="scene scene-alternatives">
-  <div class="folio">01 · <span>If You'd Rather Ask First</span></div>
-
-  <p class="alt-intro">Some people want a brief conversation before booking a session. Some are enquiring on behalf of an organisation. Some have a specific question that needs an answer before any of this makes sense.</p>
+  <h1>Before you book, ask me anything.</h1>
+  <p class="lede">Some people want a brief conversation before booking a session. Some are enquiring on behalf of an organisation. Some have a specific question that needs an answer before any of this makes sense.</p>
 
   <p class="alt-prompt">Quick enquiry or organisational interest? Use the form below.</p>
 
@@ -451,6 +433,24 @@
   <p class="closing-italic"><em>I read everything that comes in. I'll reply within one working day.</em></p>
 </section>
 
+<!-- ════ SCENE 02, Book straight in ════ -->
+<section class="scene scene-alternatives scene-booking">
+  <div class="folio"><span>Or book straight in</span></div>
+  <p class="alt-intro">The first step is the same regardless of what you're thinking about. A Whiteboard Session, an hour at the board, working on whatever's actually live for you right now.</p>
+
+  <div class="cta-row">
+    <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" target="_blank" rel="noopener" class="button">Book a Whiteboard Session →</a>
+  <p class="book-note">One hour. No charge, nothing to prepare.</p>
+  </div>
+
+  <p class="closer"><em>No prep needed. Just bring the thing you'd think about if you had the time.</em></p>
+
+  <div class="expect-note">
+    <div class="note-label">What the hour is like</div>
+    <p>It's a full session, the same work I do with anyone at the board. You bring what's live, we think it through together, and you leave with a real conclusion, not a summary of what we could do if you signed up. If it turns out to be a fit, we'll talk about working together. If it doesn't, you've still spent a genuinely useful hour. Either way, the hour is yours.</p>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div>
@@ -459,9 +459,9 @@
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
     <a href="/teamstrong">TeamStrong</a>
-    <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
   </div>
   <div class="col">
     <h4>Read</h4>

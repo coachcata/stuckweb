@@ -2,7 +2,7 @@
 
 # A men’s business group for owner-managers in Milton Keynes
 
-at.theboard is a men’s business group in Milton Keynes for owners running businesses of roughly £500k to £5m with five to twenty-five staff. Five men form a circle and stay together for twelve months. Once a month the circle meets in person at the Shire Retreat for a walk and a half day at the whiteboard, and a fortnight later it meets online for ninety minutes. Every man’s challenge goes on the whiteboard every month, and every man leaves with what he said he would do written up in his own hand, with a date against it. The year is built to change the business: more profit and more of it to you, turnover past where you have stalled, sales that do not all run through you, and a business that needs you less. It is run by John Obidipe of Catalyst Growth Coaching.
+at.theboard circles is a men’s business group in Milton Keynes for owners running businesses of roughly £500k to £5m with five to twenty-five staff. Five men form a circle and stay together for twelve months. Once a month the circle meets in person at the Shire Retreat for a walk and a half day at the whiteboard, and a fortnight later it meets online for ninety minutes. Every man’s challenge goes on the whiteboard every month, and every man leaves with what he said he would do written up in his own hand, with a date against it. The year is built to change the business: more profit and more of it to you, turnover past where you have stalled, sales that do not all run through you, and a business that needs you less. It is run by John Obidipe of Catalyst Growth Coaching.
 
 ## What you turn up to
 
@@ -86,11 +86,11 @@ I will not tell you how to run your business. What I will do is bring what I hav
 
 ### Is there a men’s business group in Milton Keynes?
 
-Yes. at.theboard is a circle of five male owner-managers in Milton Keynes who meet in person every month at the Shire Retreat and online a fortnight later, for twelve months. It is a business peer group for owners who want to be pushed on their numbers and their decisions, rather than a social or wellbeing group.
+Yes. at.theboard circles is a group of five male owner-managers in Milton Keynes who meet in person every month at the Shire Retreat and online a fortnight later, for twelve months. It is a business peer group for owners who want to be pushed on their numbers and their decisions, rather than a social or wellbeing group.
 
 ### Who is it for?
 
-Men who own and run a business in or near Milton Keynes, usually with £500k to £5m turnover and five to twenty-five staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do. Smaller businesses are welcome to book the free hour and talk.
+Men who own and run a business in or near Milton Keynes, usually with £500k to £5m turnover and five to twenty-five staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do. Smaller businesses are welcome to book a Whiteboard Session and talk.
 
 ### How often does the circle meet?
 
@@ -110,17 +110,17 @@ Twelve months. The circle stays the same five men for the year, because the valu
 
 ### How is this different from a networking group?
 
-Networking groups in Milton Keynes meet weekly or fortnightly to pass referrals. at.theboard has no referral target and no selling in the room. Five owners work on each other’s real decisions, and every commitment is written on the whiteboard with a name and a date.
+Networking groups in Milton Keynes meet weekly or fortnightly to pass referrals. at.theboard circles has no referral target and no selling in the room. Five owners work on each other’s real decisions, and every commitment is written on the whiteboard with a name and a date.
 
 ### How does it compare with Vistage or The Alternative Board?
 
-Both are established peer advisory options. Vistage groups usually have twelve to sixteen members meeting for a day each month, and The Alternative Board runs monthly advisory boards in Milton Keynes. at.theboard is smaller, five men, with every member on the whiteboard every month, a walk built into each session, and a fixed twelve-month circle.
+Both are established peer advisory options. Vistage groups usually have twelve to sixteen members meeting for a day each month, and The Alternative Board runs monthly advisory boards in Milton Keynes. at.theboard circles is smaller, five men, with every member on the whiteboard every month, a walk built into each session, and a fixed twelve-month circle.
 
 ### How do I join?
 
-Start with a free hour at the whiteboard with John on whatever is live in your business. The free hour is open to anyone. A place in a circle is not. If a circle is right for you, you go on a waiting list until John can place you in one where nobody does what you do. The first circle is being selected now.
+Start with a free Whiteboard Session with John on whatever is live in your business. The free Whiteboard Session is open to anyone. A place in a circle is not. If a circle is right for you, you go on a waiting list until John can place you in one where nobody does what you do. The first circle is being selected now.
 
-[How at.theboard compares with the other options in Milton Keynes](https://catalystgrowthcoach.co.uk/business-groups-milton-keynes)
+[How at.theboard circles compares with the other options in Milton Keynes](https://catalystgrowthcoach.co.uk/business-groups-milton-keynes)
 
 ## Location
 
@@ -144,6 +144,6 @@ Free whether you join or not. No follow-up sequence.
 
 I say what I think as we go rather than saving it up for the end. That includes telling you if what you have is a process problem rather than a judgement one. If it is, I will say so and send you off to fix the process. That happens, and it costs me the work, which is fine.
 
-Book the free hour: https://catalystgrowthcoach.co.uk/board#book
+Book a Whiteboard Session: https://catalystgrowthcoach.co.uk/board#book
 
-Page last reviewed 28 October 2026
+Page last reviewed 25 November 2026

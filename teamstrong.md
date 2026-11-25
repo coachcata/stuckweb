@@ -2,6 +2,8 @@
 
 # Good is where your leaders are. It is not where they have to stop, on their own or together.
 
+TeamStrong is work with a leadership team of five to ten, at your venue or ours: one high impact day, or six months with a session each month. The Day is from £3,500 plus VAT.
+
 Some leadership teams run the business together. Others are a group of leaders who each run their own part of it and come together to report. Both can grow, in different ways. Choose the one that sounds like you.
 
 ## We run the business together.
@@ -16,6 +18,10 @@ You lead your own region, function or division, and you want every leader to gro
 
 [For leaders who run their own area](https://catalystgrowthcoach.co.uk/teamstrong/leaders)
 
+## In the room with leadership teams
+
 ## Start with a conversation
+
+Tell me about your leaders and what you would like to see change. A short conversation is enough to work out whether the Day, the Six Months or neither is the right fit.
 
 Book a conversation: https://catalystgrowthcoach.co.uk/teamstrong#book

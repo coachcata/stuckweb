@@ -16,11 +16,11 @@
 
 <title>Going Further | Catalyst Growth Coaching</title>
 
-<meta name="description" content="Where the Whiteboard Sessions lead. How a single session becomes a longer thinking partnership when the work asks for it." />
+<meta name="description" content="Where the Whiteboard Sessions lead: TeamStrong for leadership teams, succession planning for your second in command, and at.theboard circles for owners." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://catalystgrowthcoach.co.uk/going-further" />
 <meta property="og:title" content="Going Further | Catalyst Growth Coaching" />
-<meta property="og:description" content="Where the Whiteboard Sessions lead. How a single session becomes a longer thinking partnership when the work asks for it." />
+<meta property="og:description" content="Where the Whiteboard Sessions lead: TeamStrong for leadership teams, succession planning for your second in command, and at.theboard circles for owners." />
 <meta property="og:image" content="https://catalystgrowthcoach.co.uk/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://catalystgrowthcoach.co.uk/going-further" />
@@ -94,7 +94,8 @@
   nav.top .has-dropdown:focus-within .dropdown {
     opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
   }
-  nav.top .dropdown a {
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
     display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
     letter-spacing: 0.18em; color: var(--stone);
   }
@@ -291,7 +292,7 @@
   @media (max-width: 900px) { .gf-clip { aspect-ratio: 16/9; } }
 
   /* ══ Programme cards (same component as the homepage tiles) ══ */
-  .scene-argument .tiles-grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 5rem; max-width: none; }
+  .scene-argument .tiles-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 5rem; max-width: none; }
     .tile {
     display: flex; flex-direction: column; gap: 1.5rem;
     text-decoration: none; color: inherit;
@@ -328,7 +329,7 @@
     content: ' →'; transition: margin-left 0.3s;
   }
   .tile:hover .tile-link::after { margin-left: 0.3em; }
-  @media (max-width: 1100px) { .scene-argument .tiles-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 1100px) { .scene-argument .tiles-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 900px) { .scene-argument .tiles-grid { grid-template-columns: 1fr; gap: 3rem; } }
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -377,9 +378,9 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
-        <li><a href="/board">At the Board</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
       </ul>
     </li>
     <li><a href="/in-practice">In Practice</a></li>
@@ -410,29 +411,23 @@
     <p class="punchline"><em>Each of those is a fixed piece of work with an end you can see from the start. None of them is a retainer.</em></p>
   </div>
   <div class="tiles-grid">
-    <a class="tile" href="/leadstrong">
-      <div class="tile-image"><img src="/images/img-1983.jpg" alt="Wall whiteboard session with a corporate leader" loading="lazy"></div>
-      <h3>LeadStrong</h3>
-      <p class="tile-desc">Six months of weekly Whiteboard Sessions for a corporate leader, on two or three outcomes agreed at the start.</p>
-      <span class="tile-link">Read about LeadStrong</span>
-    </a>
-    <a class="tile" href="/buildstrong">
-      <div class="tile-image"><img src="/images/img-1935.jpg" alt="Hospitality whiteboard session with a business owner" loading="lazy"></div>
-      <h3>BuildStrong</h3>
-      <p class="tile-desc">Six months of fortnightly Whiteboard Sessions for an owner, on the decisions that keep coming back to your desk.</p>
-      <span class="tile-link">Read about BuildStrong</span>
-    </a>
     <a class="tile" href="/teamstrong">
-      <div class="tile-image"><img src="/images/img-1981.jpg" alt="Two people working together at a wall whiteboard" loading="lazy"></div>
+      <div class="tile-image"><img src="/images/about-img-03.jpg" alt="John presenting to a room of team members" loading="lazy"></div>
       <h3>TeamStrong</h3>
-      <p class="tile-desc">For leadership teams of five to ten. One high impact day, or six months, at your venue or ours.</p>
+      <p class="tile-desc">When the change has to reach the whole team. For leadership teams of five to ten: one high impact day, or six months, at your venue or ours.</p>
       <span class="tile-link">Read about TeamStrong</span>
     </a>
+    <a class="tile" href="/board/one-to-one#going-further">
+      <div class="tile-image"><img src="/images/img-1986.jpg" alt="An owner and John close in at a wall whiteboard" loading="lazy"></div>
+      <h3>Succession planning</h3>
+      <p class="tile-desc">One-to-one coaching for your second in command, so the business runs without you. Six sessions over three months. &pound;1,800.</p>
+      <span class="tile-link">Read about succession planning</span>
+    </a>
     <a class="tile" href="/board">
-      <div class="tile-image"><img src="/images/img-1991.jpg" alt="Two business owners walking a wooded path in Milton Keynes" loading="lazy"></div>
-      <h3>at.theboard</h3>
-      <p class="tile-desc">Twelve months in a circle of five owner-managers in Milton Keynes, every man on the whiteboard every month.</p>
-      <span class="tile-link">Read about at.theboard</span>
+      <div class="tile-image"><img src="/videos/board/board-hero-walk-poster.jpg" alt="Three business owners walking together at the Shire Retreat, Milton Keynes" loading="lazy"></div>
+      <h3>at.theboard circles</h3>
+      <p class="tile-desc">For owners who want to keep pushing: twelve months in a circle of five owner-managers in Milton Keynes, every man on the whiteboard every month.</p>
+      <span class="tile-link">Read about at.theboard circles</span>
     </a>
   </div>
 </section>
@@ -450,8 +445,8 @@
       <div class="body">
         <p><em>Three ways it has gone.</em></p>
         <p>A client booked a session because they were stuck on a strategic question. We worked through it at the board. By the end, the question wasn't the strategic one. It was a question about the team that needed to think differently. That became six months of TeamStrong.</p>
-        <p>A client booked a session about whether to promote a particular person to the leadership team. We worked through it at the board. The session revealed the person was ready but the role needed redesigning around their actual capabilities. The next six sessions were with that person, redesigning their remit: the second-in-command work that now sits alongside BuildStrong.</p>
-        <p>A client booked a session because the business was scaling faster than their bandwidth allowed. We worked through it at the board. The session revealed they couldn't do their actual job because they were doing three other jobs as well. Six months of BuildStrong followed, fortnightly, on what to delegate, what to hire and what to stop doing.</p>
+        <p>A client booked a session about whether to promote a particular person to the leadership team. We worked through it at the board. The session revealed the person was ready but the role needed redesigning around their actual capabilities. The next six sessions were with that person, redesigning their remit: the second-in-command work that now sits alongside the one-to-one.</p>
+        <p>A client booked a session because the business was scaling faster than their bandwidth allowed. We worked through it at the board. The session revealed they couldn't do their actual job because they were doing three other jobs as well. Six months of one-to-one at the whiteboard followed, fortnightly, on what to delegate, what to hire and what to stop doing.</p>
         <p class="punchline">In each case the first hour set the next move, and the next move had a shape and an end date before it started.</p>
       </div>
     </div>
@@ -466,7 +461,7 @@
   <div class="folio">03 · <span>The Invitation</span></div>
   <p class="lede"><em>If you're at the point of asking what this could look like for you, the conversation starts the same way as anything else here. An hour at the board.</em></p>
   <p class="sub">The first hour will tell us both whether there is a next piece of work in this, and which one.</p>
-  <a href="/contact" class="button">Book a Whiteboard Session</a>
+  <a href="https://portal.catalystgrowthcoach.co.uk/public/appointment-scheduler/6045bde2cbf031000aba1a55/schedule" class="button">Book a Whiteboard Session</a>
   <p class="book-note">One hour. No charge, nothing to prepare.</p>
 </section>
 
@@ -478,9 +473,9 @@
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
     <a href="/teamstrong">TeamStrong</a>
-    <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
   </div>
   <div class="col">
     <h4>Read</h4>

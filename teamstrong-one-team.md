@@ -22,36 +22,38 @@ Ask a leadership team how they work together and you will hear how they would li
 
 A single, high impact day at your venue or ours, in the setting you choose. Each leads to the same place: a clear, shared picture of how you really work as a team, and two or three changes you agree before you leave.
 
-### The construction site.
+### The immersive building experience.
 
-A working miniature construction site, six metres by three, brought to your venue. Your team operates the machines to complete a set task together. Within minutes the patterns show themselves: who communicates, who plans, who is strongest at which job, and what happens when the plan meets the ground.
+A team building experience that everyone takes part in. On the immersive mini construction site, six metres by three and brought to your venue, your team plans and builds together through competitions and activities. Along the way we talk about how you communicate, how you plan, who takes ownership and how you work with each other.
+
+Site footage coming soon.
 
 ### The board.
 
-Your team brings a live problem it has not been able to settle, and we work it through together at the whiteboard until it is resolved. How you reach the answer tells you as much as the answer itself.
+We harness the creativity and problem solving of the whole group, live at the whiteboard. It gives your team the chance to nail down solutions to problems that have been running for a while, and I guide you to set out plans to put those solutions into action and test them.
 
 ### The strengths lens.
 
-Everyone completes FITT16 and CliftonStrengths beforehand. On the day the whole team’s profile goes on the board, so each person sees why they work the way they do, and why the person next to them works differently.
+When cohesion and collaboration are the focus, you need to go beyond skin deep. Everyone completes FITT16 and CliftonStrengths beforehand, so team members understand each other at a deep level, work more productively together and head off conflict before it starts.
 
 From £3,500 plus VAT for a leadership team, priced on numbers. One price, with everything included.
 
-## When the change has to last
+## When we want lasting change
 
 One high impact session a month, each in a different setting, so the team keeps moving. The mix is chosen for your team. A typical shape:
 
-- Month one, the construction site.The team as it is today.
+- Month one, the immersive building experience.The team as it is today.
 - Month two, the strengths lens.Why it works that way.
 - Months three to five, the board.Real decisions, worked through together, with actions and dates checked each month.
-- Month six, back to the construction site.The same task, the same team, and a very different result.
+- Month six, back to the immersive building experience.The same task, the same team, and a very different result.
 
 The leader has their own one-to-one sessions alongside. Price agreed with each team.
 
 ## Questions
 
-### What space does the construction site need?
+### What space does the immersive building experience need?
 
-Two areas side by side: one for the construction site, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.
+Two areas side by side: one for the immersive building experience, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.
 
 ### What if someone would rather not drive the machines?
 
@@ -59,11 +61,11 @@ That is fine. There is plenty to do without driving, and planning the task is of
 
 ### What is included in the price?
 
-Everything. The Day is one price for the whole package, construction site included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.
+Everything. The Day is one price for the whole package, immersive building experience included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.
 
-### Do we have to use the construction site?
+### Do we have to do the immersive building experience?
 
-No. The construction site is one of three settings, alongside the board and the strengths lens. We choose together what suits your team.
+No. The immersive building experience is one of three settings, alongside the board and the strengths lens. We choose together what suits your team.
 
 ## Start with a conversation
 

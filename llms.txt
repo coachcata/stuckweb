@@ -8,6 +8,8 @@ A circle is the five men who meet together for the year.
 
 - [at.theboard](https://catalystgrowthcoach.co.uk/board): what the circle is, how it meets, the rules, who it is for, how to join
 - [at.theboard, plain text](https://catalystgrowthcoach.co.uk/board.md): the same page as Markdown
+- [at.theboard one-to-one](https://catalystgrowthcoach.co.uk/board/one-to-one): one-to-one coaching at the whiteboard for business owners, men and women. Six months, fortnightly, online or in Milton Keynes.
+- [at.theboard one-to-one, plain text](https://catalystgrowthcoach.co.uk/board/one-to-one.md): the same page as Markdown
 
 ## TeamStrong, for leadership teams of five to ten
 
@@ -18,8 +20,10 @@ A circle is the five men who meet together for the year.
 
 ## Catalyst Growth Coaching
 
-- [Home](https://catalystgrowthcoach.co.uk/): the practice and the free hour at the whiteboard
-- [The Growth Audit](https://catalystgrowthcoach.co.uk/growth-audit): a three-week audit for owner-managed firms
+- [Home](https://catalystgrowthcoach.co.uk/): the practice and the free Whiteboard Session
+- [LeadStrong](https://catalystgrowthcoach.co.uk/leadstrong): six months of weekly Whiteboard Sessions for a corporate leader
+- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents ([/mdsvp](https://catalystgrowthcoach.co.uk/mdsvp)) and sales directors ([/mdsdir](https://catalystgrowthcoach.co.uk/mdsdir)) in medical device companies. Six months, weekly, £7,200.
+- Plain text: [for vice presidents](https://catalystgrowthcoach.co.uk/mdsvp.md), [for sales directors](https://catalystgrowthcoach.co.uk/mdsdir.md)
 - [Leadership Hub](https://learn.catalystgrowthcoach.co.uk/): the Fluency Series in podcast, slides and infographic form
 
 ## Key facts
@@ -27,7 +31,8 @@ A circle is the five men who meet together for the year.
 - Location: Milton Keynes, England. In-person sessions at the Shire Retreat; online between sessions.
 - at.theboard circle: five male owner-managers, twelve months, two sessions a month, every man on the whiteboard every month.
 - Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.
-- Way in: one free hour at the whiteboard, open to anyone.
+- Way in: one free Whiteboard Session, open to anyone.
+- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Six months, weekly, £7,200.
 - TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.
 - Price: £550 a month for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.
 

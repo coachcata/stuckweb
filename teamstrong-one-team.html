@@ -95,7 +95,8 @@
   nav.top .has-dropdown:focus-within .dropdown {
     opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
   }
-  nav.top .dropdown a {
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
     display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
     letter-spacing: 0.18em; color: var(--stone);
   }
@@ -393,7 +394,7 @@
   }
   .quote-card .attr .meta .prog { color: var(--cognac); }
 
-  /* ══ Shared programme components (LeadStrong, BuildStrong, TeamStrong): keep identical on all three ══ */
+  /* ══ Shared programme components (LeadStrong, TeamStrong and the medtech pages): keep identical ══ */
   .scene-prose { flex-direction: column; }
   section.scene[id] { scroll-margin-top: 5.5rem; }
   .scene-prose.alt, .scene-proof-block {
@@ -645,6 +646,7 @@
   }
 
   /* The Day: setting cards and the price */
+  .pack-card .soon { font-family: var(--font-d); font-style: italic; font-size: 1rem; color: var(--ash); margin-top: auto; padding-top: 0.4rem; }
   .pack-card .setting {
     font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
@@ -825,10 +827,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What space does the construction site need?",
+          "name": "What space does the immersive building experience need?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Two areas side by side: one for the construction site, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed."
+            "text": "Two areas side by side: one for the immersive building experience, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed."
           }
         },
         {
@@ -844,15 +846,15 @@
           "name": "What is included in the price?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Everything. The Day is one price for the whole package, construction site included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions."
+            "text": "Everything. The Day is one price for the whole package, immersive building experience included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions."
           }
         },
         {
           "@type": "Question",
-          "name": "Do we have to use the construction site?",
+          "name": "Do we have to do the immersive building experience?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. The construction site is one of three settings, alongside the board and the strengths lens. We choose together what suits your team."
+            "text": "No. The immersive building experience is one of three settings, alongside the board and the strengths lens. We choose together what suits your team."
           }
         }
       ]
@@ -897,9 +899,9 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
-        <li><a href="/board">At the Board</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
       </ul>
     </li>
     <li><a href="/in-practice">In Practice</a></li>
@@ -952,16 +954,20 @@
   <p class="pack-lead" data-md="day">A single, high impact day at your venue or ours, in the setting you choose. Each leads to the same place: a clear, shared picture of how you really work as a team, and two or three changes you agree before you leave.</p>
   <div class="pack-cards">
     <div class="pack-card">
-      <h3>The construction site.</h3>
-      <p>A working miniature construction site, six metres by three, brought to your venue. Your team operates the machines to complete a set task together. Within minutes the patterns show themselves: who communicates, who plans, who is strongest at which job, and what happens when the plan meets the ground.</p>
+      <span class="setting">Setting one</span>
+      <h3>The immersive building experience.</h3>
+      <p>A team building experience that everyone takes part in. On the immersive mini construction site, six metres by three and brought to your venue, your team plans and builds together through competitions and activities. Along the way we talk about how you communicate, how you plan, who takes ownership and how you work with each other.</p>
+      <p class="soon">Site footage coming soon.</p>
     </div>
     <div class="pack-card">
+      <span class="setting">Setting two</span>
       <h3>The board.</h3>
-      <p>Your team brings a live problem it has not been able to settle, and we work it through together at the whiteboard until it is resolved. How you reach the answer tells you as much as the answer itself.</p>
+      <p>We harness the creativity and problem solving of the whole group, live at the whiteboard. It gives your team the chance to nail down solutions to problems that have been running for a while, and I guide you to set out plans to put those solutions into action and test them.</p>
     </div>
     <div class="pack-card">
+      <span class="setting">Setting three</span>
       <h3>The strengths lens.</h3>
-      <p>Everyone completes FITT16 and CliftonStrengths beforehand. On the day the whole team&rsquo;s profile goes on the board, so each person sees why they work the way they do, and why the person next to them works differently.</p>
+      <p>When cohesion and collaboration are the focus, you need to go beyond skin deep. Everyone completes FITT16 and CliftonStrengths beforehand, so team members understand each other at a deep level, work more productively together and head off conflict before it starts.</p>
     </div>
   </div>
   <p class="price-line"><strong>From &pound;3,500 plus VAT for a leadership team, priced on numbers. One price, with everything included.</strong></p>
@@ -970,13 +976,13 @@
 <!-- ════ The Six Months ════ -->
 <section class="scene scene-work alt" id="the-six-months">
   <div class="label">The Six Months</div>
-  <h2 class="pack-h2">When the change has to last</h2>
+  <h2 class="pack-h2">When we want lasting change</h2>
   <p class="pack-lead">One high impact session a month, each in a different setting, so the team keeps moving. The mix is chosen for your team. A typical shape:</p>
   <ol class="months">
-    <li><h3>Month one, the construction site.</h3><p>The team as it is today.</p></li>
+    <li><h3>Month one, the immersive building experience.</h3><p>The team as it is today.</p></li>
     <li><h3>Month two, the strengths lens.</h3><p>Why it works that way.</p></li>
     <li><h3>Months three to five, the board.</h3><p>Real decisions, worked through together, with actions and dates checked each month.</p></li>
-    <li><h3>Month six, back to the construction site.</h3><p>The same task, the same team, and a very different result.</p></li>
+    <li><h3>Month six, back to the immersive building experience.</h3><p>The same task, the same team, and a very different result.</p></li>
   </ol>
   <p class="price-line">The leader has their own one-to-one sessions alongside. <strong>Price agreed with each team.</strong></p>
 </section>
@@ -987,8 +993,8 @@
   <h2 class="pack-h2">Questions</h2>
   <div class="faq">
     <details>
-      <summary><h3>What space does the construction site need?</h3></summary>
-      <p>Two areas side by side: one for the construction site, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.</p>
+      <summary><h3>What space does the immersive building experience need?</h3></summary>
+      <p>Two areas side by side: one for the immersive building experience, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.</p>
     </details>
     <details>
       <summary><h3>What if someone would rather not drive the machines?</h3></summary>
@@ -996,11 +1002,11 @@
     </details>
     <details>
       <summary><h3>What is included in the price?</h3></summary>
-      <p>Everything. The Day is one price for the whole package, construction site included, from &pound;3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.</p>
+      <p>Everything. The Day is one price for the whole package, immersive building experience included, from &pound;3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.</p>
     </details>
     <details>
-      <summary><h3>Do we have to use the construction site?</h3></summary>
-      <p>No. The construction site is one of three settings, alongside the board and the strengths lens. We choose together what suits your team.</p>
+      <summary><h3>Do we have to do the immersive building experience?</h3></summary>
+      <p>No. The immersive building experience is one of three settings, alongside the board and the strengths lens. We choose together what suits your team.</p>
     </details>
   </div>
 </section>
@@ -1010,9 +1016,6 @@
   <div class="label">Teams I have worked with</div>
   <h2 class="pack-h2">In the room with leadership teams</h2>
   <div class="clips">
-    <figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-1.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
-    <figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-2.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
-    <figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Convatec leadership team session"><source src="/videos/teams/team-convatec-presenting-3.mp4" type="video/mp4"></video><figcaption>Convatec, leadership team session</figcaption></figure>
     <figure class="clip"><video autoplay muted loop playsinline preload="metadata" aria-label="Arrow Planning team workshop"><source src="/videos/teams/team-arrow-workshop.mp4" type="video/mp4"></video><figcaption>Arrow Planning, team workshop</figcaption></figure>
   </div>
 </section>
@@ -1055,9 +1058,9 @@ TEAM CLIPS -->
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
     <a href="/teamstrong">TeamStrong</a>
-    <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
   </div>
   <div class="col">
     <h4>Read</h4>

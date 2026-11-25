@@ -95,7 +95,8 @@
   nav.top .has-dropdown:focus-within .dropdown {
     opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
   }
-  nav.top .dropdown a {
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
     display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
     letter-spacing: 0.18em; color: var(--stone);
   }
@@ -393,7 +394,7 @@
   }
   .quote-card .attr .meta .prog { color: var(--cognac); }
 
-  /* ══ Shared programme components (LeadStrong, BuildStrong, TeamStrong): keep identical on all three ══ */
+  /* ══ Shared programme components (LeadStrong, TeamStrong and the medtech pages): keep identical ══ */
   .scene-prose { flex-direction: column; }
   section.scene[id] { scroll-margin-top: 5.5rem; }
   .scene-prose.alt, .scene-proof-block {
@@ -645,6 +646,7 @@
   }
 
   /* The Day: setting cards and the price */
+  .pack-card .soon { font-family: var(--font-d); font-style: italic; font-size: 1rem; color: var(--ash); margin-top: auto; padding-top: 0.4rem; }
   .pack-card .setting {
     font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
     color: var(--cognac); font-weight: 600;
@@ -825,10 +827,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What space does the construction site need?",
+          "name": "What space does the immersive building experience need?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Two areas side by side: one for the construction site, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed."
+            "text": "Two areas side by side: one for the immersive building experience, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed."
           }
         },
         {
@@ -844,7 +846,7 @@
           "name": "What is included in the price?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Everything. The Day is one price for the whole package, construction site included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions."
+            "text": "Everything. The Day is one price for the whole package, immersive building experience included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions."
           }
         },
         {
@@ -897,9 +899,9 @@
       <a href="/#programmes">Programmes</a>
       <ul class="dropdown">
         <li><a href="/leadstrong">LeadStrong</a></li>
-        <li><a href="/buildstrong">BuildStrong</a></li>
         <li><a href="/teamstrong">TeamStrong</a></li>
-        <li><a href="/board">At the Board</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
       </ul>
     </li>
     <li><a href="/in-practice">In Practice</a></li>
@@ -959,16 +961,20 @@
   <p class="pack-lead" data-md="day">A single, high impact day at your venue or ours, in the setting you choose. Each leader leaves with a clear picture of how they show up, and two or three changes to take back to their own team.</p>
   <div class="pack-cards">
     <div class="pack-card">
-      <h3>The construction site.</h3>
-      <p>A working miniature construction site, six metres by three, brought to your venue. You operate the machines to complete a set task together, and each leader&rsquo;s habits show up within minutes: how they plan, how they communicate, when they step in and when they let go.</p>
+      <span class="setting">Setting one</span>
+      <h3>The immersive building experience.</h3>
+      <p>A team building experience that every leader takes part in. On the immersive mini construction site, six metres by three and brought to your venue, you plan and build together through competitions and activities. Each leader&rsquo;s habits show up quickly, and we talk about how you communicate, how you plan, who takes ownership and how you work with others.</p>
+      <p class="soon">Site footage coming soon.</p>
     </div>
     <div class="pack-card">
+      <span class="setting">Setting two</span>
       <h3>The board.</h3>
-      <p>Each leader brings a live challenge from their own area, and we work it through at the whiteboard with the rest of the group as a second set of minds. Everyone learns from everyone else&rsquo;s problem.</p>
+      <p>Each leader brings a live problem from their own area, and we harness the creativity and problem solving of the whole group, live at the whiteboard. Problems that have been running for a while get solved, and I guide each leader to set out a plan to put the solution into action and test it.</p>
     </div>
     <div class="pack-card">
+      <span class="setting">Setting three</span>
       <h3>The strengths lens.</h3>
-      <p>Everyone completes FITT16 and CliftonStrengths beforehand. On the day each leader sees why they lead the way they do, and what that means for the people who report to them.</p>
+      <p>When cohesion and collaboration are the focus, you need to go beyond skin deep. Everyone completes FITT16 and CliftonStrengths beforehand, so each leader understands the others at a deep level, and sees what their own way of leading means for the people who report to them.</p>
     </div>
   </div>
   <p class="price-line"><strong>From &pound;3,500 plus VAT for a leadership team, priced on numbers. One price, with everything included.</strong></p>
@@ -980,10 +986,10 @@
   <h2 class="pack-h2">Each leader growing, month by month</h2>
   <p class="pack-lead">One high impact session a month, each in a different setting, so the growth keeps moving and has time to show up in each leader&rsquo;s own team. The mix is chosen for your leaders. A typical shape:</p>
   <ol class="months">
-    <li><h3>Month one, the construction site.</h3><p>How each of you leads today.</p></li>
+    <li><h3>Month one, the immersive building experience.</h3><p>How each of you leads today.</p></li>
     <li><h3>Month two, the strengths lens.</h3><p>Why you lead that way.</p></li>
     <li><h3>Months three to five, the board.</h3><p>Real challenges from each area, with actions and dates checked each month.</p></li>
-    <li><h3>Month six, back to the construction site.</h3><p>The same task, and a clear view of how each of you has changed.</p></li>
+    <li><h3>Month six, back to the immersive building experience.</h3><p>The same task, and a clear view of how each of you has changed.</p></li>
   </ol>
   <p class="price-line">Leaders can have their own one-to-one sessions alongside where it helps. <strong>Price agreed with each team.</strong></p>
 </section>
@@ -994,8 +1000,8 @@
   <h2 class="pack-h2">Questions</h2>
   <div class="faq">
     <details>
-      <summary><h3>What space does the construction site need?</h3></summary>
-      <p>Two areas side by side: one for the construction site, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.</p>
+      <summary><h3>What space does the immersive building experience need?</h3></summary>
+      <p>Two areas side by side: one for the immersive building experience, which is six metres by three, and one for horseshoe seating where we talk. It works indoors or outdoors, and the machines are self-powered, so no power is needed.</p>
     </details>
     <details>
       <summary><h3>What if someone would rather not drive the machines?</h3></summary>
@@ -1003,7 +1009,7 @@
     </details>
     <details>
       <summary><h3>What is included in the price?</h3></summary>
-      <p>Everything. The Day is one price for the whole package, construction site included, from &pound;3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.</p>
+      <p>Everything. The Day is one price for the whole package, immersive building experience included, from &pound;3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.</p>
     </details>
     <details>
       <summary><h3>Our leaders do not work together day to day. Will this still work?</h3></summary>
@@ -1049,9 +1055,9 @@
   <div class="col">
     <h4>Programmes</h4>
     <a href="/leadstrong">LeadStrong</a>
-    <a href="/buildstrong">BuildStrong</a>
     <a href="/teamstrong">TeamStrong</a>
-    <a href="/board">Men&rsquo;s business group in Milton Keynes</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
   </div>
   <div class="col">
     <h4>Read</h4>

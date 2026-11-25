@@ -21,6 +21,61 @@
 # force = true so the redirect wins even when a matching file exists in the
 # publish directory.
 
+# Retired 20 November 2026: BuildStrong, The Handover and the succession article. Mirrored in _redirects.
+[[redirects]]
+  from = "/buildstrong"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/buildstrong.html"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/buildstrong/"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-handover"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-handover.html"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/the-handover/"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hold-the-place"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hold-the-place.html"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hold-the-place/"
+  to = "/board/one-to-one"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "https://www.catalystgrowthcoach.co.uk/*"
   to = "https://catalystgrowthcoach.co.uk/:splat"
@@ -136,6 +191,17 @@
   to = "/teamstrong-leaders.md"
   status = 200
 
+# at.theboard one-to-one and its Markdown copy. Mirrored in _redirects.
+[[redirects]]
+  from = "/board/one-to-one"
+  to = "/board-one-to-one.html"
+  status = 200
+
+[[redirects]]
+  from = "/board/one-to-one.md"
+  to = "/board-one-to-one.md"
+  status = 200
+
 # Security headers on every response. Mirrored in _headers.
 # No CSP yet: pages carry inline scripts and load Google Fonts, so a useful
 # policy needs per-page nonces or hashes first. HSTS deliberately omits
@@ -162,6 +228,48 @@
   [headers.values]
     Content-Type = "text/markdown; charset=utf-8"
     Link = "<https://catalystgrowthcoach.co.uk/board>; rel=\"canonical\""
+
+[[headers]]
+  for = "/mdsvp.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsvp>; rel=\"canonical\""
+
+[[headers]]
+  for = "/mdsdir.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsdir>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/mdsvp.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsvp>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/mdsdir.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/mdsdir>; rel=\"canonical\""
+
+[[headers]]
+  for = "/board/one-to-one.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board/one-to-one>; rel=\"canonical\""
+
+[[headers]]
+  for = "/board-one-to-one.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board/one-to-one>; rel=\"canonical\""
+
+[[headers]]
+  for = "/site/board-one-to-one.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Link = "<https://catalystgrowthcoach.co.uk/board/one-to-one>; rel=\"canonical\""
 
 [[headers]]
   for = "/teamstrong.md"
