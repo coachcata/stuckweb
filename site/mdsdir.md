@@ -2,7 +2,7 @@
 
 # You deliver the number every year. You want to be known for where the business goes next.
 
-One-to-one coaching at the whiteboard for sales directors in medical device companies who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
+One-to-one coaching at a shared whiteboard, online, for sales directors in medical device companies who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
 
 ## Strong results, and the next role still feels a step away
 
@@ -26,7 +26,25 @@ You want to walk into the VP role already leading at that level, with a team of 
 
 Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with a decision, an action and a date. At the next session we check every one, so nothing slips.
 
-I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Sessions run online with the whiteboard shared live on screen, or in person.
+I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Most sessions run online, with the whiteboard shared live on your screen. In person works too.
+
+## Online, and still at the whiteboard
+
+### Join from your laptop.
+
+A video call from wherever you are that week: the office, a hotel, between meetings or across time zones.
+
+### The board, shared live.
+
+I write on the whiteboard as you talk, shared live on your screen, so you see the whole of it take shape.
+
+### A decision before we finish.
+
+Every session still ends with a decision, an action and a date on the board, checked next time.
+
+### You keep the board.
+
+After each session you get a copy of the finished board, so the thinking does not stay in the call.
 
 ## Senior leaders at Convatec, Urgo and Becton Dickinson
 
