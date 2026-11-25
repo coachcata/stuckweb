@@ -38,7 +38,7 @@ I have also written at length about the move from vice president to the C-suite 
 
 Much of my work with vice presidents goes on to include sessions with their own leadership team, so the directors around them think and decide in the same way. Here are some of those sessions.
 
-I am John Obidipe, an executive coach with more than fifteen years in organisational consulting and coaching. I am Gallup-certified in CliftonStrengths and a FITT16 practitioner, and I use both to show you how you lead at your best and where pressure pulls you away from it.
+I am John Obidipe, an executive coach with more than fifteen years in organisational consulting and coaching. I am Gallup-certified in CliftonStrengths and a FITT16 practitioner, and I use both to show you how you lead at your best and where pressure pulls you away from it. [More about my background and credentials](https://catalystgrowthcoach.co.uk/about).
 
 ### Six months, a fixed end date.
 
@@ -57,6 +57,8 @@ Questions first, then a straight answer when you want one.
 What you bring stays between us, including when your company is paying.
 
 The price. Six months, a session a week, about 24 sessions in all, for £7,200. If you would rather stop at the halfway point, three months costs £3,600. Many vice presidents have this funded by their company, and I am happy to speak with your sponsor or L&D team.
+
+[Download a one-page summary for your L&D team (PDF)](https://catalystgrowthcoach.co.uk/downloads/leadstrong-medtech-summary.pdf)
 
 ## One free Whiteboard Session
 

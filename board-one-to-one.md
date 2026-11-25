@@ -108,9 +108,9 @@ For men who want to keep pushing after six months: a circle of five owner-manage
 
 [About the circles](https://catalystgrowthcoach.co.uk/board)
 
-### Coaching your second in command
+### Succession planning
 
-For the person who could keep the business running when you are not there, such as an operations manager or a trusted senior team member. Six one-to-one sessions with me over three months, so more of the decisions that land on your desk can stop with them. £1,800.
+One-to-one coaching for your second in command, so the business runs without you. For the person who could keep things running when you are not there, such as an operations manager or a trusted senior team member. Six sessions with me over three months, so more of the decisions that land on your desk can stop with them. £1,800.
 
 ### TeamStrong
 
