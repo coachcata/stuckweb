@@ -413,8 +413,11 @@ PAGES["board-one-to-one.html"] = (html) => {
       provider: { "@id": entity.board.id }, url,
       areaServed: [city, { "@type": "Country", name: "United Kingdom" }],
       audience: { "@type": "BusinessAudience", name: "Business owners, men and women, with 5 to 25 staff" },
-      offers: { "@type": "Offer", price: "3600", priceCurrency: "GBP", url: url + "#book",
-        description: "£600 a month for six months, or £1,800 if you stop at three months" },
+      offers: {
+        "@type": "Offer", price: "600", priceCurrency: "GBP", url: url + "#book",
+        description: "£600 a month for six months (£3,600), or £1,800 if you stop at three months",
+        priceSpecification: { "@type": "UnitPriceSpecification", price: 600, priceCurrency: "GBP", unitText: "MONTH" },
+      },
     },
     { "@type": "FAQPage", "@id": url + "#faq", url, isPartOf: { "@id": url + "#webpage" }, mainEntity: faqFromPage(html) },
     {
