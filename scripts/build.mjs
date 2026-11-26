@@ -329,7 +329,7 @@ for (const [file, t] of Object.entries(TEAMSTRONG)) {
     return [
       catalystOrg(), website(), page,
       {
-        "@type": "Service", "@id": url + "#the-day", name: "TeamStrong: The Day",
+        "@type": "Service", "@id": url + "#the-day", name: "TeamStrong: One Day Programme",
         serviceType: "Leadership team development day",
         description: text(para(html, "day")),
         provider: { "@id": entity.catalyst.id }, url: url + "#the-day",
@@ -536,7 +536,7 @@ const facts = [
   "- Way in: one free Whiteboard Session, open to anyone.",
 ];
 facts.push("- LeadStrong for medical devices: one-to-one coaching at an online whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Weekly, three months for £3,600 or six months for £7,200, plus VAT.");
-facts.push("- TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.");
+facts.push("- TeamStrong: for leadership teams of five to ten. The One Day Programme is one high impact day from £3,500 plus VAT, depending on team size. The Six Month Programme is one session a month, one-to-ones included, price agreed with each team.");
 if (entity.confirmed.menOnly) facts.push("- Why men only: " + entity.confirmed.menOnly);
 if (entity.confirmed.price) facts.push("- Price: " + entity.confirmed.price.text);
 

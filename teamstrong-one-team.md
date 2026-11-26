@@ -61,7 +61,7 @@ That is fine. There is plenty to do without driving, and planning the task is of
 
 ### What is included in the price?
 
-Everything. The Day is one price for the whole package, immersive building experience included, from £3,500 plus VAT depending on numbers. For the Six Months, we agree one price before we start, and it includes the one-to-one sessions.
+Everything. The One Day Programme is one price for the whole package, immersive building experience included, from £3,500 plus VAT depending on numbers. For the Six Month Programme, we agree one price before we start, and it includes the one-to-one sessions.
 
 ### Do we have to do the immersive building experience?
 
@@ -69,6 +69,6 @@ No. The immersive building experience is one of three settings, alongside the bo
 
 ## Start with a conversation
 
-Tell me about your team and what you would like to see change. A short conversation is enough to work out whether the Day, the Six Months or neither is the right fit.
+Tell me about your team and what you would like to see change. A short conversation is enough to work out whether the One Day Programme, the Six Month Programme or neither is the right fit.
 
 Book a conversation: https://catalystgrowthcoach.co.uk/teamstrong/one-team#book
