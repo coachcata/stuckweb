@@ -2,7 +2,7 @@
 
 # You deliver the number every year. You want to be known for where the business goes next.
 
-One-to-one coaching at a shared whiteboard, online, for sales directors in medical device companies who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
+One-to-one coaching at an online whiteboard for sales directors in medical device companies who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
 
 ## Strong results, and the next role still feels a step away
 
@@ -44,7 +44,7 @@ Underneath is a fear: that the one thing you let go will be the thing that count
 
 Doing it depends on your situation: your boss, your history, your team. Sometimes you are navigating complex personality dynamics. Sometimes it is politics. That is why it has not been easy to go from the LinkedIn article you read, or the training you went on, to actually doing it.
 
-You need to talk your own situation through to find the move that works there. That is what we do in our sessions. Sometimes we use the whiteboard to really work it through. Sometimes it is as simple as talking.
+You need to talk your own situation through to find the move that works there. That is what we do in our sessions. Sometimes we use the online whiteboard to really work it through. Sometimes it is as simple as talking.
 
 “I spoke up with my own view. Nobody told me how it landed.”
 
@@ -52,13 +52,13 @@ Your team will not say. Your boss is busy. Your peers are often rivals. Without 
 
 I tell you plainly, and kindly, how you come across , including when you are the problem. And we find one trusted person at work you can ask after the meetings that matter.
 
-## Your thinking, out of your head and onto the whiteboard
+## Your thinking, out of your head and onto an online whiteboard
 
-Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
+Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the online whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
 
 I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Most sessions run online, with the whiteboard shared live on your screen. In person works too.
 
-## Online, and still at the whiteboard
+## The online whiteboard
 
 ### Join from your laptop.
 
@@ -66,7 +66,7 @@ A video call from wherever you are that week: the office, a hotel, between meeti
 
 ### The board, shared live.
 
-I write on the whiteboard as you talk, shared live on your screen, so you see the whole of it take shape.
+I write on the online whiteboard as you talk, shared live on your screen, so you see the whole of it take shape.
 
 ### Decisions before we finish.
 
@@ -111,7 +111,8 @@ What you bring stays between us, including when your company is paying.
 - Your CliftonStrengths and FITT16 profiles
 - Decisions and actions from every session
 - A copy of the finished board each time
-- My honest view, in confidence
+- My honest view
+- Strict confidentiality, even if your company pays for it
 
 Within the first few weeks, most leaders feel less frustrated, because they finally have somewhere to talk their challenges through.
 
