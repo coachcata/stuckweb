@@ -52,6 +52,24 @@ Your team will not say. Your boss is busy. Your peers are often rivals. Without 
 
 I tell you plainly, and kindly, how you come across , including when you are the problem. And we find one trusted person at work you can ask after the meetings that matter.
 
+## Short reads while you decide
+
+### Your VP asks where the business should go. Why do you answer with the forecast?
+
+Why the forecast feels safer than your own view, and how to say the bigger thing.
+
+### How do you step back from the number without the number slipping?
+
+Handing over the detail one piece at a time, and still seeing the number every week.
+
+### Why do your managers bring every hard decision back to you?
+
+What may be sending the decisions back to you, and how to stop it.
+
+### Global owns the plan, you own the number. Who owns your time?
+
+Leading in a matrix when everyone has a claim on your week.
+
 ## Your thinking, out of your head and onto an online whiteboard
 
 Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
