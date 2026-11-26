@@ -533,6 +533,10 @@
     padding: 2.2rem 2rem; border: 1px solid var(--line); border-radius: 4px;
     background: var(--bg-2); display: flex; flex-direction: column; gap: 0.9rem;
   }
+  .article-card { text-decoration: none; transition: border-color 0.3s; }
+  a.article-card:hover { border-color: var(--cognac); }
+  .article-card .read { margin-top: auto; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--cognac); }
+  .article-card.soon .read { color: var(--stone); }
   .pack-card h3 {
     font-family: var(--font-d); font-weight: 400; font-style: italic;
     font-size: 1.3rem; line-height: 1.3; color: var(--bone);
@@ -768,7 +772,8 @@
   @media (max-width: 600px) { .tfilms { grid-template-columns: 1fr; gap: 2.2rem; } .clips.portrait { grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem; } }
 
   /* Article pages */
-  .article { padding-top: 10rem; }
+  .article { padding: 10rem 6vw 14vh; display: block; max-width: 980px; }
+  .article .eyebrow { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ash); margin-bottom: 1.4rem; }
   .article h1 { font-family: var(--font-d); font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: var(--bone); max-width: 22ch; margin: 0 0 2.5rem; }
   .article .voice { font-family: var(--font-d); font-style: italic; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.5; color: var(--bone); border-left: 2px solid var(--cognac); padding-left: 1.4rem; max-width: 46ch; margin: 0 0 3rem; }
   .article .pack-body h2 { font-family: var(--font-d); font-weight: 400; font-size: 1.6rem; line-height: 1.3; color: var(--bone); margin: 3rem 0 1.2rem; }
@@ -829,7 +834,7 @@
 </nav>
 
 <main>
-<article class="scene scene-prose article">
+<article class="article">
   <a class="back" href="/mdsdir" data-link="back">&larr; Coaching for sales directors in medical devices</a>
   <div class="eyebrow">For sales directors in medical devices</div>
   <h1>Why does the VP role keep going to someone else when your numbers are better?</h1>
