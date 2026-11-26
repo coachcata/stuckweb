@@ -563,6 +563,9 @@
   }
 
   /* Photos and living-photo clips between the text */
+  .online-films { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; max-width: 900px; }
+  .online-films video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; background: var(--bg-3); }
+  @media (max-width: 640px) { .online-films { gap: .5rem; } }
   .pack-figure {
     margin: 4rem 0 0; width: 100%; aspect-ratio: 16/9;
     overflow: hidden; background: var(--bg-3);
@@ -978,7 +981,11 @@
     <div class="pack-card"><h3>Decisions before we finish.</h3><p>Every session still ends with decisions made and actions agreed, on the board and checked next time.</p></div>
     <div class="pack-card"><h3>You keep the board.</h3><p>After each session you get a copy of the finished board, so the thinking does not stay in the call.</p></div>
   </div>
-  <!-- ONLINE-FILM: pod video goes here once uploaded -->
+  <div class="online-films">
+    <video autoplay muted loop playsinline preload="metadata" aria-label="John on a coaching call at his laptop, listening and then replying"><source src="/videos/coaching-online-9285.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline preload="metadata" aria-label="John on a coaching call by a window, talking a point through"><source src="/videos/coaching-online-9277.mp4" type="video/mp4"></video>
+    <video autoplay muted loop playsinline preload="metadata" aria-label="John on a coaching call in a meeting pod"><source src="/videos/coaching-online-9290.mp4" type="video/mp4"></video>
+  </div>
 </section>
 
 <!-- ════ Who I work with ════ -->
