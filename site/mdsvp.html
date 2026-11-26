@@ -411,6 +411,16 @@
     font-size: clamp(1.8rem, 3.4vw, 2.6rem);
     line-height: 1.15; max-width: 26ch; margin-bottom: 2rem; color: var(--bone);
   }
+  .barriers { max-width: 980px; }
+  .barrier { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 1.6rem; padding: 3.2rem 0; border-top: 1px solid var(--line); }
+  .barrier:last-child { padding-bottom: 0; }
+  .barrier .num { font-family: var(--font-d); font-style: italic; font-size: 1.5rem; color: var(--cognac); line-height: 1.3; }
+  .barrier .label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cognac); margin-bottom: 1.1rem; }
+  .barrier .voice { font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.22; color: var(--bone); max-width: 24ch; margin-bottom: 1.6rem; }
+  .barrier .answer { font-family: var(--font-d); font-weight: 300; font-size: clamp(1.1rem, 1.6vw, 1.25rem); line-height: 1.65; color: var(--stone); max-width: 60ch; }
+  .barrier .answer p + p { margin-top: 1rem; }
+  .barrier .answer strong { font-weight: 500; color: var(--bone); }
+  @media (max-width: 640px) { .barrier { grid-template-columns: 1fr; padding: 2.4rem 0; } .barrier .num { margin-bottom: 0.6rem; } }
   .pack-lead {
     font-family: var(--font-d); font-weight: 300;
     font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.6;
@@ -910,6 +920,35 @@
   <div class="folio"><span>The next seat</span></div>
   <h2 class="pack-h2">Leading at the level you know you are capable of</h2>
   <div class="pack-body"><p>You want a seat where your decisions shape the direction of the business, and a reputation in the executive room as someone whose view is sought before the decision is made. You want a bench of directors strong enough that the growth in your region comes from the leaders you have developed as much as from the deals they close. And you want enough clear space to think about where the business is going, so that this quarter informs your decisions without running them.</p></div>
+</section>
+
+<!-- ════ Why it has not happened yet ════ -->
+<section class="scene scene-prose" id="barriers">
+  <div class="folio"><span>Why it has not happened yet</span></div>
+  <h2 class="pack-h2">There&rsquo;s nothing wrong with you. It is complicated.</h2>
+  <p class="pack-lead">Everybody knows the answer. Manage up. Think strategically. Delegate more. Knowing it was never the problem. Four things get in the way of doing it.</p>
+  <div class="barriers">
+    <div class="barrier"><div class="num">i.</div><div>
+      <div class="label">Time</div>
+      <p class="voice">&ldquo;The thinking about the next five years keeps losing to this quarter.&rdquo;</p>
+      <div class="answer"><p>Your week belongs to everyone else: global reviews, board papers, your directors&rsquo; escalations. The question that matters most sits at the back of your mind for months.</p><p><strong>The session is that hour.</strong> One fixed slot a week, online, wherever you are that week. You bring what is already live, so it is not extra work. You leave with a decision, an action and a date. No homework.</p></div>
+    </div></div>
+    <div class="barrier"><div class="num">ii.</div><div>
+      <div class="label">Staying close to the number</div>
+      <p class="voice">&ldquo;If I let go of the detail and the region misses, it&rsquo;s my name on it.&rdquo;</p>
+      <div class="answer"><p>You do not let go all at once. We build a considered plan to hand over <strong>one responsibility at a time</strong>, at a pace your directors can absorb, with a clear check so you still see the number every week.</p><p>Each handover frees space in your diary. Then we protect it. A vice president&rsquo;s list never ends, so before each handover you decide what the freed hours are for, and the thinking the next seat asks of you goes in first. Anything new at your current level goes to a director, or waits.</p></div>
+    </div></div>
+    <div class="barrier"><div class="num">iii.</div><div>
+      <div class="label">Your specific situation</div>
+      <p class="voice">&ldquo;I know how to influence. I don&rsquo;t know how to influence this executive team.&rdquo;</p>
+      <div class="answer"><p>Doing it depends on your situation: your president, your peers, global, your history with each of them. Sometimes you are navigating complex personality dynamics. Sometimes it is politics. That is why it has not been easy to go from the LinkedIn article you read, or the executive programme you went on, to actually doing it.</p><p>You need to talk your own situation through to find the move that works there. <strong>That is what we do in our sessions.</strong> Sometimes we use the whiteboard to really work it through. Sometimes it is as simple as talking.</p></div>
+    </div></div>
+    <div class="barrier"><div class="num">iv.</div><div>
+      <div class="label">An honest mirror</div>
+      <p class="voice">&ldquo;The more senior I get, the fewer people tell me the truth.&rdquo;</p>
+      <div class="answer"><p>Your directors will not say. Your boss sees you twice a month. Your peers want the same seat you do. Without honest feedback you cannot adjust.</p><p><strong>I tell you plainly, and kindly, how you come across</strong>, including when you are the problem. And we find one trusted person at work you can ask after the meetings that matter.</p></div>
+    </div></div>
+  </div>
 </section>
 
 <!-- ════ How we work ════ -->

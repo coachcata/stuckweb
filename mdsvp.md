@@ -22,6 +22,34 @@ One-to-one coaching at a shared whiteboard, online, for vice presidents in medic
 
 You want a seat where your decisions shape the direction of the business, and a reputation in the executive room as someone whose view is sought before the decision is made. You want a bench of directors strong enough that the growth in your region comes from the leaders you have developed as much as from the deals they close. And you want enough clear space to think about where the business is going, so that this quarter informs your decisions without running them.
 
+## There’s nothing wrong with you. It is complicated.
+
+Everybody knows the answer. Manage up. Think strategically. Delegate more. Knowing it was never the problem. Four things get in the way of doing it.
+
+“The thinking about the next five years keeps losing to this quarter.”
+
+Your week belongs to everyone else: global reviews, board papers, your directors’ escalations. The question that matters most sits at the back of your mind for months.
+
+The session is that hour. One fixed slot a week, online, wherever you are that week. You bring what is already live, so it is not extra work. You leave with a decision, an action and a date. No homework.
+
+“If I let go of the detail and the region misses, it’s my name on it.”
+
+You do not let go all at once. We build a considered plan to hand over one responsibility at a time , at a pace your directors can absorb, with a clear check so you still see the number every week.
+
+Each handover frees space in your diary. Then we protect it. A vice president’s list never ends, so before each handover you decide what the freed hours are for, and the thinking the next seat asks of you goes in first. Anything new at your current level goes to a director, or waits.
+
+“I know how to influence. I don’t know how to influence this executive team.”
+
+Doing it depends on your situation: your president, your peers, global, your history with each of them. Sometimes you are navigating complex personality dynamics. Sometimes it is politics. That is why it has not been easy to go from the LinkedIn article you read, or the executive programme you went on, to actually doing it.
+
+You need to talk your own situation through to find the move that works there. That is what we do in our sessions. Sometimes we use the whiteboard to really work it through. Sometimes it is as simple as talking.
+
+“The more senior I get, the fewer people tell me the truth.”
+
+Your directors will not say. Your boss sees you twice a month. Your peers want the same seat you do. Without honest feedback you cannot adjust.
+
+I tell you plainly, and kindly, how you come across , including when you are the problem. And we find one trusted person at work you can ask after the meetings that matter.
+
 ## Your thinking, out of your head and onto the whiteboard
 
 Each session starts with whatever is live for you that week, whether that is a board presentation, a difficult director, a portfolio decision or the role you are working towards. It all goes up on the whiteboard, and we work through each issue until you leave with a decision, an action and a date. At the next session we check every one, so nothing slips.

@@ -22,6 +22,34 @@ One-to-one coaching at a shared whiteboard, online, for sales directors in medic
 
 You want to walk into the VP role already leading at that level, with a team of managers who make good decisions without you and a reputation as someone who thinks about the whole business. You want the confidence to put your own view on the table first, in front of your VP and the global team, and to have it taken seriously. And you want to close the gap between how you are seen today and the leader you know you can be.
 
+## There’s nothing wrong with you. It is complicated.
+
+Everybody knows the answer. Manage up. Think strategically. Delegate more. Knowing it was never the problem. Four things get in the way of doing it.
+
+“I know what I should be thinking about. It never gets an hour.”
+
+Your week is built for reacting: forecast calls, escalations, customer visits. The bigger question waits for a quiet week that never comes.
+
+The session is that hour. One fixed slot a week, online, between field days. You bring what is already live, so it is not extra work. You leave with a decision, an action and a date. No homework.
+
+“If I step back from the detail and the number slips, it’s on me.”
+
+You do not step back all at once. We build a considered plan to hand over one responsibility at a time , at a pace your managers can absorb, with a clear check so you still see the number every week.
+
+Each handover frees space in your diary. Then we protect it. A director’s list never ends, so before each handover you decide what the freed hours are for, and the VP-level thinking goes in first. Anything new at your current level goes to a manager, or waits.
+
+“I’ve read the article. I’ve done the programme. I still don’t know what to say to my VP on Monday.”
+
+Doing it depends on your situation: your boss, your history, your team. Sometimes you are navigating complex personality dynamics. Sometimes it is politics. That is why it has not been easy to go from the LinkedIn article you read, or the training you went on, to actually doing it.
+
+You need to talk your own situation through to find the move that works there. That is what we do in our sessions. Sometimes we use the whiteboard to really work it through. Sometimes it is as simple as talking.
+
+“I spoke up with my own view. Nobody told me how it landed.”
+
+Your team will not say. Your boss is busy. Your peers are often rivals. Without honest feedback you cannot adjust, so you drift back to the old way.
+
+I tell you plainly, and kindly, how you come across , including when you are the problem. And we find one trusted person at work you can ask after the meetings that matter.
+
 ## Your thinking, out of your head and onto the whiteboard
 
 Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with a decision, an action and a date. At the next session we check every one, so nothing slips.

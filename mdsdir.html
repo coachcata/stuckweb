@@ -411,6 +411,16 @@
     font-size: clamp(1.8rem, 3.4vw, 2.6rem);
     line-height: 1.15; max-width: 26ch; margin-bottom: 2rem; color: var(--bone);
   }
+  .barriers { max-width: 980px; }
+  .barrier { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 1.6rem; padding: 3.2rem 0; border-top: 1px solid var(--line); }
+  .barrier:last-child { padding-bottom: 0; }
+  .barrier .num { font-family: var(--font-d); font-style: italic; font-size: 1.5rem; color: var(--cognac); line-height: 1.3; }
+  .barrier .label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cognac); margin-bottom: 1.1rem; }
+  .barrier .voice { font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.22; color: var(--bone); max-width: 24ch; margin-bottom: 1.6rem; }
+  .barrier .answer { font-family: var(--font-d); font-weight: 300; font-size: clamp(1.1rem, 1.6vw, 1.25rem); line-height: 1.65; color: var(--stone); max-width: 60ch; }
+  .barrier .answer p + p { margin-top: 1rem; }
+  .barrier .answer strong { font-weight: 500; color: var(--bone); }
+  @media (max-width: 640px) { .barrier { grid-template-columns: 1fr; padding: 2.4rem 0; } .barrier .num { margin-bottom: 0.6rem; } }
   .pack-lead {
     font-family: var(--font-d); font-weight: 300;
     font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.6;
@@ -910,6 +920,35 @@
   <div class="folio"><span>The next role</span></div>
   <h2 class="pack-h2">Stepping into vice president ready</h2>
   <div class="pack-body"><p>You want to walk into the VP role already leading at that level, with a team of managers who make good decisions without you and a reputation as someone who thinks about the whole business. You want the confidence to put your own view on the table first, in front of your VP and the global team, and to have it taken seriously. And you want to close the gap between how you are seen today and the leader you know you can be.</p></div>
+</section>
+
+<!-- ════ Why it has not happened yet ════ -->
+<section class="scene scene-prose" id="barriers">
+  <div class="folio"><span>Why it has not happened yet</span></div>
+  <h2 class="pack-h2">There&rsquo;s nothing wrong with you. It is complicated.</h2>
+  <p class="pack-lead">Everybody knows the answer. Manage up. Think strategically. Delegate more. Knowing it was never the problem. Four things get in the way of doing it.</p>
+  <div class="barriers">
+    <div class="barrier"><div class="num">i.</div><div>
+      <div class="label">Time</div>
+      <p class="voice">&ldquo;I know what I should be thinking about. It never gets an hour.&rdquo;</p>
+      <div class="answer"><p>Your week is built for reacting: forecast calls, escalations, customer visits. The bigger question waits for a quiet week that never comes.</p><p><strong>The session is that hour.</strong> One fixed slot a week, online, between field days. You bring what is already live, so it is not extra work. You leave with a decision, an action and a date. No homework.</p></div>
+    </div></div>
+    <div class="barrier"><div class="num">ii.</div><div>
+      <div class="label">Staying close to the number</div>
+      <p class="voice">&ldquo;If I step back from the detail and the number slips, it&rsquo;s on me.&rdquo;</p>
+      <div class="answer"><p>You do not step back all at once. We build a considered plan to hand over <strong>one responsibility at a time</strong>, at a pace your managers can absorb, with a clear check so you still see the number every week.</p><p>Each handover frees space in your diary. Then we protect it. A director&rsquo;s list never ends, so before each handover you decide what the freed hours are for, and the VP-level thinking goes in first. Anything new at your current level goes to a manager, or waits.</p></div>
+    </div></div>
+    <div class="barrier"><div class="num">iii.</div><div>
+      <div class="label">Your specific situation</div>
+      <p class="voice">&ldquo;I&rsquo;ve read the article. I&rsquo;ve done the programme. I still don&rsquo;t know what to say to my VP on Monday.&rdquo;</p>
+      <div class="answer"><p>Doing it depends on your situation: your boss, your history, your team. Sometimes you are navigating complex personality dynamics. Sometimes it is politics. That is why it has not been easy to go from the LinkedIn article you read, or the training you went on, to actually doing it.</p><p>You need to talk your own situation through to find the move that works there. <strong>That is what we do in our sessions.</strong> Sometimes we use the whiteboard to really work it through. Sometimes it is as simple as talking.</p></div>
+    </div></div>
+    <div class="barrier"><div class="num">iv.</div><div>
+      <div class="label">An honest mirror</div>
+      <p class="voice">&ldquo;I spoke up with my own view. Nobody told me how it landed.&rdquo;</p>
+      <div class="answer"><p>Your team will not say. Your boss is busy. Your peers are often rivals. Without honest feedback you cannot adjust, so you drift back to the old way.</p><p><strong>I tell you plainly, and kindly, how you come across</strong>, including when you are the problem. And we find one trusted person at work you can ask after the meetings that matter.</p></div>
+    </div></div>
+  </div>
 </section>
 
 <!-- ════ How we work ════ -->
