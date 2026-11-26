@@ -30,7 +30,7 @@ Everybody knows the answer. Manage up. Think strategically. Delegate more. Knowi
 
 Your week belongs to everyone else: global reviews, board papers, your directors’ escalations. The question that matters most sits at the back of your mind for months.
 
-The session is that hour. One fixed slot a week, online, wherever you are that week. You bring what is already live, so it is not extra work. You leave with a decision, an action and a date. No homework.
+The session is that hour. One fixed slot a week, online, wherever you are that week. You bring what is already live, so it is not extra work. You leave with decisions made and actions agreed. No homework.
 
 “If I let go of the detail and the region misses, it’s my name on it.”
 
@@ -54,7 +54,7 @@ I tell you plainly, and kindly, how you come across , including when you are the
 
 ## Your thinking, out of your head and onto the whiteboard
 
-Each session starts with whatever is live for you that week, whether that is a board presentation, a difficult director, a portfolio decision or the role you are working towards. It all goes up on the whiteboard, and we work through each issue until you leave with a decision, an action and a date. At the next session we check every one, so nothing slips.
+Each session starts with whatever is live for you that week, whether that is a board presentation, a difficult director, a portfolio decision or the role you are working towards. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
 
 I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Most sessions run online, with the whiteboard shared live on your screen. In person works too, and where a company wants it, I travel to the team.
 
@@ -68,9 +68,9 @@ A video call from wherever you are that week: the office, a hotel, between meeti
 
 I write on the whiteboard as you talk, shared live on your screen, so you see the whole of it take shape.
 
-### A decision before we finish.
+### Decisions before we finish.
 
-Every session still ends with a decision, an action and a date on the board, checked next time.
+Every session still ends with decisions made and actions agreed, on the board and checked next time.
 
 ### You keep the board.
 
@@ -88,13 +88,13 @@ Much of my work with vice presidents goes on to include sessions with their own 
 
 I am John Obidipe, an executive coach with more than fifteen years in organisational consulting and coaching. I am Gallup-certified in CliftonStrengths and a FITT16 practitioner, and I use both to show you how you lead at your best and where pressure pulls you away from it. [More about my background and credentials](https://catalystgrowthcoach.co.uk/about).
 
-### Six months, a fixed end date.
+### Three months or six, a fixed end date.
 
 We agree two or three outcomes you can measure at the start.
 
-### A decision every session.
+### Decisions every session.
 
-You leave with actions and dates, and we check them next time.
+You leave with decisions made and actions agreed, and we check them next time.
 
 ### My honest view.
 
@@ -104,7 +104,18 @@ Questions first, then a straight answer when you want one.
 
 What you bring stays between us, including when your company is paying.
 
-The price. Six months, a session a week, about 24 sessions in all, for £7,200. If you would rather stop at the halfway point, three months costs £3,600. Many vice presidents have this funded by their company, and I am happy to speak with your sponsor or L&D team.
+### What you get
+
+- A one-hour session every week, online: 12 over three months, or 24 over six
+- Unlimited contact with me between sessions
+- Your CliftonStrengths and FITT16 profiles
+- Decisions and actions from every session
+- A copy of the finished board each time
+- My honest view, in confidence
+
+Within the first few weeks, most leaders feel less frustrated, because they finally have somewhere to talk their challenges through.
+
+The price. Three months for £3,600, or six months for £7,200. A session a week either way. Many vice presidents have this funded by their company, and I am happy to speak with your sponsor or L&D team.
 
 [Download a one-page summary for your L&D team (PDF)](https://catalystgrowthcoach.co.uk/downloads/leadstrong-medtech-summary.pdf)
 

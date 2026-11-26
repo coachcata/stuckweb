@@ -535,7 +535,7 @@ const facts = [
   "- Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.",
   "- Way in: one free Whiteboard Session, open to anyone.",
 ];
-facts.push("- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Six months, weekly, £7,200.");
+facts.push("- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Weekly, three months for £3,600 or six months for £7,200.");
 facts.push("- TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.");
 if (entity.confirmed.menOnly) facts.push("- Why men only: " + entity.confirmed.menOnly);
 if (entity.confirmed.price) facts.push("- Price: " + entity.confirmed.price.text);
@@ -564,7 +564,7 @@ A circle is the five men who meet together for the year.
 
 - [Home](${SITE}/): the practice and the free Whiteboard Session
 - [LeadStrong](${SITE}/leadstrong): six months of weekly Whiteboard Sessions for a corporate leader
-- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Six months, weekly, £7,200.
+- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Weekly, three months for £3,600 or six months for £7,200.
 - Plain text: [for vice presidents](${SITE}/mdsvp.md), [for sales directors](${SITE}/mdsdir.md)
 - [Leadership Hub](https://learn.catalystgrowthcoach.co.uk/): the Fluency Series in podcast, slides and infographic form
 
