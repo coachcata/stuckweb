@@ -54,7 +54,7 @@ I tell you plainly, and kindly, how you come across , including when you are the
 
 ## Your thinking, out of your head and onto an online whiteboard
 
-Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the board, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
+Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
 
 I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Most sessions run online, with the whiteboard shared live on your screen. In person works too.
 
@@ -107,8 +107,8 @@ What you bring stays between us, including when your company is paying.
 ### What you get
 
 - A one-hour session every week, online: 12 over three months, or 24 over six
-- Unlimited contact with me between sessions
-- Your CliftonStrengths and FITT16 profiles
+- Unlimited contact with me between sessions, by message or email, with a reply within one working day
+- Your CliftonStrengths and FITT16 profiles, which show how you think and lead at your best Read more CliftonStrengths is Gallup’s strengths assessment, used by most of the Fortune 500. You answer an online questionnaire before we start, and it ranks 34 talents in your order, from the ones you lean on most to the ones you use least. It shows how you naturally think, decide, build relationships and influence others. FITT16 is built from your full CliftonStrengths results and places you in one of sixteen leadership types. Where CliftonStrengths shows what you do well, FITT16 shows the drive underneath it: what motivates you, how you approach people and change, and the kind of work and setting where you do your best. We go through both together early on. After that they stay in the background, and we bring them in whenever the question is about you: how you come across, where pressure pulls you off course, and how to play to your strengths in the next role.
 - Decisions and actions from every session
 - A copy of the finished board each time
 - My honest view
@@ -116,7 +116,7 @@ What you bring stays between us, including when your company is paying.
 
 Within the first few weeks, most leaders feel less frustrated, because they finally have somewhere to talk their challenges through.
 
-The price. Three months for £3,600, or six months for £7,200. A session a week either way. Many directors have this funded by their company, and I am happy to speak with your sponsor or L&D team.
+The price. Three months for £3,600, or six months for £7,200, plus VAT. A session a week either way. Many directors have this funded by their company, and I am happy to speak with your sponsor or L&D team.
 
 [Download a one-page summary for your L&D team (PDF)](https://catalystgrowthcoach.co.uk/downloads/leadstrong-medtech-summary.pdf)
 

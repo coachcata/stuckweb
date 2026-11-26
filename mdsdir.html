@@ -653,6 +653,13 @@
   .get-list li { font-family: var(--font-b); font-size: 1rem; line-height: 1.6; color: var(--stone); padding: 0.75rem 0 0.75rem 1.6rem; border-top: 1px solid var(--line); position: relative; }
   .get-list li:last-child { border-bottom: 1px solid var(--line); }
   .get-list li::before { content: "\2014"; position: absolute; left: 0; color: var(--cognac); }
+  .get-list .profile-more { margin-top: .6rem; }
+  .get-list .profile-more summary { cursor: pointer; color: var(--cognac); font-size: .95rem; list-style: none; display: inline-block; border-bottom: 1px solid currentColor; }
+  .get-list .profile-more summary::-webkit-details-marker { display: none; }
+  .get-list .profile-more summary::after { content: " +"; }
+  .get-list .profile-more[open] summary::after { content: " \2212"; }
+  .get-list .profile-more p { margin-top: .9rem; font-size: .95rem; line-height: 1.65; color: var(--stone); }
+  .get-list .profile-more strong { color: var(--bone); font-weight: 500; }
   .get-list .early-win { margin-top: 1.6rem; font-family: var(--font-d); font-style: italic; font-size: 1.2rem; line-height: 1.5; color: var(--bone); }
   .pack-download { margin-top: 1.4rem; font-family: var(--font-b); font-size: 0.95rem; }
   .pack-download a { color: var(--cognac); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; }
@@ -824,7 +831,7 @@
       "@id": "https://catalystgrowthcoach.co.uk/mdsdir#service",
       "name": "LeadStrong",
       "serviceType": "One-to-one executive coaching",
-      "description": "Six months of weekly one-to-one coaching at the whiteboard, about 24 sessions, on two or three outcomes agreed at the start. £7,200 for six months, or £3,600 to stop at three months.",
+      "description": "Weekly one-to-one coaching at an online whiteboard, on two or three outcomes agreed at the start. £3,600 for three months or £7,200 for six, plus VAT.",
       "provider": {
         "@id": "https://catalystgrowthcoach.co.uk/#organization"
       },
@@ -902,7 +909,7 @@
       <h1 class="long">You deliver the number every year. You want to be known for <em>where the business goes next</em>.</h1>
       <p class="lede plain">One-to-one coaching at an online whiteboard for sales directors in medical device companies who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.</p>
       <div class="hero-actions">
-        <a href="#book" class="button" data-book="hero">Book a Whiteboard Session</a>
+        <a href="#book" class="button" data-book="hero">Book a free Whiteboard Session</a>
       </div>
     </div>
     <div class="feature-image">
@@ -966,7 +973,7 @@
   <div class="folio"><span>The method</span></div>
   <h2 class="pack-h2">Your thinking, out of your head and onto an online whiteboard</h2>
   <div class="pack-body">
-    <p>Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the board, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.</p>
+    <p>Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.</p>
     <p>I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Most sessions run online, with the whiteboard shared live on your screen. In person works too.</p>
   </div>
 </section>
@@ -1031,8 +1038,15 @@
     <h3>What you get</h3>
     <ul>
       <li>A one-hour session every week, online: 12 over three months, or 24 over six</li>
-      <li>Unlimited contact with me between sessions</li>
-      <li>Your CliftonStrengths and FITT16 profiles</li>
+      <li>Unlimited contact with me between sessions, by message or email, with a reply within one working day</li>
+      <li>Your CliftonStrengths and FITT16 profiles, which show how you think and lead at your best
+        <details class="profile-more">
+          <summary>Read more</summary>
+          <p><strong>CliftonStrengths</strong> is Gallup&rsquo;s strengths assessment, used by most of the Fortune 500. You answer an online questionnaire before we start, and it ranks 34 talents in your order, from the ones you lean on most to the ones you use least. It shows how you naturally think, decide, build relationships and influence others.</p>
+          <p><strong>FITT16</strong> is built from your full CliftonStrengths results and places you in one of sixteen leadership types. Where CliftonStrengths shows what you do well, FITT16 shows the drive underneath it: what motivates you, how you approach people and change, and the kind of work and setting where you do your best.</p>
+          <p>We go through both together early on. After that they stay in the background, and we bring them in whenever the question is about you: how you come across, where pressure pulls you off course, and how to play to your strengths in the next role.</p>
+        </details>
+      </li>
       <li>Decisions and actions from every session</li>
       <li>A copy of the finished board each time</li>
       <li>My honest view</li>
@@ -1040,7 +1054,7 @@
     </ul>
     <p class="early-win">Within the first few weeks, most leaders feel less frustrated, because they finally have somewhere to talk their challenges through.</p>
   </div>
-  <p class="price-line"><strong>The price.</strong> Three months for &pound;3,600, or six months for &pound;7,200. A session a week either way. Many directors have this funded by their company, and I am happy to speak with your sponsor or L&amp;D team.</p>
+  <p class="price-line"><strong>The price.</strong> Three months for &pound;3,600, or six months for &pound;7,200, plus VAT. A session a week either way. Many directors have this funded by their company, and I am happy to speak with your sponsor or L&amp;D team.</p>
   <p class="pack-download"><a href="/downloads/leadstrong-medtech-summary.pdf" download>Download a one-page summary for your L&amp;D team (PDF)</a></p>
 </section>
 
@@ -1066,7 +1080,7 @@
       <option>A colleague</option>
       <option>Other</option>
     </select>
-    <div class="submit"><button type="submit" class="button" data-book="form">Book a Whiteboard Session</button></div>
+    <div class="submit"><button type="submit" class="button" data-book="form">Book a free Whiteboard Session</button></div>
   </form>
   <div id="sent" class="sent"><p>Got it. I will be in touch within one working day.<br>John</p></div>
 </section>
@@ -1092,7 +1106,7 @@
     <a href="/contact">Contact</a>
   </div>
   <div class="fine">
-    <span>© 2026 Catalyst Growth Coaching, London · Est. 2020</span>
+    <span>© 2026 Catalyst Growth Coaching, London and Milton Keynes · Est. 2020</span>
   </div>
 </footer>
 

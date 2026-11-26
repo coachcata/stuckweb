@@ -2,7 +2,7 @@
 
 # A men’s business group for owner-managers in Milton Keynes
 
-at.theboard circles is a men’s business group in Milton Keynes for owners running businesses of roughly £500k to £5m with five to twenty-five staff. Five men form a circle and stay together for twelve months. Once a month the circle meets in person at the Shire Retreat for a walk and a half day at the whiteboard, and a fortnight later it meets online for ninety minutes. Every man’s challenge goes on the whiteboard every month, and every man leaves with what he said he would do written up in his own hand, with a date against it. The year is built to change the business: more profit and more of it to you, turnover past where you have stalled, sales that do not all run through you, and a business that needs you less. It is run by John Obidipe of Catalyst Growth Coaching.
+at.theboard circles is a men’s business group in Milton Keynes for owners running businesses of roughly £250k to £5m with five to twenty-five staff. Five men form a circle and stay together for twelve months. Once a month the circle meets in person at the Shire Retreat for a walk and a half day at the whiteboard, and a fortnight later it meets online for ninety minutes. Every man’s challenge goes on the whiteboard every month, and every man leaves with what he said he would do written up in his own hand, with a date against it. The year is built to change the business: more profit and more of it to you, turnover past where you have stalled, sales that do not all run through you, and a business that needs you less. It is run by John Obidipe of Catalyst Growth Coaching.
 
 ## What you turn up to
 
@@ -74,7 +74,7 @@ Miss commitments without saying why and you and I talk before the next session. 
 
 ## Who runs it
 
-John Obidipe runs at.theboard. He has spent more than fifteen years in consulting and executive coaching. He has coached leaders inside Toyota, Convatec and the University of Oxford, and owners running firms of £500k to £5m. He is Gallup-certified in CliftonStrengths, a questionnaire that shows how each person thinks and works best. Every member takes CliftonStrengths when he joins.
+John Obidipe runs at.theboard. He has spent more than fifteen years in consulting and executive coaching. He has coached leaders inside Toyota, Convatec and the University of Oxford, and owners running firms of £250k to £5m. He is Gallup-certified in CliftonStrengths, a questionnaire that shows how each person thinks and works best. Every member takes CliftonStrengths when he joins.
 
 I will not tell you how to run your business. What I will do is bring what I have seen work and fail in other companies, large and small. Then we find the answer together, rather than me handing you one.
 
@@ -90,7 +90,7 @@ Yes. at.theboard circles is a group of five male owner-managers in Milton Keynes
 
 ### Who is it for?
 
-Men who own and run a business in or near Milton Keynes, usually with £500k to £5m turnover and five to twenty-five staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do. Smaller businesses are welcome to book a Whiteboard Session and talk.
+Men who own and run a business in or near Milton Keynes, usually with £250k to £5m turnover and five to twenty-five staff, who are still doing a lot of the work themselves and want four other owners holding them to what they say they will do. Smaller businesses are welcome to book a Whiteboard Session and talk.
 
 ### How often does the circle meet?
 
@@ -106,7 +106,7 @@ Twelve months. The circle stays the same five men for the year, because the valu
 
 ### How much does it cost?
 
-£550 a month for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.
+£550 a month plus VAT for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.
 
 ### How is this different from a networking group?
 
