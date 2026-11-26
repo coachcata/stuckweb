@@ -26,11 +26,11 @@ It is hard to see how you lead from inside your own area. So we step outside it 
 
 ## One day, and every leader takes something back to their team
 
-A single, high impact day at your venue or ours, in the setting you choose. Each leader leaves with a clear picture of how they show up, and two or three changes to take back to their own team.
+A single, high impact day at your venue or ours at the Shire Retreat, Milton Keynes, in the setting you choose. Each leader leaves with a clear picture of how they show up, and two or three changes to take back to their own team.
 
 ### The immersive building experience.
 
-A team building experience that every leader takes part in. On the immersive mini construction site, six metres by three and brought to your venue, you plan and build together through competitions and activities. Each leader’s habits show up quickly, and we talk about how you communicate, how you plan, who takes ownership and how you work with others.
+A team building experience that every leader takes part in. On a mini construction site with real small diggers and machines, six metres by three and brought to your venue, you plan and build together through competitions and activities. Each leader’s habits show up quickly, and we talk about how you communicate, how you plan, who takes ownership and how you work with others.
 
 Site footage coming soon.
 
@@ -42,7 +42,7 @@ Each leader brings a live problem from their own area, and we harness the creati
 
 When cohesion and collaboration are the focus, you need to go beyond skin deep. Everyone completes FITT16 and CliftonStrengths beforehand, so each leader understands the others at a deep level, and sees what their own way of leading means for the people who report to them.
 
-From £3,500 plus VAT for a leadership team, priced on numbers. One price, with everything included.
+From £3,500 plus VAT, depending on the size of your team. One price for your team, agreed up front, with everything included.
 
 ## Each leader growing, month by month
 

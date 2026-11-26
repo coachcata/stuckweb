@@ -20,11 +20,11 @@ Ask a leadership team how they work together and you will hear how they would li
 
 ## One day your team will still be talking about months later
 
-A single, high impact day at your venue or ours, in the setting you choose. Each leads to the same place: a clear, shared picture of how you really work as a team, and two or three changes you agree before you leave.
+A single, high impact day at your venue or ours at the Shire Retreat, Milton Keynes, in the setting you choose. Each leads to the same place: a clear, shared picture of how you really work as a team, and two or three changes you agree before you leave.
 
 ### The immersive building experience.
 
-A team building experience that everyone takes part in. On the immersive mini construction site, six metres by three and brought to your venue, your team plans and builds together through competitions and activities. Along the way we talk about how you communicate, how you plan, who takes ownership and how you work with each other.
+A team building experience that everyone takes part in. On a mini construction site with real small diggers and machines, six metres by three and brought to your venue, your team plans and builds together through competitions and activities. Along the way we talk about how you communicate, how you plan, who takes ownership and how you work with each other.
 
 Site footage coming soon.
 
@@ -36,7 +36,7 @@ We harness the creativity and problem solving of the whole group, live at the wh
 
 When cohesion and collaboration are the focus, you need to go beyond skin deep. Everyone completes FITT16 and CliftonStrengths beforehand, so team members understand each other at a deep level, work more productively together and head off conflict before it starts.
 
-From £3,500 plus VAT for a leadership team, priced on numbers. One price, with everything included.
+From £3,500 plus VAT, depending on the size of your team. One price for your team, agreed up front, with everything included.
 
 ## When we want lasting change
 

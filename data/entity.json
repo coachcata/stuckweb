@@ -44,7 +44,7 @@
   "confirmed": {
     "_readme": "Set either to the approved wording once John confirms it. While null, it stays off the page, the schema, board.md and llms.txt.",
     "price": {
-      "text": "£550 a month for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.",
+      "text": "£550 a month plus VAT for members of the first circle, held at that rate for as long as they stay. Later circles pay more. Month thirteen and the quarterly Reset day are priced separately at cost.",
       "offer": {
         "@type": "Offer",
         "price": "550",

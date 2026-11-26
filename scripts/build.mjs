@@ -234,7 +234,7 @@ const PAGES = {
       "@type": "Service", "@id": url + "#service", name: "at.theboard men's business group",
       serviceType: "Peer advisory group for business owners", provider: { "@id": entity.board.id },
       areaServed: city, url,
-      audience: { "@type": "BusinessAudience", name: "Male owner-managers of businesses with £500k to £5m turnover" },
+      audience: { "@type": "BusinessAudience", name: "Male owner-managers of businesses with £250k to £5m turnover" },
     };
     if (entity.confirmed.price) service.offers = entity.confirmed.price.offer;
     return [
@@ -266,7 +266,7 @@ const PAGES = {
 const SERVICES = {
   "leadstrong.html": [{
     slug: "leadstrong", name: "LeadStrong",
-    description: "Six months of weekly Whiteboard Sessions for a corporate leader, around twenty-four sessions, on two or three outcomes agreed at the start. £7,200 for the whole engagement, which is £300 a session, with the option to stop at three months and pay £3,600.",
+    description: "Three or six months of weekly Whiteboard Sessions for a corporate leader, around twelve or twenty-four sessions, on two or three outcomes agreed at the start. £3,600 for three months or £7,200 for six, plus VAT, which is £300 a session.",
     price: 7200,
   }],
 };
@@ -379,7 +379,7 @@ for (const [file, t] of Object.entries(MEDTECH)) {
       {
         "@type": "Service", "@id": url + "#service", name: "LeadStrong",
         serviceType: "One-to-one executive coaching",
-        description: "Six months of weekly one-to-one coaching at the whiteboard, about 24 sessions, on two or three outcomes agreed at the start. £7,200 for six months, or £3,600 to stop at three months.",
+        description: "Weekly one-to-one coaching at an online whiteboard, on two or three outcomes agreed at the start. £3,600 for three months or £7,200 for six, plus VAT.",
         provider: { "@id": entity.catalyst.id }, url,
         isRelatedTo: { "@id": SITE + "/leadstrong#service" },
         audience: { "@type": "BusinessAudience", name: t.audience },
@@ -409,13 +409,13 @@ PAGES["board-one-to-one.html"] = (html) => {
     {
       "@type": "Service", "@id": url + "#service", name: "at.theboard one-to-one",
       serviceType: "One-to-one business coaching for owners",
-      description: "Six months of fortnightly one-to-one coaching at the whiteboard for business owners, men and women, online or in person in Milton Keynes. Twelve sessions of 90 minutes. £600 a month, £3,600 for the six months, or £1,800 to stop at three months.",
+      description: "Six months of fortnightly one-to-one coaching at the whiteboard for business owners, men and women, online or in person in Milton Keynes. Twelve sessions of 90 minutes. £600 a month plus VAT, £3,600 for the six months, or £1,800 to stop at three months.",
       provider: { "@id": entity.board.id }, url,
       areaServed: [city, { "@type": "Country", name: "United Kingdom" }],
       audience: { "@type": "BusinessAudience", name: "Business owners, men and women, with 5 to 25 staff" },
       offers: {
         "@type": "Offer", price: "600", priceCurrency: "GBP", url: url + "#book",
-        description: "£600 a month for six months (£3,600), or £1,800 if you stop at three months",
+        description: "£600 a month plus VAT for six months (£3,600), or £1,800 if you stop at three months",
         priceSpecification: { "@type": "UnitPriceSpecification", price: 600, priceCurrency: "GBP", unitText: "MONTH" },
       },
     },
@@ -535,7 +535,7 @@ const facts = [
   "- Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.",
   "- Way in: one free Whiteboard Session, open to anyone.",
 ];
-facts.push("- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Six months, weekly, £7,200.");
+facts.push("- LeadStrong for medical devices: one-to-one coaching at an online whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Weekly, three months for £3,600 or six months for £7,200, plus VAT.");
 facts.push("- TeamStrong: for leadership teams of five to ten. The Day is one high impact day from £3,500 plus VAT, priced on numbers. The Six Months is one session a month, one-to-ones included, price agreed with each team.");
 if (entity.confirmed.menOnly) facts.push("- Why men only: " + entity.confirmed.menOnly);
 if (entity.confirmed.price) facts.push("- Price: " + entity.confirmed.price.text);
@@ -563,8 +563,8 @@ A circle is the five men who meet together for the year.
 ## Catalyst Growth Coaching
 
 - [Home](${SITE}/): the practice and the free Whiteboard Session
-- [LeadStrong](${SITE}/leadstrong): six months of weekly Whiteboard Sessions for a corporate leader
-- LeadStrong for medical devices: one-to-one coaching at the whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Six months, weekly, £7,200.
+- [LeadStrong](${SITE}/leadstrong): three or six months of weekly Whiteboard Sessions for a corporate leader
+- LeadStrong for medical devices: one-to-one coaching at an online whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Weekly, three months for £3,600 or six months for £7,200, plus VAT.
 - Plain text: [for vice presidents](${SITE}/mdsvp.md), [for sales directors](${SITE}/mdsdir.md)
 - [Leadership Hub](https://learn.catalystgrowthcoach.co.uk/): the Fluency Series in podcast, slides and infographic form
 
