@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ════ GOOGLE ANALYTICS (GA4) ════ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z17HSYFCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2Z17HSYFCV');
+</script>
+<!-- ════ END GOOGLE ANALYTICS ════ -->
+
+<title>Why does this role feel so much harder than it should? | Catalyst Growth Coaching</title>
+
+<meta name="description" content="Why the vice president role in medical devices feels so hard: the sector, the matrix, and the fear underneath. And what helps." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://catalystgrowthcoach.co.uk/medtech/why-the-vp-role-feels-so-hard" />
+<meta property="og:title" content="Why does this role feel so much harder than it should?" />
+<meta property="og:description" content="Why the vice president role in medical devices feels so hard: the sector, the matrix, and the fear underneath. And what helps." />
+<meta property="og:image" content="https://catalystgrowthcoach.co.uk/videos/teams/team-convatec-lisbon-poster.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://catalystgrowthcoach.co.uk/medtech/why-the-vp-role-feels-so-hard" />
+<link rel="alternate" type="text/markdown" href="https://catalystgrowthcoach.co.uk/mdsvp.md" title="Coaching for vice presidents in medical devices, plain text" />
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:         #0C0C0E;
+    --bg-2:       #0A0A0C;
+    --bg-3:       #1A1A20;
+    --card:       #1E1E26;
+    --bone:       #F2F0EC;
+    --stone:      #A8A5A0;
+    --ash:        #6B6862;
+    --cognac:     #C8956C;
+    --cognac-2:   #D4A97D;
+    --line:       rgba(200,149,108,0.12);
+    --line-strong:rgba(200,149,108,0.28);
+    --font-d: 'Cormorant Garamond', Georgia, serif;
+    --font-b: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--bone);
+    font-family: var(--font-b); line-height: 1.7;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  ::selection { background: var(--cognac); color: var(--bg); }
+
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 2.5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(12,12,14,0.82);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .brand {
+    font-family: var(--font-d); font-size: 1.2rem; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
+  }
+  nav.top .brand span { color: var(--cognac); }
+  nav.top ul { display: flex; gap: 2rem; list-style: none; align-items: center; }
+  nav.top ul a {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--stone); text-decoration: none; font-weight: 500; transition: color 0.3s;
+  }
+  nav.top ul a:hover { color: var(--cognac); }
+  nav.top ul a.cta {
+    color: var(--cognac); border: 1px solid var(--line-strong);
+    padding: 0.7rem 1.3rem; border-radius: 2px; transition: all 0.3s;
+  }
+  nav.top ul a.cta:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  nav.top .has-dropdown { position: relative; }
+  nav.top .has-dropdown > a::after {
+    content: '▾'; margin-left: 0.4rem; font-size: 0.7em; color: var(--cognac); opacity: 0.6;
+  }
+  nav.top .dropdown {
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+    background: rgba(12,12,14,0.95);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    padding: 0.8rem 0; min-width: 180px;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
+    list-style: none;
+  }
+  nav.top .has-dropdown:hover .dropdown,
+  nav.top .has-dropdown:focus-within .dropdown {
+    opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0);
+  }
+  nav.top .dropdown { gap: 0; } /* menu: items sit close together */
+  nav.top .dropdown a { white-space: nowrap; /* menu */
+    display: block; padding: 0.6rem 1.4rem; font-size: 0.7rem;
+    letter-spacing: 0.18em; color: var(--stone);
+  }
+  nav.top .dropdown a:hover { color: var(--cognac); background: rgba(200,149,108,0.06); }
+
+  section.scene { min-height: auto; padding: 14vh 6vw; position: relative; display: flex; }
+  .folio { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ash); }
+  .folio span { color: var(--cognac); }
+
+  .image-placeholder {
+    width: 100%; height: 100%;
+    background: #1A1A20; border: 1px dashed var(--cognac);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cognac);
+    font-family: var(--font-b); font-size: 0.85rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    text-align: center; padding: 1rem;
+  }
+  .image-placeholder::before { content: 'Image: '; opacity: 0.6; margin-right: 0.4em; }
+
+  .scene-feature-hero {
+    padding-top: 16vh; flex-direction: column; justify-content: center; min-height: 90vh;
+  }
+  .scene-feature-hero .feature-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5vw; align-items: center;
+  }
+  .scene-feature-hero .feature-text {
+    display: flex; flex-direction: column; gap: 2rem;
+  }
+  .scene-feature-hero .eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .scene-feature-hero .eyebrow em { font-style: italic; font-weight: 600; }
+  .scene-feature-hero h1 {
+    font-family: var(--font-d); font-weight: 400;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.95; letter-spacing: -0.015em; color: var(--bone);
+  }
+  .scene-feature-hero .lede {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.5; color: var(--stone); max-width: 36ch;
+  }
+  /* img-1981.jpg native 2000x923 (2.17:1) */
+  .scene-feature-hero .feature-image {
+    width: 100%; aspect-ratio: 2000/923;
+    background: var(--bg-3); position: relative; overflow: hidden;
+  }
+  .scene-feature-hero .feature-image img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  .scene-argument {
+    flex-direction: column; justify-content: center;
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-argument .folio { margin-bottom: 4rem; }
+  .scene-argument .body {
+    max-width: 60ch; margin: 0 auto;
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.6; color: var(--stone);
+  }
+  .scene-argument .body p { margin-bottom: 1.4rem; }
+  .scene-argument .body p:last-child { margin-bottom: 0; }
+  .scene-argument .body em { font-style: italic; color: var(--bone); font-weight: 300; }
+  .scene-argument .body em.accent { color: var(--cognac); font-weight: 400; }
+  .scene-argument .body .lede,
+  .scene-argument .body .punchline {
+    font-style: italic; color: var(--bone);
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    line-height: 1.4;
+  }
+  .scene-argument .body .punchline {
+    margin-top: 2.5rem; padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .scene-split { flex-direction: column; }
+  .scene-split .folio { margin-bottom: 4rem; }
+  .scene-split .split-grid {
+    display: grid; grid-template-columns: 3fr 2fr;
+    gap: 5vw; align-items: center;
+  }
+  .scene-split .split-text h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    line-height: 1.15; margin-bottom: 2rem;
+  }
+  .scene-split .split-text h2 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-split .split-text .body {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 1.2rem; line-height: 1.65; color: var(--stone);
+  }
+  .scene-split .split-text .body p { margin-bottom: 1.2rem; }
+  .scene-split .split-text .body em { color: var(--cognac); font-style: italic; font-weight: 400; }
+  .scene-split .split-text .body em.phase {
+    color: var(--bone); font-style: italic; font-weight: 400;
+  }
+  .scene-split .split-text .body .punchline {
+    margin-top: 1.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 1.3rem; color: var(--bone); font-style: italic;
+  }
+  /* img-1987.jpg native 16:9 (landscape) */
+  .scene-split .split-image {
+    width: 100%; aspect-ratio: 16/9;
+    background: var(--bg-3); position: relative; overflow: hidden;
+  }
+  .scene-split .split-image img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  .scene-lenses { flex-direction: column; }
+  .scene-lenses .head { margin-bottom: 6vh; max-width: 820px; }
+  .scene-lenses .head .folio { margin-bottom: 1.5rem; }
+  .scene-lenses .head h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15; max-width: 22ch;
+  }
+  .lenses-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .lens {
+    padding: 3rem 2rem 3.5rem;
+    border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .lens:last-child { border-right: none; }
+  .lens .num {
+    font-family: var(--font-d); font-style: italic; font-size: 1.1rem; color: var(--cognac);
+  }
+  .lens h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.5rem; line-height: 1.2;
+    color: var(--cognac); margin-top: 0.5rem;
+  }
+  .lens .detail {
+    font-size: 0.98rem; color: var(--stone); line-height: 1.7; margin-top: 0.5rem;
+  }
+  .lens .detail em { font-style: italic; color: var(--cognac); }
+
+  .scene-one-thing {
+    flex-direction: column; justify-content: center; text-align: center;
+    align-items: center;
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-one-thing .folio { margin-bottom: 4rem; }
+  .scene-one-thing .one-thing {
+    font-family: var(--font-d); font-weight: 300; font-style: italic;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.25; color: var(--bone);
+    max-width: 26ch; margin-bottom: 2.5rem;
+  }
+  .scene-one-thing .support {
+    font-family: var(--font-b); font-size: 1.05rem;
+    line-height: 1.7; color: var(--stone); max-width: 48ch;
+  }
+  .scene-one-thing .support em { font-style: italic; color: var(--cognac); }
+
+  .scene-invitation {
+    flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 14vh 6vw;
+  }
+  .scene-invitation .folio { margin-bottom: 3rem; }
+  .scene-invitation .lede {
+    font-family: var(--font-d); font-weight: 300; font-style: italic;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    line-height: 1.25; color: var(--bone);
+    max-width: 32ch; margin-bottom: 1rem;
+  }
+  .scene-invitation .sub {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; color: var(--stone); margin-bottom: 3rem; max-width: 42ch;
+  }
+  .stepping-further {
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.05rem; color: var(--stone);
+    max-width: 48ch; line-height: 1.6;
+  }
+  .stepping-further a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px; transition: border-color 0.3s;
+  }
+  .stepping-further a:hover { border-color: var(--cognac); }
+
+  .button {
+    display: inline-block; padding: 1.1rem 2.6rem;
+    background: var(--cognac); color: var(--bg);
+    font-family: var(--font-b); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: none; border-radius: 2px; cursor: pointer;
+    text-decoration: none; transition: all 0.4s ease;
+  }
+  .button:hover { background: var(--cognac-2); transform: translateY(-2px); }
+
+  footer {
+    background: var(--bg); padding: 4rem 6vw 3rem;
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem;
+  }
+  footer .brand { font-family: var(--font-d); font-size: 1.4rem; font-weight: 500; }
+  footer .brand span { color: var(--cognac); }
+  footer .tag { font-family: var(--font-d); font-style: italic; color: var(--stone); margin-top: 1rem; font-size: 1rem; }
+  footer .col h4 {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 1.2rem;
+  }
+  footer .col a {
+    display: block; color: var(--stone); font-size: 0.88rem;
+    text-decoration: none; padding: 0.4rem 0; transition: color 0.3s;
+  }
+  footer .col a:hover { color: var(--cognac); }
+  footer .fine {
+    grid-column: 1 / -1; padding-top: 3rem; margin-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ash);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  footer .fine .signoff {
+    font-family: var(--font-d); font-style: italic;
+    text-transform: none; letter-spacing: 0; color: var(--stone); font-size: 0.9rem;
+  }
+
+  @media (max-width: 900px) {
+    nav.top { padding: 1rem 5vw; }
+    nav.top ul { gap: 1rem; }
+    nav.top ul li:nth-child(1) { display: none; }
+    nav.top .has-dropdown > a::after { display: none; }
+    nav.top .dropdown { display: none; }
+
+    .scene-feature-hero .feature-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-feature-hero .feature-image { order: -1; }
+    .scene-split .split-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .scene-split .split-image { max-height: 50vh; }
+
+    .lenses-grid { grid-template-columns: 1fr; }
+    .lens { border-right: none; border-bottom: 1px solid var(--line); }
+    .lens:last-child { border-bottom: none; }
+
+    footer { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer .fine { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  }
+
+  /* Narrow phones: keep the wordmark on one line and the CTA on screen */
+  @media (max-width: 600px) {
+    nav.top { padding: 0.9rem 5vw; gap: 0.8rem; }
+    nav.top .brand { font-size: 0.95rem; white-space: nowrap; }
+    nav.top ul { gap: 0.9rem; flex-shrink: 0; }
+    nav.top ul li:nth-child(3) { display: none; }
+    nav.top ul a { font-size: 0.62rem; letter-spacing: 0.14em; }
+    nav.top ul a.cta { padding: 0.55rem 0.9rem; }
+  }
+
+  .book-note{margin-top:1.1rem;font-family:var(--font-d);font-style:italic;font-weight:300;font-size:1rem;line-height:1.6;color:var(--stone);}
+  
+  /* ══ Quote card ══ */
+  .quote-card {
+    padding: 2.5rem 2rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .quote-card .mark {
+    font-family: var(--font-d); font-style: italic;
+    font-size: 3rem; color: var(--cognac);
+    line-height: 1; opacity: 0.5;
+  }
+  .quote-card blockquote {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.2rem; line-height: 1.55; color: var(--bone);
+    flex-grow: 1;
+  }
+  .quote-card blockquote em {
+    font-style: italic; color: var(--cognac); font-weight: 400;
+  }
+  .quote-card .attr {
+    display: flex; flex-direction: column; gap: 0.3rem;
+    padding-top: 1.5rem; border-top: 1px solid var(--line);
+  }
+  .quote-card .attr .name {
+    font-size: 0.92rem; color: var(--bone); font-weight: 500;
+  }
+  .quote-card .attr .meta {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ash);
+  }
+  .quote-card .attr .meta .prog { color: var(--cognac); }
+
+  /* ══ Shared programme components (LeadStrong, TeamStrong and the medtech pages): keep identical ══ */
+  .scene-prose { flex-direction: column; }
+  section.scene[id] { scroll-margin-top: 5.5rem; }
+  .scene-prose.alt, .scene-proof-block {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .scene-prose .folio, .scene-proof-block .folio, .scene-work .folio,
+  .scene-session .folio, .scene-complaints .folio, .scene-cards .folio { margin-bottom: 3rem; }
+  .scene-prose .eyebrow, .scene-proof-block .eyebrow, .scene-work .eyebrow,
+  .scene-session .eyebrow, .scene-complaints .eyebrow, .scene-cards .eyebrow { display: block; margin-bottom: 3rem; }
+  .pack-h2 {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    line-height: 1.15; max-width: 26ch; margin-bottom: 2rem; color: var(--bone);
+  }
+  .barriers { max-width: 980px; }
+  .barrier { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0 1.6rem; padding: 3.2rem 0; border-top: 1px solid var(--line); }
+  .barrier:last-child { padding-bottom: 0; }
+  .barrier .num { font-family: var(--font-d); font-style: italic; font-size: 1.5rem; color: var(--cognac); line-height: 1.3; }
+  .barrier .label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cognac); margin-bottom: 1.1rem; }
+  .barrier .voice { font-family: var(--font-d); font-style: italic; font-weight: 300; font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.22; color: var(--bone); max-width: 24ch; margin-bottom: 1.6rem; }
+  .barrier .answer { font-family: var(--font-d); font-weight: 300; font-size: clamp(1.1rem, 1.6vw, 1.25rem); line-height: 1.65; color: var(--stone); max-width: 60ch; }
+  .barrier .answer p + p { margin-top: 1rem; }
+  .barrier .answer strong { font-weight: 500; color: var(--bone); }
+  @media (max-width: 640px) { .barrier { grid-template-columns: 1fr; padding: 2.4rem 0; } .barrier .num { margin-bottom: 0.6rem; } }
+  .pack-lead {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.6;
+    color: var(--stone); max-width: 62ch; margin-bottom: 3.5rem;
+  }
+  .pack-body {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem); line-height: 1.65;
+    color: var(--stone); max-width: 62ch;
+  }
+  .pack-body p { margin-bottom: 1.4rem; }
+  .pack-body p:last-child { margin-bottom: 0; }
+  .pack-body a, .pack-cred a, .pack-signpost a, .scene-argument .body a {
+    color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); transition: border-color 0.3s;
+  }
+  .pack-body a:hover, .pack-cred a:hover, .pack-signpost a:hover, .scene-argument .body a:hover { border-color: var(--cognac); }
+  .pack-close {
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line);
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.45;
+    color: var(--bone); max-width: 52ch;
+  }
+
+  /* Proof block: credentials left, two testimonials right, logo strip beneath */
+  .scene-proof-block { flex-direction: column; }
+  .proof-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem 5vw; align-items: start;
+  }
+  .pack-cred {
+    font-family: var(--font-d); font-weight: 300;
+    font-size: 1.2rem; line-height: 1.7; color: var(--stone);
+  }
+  .proof-quotes { display: flex; flex-direction: column; gap: 2rem; }
+  .proof-quotes .quote-card { background: var(--bg); }
+  .proof-pull {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1.3; color: var(--bone);
+  }
+  .proof-logos {
+    margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem 3rem; align-items: center; justify-items: center;
+  }
+  .proof-logos.six { grid-template-columns: repeat(3, 1fr); }
+  .proof-logos .logo-cell {
+    width: 100%; max-width: 150px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .proof-logos .logo-cell img {
+    max-height: 44px; max-width: 100%; width: auto; height: auto; object-fit: contain;
+    filter: brightness(0) invert(1); opacity: 0.7;
+  }
+
+  /* Fixed-term Work rail: stages in columns, price line beneath */
+  .scene-work, .scene-session, .scene-complaints, .scene-cards { flex-direction: column; }
+  .work-rail {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong);
+  }
+  .work-rail.four { grid-template-columns: repeat(4, 1fr); }
+  .work-rail + .work-rail { margin-top: 3rem; }
+  .work-stage {
+    padding: 2.5rem 2rem 3rem; border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .work-stage:last-child { border-right: none; }
+  .work-stage .num { font-family: var(--font-d); font-style: italic; font-size: 1.05rem; color: var(--cognac); }
+  .work-stage h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.45rem; line-height: 1.2; color: var(--cognac);
+  }
+  .work-stage p { font-size: 0.98rem; color: var(--stone); line-height: 1.7; }
+  .price-line {
+    margin-top: 3rem; padding: 1.8rem 2rem;
+    border-left: 2px solid var(--cognac); background: var(--bg-3);
+    font-size: 1.02rem; line-height: 1.7; color: var(--bone); max-width: 72ch;
+  }
+  .pack-note {
+    margin-top: 2.5rem; font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.15rem; line-height: 1.6; color: var(--stone); max-width: 62ch;
+  }
+  .pack-strip {
+    margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 720px;
+  }
+  .pack-strip img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+
+  /* "A Session": three blocks */
+  .session-blocks {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .session-block {
+    padding: 2.5rem 2rem; background: var(--card);
+    border: 1px solid var(--line); border-radius: 4px;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .session-block h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.4rem; line-height: 1.25; color: var(--cognac);
+  }
+  .session-block p { font-size: 0.98rem; color: var(--stone); line-height: 1.7; }
+
+  /* Cards grid (what people bring, where it starts) */
+  .pack-cards {
+    display: grid; gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+  .pack-card {
+    padding: 2.2rem 2rem; border: 1px solid var(--line); border-radius: 4px;
+    background: var(--bg-2); display: flex; flex-direction: column; gap: 0.9rem;
+  }
+  .pack-card h3 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: 1.3rem; line-height: 1.3; color: var(--bone);
+  }
+  .pack-card p { font-size: 0.96rem; color: var(--stone); line-height: 1.7; }
+
+  /* Two-column complaints table */
+  .complaints { width: 100%; border-collapse: collapse; }
+  .complaints th {
+    text-align: left; font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; padding: 0 2rem 1.2rem 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .complaints td {
+    padding: 1.8rem 2rem 1.8rem 0; border-bottom: 1px solid var(--line);
+    vertical-align: top; line-height: 1.7;
+  }
+  .complaints td:first-child {
+    width: 42%; font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: 1.25rem; line-height: 1.45; color: var(--bone);
+  }
+  .complaints td:last-child { font-size: 0.98rem; color: var(--stone); padding-right: 0; }
+
+  /* One thing worth knowing: the signpost line */
+  .pack-signpost {
+    margin-top: 2rem; font-family: var(--font-b); font-size: 1rem;
+    line-height: 1.7; color: var(--stone); max-width: 48ch;
+  }
+
+  /* Photos and living-photo clips between the text */
+  .online-films { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; max-width: 900px; }
+  .online-films video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; background: var(--bg-3); }
+  @media (max-width: 640px) { .online-films { gap: .5rem; } }
+  .pack-figure {
+    margin: 4rem 0 0; width: 100%; aspect-ratio: 16/9;
+    overflow: hidden; background: var(--bg-3);
+  }
+  .pack-figure img, .pack-figure video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pack-pair { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .pack-pair .pack-figure { margin: 0; aspect-ratio: 3/2; }
+
+  @media (max-width: 900px) {
+    .pack-pair { grid-template-columns: 1fr; gap: 1rem; }
+    .pack-figure { margin-top: 2.5rem; max-height: 60vh; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .proof-logos, .proof-logos.six { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .work-rail, .work-rail.four { grid-template-columns: 1fr; }
+    .work-stage { border-right: none; border-bottom: 1px solid var(--line); padding: 2rem 0; }
+    .work-stage:last-child { border-bottom: none; }
+    .session-blocks { grid-template-columns: 1fr; }
+    .price-line { padding: 1.4rem 1.2rem; }
+    .complaints thead { display: none; }
+    .complaints, .complaints tbody, .complaints tr, .complaints td { display: block; width: 100%; }
+    .complaints tr { padding: 1.6rem 0; border-bottom: 1px solid var(--line); }
+    .complaints td { border-bottom: none; padding: 0; }
+    .complaints td:first-child { width: 100%; margin-bottom: 0.8rem; }
+  }
+
+  /* ══ TeamStrong rebuild, November 2026 ══ */
+  .scene-feature-hero h1.long {
+    font-size: clamp(2.4rem, 4.8vw, 3.9rem); line-height: 1.06; letter-spacing: -0.01em;
+  }
+  .scene-feature-hero h1 em { font-style: italic; color: var(--cognac); font-weight: 400; }
+  .scene-feature-hero .feature-image.photo { aspect-ratio: 4/3; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .button.secondary {
+    background: transparent; color: var(--cognac);
+    border: 1px solid var(--line-strong); padding: calc(1.1rem - 1px) calc(2.6rem - 1px);
+  }
+  .button.secondary:hover { background: rgba(200,149,108,0.08); border-color: var(--cognac); }
+  .scene-hero-solo { min-height: 78vh; }
+  .scene-hero-solo .feature-text { max-width: 860px; }
+
+  /* Main page: the two routes in */
+  .route-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .route-card {
+    padding: 2.8rem 2.4rem; border: 1px solid var(--line-strong); border-radius: 4px;
+    background: var(--bg-3); display: flex; flex-direction: column; gap: 1.2rem;
+    text-decoration: none; transition: border-color 0.3s, transform 0.3s;
+  }
+  .route-card:hover { border-color: var(--cognac); transform: translateY(-2px); }
+  .route-card h2 {
+    font-family: var(--font-d); font-weight: 400; font-style: italic;
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem); line-height: 1.2; color: var(--bone);
+  }
+  .route-card p { font-size: 1rem; color: var(--stone); line-height: 1.7; flex-grow: 1; }
+  .route-card .go {
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 600; color: var(--cognac);
+  }
+  .route-card .go::after { content: ' \2192'; }
+  .route-cta { margin-top: 3.5rem; }
+
+  /* Where you are: the things leaders say */
+  .voices { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4vw; max-width: 1100px; }
+  .voices.split { grid-template-columns: 1fr 1fr; gap: 3rem 5vw; }
+  .voices h3 {
+    font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin-bottom: 0.4rem;
+    padding-bottom: 1.2rem; border-bottom: 1px solid var(--line-strong);
+  }
+  .voices p {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.45; color: var(--bone);
+    padding: 1.6rem 0; border-bottom: 1px solid var(--line);
+  }
+
+  /* The Day: setting cards and the price */
+  .pack-card .setting {
+    font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600;
+  }
+  .price-line strong { font-weight: 600; color: var(--bone); }
+  .pack-body a { color: var(--cognac); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; }
+  .get-list { margin-top: 3rem; max-width: 46rem; }
+  .get-list h3 { font-family: var(--font-d); font-weight: 400; font-size: 1.6rem; color: var(--bone); margin-bottom: 1.2rem; }
+  .get-list ul { list-style: none; padding: 0; margin: 0; }
+  .get-list li { font-family: var(--font-b); font-size: 1rem; line-height: 1.6; color: var(--stone); padding: 0.75rem 0 0.75rem 1.6rem; border-top: 1px solid var(--line); position: relative; }
+  .get-list li:last-child { border-bottom: 1px solid var(--line); }
+  .get-list li::before { content: "\2014"; position: absolute; left: 0; color: var(--cognac); }
+  .get-list .profile-more { margin-top: .6rem; }
+  .get-list .profile-more summary { cursor: pointer; color: var(--cognac); font-size: .95rem; list-style: none; display: inline-block; border-bottom: 1px solid currentColor; }
+  .get-list .profile-more summary::-webkit-details-marker { display: none; }
+  .get-list .profile-more summary::after { content: " +"; }
+  .get-list .profile-more[open] summary::after { content: " \2212"; }
+  .get-list .profile-more p { margin-top: .9rem; font-size: .95rem; line-height: 1.65; color: var(--stone); }
+  .get-list .profile-more strong { color: var(--bone); font-weight: 500; }
+  .get-list .early-win { margin-top: 1.6rem; font-family: var(--font-d); font-style: italic; font-size: 1.2rem; line-height: 1.5; color: var(--bone); }
+  .pack-download { margin-top: 1.4rem; font-family: var(--font-b); font-size: 0.95rem; }
+  .pack-download a { color: var(--cognac); text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 1px; }
+  .pack-download a:hover { border-color: var(--cognac); }
+
+  /* The Six Months: the month list */
+  .scene-work.alt { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .work-stage h3 + p { margin-top: 0.2rem; }
+
+  /* Questions: accordion */
+  .faq { max-width: 820px; border-top: 1px solid var(--line-strong); }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 1.6rem 3rem 1.6rem 0; position: relative;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary h3 {
+    font-family: var(--font-d); font-weight: 400; font-size: clamp(1.2rem, 2vw, 1.45rem);
+    line-height: 1.35; color: var(--bone);
+  }
+  .faq summary::after {
+    content: '+'; position: absolute; right: 0.4rem; top: 50%; transform: translateY(-50%);
+    font-family: var(--font-d); font-size: 1.8rem; color: var(--cognac); transition: transform 0.3s;
+  }
+  .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq summary:hover h3 { color: var(--cognac-2); }
+  .faq summary:focus-visible { outline: 1px solid var(--cognac); outline-offset: 4px; }
+  .faq details p {
+    font-size: 1rem; color: var(--stone); line-height: 1.75; max-width: 64ch; padding: 0 0 1.8rem;
+  }
+
+  /* Teams I have worked with: living-photo clips */
+  .clips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+  .clip { margin: 0; }
+  .clip video { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: var(--bg-3); }
+  .clip figcaption {
+    margin-top: 0.8rem; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash);
+  }
+
+  /* The way in: booking form */
+  .scene-book { flex-direction: column; background: var(--bg-2); border-top: 1px solid var(--line); }
+  .scene-book .folio { margin-bottom: 3rem; }
+  .form { max-width: 560px; margin-top: 1rem; }
+  .form label {
+    display: block; font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--cognac); font-weight: 600; margin: 1.3rem 0 0.5rem;
+  }
+  .form input, .form textarea, .form select {
+    width: 100%; background: var(--card); border: 1px solid var(--line-strong); border-radius: 2px;
+    color: var(--bone); font-family: var(--font-b); font-size: 1rem; padding: 0.9rem 1rem;
+  }
+  .form input:focus, .form textarea:focus, .form select:focus { outline: none; border-color: var(--cognac); }
+  .form textarea { min-height: 110px; resize: vertical; }
+  .form .hint { font-size: 0.82rem; color: var(--ash); margin-top: 0.4rem; }
+  .form .submit { margin-top: 2rem; }
+  .form .button { min-width: min(100%, 20rem); }
+  .sent {
+    display: none; margin-top: 1.5rem; padding: 1.8rem 2rem; max-width: 560px;
+    border-left: 2px solid var(--cognac); background: var(--bg-3);
+    font-family: var(--font-d); font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--bone);
+  }
+
+  @media (max-width: 900px) {
+    .route-cards, .voices, .voices.split { grid-template-columns: 1fr; }
+    .voices.split { gap: 2.5rem; }
+    .clips { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .scene-hero-solo { min-height: auto; }
+  }
+  @media (max-width: 600px) {
+    .hero-actions .button { width: 100%; text-align: center; }
+    .route-card { padding: 2.2rem 1.6rem; }
+    .clips { grid-template-columns: 1fr; }
+  }
+
+  /* ══ LeadStrong for medical devices (/mdsvp, /mdsdir) ══ */
+  .scene-feature-hero .lede.plain { font-style: normal; max-width: 44ch; }
+  .say-card p {
+    font-family: var(--font-d); font-style: italic; font-weight: 300;
+    font-size: clamp(1.2rem, 1.8vw, 1.35rem); line-height: 1.5; color: var(--bone);
+  }
+  .pack-card h3 + p { margin-top: -0.2rem; }
+  .terms-cards { grid-template-columns: repeat(4, 1fr); }
+  .text-link {
+    display: inline-block; margin-top: 2.5rem;
+    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 600; color: var(--cognac); text-decoration: none;
+    border-bottom: 1px solid var(--line-strong); padding-bottom: 0.3rem; transition: border-color 0.3s;
+  }
+  .text-link:hover { border-color: var(--cognac); }
+  .clips.three { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 1100px) { .terms-cards { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 900px) { .clips.three { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .terms-cards, .clips.three { grid-template-columns: 1fr; } }
+
+  /* In the room: films with sound side by side at one height, then silent clips */
+  .tfilms { display: grid; grid-template-columns: 1.3333fr 0.75fr 0.75fr; gap: 1.2rem; align-items: start; }
+  .tfilm { margin: 0; }
+  .tfilm video { width: 100%; display: block; object-fit: contain; background: var(--bg-3); }
+  .tfilm.wide video { aspect-ratio: 4/3; }
+  .tfilm.tall video { aspect-ratio: 3/4; }
+  .tfilm figcaption, .clip figcaption { line-height: 1.6; }
+  .tfilm figcaption { margin-top: 0.8rem; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash); }
+  .clips.portrait { margin-top: 3rem; max-width: 760px; }
+  .clips.portrait .clip video { aspect-ratio: 9/16; }
+  @media (max-width: 900px) { .tfilms { grid-template-columns: 1fr 1fr; } .tfilm.wide { grid-column: 1 / -1; } }
+  @media (max-width: 600px) { .tfilms { grid-template-columns: 1fr; gap: 2.2rem; } .clips.portrait { grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem; } }
+
+  /* Article pages */
+  .article { padding: 10rem 6vw 14vh; display: block; max-width: 980px; }
+  .article .eyebrow { font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ash); margin-bottom: 1.4rem; }
+  .article h1 { font-family: var(--font-d); font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; color: var(--bone); max-width: 22ch; margin: 0 0 2.5rem; }
+  .article .voice { font-family: var(--font-d); font-style: italic; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.5; color: var(--bone); border-left: 2px solid var(--cognac); padding-left: 1.4rem; max-width: 46ch; margin: 0 0 3rem; }
+  .article .pack-body h2 { font-family: var(--font-d); font-weight: 400; font-size: 1.6rem; line-height: 1.3; color: var(--bone); margin: 3rem 0 1.2rem; }
+  .article .pack-body ol, .article .pack-body ul { margin: 0 0 1.4rem 1.3rem; }
+  .article .pack-body li { margin-bottom: 0.8rem; padding-left: 0.3rem; }
+  .article .pack-body strong { color: var(--bone); font-weight: 400; }
+  .article-cta { margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--line); max-width: 62ch; }
+  .article-cta p { font-size: 1rem; line-height: 1.7; color: var(--stone); margin-bottom: 1.6rem; }
+  .article .back { display: inline-block; margin-bottom: 2rem; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--cognac); text-decoration: none; }
+</style>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<!-- Schema, generated by scripts/build.mjs from data/entity.json and the page -->
+<!-- entity-ld:start -->
+<!-- entity-ld:end -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why does this role feel so much harder than it should?",
+  "description": "Why the vice president role in medical devices feels so hard: the sector, the matrix, and the fear underneath. And what helps.",
+  "author": {
+    "@type": "Person",
+    "name": "John Obidipe",
+    "url": "https://catalystgrowthcoach.co.uk/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Catalyst Growth Coaching",
+    "url": "https://catalystgrowthcoach.co.uk"
+  },
+  "datePublished": "2026-11-26",
+  "dateModified": "2026-11-26",
+  "mainEntityOfPage": "https://catalystgrowthcoach.co.uk/medtech/why-the-vp-role-feels-so-hard"
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top">
+  <a class="brand" href="/"><span>Catalyst</span> Growth Coaching</a>
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li class="has-dropdown">
+      <a href="/#programmes">Programmes</a>
+      <ul class="dropdown">
+        <li><a href="/leadstrong">LeadStrong</a></li>
+        <li><a href="/teamstrong">TeamStrong</a></li>
+        <li><a href="/board/one-to-one">at.theboard one-to-one</a></li>
+        <li><a href="/board">at.theboard circles</a></li>
+      </ul>
+    </li>
+    <li><a href="/in-practice">In Practice</a></li>
+    <li><a href="/contact" class="cta">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+<article class="article">
+  <a class="back" href="/mdsvp" data-link="back">&larr; Coaching for vice presidents in medical devices</a>
+  <h1>Why does this role feel so much harder than it should?</h1>
+  <p class="voice">&ldquo;The executive team wants certainty, global wants the plan delivered, and my directors are waiting on me.&rdquo;</p>
+  <div class="pack-body">
+    <p>If you lead a region or a business in a medical device company, you are doing it in one of the hardest settings there is. Hospital and NHS customers want more value for less money. The rules on what you can sell, and how, keep tightening. And the company itself rarely stands still: a restructure, an acquisition or a new operating model every couple of years, each one landing on your part of the business.</p>
+    <p>Then there is the way the work is organised. Most medtech companies run as a matrix. You answer to your president or the executive team, but global functions, product teams, regulatory, supply chain and finance all have a claim on your business. On paper it joins everything up. In practice it lands three problems on your desk.</p>
+    <h2>1. Too much of it ends up in your head</h2>
+    <p>Every line of the matrix sends you something: a global review, a board paper, a director escalation, an executive request that needs an answer by Friday. Nobody sees the whole of it except you. So you carry it, and the five-year thinking the next seat asks of you keeps losing to this quarter.</p>
+    <p><strong>What helps:</strong> get it out of your head and in front of you, once a week. All of it, in one place. Then decide what matters this week, what can wait, and what belongs with your directors. Most vice presidents find that a good part of what they are carrying should be sitting one level down.</p>
+    <h2>2. You are pulled two ways, with no clear steer</h2>
+    <p>The executive team wants growth. Global wants margin and the plan delivered as written. Your peers are competing for the same budget and the same people. Each ask makes sense on its own. Together they contradict, and nobody above you has settled which one wins. So you settle it, quietly, and carry the risk if you get it wrong.</p>
+    <p><strong>What helps:</strong> stop resolving the clash in private. Take it to the people above you with a recommendation: "Global is asking for this, the executive team is asking for that. Here is what I propose, and what it costs." A hidden judgement call becomes a shared decision, and you are seen doing the thinking the next seat needs.</p>
+    <h2>3. Work falls apart between teams</h2>
+    <p>In a matrix, the hard part is rarely the work itself. It is the handover: between your directors and the global functions, between regions, between the plan and the people delivering it. When something slips between them, customers feel it and it lands with you.</p>
+    <p><strong>What helps:</strong> for anything that crosses teams, agree at the start who owns which part and when it gets checked. Then make your directors own those handovers, rather than you holding them together yourself.</p>
+    <h2>The fear underneath</h2>
+    <p>Running through all three is the same quiet worry: if I let go of anything and it turns out to matter, it will count against me, and at this level everyone will see it. So you hold on to everything, and the role gets heavier every quarter.</p>
+    <p>The fear is understandable. It is also usually wrong. People are promoted for their judgement about what matters, not for carrying everything themselves.</p>
+    <h2>There&rsquo;s nothing wrong with you. It is complicated.</h2>
+    <p>If this role feels harder than it should, it is not because you are not good enough at it. The role is genuinely complex, and most of that complexity is invisible to the people around you, often including the people above you. Seeing it clearly is the first step to leading through it, rather than just getting through it.</p>
+    <p>That is what I work on with vice presidents in medical devices, one week at a time, at an online whiteboard.</p>
+  </div>
+  <div class="article-cta">
+    <p>If this sounds familiar, bring it to a free Whiteboard Session. One hour, online, on whatever is live for you right now. No pitch at the end.</p>
+    <a href="/mdsvp#book" class="button" data-book="article">Book a free Whiteboard Session</a>
+  </div>
+</article>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="brand"><span>Catalyst</span> Growth Coaching</div>
+  </div>
+  <div class="col">
+    <h4>Programmes</h4>
+    <a href="/leadstrong">LeadStrong</a>
+    <a href="/teamstrong">TeamStrong</a>
+    <a href="/board/one-to-one">at.theboard one-to-one</a>
+    <a href="/board">at.theboard circles</a>
+  </div>
+  <div class="col">
+    <h4>Read</h4>
+    <a href="/about">About John</a>
+    <a href="/in-practice">In Practice</a>
+    <a href="/going-further">Going Further</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="fine">
+    <span>© 2026 Catalyst Growth Coaching, London and Milton Keynes · Est. 2020</span>
+  </div>
+</footer>
+
+<script src="/main.js"></script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-book], [data-link]');
+    if (!a || typeof gtag !== 'function') return;
+    gtag('event', a.hasAttribute('data-book') ? 'medtech_vp_book_click' : 'medtech_vp_link_click', { page: 'article', article: 'why-the-vp-role-feels-so-hard', button: a.getAttribute('data-book') || a.getAttribute('data-link') });
+  });
+})();
+</script>
+</body>
+</html>

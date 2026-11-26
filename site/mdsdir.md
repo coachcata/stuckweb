@@ -66,10 +66,6 @@ Handing over the detail one piece at a time, and still seeing the number every w
 
 What may be sending the decisions back to you, and how to stop it.
 
-### Global owns the plan, you own the number. Who owns your time?
-
-Leading in a matrix when everyone has a claim on your week.
-
 ## Your thinking, out of your head and onto an online whiteboard
 
 Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
