@@ -22,6 +22,6 @@ You lead your own region, function or division, and you want every leader to gro
 
 ## Start with a conversation
 
-Tell me about your leaders and what you would like to see change. A short conversation is enough to work out whether the Day, the Six Months or neither is the right fit.
+Tell me about your leaders and what you would like to see change. A short conversation is enough to work out whether the One Day Programme, the Six Month Programme or neither is the right fit.
 
 Book a conversation: https://catalystgrowthcoach.co.uk/teamstrong#book
