@@ -38,6 +38,8 @@ You do not step back all at once. We build a considered plan to hand over one re
 
 Each handover frees space in your diary. Then we protect it. A director’s list never ends, so before each handover you decide what the freed hours are for, and the VP-level thinking goes in first. Anything new at your current level goes to a manager, or waits.
 
+Underneath is a fear: that the one thing you let go will be the thing that counts against you. So nothing is dropped in private. You agree with your VP what is being parked, so it is a shared decision, not a gamble. And we test the fear: what did you let go last time, and what actually happened? People are promoted for their judgement about what matters , not for doing everything.
+
 “I’ve read the article. I’ve done the programme. I still don’t know what to say to my VP on Monday.”
 
 Doing it depends on your situation: your boss, your history, your team. Sometimes you are navigating complex personality dynamics. Sometimes it is politics. That is why it has not been easy to go from the LinkedIn article you read, or the training you went on, to actually doing it.
