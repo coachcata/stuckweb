@@ -2,7 +2,7 @@
 
 # Everyone around the table is capable. You want to be the one whose judgement they trust.
 
-One-to-one coaching at an online whiteboard for vice presidents in medical device companies who are ready for the next seat, whether that is general manager, a regional leadership role or the executive committee. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
+One-to-one coaching at an online whiteboard for vice presidents in medtech who are ready for the next seat, whether that is general manager, a regional leadership role or the executive committee. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
 
 ## You are trusted to deliver. You want to be trusted to decide.
 
@@ -96,7 +96,7 @@ After each session you get a copy of the finished board, so the thinking does no
 
 ## Senior leaders at Convatec, Urgo and Becton Dickinson
 
-I work with directors and vice presidents across three of the sector’s leading medical device companies, in the UK and across Europe. I understand the pressures of the role at this level: a global matrix, a number that never goes away, NHS and hospital customers asking for more value, and a career that depends on how you are seen as much as what you deliver.
+I work with directors and vice presidents across three of the sector’s leading medtech companies, in the UK and across Europe. I understand the pressures of the role at this level: a global matrix, a number that never goes away, NHS and hospital customers asking for more value, and a career that depends on how you are seen as much as what you deliver.
 
 I have also written at length about the move from vice president to the C-suite in my LinkedIn newsletter, so you can read how I think before we ever meet.
 
