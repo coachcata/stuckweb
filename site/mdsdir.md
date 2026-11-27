@@ -2,7 +2,7 @@
 
 # You deliver results every year. You want to be known for where the business goes next.
 
-One-to-one coaching at an online whiteboard for directors in medtech who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
+One-to-one coaching at an online whiteboard for directors in medtech and medical devices who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
 
 ## Strong results, and the next role still feels a step away
 
@@ -10,7 +10,7 @@ One-to-one coaching at an online whiteboard for directors in medtech who are wor
 
 “My managers bring every difficult decision to me, so I never have time to think beyond this quarter.”
 
-“Global wants certainty, hospital and NHS customers want more value for less money, and I am the one holding it together.”
+“Global wants certainty, hospitals and health systems want more value for less money, and I am the one holding it together.”
 
 “I am good at keeping everything steady. I am less sure that is what gets people promoted.”
 
@@ -92,7 +92,7 @@ After each session you get a copy of the finished board, so the thinking does no
 
 ## Senior leaders at Convatec, Urgo and Becton Dickinson
 
-I work with directors and vice presidents across three of the sector’s leading medtech companies, in the UK and across Europe. I understand the pressures of the role: targets set a long way from where the work happens, hospital and NHS customers asking for more value, and a career that depends on how you are seen as much as what you deliver.
+I work with directors and vice presidents across three of the sector’s leading medtech companies, in the UK and across Europe. I understand the pressures of the role: targets set a long way from where the work happens, hospitals and health systems asking for more value, and a career that depends on how you are seen as much as what you deliver.
 
 I have also written at length about the move from director to vice president in my LinkedIn newsletter, so you can read how I think before we ever meet.
 
