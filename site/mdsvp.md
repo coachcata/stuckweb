@@ -2,7 +2,7 @@
 
 # Everyone around the table is capable. You want to be the one whose judgement they trust.
 
-One-to-one coaching at an online whiteboard for vice presidents in medtech and medical devices who are ready for the next seat, whether that is general manager, a regional leadership role or the executive committee. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
+One-to-one coaching at an online whiteboard for vice presidents in medtech who are ready for the next seat, whether that is general manager, a regional leadership role or the executive committee. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
 
 ## You are trusted to deliver. You want to be trusted to decide.
 

@@ -2,7 +2,7 @@
 
 # You deliver results every year. You want to be known for where the business goes next.
 
-One-to-one coaching at an online whiteboard for directors in medtech and medical devices who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
+One-to-one coaching at an online whiteboard for directors in medtech who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
 
 ## Strong results, and the next role still feels a step away
 
