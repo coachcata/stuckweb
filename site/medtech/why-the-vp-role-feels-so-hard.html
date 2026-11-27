@@ -533,6 +533,10 @@
     padding: 2.2rem 2rem; border: 1px solid var(--line); border-radius: 4px;
     background: var(--bg-2); display: flex; flex-direction: column; gap: 0.9rem;
   }
+  .article-card { text-decoration: none; transition: border-color 0.3s; }
+  a.article-card:hover { border-color: var(--cognac); }
+  .article-card .read { margin-top: auto; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--cognac); }
+  .article-card.soon .read { color: var(--stone); }
   .pack-card h3 {
     font-family: var(--font-d); font-weight: 400; font-style: italic;
     font-size: 1.3rem; line-height: 1.3; color: var(--bone);
@@ -835,7 +839,7 @@
   <h1>Why does this role feel so much harder than it should?</h1>
   <p class="voice">&ldquo;The executive team wants certainty, global wants the plan delivered, and my directors are waiting on me.&rdquo;</p>
   <div class="pack-body">
-    <p>If you lead a region or a business in a medical device company, you are doing it in one of the hardest settings there is. Hospital and NHS customers want more value for less money. The rules on what you can sell, and how, keep tightening. And the company itself rarely stands still: a restructure, an acquisition or a new operating model every couple of years, each one landing on your part of the business.</p>
+    <p>If you lead a region, a business or a function in a medical device company, you are doing it in one of the hardest settings there is. Hospital and NHS customers want more value for less money. The rules on what you can sell, and how, keep tightening. And the company itself rarely stands still: a restructure, an acquisition or a new operating model every couple of years, each one landing on your part of the business.</p>
     <p>Then there is the way the work is organised. Most medtech companies run as a matrix. You answer to your president or the executive team, but global functions, product teams, regulatory, supply chain and finance all have a claim on your business. On paper it joins everything up. In practice it lands three problems on your desk.</p>
     <h2>1. Too much of it ends up in your head</h2>
     <p>Every line of the matrix sends you something: a global review, a board paper, a director escalation, an executive request that needs an answer by Friday. Nobody sees the whole of it except you. So you carry it, and the five-year thinking the next seat asks of you keeps losing to this quarter.</p>
