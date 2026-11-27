@@ -54,18 +54,6 @@ I tell you plainly, and kindly, how you come across , including when you are the
 
 ## Short reads while you decide
 
-### Your VP asks where the business should go. Why do you answer with this quarter?
-
-Why this quarter feels safer than your own view, and how to say the bigger thing.
-
-### How do you step back from the detail without results slipping?
-
-Handing over the detail one piece at a time, and still seeing how things are tracking every week.
-
-### Why do your managers bring every hard decision back to you?
-
-What may be sending the decisions back to you, and how to stop it.
-
 ## Your thinking, out of your head and onto an online whiteboard
 
 Each session starts with whatever is live for you that week, whether that is a quarterly review, a manager who keeps escalating, a key customer under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
@@ -92,7 +80,7 @@ After each session you get a copy of the finished board, so the thinking does no
 
 ## Senior leaders at Convatec, Urgo and Becton Dickinson
 
-I work with directors and vice presidents across three of the sector’s leading medtech companies, in the UK and across Europe. I understand the pressures of the role: targets set a long way from where the work happens, hospitals and health systems asking for more value, and a career that depends on how you are seen as much as what you deliver.
+I work with directors and vice presidents across three of the sector’s leading medtech companies, in the UK, Europe and internationally. I understand the pressures of the role: targets set a long way from where the work happens, hospitals and health systems asking for more value, and a career that depends on how you are seen as much as what you deliver.
 
 I have also written at length about the move from director to vice president in my LinkedIn newsletter, so you can read how I think before we ever meet.
 
