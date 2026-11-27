@@ -1,16 +1,16 @@
 <!-- canonical: https://catalystgrowthcoach.co.uk/mdsdir -->
 
-# You deliver the number every year. You want to be known for where the business goes next.
+# You deliver results every year. You want to be known for where the business goes next.
 
-One-to-one coaching at an online whiteboard for sales directors in medical device companies who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
+One-to-one coaching at an online whiteboard for directors in medtech who are working towards vice president. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
 
 ## Strong results, and the next role still feels a step away
 
-“When my VP asks where the business should go, I hear myself answering with the forecast.”
+“When my VP asks where the business should go, I hear myself answering with this quarter’s numbers.”
 
 “My managers bring every difficult decision to me, so I never have time to think beyond this quarter.”
 
-“Global wants certainty, the NHS accounts want more value for less money, and I am the one holding it together.”
+“Global wants certainty, hospitals and health systems want more value for less money, and I am the one holding it together.”
 
 “I am good at keeping everything steady. I am less sure that is what gets people promoted.”
 
@@ -28,13 +28,13 @@ Everybody knows the answer. Manage up. Think strategically. Delegate more. Knowi
 
 “I know what I should be thinking about. It never gets an hour.”
 
-Your week is built for reacting: forecast calls, escalations, customer visits. The bigger question waits for a quiet week that never comes.
+Your week is built for reacting: forecast calls, escalations, the meetings that need you. The bigger question waits for a quiet week that never comes.
 
-The session is that hour. One fixed slot a week, online, between field days. You bring what is already live, so it is not extra work. You leave with decisions made and actions agreed. No homework.
+The session is that hour. One fixed slot a week, online, between everything else. You bring what is already live, so it is not extra work. You leave with decisions made and actions agreed. No homework.
 
-“If I step back from the detail and the number slips, it’s on me.”
+“If I step back from the detail and results slip, it’s on me.”
 
-You do not step back all at once. We build a considered plan to hand over one responsibility at a time , at a pace your managers can absorb, with a clear check so you still see the number every week.
+You do not step back all at once. We build a considered plan to hand over one responsibility at a time , at a pace your managers can absorb, with a clear check so you still see how things are tracking every week.
 
 Each handover frees space in your diary. Then we protect it. A director’s list never ends, so before each handover you decide what the freed hours are for, and the VP-level thinking goes in first. Anything new at your current level goes to a manager, or waits.
 
@@ -52,9 +52,11 @@ Your team will not say. Your boss is busy. Your peers are often rivals. Without 
 
 I tell you plainly, and kindly, how you come across , including when you are the problem. And we find one trusted person at work you can ask after the meetings that matter.
 
+## Short reads while you decide
+
 ## Your thinking, out of your head and onto an online whiteboard
 
-Each session starts with whatever is live for you that week, whether that is a forecast review, a manager who keeps escalating, a key account under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
+Each session starts with whatever is live for you that week, whether that is a quarterly review, a manager who keeps escalating, a key customer under pressure or the case you are building for promotion. It all goes up on the whiteboard, and we work through each issue until you leave with decisions made and actions agreed. At the next session we check every one, so nothing slips.
 
 I ask questions first. Often the answer is already in your thinking, and when it isn't, I'll help you get to it. When it helps, I give you my honest view as well. Most sessions run online, with the whiteboard shared live on your screen. In person works too.
 
@@ -78,7 +80,7 @@ After each session you get a copy of the finished board, so the thinking does no
 
 ## Senior leaders at Convatec, Urgo and Becton Dickinson
 
-I work with directors and vice presidents across three of the sector’s leading medical device companies, in the UK and across Europe. I understand the pressures of the role: targets set a long way from the field, hospital and NHS customers asking for more value, and a career that depends on how you are seen as much as what you deliver.
+I work with directors and vice presidents across three of the sector’s leading medtech companies, in the UK, Europe and internationally. I understand the pressures of the role: targets set a long way from where the work happens, hospitals and health systems asking for more value, and a career that depends on how you are seen as much as what you deliver.
 
 I have also written at length about the move from director to vice president in my LinkedIn newsletter, so you can read how I think before we ever meet.
 

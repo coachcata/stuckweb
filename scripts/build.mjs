@@ -360,12 +360,12 @@ for (const [file, t] of Object.entries(TEAMSTRONG)) {
 // not from the menus.
 const MEDTECH = {
   "mdsvp.html": {
-    path: "/mdsvp", crumb: "For vice presidents in medical devices",
-    audience: "Vice presidents in medical device companies working towards general manager, regional leadership or the executive committee",
+    path: "/mdsvp", crumb: "For vice presidents in medtech",
+    audience: "Vice presidents in medtech working towards general manager, regional leadership or the executive committee",
   },
   "mdsdir.html": {
-    path: "/mdsdir", crumb: "For sales directors in medical devices",
-    audience: "Sales directors in medical device companies working towards vice president",
+    path: "/mdsdir", crumb: "For directors in medtech",
+    audience: "Directors in medtech working towards vice president",
   },
 };
 for (const [file, t] of Object.entries(MEDTECH)) {
@@ -535,7 +535,7 @@ const facts = [
   "- Founder: John Obidipe, Gallup-certified in CliftonStrengths, 15+ years in organisational consulting and executive coaching.",
   "- Way in: one free Whiteboard Session, open to anyone.",
 ];
-facts.push("- LeadStrong for medical devices: one-to-one coaching at an online whiteboard for vice presidents (/mdsvp) and sales directors (/mdsdir) in medical device companies. Weekly, three months for £3,600 or six months for £7,200, plus VAT.");
+facts.push("- LeadStrong for medtech: one-to-one coaching at an online whiteboard for vice presidents (/mdsvp) and directors (/mdsdir) in medtech. Weekly, three months for £3,600 or six months for £7,200, plus VAT.");
 facts.push("- TeamStrong: for leadership teams of five to ten. The One Day Programme is one high impact day from £3,500 plus VAT, depending on team size. The Six Month Programme is one session a month, one-to-ones included, price agreed with each team.");
 if (entity.confirmed.menOnly) facts.push("- Why men only: " + entity.confirmed.menOnly);
 if (entity.confirmed.price) facts.push("- Price: " + entity.confirmed.price.text);
@@ -564,8 +564,8 @@ A circle is the five men who meet together for the year.
 
 - [Home](${SITE}/): the practice and the free Whiteboard Session
 - [LeadStrong](${SITE}/leadstrong): three or six months of weekly Whiteboard Sessions for a corporate leader
-- LeadStrong for medical devices: one-to-one coaching at an online whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and sales directors ([/mdsdir](${SITE}/mdsdir)) in medical device companies. Weekly, three months for £3,600 or six months for £7,200, plus VAT.
-- Plain text: [for vice presidents](${SITE}/mdsvp.md), [for sales directors](${SITE}/mdsdir.md)
+- LeadStrong for medtech: one-to-one coaching at an online whiteboard for vice presidents ([/mdsvp](${SITE}/mdsvp)) and directors ([/mdsdir](${SITE}/mdsdir)) in medtech. Weekly, three months for £3,600 or six months for £7,200, plus VAT.
+- Plain text: [for vice presidents](${SITE}/mdsvp.md), [for directors](${SITE}/mdsdir.md)
 - [Leadership Hub](https://learn.catalystgrowthcoach.co.uk/): the Fluency Series in podcast, slides and infographic form
 
 ## Key facts
@@ -582,7 +582,7 @@ const home = read("index.html");
 const homeMd = toMarkdown(home.replace(/^[\s\S]*?<body[^>]*>/, ""));
 const llmsFull = `# Catalyst Growth Coaching and at.theboard, full text
 
-> The full text of ${SITE}/board, ${SITE}/, the at.theboard one-to-one page, the three TeamStrong pages and the two LeadStrong pages for medical devices, as Markdown. See ${SITE}/llms.txt for the short version.
+> The full text of ${SITE}/board, ${SITE}/, the at.theboard one-to-one page, the three TeamStrong pages and the two LeadStrong pages for medtech, as Markdown. See ${SITE}/llms.txt for the short version.
 
 ${boardMd.replace(/^<!-- canonical:.*\n\n/, "")}
 ---
