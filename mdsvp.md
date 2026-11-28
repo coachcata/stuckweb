@@ -1,5 +1,7 @@
 <!-- canonical: https://catalystgrowthcoach.co.uk/mdsvp -->
 
+Are you a director? [See the page for directors →](https://catalystgrowthcoach.co.uk/mdsdir)
+
 # Everyone around the table is capable. You want to be the one whose judgement they trust.
 
 One-to-one coaching at an online whiteboard for vice presidents in medtech who are ready for the next seat, whether that is general manager, a regional leadership role or the executive committee. I currently work with senior leaders at Convatec, Urgo and Becton Dickinson.
